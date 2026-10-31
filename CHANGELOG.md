@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- **Examples and Share stay on the phone toolbar.** There was room beside
+  More; the two buttons reached for most no longer need a second tap.
 - **Video effectors for the camera (and any picture).** `.fx()` on `cam`,
   `vid` and `img` now takes twenty-one effectors after
   [Pixel Flow](https://pixel-flow.atomic47.co/pixel-flow-nodes/): kaleido,

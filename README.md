@@ -101,7 +101,7 @@ with **Remix** to open the code.
 - **Full screen** works on iPhone too (an in-page version where the browser has
   none); the iPhone silent switch no longer mutes the sound.
 - Code always wraps to the screen on phones, at 16px or larger (your desktop
-  editor settings are kept); pages and actions fold into the **More** button.
+  editor settings are kept); pages and actions fold into the **More** button, except **Examples** and **Share**, which stay on the bar.
 
 ## The Claude skill
 

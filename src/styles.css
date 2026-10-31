@@ -699,11 +699,22 @@ body.dragging #drop-hint {
     padding-left: 6px;
   }
 }
-/* phones: pages and actions fold into one "pages" button (a grid in the panel) */
+/* phones: pages and actions fold into one "pages" button (a grid in the panel) –
+   except the two reached for most, Examples and Share, which stay on the bar */
 @media (max-width: 680px) {
-  #toolbar .pages,
-  #toolbar .actions {
+  #toolbar .pages > :not(.keep),
+  #toolbar .actions > :not(.keep) {
     display: none !important;
+  }
+  #toolbar .group:not(:has(.keep)) {
+    display: none;
+  }
+  #toolbar .group + .group {
+    padding-left: 0;
+    border-left: none;
+  }
+  #toolbar .spacer {
+    min-width: 0;
   }
   #more {
     display: inline-flex;
