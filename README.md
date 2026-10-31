@@ -65,7 +65,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 
 | Page | Contains |
 |---|---|
-| Examples | Two tabs: **Examples** (19 soda pieces by category) and **Workshop** (all 145 examples from the [Strudel workshop](https://strudel.cc/workshop/getting-started/), by chapter). Listen / Open on each |
+| Examples | Two tabs: **Examples** (25 soda pieces by category, including a Dancefloor set) and **Workshop** (all 145 examples from the [Strudel workshop](https://strudel.cc/workshop/getting-started/), by chapter). Listen / Open on each |
 | Sounds | One browser for every sound: yours (uploads and mic takes), the soda pack, GitHub libraries (load, add to sketch, forget, suggestions), Strudel's drum machines (by kit), samples, synths, soundfonts. Click to hear, double-click or Enter to insert, outlined = pitched |
 | Media | Your images and videos, the soda media pack, camera snippets |
 | Reference | Every Strudel and soda function, searchable, examples with Listen / Insert |

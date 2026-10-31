@@ -51,7 +51,9 @@ async function ensureScope() {
     await evalScope(core, mini, tonal, sodaScope, {
       samples: async (arg) => void sampleCalls.push(arg),
       aliasBank: async () => {},
-      initHydra: async () => {},
+      // In the browser initHydra() puts Hydra's globals (osc, shape, src, o0…) over
+      // Strudel's – `shape` is also a Strudel control – so the stub does the same.
+      initHydra: async () => { for (const n of hydraNames) globalThis[n] = chain(); },
       H: () => () => 0,
       // painters from @strudel/draw / webaudio: accept and ignore in Node
     });
@@ -103,7 +105,9 @@ export async function validateSketch(sketch, { sounds, media, cycles = 8 } = {})
   let evalError;
   sampleCalls = [];
   const r = repl({ getTime: () => 0, defaultOutput: async () => {}, transpiler, onEvalError: (e) => (evalError = e) });
+  const globals = Object.fromEntries(hydraNames.map((n) => [n, globalThis[n]]));
   const pattern = await r.evaluate(sketch.code, false);
+  Object.assign(globalThis, globals); // a sketch's initHydra() must not leak into the next one
   const libraries = await namesFromSampleCalls(sampleCalls);
   if (evalError || !pattern) {
     errors.push(`evaluation failed: ${evalError?.message ?? 'no pattern returned'}`);

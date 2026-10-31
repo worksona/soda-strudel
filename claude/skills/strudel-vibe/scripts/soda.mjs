@@ -25043,7 +25043,10 @@ async function ensureScope() {
       samples: async (arg) => void sampleCalls.push(arg),
       aliasBank: async () => {
       },
+      // In the browser initHydra() puts Hydra's globals (osc, shape, src, o0…) over
+      // Strudel's – `shape` is also a Strudel control – so the stub does the same.
       initHydra: async () => {
+        for (const n of hydraNames) globalThis[n] = chain();
       },
       H: () => () => 0
       // painters from @strudel/draw / webaudio: accept and ignore in Node
@@ -25090,7 +25093,9 @@ async function validateSketch(sketch, { sounds: sounds2, media: media3, cycles =
   sampleCalls = [];
   const r = repl({ getTime: () => 0, defaultOutput: async () => {
   }, transpiler: F3, onEvalError: (e) => evalError = e });
+  const globals = Object.fromEntries(hydraNames.map((n) => [n, globalThis[n]]));
   const pattern = await r.evaluate(sketch.code, false);
+  Object.assign(globalThis, globals);
   const libraries = await namesFromSampleCalls(sampleCalls);
   if (evalError || !pattern) {
     errors.push(`evaluation failed: ${evalError?.message ?? "no pattern returned"}`);
