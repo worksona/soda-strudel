@@ -68,7 +68,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 | Export | Shape, size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
 | Share | Title, then Copy link (plays in any browser; nothing uploaded) |
 | About | What it is, how it works, keys, mini-notation, links, and the log |
-| Settings | Appearance (system / light / dark) · Profile · Screen and export · Editor · Exports · Storage |
+| Settings | Appearance (dark by default · light · system) · Profile · Screen and export · Editor · Exports · Storage |
 
 Takes are mic recordings and appear with your sounds; sketches are your saved
 pieces – both live in the browser's IndexedDB.

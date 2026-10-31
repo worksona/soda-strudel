@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- **Dark is the default theme.** Only a choice made in Settings › Appearance is
+  saved (new key); the earlier automatically stored “system” is cleared, so
+  existing visitors also get Dark unless they pick otherwise. The page starts
+  dark in the markup – no light flash while loading.
+
 - **Update button** to the right of Play (instead of Play turning into Update):
   dim until you press Play, lights up and pulses when you've changed the code
   while playing, applies your changes like ctrl+enter. Play is just Play/Stop.

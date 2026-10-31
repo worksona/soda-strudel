@@ -31,10 +31,10 @@ export function createSettings({ root, app }) {
         'div.segmented',
         { role: 'radiogroup', 'aria-label': 'Appearance' },
         APPEARANCES.map((a) =>
-          h('button', { role: 'radio', 'aria-checked': String(getAppearance() === a), onclick: () => (applyAppearance(a), render()) }, icon(a, 16), a[0].toUpperCase() + a.slice(1)),
+          h('button', { role: 'radio', 'aria-checked': String(getAppearance() === a), onclick: () => (applyAppearance(a, { save: true }), render()) }, icon(a, 16), a[0].toUpperCase() + a.slice(1)),
         ),
       ),
-      h('p.muted', {}, 'System follows your device. The stage stays dark in every theme – it is the screen your piece plays on.'),
+      h('p.muted', {}, 'Dark is the default; System follows your device. The stage stays dark in every theme – it is the screen your piece plays on.'),
       h(
         'label.toggle',
         {},
