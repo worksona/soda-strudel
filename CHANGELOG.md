@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- The strudel-vibe skill has its own repo, worksona/strudel-vibe, published
+  from `claude/` with `pnpm skill:publish` (git subtree). The plugin is now
+  named `strudel-vibe`, with its own marketplace, README and licence.
+
 - **Mobile ready**:
   - Play becomes **Update** when the code changed while playing (no ctrl+enter
     on phones); works on desktop too.

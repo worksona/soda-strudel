@@ -1,0 +1,16 @@
+{
+  "name": "strudel-vibe",
+  "owner": {
+    "name": "worksona"
+  },
+  "plugins": [
+    {
+      "name": "strudel-vibe",
+      "source": "./",
+      "description": "Vibe music, visuals and story into shareable soda.strudel sketches."
+    }
+  ],
+  "metadata": {
+    "description": "The strudel-vibe skill for Claude: vibe music, visuals and story into shareable soda.strudel sketches."
+  }
+}

@@ -1,9 +1,10 @@
 {
-  "name": "soda-strudel",
-  "version": "0.0.1",
-  "description": "Vibe music, visuals and story into shareable soda-strudel sketches (Strudel live coding + multimedia).",
+  "name": "strudel-vibe",
+  "version": "0.1.0",
+  "description": "Turn a mood, story or image into a playable, shareable soda.strudel sketch – Strudel live-coded music with pictures, captions and visuals – validated with Strudel's real engine.",
   "author": { "name": "worksona" },
-  "homepage": "https://github.com/worksona/soda-strudel",
+  "homepage": "https://github.com/worksona/strudel-vibe",
+  "repository": "https://github.com/worksona/strudel-vibe",
   "license": "AGPL-3.0-or-later",
-  "keywords": ["strudel", "music", "live-coding", "visuals", "vibe"]
+  "keywords": ["strudel", "music", "live-coding", "tidalcycles", "visuals", "vibe", "soda"]
 }

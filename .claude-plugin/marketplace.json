@@ -1,11 +1,16 @@
 {
   "name": "soda-strudel",
-  "owner": { "name": "worksona" },
+  "owner": {
+    "name": "worksona"
+  },
   "plugins": [
     {
-      "name": "soda-strudel",
+      "name": "strudel-vibe",
       "source": "./claude",
-      "description": "strudel-vibe skill: turn a mood or story into a playable, shareable soda-strudel sketch."
+      "description": "strudel-vibe skill: turn a mood or story into a playable, shareable soda.strudel sketch. Also published on its own at worksona/strudel-vibe."
     }
-  ]
+  ],
+  "metadata": {
+    "description": "soda.strudel \u2013 live-coded music, pictures and story in the browser, plus the strudel-vibe Claude skill."
+  }
 }

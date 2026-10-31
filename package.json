@@ -13,7 +13,8 @@
     "docs": "node scripts/extract-strudel-docs.mjs",
     "workshop": "node scripts/extract-workshop.mjs",
     "drums": "node scripts/import-drum-samples.mjs",
-    "skill": "node scripts/build-skill.mjs"
+    "skill": "node scripts/build-skill.mjs",
+    "skill:publish": "node scripts/publish-skill.mjs"
   },
   "dependencies": {
     "@codemirror/autocomplete": "6.20.4",

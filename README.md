@@ -97,10 +97,11 @@ with **Remix** to open the code.
 
 ## The Claude skill
 
-`claude/skills/strudel-vibe` – install either way:
+`claude/skills/strudel-vibe` – also published as its own repo,
+**[worksona/strudel-vibe](https://github.com/worksona/strudel-vibe)**. Install either way:
 
-- **Claude Code:** `/plugin marketplace add worksona/soda-strudel`, then
-  `/plugin install soda-strudel@soda-strudel`.
+- **Claude Code:** `/plugin marketplace add worksona/strudel-vibe`, then
+  `/plugin install strudel-vibe@strudel-vibe`.
 - **claude.ai:** download `/strudel-vibe.zip` from the running site (Settings ›
   About) or build it with `pnpm skill`, then upload it under Settings › Capabilities › Skills.
 
@@ -114,6 +115,10 @@ node claude/skills/strudel-vibe/scripts/soda.mjs sounds 909
 
 Links point at `config.json › siteUrl`. Set it when you deploy:
 `SODA_SITE_URL=https://your-site pnpm skill`.
+
+**Publishing the skill repo:** `claude/` is the source. Commit your changes,
+then `pnpm skill:publish` rebuilds the skill and pushes `claude/` to
+worksona/strudel-vibe with `git subtree`. Don't edit the skill repo directly.
 
 ## Sound and media packs
 
