@@ -1,18 +1,18 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-10-31T06:02:06Z
+> **Project:** soda.strudel | **Deployed:** 2026-10-31T06:13:49Z
 
 | Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae5842ccb66de756ba8b8bf--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae583fcb082bae95a1f8787--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae5870d4a521958f1b25410--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae586e243eb0e19554dc41c--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae5842ccb66de756ba8b8bf |
+| Deploy ID | 6ae5870d4a521958f1b25410 |
 | Team | worksona |
 | Project type | Static (Vite build) – no functions, no backend |
-| Source path | dist/ (built locally with `pnpm build`, commit e200c15) |
+| Source path | dist/ (built locally with `pnpm build`, commit ebca341) |
 | Build | Local only – Netlify does not build (no build minutes) |
 | Custom domain | none |
 
@@ -22,6 +22,7 @@
 - Headers: `/sw.js` and manifest `no-cache`; packs `Access-Control-Allow-Origin: *`, `max-age=604800`
 - App loads, plays, service worker activates, no console errors
 - A link made by the strudel-vibe skill opens on production in viewer mode
+- First-visit welcome renders; Play from it starts First light; Update is dim before Play and enabled while playing
 
 ## Configuration Used
 
