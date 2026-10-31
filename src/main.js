@@ -18,6 +18,7 @@ import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
 import { applyEditorSettings } from './editor/assist.js';
 import { repl } from '@strudel/core';
 import { clearHydra } from '@strudel/hydra';
+import { getDefaultValue, getSuperdoughAudioController, multiChannelOrbits } from 'superdough';
 import { createLibrary } from './ui/library.js';
 import { createSettings } from './ui/settings.js';
 import { createShare } from './ui/share.js';
@@ -104,7 +105,24 @@ function dropHydraUnlessUsed(code) {
 }
 
 // media / caption / visual events are for the stage, not the speakers
-const output = (hap, ...rest) => (isMediaOnly(hap.value) ? undefined : webaudioOutput(hap, ...rest));
+const output = (hap, ...rest) => {
+  if (isMediaOnly(hap.value)) return undefined;
+  readyDuckTargets(hap.value);
+  return webaudioOutput(hap, ...rest);
+};
+
+// A sidechain kick (duckorbit) on the first beat often lands before the pad it
+// ducks has made its orbit – its synth is still loading – and superdough logs
+// "duck target orbit N does not exist" for every such beat. Make the orbit first.
+function readyDuckTargets(value) {
+  const target = value?.duckorbit;
+  if (target == null) return;
+  const mixer = getSuperdoughAudioController();
+  for (const orbit of [target].flat()) {
+    const channels = multiChannelOrbits && orbit > 0 ? [orbit * 2 - 1, orbit * 2] : getDefaultValue('channels');
+    mixer.getOrbit(orbit, [channels].flat().map((c) => c - 1));
+  }
+}
 
 // "Listen" in Examples / Reference plays code on a separate repl, leaving the editor alone
 let previewRepl;

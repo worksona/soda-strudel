@@ -69,3 +69,36 @@ around your own state changes.
 - `lyrics` – word-by-word reveal synced to a melody line
 - `scope3d` – Three.js / WebGPU scene
 - per-orbit routing: `visual("bars").orbit(2)` reacting only to one layer
+
+# Writing a video effector
+
+Effectors are the picture-side twin of visuals: `.fx("vhs:kaleido")` on an
+`img`, `vid` or `cam` layer runs them in order after the layer is drawn,
+`.amount(0..1)` is their one knob (default .5), `.hue()` a direction for the
+few that have one. They live in `src/stage/videoFx.js`, one function each:
+
+```js
+wave(ctx, src, w, h, p) {
+  // src: the layer as drawn so far (a copy); ctx: the layer, cleared – draw the result
+  const amp = p.amount * (w / 12);
+  for (let y = 0; y < h; y += 2) ctx.drawImage(src, 0, y, w, 2, Math.sin(y * 18 / h + p.t * 3) * amp, y, w, 2);
+}
+```
+
+`p` carries `amount`, `hue`, `t` (scheduler time in cycles – animate with it so
+the picture moves with the music), `dt` (seconds since the last frame) and
+`state`, an object kept per media layer and effect for ring buffers, feedback
+frames and accumulated spin.
+
+To add one: write the function, describe it in `VIDEO_FX` in
+`src/soda/catalog.js` (the validator, the Reference page and the skill read
+that; say what `amount` does), add a row to the effects table in
+`claude/skills/strudel-vibe/references/multimedia.md`, then `pnpm run docs`
+and `pnpm skill`. The module throws at load when a catalogued name has no
+implementation, and tests/videoFx.test.js checks names never collide with
+soda controls (an effect called `mirror` would read like `.mirror()`).
+
+Rules: size everything by `h` (a 1080×1920 export must look like the editor);
+read pixels only from a reduced copy (`reduced(src, w, h, 3)`), never a full
+frame; draw-based effects can run at full resolution. The chain copies the
+layer once per link, so three or four links are fine on a phone, ten are not.

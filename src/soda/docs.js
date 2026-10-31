@@ -1,6 +1,6 @@
 // Reference docs for soda's own functions, in the same shape as Strudel's jsdoc
 // entries so the Reference panel, editor hints and the skill treat them alike.
-import { BLENDS, FX, VISUALS } from './catalog.js';
+import { BLENDS, FX, VIDEO_FX, VISUALS } from './catalog.js';
 
 const d = (name, description, examples = [], params = [], synonyms) => ({
   name,
@@ -23,9 +23,9 @@ export const SODA_DOCS = [
   d('opacity', 'Layer opacity 0..1 for media, visuals and captions.', ['$: img("fog").opacity(sine.range(.3, 1))'], [['amount', 'number', '0..1']]),
   d('fade', 'Fraction of each event spent fading in and out (0..0.5).', ['$: img("<sea night>").slow(2).fade(.4)'], [['amount', 'number', '0..0.5']]),
   d('blend', `How a layer mixes with what is below: ${BLENDS.join(', ')}.`, ['$: cam().blend("screen")'], [['mode', 'string', BLENDS.join(' | ')]]),
-  d('fx', `Image effect for media layers: ${FX.join(', ')}.`, ['$: img("neon").fx("<none edges posterize>")'], [['effect', 'string', FX.join(' | ')]]),
-  d('hue', 'Colour (degrees) for visuals; the rotation for fx("hue") on media.', ['$: visual("rings").hue("<160 300>")'], [['degrees', 'number', '0..360']]),
-  d('amount', 'Intensity 0..1 for visual plugins.', ['$: visual("particles").amount(.8)'], [['amount', 'number', '0..1']]),
+  d('fx', `Picture effect for media layers (img, vid, cam). Looks: none, grayscale, invert, blur, posterize, pixelate, edges, sepia, contrast, hue. Effectors (after Pixel Flow), strength from .amount(0..1), chained in order with ':': ${Object.entries(VIDEO_FX).map(([k, v]) => `${k} – ${v}`).join('; ')}.`, ['$: img("neon").fx("<none edges posterize>")', '$: cam().fx("vhs:kaleido").amount(sine.slow(8))', '$: vid("clip").fx("<timeslice feedback>").amount(camMotion)'], [['effect', 'string', FX.join(' | ')]]),
+  d('hue', 'Colour (degrees) for visuals; on media the rotation for fx("hue") and the direction of fx("smear") / fx("rgbshift").', ['$: visual("rings").hue("<160 300>")'], [['degrees', 'number', '0..360']]),
+  d('amount', 'Intensity 0..1 for visual plugins and for the fx effectors on media (default .5).', ['$: visual("particles").amount(.8)', '$: cam().fx("kaleido").amount("<.2 .6 1>")'], [['amount', 'number', '0..1']]),
   d('mirror', 'Flips a media layer horizontally (1 = on).', ['$: cam().mirror(1)'], [['on', 'number', '0 or 1']]),
   d('tint', 'Colour wash over a media layer; text colour for captions.', ['$: img("fog").tint("#ff3fd0")'], [['color', 'string', 'CSS colour']]),
   d('still', 'Freezes the current frame of a video or the camera while 1.', ['$: cam().still("<0 1>")'], [['on', 'number', '0 or 1']]),

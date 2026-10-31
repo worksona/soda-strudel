@@ -2,6 +2,26 @@
 
 ## Unreleased
 
+- **Video effectors for the camera (and any picture).** `.fx()` on `cam`,
+  `vid` and `img` now takes twenty-one effectors after
+  [Pixel Flow](https://pixel-flow.atomic47.co/pixel-flow-nodes/): kaleido,
+  symmetry, mosaic, slice, wave, twist, ripple, melt, smear, rgbshift, glitch,
+  vhs, sort, dither, halftone, ascii, scanlines, solarize, threshold, timeslice
+  (slit-scan) and feedback. `.amount(0..1)` is their strength, `.hue()` a
+  direction for smear and rgbshift, and `:` chains them in order –
+  `cam().fx("vhs:kaleido").amount(camMotion)`. New Live example “Video booth”;
+  the Reference, the validator and the skill know every name.
+- **Dancefloor examples and Hydra patterns.** Five new examples in a
+  *Dancefloor* category – Dub techno fog, Melodic techno, Trance lift (build →
+  breakdown → drop with `arrange()`), Psy roll, Hard techno kaleid – written
+  after the genre recipes in [Breath of Strudel](https://github.com/vakofmaya/BreathOfStrudle)
+  (CC BY 4.0) and the trance arc in honcoops/strudel_trance, each with a
+  full-screen visual. The skill gains a genre table, two of the recipes and a
+  set of Hydra backgrounds after [Hydra Book](https://github.com/micuat/hydra-book)
+  (public domain). The validator now treats `initHydra()` like the browser does:
+  Hydra's `shape`, `src`, `o0`… take over Strudel's for that sketch only. A
+  sidechain kick (`duckorbit`) no longer logs "duck target orbit does not
+  exist" on the first beats while the pad it ducks is still loading.
 - **The stage always fills the screen.** A sketch's shape (9:16 · 1:1 · 16:9)
   is now the *export frame*, not a letterbox: on a phone the piece is portrait,
   on a laptop wide, and video export cuts it to the frame. A sketch without a

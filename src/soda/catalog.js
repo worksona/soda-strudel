@@ -28,7 +28,37 @@ export const VISUALS = {
 /** Visuals that need the drawer's time window (haps before and after now), not just the present moment. */
 export const TIMELINE_VISUALS = ['punchcard', 'pianoroll', 'wordfall', 'spiral'];
 
-export const FX = ['none', 'grayscale', 'invert', 'blur', 'posterize', 'pixelate', 'edges', 'sepia', 'contrast', 'hue'];
+// Picture effects for media layers (img / vid / cam). The first ten are the
+// original one-look effects; VIDEO_FX are the effectors after Pixel Flow
+// (pixel-flow.atomic47.co) – `.amount(0..1)` sets their strength, `.hue()`
+// steers the ones that have a direction. Chain them with ':' in order:
+// cam().fx("vhs:kaleido").amount(.6)
+export const VIDEO_FX = {
+  kaleido: 'kaleidoscope – mirrored wedges around the centre, slowly spinning; amount = how many (2..10)',
+  symmetry: 'one half of the picture mirrored onto the other, a face becomes two; amount slides the seam',
+  mosaic: 'the picture cut into tiles that drift and jitter; amount = how many and how far',
+  slice: 'vertical strips sliding up and down in a wave; amount = how far',
+  wave: 'rows swaying sideways like heat haze; amount = how far',
+  twist: 'the centre twisted into a spiral; amount = how much (.5 is straight)',
+  ripple: 'rings breathing out from the centre like water; amount = depth',
+  melt: 'columns dripping down by their brightness; amount = how far',
+  smear: 'motion smear in one direction; amount = length, hue = angle in degrees',
+  rgbshift: 'red and blue pulled apart, 3D-glasses style; amount = distance, hue = angle',
+  glitch: 'rectangles torn out and shifted, changing every beat; amount = how far',
+  vhs: 'tracking noise, line tearing and dropouts like a worn tape; amount = how bad',
+  sort: 'pixel sort – bright runs of each row sorted into streaks; amount = threshold',
+  dither: 'ordered dither to a few levels, like an old screen; amount = levels (2..6)',
+  halftone: 'dots on black sized by brightness, newsprint style; amount = dot size',
+  ascii: 'the picture as characters; amount = character size',
+  scanlines: 'bright wobbling lines across the picture; amount = wobble',
+  solarize: 'bright parts inverted, the Man Ray look; amount = threshold',
+  threshold: 'pure black and white; amount = the cut-off',
+  timeslice: 'slit-scan: each strip from a different moment, movement smears in time; amount = how far back',
+  feedback: 'video feedback – the last frame zoomed and turned under the new one; amount = zoom and spin',
+};
+export const FX = ['none', 'grayscale', 'invert', 'blur', 'posterize', 'pixelate', 'edges', 'sepia', 'contrast', 'hue', ...Object.keys(VIDEO_FX)];
+/** The effect names of an fx value: a name, or a chain ("vhs:kaleido" – mini-notation hands it over as an array). */
+export const fxChain = (fx) => (fx === undefined || fx === null ? [] : [fx].flat().map(String).filter((n) => n && n !== 'none'));
 export const BLENDS = ['normal', 'screen', 'multiply', 'overlay', 'lighter', 'difference', 'soft-light'];
 export const ASPECTS = { free: null, '9:16': [1080, 1920], '1:1': [1080, 1080], '16:9': [1920, 1080] };
 /**

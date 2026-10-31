@@ -24948,7 +24948,31 @@ var VISUALS = {
   scope: { description: "Oscilloscope of the master output across the full width; amount sets the height.", params: ["hue", "amount", "opacity"] },
   spectrum: { description: "Scrolling spectrogram of the master output, pitch bottom to top; amount sets speed.", params: ["hue", "amount", "opacity"] }
 };
-var FX = ["none", "grayscale", "invert", "blur", "posterize", "pixelate", "edges", "sepia", "contrast", "hue"];
+var VIDEO_FX = {
+  kaleido: "kaleidoscope \u2013 mirrored wedges around the centre, slowly spinning; amount = how many (2..10)",
+  symmetry: "one half of the picture mirrored onto the other, a face becomes two; amount slides the seam",
+  mosaic: "the picture cut into tiles that drift and jitter; amount = how many and how far",
+  slice: "vertical strips sliding up and down in a wave; amount = how far",
+  wave: "rows swaying sideways like heat haze; amount = how far",
+  twist: "the centre twisted into a spiral; amount = how much (.5 is straight)",
+  ripple: "rings breathing out from the centre like water; amount = depth",
+  melt: "columns dripping down by their brightness; amount = how far",
+  smear: "motion smear in one direction; amount = length, hue = angle in degrees",
+  rgbshift: "red and blue pulled apart, 3D-glasses style; amount = distance, hue = angle",
+  glitch: "rectangles torn out and shifted, changing every beat; amount = how far",
+  vhs: "tracking noise, line tearing and dropouts like a worn tape; amount = how bad",
+  sort: "pixel sort \u2013 bright runs of each row sorted into streaks; amount = threshold",
+  dither: "ordered dither to a few levels, like an old screen; amount = levels (2..6)",
+  halftone: "dots on black sized by brightness, newsprint style; amount = dot size",
+  ascii: "the picture as characters; amount = character size",
+  scanlines: "bright wobbling lines across the picture; amount = wobble",
+  solarize: "bright parts inverted, the Man Ray look; amount = threshold",
+  threshold: "pure black and white; amount = the cut-off",
+  timeslice: "slit-scan: each strip from a different moment, movement smears in time; amount = how far back",
+  feedback: "video feedback \u2013 the last frame zoomed and turned under the new one; amount = zoom and spin"
+};
+var FX = ["none", "grayscale", "invert", "blur", "posterize", "pixelate", "edges", "sepia", "contrast", "hue", ...Object.keys(VIDEO_FX)];
+var fxChain = (fx2) => fx2 === void 0 || fx2 === null ? [] : [fx2].flat().map(String).filter((n) => n && n !== "none");
 var BLENDS = ["normal", "screen", "multiply", "overlay", "lighter", "difference", "soft-light"];
 var MEDIA_KEYS = ["img", "vid", "cam", "caption", "visual"];
 var SODA_CONTROLS = [
@@ -25043,7 +25067,10 @@ async function ensureScope() {
       samples: async (arg) => void sampleCalls.push(arg),
       aliasBank: async () => {
       },
+      // In the browser initHydra() puts Hydra's globals (osc, shape, src, o0…) over
+      // Strudel's – `shape` is also a Strudel control – so the stub does the same.
       initHydra: async () => {
+        for (const n of hydraNames) globalThis[n] = chain();
       },
       H: () => () => 0
       // painters from @strudel/draw / webaudio: accept and ignore in Node
@@ -25090,7 +25117,9 @@ async function validateSketch(sketch, { sounds: sounds2, media: media3, cycles =
   sampleCalls = [];
   const r = repl({ getTime: () => 0, defaultOutput: async () => {
   }, transpiler: F3, onEvalError: (e) => evalError = e });
+  const globals = Object.fromEntries(hydraNames.map((n) => [n, globalThis[n]]));
   const pattern = await r.evaluate(sketch.code, false);
+  Object.assign(globalThis, globals);
   const libraries = await namesFromSampleCalls(sampleCalls);
   if (evalError || !pattern) {
     errors.push(`evaluation failed: ${evalError?.message ?? "no pattern returned"}`);
@@ -25121,7 +25150,7 @@ async function validateSketch(sketch, { sounds: sounds2, media: media3, cycles =
     for (const k4 of ["img", "vid"]) if (v2[k4] !== void 0 && mIdx && !mIdx.has(String(v2[k4])) && !/^(https?:|local:)/.test(v2[k4])) unknown.media.add(String(v2[k4]));
     if (v2.visual !== void 0 && !VISUALS[v2.visual]) unknown.visuals.add(String(v2.visual));
     if (v2.caption !== void 0 && typeof v2.caption !== "string") badCaptions++;
-    if (v2.fx !== void 0 && !FX.includes(v2.fx)) unknown.fx.add(String(v2.fx));
+    for (const name3 of fxChain(v2.fx)) if (!FX.includes(name3)) unknown.fx.add(name3);
     if (v2.blend !== void 0 && !BLENDS.includes(v2.blend)) unknown.blend.add(String(v2.blend));
   }
   if (badCaptions)

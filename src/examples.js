@@ -1,10 +1,13 @@
 // Built-in examples for the Examples page – chosen to show the range: stories told in
-// chapters, grooves, moods, technique studies, a live camera piece, and three
-// patterns adapted from live-coding-music-mcp (AGPL-3.0).
+// chapters, grooves, a dancefloor set written after the genre recipes in Breath of
+// Strudel (vakofmaya/BreathOfStrudle, CC BY 4.0) and honcoops/strudel_trance, with
+// Hydra patterns after Hydra Book (micuat/hydra-book, public domain), moods,
+// technique studies, a live camera piece, and three patterns adapted from
+// live-coding-music-mcp (AGPL-3.0).
 // Every example is checked by tests/examples.test.js with the headless validator.
 import { DEFAULT_CODE } from './default-code.js';
 
-export const CATEGORIES = ['Start here', 'Stories', 'Grooves', 'Moods', 'Studies', 'Live', 'From live-coding-music-mcp'];
+export const CATEGORIES = ['Start here', 'Stories', 'Grooves', 'Dancefloor', 'Moods', 'Studies', 'Live', 'From live-coding-music-mcp'];
 
 export const EXAMPLES = [
   {
@@ -247,6 +250,161 @@ $: captions(['', 'dusk', '', 'the river keeps time']).slow(2)
 `,
   },
 
+  // ---------- Dancefloor ----------
+  // Genre recipes after Breath of Strudel (CC BY 4.0) – each with a full-screen visual.
+  {
+    title: 'Dub techno fog',
+    category: 'Dancefloor',
+    about: 'Dub techno at 118: chord stabs lost in reverb and delay, the picture sinking into the same fog.',
+    aspect: 'free',
+    code: `// Dub techno (after Breath of Strudel, CC BY 4.0): a muted sine kick, a chord
+// stab that is mostly tail, rimshots drenched in delay. The stab's effect
+// chain is shared with the picture, so the fog blurs and echoes with the music
+// (the picture's glow turned down – .room() set again wins).
+setcpm(118/4)
+
+const dub = x => x.lpf(sine.range(500, 2400).slow(16)).room(.85).roomsize(6)
+  .delay(.5).delaytime(.375).delayfeedback(.65)
+
+$: note("c1!4").s("sine").penv(16).pdecay(.08).decay(.5).sustain(0).gain(.75)
+$: s("hh*8").bank("RolandTR909").gain(".4 .2 .3 .2").hpf(7000).room(.3)
+$: s("rim(3,8)").bank("RolandTR909").gain(.3).pan(rand)
+  .delay(.6).delaytime(.1875).delayfeedback(.7).room(.4)
+$: dub(note("<[c3,eb3,g3] [bb2,d3,f3] [ab2,c3,eb3] [g2,bb2,d3]>").s("sawtooth")
+  .lpq(3).decay(.08).sustain(0).release(.02).gain(.35))
+$: note("<c1 c1 ab1 bb1>").s("sine").lpf(150).decay(.5).sustain(.5).gain(.5)
+$: s("crackle*2").density(.04).gain(.08)
+
+$: dub(img("<fog rain>").slow(8).fade(.3)).room(.3).pan(sine.range(.4, .6).slow(32))   // less glow than the stab
+$: visual("spectrum").hue(190).amount(.3).opacity(.6).blend("screen")
+$: captions(['', '', 'arriving through fog', '']).slow(4)
+`,
+  },
+  {
+    title: 'Melodic techno',
+    category: 'Dancefloor',
+    about: 'Melodic techno at 124: a sidechained pad, a haunting delayed lead, notes drawn on a pianoroll.',
+    aspect: 'free',
+    code: `// Melodic techno (after Breath of Strudel, CC BY 4.0). The pad lives on orbit 2
+// and the silent bd*4 on duckorbit(2) pumps it. The pianoroll visual shows
+// every note of every layer scrolling past the playhead.
+setcpm(124/4)
+
+$: note("c1!4").s("sine").penv(20).pdecay(.07).decay(.45).sustain(0).gain(.82)
+$: s("hh*16").bank("RolandTR909").gain(".4 .2 .5 .2").hpf(7000)
+$: s("~ cp ~ cp").bank("RolandTR909").room(.2).gain(.55)
+$: note("<c2 a1 f2 g2>").s("sawtooth").lpf(sine.range(300, 900).slow(16)).lpq(6)
+  .lpenv(3).lpd(.15).lps(0).ftype("ladder").decay(.25).sustain(0).gain(.5)
+$: chord("<Cm Am7 Fm G>").voicing().s("sawtooth")
+  .lpf(sine.range(1000, 2800).slow(16)).lpq(2)
+  .attack(.6).decay(1).sustain(.5).release(2).room(.6).roomsize(5).gain(.2).orbit(2)
+$: s("bd*4").bank("RolandTR909").duckorbit(2).duckattack(.25).duckdepth(.8).gain(0)
+$: n("<0 ~ 4 ~ 7 ~ 4 ~>").scale("C4:harmonic:minor").s("triangle")
+  .attack(.1).decay(.3).sustain(.2).release(.5)
+  .delay(.5).delaytime(.234).delayfeedback(.55).pan(sine.range(.3, .7).slow(4)).gain(.2)
+$: s("rim(5,16)").bank("RolandTR909").iter(4).gain(rand.range(.15, .35)).pan(rand)
+
+$: img("night").fx("<none contrast>").slow(8).opacity(.5).gain(sine.range(.6, 1).slow(16))
+$: visual("pianoroll").hue(280).amount(.8).opacity(.9)
+`,
+  },
+  {
+    title: 'Trance lift',
+    category: 'Dancefloor',
+    about: 'Trance at 138 in four chapters: groove, build, breakdown, drop – hats double, claps roll, a riser climbs.',
+    aspect: 'free',
+    code: `// Trance (after Breath of Strudel, CC BY 4.0; arc after honcoops/strudel_trance).
+// arrange() turns the pages: groove → build (hats and claps double every bar,
+// a noise riser climbs) → breakdown (pad alone) → drop. The spiral lights one
+// turn per cycle; captions mark the lift.
+setcpm(138/4)
+
+const kick = s("bd*4").bank("RolandTR909").gain(.85)
+const hats = s("[hh hh hh <hh oh>]*4").bank("RolandTR909").cut(1).gain(".6 .3 .5 .4").hpf(6000)
+const clap = s("~ cp ~ cp").bank("RolandTR909").room(.25).gain(.6)
+const bass = note("c2!8").s("sawtooth").lpf(600).lpq(8).lpenv(3).lpd(.1).lps(0)
+  .ftype("ladder").decay(.15).sustain(0).gain(.5)
+const pad = chord("<Cm Fm Ab Bb>").voicing().s("sawtooth").superimpose(x => x.add(note(.12)))
+  .lpf(sine.range(1500, 4000).slow(16)).lpq(2).attack(.3).sustain(.6).release(1.5)
+  .room(.5).roomsize(5).gain(.2).orbit(2)
+const pump = s("bd*4").bank("RolandTR909").duckorbit(2).duckattack(.2).duckdepth(1).gain(0)
+const lead = n("<0 2 4 7 4 2 0 ~>*2").scale("C4:harmonic:minor").s("sawtooth")
+  .lpf(5000).lpq(3).attack(.02).decay(.2).sustain(.3).release(.3)
+  .delay(.4).delaytime(.217).delayfeedback(.5).room(.3).gain(.22)
+const gate = chord("<Cm Fm Ab Bb>").voicing().s("sawtooth").lpf(3000)
+  .struct("[x x ~ x x ~ x ~]*2").decay(.08).sustain(0).release(.03)
+  .delay(.3).delaytime(.1).delayfeedback(.4).gain(.15)
+const build = stack(
+  s("hh*<8 16 16 32>").bank("RolandTR909").gain(.35).hpf(6000),
+  s("cp*<4 8 16 32>").bank("RolandTR909").gain("<.4 .5 .6 .7>").room(.5),
+  s("white*16").gain(saw.range(0, .35).slow(4)).lpf(sine.range(1000, 8000).slow(4)).room(.6),
+)
+
+$: arrange(
+  [8, stack(kick, hats, clap, bass, pad, pump, gate)],
+  [4, stack(kick, bass, pad, pump, build, captions(['', 'hands', 'up', '']))],
+  [4, stack(pad.gain(.3), lead.slow(2), s("~ ~ ~ crash").bank("soda").gain(.5).room(.8).slow(4),
+    captions(['', '', '', 'now']))],
+  [8, stack(kick, hats, clap, bass, pad, pump, gate, lead)],
+)
+$: img("<neon sun>").slow(12).fx("<none none contrast hue>").hue(saw.range(0, 180).slow(24)).opacity(.6)
+$: visual("spiral").hue(40).amount(.9).opacity(.9)
+`,
+  },
+  {
+    title: 'Psy roll',
+    category: 'Dancefloor',
+    about: 'Psytrance at 142: an offbeat rolling bass, a phrygian lead through a phaser, the pattern on a punchcard.',
+    aspect: 'free',
+    code: `// Psytrance (after Breath of Strudel, CC BY 4.0). The kick sits on the beat
+// and the bass fills every offbeat; the phrygian scale gives the lead its edge.
+// A punchcard shows the kick/bass interlock as scrolling blocks.
+setcpm(142/4)
+
+$: note("c1!4").s("sine").penv(36).pdecay(.04).decay(.2).sustain(0).gain(.85)
+$: note("[~ c2 ~ c2 ~ c2 ~ c2]*2").s("sawtooth").lpf(sine.range(400, 2000).slow(4))
+  .lpq(8).ftype("ladder").decay(.12).sustain(0).distort("1.5:.5").gain(.55)
+$: s("hh*16").bank("RolandTR909").gain(".5 .3 .6 .3").hpf(8000)
+$: s("~ cp ~ ~").bank("RolandTR909").room(.1).gain(.5)
+$: n("<[0 1 4 3] [0 5 4 1] [0 3 2 5] [0 1 6 3]>").scale("C4:phrygian").s("square")
+  .lpf(sine.range(1000, 5000).slow(8)).lpq(5).decay(.1).sustain(0)
+  .delay(.4).delaytime(.125).delayfeedback(.5).phaser(.5).phaserdepth(.6).gain(.2)
+$: note("c5").s("sine").fm(sine.range(2, 12).slow(16)).fmh("<1.41 2.76 3.14 1.73>")
+  .fmdecay(.3).fmsustain(0).decay(.5).sustain(0).room(.5).roomsize(5)
+  .delay(.3).delaytime(.25).delayfeedback(.4).degradeBy(.5).gain(.12)
+
+$: img("blocks").fx("<pixelate edges>").slow(4).coarse(sine.range(1, 12).slow(8)).opacity(.5)
+$: visual("punchcard").hue(120).opacity(.9)
+`,
+  },
+  {
+    title: 'Hard techno kaleid',
+    category: 'Dancefloor',
+    about: 'Industrial techno at 145 under a Hydra kaleidoscope with feedback, the bar count driving the symmetry.',
+    aspect: 'free',
+    code: `// Industrial techno (after Breath of Strudel, CC BY 4.0) with a Hydra pattern
+// after Hydra Book (public domain): a kaleidoscope with thresholded stripes,
+// fed back through itself with a slow scroll. H("…") changes the symmetry every bar.
+await initHydra()
+osc(40, .1, 1).thresh(.5).kaleid(H("<3 4 6 8>")).rotate(0, .1)
+  .layer(src(o0).scale(1.02).scroll(.003, .006).brightness(-.02).mask(shape(4, .6, .3)))
+  .modulate(noise(3), .05).out()
+
+setcpm(145/4)
+$: note("d1!4").s("sine").penv(36).pdecay(.04).decay(.3).sustain(0).distort("4:.5").gain(.9)
+$: s("hh*16").bank("RolandTR909").gain(".6 .3 .8 .3").crush(6).hpf(6000)
+$: s("~ sd ~ [sd sd]").bank("RolandTR909").distort("2:.5").gain(.7)
+$: note("[c2!4 <eb2 f2>!2 c2!2]*2").s("sawtooth").lpf(sine.range(200, 1500).fast(2)).lpq(10)
+  .ftype("ladder").decay(.1).sustain(0).distort("3:.5").gain(.55)
+$: s("white(3,8)").bpf(sine.range(1000, 5000).slow(4)).bpq(8).decay(.05).sustain(0)
+  .distort("2:.5").gain(.3)
+$: s("brown*2").coarse(16).crush(4).gain(.08)
+
+$: visual("pulse").hue(0).amount(.4).opacity(.6)
+$: captions(['', '', '', '', '', '', '', 'harder']).slow(2)
+`,
+  },
+
   // ---------- Moods ----------
   {
     title: 'Ambient dawn',
@@ -388,6 +546,27 @@ $: note("<a1 a1 c2 g1>*4").s("sawtooth").lpf(camMotion.range(250, 4500)).lpq(6).
 $: cam().mirror(1).fx("<none posterize edges posterize>").opacity(.9)
 $: visual("rings").hue(160).amount(.6)
 $: captions(['move to open the filter']).slow(4)
+`,
+  },
+  {
+    title: 'Video booth',
+    category: 'Live',
+    about: 'Camera through the video effectors: kaleidoscope, slit-scan, VHS, feedback – one look per bar, strength from your movement.',
+    aspect: 'free',
+    code: `// Turn the camera on (toolbar). .fx() chains effectors in order – "vhs:kaleido"
+// is VHS then kaleidoscope – and .amount() is their strength. Here the look
+// changes every bar and camMotion (how much you move) sets how strong it is.
+setcpm(110/4)
+$: s("kick*4, ~ clap, hat*8").bank("soda").gain(.55).room(.2)
+$: note("<c2 c2 eb2 g1>*8").s("sawtooth").lpf(camMotion.range(300, 3000)).lpq(8).decay(.15).sustain(0).gain(.45)
+$: chord("<Cm9 Abmaj7>").voicing().s("gm_epiano1").gain(.25).room(.5).delay(.3).delayfeedback(.4)
+
+$: cam().mirror(1)
+  .fx("<kaleido timeslice vhs:rgbshift feedback symmetry glitch:scanlines halftone sort>")
+  .amount(camMotion.range(.2, .9))
+  .hue(saw.range(0, 360).slow(8))
+$: visual("pulse").hue(200).amount(.25)
+$: captions(['', 'move', '', 'the picture follows']).slow(2)
 `,
   },
 

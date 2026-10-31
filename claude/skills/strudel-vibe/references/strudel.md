@@ -96,6 +96,10 @@ osc(H("<10 30 60>"), .1).out()
 // the camera (when on) feeds s0: src(s0).modulate(osc(8)).out()
 ```
 
+More complete backgrounds (kaleid, feedback trails, pixelate, voronoi) are in
+recipes.md › Hydra patterns. `shape`, `noise`, `src`… are Hydra's once
+`initHydra()` has run.
+
 ## Extra sounds
 
 `samples('github:user/repo')` loads any repo with a `strudel.json` (branch

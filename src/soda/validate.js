@@ -6,7 +6,7 @@ import * as mini from '@strudel/mini';
 import * as tonal from '@strudel/tonal';
 import { transpiler } from '@strudel/transpiler';
 import { sodaScope } from './patterns.js';
-import { VISUALS, FX, BLENDS, isMediaOnly } from './catalog.js';
+import { VISUALS, FX, BLENDS, fxChain, isMediaOnly } from './catalog.js';
 
 const { repl, evalScope, silence } = core;
 
@@ -51,7 +51,9 @@ async function ensureScope() {
     await evalScope(core, mini, tonal, sodaScope, {
       samples: async (arg) => void sampleCalls.push(arg),
       aliasBank: async () => {},
-      initHydra: async () => {},
+      // In the browser initHydra() puts Hydra's globals (osc, shape, src, o0…) over
+      // Strudel's – `shape` is also a Strudel control – so the stub does the same.
+      initHydra: async () => { for (const n of hydraNames) globalThis[n] = chain(); },
       H: () => () => 0,
       // painters from @strudel/draw / webaudio: accept and ignore in Node
     });
@@ -103,7 +105,9 @@ export async function validateSketch(sketch, { sounds, media, cycles = 8 } = {})
   let evalError;
   sampleCalls = [];
   const r = repl({ getTime: () => 0, defaultOutput: async () => {}, transpiler, onEvalError: (e) => (evalError = e) });
+  const globals = Object.fromEntries(hydraNames.map((n) => [n, globalThis[n]]));
   const pattern = await r.evaluate(sketch.code, false);
+  Object.assign(globalThis, globals); // a sketch's initHydra() must not leak into the next one
   const libraries = await namesFromSampleCalls(sampleCalls);
   if (evalError || !pattern) {
     errors.push(`evaluation failed: ${evalError?.message ?? 'no pattern returned'}`);
@@ -136,7 +140,7 @@ export async function validateSketch(sketch, { sounds, media, cycles = 8 } = {})
     for (const k of ['img', 'vid']) if (v[k] !== undefined && mIdx && !mIdx.has(String(v[k])) && !/^(https?:|local:)/.test(v[k])) unknown.media.add(String(v[k]));
     if (v.visual !== undefined && !VISUALS[v.visual]) unknown.visuals.add(String(v.visual));
     if (v.caption !== undefined && typeof v.caption !== 'string') badCaptions++;
-    if (v.fx !== undefined && !FX.includes(v.fx)) unknown.fx.add(String(v.fx));
+    for (const name of fxChain(v.fx)) if (!FX.includes(name)) unknown.fx.add(name);
     if (v.blend !== undefined && !BLENDS.includes(v.blend)) unknown.blend.add(String(v.blend));
   }
   if (badCaptions)

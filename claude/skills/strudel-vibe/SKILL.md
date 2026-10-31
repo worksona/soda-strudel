@@ -100,6 +100,11 @@ code without a link, saying it wasn't validated.
   the filter that opens the bass sharpens the image. Prefer this over
   `.fx("blur")` when the sound has the same effect; keep `.fx()` for looks
   with no audio twin (grayscale, invert, sepia, hue).
+- **Dancefloor genres** (recipes › Dancefloor genres): genre is tempo + kick +
+  bass + how much reverb. Sine kicks with `penv/pdecay`, ladder-filtered saw
+  bass, a pad on `.orbit(2)` ducked by a silent `s("bd*4").duckorbit(2).gain(0)`,
+  and `arrange()` for build → breakdown → drop. Hydra backgrounds: recipes ›
+  Hydra patterns (kaleid, feedback, pixelate, camera) – one `.out()` per sketch.
 - Tie picture to sound: change images on the same cycle grid as chord changes
   (`img("<a b>").slow(4)` with `chord("<…>").slow(4)` or note changes), use
   `visual("pulse")` or `rings` for drums, `ribbon`/`bars` for texture,
@@ -112,7 +117,11 @@ code without a link, saying it wasn't validated.
   (one per cycle, `''` = no text). Double quotes would be parsed as mini-notation.
 - Keep gain sane (most layers `.gain(.3–.8)`), add `.room()` / `.delay()` for space.
 - Camera pieces (`cam()`, `camMotion`) ask the viewer for permission and fall
-  back gracefully; mention that in your reply.
+  back gracefully; mention that in your reply. Give the camera a **video
+  effector chain** (multimedia.md › Video effectors): `cam().mirror(1)
+  .fx("<kaleido timeslice vhs:rgbshift>").amount(camMotion.range(.2, .9))` –
+  one look per bar, strength from movement. `timeslice`, `feedback`, `kaleido`
+  and `symmetry` are the camera's best friends; `glitch`/`vhs` suit breaks.
 
 ## References
 
