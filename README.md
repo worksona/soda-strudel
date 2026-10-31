@@ -1,5 +1,7 @@
 # soda.strudel
 
+**Live:** https://soda-strudel.netlify.app
+
 A personal project by David · [david@atomic47.co](mailto:david@atomic47.co) · [sodanovels.com](https://sodanovels.com)
 
 Live-code music, images, camera and story in the browser – and vibe it with Claude.
@@ -43,7 +45,7 @@ One row of outlined icons, grouped:
 |---|---|
 | Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Code · Stage · Full screen) · **Input** ▾ (Record a take · Camera · Switch camera) · Play |
 | Pages | **Examples** · **Sounds** · **Media** · **Reference** |
-| Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) |
+| Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) · **Vibe** (the strudel-vibe skill: install, prompts, links) |
 | Right | **About** · **Settings** |
 
 **File** is a pulldown: New sketch · Open .soda file… · Save (ctrl+s) ·
@@ -115,8 +117,8 @@ node claude/skills/strudel-vibe/scripts/soda.mjs link sketch.json --site https:/
 node claude/skills/strudel-vibe/scripts/soda.mjs sounds 909
 ```
 
-Links point at `config.json › siteUrl`. Set it when you deploy:
-`SODA_SITE_URL=https://your-site pnpm skill`.
+Links point at `config.json › siteUrl` – https://soda-strudel.netlify.app. To
+point the skill at another deployment: `SODA_SITE_URL=https://your-site pnpm skill`.
 
 **Publishing the skill repo:** `claude/` is the source. Commit your changes,
 then `pnpm skill:publish` rebuilds the skill and pushes `claude/` to

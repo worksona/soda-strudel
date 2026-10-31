@@ -13,7 +13,7 @@ import { isRecording, startTake, stopTake } from './media/mic.js';
 import { saveSketch as storeSketch } from './storage/db.js';
 import { getSettings, onSettings } from './settings.js';
 import { initEditorSettings } from './editor/assist.js';
-import { aboutView, editorThemeChoice, examplesView, onLog, referenceView } from './ui/learn.js';
+import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, vibeView } from './ui/learn.js';
 import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
 import { applyEditorSettings } from './editor/assist.js';
 import { repl } from '@strudel/core';
@@ -377,6 +377,7 @@ function replaceSketch(next, message) {
 
 const app = {
   stage,
+  toast,
   mirror,
   ensureAudio,
   insert,
@@ -438,6 +439,7 @@ const PAGES = {
   reference: 'Reference',
   export: 'Export',
   share: 'Share',
+  vibe: 'Vibe with Claude',
   about: 'About',
   settings: 'Settings',
   more: 'Pages',
@@ -458,7 +460,7 @@ function morePage() {
     {},
     Object.entries(PAGES)
       .filter(([k]) => k !== 'more')
-      .map(([k, title]) => h('button', { onclick: () => openPage(k, true) }, icon({ export: 'download' }[k] ?? k, 22), title)),
+      .map(([k, title]) => h('button', { onclick: () => openPage(k, true) }, icon({ export: 'download' }[k] ?? k, 22), k === 'vibe' ? 'Vibe' : title)),
     action('claude', 'claude', 'Claude'),
   );
 }
@@ -471,6 +473,7 @@ async function renderPage({ focus } = {}) {
     reference: () => panelBody.replaceChildren(referenceView(app, renderPage)),
     export: () => exportPage.render(),
     share: () => sharePage.render(),
+    vibe: () => panelBody.replaceChildren(vibeView(app)),
     about: () => panelBody.replaceChildren(aboutView(renderPage)),
     settings: () => settingsPage.render(),
     more: () => panelBody.replaceChildren(morePage()),
@@ -522,7 +525,7 @@ if (editorThemeChoice() === 'auto') applyEditorSettings(mirror, { theme: EDITOR_
 $('#claude').addEventListener('click', async () => {
   try {
     await copyForClaude(app.getSketch(), lastError);
-    toast('Copied for Claude – paste it into a chat. The strudel-vibe skill is under Settings › About.', { ms: 5000 });
+    toast('Copied for Claude – paste it into a chat. Get the strudel-vibe skill from the Vibe page.', { ms: 5000 });
   } catch (e) {
     toast(`Could not copy: ${e.message}`, { error: true });
   }

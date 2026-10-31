@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- **Vibe** page and toolbar button next to Claude: what the strudel-vibe skill
+  does, download / install (claude.ai, Claude Code, by hand), prompts to copy,
+  how it works, links.
+- The skill's links now point at the live site, https://soda-strudel.netlify.app.
+- Fix: the skill download link saved the file as "true".
+- Deployed to Netlify: https://soda-strudel.netlify.app
+
 - Toolbar menus consolidated: **View** (Code over the stage · Stage only ·
   Full screen) and **Input** (Record a take / Stop recording · Camera · Switch
   camera) are pulldowns to the right of File, replacing five separate buttons.

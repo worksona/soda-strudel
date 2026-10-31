@@ -4,6 +4,8 @@
 import {
   createElement,
   AudioLines,
+  ExternalLink,
+  WandSparkles,
   Minimize,
   RefreshCw,
   Image,
@@ -51,6 +53,8 @@ import {
 
 const ICONS = {
   audio: AudioLines,
+  external: ExternalLink,
+  vibe: WandSparkles,
   exitfull: Minimize,
   update: RefreshCw,
   media: Image,

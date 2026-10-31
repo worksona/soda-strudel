@@ -1,6 +1,6 @@
 // Page views: About (with the log), Examples, Reference, and the Editor section
 // of Settings. Each returns an element; `rerender` redraws the page.
-import { h } from './dom.js';
+import { $, h } from './dom.js';
 import { icon } from './icons.js';
 import { CATEGORIES, EXAMPLES } from '../examples.js';
 import { WORKSHOP } from '../workshop.js';
@@ -86,7 +86,7 @@ $: captions(['line one', '', 'line two'])`),
       h('li', {}, link('https://strudel.cc/workshop/getting-started/', 'Strudel workshop')),
       h('li', {}, link('https://strudel.cc/learn/mini-notation/', 'Mini-notation in depth')),
       h('li', {}, link('https://github.com/worksona/soda-strudel', 'Source code (AGPL-3.0)')),
-      h('li', {}, h('a', { href: '/strudel-vibe.zip', download: true }, 'Claude skill (strudel-vibe.zip)')),
+      h('li', {}, h('a', { href: '/strudel-vibe.zip', download: 'strudel-vibe.zip' }, 'Claude skill (strudel-vibe.zip)')),
     ),
     h(
       'details.log-section',
@@ -95,6 +95,67 @@ $: captions(['line one', '', 'line two'])`),
       consoleView(rerender),
     ),
     h('p.muted.version', {}, `soda.strudel ${VERSION}`),
+  );
+}
+
+// ---------- Vibe: the strudel-vibe Claude skill ----------
+const SKILL_REPO = 'https://github.com/worksona/strudel-vibe';
+export function vibeView(app) {
+  const step = (n, title, ...body) => h('li', {}, h('strong', {}, title), ' ', ...body);
+  const prompt = (text) => h('li', {}, h('button.prompt', { title: 'Copy this prompt', onclick: () => navigator.clipboard?.writeText(text).then(() => app.toast('Prompt copied – paste it into Claude.')) }, `“${text}”`));
+  return h(
+    'div.vibe',
+    {},
+    h(
+      'p.lead',
+      {},
+      h('strong', {}, 'Vibe it with Claude.'),
+      ' Describe a mood, a story or a picture – the ',
+      h('strong', {}, 'strudel-vibe'),
+      ' skill writes the music, pictures and words as a soda.strudel sketch, checks it with Strudel’s real engine, and hands you a link that plays here.',
+    ),
+    h(
+      'div.vibe-actions',
+      {},
+      h('a.button.primary', { href: '/strudel-vibe.zip', download: 'strudel-vibe.zip' }, icon('download', 16), ' Download the skill'),
+      h('a.button', { href: SKILL_REPO, target: '_blank', rel: 'noopener' }, icon('external', 16), ' Skill on GitHub'),
+      h('button', { onclick: () => $('#claude').click() }, icon('claude', 16), ' Copy this sketch for Claude'),
+    ),
+    h('h4', {}, 'Install'),
+    h(
+      'ol.steps',
+      {},
+      step(1, 'claude.ai –', 'download the skill above, then Settings › Capabilities › Skills › Upload.'),
+      step(2, 'Claude Code –', h('code', {}, '/plugin marketplace add worksona/strudel-vibe'), ' then ', h('code', {}, '/plugin install strudel-vibe@strudel-vibe'), '.'),
+      step(3, 'By hand –', 'unzip into ', h('code', {}, '~/.claude/skills/'), '.'),
+    ),
+    h('h4', {}, 'Ask for'),
+    h(
+      'ul.prompts',
+      {},
+      prompt('A 9:16 lo-fi piece about the last bus home, with captions.'),
+      prompt('Something like a sunrise over the sea – ambient, no drums.'),
+      prompt('Set this poem to music with pictures: …'),
+      prompt('Make it darker, and add a breakbeat from clean-breaks.'),
+    ),
+    h('h4', {}, 'How it works'),
+    h(
+      'ol.steps',
+      {},
+      h('li', {}, 'Claude reads the vibe and picks tempo, sounds, pictures and shape.'),
+      h('li', {}, 'It writes the sketch and validates it – syntax, sounds (including GitHub libraries), visuals, captions.'),
+      h('li', {}, 'You get a link: open it, tap play, Remix to change it.'),
+      h('li', {}, 'To keep going, press ', h('strong', {}, 'Claude'), ' in the toolbar – it copies your code, any error and your own sound names – and paste it into the chat.'),
+    ),
+    h('h4', {}, 'Links'),
+    h(
+      'ul.links',
+      {},
+      h('li', {}, link(SKILL_REPO, 'strudel-vibe on GitHub')),
+      h('li', {}, link(`${SKILL_REPO}#readme`, 'Skill README – install, use, configure')),
+      h('li', {}, link('https://strudel.cc/workshop/getting-started/', 'Strudel workshop')),
+      h('li', {}, link('https://github.com/worksona/soda-strudel', 'soda.strudel source (AGPL-3.0)')),
+    ),
   );
 }
 

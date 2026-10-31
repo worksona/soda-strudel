@@ -26,7 +26,7 @@ effects and captions.
 cd skills && zip -r strudel-vibe.zip strudel-vibe
 ```
 
-(or download `/strudel-vibe.zip` from a running soda.strudel site – About › Links).
+(or download it from the **Vibe** page of https://soda-strudel.netlify.app).
 
 **By hand** – copy `skills/strudel-vibe` into `~/.claude/skills/`.
 
@@ -56,8 +56,9 @@ node scripts/soda.mjs media                                         # media, vis
 
 ## Configure
 
-Links point at `skills/strudel-vibe/config.json › siteUrl`. Override per call with
-`--site URL` or the `SODA_SITE_URL` environment variable.
+Links point at **https://soda-strudel.netlify.app** (`skills/strudel-vibe/config.json ›
+siteUrl`). Override per call with `--site URL` or the `SODA_SITE_URL` environment
+variable – e.g. for your own deployment.
 
 ## Contents
 

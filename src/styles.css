@@ -1223,3 +1223,58 @@ body.pseudo-full #stage {
 .menu [role^='menuitem']:disabled {
   opacity: 0.4;
 }
+
+/* ---------- Vibe page ---------- */
+a.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1px solid var(--line);
+  padding: 0 12px;
+  min-height: 36px;
+  color: var(--text);
+  text-decoration: none;
+}
+a.button:hover {
+  border-color: var(--line-strong);
+  background: var(--soft);
+}
+a.button.primary {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 650;
+}
+.vibe .lead {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.vibe-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 4px;
+}
+.vibe ol.steps {
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.vibe ol.steps li {
+  margin-bottom: 6px;
+}
+ul.prompts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+button.prompt {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  white-space: normal;
+  padding: 8px 10px;
+  font-style: italic;
+}
