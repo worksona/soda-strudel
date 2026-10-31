@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- Toolbar menus consolidated: **View** (Code over the stage · Stage only ·
+  Full screen) and **Input** (Record a take / Stop recording · Camera · Switch
+  camera) are pulldowns to the right of File, replacing five separate buttons.
+  View's icon shows the current view; Input glows red while recording or with
+  the camera on. All three pulldowns share one component (src/ui/menu.js):
+  one open at a time, full keyboard support.
+
 - The strudel-vibe skill has its own repo, worksona/strudel-vibe, published
   from `claude/` with `pnpm skill:publish` (git subtree). The plugin is now
   named `strudel-vibe`, with its own marketplace, README and licence.

@@ -674,8 +674,7 @@ body.dragging #drop-hint {
   #toolbar {
     gap: 6px;
   }
-  #toolbar .icon-btn,
-  #modes button {
+  #toolbar .icon-btn {
     width: 34px;
     min-height: 34px;
     padding: 0;
@@ -1015,7 +1014,7 @@ ul.workshop {
   border: 1px solid var(--line-strong);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
-.menu [role='menuitem'] {
+.menu [role^='menuitem'] {
   width: 100%;
   justify-content: flex-start;
   gap: 10px;
@@ -1024,7 +1023,7 @@ ul.workshop {
   padding: 0 10px;
   font-size: 14px;
 }
-.menu [role='menuitem']:focus-visible {
+.menu [role^='menuitem']:focus-visible {
   outline-offset: -2px;
 }
 .menu .mi-label {
@@ -1212,4 +1211,15 @@ body.pseudo-full #stage {
   .chip {
     min-height: 36px;
   }
+}
+
+.menu .mi-check {
+  display: inline-flex;
+  color: var(--accent);
+}
+.menu [aria-checked='true'] .mi-label {
+  color: var(--accent);
+}
+.menu [role^='menuitem']:disabled {
+  opacity: 0.4;
 }

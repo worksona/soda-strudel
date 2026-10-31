@@ -23,6 +23,7 @@ import { createSettings } from './ui/settings.js';
 import { createShare } from './ui/share.js';
 import { createExport, slug } from './ui/export.js';
 import { createFileMenu } from './ui/fileMenu.js';
+import { createDropdown, menuItem, menuSeparator } from './ui/menu.js';
 import { buildSodaFile } from './share/sodafile.js';
 import { download } from './export/record.js';
 import { copyForClaude } from './ui/claude.js';
@@ -223,10 +224,10 @@ function insert(text) {
 }
 const touchScreen = matchMedia('(hover: none) and (pointer: coarse)').matches;
 
-// ---------- modes: Code · Stage · Full screen ----------
+// ---------- View: Code · Stage · Full screen (a pulldown) ----------
 function setMode(mode) {
   document.body.dataset.mode = mode;
-  document.querySelectorAll('#modes [data-mode]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
+  setIcon($('#view'), mode === 'stage' ? 'stage' : 'code'); // the View button shows the current view
 }
 // iPhone Safari has no Fullscreen API for anything but video – fall back to an
 // in-page full screen (toolbar hidden, stage edge to edge, an exit button).
@@ -241,25 +242,30 @@ function pseudoFull(on) {
   stage.resize();
 }
 $('#exit-full').addEventListener('click', () => pseudoFull(false));
-$('#modes').addEventListener('click', async (e) => {
-  const mode = e.target.closest('[data-mode]')?.dataset.mode;
-  if (!mode) return;
-  if (mode === 'full') {
-    setMode('stage');
-    await fullscreen();
-  } else setMode(mode);
-});
 setMode('code');
+createDropdown({
+  button: $('#view'),
+  menu: $('#view-menu'),
+  build: ({ close }) => {
+    const mode = document.body.dataset.mode;
+    return [
+      menuItem('code', 'Code over the stage', () => setMode('code'), { checked: mode === 'code', close }),
+      menuItem('stage', 'Stage only', () => setMode('stage'), { checked: mode === 'stage', close }),
+      menuSeparator(),
+      menuItem('full', 'Full screen', () => (setMode('stage'), fullscreen()), { close }),
+    ];
+  },
+});
 
 // ---------- toolbar: play + inputs ----------
 $('#play').addEventListener('click', () => (needsUpdate() ? play() : playing || previewing ? stop() : play()).catch((e) => toast(e.message, { error: true })));
 
-$('#mic').addEventListener('click', async (e) => {
-  const btn = e.currentTarget;
+// ---------- Input: microphone takes and the camera (a pulldown) ----------
+async function toggleTake() {
   try {
     if (isRecording()) {
-      btn.classList.remove('live');
       const wav = await stopTake();
+      syncInput();
       if (!wav) return toast('Nothing recorded.');
       const name = await saveTake(wav);
       toast(`Saved take "${name}" – use s("${name}")`);
@@ -267,28 +273,41 @@ $('#mic').addEventListener('click', async (e) => {
     } else {
       await ensureAudio();
       await startTake();
-      btn.classList.add('live');
-      toast('Recording a take – tap the mic again to stop.');
+      syncInput();
+      toast('Recording a take – Input › Stop recording when you are done.');
     }
   } catch (err) {
-    btn.classList.remove('live');
+    syncInput();
     toast(`Microphone: ${err.message}`, { error: true });
   }
-});
-
-$('#camera').addEventListener('click', async () => {
+}
+async function toggleCamera() {
   try {
     cameraOn() ? disableCamera() : await enableCamera();
   } catch (err) {
     toast(`Camera: ${err.message}`, { error: true });
   }
+}
+/** The Input button glows while the mic records or the camera is on. */
+function syncInput() {
+  const btn = $('#input');
+  const rec = isRecording();
+  btn.classList.toggle('live', rec || cameraOn());
+  setIcon(btn, rec || !cameraOn() ? 'mic' : 'camera');
+  btn.querySelector('.cap').textContent = rec ? 'Rec' : cameraOn() ? 'Cam on' : 'Input';
+  btn.setAttribute('aria-label', rec ? 'Input – recording' : cameraOn() ? 'Input – camera on' : 'Input');
+}
+createDropdown({
+  button: $('#input'),
+  menu: $('#input-menu'),
+  build: ({ close }) => [
+    menuItem('mic', isRecording() ? 'Stop recording' : 'Record a take', toggleTake, { close }),
+    menuItem('camera', 'Camera', toggleCamera, { checked: cameraOn(), close }),
+    menuItem('flip', 'Switch camera', () => flipCamera().catch((err) => toast(err.message, { error: true })), { disabled: !cameraOn(), close }),
+    h('p.menu-empty', {}, 'Takes become sounds in your library. The camera stays on this device.'),
+  ],
 });
-$('#flip').addEventListener('click', () => flipCamera().catch((err) => toast(err.message, { error: true })));
-onCameraChange((on) => {
-  $('#camera').classList.toggle('live', on);
-  $('#camera').setAttribute('aria-pressed', String(on));
-  $('#flip').hidden = !on;
-});
+onCameraChange(syncInput);
 
 // ---------- sketches: save / open / new ----------
 function thumbnail() {

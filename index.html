@@ -21,17 +21,15 @@
         <button id="file" class="icon-btn" data-icon="sketches" data-cap="File" aria-haspopup="menu" aria-expanded="false" aria-controls="file-menu" title="File: new, open, save" aria-label="File"></button>
         <div id="file-menu" class="menu" role="menu" aria-label="File" hidden></div>
       </div>
+      <div class="menu-anchor">
+        <button id="view" class="icon-btn" data-icon="code" data-cap="View" aria-haspopup="menu" aria-expanded="false" aria-controls="view-menu" title="View: code, stage, full screen" aria-label="View"></button>
+        <div id="view-menu" class="menu" role="menu" aria-label="View" hidden></div>
+      </div>
+      <div class="menu-anchor">
+        <button id="input" class="icon-btn" data-icon="mic" data-cap="Input" aria-haspopup="menu" aria-expanded="false" aria-controls="input-menu" title="Input: microphone and camera" aria-label="Input"></button>
+        <div id="input-menu" class="menu" role="menu" aria-label="Input" hidden></div>
+      </div>
       <button id="play" class="icon-btn primary" data-icon="play" data-cap="Play" aria-pressed="false" title="Play / update (ctrl+enter) · Stop (ctrl+.)" aria-label="Play"></button>
-      <div id="modes" class="segmented" role="group" aria-label="View">
-        <button data-mode="code" data-icon="code" data-cap="Code" aria-pressed="true" title="Code over the stage" aria-label="Code"></button>
-        <button data-mode="stage" data-icon="stage" data-cap="Stage" aria-pressed="false" title="Stage only" aria-label="Stage"></button>
-        <button data-mode="full" data-icon="full" data-cap="Full" title="Full screen" aria-label="Full screen"></button>
-      </div>
-      <div class="group" role="group" aria-label="Inputs">
-        <button id="mic" class="icon-btn" data-icon="mic" data-cap="Mic" title="Record a take from the microphone" aria-label="Record a take"></button>
-        <button id="camera" class="icon-btn" data-icon="camera" data-cap="Camera" title="Camera on / off (stays on this device)" aria-label="Camera" aria-pressed="false"></button>
-        <button id="flip" class="icon-btn" data-icon="flip" data-cap="Flip" title="Switch camera" aria-label="Switch camera" hidden></button>
-      </div>
       <span class="spacer"></span>
       <nav class="group pages" aria-label="Pages">
         <button class="icon-btn" data-page="examples" data-icon="examples" data-cap="Examples" title="Examples" aria-label="Examples"></button>

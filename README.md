@@ -41,14 +41,16 @@ One row of outlined icons, grouped:
 
 | Group | Buttons |
 |---|---|
-| Left | **soda.strudel** (opens About) · **File** ▾ · Play · Code / Stage / Full screen · Mic / Camera |
+| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Code · Stage · Full screen) · **Input** ▾ (Record a take · Camera · Switch camera) · Play |
 | Pages | **Examples** · **Sounds** · **Media** · **Reference** |
 | Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) |
 | Right | **About** · **Settings** |
 
 **File** is a pulldown: New sketch · Open .soda file… · Save (ctrl+s) ·
 Save as new · Rename… · Download .soda file · **Your sketches** (every saved
-sketch – click to open, trash to delete, with Undo). Tiny captions
+sketch – click to open, trash to delete, with Undo). **View** shows the current
+view in its icon; **Input** glows red while the mic records or the camera is on.
+Tiny captions
 sit under every toolbar icon (Settings › Appearance turns them off).
 
 Each page opens on the right, one level deep – no tabs inside pages and no pop-up dialogs. Click the
