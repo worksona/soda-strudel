@@ -1,0 +1,15 @@
+{
+ "note": "Media available via img(\"name\") / vid(\"name\").",
+ "packs": [
+  {
+   "id": "soda:demo",
+   "licence": "CC0-1.0",
+   "items": {
+    "dusk": "image",
+    "fog": "image",
+    "neon": "image",
+    "rain": "image"
+   }
+  }
+ ]
+}

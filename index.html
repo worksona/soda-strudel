@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>soda-strudel</title>
+    <meta name="description" content="Live-code music, images, camera and story in your browser. Built on Strudel." />
+    <meta name="theme-color" content="#0b0b12" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body data-mode="code">
+    <header id="toolbar" role="toolbar" aria-label="soda-strudel">
+      <span class="brand" title="soda-strudel 0.0.1">soda</span>
+      <button id="play" class="primary" aria-pressed="false" title="Play / update (ctrl+enter) · Stop (ctrl+.)">▶ Play</button>
+      <div id="modes" class="segmented" role="group" aria-label="View">
+        <button data-mode="code" aria-pressed="true" title="Code over the stage">Code</button>
+        <button data-mode="stage" aria-pressed="false" title="Stage only">Stage</button>
+        <button data-mode="full" title="Full screen" aria-label="Full screen">⛶</button>
+      </div>
+      <div class="inputs" role="group" aria-label="Inputs">
+        <button id="mic" class="icon-btn" title="Record a take from the microphone" aria-label="Record a take">🎙</button>
+        <button id="camera" class="icon-btn" title="Camera on / off (stays on this device)" aria-label="Camera" aria-pressed="false">📷</button>
+        <button id="flip" class="icon-btn small" title="Switch camera" aria-label="Switch camera" hidden>⟲</button>
+      </div>
+      <span class="spacer"></span>
+      <button id="library" aria-expanded="false" aria-controls="drawer">Library</button>
+      <button id="share">Share</button>
+      <button id="claude" title="Copy this sketch for Claude">✦ Claude</button>
+    </header>
+
+    <main id="main">
+      <div id="stage" aria-label="Stage"></div>
+      <div id="editor"></div>
+      <div id="error" role="status" hidden></div>
+    </main>
+
+    <aside id="drawer" hidden aria-label="Library">
+      <div class="drawer-head"><h2>Library</h2><button id="drawer-close" class="icon" aria-label="Close library">✕</button></div>
+      <div class="drawer-body"></div>
+    </aside>
+
+    <div id="viewer-controls" aria-label="Viewer controls">
+      <button onclick="document.getElementById('stage').requestFullscreen?.()" aria-label="Full screen">⛶</button>
+      <button id="remix" title="Open the code">Remix</button>
+    </div>
+    <div id="title-card" hidden></div>
+    <dialog id="share-dialog" aria-label="Share"></dialog>
+    <input id="file-open" type="file" accept=".soda,application/zip" multiple hidden />
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="drop-hint" aria-hidden="true">Drop sounds, images, video or .soda files</div>
+    <footer id="source-link"><a href="https://github.com/worksona/soda-strudel" target="_blank" rel="noopener">Source (AGPL-3.0)</a> · built on <a href="https://strudel.cc" target="_blank" rel="noopener">Strudel</a> · <a href="/strudel-vibe.zip" download>Claude skill</a></footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

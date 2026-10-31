@@ -1,0 +1,29 @@
+{
+ "_base": "/samples/soda/",
+ "soda_bass": [
+  "bass/0.wav"
+ ],
+ "soda_blip": [
+  "blip/0.wav"
+ ],
+ "soda_clap": [
+  "clap/0.wav"
+ ],
+ "soda_hat": [
+  "hat/0.wav",
+  "hat/1.wav"
+ ],
+ "soda_kick": [
+  "kick/0.wav",
+  "kick/1.wav"
+ ],
+ "soda_pad": [
+  "pad/0.wav"
+ ],
+ "soda_rain": [
+  "rain/0.wav"
+ ],
+ "soda_snare": [
+  "snare/0.wav"
+ ]
+}

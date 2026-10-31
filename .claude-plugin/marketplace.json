@@ -1,0 +1,11 @@
+{
+  "name": "soda-strudel",
+  "owner": { "name": "worksona" },
+  "plugins": [
+    {
+      "name": "soda-strudel",
+      "source": "./claude",
+      "description": "strudel-vibe skill: turn a mood or story into a playable, shareable soda-strudel sketch."
+    }
+  ]
+}

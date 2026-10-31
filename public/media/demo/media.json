@@ -1,0 +1,22 @@
+{
+ "dusk": {
+  "url": "/media/demo/dusk.svg",
+  "type": "image",
+  "bytes": 421
+ },
+ "fog": {
+  "url": "/media/demo/fog.svg",
+  "type": "image",
+  "bytes": 350
+ },
+ "neon": {
+  "url": "/media/demo/neon.svg",
+  "type": "image",
+  "bytes": 2435
+ },
+ "rain": {
+  "url": "/media/demo/rain.svg",
+  "type": "image",
+  "bytes": 18732
+ }
+}

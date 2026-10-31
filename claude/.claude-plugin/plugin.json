@@ -1,0 +1,9 @@
+{
+  "name": "soda-strudel",
+  "version": "0.0.1",
+  "description": "Vibe music, visuals and story into shareable soda-strudel sketches (Strudel live coding + multimedia).",
+  "author": { "name": "worksona" },
+  "homepage": "https://github.com/worksona/soda-strudel",
+  "license": "AGPL-3.0-or-later",
+  "keywords": ["strudel", "music", "live-coding", "visuals", "vibe"]
+}
