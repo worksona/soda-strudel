@@ -1,16 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-10-31T18:12:00Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-10-31T20:26:19Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae628efdf6a35e39f98b8b9--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae64ed7673fbcfa8754fd3e--soda-strudel.netlify.app |
 | URL (preview, verified first) | https://6ae628cc3a6c38e67555346e--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae628efdf6a35e39f98b8b9 |
+| Deploy ID | 6ae64ed7673fbcfa8754fd3e |
 | Team | worksona |
 | Project type | Static (Vite build) – no functions, no backend |
-| Source path | dist/ (built locally with `pnpm build`, commit d8d8ade) |
+| Source path | dist/ (built locally with `pnpm build`, commit 844084f) |
 | Build | Local only – Netlify does not build (no build minutes) |
 | Custom domain | none |
 
@@ -23,6 +23,7 @@
 - Opens dark on a light-mode device (dark default)
 - First-visit welcome renders; Play from it starts First light; Update is dim before Play and enabled while playing
 - Video effectors (`fx("vhs:kaleido")`) run on the draft deploy with no console errors; `/strudel-docs.json` lists them
+- Phone toolbar (375px) is one row: File, View, Input, Play, Update, Examples, Share, More
 
 ## Configuration Used
 

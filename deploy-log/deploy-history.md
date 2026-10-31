@@ -10,3 +10,4 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | e0dc427: dark is the default theme (deploy 6ae588699d46aea64ba60a3a) |
 | 2026-10-31 | Netlify | https://6ae628cc3a6c38e67555346e--soda-strudel.netlify.app | Preview | Draft (d8d8ade), effectors verified, no console errors |
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | d8d8ade: video effectors for cam/vid/img after Pixel Flow, Dancefloor examples (deploy 6ae628efdf6a35e39f98b8b9) |
+| 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 844084f: Examples and Share stay on the phone toolbar (deploy 6ae64ed7673fbcfa8754fd3e) |
