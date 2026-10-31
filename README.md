@@ -1,6 +1,6 @@
 # soda.strudel
 
-**Live:** https://soda-strudel.netlify.app
+**Live:** https://soda-strudel.netlify.app · **Claude skill:** [worksona/strudel-vibe](https://github.com/worksona/strudel-vibe)
 
 A personal project by David · [david@atomic47.co](mailto:david@atomic47.co) · [sodanovels.com](https://sodanovels.com)
 

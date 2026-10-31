@@ -1,5 +1,8 @@
 # strudel-vibe
 
+**Live app:** https://soda-strudel.netlify.app – sketches made with this skill play there ·
+**Vibe page** (install + prompts): open the app and tap **Vibe** in the toolbar.
+
 A Claude skill that turns a mood, a story or an image into a playable
 [soda.strudel](https://github.com/worksona/soda-strudel) sketch – live-coded
 music ([Strudel](https://strudel.cc)) with pictures, captions and visuals – and
