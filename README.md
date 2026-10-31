@@ -43,7 +43,7 @@ One row of outlined icons, grouped:
 
 | Group | Buttons |
 |---|---|
-| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Code · Stage · Full screen) · **Input** ▾ (Record a take · Camera · Switch camera) · Play |
+| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Code · Stage · Full screen) · **Input** ▾ (Record a take · Camera · Switch camera) · Play · **Update** |
 | Pages | **Examples** · **Sounds** · **Media** · **Reference** |
 | Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) · **Vibe** (the strudel-vibe skill: install, prompts, links) |
 | Right | **About** · **Settings** |
@@ -91,8 +91,8 @@ with **Remix** to open the code.
 - **Install it**: Share › Add to Home Screen (iPhone) or Install app (Android).
   It opens full screen like an app, and installed apps keep their saved
   sketches and sounds – Safari otherwise clears site data after 7 days unused.
-- **Play** turns into **Update** when you change code while it plays – the
-  touch version of ctrl+enter.
+- **Update** (next to Play) lights up when you change code while it plays –
+  tap it to hear your changes: the touch version of ctrl+enter.
 - **Sounds**: tap to hear, then **Insert** in the bar at the bottom.
 - **Full screen** works on iPhone too (an in-page version where the browser has
   none); the iPhone silent switch no longer mutes the sound.

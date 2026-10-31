@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- **Update button** to the right of Play (instead of Play turning into Update):
+  dim until you press Play, lights up and pulses when you've changed the code
+  while playing, applies your changes like ctrl+enter. Play is just Play/Stop.
+
 - **Welcome on first visit**: “Make music you can see.” – one tap plays
   First light, then a tip shows how to live-code (change a number, tap
   Update). Also Browse examples, Vibe with Claude, Just let me code. About ›

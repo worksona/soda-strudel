@@ -10,7 +10,7 @@ it that way. Check new features against them.
    export), and sharing. A new top-level button needs one of those reasons.
 3. **One row of outlined icons, one level of pages.** Left: brand (About),
    three pulldowns – File, View (code / stage / full screen), Input (mic,
-   camera) – then Play. Pulldowns show state on their button: View's icon is
+   camera) – then Play and Update (lit when there are changes to apply). Pulldowns show state on their button: View's icon is
    the current view, Input glows while recording or the camera is on. Right: pages (Examples,
    Sounds, Media, Reference), actions (Export, Share, Claude), then About and
    Settings. Tiny captions under the icons (can be turned off). Every
@@ -30,7 +30,7 @@ it that way. Check new features against them.
    indicator, paused when the tab is hidden. Nothing leaves the device unless the
    user shares or exports.
 8. **Phone first.** Every action works by touch (no double-click-only or
-   keyboard-only paths: Update replaces ctrl+enter, Insert replaces
+   keyboard-only paths: the Update button replaces ctrl+enter, Insert replaces
    double-click); 16px inputs; safe areas respected. **Phone first for output.** Test the 9:16 stage on a phone before shipping a
    visual or layout change. Keep captions clear of the bottom ~20%.
 9. **Say where things live.** "Stays in this browser", "nothing is uploaded",

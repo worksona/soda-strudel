@@ -154,18 +154,24 @@ function setPlaying(next) {
   syncPlayButton();
 }
 
-/** Play · Stop · Update (playing, with edits not yet applied – the touch-screen ctrl+enter). */
+/** Play ⇄ Stop, and Update beside it – lit when edits made while playing aren't applied yet. */
 const needsUpdate = () => playing && evaluatedCode !== null && mirror.code !== evaluatedCode;
 function syncPlayButton() {
   const btn = $('#play');
-  const state = needsUpdate() ? 'update' : playing || previewing ? 'stop' : 'play';
-  if (btn.dataset.state === state) return;
-  btn.dataset.state = state;
-  setIcon(btn, state);
-  const label = { play: 'Play', stop: 'Stop', update: 'Update' }[state];
-  btn.querySelector('.cap').textContent = label;
-  btn.setAttribute('aria-label', label);
-  btn.title = { play: 'Play (ctrl+enter)', stop: 'Stop (ctrl+.)', update: 'Apply your changes (ctrl+enter)' }[state];
+  const state = playing || previewing ? 'stop' : 'play';
+  if (btn.dataset.state !== state) {
+    btn.dataset.state = state;
+    setIcon(btn, state);
+    const label = state === 'stop' ? 'Stop' : 'Play';
+    btn.querySelector('.cap').textContent = label;
+    btn.setAttribute('aria-label', label);
+    btn.title = state === 'stop' ? 'Stop (ctrl+.)' : 'Play (ctrl+enter)';
+  }
+  const update = $('#update');
+  const pending = needsUpdate();
+  update.disabled = !playing;
+  update.classList.toggle('pending', pending);
+  update.title = !playing ? 'Update applies your changes while playing – press Play first' : pending ? 'Apply your changes (ctrl+enter)' : 'Nothing to update yet – change the code, then Update (ctrl+enter)';
 }
 
 function showError(err) {
@@ -259,7 +265,8 @@ createDropdown({
 });
 
 // ---------- toolbar: play + inputs ----------
-$('#play').addEventListener('click', () => (needsUpdate() ? play() : playing || previewing ? stop() : play()).catch((e) => toast(e.message, { error: true })));
+$('#play').addEventListener('click', () => (playing || previewing ? stop() : play()).catch((e) => toast(e.message, { error: true })));
+$('#update').addEventListener('click', () => play().catch((e) => toast(e.message, { error: true })));
 
 // ---------- Input: microphone takes and the camera (a pulldown) ----------
 async function toggleTake() {
@@ -582,7 +589,7 @@ function showWelcome() {
     setMode('code');
     try {
       await play();
-      setTimeout(() => toast('That’s live coding: change any number in the code, then tap Update.', { ms: 9000 }), 2500);
+      setTimeout(() => toast('That’s live coding: change any number in the code, then tap Update (next to Play).', { ms: 9000 }), 2500);
     } catch (e) {
       toast(e.message, { error: true });
     }
