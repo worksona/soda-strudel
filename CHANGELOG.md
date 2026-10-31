@@ -2,6 +2,32 @@
 
 ## Unreleased
 
+- **Mobile ready**:
+  - Play becomes **Update** when the code changed while playing (no ctrl+enter
+    on phones); works on desktop too.
+  - iPhone audio: plays with the silent switch on (audioSession / silent clip
+    unlock on the first tap).
+  - Sounds: tap to hear, then Insert from a bar at the bottom (no double-click
+    on touch); inserting no longer pops the keyboard.
+  - Full screen falls back to an in-page version where the Fullscreen API is
+    missing (iPhone), with an exit button.
+  - Safe areas (notch, home bar), 16px inputs, touch-action tuned, toasts full
+    width.
+  - Code always wraps to the screen on phones (≤ 680px) at 16px or larger –
+    applied over the saved editor settings without changing them, and
+    re-applied when the screen size changes.
+  - **Installable PWA**: manifest, app icons (scripts/gen-icons.mjs), service
+    worker that keeps the app and packs for quick reopen and offline use;
+    installing also protects browser storage from Safari's 7-day eviction.
+
+- Opening examples, workshop items or sketches no longer asks for confirmation
+  (the browser dialog failed silently in some embedded browsers, so Open
+  stopped working after the first example). Only real edits count as unsaved;
+  if there were edits, the toast offers Undo.
+- The separate "Open sketch" panel is gone: File lists every saved sketch
+  (click to open, trash to delete with Undo); "Open…" removed, "Open .soda
+  file…" stays.
+
 - **File pulldown** left of Play (replaces the Sketches icon): New sketch,
   Open…, Open .soda file…, Save, Save as new, Rename…, Download .soda file and
   up to six recent sketches. Full keyboard support (↓ ↑ Home End Esc).

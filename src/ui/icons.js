@@ -4,6 +4,8 @@
 import {
   createElement,
   AudioLines,
+  Minimize,
+  RefreshCw,
   Image,
   Info,
   LayoutGrid,
@@ -49,6 +51,8 @@ import {
 
 const ICONS = {
   audio: AudioLines,
+  exitfull: Minimize,
+  update: RefreshCw,
   media: Image,
   about: Info,
   more: LayoutGrid,

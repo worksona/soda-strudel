@@ -48,7 +48,7 @@ export function aboutView(rerender) {
       h('li', {}, h('strong', {}, 'Write or open a sketch. '), 'Start from an Example, or type in the editor. Each ', h('code', {}, '$:'), ' line is a layer.'),
       h('li', {}, h('strong', {}, 'Press Play. '), 'ctrl+enter plays your changes in time; ctrl+. stops.'),
       h('li', {}, h('strong', {}, 'Add pictures and words. '), h('code', {}, 'img()'), ', ', h('code', {}, 'cam()'), ', ', h('code', {}, 'visual()'), ' and ', h('code', {}, 'captions()'), ' are patterns too – they change with the music.'),
-      h('li', {}, h('strong', {}, 'Save, share, export. '), 'Sketches keeps your work, Share copies a link, Export makes a video, a WAV or a .soda file.'),
+      h('li', {}, h('strong', {}, 'Save, share, export. '), 'File › Save keeps your work in this browser (your sketches are listed in the File menu), Share copies a link, Export makes a video, a WAV or a .soda file.'),
     ),
     h('h4', {}, 'Keys'),
     table([
@@ -305,7 +305,7 @@ export function editorView(app, rerender) {
     toggle('isBracketClosingEnabled', 'Close brackets'),
     toggle('isBracketMatchingEnabled', 'Match brackets'),
     toggle('isLineNumbersDisplayed', 'Line numbers'),
-    toggle('isLineWrappingEnabled', 'Wrap long lines'),
+    toggle('isLineWrappingEnabled', 'Wrap long lines (always on for phones)'),
     toggle('isActiveLineHighlighted', 'Highlight the current line'),
     toggle('isPatternHighlightingEnabled', 'Highlight events as they play'),
     toggle('isFlashEnabled', 'Flash on evaluate'),

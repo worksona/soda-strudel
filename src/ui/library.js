@@ -40,6 +40,18 @@ export function createLibrary({ root, app, isVisible = () => null }) {
       toast(`Could not play ${name}: ${e.message}`, { error: true });
     }
   }
+  // the last sound you tapped – a bar at the bottom of the page offers Insert,
+  // so touch screens (no double-click) can insert too
+  const pickBar = h('div.pick-bar', { hidden: true });
+  function pick(label, code) {
+    pickBar.replaceChildren(
+      h('span.pick-name', {}, icon('sounds', 16), ` ${label}`),
+      h('code', {}, code.replace(/^\$: /, '').trim()),
+      h('button.primary', { onclick: () => app.insert(code) }, icon('plus', 16), ' Insert'),
+    );
+    pickBar.hidden = false;
+  }
+
   /** A sound chip: label, what it plays, and the code it inserts. */
   const chip = ({ label, sound, code, pitched = false, title }) =>
     h(
@@ -47,7 +59,7 @@ export function createLibrary({ root, app, isVisible = () => null }) {
       {
         className: pitched ? 'chip pitched' : 'chip',
         title: `${title ?? sound}\nclick: hear · double-click / Enter: insert`,
-        onclick: () => hear(sound, pitched),
+        onclick: () => (hear(sound, pitched), pick(label, code)),
         ondblclick: () => app.insert(code),
         onkeydown: (e) => e.key === 'Enter' && (e.preventDefault(), app.insert(code)),
       },
@@ -153,7 +165,7 @@ export function createLibrary({ root, app, isVisible = () => null }) {
     const pitchedSet = (list) => list.filter(matches);
     return [
       h('label.search', {}, icon('search'), search),
-      h('p.muted', {}, 'Click to hear · double-click or Enter to insert · outlined = pitched (use note()).'),
+      h('p.muted', {}, 'Tap a sound to hear it, then Insert · double-click or Enter inserts straight away · outlined = pitched (use note()).'),
       drop('audio files – or record a take with the mic'),
       h('h4', {}, `Your sounds (${mine.filter((s) => matches(s.name)).length})`),
       mine.length
@@ -258,10 +270,12 @@ export function createLibrary({ root, app, isVisible = () => null }) {
   async function render(page, { focus } = {}) {
     const body = await (page === 'media' ? mediaView() : soundsView());
     const { usage, quota, persisted } = await storageStatus();
+    if (page !== 'sounds') pickBar.hidden = true;
     root.replaceChildren(
       ...body.filter(Boolean),
       h('p.storage', {}, `Browser storage: ${formatBytes(usage)}${quota ? ` of ${formatBytes(quota)}` : ''}${persisted ? ' · kept' : ''}`),
       picker,
+      pickBar,
     );
     if (focus) {
       const el = root.querySelector(focus);

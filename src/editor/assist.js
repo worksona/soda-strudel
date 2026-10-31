@@ -138,9 +138,19 @@ export const EDITOR_DEFAULTS = {
 export const getEditorSettings = () => codemirrorSettings.get();
 
 /** Applies Strudel's editor settings, then swaps in our completion + hover. */
+// Phones always wrap code to the screen and use at least 16px text (iOS zooms
+// into anything smaller). Applied on top of the saved settings, never saved, so
+// a desktop preference for long lines is kept.
+export const phoneViewport = matchMedia('(max-width: 680px)');
+const PHONE_MIN_FONT = 16;
+
 export function applyEditorSettings(mirror, patch = {}) {
   const settings = { ...codemirrorSettings.get(), ...patch };
   mirror.updateSettings(settings);
+  if (phoneViewport.matches) {
+    mirror.reconfigureExtension('isLineWrappingEnabled', true);
+    if (Number(settings.fontSize) < PHONE_MIN_FONT) mirror.setFontSize(PHONE_MIN_FONT);
+  }
   mirror.editor.dispatch({
     effects: [
       compartments.isAutoCompletionEnabled.reconfigure(settings.isAutoCompletionEnabled ? assistCompletion : []),
@@ -159,5 +169,7 @@ export function initEditorSettings(mirror) {
   } catch {
     // private mode – just apply defaults every time
   }
+  // crossing the phone breakpoint (rotation, resizing) re-applies wrapping
+  phoneViewport.addEventListener('change', () => applyEditorSettings(mirror));
   return applyEditorSettings(mirror, first ? EDITOR_DEFAULTS : {});
 }

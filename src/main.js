@@ -19,7 +19,6 @@ import { applyEditorSettings } from './editor/assist.js';
 import { repl } from '@strudel/core';
 import { clearHydra } from '@strudel/hydra';
 import { createLibrary } from './ui/library.js';
-import { createSketches } from './ui/sketches.js';
 import { createSettings } from './ui/settings.js';
 import { createShare } from './ui/share.js';
 import { createExport, slug } from './ui/export.js';
@@ -43,8 +42,11 @@ const saved = lsGet('soda.sketch', null);
 // a shared link is never "your" saved sketch, so it starts without an id
 const sketch = { title: '', aspect: 'free', ...(fromLink ? { ...fromLink, id: undefined } : saved ?? { code: DEFAULT_CODE, title: 'First light' }) };
 let lastSavedCode = sketch.id ? sketch.code : null;
+// what was last opened or saved – only edits beyond this count as "unsaved"
+let baselineCode = lastSavedCode ?? (fromLink ? fromLink.code : DEFAULT_CODE);
 let lastError = null;
 let playing = false;
+let evaluatedCode = null; // what is playing now – edits beyond it turn Play into Update
 // viewing someone's link must not overwrite your own autosaved sketch – until you Remix
 let viewing = !!fromLink;
 
@@ -76,6 +78,8 @@ const mirror = new StrudelMirror({
   beforeEval: () => dropHydraUnlessUsed(mirror.code),
   afterEval: ({ code }) => {
     showError(null);
+    evaluatedCode = code;
+    syncPlayButton();
     sketch.code = code;
     persist();
   },
@@ -115,20 +119,51 @@ function stopPreview() {
 
 let audioReady;
 async function ensureAudio() {
+  unlockMobileAudio();
   audioReady ??= initAudio();
   await getAudioContext().resume();
   await audioReady;
+}
+
+// iPhone: Web Audio is muted by the ring/silent switch unless the page is a
+// "playback" session. Newer Safari has navigator.audioSession; older ones switch
+// once any <audio> element plays, so play a tiny silent clip on the first tap.
+let unlocked = false;
+// 0.1 s of 8-bit silence
+const SILENT_WAV = 'data:audio/wav;base64,UklGRkQDAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YSADAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgA==';
+function unlockMobileAudio() {
+  if (unlocked) return;
+  unlocked = true;
+  try {
+    if (navigator.audioSession) navigator.audioSession.type = 'playback';
+  } catch {
+    // not supported – the silent clip below covers older Safari
+  }
+  const silence = new Audio(SILENT_WAV);
+  silence.setAttribute('playsinline', '');
+  silence.play().catch(() => {});
 }
 
 function setPlaying(next) {
   playing = next && !previewing;
   stage.setPlaying(next);
   document.body.classList.toggle('playing', next);
+  $('#play').setAttribute('aria-pressed', String(next));
+  syncPlayButton();
+}
+
+/** Play · Stop · Update (playing, with edits not yet applied – the touch-screen ctrl+enter). */
+const needsUpdate = () => playing && evaluatedCode !== null && mirror.code !== evaluatedCode;
+function syncPlayButton() {
   const btn = $('#play');
-  setIcon(btn, next ? 'stop' : 'play');
-  btn.querySelector('.cap').textContent = next ? 'Stop' : 'Play';
-  btn.setAttribute('aria-label', next ? 'Stop' : 'Play');
-  btn.setAttribute('aria-pressed', String(next));
+  const state = needsUpdate() ? 'update' : playing || previewing ? 'stop' : 'play';
+  if (btn.dataset.state === state) return;
+  btn.dataset.state = state;
+  setIcon(btn, state);
+  const label = { play: 'Play', stop: 'Stop', update: 'Update' }[state];
+  btn.querySelector('.cap').textContent = label;
+  btn.setAttribute('aria-label', label);
+  btn.title = { play: 'Play (ctrl+enter)', stop: 'Stop (ctrl+.)', update: 'Apply your changes (ctrl+enter)' }[state];
 }
 
 function showError(err) {
@@ -148,6 +183,7 @@ function persist() {
   }, 300);
 }
 mirror.editor.dom.addEventListener('keyup', persist);
+for (const ev of ['input', 'keyup', 'paste', 'cut']) mirror.editor.dom.addEventListener(ev, () => queueMicrotask(syncPlayButton));
 
 async function play() {
   stopPreview();
@@ -179,16 +215,32 @@ function insert(text) {
   const insertAt = atLineStart ? line.to : from;
   const content = atLineStart ? `\n${text.replace(/\n$/, '')}` : text;
   view.dispatch({ changes: { from: insertAt, to: atLineStart ? insertAt : to, insert: content }, selection: { anchor: insertAt + content.length } });
-  view.focus();
+  // on touch screens focusing the editor pops the keyboard over everything
+  if (touchScreen) toast(playing ? 'Inserted – tap Update to hear it.' : 'Inserted – tap Play to hear it.');
+  else view.focus();
   setMode('code');
+  syncPlayButton();
 }
+const touchScreen = matchMedia('(hover: none) and (pointer: coarse)').matches;
 
 // ---------- modes: Code · Stage · Full screen ----------
 function setMode(mode) {
   document.body.dataset.mode = mode;
   document.querySelectorAll('#modes [data-mode]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
 }
-const fullscreen = () => $('#stage').requestFullscreen?.().catch(() => toast('Full screen is not available here.'));
+// iPhone Safari has no Fullscreen API for anything but video – fall back to an
+// in-page full screen (toolbar hidden, stage edge to edge, an exit button).
+function fullscreen() {
+  const stageEl = $('#stage');
+  if (document.fullscreenEnabled && stageEl.requestFullscreen) return stageEl.requestFullscreen().catch(() => pseudoFull(true));
+  return pseudoFull(true);
+}
+function pseudoFull(on) {
+  document.body.classList.toggle('pseudo-full', on);
+  $('#exit-full').hidden = !on;
+  stage.resize();
+}
+$('#exit-full').addEventListener('click', () => pseudoFull(false));
 $('#modes').addEventListener('click', async (e) => {
   const mode = e.target.closest('[data-mode]')?.dataset.mode;
   if (!mode) return;
@@ -200,7 +252,7 @@ $('#modes').addEventListener('click', async (e) => {
 setMode('code');
 
 // ---------- toolbar: play + inputs ----------
-$('#play').addEventListener('click', () => (playing || previewing ? stop() : play()).catch((e) => toast(e.message, { error: true })));
+$('#play').addEventListener('click', () => (needsUpdate() ? play() : playing || previewing ? stop() : play()).catch((e) => toast(e.message, { error: true })));
 
 $('#mic').addEventListener('click', async (e) => {
   const btn = e.currentTarget;
@@ -261,6 +313,7 @@ async function saveCurrent({ asNew = false } = {}) {
   });
   Object.assign(sketch, { id: rec.id, created: rec.created, title: rec.title });
   lastSavedCode = rec.code;
+  baselineCode = rec.code;
   document.body.classList.remove('unsaved');
   persist();
   toast(`Saved “${rec.title}”.`);
@@ -274,11 +327,34 @@ function loadSketch(s) {
   stage.setAspect(sketch.aspect);
   if (s.media) import('./soda/patterns.js').then(({ media }) => media(s.media));
   lastSavedCode = s.id ? s.code : null;
+  baselineCode = s.code;
   document.body.classList.remove('unsaved');
   persist();
 }
 
-const isDirty = () => mirror.code !== (lastSavedCode ?? DEFAULT_CODE) && mirror.code.trim() !== '';
+const isDirty = () => mirror.code !== baselineCode && mirror.code.trim() !== '';
+
+/**
+ * Replace what's in the editor without asking first. If there were edits,
+ * the toast offers Undo, which puts the previous sketch and code back.
+ */
+function replaceSketch(next, message) {
+  const previous = isDirty() ? { sketch: { ...sketch, code: mirror.code }, baseline: baselineCode, saved: lastSavedCode } : null;
+  loadSketch(next);
+  toast(previous ? `${message} – your edits were replaced.` : message, {
+    ms: previous ? 8000 : 3200,
+    action: previous && {
+      label: 'Undo',
+      run: () => {
+        loadSketch(previous.sketch);
+        baselineCode = previous.baseline;
+        lastSavedCode = previous.saved;
+        persist();
+        toast('Your edits are back.');
+      },
+    },
+  });
+}
 
 const app = {
   stage,
@@ -288,9 +364,8 @@ const app = {
   prepend,
   previewCode,
   loadExample(ex) {
-    if (isDirty() && !confirm(`Open the “${ex.title}” example? Unsaved changes to this sketch will be lost.`)) return;
     stopPreview();
-    loadSketch({ title: ex.title, code: ex.code, aspect: ex.aspect ?? 'free' });
+    replaceSketch({ title: ex.title, code: ex.code, aspect: ex.aspect ?? 'free' }, `Opened “${ex.title}”`);
     if (innerWidth < 700) openPage(page, false); // phones: get out of the way
     play().catch((e) => toast(e.message, { error: true }));
   },
@@ -319,13 +394,10 @@ const app = {
   openFile: () => $('#file-open').click(),
   saveSketch: saveCurrent,
   async openSketch(s) {
-    if (isDirty() && s.id !== sketch.id && !confirm('Open another sketch? Unsaved changes to this one will be lost.')) return;
-    loadSketch(s);
-    toast(`Opened “${s.title || 'Untitled'}”.`);
+    replaceSketch(s, `Opened “${s.title || 'Untitled'}”`);
   },
   newSketch() {
-    if (isDirty() && !confirm('Start a new sketch? Unsaved changes to this one will be lost.')) return false;
-    loadSketch({ code: '// new sketch – ctrl+enter to play\nsetcps(.5)\n$: s("kick*4").bank("soda")\n', title: '' });
+    replaceSketch({ code: '// new sketch – ctrl+enter to play\nsetcps(.5)\n$: s("kick*4").bank("soda")\n', title: '' }, 'New sketch');
     return true;
   },
   forgetSketchId: () => {
@@ -341,7 +413,6 @@ const app = {
 const panel = $('#panel');
 const panelBody = $('#panel .drawer-body');
 const PAGES = {
-  sketches: 'Open sketch',
   examples: 'Examples',
   sounds: 'Sounds',
   media: 'Media',
@@ -356,7 +427,6 @@ let page = null;
 const pageOpen = (p) => !panel.hidden && (!p || page === p);
 
 const library = createLibrary({ root: panelBody, app, isVisible: () => (pageOpen('sounds') || pageOpen('media') ? page : null) });
-const sketchesPage = createSketches({ root: panelBody, app });
 const settingsPage = createSettings({ root: panelBody, app });
 const exportPage = createExport({ root: panelBody, app });
 const sharePage = createShare({ root: panelBody, app });
@@ -368,7 +438,7 @@ function morePage() {
     'div.page-grid',
     {},
     Object.entries(PAGES)
-      .filter(([k]) => k !== 'more' && k !== 'sketches') // sketches live in the File menu
+      .filter(([k]) => k !== 'more')
       .map(([k, title]) => h('button', { onclick: () => openPage(k, true) }, icon({ export: 'download' }[k] ?? k, 22), title)),
     action('claude', 'claude', 'Claude'),
   );
@@ -376,7 +446,6 @@ function morePage() {
 
 async function renderPage({ focus } = {}) {
   const views = {
-    sketches: () => sketchesPage.render(),
     examples: () => panelBody.replaceChildren(examplesView(app, renderPage)),
     sounds: () => library.render('sounds', { focus }),
     media: () => library.render('media'),
@@ -450,7 +519,7 @@ async function openFiles(files) {
       await registerLibrary();
       libraryChanged();
       loadSketch(s);
-      toast(`Opened ${s.title || f.name} – save it to keep it in Sketches.`);
+      toast(`Opened ${s.title || f.name} – File › Save keeps it in this browser.`);
     } catch (e) {
       toast(`${f.name}: ${e.message}`, { error: true });
     }
@@ -523,11 +592,17 @@ if (fromLink) {
 window.addEventListener('hashchange', () => location.hash.includes('z=') && location.reload());
 
 window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && !panel.hidden) openPage(page, false);
+  if (e.key === 'Escape' && document.body.classList.contains('pseudo-full')) pseudoFull(false);
+  else if (e.key === 'Escape' && !panel.hidden) openPage(page, false);
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's' && !viewing) {
     e.preventDefault();
     saveCurrent().catch((err) => toast(err.message, { error: true }));
   }
 });
+
+// installable app + quick reopen (production builds only – it would fight the dev server)
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch((e) => console.warn('[soda] service worker', e)));
+}
 
 window.soda = { mirror, stage, app };

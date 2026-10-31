@@ -28,7 +28,9 @@ it that way. Check new features against them.
 7. **Nothing starts on its own.** Camera and mic only from a tap, with a live
    indicator, paused when the tab is hidden. Nothing leaves the device unless the
    user shares or exports.
-8. **Phone first for output.** Test the 9:16 stage on a phone before shipping a
+8. **Phone first.** Every action works by touch (no double-click-only or
+   keyboard-only paths: Update replaces ctrl+enter, Insert replaces
+   double-click); 16px inputs; safe areas respected. **Phone first for output.** Test the 9:16 stage on a phone before shipping a
    visual or layout change. Keep captions clear of the bottom ~20%.
 9. **Say where things live.** "Stays in this browser", "nothing is uploaded",
    "others will hear gaps" – short, at the moment it matters.

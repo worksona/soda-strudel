@@ -17,9 +17,21 @@ export function h(tag, props = {}, ...children) {
 export const $ = (sel, root = document) => root.querySelector(sel);
 
 let toastTimer;
-export function toast(message, { error = false, ms = 3200 } = {}) {
+/** A short message at the bottom. `action: { label, run }` adds a button (e.g. Undo). */
+export function toast(message, { error = false, ms = 3200, action } = {}) {
   const el = $('#toast');
-  el.textContent = message;
+  el.replaceChildren(message);
+  if (action) {
+    const btn = document.createElement('button');
+    btn.className = 'toast-action';
+    btn.textContent = action.label;
+    btn.onclick = () => {
+      el.classList.remove('show');
+      action.run();
+    };
+    el.append(btn);
+  }
+  el.classList.toggle('actionable', !!action);
   el.classList.toggle('error', error);
   el.classList.add('show');
   clearTimeout(toastTimer);

@@ -57,6 +57,8 @@ export async function saveSketch(sketch) {
   return rec;
 }
 export const getSketch = async (id) => (await dbp).get('sketches', id);
+/** Put a sketch record back exactly as it was (used by Undo after a delete). */
+export const restoreSketch = async (rec) => (await dbp).put('sketches', rec);
 export const deleteSketch = async (id) => (await dbp).delete('sketches', id);
 export const listSketches = async () => (await (await dbp).getAll('sketches')).sort((a, b) => b.updated - a.updated);
 

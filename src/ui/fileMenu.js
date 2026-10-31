@@ -1,9 +1,10 @@
-// The File pulldown, left of Play: New · Open… · Open .soda file… · Save · Save as
-// new · Rename… · Download .soda file · recent sketches. Keyboard: Enter/Space or
-// ↓ opens, ↑/↓ moves, Esc closes; clicking outside closes too.
-import { h } from './dom.js';
+// The File pulldown, left of Play: New · Open .soda file… · Save · Save as new ·
+// Rename… · Download .soda file · Your sketches (all of them, newest first; click
+// to open, trash to delete with Undo). Keyboard: Enter/Space or ↓ opens, ↑/↓
+// moves, Esc closes; clicking outside closes too.
+import { h, toast } from './dom.js';
 import { icon } from './icons.js';
-import { listSketches } from '../storage/db.js';
+import { deleteSketch, listSketches, restoreSketch } from '../storage/db.js';
 
 const when = (ms) => new Date(ms).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 
@@ -28,10 +29,9 @@ export function createFileMenu({ button, menu, app }) {
 
   async function build() {
     const sketch = app.getSketch();
-    const recent = (await listSketches()).slice(0, 6);
+    const all = await listSketches();
     menu.replaceChildren(
       item('plus', 'New sketch', () => app.newSketch()),
-      item('sketches', 'Open…', () => app.openPage('sketches')),
       item('upload', 'Open .soda file…', () => app.openFile()),
       sep(),
       item('save', 'Save', () => app.saveSketch(), { kbd: 'ctrl+s' }),
@@ -43,29 +43,54 @@ export function createFileMenu({ button, menu, app }) {
         if (sketch.id) app.saveSketch();
       }),
       item('package', 'Download .soda file', () => app.downloadSoda()),
-      ...(recent.length
+      ...(all.length
         ? [
             sep(),
-            h('div.menu-heading', {}, 'Recent'),
-            ...recent.map((s) =>
-              h(
-                'button.recent',
-                {
-                  role: 'menuitem',
-                  tabIndex: -1,
-                  className: s.id === sketch.id ? 'recent current' : 'recent',
-                  onclick: () => {
-                    close();
-                    app.openSketch(s);
-                  },
-                },
-                s.thumb ? h('img', { src: s.thumb, alt: '' }) : h('span.nothumb'),
-                h('span.mi-label', {}, s.title || 'Untitled'),
-                h('small', {}, when(s.updated)),
+            h('div.menu-heading', {}, `Your sketches (${all.length})`),
+            h(
+              'div.menu-scroll',
+              {},
+              all.map((s) =>
+                h(
+                  'div.sketch-row',
+                  { className: s.id === sketch.id ? 'sketch-row current' : 'sketch-row' },
+                  h(
+                    'button.recent',
+                    {
+                      role: 'menuitem',
+                      tabIndex: -1,
+                      onclick: () => {
+                        close();
+                        app.openSketch(s);
+                      },
+                    },
+                    s.thumb ? h('img', { src: s.thumb, alt: '' }) : h('span.nothumb'),
+                    h('span.mi-label', {}, s.title || 'Untitled'),
+                    h('small', {}, when(s.updated)),
+                  ),
+                  h(
+                    'button.icon.row-delete',
+                    {
+                      tabIndex: -1,
+                      title: 'Delete',
+                      'aria-label': `Delete ${s.title || 'Untitled'}`,
+                      onclick: async () => {
+                        await deleteSketch(s.id);
+                        if (s.id === sketch.id) app.forgetSketchId();
+                        await build();
+                        toast(`Deleted “${s.title || 'Untitled'}”.`, {
+                          ms: 8000,
+                          action: { label: 'Undo', run: async () => (await restoreSketch(s), toast('Sketch restored.')) },
+                        });
+                      },
+                    },
+                    icon('trash', 15),
+                  ),
+                ),
               ),
             ),
           ]
-        : []),
+        : [sep(), h('div.menu-heading', {}, 'Your sketches'), h('p.menu-empty', {}, 'Nothing saved yet – File › Save keeps a sketch in this browser.')]),
     );
   }
 

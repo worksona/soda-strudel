@@ -497,51 +497,6 @@ summary {
   right: 2px;
   background: var(--overlay);
 }
-.sketches {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 6px;
-}
-.sketches li {
-  display: flex;
-  align-items: stretch;
-  border: 1px solid var(--line);
-}
-.sketches li.current {
-  border-color: var(--accent);
-}
-.sketches .open {
-  flex: 1;
-  min-width: 0;
-  justify-content: flex-start;
-  border: none;
-  padding: 6px;
-  gap: 10px;
-  text-align: left;
-}
-.sketches img,
-.sketches .nothumb {
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  background: var(--soft);
-  flex: none;
-}
-.sketches .meta {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-.sketches .meta strong {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.sketches small {
-  color: var(--muted);
-}
-
 /* ---------- dialogs: Share · Export ---------- */
 dialog {
   border: 1px solid var(--line-strong);
@@ -1107,9 +1062,6 @@ ul.workshop {
   color: var(--muted);
   font-size: 11px;
 }
-.menu .recent.current .mi-label {
-  color: var(--accent);
-}
 
 /* ---------- tiny captions under toolbar icons (Settings › Appearance) ---------- */
 #toolbar .cap {
@@ -1135,4 +1087,129 @@ body.nav-labels #toolbar [aria-pressed='true'] .cap,
 body.nav-labels #toolbar [aria-expanded='true'] .cap,
 body.nav-labels #toolbar .primary .cap {
   color: inherit;
+}
+
+#toast.actionable {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.toast-action {
+  min-height: 28px;
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.menu-scroll {
+  max-height: min(50vh, 360px);
+  overflow: auto;
+}
+.sketch-row {
+  display: flex;
+  align-items: center;
+}
+.sketch-row .recent {
+  flex: 1;
+  min-width: 0;
+}
+.sketch-row.current .mi-label {
+  color: var(--accent);
+}
+.row-delete {
+  opacity: 0;
+}
+.sketch-row:hover .row-delete,
+.row-delete:focus-visible {
+  opacity: 1;
+}
+@media (hover: none) {
+  .row-delete {
+    opacity: 1;
+  }
+}
+.menu-empty {
+  margin: 4px 10px 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ---------- touch & phones ---------- */
+button,
+.chip,
+summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.pick-bar {
+  position: sticky;
+  bottom: 0;
+  margin: 12px -16px -24px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--panel);
+  border-top: 1px solid var(--line-strong);
+}
+.pick-bar .pick-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pick-bar code {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#exit-full {
+  position: fixed;
+  z-index: 60;
+  top: max(12px, env(safe-area-inset-top));
+  right: max(12px, env(safe-area-inset-right));
+  background: var(--overlay);
+}
+body.pseudo-full #toolbar,
+body.pseudo-full #editor,
+body.pseudo-full #panel {
+  display: none !important;
+}
+body.pseudo-full #stage {
+  inset: 0;
+  z-index: 40;
+}
+#toolbar {
+  padding-left: max(12px, env(safe-area-inset-left));
+  padding-right: max(12px, env(safe-area-inset-right));
+}
+#toast {
+  bottom: calc(24px + env(safe-area-inset-bottom));
+}
+@media (max-width: 680px) {
+  /* iOS zooms into inputs smaller than 16px */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+  #panel .drawer-body {
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+  #toast {
+    left: 12px;
+    right: 12px;
+    transform: translate(0, 20px);
+    max-width: none;
+  }
+  #toast.show {
+    transform: translate(0, 0);
+  }
+  .chip {
+    min-height: 36px;
+  }
 }

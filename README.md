@@ -46,8 +46,9 @@ One row of outlined icons, grouped:
 | Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) |
 | Right | **About** · **Settings** |
 
-**File** is a pulldown: New sketch · Open… · Open .soda file… · Save (ctrl+s) ·
-Save as new · Rename… · Download .soda file · Recent sketches. Tiny captions
+**File** is a pulldown: New sketch · Open .soda file… · Save (ctrl+s) ·
+Save as new · Rename… · Download .soda file · **Your sketches** (every saved
+sketch – click to open, trash to delete, with Undo). Tiny captions
 sit under every toolbar icon (Settings › Appearance turns them off).
 
 Each page opens on the right, one level deep – no tabs inside pages and no pop-up dialogs. Click the
@@ -56,7 +57,6 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 
 | Page | Contains |
 |---|---|
-| Open sketch (File › Open…) | Every saved sketch with thumbnails: open, delete; save / save as new / new |
 | Examples | Two tabs: **Examples** (19 soda pieces by category) and **Workshop** (all 145 examples from the [Strudel workshop](https://strudel.cc/workshop/getting-started/), by chapter). Listen / Open on each |
 | Sounds | One browser for every sound: yours (uploads and mic takes), the soda pack, GitHub libraries (load, add to sketch, forget, suggestions), Strudel's drum machines (by kit), samples, synths, soundfonts. Click to hear, double-click or Enter to insert, outlined = pitched |
 | Media | Your images and videos, the soda media pack, camera snippets |
@@ -81,6 +81,19 @@ code so shared links load them too.
 
 People opening a shared link get a title card → tap → full-screen playback,
 with **Remix** to open the code.
+
+## On a phone
+
+- **Install it**: Share › Add to Home Screen (iPhone) or Install app (Android).
+  It opens full screen like an app, and installed apps keep their saved
+  sketches and sounds – Safari otherwise clears site data after 7 days unused.
+- **Play** turns into **Update** when you change code while it plays – the
+  touch version of ctrl+enter.
+- **Sounds**: tap to hear, then **Insert** in the bar at the bottom.
+- **Full screen** works on iPhone too (an in-page version where the browser has
+  none); the iPhone silent switch no longer mutes the sound.
+- Code always wraps to the screen on phones, at 16px or larger (your desktop
+  editor settings are kept); pages and actions fold into the **More** button.
 
 ## The Claude skill
 

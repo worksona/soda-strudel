@@ -7,6 +7,12 @@
     <meta name="description" content="Live-code music, images, camera and story in your browser. Built on Strudel." />
     <meta name="theme-color" content="#0b0b12" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="soda" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   </head>
   <body data-mode="code">
     <header id="toolbar" role="toolbar" aria-label="soda.strudel">
@@ -52,10 +58,11 @@
     </main>
 
     <aside id="panel" hidden aria-labelledby="panel-title">
-      <div class="drawer-head"><h2 id="panel-title">Sketches</h2><button id="panel-close" class="icon" data-icon="close" aria-label="Close"></button></div>
+      <div class="drawer-head"><h2 id="panel-title">Examples</h2><button id="panel-close" class="icon" data-icon="close" aria-label="Close"></button></div>
       <div class="drawer-body"></div>
     </aside>
 
+    <button id="exit-full" class="icon-btn" data-icon="exitfull" title="Exit full screen" aria-label="Exit full screen" hidden></button>
     <div id="viewer-controls" aria-label="Viewer controls">
       <button id="viewer-full" data-icon="full" aria-label="Full screen"></button>
       <button id="remix" data-icon="code" title="Open the code"><span class="label">Remix</span></button>
