@@ -1,4 +1,9 @@
 {
+ "blocks": {
+  "url": "/media/demo/blocks.svg",
+  "type": "image",
+  "bytes": 4545
+ },
  "dusk": {
   "url": "/media/demo/dusk.svg",
   "type": "image",
@@ -14,9 +19,24 @@
   "type": "image",
   "bytes": 2435
  },
+ "night": {
+  "url": "/media/demo/night.svg",
+  "type": "image",
+  "bytes": 16965
+ },
  "rain": {
   "url": "/media/demo/rain.svg",
   "type": "image",
-  "bytes": 18732
+  "bytes": 15038
+ },
+ "sea": {
+  "url": "/media/demo/sea.svg",
+  "type": "image",
+  "bytes": 5090
+ },
+ "sun": {
+  "url": "/media/demo/sun.svg",
+  "type": "image",
+  "bytes": 414
  }
 }

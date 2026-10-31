@@ -1,11 +1,11 @@
 ---
 name: strudel-vibe
-description: Turn a mood, story, image or description into a playable soda-strudel sketch – live-coded music (Strudel) plus images, camera, captions and visuals – and return a shareable link. Use when someone asks to "vibe" music, make a beat/track/loop/soundtrack, set a poem or story to music, make a music visual or social clip, or continue/refine a soda-strudel or Strudel sketch (including a pasted "Copy for Claude" block or a soda link).
+description: Turn a mood, story, image or description into a playable soda.strudel sketch – live-coded music (Strudel) plus images, camera, captions and visuals – and return a shareable link. Use when someone asks to "vibe" music, make a beat/track/loop/soundtrack, set a poem or story to music, make a music visual or social clip, or continue/refine a soda.strudel or Strudel sketch (including a pasted "Copy for Claude" block or a soda link).
 ---
 
 # strudel-vibe
 
-You compose **sketches** for soda-strudel: Strudel code where music, media,
+You compose **sketches** for soda.strudel: Strudel code where music, media,
 captions and visuals are all patterns. A sketch travels as a link
 (`https://<site>/#z=…`) that plays in any browser – no account, no upload.
 
@@ -20,8 +20,25 @@ captions and visuals are all patterns. A sketch travels as a link
    `909`, `piano`, `soda`) to search. Prefer the `soda` pack and Strudel's
    default banks. Synths (`sawtooth`, `supersaw`, `triangle`, `sine`, `square`,
    `pulse`) and `gm_*` soundfonts always work.
+   The **soda pack** (`.bank("soda")`):
+   - drums – real recordings (even variations electronic, odd acoustic):
+     `kick`(0–3) `snare`(0–2) `clap`(0–1) `rim`(0–1) `hat`(0–1) `openhat`(0–1)
+     `ride`(0–1) `crash`(0–1) `tom`(0 low–2 high) `shaker`(0–1) `cowbell` `clave`
+     `perc`(0 woodblock, 1 agogo, 2 triangle) `tamb`(0–1) `conga`(0–1) `bongo`(0–1) `cajon`(0 bass, 1 slap)
+   - pitched – always with `note()`/`n().scale()`: `bass` `sub` `reese` `acid`
+     `pluck` `bell` `keys` `stab` `strings` `vox`
+   - textures / fx: `pad` `rain` `wind` `vinyl` `riser` `downer` `swoosh`
+     `impact` `glitch`(0–2) `zap` `blip`
+   Pick variations with `s("kick:2")`.
+   **GitHub libraries** add more: put `samples('github:user/repo')` on the first
+   line and use their names. Good ones: `tidalcycles/dirt-samples` (classic Tidal
+   set: 808, 909, breaks, voices), `yaxu/clean-breaks` (funk breaks – `amen`,
+   `apache`, `think`… chop with `.loopAt(2).chop(8)`), `eddyflux/crate` (congas,
+   bongos, djembe), `mot4i/garden`, `bubobubobubobubo/dough-fox`, `yaxu/spicule`.
+   The validator fetches them, so their names check out.
 3. **Pick visuals and media.** `node scripts/soda.mjs media` lists media pack
-   items, visual plugins, fx and blends. Use only those names, or add public
+   items (demo: `rain neon dusk fog night sea sun blocks`), visual plugins, fx
+   and blends. Use only those names, or add public
    image/video URLs under the sketch's `media` field.
 4. **Write the sketch** as JSON to a temp file:
    ```json
@@ -51,6 +68,23 @@ code without a link, saying it wasn't validated.
 
 ## Craft notes
 
+**Mix for width and depth – this is what separates rich from tinny:**
+- **Real instruments first**: `gm_*` soundfonts (e.g. `gm_epiano1`,
+  `gm_acoustic_guitar_nylon:1`, `gm_string_ensemble_1`, `gm_cello`), sampled kits
+  (`.bank("RolandTR909")`, `"BossDR110"`), Strudel's piano. Use synths for bass,
+  acid and pads.
+- **Width**: double melodic layers left/right a moment apart –
+  `.layer(x => x.pan(.2), x => x.pan(.8).late(1/32))` – and move hats/percussion
+  with `.pan(sine.range(.3, .7))`. Keep kick, snare and bass centred.
+- **Depth**: `.room(.3–1)` on almost everything (more for pads/strings,
+  less for drums), `.roomsize(4–8)` for big spaces, `.delay(.25).delayfeedback(.3–.45)`
+  on leads.
+- **EQ**: `.lpf(1500–5000)` on drums and bright synths, `.hpf(150–300)` on
+  anything that isn't bass. Nothing should hiss.
+- **Level**: gains .2–.6 for most layers, ≤ .85 for the kick; the mix gets
+  loud fast.
+- **Feel**: `.late(1/64)` or `.swingBy(1/6, 4)` loosens a part.
+
 - Layer with `$:` blocks: drums, bass, harmony, texture, then picture:
   media → visual → captions. 4–7 sound layers is plenty; phones struggle past ~10.
 - Make it move: `<…>` alternation, `.slow()`, signals (`sine.range(...)`,
@@ -59,6 +93,9 @@ code without a link, saying it wasn't validated.
 - Tie picture to sound: change images on the same cycle grid as chord changes
   (`img("<a b>").slow(4)` with `chord("<…>").slow(4)` or note changes), use
   `visual("pulse")` or `rings` for drums, `ribbon`/`bars` for texture.
+- **Tell stories in chapters** with `arrange([cycles, stack(...)], …)`: each
+  chapter stacks its music, picture, visual and captions, so they all turn the
+  page together (see recipes › Postcard). A chapter of N cycles shows N captions.
 - Captions are **single-quoted** strings: `captions(['line one', '', 'line two'])`
   (one per cycle, `''` = no text). Double quotes would be parsed as mini-notation.
 - Keep gain sane (most layers `.gain(.3–.8)`), add `.room()` / `.delay()` for space.
@@ -68,6 +105,7 @@ code without a link, saying it wasn't validated.
 ## References
 
 - `references/strudel.md` – Strudel essentials: mini-notation, sounds, effects, tonal, time, gotchas
+- `references/functions.md` – every Strudel + soda function, one line each (generated from Strudel's own docs) – grep it when unsure a function exists or what it's called
 - `references/multimedia.md` – soda's media, camera, caption and visual functions
 - `references/recipes.md` – complete example sketches by mood
 - `sounds.json`, `media.json` – the catalogues the validator uses

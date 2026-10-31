@@ -1,14 +1,21 @@
 // Everything a user adds lives in their own browser (IndexedDB). No backend.
-//   sounds  – uploaded files and mic takes (WAV blobs), usable as s("name")
-//   media   – uploaded images / videos, usable as img("name") / vid("name")
-//   renders – exported videos and WAVs
+//   sounds   – uploaded files and mic takes (WAV blobs), usable as s("name")
+//   media    – uploaded images / videos, usable as img("name") / vid("name")
+//   sketches – saved sketches (code, title, shape, thumbnail)
+//   renders  – exported videos and WAVs
 import { openDB } from 'idb';
 
-const dbp = openDB('soda-strudel', 1, {
-  upgrade(db) {
-    db.createObjectStore('sounds', { keyPath: 'name' });
-    db.createObjectStore('media', { keyPath: 'name' });
-    db.createObjectStore('renders', { keyPath: 'id', autoIncrement: true });
+const DB = 'soda-strudel';
+const STORES = ['sounds', 'media', 'sketches', 'renders'];
+
+const dbp = openDB(DB, 2, {
+  upgrade(db, oldVersion) {
+    if (oldVersion < 1) {
+      db.createObjectStore('sounds', { keyPath: 'name' });
+      db.createObjectStore('media', { keyPath: 'name' });
+      db.createObjectStore('renders', { keyPath: 'id', autoIncrement: true });
+    }
+    if (oldVersion < 2) db.createObjectStore('sketches', { keyPath: 'id' });
   },
 });
 
@@ -22,6 +29,7 @@ async function uniqueName(store, base) {
   return name;
 }
 
+// ---------- sounds & media ----------
 export async function addSound(base, blob, source = 'upload') {
   const name = await uniqueName('sounds', base);
   await (await dbp).put('sounds', { name, blob, source, type: blob.type, bytes: blob.size, created: Date.now() });
@@ -39,7 +47,38 @@ export const listSounds = async () => (await dbp).getAll('sounds');
 export const listMediaItems = async () => (await dbp).getAll('media');
 export const deleteSound = async (name) => (await dbp).delete('sounds', name);
 export const deleteMedia = async (name) => (await dbp).delete('media', name);
-export const addRender = async (blob, meta) => (await dbp).add('renders', { blob, ...meta, created: Date.now() });
+
+// ---------- sketches ----------
+export const newSketchId = () => `sk_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 6)}`;
+export async function saveSketch(sketch) {
+  const now = Date.now();
+  const rec = { ...sketch, id: sketch.id ?? newSketchId(), created: sketch.created ?? now, updated: now };
+  await (await dbp).put('sketches', rec);
+  return rec;
+}
+export const getSketch = async (id) => (await dbp).get('sketches', id);
+export const deleteSketch = async (id) => (await dbp).delete('sketches', id);
+export const listSketches = async () => (await (await dbp).getAll('sketches')).sort((a, b) => b.updated - a.updated);
+
+// ---------- renders ----------
+export const addRender = async (blob, meta) => (await dbp).add('renders', { blob, bytes: blob.size, ...meta, created: Date.now() });
+export const listRenders = async () => (await (await dbp).getAll('renders')).sort((a, b) => b.created - a.created);
+export const deleteRender = async (id) => (await dbp).delete('renders', id);
+
+// ---------- housekeeping ----------
+export async function clearStore(name) {
+  if (!STORES.includes(name)) throw new Error(`unknown store ${name}`);
+  await (await dbp).clear(name);
+}
+export async function countAll() {
+  const db = await dbp;
+  return Object.fromEntries(await Promise.all(STORES.map(async (s) => [s, await db.count(s)])));
+}
+/** Wipes every store. The page should reload afterwards. */
+export async function resetEverything() {
+  const db = await dbp;
+  await Promise.all(STORES.map((s) => db.clear(s)));
+}
 
 export async function storageStatus() {
   try {

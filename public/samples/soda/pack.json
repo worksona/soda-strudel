@@ -1,1 +1,5 @@
-{ "prefix": "soda", "licence": "CC0-1.0", "note": "Synthesised by scripts/gen-demo-assets.mjs" }
+{
+ "prefix": "soda",
+ "licence": "CC0-1.0 / Unlicense",
+ "note": "Tonal sounds, textures and fx synthesised by scripts/gen-demo-assets.mjs (CC0). Drums are real recordings from VCSL (CC0) and uzu-drumkit (Unlicense) – see CREDITS.md."
+}

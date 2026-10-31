@@ -43,7 +43,7 @@ export class Stage {
     this.paint = document.createElement('canvas');
     this.paintCtx = this.paint.getContext('2d', { willReadFrequently: true });
     this.aspect = 'free';
-    this.exportScale = null;
+    this.exportShort = null;
     this.haps = [];
     this.time = 0;
     this.painters = [];
@@ -72,9 +72,9 @@ export class Stage {
     this.resize();
   }
 
-  /** Full-resolution rendering for export (1080p presets) – call with false to restore. */
-  setExportMode(on) {
-    this.exportScale = on ? 1 : null;
+  /** Render at export resolution (`short` px on the short side) – call with false to restore. */
+  setExportMode(on, short = 1080) {
+    this.exportShort = on ? short : null;
     this.resize();
   }
 
@@ -86,19 +86,22 @@ export class Stage {
     let w, h, cssW, cssH;
     if (!preset) {
       [cssW, cssH] = [box.width, box.height];
-      const scale = this.exportScale ? Math.max(1, 1080 / Math.min(cssW, cssH)) : dpr;
+      const scale = this.exportShort ? this.exportShort / Math.min(cssW, cssH) : dpr;
       [w, h] = [cssW * scale, cssH * scale];
     } else {
       const [pw, ph] = preset;
       const fit = Math.min(box.width / pw, box.height / ph);
       [cssW, cssH] = [pw * fit, ph * fit];
-      const scale = this.exportScale ?? Math.min(1, (cssW * dpr) / pw);
+      const scale = this.exportShort ? this.exportShort / Math.min(pw, ph) : Math.min(1, (cssW * dpr) / pw);
       [w, h] = [pw * scale, ph * scale];
     }
+    // encoders want even dimensions
+    [w, h] = [Math.round(w / 2) * 2, Math.round(h / 2) * 2];
     for (const c of [this.canvas, this.layer, this.paint]) {
       c.width = Math.round(w);
       c.height = Math.round(h);
     }
+    this.bg = getComputedStyle(this.el).getPropertyValue('--stage-bg').trim() || '#000';
     this.canvas.style.width = `${cssW}px`;
     this.canvas.style.height = `${cssH}px`;
   }
@@ -143,7 +146,7 @@ export class Stage {
     ctx.globalCompositeOperation = 'source-over';
     ctx.globalAlpha = 1;
     ctx.filter = 'none';
-    ctx.fillStyle = getComputedStyle(this.el).getPropertyValue('--stage-bg') || '#000';
+    ctx.fillStyle = this.bg ?? '#000';
     ctx.fillRect(0, 0, w, h);
 
     const hydra = document.getElementById('hydra-canvas');

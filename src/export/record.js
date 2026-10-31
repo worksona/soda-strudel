@@ -17,13 +17,13 @@ export function pickVideoMime() {
 export const extensionFor = (mime) => (mime.includes('mp4') ? 'mp4' : 'webm');
 
 /**
- * Records `seconds` of the stage. The stage switches to full export resolution
+ * Records `seconds` of the stage. The stage renders at `size` px (short side)
  * while recording. Resolves with a Blob.
  */
-export async function recordStage(stage, { seconds, onProgress, signal } = {}) {
+export async function recordStage(stage, { seconds, size = 1080, onProgress, signal } = {}) {
   const mimeType = pickVideoMime();
   if (mimeType === null) throw new Error('This browser cannot record video (MediaRecorder missing).');
-  stage.setExportMode(true);
+  stage.setExportMode(true, size);
   const video = stage.canvas.captureStream(60);
   const audio = masterStream();
   const tracks = [...video.getVideoTracks(), ...(audio?.getAudioTracks() ?? [])];

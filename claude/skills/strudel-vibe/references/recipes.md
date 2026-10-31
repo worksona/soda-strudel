@@ -1,7 +1,25 @@
 # Recipes
 
-Complete, validated starting points. Change sounds, keys and pictures to fit
+Complete, validated starting points. The app's Examples page has more (src/examples.js): The last bus home, Four seasons, Acid sunrise, Breakbeat chase, Raga at dusk, Machine choir, polyrhythm and generative studies, Hydra dream. Change sounds, keys and pictures to fit
 the brief – don't paste them unchanged.
+
+## Postcard from the coast (story in chapters, 9:16)
+
+```js
+setcpm(84/4)
+const sea = note("c3").s("gm_seashore").attack(1).release(2).gain(.5)
+const guitar = n("<[0 2 4 2] [-1 1 3 1] [-2 0 2 0] [-3 -1 1 -1]>*2").scale("A3:major")
+  .s("gm_acoustic_guitar_nylon").gain(.45).room(.4)
+const steps = s("kick:1 ~ ~ ~, ~ rim ~ rim, shaker*8").bank("soda").gain(.4)
+const flute = n("4 [5 4] 2 ~ 0 ~ [2 4] ~").slow(2).scale("A4:major").s("gm_flute").gain(.35).room(.6)
+$: arrange(
+  [4, stack(sea, img("sea").fade(.5), captions(['dear you,', '', 'the sea is louder here', '']))],
+  [4, stack(sea, guitar, img("sea").fx("hue").hue(-20), captions(['I walked the long beach', '', 'shoes in one hand', '']))],
+  [8, stack(sea.gain(.25), guitar, steps, flute, img("<sun sun dusk dusk>"), visual("particles").hue(40).amount(.4),
+    captions(['a kite', 'a dog', 'a boy chasing both', '', 'someone selling', 'too-sweet peaches', '', '']))],
+  [4, stack(sea, flute.slow(2), img("night").fade(.5), visual("ribbon").hue(220).opacity(.4), captions(['wish you were here', '', '– x', '']))],
+)
+```
 
 ## Late-night drive (lo-fi, 85 bpm, 9:16)
 
@@ -83,4 +101,4 @@ $: visual("pulse").hue(40)
 ```
 
 `take_loop` stands in for the user's own recording – ask for its name (it is in
-their Library › Takes). Without one, chop a pitched layer or `s("jazz")` instead.
+their Sounds page, marked take). Without one, chop a pitched layer or `s("jazz")` instead.

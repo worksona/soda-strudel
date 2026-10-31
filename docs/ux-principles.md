@@ -1,6 +1,6 @@
 # UX principles
 
-soda-strudel adds a lot of multimedia without adding screens. These rules keep
+soda.strudel adds a lot of multimedia without adding screens. These rules keep
 it that way. Check new features against them.
 
 1. **Code first.** Every creative capability – media, camera, captions, visuals,
@@ -8,16 +8,25 @@ it that way. Check new features against them.
    so rich pieces come from describing them, not from learning panels.
 2. **UI only for what code can't do:** permissions (mic, camera), files (import,
    export), and sharing. A new top-level button needs one of those reasons.
-3. **Six controls.** Play · Code/Stage/⛶ · 🎙📷 · Library · Share · ✦ Claude.
-   Advanced options live under "More" in Share.
-4. **Viewers get less.** A shared link shows a title card, one tap to play, full
+3. **One row of outlined icons, one level of pages.** Left: brand (About),
+   Play, views, inputs. Right: pages (Sketches, Examples, Sounds, Media,
+   Reference), actions (Export, Share, Claude), then About and Settings. Every
+   page has its own button and opens on the right, under the buttons – no
+   menus inside menus, no tabs inside pages, no modal dialogs (Export and
+   Share are pages too). The open page's icon is lit and
+   the panel title says where you are. On phones, pages and actions fold into
+   one Pages button beside the panel it opens. Square corners everywhere.
+4. **One thing, one place.** No feature appears on two pages. Sounds behave the
+   same everywhere: click to hear, double-click / Enter to insert. Light, dark
+   and system appearance; the stage stays dark in all of them.
+5. **Viewers get less.** A shared link shows a title card, one tap to play, full
    screen and Remix. No toolbar, no code unless they ask.
-5. **Never block playback.** Missing media shows a soft placeholder, denied
+6. **Never block playback.** Missing media shows a soft placeholder, denied
    camera plays without it, a code error keeps the last good version playing.
-6. **Nothing starts on its own.** Camera and mic only from a tap, with a live
+7. **Nothing starts on its own.** Camera and mic only from a tap, with a live
    indicator, paused when the tab is hidden. Nothing leaves the device unless the
    user shares or exports.
-7. **Phone first for output.** Test the 9:16 stage on a phone before shipping a
+8. **Phone first for output.** Test the 9:16 stage on a phone before shipping a
    visual or layout change. Keep captions clear of the bottom ~20%.
-8. **Say where things live.** "Stays in this browser", "nothing is uploaded",
+9. **Say where things live.** "Stays in this browser", "nothing is uploaded",
    "others will hear gaps" – short, at the moment it matters.

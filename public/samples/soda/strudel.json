@@ -1,29 +1,162 @@
 {
  "_base": "/samples/soda/",
- "soda_bass": [
-  "bass/0.wav"
- ],
+ "soda_acid": {
+  "c2": [
+   "acid/c2.wav"
+  ]
+ },
+ "soda_bass": {
+  "c2": [
+   "bass/c2.wav"
+  ]
+ },
+ "soda_bell": {
+  "c5": [
+   "bell/c5.wav"
+  ]
+ },
  "soda_blip": [
   "blip/0.wav"
  ],
+ "soda_bongo": [
+  "bongo/0.wav",
+  "bongo/1.wav"
+ ],
+ "soda_cajon": [
+  "cajon/0.wav",
+  "cajon/1.wav"
+ ],
  "soda_clap": [
-  "clap/0.wav"
+  "clap/0.wav",
+  "clap/1.wav"
+ ],
+ "soda_clave": [
+  "clave/0.wav"
+ ],
+ "soda_conga": [
+  "conga/0.wav",
+  "conga/1.wav"
+ ],
+ "soda_cowbell": [
+  "cowbell/0.wav"
+ ],
+ "soda_crash": [
+  "crash/0.wav",
+  "crash/1.wav"
+ ],
+ "soda_downer": [
+  "downer/0.wav"
+ ],
+ "soda_glitch": [
+  "glitch/0.wav",
+  "glitch/1.wav",
+  "glitch/2.wav"
  ],
  "soda_hat": [
   "hat/0.wav",
   "hat/1.wav"
  ],
+ "soda_impact": [
+  "impact/0.wav"
+ ],
+ "soda_keys": {
+  "c4": [
+   "keys/c4.wav"
+  ]
+ },
  "soda_kick": [
   "kick/0.wav",
-  "kick/1.wav"
+  "kick/1.wav",
+  "kick/2.wav",
+  "kick/3.wav"
+ ],
+ "soda_openhat": [
+  "openhat/0.wav",
+  "openhat/1.wav"
  ],
  "soda_pad": [
   "pad/0.wav"
  ],
+ "soda_perc": [
+  "perc/0.wav",
+  "perc/1.wav",
+  "perc/2.wav"
+ ],
+ "soda_pluck": {
+  "c3": [
+   "pluck/c3.wav"
+  ],
+  "c4": [
+   "pluck/c4.wav"
+  ]
+ },
  "soda_rain": [
   "rain/0.wav"
  ],
+ "soda_reese": {
+  "c2": [
+   "reese/c2.wav"
+  ]
+ },
+ "soda_ride": [
+  "ride/0.wav",
+  "ride/1.wav"
+ ],
+ "soda_rim": [
+  "rim/0.wav",
+  "rim/1.wav"
+ ],
+ "soda_riser": [
+  "riser/0.wav"
+ ],
+ "soda_shaker": [
+  "shaker/0.wav",
+  "shaker/1.wav"
+ ],
  "soda_snare": [
-  "snare/0.wav"
+  "snare/0.wav",
+  "snare/1.wav",
+  "snare/2.wav"
+ ],
+ "soda_stab": {
+  "c4": [
+   "stab/c4.wav"
+  ]
+ },
+ "soda_strings": {
+  "c3": [
+   "strings/c3.wav"
+  ]
+ },
+ "soda_sub": {
+  "c2": [
+   "sub/c2.wav"
+  ]
+ },
+ "soda_swoosh": [
+  "swoosh/0.wav"
+ ],
+ "soda_tamb": [
+  "tamb/0.wav",
+  "tamb/1.wav"
+ ],
+ "soda_tom": [
+  "tom/0.wav",
+  "tom/1.wav",
+  "tom/2.wav"
+ ],
+ "soda_vinyl": [
+  "vinyl/0.wav"
+ ],
+ "soda_vox": {
+  "c4": [
+   "vox/c4.wav"
+  ]
+ },
+ "soda_wind": [
+  "wind/0.wav"
+ ],
+ "soda_zap": [
+  "zap/0.wav"
  ]
 }

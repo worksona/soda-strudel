@@ -7,7 +7,7 @@ export async function copyForClaude(sketch, lastError) {
   const [sounds, media] = await Promise.all([listSounds(), listMediaItems()]);
   const link = await sketchUrl(sketch, location.origin);
   const text = [
-    "I'm working on a soda-strudel sketch (Strudel live-coding music + soda's multimedia functions). Use the strudel-vibe skill if you have it.",
+    "I'm working on a soda.strudel sketch (Strudel live-coding music + soda's multimedia functions). Use the strudel-vibe skill if you have it.",
     '',
     `Title: ${sketch.title || 'Untitled'}`,
     `Shape: ${sketch.aspect ?? 'free'}`,

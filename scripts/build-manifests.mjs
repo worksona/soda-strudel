@@ -9,6 +9,7 @@ import { SYNTH_SOUNDS } from '../src/soda/catalog.js';
 
 const pub = new URL('../public/', import.meta.url);
 const AUDIO = /\.(wav|mp3|ogg|flac|m4a|opus)$/i;
+const NOTE_FILE = /^[a-g][#b]?-?\d\.(wav|mp3|ogg|flac|m4a|opus)$/i;
 const MEDIA = /\.(svg|png|jpe?g|webp|avif|gif|mp4|webm)$/i;
 
 const dirs = async (url) => {
@@ -33,13 +34,21 @@ for (const pack of await dirs(new URL('samples/', pub))) {
   const packUrl = new URL(`samples/${pack}/`, pub);
   const meta = await readJson(new URL('pack.json', packUrl), {});
   const manifest = { _base: `/samples/${pack}/` };
+  const pitched = [];
   for (const sound of await dirs(packUrl)) {
     const list = await files(new URL(`${sound}/`, packUrl), AUDIO);
-    if (list.length) manifest[`${meta.prefix ?? pack}_${sound}`] = list.map((f) => `${sound}/${f}`);
+    if (!list.length) continue;
+    const key = `${meta.prefix ?? pack}_${sound}`;
+    // files named after notes (c4.wav, f#2.wav) become a pitch map, so note() plays in tune
+    if (list.every((f) => NOTE_FILE.test(f))) {
+      manifest[key] = Object.fromEntries(list.map((f) => [f.replace(AUDIO, '').toLowerCase(), [`${sound}/${f}`]]));
+      pitched.push(key);
+    } else manifest[key] = list.map((f) => `${sound}/${f}`);
   }
   await writeFile(new URL('strudel.json', packUrl), JSON.stringify(manifest, null, 1));
-  const sounds = Object.fromEntries(Object.entries(manifest).filter(([k]) => k !== '_base').map(([k, v]) => [k, v.length]));
-  soundPacks.push({ id: `soda:${pack}`, bank: meta.prefix ?? pack, licence: meta.licence ?? 'unknown', sounds });
+  const count = (v) => (Array.isArray(v) ? v.length : Object.values(v).flat().length);
+  const sounds = Object.fromEntries(Object.entries(manifest).filter(([k]) => k !== '_base').map(([k, v]) => [k, count(v)]));
+  soundPacks.push({ id: `soda:${pack}`, bank: meta.prefix ?? pack, licence: meta.licence ?? 'unknown', sounds, pitched });
 }
 
 const mediaPacks = [];

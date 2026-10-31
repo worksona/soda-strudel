@@ -1,8 +1,10 @@
-# soda-strudel
+# soda.strudel
+
+A personal project by David · [david@atomic47.co](mailto:david@atomic47.co) · [sodanovels.com](https://sodanovels.com)
 
 Live-code music, images, camera and story in the browser – and vibe it with Claude.
 
-soda-strudel is a static web app built on [Strudel](https://strudel.cc), the
+soda.strudel is a static web app built on [Strudel](https://strudel.cc), the
 JavaScript port of TidalCycles. It adds a multimedia **stage** where images,
 video, the camera, captions and visuals are patterns, sequenced like sounds:
 
@@ -33,16 +35,45 @@ pnpm install
 pnpm dev            # http://localhost:5173
 ```
 
-ctrl+enter plays / updates, ctrl+. stops. The toolbar has six controls:
+ctrl+enter plays / updates, ctrl+. stops, ctrl+s saves. The toolbar:
 
-| Control | What it does |
+One row of outlined icons, grouped:
+
+| Group | Buttons |
 |---|---|
-| ▶ Play | Evaluate and play (again to stop) |
-| Code · Stage · ⛶ | Code over the stage, stage only, or full screen |
-| 🎙 📷 | Record a mic take into your library · camera on/off (stays on this device) |
-| Library | Sounds · Media · Takes. Drop files anywhere; tap an item to insert it |
-| Share | Link · Video · File (.soda) · More: WAV export, open .soda |
-| ✦ Claude | Copies the sketch, errors and your library names for a Claude chat |
+| Left | **soda.strudel** (opens About) · Play · Code / Stage / Full screen · Mic / Camera |
+| Pages | **Sketches** · **Examples** · **Sounds** · **Media** · **Reference** |
+| Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) |
+| Right | **About** · **Settings** |
+
+Each page opens on the right, one level deep – no tabs inside pages and no pop-up dialogs. Click the
+lit icon again (or Esc) to close. On phones the pages and actions fold into one
+**Pages** button that shows a grid.
+
+| Page | Contains |
+|---|---|
+| Sketches | Save, save as new, new, open, delete, open a .soda file |
+| Examples | Two tabs: **Examples** (19 soda pieces by category) and **Workshop** (all 145 examples from the [Strudel workshop](https://strudel.cc/workshop/getting-started/), by chapter). Listen / Open on each |
+| Sounds | One browser for every sound: yours (uploads and mic takes), the soda pack, GitHub libraries (load, add to sketch, forget, suggestions), Strudel's drum machines (by kit), samples, synths, soundfonts. Click to hear, double-click or Enter to insert, outlined = pitched |
+| Media | Your images and videos, the soda media pack, camera snippets |
+| Reference | Every Strudel and soda function, searchable, examples with Listen / Insert |
+| Export | Shape, size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
+| Share | Title, then Copy link (plays in any browser; nothing uploaded) |
+| About | What it is, how it works, keys, mini-notation, links, and the log |
+| Settings | Appearance (system / light / dark) · Profile · Screen and export · Editor · Exports · Storage |
+
+Takes are mic recordings and appear with your sounds; sketches are your saved
+pieces – both live in the browser's IndexedDB.
+
+**Writing help:** autocomplete for every Strudel and soda function (with docs and
+an example), and for sound, bank, media, visual and fx names inside strings
+(ctrl+space to open). Hold ctrl/cmd and point at a function for its docs.
+
+**GitHub sound libraries:** the Sounds page loads any repo with
+a `strudel.json` (`user/repo` or a URL), with ten verified suggestions
+(Dirt-Samples, clean-breaks, crate, garden, dough-fox, spicule…). Loaded libraries
+return on your next visit; "Add to sketch" writes `samples('github:…')` into the
+code so shared links load them too.
 
 People opening a shared link get a title card → tap → full-screen playback,
 with **Remix** to open the code.
@@ -53,8 +84,8 @@ with **Remix** to open the code.
 
 - **Claude Code:** `/plugin marketplace add worksona/soda-strudel`, then
   `/plugin install soda-strudel@soda-strudel`.
-- **claude.ai:** download `/strudel-vibe.zip` from the running site (footer
-  link) or build it with `pnpm skill`, then upload it under Settings › Capabilities › Skills.
+- **claude.ai:** download `/strudel-vibe.zip` from the running site (Settings ›
+  About) or build it with `pnpm skill`, then upload it under Settings › Capabilities › Skills.
 
 The skill's `scripts/soda.mjs` (bundled, no dependencies, Node 18+) validates
 sketches with Strudel's real engine and builds links:
@@ -82,9 +113,19 @@ pnpm manifests      # writes strudel.json / media.json per pack + public/sounds.
 pnpm skill          # refreshes the skill's catalogues and zip
 ```
 
-The bundled `soda` sound pack and `demo` media pack are generated
-(`node scripts/gen-demo-assets.mjs`) and CC0. Record every pack's licence in
+Name files after notes (`c3.wav`, `f#2.wav`) to make a **pitched** sound: the
+manifest maps them by pitch so `note("e3 g3").s("pluck").bank("soda")` plays in tune.
+
+The bundled `soda` sound pack has 38 sounds:
+- **Drums are real recordings** – a 17-sound kit from VCSL (CC0) and Strudel's
+  uzu-drumkit (Unlicense), built by `node scripts/import-drum-samples.mjs`
+  with per-file credits in `public/samples/soda/CREDITS.md`.
+- **Pitched instruments, textures and fx** are synthesised in stereo by
+  `node scripts/gen-demo-assets.mjs` (CC0), as is the `demo` media pack (8 images). Record every pack's licence in
 its `pack.json` – shared links make sounds public.
+
+`node scripts/extract-workshop.mjs` refreshes the Workshop tab from Strudel's
+repository (AGPL-3.0, Strudel contributors).
 
 Strudel's default banks (drum machines, piano, VCSL, Dirt-Samples…) load from
 GitHub at runtime, like on strudel.cc. `node scripts/snapshot-default-banks.mjs`
@@ -117,8 +158,8 @@ pnpm build          # manifests → skill bundle → vite build
 ## License and credits
 
 AGPL-3.0-or-later, like Strudel, whose packages this app is built on. If you
-host a modified version, publish its source (the footer links to it).
+host a modified version, publish its source (Settings › About links to it).
 
 Strudel's maintainers ask that LLM-generated code not be contributed upstream
-(see their POLICY.md). soda-strudel is a separate project built on Strudel's
+(see their POLICY.md). soda.strudel is a separate project built on Strudel's
 published npm packages; please don't send changes from here upstream.

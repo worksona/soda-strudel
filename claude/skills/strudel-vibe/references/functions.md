@@ -1,0 +1,530 @@
+# Function index
+
+Generated from Strudel's own reference plus soda's functions (525 entries).
+One line each: name, synonyms, first sentence, first example. Search this file for a name.
+
+- **_initialize**: Initialize a midi device
+- **absoluteOrientationAlpha** (also absOriA, absOriZ, absoluteOrientationZ): The device's absolute orientation alpha value ranges from 0 to 1. – e.g. `n(absoluteOrientationAlpha.segment(4).range(0,7)).scale("C:minor")`
+- **absoluteOrientationBeta** (also absOriB, absOriX, absoluteOrientationX): The device's absolute orientation beta value ranges from 0 to 1. – e.g. `n(absoluteOrientationBeta.segment(4).range(0,7)).scale("C:minor")`
+- **absoluteOrientationGamma** (also absOriG, absOriY, absoluteOrientationY): The device's absolute orientation gamma value ranges from 0 to 1. – e.g. `n(absoluteOrientationGamma.segment(4).range(0,7)).scale("C:minor")`
+- **accelerate**: A pattern of numbers that speed up (or slow down) samples while they play. – e.g. `s("sax").accelerate("<0 1 2 4 8 16>").slow(2).osc()`
+- **accelerationX** (also accX): The accelerometer's x-axis value ranges from 0 to 1. – e.g. `n(accelerationX.segment(4).range(0,7)).scale("C:minor")`
+- **accelerationY** (also accY): The accelerometer's y-axis value ranges from 0 to 1. – e.g. `n(accelerationY.segment(4).range(0,7)).scale("C:minor")`
+- **accelerationZ** (also accZ): The accelerometer's z-axis value ranges from 0 to 1. – e.g. `n(accelerationZ.segment(4).range(0,7)).scale("C:minor")`
+- **add**: Assumes a pattern of numbers. – e.g. `// Here, the triad 0, 2, 4 is shifted by different amounts n("0 2 4".add("<0 3 4 0>")).scale("C:major") // Wit`
+- **addVoicings**: Adds a new custom voicing dictionary. – e.g. `addVoicings('cookie', { 7: ['3M 7m 9M 12P 15P', '7m 10M 13M 16M 19P'], '^7': ['3M 6M 9M 12P 14M', '7M 10M 13M `
+- **adsr**: ADSR envelope: Combination of Attack, Decay, Sustain, and Release. – e.g. `note("[c3 bb2 f3 eb3]*2").sound("sawtooth").lpf(600).adsr(".1:.1:.5:.2")`
+- **aliasBank**: Register an alias for a bank of sounds.
+- **allTransforms**: Applies a function to all the running patterns.
+- **almostAlways**: Shorthand for .sometimesBy(0.9, fn) – e.g. `s("hh*8").almostAlways(x=>x.speed("0.5"))`
+- **almostNever**: Shorthand for .sometimesBy(0.1, fn) – e.g. `s("hh*8").almostNever(x=>x.speed("0.5"))`
+- **always**: Shorthand for .sometimesBy(1, fn) (always calls fn) – e.g. `s("hh*8").always(x=>x.speed("0.5"))`
+- **amount**: Intensity 0..1 for visual plugins. – e.g. `$: visual("particles").amount(.8)`
+- **amp**: Like gain, but linear. – e.g. `s("bd*8").amp(".1*2 .5 .1*2 .5 .1 .5").osc()`
+- **anchor**: The top note to align the voicing to. – e.g. `anchor("<c4 g4 c5 g5>").chord("C").voicing()`
+- **appBoth**: When this method is called on a pattern of functions, it matches its haps with those in the given pattern of values.
+- **appLeft**: As with appBoth, but the whole timespan is not the intersection, but the timespan from the function of patterns that this method is called on.
+- **apply**: Like layer, but with a single function: – e.g. `"<c3 eb3 g3>".scale('C minor').apply(scaleTranspose("0,2,4")).note()`
+- **applyGradualLowpass**: Applies a constantly changing lowpass filter to the given sound.
+- **applyHannWindow**: Apply Hann window in-place
+- **appRight**: As with appLeft, but whole timespans are instead taken from the pattern of values, i.e.
+- **appWhole**: Assumes 'this' is a pattern of functions, and given a function to resolve wholes, applies a given pattern of values to that pattern of functions.
+- **arp**: Selects indices in in stacked notes. – e.g. `note("<[c,eb,g]!2 [c,f,ab] [d,f,ab]>") .arp("0 [0,2] 1 [0,2]")`
+- **arpWith**: Selects indices in in stacked notes. – e.g. `note("<[c,eb,g]!2 [c,f,ab] [d,f,ab]>") .arpWith(haps => haps[2])`
+- **arrange**: Allows to arrange multiple patterns together over multiple cycles. – e.g. `arrange( [4, "<c a f e>(3,8)"], [2, "<g a>(5,8)"] ).note()`
+- **as**: Sets properties in a batch. – e.g. `"c:.5 a:1 f:.25 e:.8".as("note:clip")`
+- **asym**: Asymmetrical diode distortion
+- **attack** (also att): Amplitude envelope attack time: Specifies how long it takes for the sound to reach its peak value, relative to the onset. – e.g. `note("c3 e3 f3 g3").attack("<0 .1 .5>")`
+- **bank**: Select the sound bank to use. – e.g. `s("bd sd [~ bd] sd").bank('RolandTR909') // = s("RolandTR909_bd RolandTR909_sd")`
+- **beat**: creates a structure pattern from divisions of a cycle especially useful for creating rhythms – e.g. `s("bd").beat("0,7,10", 16)`
+- **begin**: A pattern of numbers from 0 to 1. – e.g. `samples({ rave: 'rave/AREUREADY.wav' }, 'github:tidalcycles/dirt-samples') s("rave").begin("<0 .25 .5 .75>").f`
+- **berlin**: Generates a continuous pattern of [berlin noise](conceived by Jame Coyne and Jade Rowland as a joke but turned out to be surprisingly cool and useful, like perl – e.g. `// ascending arpeggios n("0!16".add(berlin.fast(4).mul(14))).scale("d:minor")`
+- **binary**: Creates a binary pattern from a number. – e.g. `"hh".s().struct(binary(5)) // "hh".s().struct("1 0 1")`
+- **binaryL**: Creates a binary list pattern from a number.
+- **binaryN**: Creates a binary pattern from a number, padded to n bits long. – e.g. `"hh".s().struct(binaryN(55532, 16)) // "hh".s().struct("1 1 0 1 1 0 0 0 1 1 1 0 1 1 0 0")`
+- **binaryNL**: Creates a binary list pattern from a number, padded to n bits long.
+- **bite**: Splits a pattern into the given number of slices, and plays them according to a pattern of slice numbers. – e.g. `note("0 1 2 3 4 5 6 7".scale('c:mixolydian')) .bite(4, "3 2 1 0")`
+- **blend**: How a layer mixes with what is below: normal, screen, multiply, overlay, lighter, difference, soft-light. – e.g. `$: cam().blend("screen")`
+- **bmod**: Modulates with the output from a given bus. – e.g. `modulator: s("one").seg(64).gain(slider(0, 0, 1)).bus(1).dry(0) carrier: s("saw").bmod({ b: 1 })`
+- **bpattack** (also bpa): Sets the attack duration for the bandpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .bpf(500) .bpa("<.5 .25 .1 .01>/4") .bpenv(4)`
+- **bpdc**: DC offset of the LFO for the bandpass filter
+- **bpdecay** (also bpd): Sets the decay duration for the bandpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .bpf(500) .bpd("<.5 .25 .1 0>/4") .bps(0.2) .bpenv(4)`
+- **bpdepth**: Depth of the LFO for the bandpass filter
+- **bpdepthfrequency** (also bpdepthfreq): Depth of the LFO for the bandpass filter, in HZ – e.g. `note("<c c c# c c c4>*16").s("sawtooth").lpf(600).bpdepthfrequency("<200 500 100 0>")`
+- **bpenv** (also bpe): Sets the bandpass filter envelope modulation depth. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .bpf(500) .bpa(.5) .bpenv("<4 2 1 0 -1 -2 -4>/4")`
+- **bpf** (also bandf, bp): Sets the center frequency of the band-pass filter. – e.g. `s("bd sd [~ bd] sd,hh*6").bpf("<1000 2000 4000 8000>")`
+- **bpq** (also bandq): Sets the band-pass q-factor (resonance). – e.g. `s("bd sd [~ bd] sd").bpf(500).bpq("<0 1 2 3>")`
+- **bprate**: Rate of the LFO for the bandpass filter
+- **bprelease** (also bpr): Sets the release time for the bandpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .clip(.5) .bpf(500) .bpenv(4) .bpr("<.5 .25 .1 0>/4") .release(.5)`
+- **bpshape**: Shape of the LFO for the bandpass filter
+- **bpskew**: Skew of the LFO for the bandpass filter
+- **bpsustain** (also bps): Sets the sustain amplitude for the bandpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .bpf(500) .bpd(.5) .bps("<0 .25 .5 1>/4") .bpenv(4)`
+- **bpsync**: Cycle-synced rate of the LFO for the bandpass filter
+- **brak**: Returns a new pattern where every other cycle is played once, twice as fast, and offset in time by one quarter of a cycle.
+- **brand**: A continuous pattern of 0 or 1 (binary random) – e.g. `s("hh*10").pan(brand)`
+- **brandBy**: A continuous pattern of 0 or 1 (binary random), with a probability for the value being 1 – e.g. `s("hh*10").pan(brandBy(0.2))`
+- **bus**: A bus is a send which can be used for mixing patterns.
+- **busgain** (also bgain): Postgain multiplier prior to sending the signal to the audio bus.
+- **byteBeatExpression** (also bbexpr): Create byte beats with custom expressions – e.g. `s("bytebeat").bbexpr('t*(t>>15^t>>66)')`
+- **byteBeatStartTime** (also bbst): Create byte beats with custom expressions – e.g. `note("c3!8".add("{0 0 12 0 7 5 3}%8")).s("bytebeat:5").bbst("<3 1>".mul(10000))._scope()`
+- **cam**: The live camera as a media layer (the viewer must allow the camera). – e.g. `$: cam().mirror(1).fx("<none posterize>")`
+- **camMotion**: A continuous signal 0..1: how much movement is in front of the camera. – e.g. `$: note("c2 eb2").s("sawtooth").lpf(camMotion.range(200, 4000))`
+- **caption**: A caption shown while the event is active. – e.g. `$: caption('a single line').fade(.2)`
+- **captions**: One caption per cycle from a list of plain strings (single quotes). – e.g. `$: captions(['2:14 am', '', 'exit 9', '']).slow(2)`
+- **cat** (also slowcat): The given items are concatenated, where each one takes one cycle. – e.g. `cat("e5", "b4", ["d5", "c5"]).note() // "<e5 b4 [d5 c5]>".note()`
+- **ccn**: MIDI control number: Sends a MIDI control change message.
+- **ccv**: MIDI control value: Sends a MIDI control change message.
+- **ceil**: Assumes a numerical pattern. – e.g. `note("42 42.1 42.5 43".ceil())`
+- **channel**: Choose the channel the pattern is sent to in superdirt
+- **channels** (also ch): Allows you to set the output channels on the interface – e.g. `note("e a d b g").channels("3:4")`
+- **chebyshev**: Distortion via Chebyshev polynomials
+- **choose**: Chooses randomly from the given list of elements. – e.g. `note("c2 g2!2 d2 f1").s(choose("sine", "triangle", "bd:6"))`
+- **choose2**: As with choose, but the pattern that this method is called on should be in the range -1 ..
+- **chooseCycles** (also randcat): Picks one of the elements at random each cycle. – e.g. `chooseCycles("bd", "hh", "sd").s().fast(8)`
+- **chooseInWith**: As with {chooseWith}, but the structure comes from the chosen values, rather than the pattern you're using to choose with.
+- **chooseWith**: Choose from the list of values (or patterns of values) using the given pattern of numbers, which should be in the range of 0..1 – e.g. `note("c2 g2!2 d2 f1").s(chooseWith(sine.fast(2), ["sawtooth", "triangle", "bd:6"]))`
+- **chop**: Cuts each sample into the given number of parts, allowing you to explore a technique known as 'granular synthesis'. – e.g. `samples({ rhodes: 'https://cdn.freesound.org/previews/132/132051_316502-lq.mp3' }) s("rhodes") .chop(4) .rev()`
+- **chord**: The chord to voice – e.g. `chord("<Am C D F Am E Am E>").voicing()`
+- **chorus**: mix control for the chorus effect – e.g. `note("d d a# a").s("sawtooth").chorus(.5)`
+- **chunk** (also slowChunk, slowchunk): Divides a pattern into a given number of parts, then cycles through those parts in turn, applying the given function to each part in turn (one part per cycle). – e.g. `"0 1 2 3".chunk(4, x=>x.add(7)) .scale("A:minor").note()`
+- **chunkBack** (also chunkback): Like chunk, but cycles through the parts in reverse order. – e.g. `"0 1 2 3".chunkBack(4, x=>x.add(7)) .scale("A:minor").note()`
+- **chunkBackInto** (also chunkbackinto): Like chunkInto, but moves backwards through the chunks. – e.g. `sound("bd sd ht lt bd - cp lt").chunkInto(4, hurry(2)) .bank("tr909")`
+- **chunkInto** (also chunkinto): Like chunk, but the function is applied to a looped subcycle of the source pattern. – e.g. `sound("bd sd ht lt bd - cp lt").chunkInto(4, hurry(2)) .bank("tr909")`
+- **chyx**: BYTE BEATS
+- **clip** (also legato): Multiplies the duration with the given number. – e.g. `note("c a f e").s("piano").clip("<.5 1 2>")`
+- **coarse**: Fake-resampling for lowering the sample rate. – e.g. `s("bd sd [~ bd] sd,hh*8").coarse("<1 4 8 16 32>")`
+- **color** (also colour): Sets the color of the hap in visualizations like pianoroll or highlighting.
+- **compress**: Compress each cycle into the given timespan, leaving a gap – e.g. `cat( s("bd sd").compress(.25,.75), s("~ bd sd ~") )`
+- **compressor**: Dynamics Compressor. – e.g. `s("bd sd [~ bd] sd,hh*8") .compressor("-20:20:10:.002:.02")`
+- **computeMagnitudes**: Compute squared magnitudes for peak finding
+- **contract**: Experimental Contracts the step size of the pattern by the given factor. – e.g. `sound("tha dhi thom nam").bank("mridangam").contract("3 2 1 1 2 3").pace(8)`
+- **control**: MIDI control: Sends a MIDI control change message.
+- **cosine**: A cosine signal between 0 and 1. – e.g. `n(stack(sine,cosine).segment(16).range(0,15)) .scale("C:minor")`
+- **cosine2**: A cosine signal between -1 and 1 (like cosine, but bipolar).
+- **cpm**: Plays the pattern at the given cycles per minute. – e.g. `s("<bd sd>,hh*2").cpm(90) // = 90 bpm`
+- **crossfade**: Equal Power Crossfade function.
+- **crush**: Bit crusher effect. – e.g. `s("<bd sd>,hh*3").fast(2).crush("<16 8 7 6 5 4 3 2>")`
+- **csoundm**: Sends notes to Csound for rendering with MIDI semantics.
+- **cubic**: Cubic polynomial distortion
+- **cut**: In the style of classic drum-machines, cut will stop a playing sample as soon as another samples with in same cutgroup is to be played. – e.g. `s("[oh hh]*4").cut(1)`
+- **cyclesPer**: A pattern measuring the duration of events, in cycles per event. – e.g. `// Shorter events are lower in pitch sound("saw saw [saw saw] saw") .note(cyclesPer.range(50, 100))`
+- **decay** (also dec): Amplitude envelope decay time: the time it takes after the attack time to reach the sustain level. – e.g. `note("c3 e3 f3 g3").decay("<.1 .2 .3 .4>").sustain(0)`
+- **defaultmidimap**: configures the default midimap, which is used when no "midimap" port is set – e.g. `defaultmidimap({ lpf: 74 }) $: note("c a f e").midi(); $: lpf(sine.slow(4).segment(16)).midi();`
+- **defragmentHaps**: Combines adjacent haps with the same value and whole.
+- **degrade**: Randomly removes 50% of events from the pattern. – e.g. `s("hh*8").degrade()`
+- **degradeBy**: Randomly removes events from the pattern by a given amount. – e.g. `s("hh*8").degradeBy(0.2)`
+- **delay**: Sets the level of the delay signal. – e.g. `s("bd bd").delay("<0 .25 .5 1>")`
+- **delayfeedback** (also delayfb, dfb): Sets the level of the signal that is fed back into the delay. – e.g. `s("bd").delay(.25).delayfeedback("<.25 .5 .75 1>")`
+- **delayspeed** (also delayt, dt): Sets the time of the delay effect. – e.g. `note("d d a# a".fast(2)).s("sawtooth").delay(.8).delaytime(1/2).delayspeed("<2 .5 -1 -2>")`
+- **delaysync** (also delayt, dt): Sets the time of the delay effect in cycles. – e.g. `s("bd bd").delay(.25).delaysync("<1 2 3 5>".div(8))`
+- **density**: Noise crackle density – e.g. `s("crackle*4").density("<0.01 0.04 0.2 0.5>".slow(4))`
+- **detune** (also det): Set detune for stacked voices of supported oscillators – e.g. `note("d f a a# a d3").fast(2).s("supersaw").detune("<.1 .2 .5 24.1>")`
+- **dictionary**: Which dictionary to use for the voicings. – e.g. `addVoicings('house', { '': ['7 12 16', '0 7 16', '4 7 12'], 'm': ['0 3 7'] }) chord("<Am C D F Am E Am E>") .d`
+- **diode**: Diode-emulating distortion
+- **discreteOnly**: Returns a new pattern, with 'continuous' haps (those without 'whole' timespans) removed from query results.
+- **distort** (also dist): Wave shaping distortion. – e.g. `s("bd sd [~ bd] sd,hh*8").distort("<0 2 3 10:.5>")`
+- **distorttype** (also disttype): Type of waveshaping distortion to apply. – e.g. `s("bd*4").bank("tr909").distort(2).distorttype("<0 1 2>")`
+- **distortvol** (also distvol): Postgain for waveshaping distortion. – e.g. `s("bd*4").bank("tr909").distort(2).distortvol(0.8)`
+- **div**: Divides each number by the given factor.
+- **djf**: DJ filter, below 0.5 is low pass filter, above is high pass filter. – e.g. `n(irand(16).seg(8)).scale("d:phrygian").s("supersaw").djf("<.5 .3 .2 .75>")`
+- **drawLine**: Intended for a debugging, drawLine renders the pattern as a string, where each character represents the same time span. – e.g. `const line = drawLine("0 [1 2 3]", 10); // |0--123|0--123 console.log(line); silence;`
+- **drive**: Filter overdrive for supported filter types – e.g. `note("{f g g c d a a#}%16".sub(17)).s("supersaw").lpenv(8).lpf(150).lpq(.8).ftype('ladder').drive("<.5 4>")`
+- **drop**: Experimental Drops the given number of steps from a pattern. – e.g. `"tha dhi thom nam".drop("1").sound().bank("mridangam")`
+- **dry**: Set dryness of reverb. – e.g. `n("[0,3,7](3,8)").s("superpiano").room(.7).dry("<0 .5 .75 1>").osc()`
+- **duckattack** (also duckatt): The time required for the ducked signal(s) to return to their normal volume. – e.g. `sound: n(run(8)).scale("c:minor").s("sawtooth").delay(.7).orbit(2) ducker: s("bd:4!4").beat("0,4,8,11,14",16).`
+- **duckdepth**: The amount of ducking applied to target orbit Can vary across orbits with the ':' mininotation, e.g. – e.g. `stack( n(run(8)).scale("c:minor").s("sawtooth").delay(.7).orbit(2), s("bd:4!4").beat("0,4,8,11,14",16).duckorb`
+- **duckonset** (also duckons): The time required for the ducked signal(s) to reach their lowest volume. – e.g. `// Clicks sound: freq("63.2388").s("sine").orbit(2).gain(4) duckerWithClick: s("bd*4").duckorbit(2).duckattack`
+- **duckorbit** (also duck): Modulate the amplitude of an orbit to create a "sidechain" like effect. – e.g. `$: n(run(16)).scale("c:minor:pentatonic").s("sawtooth").delay(.7).orbit(2) $: s("bd:4!4").beat("0,4,8,11,14",1`
+- **duration** (also dur): Sets the duration of the event in cycles. – e.g. `note("c a f e").s("piano").dur("<.5 1 2>")`
+- **each**: Applies a function to each of the running patterns separately.
+- **early**: Nudge a pattern to start earlier in time. – e.g. `"bd ~".stack("hh ~".early(.1)).s()`
+- **echo**: Superimpose and offset multiple times, gradually decreasing the velocity – e.g. `s("bd sd").echo(3, 1/6, .8)`
+- **echoWith** (also echowith, stutWith, stutwith): Superimpose and offset multiple times, applying the given function each time. – e.g. `"<0 [2 4]>" .echoWith(4, 1/8, (p,n) => p.add(n*2)) .scale("C:minor").note()`
+- **end**: The same as .begin, but cuts off the end off each sample. – e.g. `s("bd*2,oh*4").end("<.1 .2 .5 1>").fast(2)`
+- **env**: Configures an envelope. – e.g. `s("saw").note("F1").lpf(500).env({ a: 1 })`
+- **euclid**: Changes the structure of the pattern to form an Euclidean rhythm. – e.g. `// The Cuban tresillo pattern. note("c3").euclid(3,8)`
+- **euclidish** (also eish): A 'euclid' variant with an additional parameter that morphs the resulting rhythm from 0 (no morphing) to 1 (completely 'even'). – e.g. `sound("hh").euclidish(7,12,sine.slow(8)) .pan(sine.slow(8))`
+- **euclidLegato**: Similar to euclid, but each pulse is held until the next pulse, so there will be no gaps. – e.g. `note("c3").euclidLegato(3,8)`
+- **euclidLegatoRot**: Similar to euclid, but each pulse is held until the next pulse, so there will be no gaps, and has an additional parameter for 'rotating' the resulting sequence – e.g. `note("c3").euclidLegatoRot(3,5,2)`
+- **euclidRot**: Like euclid, but has an additional parameter for 'rotating' the resulting sequence. – e.g. `// A Samba rhythm necklace from Brazil note("c3").euclidRot(3,16,14)`
+- **every**: An alias for firstOf – e.g. `note("c3 d3 e3 g3").every(4, x=>x.rev())`
+- **expand**: Experimental Expands the step size of the pattern by the given factor. – e.g. `sound("tha dhi thom nam").bank("mridangam").expand("3 2 1 1 2 3").pace(8)`
+- **extend**: Experimental extend is similar to fast in that it increases its density, but it also increases the step count accordingly. – e.g. `stepcat( sound("bd bd - cp").extend(2), sound("bd - sd -") ).pace(8)`
+- **fade**: Fraction of each event spent fading in and out (0..0.5). – e.g. `$: img("<sea night>").slow(2).fade(.4)`
+- **fanchor**: controls the center of the filter envelope. – e.g. `note("{f g g c d a a#}%8").s("sawtooth").lpf("{1000}%2") .lpenv(8).fanchor("<0 .5 1>")`
+- **fast** (also density): Speed up a pattern by the given factor. – e.g. `s("bd hh sd hh").fast(2) // s("[bd hh sd hh]*2")`
+- **fastChunk** (also fastchunk): Like chunk, but the cycles of the source pattern aren't repeated for each set of chunks. – e.g. `"<0 8> 1 2 3 4 5 6 7" .scale("C2:major").note() .fastChunk(4, x => x.color('red')).slow(2)`
+- **fastGap** (also fastgap): speeds up a pattern like fast, but rather than it playing multiple times as fast would it instead leaves a gap in the remaining space of the cycle. – e.g. `s("bd sd").fastGap(2)`
+- **filter**: Filters haps using the given function – e.g. `s("hh!7 oh").filter(hap => hap.value.s === 'hh')`
+- **filterHaps**: Returns a new Pattern, which only returns haps that meet the given test. – e.g. `s("bd*8").velocity(rand).filterHaps((h) => (h.whole.begin % 1) < h.value.velocity)`
+- **filterValues**: As with filterHaps, but the function is applied to values inside haps. – e.g. `const drums = s("bd sd bd sd") kick: drums.filterValues((v) => v.s === 'bd').duck(2) snare: drums.filterValues`
+- **filterWhen**: Filters haps by their begin time – e.g. `oneCycle: s("bd*4").filterWhen((t) => t < 1)`
+- **findPeaks**: Find peaks in spectrum magnitudes
+- **firstCycle**: Queries the pattern for the first cycle, returning Haps.
+- **firstCycleValues**: Accessor for a list of values returned by querying the first cycle.
+- **firstOf**: Applies the given function every n cycles, starting from the first cycle. – e.g. `note("c3 d3 e3 g3").firstOf(4, x=>x.rev())`
+- **fit**: Makes the sample fit its event duration. – e.g. `samples({ rhodes: 'https://cdn.freesound.org/previews/132/132051_316502-lq.mp3' }) s("rhodes/2").fit()`
+- **floor**: Assumes a numerical pattern. – e.g. `note("42 42.1 42.5 43".floor())`
+- **fmap**: see withValue
+- **fmattack** (also fmatt): Attack time for the FM envelope: time it takes to reach maximum modulation A number may be added afterwards to control the attack of the envelope of any of the  – e.g. `note("c e g b g e") .fm(4) .fmattack("<0 .05 .1 .2>") ._scope()`
+- **fmdecay** (also fmdec): Decay time for the FM envelope: seconds until the sustain level is reached after the attack phase. – e.g. `note("c e g b g e") .fm(4) .fmdecay("<.01 .05 .1 .2>") .fmsustain(.4) ._scope()`
+- **fmenv**: Ramp type of fm envelope. – e.g. `note("c e g b g e") .fm(4) .fmdecay(.2) .fmsustain(0) .fmenv("<exp lin>") ._scope()`
+- **fmh**: Sets the Frequency Modulation Harmonicity Ratio. – e.g. `note("c e g b g e") .fm(4) .fmh("<1 2 1.5 1.61>") ._scope()`
+- **fmi** (also fm): Sets the Frequency Modulation of the synth. – e.g. `note("c e g b g e") .fm("<0 1 2 8 32>") ._scope()`
+- **fmrelease** (also fmrel): Release time for the FM envelope: how much modulation is applied after the note is released A number may be added afterwards to control the release of the envel
+- **fmsustain** (also fmsus): Sustain level for the FM envelope: how much modulation is applied after the decay phase A number may be added afterwards to control the sustain of the envelope  – e.g. `note("c e g b g e") .fm(4) .fmdecay(.1) .fmsustain("<1 .75 .5 0>") ._scope()`
+- **fmwave**: Waveform of the fm modulator A number may be added afterwards to control the waveform any of the 8 individual FMs (e.g. – e.g. `n("0 1 2 3".fast(4)).scale("d:minor").s("sine").fmwave("<sine square sawtooth crackle>").fm(4).fmh(2.01)`
+- **focus**: Similar to compress, but doesn't leave gaps, and the 'focus' can be bigger than a cycle – e.g. `s("bd hh sd hh").focus(1/4, 3/4)`
+- **fold**: Wavefolding distortion
+- **freq**: Set frequency of sound. – e.g. `freq("220 110 440 110").s("superzow").osc()`
+- **fromBipolar**: Assumes a numerical pattern, containing bipolar values in the range -1 ..
+- **fscope**: Renders an oscilloscope for the frequency domain of the audio signal. – e.g. `s("sawtooth").fscope()`
+- **ftype**: Sets the filter type. – e.g. `note("{f g g c d a a#}%8").s("sawtooth").lpenv(4).lpf(500).ftype("<0 1 2>").lpq(1)`
+- **fx**: Image effect for media layers: none, grayscale, invert, blur, posterize, pixelate, edges, sepia, contrast, hue. – e.g. `$: img("neon").fx("<none edges posterize>")`
+- **FX**: Establishes an FX chain. – e.g. `$: s("[sbd <hh [bd | lt | oh]>]*4").dec(.4) .FX( phaser(0.5).gain(2), bpf(800), distort(1.3), room(0.2), delay`
+- **gain**: Controls the gain by an exponential amount. – e.g. `s("hh*8").gain(".4!2 1 .4!2 1 .4 1").fast(2)`
+- **gap**: Does absolutely nothing, but with a given metrical 'steps' – e.g. `gap(3) // "~@3"`
+- **generateGraph**: Creates a canvas element showing a graph of the given data.
+- **generateReverb**: Generates a reverb impulse response.
+- **gravityX** (also gravX): The device's gravity x-axis value ranges from 0 to 1. – e.g. `n(gravityX.segment(4).range(0,7)).scale("C:minor")`
+- **gravityY** (also gravY): The device's gravity y-axis value ranges from 0 to 1. – e.g. `n(gravityY.segment(4).range(0,7)).scale("C:minor")`
+- **gravityZ** (also gravZ): The device's gravity z-axis value ranges from 0 to 1. – e.g. `n(gravityZ.segment(4).range(0,7)).scale("C:minor")`
+- **grow**: Experimental Progressively grows the pattern by 'n' steps until the full pattern is played, or if a second value is given (using mininotation list syntax with : – e.g. `"tha dhi thom nam".grow("1").sound() .bank("mridangam")`
+- **handleOutputBuffersToRetrieve**: Add contents of output buffers just processed to output buffers
+- **hard**: Hard-clipping distortion
+- **hpattack** (also hpa): Sets the attack duration for the highpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .hpf(500) .hpa("<.5 .25 .1 .01>/4") .hpenv(4)`
+- **hpdc**: DC offset of the LFO for the highpass filter
+- **hpdecay** (also hpd): Sets the decay duration for the highpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .hpf(500) .hpd("<.5 .25 .1 0>/4") .hps(0.2) .hpenv(4)`
+- **hpdepth**: Depth of the LFO for the highpass filter
+- **hpdepthfrequency** (also hpdepthfreq): Depth of the LFO for the hipass filter, in hz – e.g. `note("<c c c# c c c4>*16").s("sawtooth").lpf(600).hpdepthfrequency("<200 500 100 0>")`
+- **hpenv** (also hpe): Sets the highpass filter envelope modulation depth. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .hpf(500) .hpa(.5) .hpenv("<4 2 1 0 -1 -2 -4>/4")`
+- **hpf** (also hp, hcutoff): Applies the cutoff frequency of the high-pass filter. – e.g. `s("bd sd [~ bd] sd,hh*8").hpf("<4000 2000 1000 500 200 100>")`
+- **hpq** (also hresonance): Controls the high-pass q-value. – e.g. `s("bd sd [~ bd] sd,hh*8").hpf(2000).hpq("<0 10 20 30>")`
+- **hprate**: Rate of the LFO for the highpass filter
+- **hprelease** (also hpr): Sets the release time for the highpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .clip(.5) .hpf(500) .hpenv(4) .hpr("<.5 .25 .1 0>/4") .release(.5)`
+- **hpshape**: Shape of the LFO for the highpass filter
+- **hpskew**: Skew of the LFO for the highpass filter
+- **hpsustain** (also hps): Sets the sustain amplitude for the highpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .hpf(500) .hpd(.5) .hps("<0 .25 .5 1>/4") .hpenv(4)`
+- **hpsync**: Cycle-synced rate of the LFO for the highpass filter
+- **hue**: Colour (degrees) for visuals; the rotation for fx("hue") on media. – e.g. `$: visual("rings").hue("<160 300>")`
+- **hurry**: Both speeds up the pattern (like 'fast') and the sample playback (like 'speed'). – e.g. `s("bd sd:2").hurry("<1 2 4 3>").slow(1.5)`
+- **hush**: Silences a pattern. – e.g. `stack( s("bd").hush(), s("hh*3") )`
+- **img**: Shows an image on the stage while the event is active. – e.g. `$: img("<rain neon dusk>").slow(4).fade(.3)`
+- **inhabit** (also pickSqueeze): Picks patterns (or plain values) either from a list (by index) or a lookup table (by name). – e.g. `"<a b [a,b]>".inhabit({a: s("bd(3,8)"), b: s("cp sd") })`
+- **inhabitmod** (also pickmodSqueeze): The same as inhabit, but if you pick a number greater than the size of the list, it wraps around, rather than sticking at the maximum value.
+- **inside**: Carries out an operation 'inside' a cycle. – e.g. `"0 1 2 3 4 3 2 1".inside(4, rev).scale('C major').note() // "0 1 2 3 4 3 2 1".slow(4).rev().fast(4).scale('C m`
+- **into**: Breaks a pattern into pieces according to the structure of a given pattern. – e.g. `sound("bd sd ht lt").into("1 0", hurry(2))`
+- **invert** (also inv): Swaps 1s and 0s in a binary pattern. – e.g. `s("bd").struct("1 0 0 1 0 0 1 0".lastOf(4, invert))`
+- **irand**: A continuous pattern of random integers, between 0 and n-1. – e.g. `// randomly select scale notes from 0 - 7 (= C to C) n(irand(8)).struct("x x*2 x x*3").scale("C:minor")`
+- **irbegin** (also ir): Sets the beginning of the IR response sample – e.g. `samples('github:switchangel/pad') $: s("brk/2").fit().scrub(irand(16).div(16).seg(8)).ir("swpad:4").room(.65).`
+- **iresponse** (also ir): Sets the sample to use as an impulse response for the reverb. – e.g. `s("bd sd [~ bd] sd").room(.8).ir("<shaker_large:0 shaker_large:2>")`
+- **irspeed**: Sets speed of the sample for the impulse response. – e.g. `samples('github:switchangel/pad') $: s("brk/2").fit().scrub(irand(16).div(16).seg(8)).ir("swpad:4").room(.2).i`
+- **isaw**: A sawtooth signal between 1 and 0 (like saw, but flipped). – e.g. `note("<c3 [eb3,g3] g2 [g3,bb3]>*8") .clip(isaw.slow(2))`
+- **isaw2**: A sawtooth signal between 1 and -1 (like saw2, but flipped).
+- **iter**: Divides a pattern into a given number of subdivisions, plays the subdivisions in order, but increments the starting subdivision each cycle. – e.g. `note("0 1 2 3".scale('A minor')).iter(4)`
+- **iterBack** (also iterback): Like iter, but plays the subdivisions in reverse order. – e.g. `note("0 1 2 3".scale('A minor')).iterBack(4)`
+- **itri**: An inverted triangle signal between 1 and 0 (like tri, but flipped). – e.g. `n(itri.segment(8).range(0,7)).scale("C:minor")`
+- **itri2**: An inverted triangle signal between -1 and 1 (like itri, but bipolar).
+- **jux**: The jux function creates strange stereo effects, by applying a function to a pattern, but only in the right-hand channel. – e.g. `s("bd lt [~ ht] mt cp ~ bd hh").jux(rev)`
+- **juxBy** (also juxby): Jux with adjustable stereo width. – e.g. `s("bd lt [~ ht] mt cp ~ bd hh").juxBy("<0 .5 1>/2", rev)`
+- **K**: Produces a Kabelsalat modular sound engine. – e.g. `note("A c e".fast(4)).transpose("<0 2 4 6 8>") .scale("F:minor").transpose("12") .s("saw") .K( // audioin().mu`
+- **keyDown**: returns true when a key or array of keys is held Key name reference – e.g. `keyDown("Control:j").pick([s("bd(5,8)"), s("cp(3,8)")])`
+- **label**: Sets the displayed text for an event on the pianoroll
+- **lastOf**: Applies the given function every n cycles, starting from the last cycle. – e.g. `note("c3 d3 e3 g3").lastOf(4, x=>x.rev())`
+- **late**: Nudge a pattern to start later in time. – e.g. `"bd ~".stack("hh ~".late(.1)).s()`
+- **layer** (also apply): Layers the result of the given function(s). – e.g. `"<0 2 4 6 ~ 4 ~ 2 0!3 ~!5>*8" .layer(x=>x.add("0,2")) .scale('C minor').note()`
+- **leslie**: Emulation of a Leslie speaker: speakers rotating in a wooden amplified cabinet. – e.g. `n("0,4,7").s("supersquare").leslie("<0 .4 .6 1>").osc()`
+- **lfo**: Configures an LFO. – e.g. `s("saw").note("F1").lpf(500).lfo()`
+- **linger**: Selects the given fraction of the pattern and repeats that part to fill the remainder of the cycle. – e.g. `s("lt ht mt cp, [hh oh]*2").linger("<1 .5 .25 .125>")`
+- **lock**: Specifies whether delaytime is calculated relative to cps. – e.g. `s("sd").delay().lock(1).osc()`
+- **log**: Writes the content of the current event to the console (visible in the side menu). – e.g. `s("bd sd").log()`
+- **logValues**: A simplified version of log which writes all "values" (various configurable parameters) within the event to the console (visible in the side menu). – e.g. `s("bd sd").gain("0.25 0.5 1").n("2 1 0").logValues()`
+- **loop**: Loops the sample. – e.g. `s("casio").loop(1)`
+- **loopAt**: Makes the sample fit the given number of cycles by changing the speed. – e.g. `samples({ rhodes: 'https://cdn.freesound.org/previews/132/132051_316502-lq.mp3' }) s("rhodes").loopAt(2)`
+- **loopAtCps**: Makes the sample fit the given number of cycles and cps value, by changing the speed. – e.g. `samples({ rhodes: 'https://cdn.freesound.org/previews/132/132051_316502-lq.mp3' }) s("rhodes").loopAtCps(4,1.5`
+- **loopBegin** (also loopb): Begin to loop at a specific point in the sample (inbetween begin and end). – e.g. `s("space").loop(1) .loopBegin("<0 .125 .25>")._scope()`
+- **loopEnd** (also loope): End the looping section at a specific point in the sample (inbetween begin and end). – e.g. `s("space").loop(1) .loopEnd("<1 .75 .5 .25>")._scope()`
+- **lpattack** (also lpa): Sets the attack duration for the lowpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .lpf(300) .lpa("<.5 .25 .1 .01>/4") .lpenv(4)`
+- **lpdc**: DC offset of the LFO for the lowpass filter
+- **lpdecay** (also lpd): Sets the decay duration for the lowpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .lpf(300) .lpd("<.5 .25 .1 0>/4") .lpenv(4)`
+- **lpdepth**: Depth of the LFO for the lowpass filter – e.g. `note("<c c c# c c c4>*16").s("sawtooth").lpf(600).lpdepth("<1 .5 1.8 0>")`
+- **lpdepthfrequency** (also lpdepthfreq): Depth of the LFO for the lowpass filter, in HZ – e.g. `note("<c c c# c c c4>*16").s("sawtooth").lpf(600).lpdepthfrequency("<200 500 100 0>")`
+- **lpenv** (also lpe): Sets the lowpass filter envelope modulation depth. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .lpf(300) .lpa(.5) .lpenv("<4 2 1 0 -1 -2 -4>/4")`
+- **lpf** (also cutoff, ctf, lp): Applies the cutoff frequency of the low-pass filter. – e.g. `s("bd sd [~ bd] sd,hh*6").lpf("<4000 2000 1000 500 200 100>")`
+- **lpq** (also resonance): Controls the low-pass q-value. – e.g. `s("bd sd [~ bd] sd,hh*8").lpf(2000).lpq("<0 10 20 30>")`
+- **lprate**: Rate of the LFO for the lowpass filter – e.g. `note("<c c c# c c c4>*16").s("sawtooth").lpf(600).lprate("<4 8 2 1>")`
+- **lprelease** (also lpr): Sets the release time for the lowpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .clip(.5) .lpf(300) .lpenv(4) .lpr("<.5 .25 .1 0>/4") .release(.5)`
+- **lpshape**: Shape of the LFO for the lowpass filter
+- **lpskew**: Skew of the LFO for the lowpass filter
+- **lpsustain** (also lps): Sets the sustain amplitude for the lowpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .lpf(300) .lpd(.5) .lps("<0 .25 .5 1>/4") .lpenv(4)`
+- **lpsync**: Cycle-synced rate of the LFO for the lowpass filter – e.g. `note("<c c c# c c c4>*16").s("sawtooth").lpf(600).lpsync("<4 8 2 1>")`
+- **lrate**: Rate of modulation / rotation for leslie effect – e.g. `n("0,4,7").s("supersquare").leslie(1).lrate("<1 2 4 8>").osc()`
+- **lsize**: Physical size of the cabinet in meters. – e.g. `n("0,4,7").s("supersquare").leslie(1).lrate(2).lsize("<.1 .5 1>").osc()`
+- **markcss**: Overrides the css of highlighted events. – e.g. `note("c a f e") .markcss('text-decoration:underline')`
+- **mask**: Returns silence when mask is 0 or "~" – e.g. `note("c [eb,g] d [eb,g]").mask("<1 [0 1]>")`
+- **media**: Registers media names, like samples() does for sounds. – e.g. `media({ cover: 'https://example.com/cover.jpg' })`
+- **midi**: MIDI output: Opens a MIDI output port. – e.g. `note("c4").midichan(1).midi('IAC Driver Bus 1')`
+- **midibend**: MIDI pitch bend: Sends a MIDI pitch bend message. – e.g. `note("c4").midibend(sine.slow(4).range(-0.4,0.4)).midi()`
+- **midichan**: MIDI channel: Sets the MIDI channel for the event. – e.g. `note("c4").midichan(1).midi()`
+- **midicmd**: MIDI command: Sends a MIDI command message. – e.g. `midicmd("clock*48,<start stop>/2").midi()`
+- **midikeys**: MIDI keyboard: Opens a MIDI input port to receive MIDI keyboard messages. – e.g. `const kb = await midikeys('Arturia KeyStep 32') kb().s("tri").lpf(80).lpe(6).lpd(0.1).room(2).delay(0.35)`
+- **midimaps**: Adds midimaps to the registry. – e.g. `midimaps({ mymap: { lpf: 74 } }) $: note("c a f e") .lpf(sine.slow(4)) .midimap('mymap') .midi()`
+- **midin**: MIDI input: Opens a MIDI input port to receive MIDI control change messages. – e.g. `const cc = await midin('IAC Driver Bus 1') note("c a f e").lpf(cc(0).range(0, 1000)).lpq(cc(1).range(0, 10)).s`
+- **midiport**: MIDI port: Sets the MIDI port for the event. – e.g. `note("c a f e").midiport("<0 1 2 3>").midi()`
+- **miditouch**: MIDI key after touch: Sends a MIDI key after touch message. – e.g. `note("c4").miditouch(sine.slow(4).range(0,1)).midi()`
+- **mirror**: Flips a media layer horizontally (1 = on). – e.g. `$: cam().mirror(1)`
+- **mode**: Remove anchor note from the voicing. – e.g. `mode("<below above duck root>").chord("C").voicing()`
+- **morph**: Takes two binary rhythms represented as lists of 1s and 0s, and a number between 0 and 1 that morphs between them. – e.g. `sound("hh").struct(morph([1,0,1,0,1,0,1,0], // straight rhythm [1,1,0,1,0,1,0], // wonky rhythm 0.25 // create`
+- **mousex**: The mouse's x position value ranges from 0 to 1. – e.g. `n(mousex.segment(4).range(0,7)).scale("C:minor")`
+- **mousey**: The mouse's y position value ranges from 0 to 1. – e.g. `n(mousey.segment(4).range(0,7)).scale("C:minor")`
+- **mul**: Multiplies each number by the given factor. – e.g. `"<1 1.5 [1.66, <2 2.33>]>*4".mul(150).freq()`
+- **n**: Selects the given index from the sample map. – e.g. `s("bd sd [~ bd] sd,hh*6").n("<0 1>")`
+- **never**: Shorthand for .sometimesBy(0, fn) (never calls fn) – e.g. `s("hh*8").never(x=>x.speed("0.5"))`
+- **noise**: Adds pink noise to the mix – e.g. `sound("<white pink brown>/2")`
+- **note**: Plays the given note name or midi number. – e.g. `note("c a f e")`
+- **nrpnn**: MIDI NRPN non-registered parameter number: Sends a MIDI NRPN non-registered parameter number message. – e.g. `note("c4").nrpnn("1:8").nrpv("123").midichan(1).midi()`
+- **nrpv**: MIDI NRPN non-registered parameter value: Sends a MIDI NRPN non-registered parameter value message. – e.g. `note("c4").nrpnn("1:8").nrpv("123").midichan(1).midi()`
+- **octave** (also oct): Sets the default octave of a synth. – e.g. `n("0,4,7").scale("F:minor").s('supersaw').octave("<0 1 2 3>")`
+- **octaves**: How many octaves are voicing steps spread apart, defaults to 1 – e.g. `chord("<Am C D F Am E Am E>").octaves("<2 4>").voicing()`
+- **off**: Superimposes the function result on top of the original pattern, delayed by the given time. – e.g. `"c3 eb3 g3".off(1/8, x=>x.add(7)).note()`
+- **offset**: Sets how the voicing is offset from the anchored position – e.g. `chord("<Am C D F Am E Am E>").offset("<0 1 2 3 4 5>") // alter the voicing each time`
+- **often**: Shorthand for .sometimesBy(0.75, fn) – e.g. `s("hh*8").often(x=>x.speed("0.5"))`
+- **onsetsOnly**: Returns a new pattern, with all haps without onsets filtered out.
+- **onTriggerTime**: make something happen on event time uses browser timeout which is innacurate for audio tasks – e.g. `s("bd!8").onTriggerTime((hap) => {console.log(hap)})`
+- **opacity**: Layer opacity 0..1 for media, visuals and captions. – e.g. `$: img("fog").opacity(sine.range(.3, 1))`
+- **orbit** (also o): An orbit is a global parameter context for patterns. – e.g. `stack( s("hh*6").delay(.5).delaytime(.25).orbit(1), s("~ sd ~ sd").delay(.5).delaytime(.125).orbit(2) )`
+- **orientationAlpha** (also oriA, oriZ, orientationZ): The device's orientation alpha value ranges from 0 to 1. – e.g. `n(orientationAlpha.segment(4).range(0,7)).scale("C:minor")`
+- **orientationBeta** (also oriB, oriX, orientationX): The device's orientation beta value ranges from 0 to 1. – e.g. `n(orientationBeta.segment(4).range(0,7)).scale("C:minor")`
+- **orientationGamma** (also oriG, oriY, orientationY): The device's orientation gamma value ranges from 0 to 1. – e.g. `n(orientationGamma.segment(4).range(0,7)).scale("C:minor")`
+- **osc**: Sends each hap as an OSC message, which can be picked up by SuperCollider or any other OSC-enabled software.
+- **oschost**: The host to send open sound control messages to. – e.g. `note("c4").oschost('127.0.0.1').oscport(57120).osc();`
+- **oscport**: The port to send open sound control messages to. – e.g. `note("c4").oschost('127.0.0.1').oscport(57120).osc();`
+- **outside**: Carries out an operation 'outside' a cycle. – e.g. `"<[0 1] 2 [3 4] 5>".outside(4, rev).scale('C major').note() // "<[0 1] 2 [3 4] 5>".fast(4).rev().slow(4).scale`
+- **pace**: Experimental Speeds a pattern up or down, to fit to the given number of steps per cycle. – e.g. `sound("bd sd cp").pace(4) // The same as sound("{bd sd cp}%4") or sound("<bd sd cp>*4")`
+- **palindrome**: Applies rev to a pattern every other cycle, so that the pattern alternates between forwards and backwards. – e.g. `note("c d e g").palindrome()`
+- **pan**: Sets position in stereo. – e.g. `s("[bd hh]*2").pan("<.5 1 .5 0>")`
+- **panchor**: Sets the range anchor of the envelope: anchor 0: range = [note, note + penv] anchor 1: range = [note - penv, note] If you don't set an anchor, the value will de – e.g. `note("c c4").penv(12).panchor("<0 .5 1 .5>")`
+- **parray**: Turns a list of patterns into a single pattern which outputs list-values
+- **partials**: Scale the magnitude of the harmonics of one of the core synths ('sine', 'tri', 'saw', ..) Can also be used to create a new synth via s('user').partials(...) – e.g. `s("user").seg(16).n(irand(8)).scale("A:major") .partials([1, 0, 1, 0, 0, 1])`
+- **pattack** (also patt): Attack time of pitch envelope. – e.g. `note("c eb g bb").pattack("0 .1 .25 .5").slow(2)`
+- **Pattern**: Create a pattern.
+- **pcurve**: Curve of envelope. – e.g. `note("g1*4") .s("sine").pdec(.5) .penv(32) .pcurve("<0 1>")`
+- **pdecay** (also pdec): Decay time of pitch envelope. – e.g. `note("<c eb g bb>").pdecay("<0 .1 .25 .5>")`
+- **penv**: Amount of pitch envelope. – e.g. `note("c") .penv("<12 7 1 .5 0 -1 -7 -12>")`
+- **per** (also perCycle): A pattern measuring the 'shortness' of events, or in other words, the duration of pattern events, in events per cycle. – e.g. `// Shorter events are more distorted n("0 0*2 0 0*2 0 [0 0 0]@2").sound("bd") .distort(per.div(2))`
+- **perlin**: Generates a continuous pattern of perlin noise, in the range 0..1. – e.g. `// randomly change the cutoff s("bd*4,hh*8").cutoff(perlin.range(500,8000))`
+- **perx**: Like per but measures the shortness of events according to an exponential curve.
+- **phaser** (also ph): Phaser audio effect that approximates popular guitar pedals. – e.g. `n(run(8)).scale("D:pentatonic").s("sawtooth").release(0.5) .phaser("<1 2 4 8>")`
+- **phasercenter** (also phc): The center frequency of the phaser in HZ. – e.g. `n(run(8)).scale("D:pentatonic").s("sawtooth").release(0.5) .phaser(2).phasercenter("<800 2000 4000>")`
+- **phaserdepth** (also phd, phasdp): The amount the signal is affected by the phaser effect. – e.g. `n(run(8)).scale("D:pentatonic").s("sawtooth").release(0.5) .phaser(2).phaserdepth("<0 .5 .75 1>")`
+- **phasersweep** (also phs): The frequency sweep range of the lfo for the phaser effect. – e.g. `n(run(8)).scale("D:pentatonic").s("sawtooth").release(0.5) .phaser(2).phasersweep("<800 2000 4000>")`
+- **phases**: Rotates the harmonics of one of the core synths ('sine', 'tri', 'saw', 'user', ..) by a list of phases – e.g. `// Phase cancellation s("saw").seg(8).n(irand(12)).scale("G#1:minor") .partials(partials([1, 1, 1])) .superimp`
+- **pianoroll** (also punchcard): Visualises a pattern as a scrolling 'pianoroll', displayed in the background of the editor. – e.g. `note("c2 a2 eb2") .euclid(5,8) .s('sawtooth') .lpenv(4).lpf(300) .pianoroll({ labels: 1 })`
+- **pick**: Picks patterns (or plain values) either from a list (by index) or a lookup table (by name). – e.g. `note("<0 1 2!2 3>".pick(["g a", "e f", "f g f g" , "g c d"]))`
+- **pickAndRename**: Selects entries from source and renames them via map
+- **pickF**: pickF lets you use a pattern of numbers to pick which function to apply to another pattern. – e.g. `s("bd [rim hh]").pickF("<0 1 2>", [rev,jux(rev),fast(2)])`
+- **pickmod**: The same as pick, but if you pick a number greater than the size of the list, it wraps around, rather than sticking at the maximum value.
+- **pickmodF**: The same as pickF, but if you pick a number greater than the size of the functions list, it wraps around, rather than sticking at the maximum value.
+- **pickmodOut**: The same as pickOut, but if you pick a number greater than the size of the list, it wraps around, rather than sticking at the maximum value.
+- **pickmodReset**: The same as pickReset, but if you pick a number greater than the size of the list, it wraps around, rather than sticking at the maximum value.
+- **pickmodRestart**: The same as pickRestart, but if you pick a number greater than the size of the list, it wraps around, rather than sticking at the maximum value. – e.g. `"<a@2 b@2 c@2 d@2>".pickRestart({ a: n("0 1 2 0"), b: n("2 3 4 ~"), c: n("[4 5] [4 3] 2 0"), d: n("0 -3 0 ~") `
+- **pickOut**: Similar to pick, but it applies an outerJoin instead of an innerJoin.
+- **pickReset**: Similar to pick, but the choosen pattern is reset when its index is triggered.
+- **pickRestart**: Similar to pick, but the choosen pattern is restarted when its index is triggered.
+- **pitchwheel**: Renders a pitch circle to visualize frequencies within one octave – e.g. `n("0 .. 12").scale("C:chromatic") .s("sawtooth") .lpf(500) ._pitchwheel()`
+- **ply**: The ply function repeats each event the given number of times. – e.g. `s("bd ~ sd cp").ply("<1 2 3>")`
+- **plyForEach** (also plyforeach): The plyForEach function repeats each event the given number of times, applying the given function to each event. – e.g. `"<0 [2 4]>" .plyForEach(4, (p,n) => p.add(n*2)) .scale("C:minor").note()`
+- **plyWith** (also plywith): The plyWith function repeats each event the given number of times, applying the given function to each event.\n – e.g. `"<0 [2 4]>" .plyWith(4, (p) => p.add(2)) .scale("C:minor").note()`
+- **polymeter** (also pm): Experimental Aligns the steps of the patterns, creating polymeters. – e.g. `// The same as note("{c eb g, c2 g2}%6") polymeter("c eb g", "c2 g2").note()`
+- **pos**: Vertical focus 0 (top) .. – e.g. `$: img("sun").pos(.3)`
+- **postgain**: Gain applied after all effects have been processed. – e.g. `s("bd sd [~ bd] sd,hh*8") .compressor("-20:20:10:.002:.02").postgain(1.5)`
+- **prelease** (also prel): Release time of pitch envelope – e.g. `note("<c eb g bb> ~") .release(.5) // to hear the pitch release .prelease("<0 .1 .25 .5>")`
+- **prepareInputBuffersToSend**: Copy contents of input buffers to buffer actually sent to process
+- **press**: Syncopates a rhythm, by shifting each event halfway into its timespan. – e.g. `stack(s("hh*4"), s("bd mt sd ht").every(4, press) ).slow(2)`
+- **pressBy**: Like press, but allows you to specify the amount by which each event is shifted. – e.g. `stack(s("hh*4"), s("bd mt sd ht").pressBy("<0 0.5 0.25>") ).slow(2)`
+- **progNum**: MIDI program number: Sends a MIDI program change message. – e.g. `note("c4").progNum(10).midichan(1).midi()`
+- **pure**: A discrete value that repeats once per cycle. – e.g. `pure('e4') // "e4"`
+- **pw**: Controls the pulsewidth of the pulse oscillator – e.g. `note("{f a c e}%16").s("pulse").pw(".8:1:.2")`
+- **pwrate**: Controls the lfo rate for the pulsewidth of the pulse oscillator – e.g. `n(run(8)).scale("D:pentatonic").s("pulse").pw("0.5").pwrate("<5 .1 25>").pwsweep("<0.3 .8>")`
+- **pwsweep**: Controls the lfo sweep for the pulsewidth of the pulse oscillator – e.g. `n(run(8)).scale("D:pentatonic").s("pulse").pw("0.5").pwrate("<5 .1 25>").pwsweep("<0.3 .8>")`
+- **queryArc**: Query haps inside the given time span. – e.g. `const pattern = sequence('a', ['b', 'c']) const haps = pattern.queryArc(0, 1) console.log(haps) silence`
+- **rand**: A continuous pattern of random numbers, between 0 and 1. – e.g. `// randomly change the cutoff s("bd*4,hh*8").cutoff(rand.range(500,8000))`
+- **rand2**: A continuous pattern of random numbers, between -1 and 1
+- **randL**: Creates a list of random numbers of the given length – e.g. `s("saw").seg(16).n(irand(12)).scale("F1:minor") .partials(randL(8))`
+- **range**: Assumes a numerical pattern, containing unipolar values in the range 0 .. – e.g. `s("[bd sd]*2,hh*8") .cutoff(sine.range(500,4000))`
+- **range2**: Assumes a numerical pattern, containing bipolar values in the range -1 .. – e.g. `s("[bd sd]*2,hh*8") .cutoff(sine2.range2(500,4000))`
+- **rangex**: Assumes a numerical pattern, containing unipolar values in the range 0 .. – e.g. `s("[bd sd]*2,hh*8") .cutoff(sine.rangex(500,4000))`
+- **rarely**: Shorthand for .sometimesBy(0.25, fn) – e.g. `s("hh*8").rarely(x=>x.speed("0.5"))`
+- **ratio**: Allows dividing numbers via list notation using ":". – e.g. `ratio("1, 5:4, 3:2").mul(110) .freq().s("piano")`
+- **readInputs**: Read next web audio block to input buffers
+- **reallocateChannelsIfNeeded**: Handles dynamic reallocation of input/output channels buffer (channel numbers may lety during lifecycle)
+- **ref**: exposes a custom value at query time.
+- **register**: Registers a new pattern method. – e.g. `const vlpf = register('vlpf', (freq, pat) => { return pat.fmap((v) => ({...v, cutoff: freq * (v.velocity ?? 1)`
+- **release** (also rel): Amplitude envelope release time: The time it takes after the offset to go from sustain level to zero. – e.g. `note("c3 e3 g3 c4").release("<0 .1 .4 .6 1>/2")`
+- **removeUndefineds**: Returns a new pattern, with haps containing undefined values removed from query results.
+- **repeatCycles**: Repeats each cycle the given number of times. – e.g. `note(irand(12).add(34)).segment(4).repeatCycles(2).s("gm_acoustic_guitar_nylon")`
+- **replicate**: Experimental replicate is similar to fast in that it increases its density, but it also increases the step count accordingly. – e.g. `stepcat( sound("bd bd - cp").replicate(2), sound("bd - sd -") ).pace(8)`
+- **reset**: Resets the pattern to the start of the cycle for each onset of the reset pattern. – e.g. `s("[<bd lt> sd]*2, hh*8").reset("<x@3 x(5,8)>")`
+- **restart**: Restarts the pattern for each onset of the restart pattern. – e.g. `s("[<bd lt> sd]*2, hh*8").restart("<x@3 x(5,8)>")`
+- **rev**: Reverse all cycles in a pattern. – e.g. `note("c d e g").rev()`
+- **revv**: Reverse a whole pattern. – e.g. `// This is the same as `<[g e] [d c]>`. If `rev()` is used, you get // the same as `<[d c] [g e]>`, where each`
+- **ribbon** (also rib): Loops the pattern inside an offset for cycles. – e.g. `note("<c d e f>").ribbon(1, 2)`
+- **room**: Sets the level of reverb. – e.g. `s("bd sd [~ bd] sd").room("<0 .2 .4 .6 .8 1>")`
+- **roomdim** (also rdim): Reverb lowpass frequency at -60dB (in hertz). – e.g. `s("bd sd [~ bd] sd").room(0.5).rlp(10000).rdim(8000)`
+- **roomfade** (also rfade): Reverb fade time (in seconds). – e.g. `s("bd sd [~ bd] sd").room(0.5).rlp(10000).rfade(0.5)`
+- **roomlp** (also rlp): Reverb lowpass starting frequency (in hertz). – e.g. `s("bd sd [~ bd] sd").room(0.5).rlp(10000)`
+- **roomsize** (also rsize, sz, size): Sets the room size of the reverb, see room. – e.g. `s("bd sd [~ bd] sd").room(.8).rsize(1)`
+- **rootNotes**: Maps the chords of the incoming pattern to root notes in the given octave. – e.g. `"<C^7 A7 Dm7 G7>".rootNotes(2).note()`
+- **rotationAlpha** (also rotA, rotZ, rotationZ): The device's rotation around the alpha-axis value ranges from 0 to 1. – e.g. `n(rotationAlpha.segment(4).range(0,7)).scale("C:minor")`
+- **rotationBeta** (also rotB, rotX, rotationX): The device's rotation around the beta-axis value ranges from 0 to 1. – e.g. `n(rotationBeta.segment(4).range(0,7)).scale("C:minor")`
+- **rotationGamma** (also rotG, rotY, rotationY): The device's rotation around the gamma-axis value ranges from 0 to 1. – e.g. `n(rotationGamma.segment(4).range(0,7)).scale("C:minor")`
+- **round**: Assumes a numerical pattern. – e.g. `n("0.5 1.5 2.5".round()).scale("C:major")`
+- **run**: A discrete pattern of numbers from 0 to n-1 – e.g. `n(run(4)).scale("C4:pentatonic") // n("0 1 2 3").scale("C4:pentatonic")`
+- **s** (also sound): Select a sound / sample by name. – e.g. `s("bd hh")`
+- **samples**: Loads a collection of samples to use with s – e.g. `samples('github:tidalcycles/dirt-samples'); s("[bd ~]*2, [~ hh]*2, ~ sd")`
+- **saw**: A sawtooth signal between 0 and 1. – e.g. `note("<c3 [eb3,g3] g2 [g3,bb3]>*8") .clip(saw.slow(2))`
+- **saw2**: A sawtooth signal between -1 and 1 (like saw, but bipolar).
+- **scale**: Turns numbers into notes in the scale (zero indexed) or quantizes notes to a scale. – e.g. `n("0 2 4 6 4 2").scale("C:major")`
+- **scaleTranspose** (also scaleTrans, strans): Transposes notes inside the scale by the number of steps. – e.g. `"-8 [2,4,6]" .scale('C4 bebop major') .scaleTranspose("<0 -1 -2 -3 -4 -5 -6 -4>") .note()`
+- **scope** (also tscope): Renders an oscilloscope for the time domain of the audio signal. – e.g. `s("sawtooth")._scope()`
+- **scramble**: Slices a pattern into the given number of parts, then plays those parts at random. – e.g. `note("c d e f").sound("piano").scramble(4)`
+- **scrub**: Allows you to scrub an audio file like a tape loop by passing values that represents the position in the audio file in the optional array syntax ex: "0.5:2", th – e.g. `samples('github:switchangel/pad') s("swpad:0").scrub("{0.1!2 .25@3 0.7!2 <0.8:1.5>}%8")`
+- **seed**: Change the seed for random signals. – e.g. `$: s("hh*4").degrade(); $: s("bd*4").degrade().seed(1); // Will degrade different events from the hi-hat`
+- **segment** (also seg): Samples the pattern at a rate of n events per cycle. – e.g. `note(saw.range(40,52).segment(24))`
+- **seq** (also sequence, fastcat): Like cat, but the items are crammed into one cycle. – e.g. `seq("e5", "b4", ["d5", "c5"]).note() // "e5 b4 [d5 c5]".note()`
+- **seqPLoop**: Similarly to arrange, allows you to arrange multiple patterns together over multiple cycles. – e.g. `seqPLoop([0, 2, "bd(3,8)"], [1, 3, "cp(3,8)"] ) .sound()`
+- **sequence**: See fastcat
+- **sequenceP**: Takes a list of patterns, and returns a pattern of lists.
+- **setContext**: Returns a new pattern with the context field set to every hap set to the given value.
+- **setcpm**: Changes the global tempo to the given cycles per minute – e.g. `setcpm(140/4) // =140 bpm in 4/4 $: s("bd*4,[- sd]*2").bank('tr707')`
+- **setGainCurve**: Apply a function to all gains provided in patterns. – e.g. `setGainCurve((x) => x * x) // quadratic gain s("bd*4").gain(0.5) // equivalent to 0.25 gain normally`
+- **setMaxPolyphony**: Set the max polyphony. – e.g. `setMaxPolyphony(4) n(irand(24).seg(8)).scale("C#3:minor").room(1).release(4).gain(0.5)`
+- **shape**: (Deprecated) Wave shaping distortion. – e.g. `s("bd sd [~ bd] sd,hh*8").shape("<0 .2 .4 .6 .8>")`
+- **shiftInputBuffers**: Shift left content of input buffers to receive new web audio block
+- **shiftOutputBuffers**: Shift left content of output buffers to receive new web audio block
+- **shiftPeaks**: Shift peaks and regions of influence by pitchFactor into new specturm
+- **showFirstCycle**: More human-readable version of the firstCycleValues accessor.
+- **shrink**: Experimental Progressively shrinks the pattern by 'n' steps until there's nothing left, or if a second value is given (using mininotation list syntax with :), t – e.g. `"tha dhi thom nam".shrink("1").sound() .bank("mridangam")`
+- **shuffle**: Slices a pattern into the given number of parts, then plays those parts in random order. – e.g. `note("c d e f").sound("piano").shuffle(4)`
+- **silence**: Does absolutely nothing.. – e.g. `silence // "~"`
+- **sine**: A sine signal between 0 and 1. – e.g. `n(sine.segment(16).range(0,15)) .scale("C:minor")`
+- **sine2**: A sine signal between -1 and 1 (like sine, but bipolar).
+- **sinefold**: Wavefolding distortion composed with sinusoid
+- **slice**: Chops samples into the given number of slices, triggering those slices with a given pattern of slice numbers. – e.g. `samples('github:tidalcycles/dirt-samples') s("breaks165").slice(8, "0 1 <2 2*2> 3 [4 0] 5 6 7".every(3, rev)).`
+- **slider**: Displays a slider widget to allow the user manipulate a value
+- **slow** (also sparsity): Slow down a pattern over the given number of cycles. – e.g. `s("bd hh sd hh").slow(2) // s("[bd hh sd hh]/2")`
+- **slowcat** (also cat): Concatenation: combines a list of patterns, switching between them successively, one per cycle. – e.g. `slowcat("e5", "b4", ["d5", "c5"])`
+- **slowcatPrime**: Concatenation: combines a list of patterns, switching between them successively, one per cycle.
+- **soft**: Soft-clipping distortion
+- **someCycles**: Shorthand for .someCyclesBy(0.5, fn) – e.g. `s("bd,hh*8").someCycles(x=>x.speed("0.5"))`
+- **someCyclesBy**: Randomly applies the given function by the given probability on a cycle by cycle basis. – e.g. `s("bd,hh*8").someCyclesBy(.3, x=>x.speed("0.5"))`
+- **sometimes**: Applies the given function with a 50% chance – e.g. `s("hh*8").sometimes(x=>x.speed("0.5"))`
+- **sometimesBy**: Randomly applies the given function by the given probability. – e.g. `s("hh*8").sometimesBy(.4, x=>x.speed("0.5"))`
+- **sortHapsByPart**: Returns a new pattern, which returns haps sorted in temporal order.
+- **soundAlias**: Register an alias for a sound.
+- **source** (also src): Define a custom webaudio node to use as a sound source.
+- **spectrum**: Renders a spectrum analyzer for the incoming audio signal. – e.g. `n("<0 4 <2 3> 1>*3") .off(1/8, add(n(5))) .off(1/5, add(n(7))) .scale("d3:minor:pentatonic") .s('sine') .dec(.`
+- **speed**: Changes the speed of sample playback, i.e. – e.g. `s("bd*6").speed("1 2 4 1 -2 -4")`
+- **spiral**: Displays a spiral visual. – e.g. `note("c2 a2 eb2") .euclid(5,8) .s('sawtooth') .lpenv(4).lpf(300) ._spiral({ steady: .96 })`
+- **splice**: Works the same as slice, but changes the playback speed of each slice to match the duration of its step. – e.g. `samples('github:tidalcycles/dirt-samples') s("breaks165") .splice(8,  "0 1 [2 3 0]@2 3 0@2 7")`
+- **splitQueries**: Returns a new pattern, with queries split at cycle boundaries.
+- **spread**: Set the stereo pan spread for supported oscillators – e.g. `note("d f a a# a d3").fast(2).s("supersaw").spread("<0 .3 1>")`
+- **square**: A square signal between 0 and 1. – e.g. `n(square.segment(4).range(0,7)).scale("C:minor")`
+- **square2**: A square signal between -1 and 1 (like square, but bipolar).
+- **squeeze**: Pick from the list of values (or patterns of values) via the index using the given pattern of integers. – e.g. `note(squeeze("<0@2 [1!2] 2>", ["g a", "f g f g" , "g a c d"]))`
+- **squiz**: Made by Calum Gunn. – e.g. `squiz("2 4/2 6 [8 16]").s("bd").osc()`
+- **stack** (also polyrhythm, pr): The given items are played at the same time at the same length. – e.g. `stack("g3", "b3", ["e4", "d4"]).note() // "g3,b3,[e4 d4]".note()`
+- **stepalt**: Experimental Concatenates patterns stepwise, according to an inferred 'steps per cycle'. – e.g. `stepalt(["bd cp", "mt"], "bd").sound() // The same as "bd cp bd mt bd".sound()`
+- **stepcat** (also timeCat, timecat): 'Concatenates' patterns like fastcat, but proportional to a number of steps per cycle. – e.g. `stepcat([3,"e3"],[1, "g3"]).note() // the same as "e3@3 g3".note()`
+- **still**: Freezes the current frame of a video or the camera while 1. – e.g. `$: cam().still("<0 1>")`
+- **stretch**: Changes the speed of sample playback, i.e. – e.g. `s("gm_flute").stretch("1 2 .5")`
+- **striate**: Cuts each sample into the given number of parts, triggering progressive portions of each sample at each loop. – e.g. `s("numbers:0 numbers:1 numbers:2").striate(6).slow(3)`
+- **stripContext**: Returns a new pattern with the context field of every hap set to an empty object.
+- **struct**: Applies the given structure to the pattern: – e.g. `note("c,eb,g") .struct("x ~ x ~ ~ x ~ x ~ ~ ~ x ~ x ~ ~") .slow(2)`
+- **stut**: Deprecated. – e.g. `s("bd sd").stut(3, .8, 1/6)`
+- **sub**: Like add, but the given numbers are subtracted. – e.g. `n("0 2 4".sub("<0 1 2 3>")).scale("C4:minor") // See add for more information.`
+- **superimpose**: Superimposes the result of the given function(s) on top of the original pattern: – e.g. `"<0 2 4 6 ~ 4 ~ 2 0!3 ~!5>*8" .superimpose(x=>x.add(2)) .scale('C minor').note()`
+- **sustain** (also sus): Amplitude envelope sustain level: The level which is reached after attack / decay, being sustained until the offset. – e.g. `note("c3 e3 f3 g3").decay(.2).sustain("<0 .1 .4 .6 1>")`
+- **swing**: Shorthand for swingBy with 1/3: – e.g. `s("hh*8").swing(4) // s("hh*8").swingBy(1/3, 4)`
+- **swingBy**: The function swingBy x n breaks each cycle into n slices, and then delays events in the second half of each slice by the amount x, which is relative to the size – e.g. `s("hh*8").swingBy(1/3, 4)`
+- **sysex**: MIDI sysex: Sends a MIDI sysex message. – e.g. `note("c4").sysex(["0x77", "0x01:0x02:0x03:0x04"]).midichan(1).midi()`
+- **sysexdata**: MIDI sysex data: Sends a MIDI sysex message. – e.g. `note("c4").sysexid("0x77").sysexdata("0x01:0x02:0x03:0x04").midichan(1).midi()`
+- **sysexid**: MIDI sysex ID: Sends a MIDI sysex identifier message. – e.g. `note("c4").sysexid("0x77").sysexdata("0x01:0x02:0x03:0x04").midichan(1).midi()`
+- **tables**: Loads a collection of wavetables to use with s
+- **tag**: Tags each Hap with an identifier. – e.g. `s("saw!16").note("F1") .lpf(tri.range(40, 80).slow(4)).lpenv(5).lpq(4).lpd(0.15) .when(rand.late(0.1).gte(0.5)`
+- **take**: Experimental Takes the given number of steps from a pattern (dropping the rest). – e.g. `"bd cp ht mt".take("2").sound() // The same as "bd cp".sound()`
+- **time**: A signal representing the cycle time.
+- **timecat**: Aliases for stepcat
+- **tint**: Colour wash over a media layer; text colour for captions. – e.g. `$: img("fog").tint("#ff3fd0")`
+- **toBipolar**: Assumes a numerical pattern, containing unipolar values in the range 0 ..
+- **tour**: Experimental Inserts a pattern into a list of patterns. – e.g. `"[c g]".tour("e f", "e f g", "g f e c").note() .sound("folkharp") .pace(8)`
+- **transient**: Transient shaper. – e.g. `s("bd").transient("<-1 -0.5 0 0.5 1>")`
+- **transpose** (also trans): Change the pitch of each value by the given amount. – e.g. `"c2 c3".fast(2).transpose("<0 -2 5 3>".slow(2)).note()`
+- **tremolo** (also trem): Modulate the amplitude of a sound with a continuous waveform – e.g. `note("d d d# d".fast(4)).s("supersaw").tremolo("<3 2 100> ").tremoloskew("<.5>")`
+- **tremolodepth** (also tremdepth): Depth of amplitude modulation – e.g. `note("a1 a1 a#1 a1".fast(4)).s("pulse").tremsync(4).tremolodepth("<1 2 .7>")`
+- **tremolophase** (also tremphase): Alter the phase of the modulation waveform – e.g. `note("{f a c e}%16").s("sawtooth").tremsync(4).tremolophase("<0 .25 .66>")`
+- **tremoloshape** (also tremshape): Shape of amplitude modulation – e.g. `note("{f g c d}%16").tremsync(4).tremoloshape("<sine tri square>").s("sawtooth")`
+- **tremoloskew** (also tremskew): Alter the shape of the modulation waveform – e.g. `note("{f a c e}%16").s("sawtooth").tremsync(4).tremoloskew("<.5 0 1>")`
+- **tremolosync** (also tremsync): Modulate the amplitude of a sound with a continuous waveform – e.g. `note("d d d# d".fast(4)).s("supersaw").tremolosync("4").tremoloskew("<1 .5 0>")`
+- **tri**: A triangle signal between 0 and 1. – e.g. `n(tri.segment(8).range(0,7)).scale("C:minor")`
+- **tri2**: A triangle signal between -1 and 1 (like tri, but bipolar).
+- **undegrade**: Inverse of degrade: Randomly removes 50% of events from the pattern. – e.g. `s("hh*8").undegrade()`
+- **undegradeBy**: Inverse of degradeBy: Randomly removes events from the pattern by a given amount. – e.g. `s("hh*8").undegradeBy(0.2)`
+- **unison**: Set number of stacked voices for supported oscillators – e.g. `note("d f a a# a d3").fast(2).s("supersaw").unison("<1 2 7>")`
+- **unit**: Used in conjunction with speed, accepts values of "r" (rate, default behavior), "c" (cycles), or "s" (seconds). – e.g. `speed("1 2 .5 3").s("bd").unit("c").osc()`
+- **useRNG**: Sets which random number generator to use. – e.g. `useRNG('legacy') // Repeats every 300 cycles $: n(irand(50)).seg(16).scale("C:minor").ribbon(88, 32) $: n(iran`
+- **velocity** (also vel): Sets the velocity from 0 to 1. – e.g. `s("hh*8") .gain(".4!2 1 .4!2 1 .4 1") .velocity(".4 1")`
+- **vib** (also vibrato, v): Applies a vibrato to the frequency of the oscillator. – e.g. `note("a e") .vib("<.5 1 2 4 8 16>") ._scope()`
+- **vibmod** (also vmod): Sets the vibrato depth in semitones. – e.g. `note("a e").vib(4) .vibmod("<.25 .5 1 2 12>") ._scope()`
+- **vid**: Plays a looping video on the stage while the event is active. – e.g. `$: vid("clip").speed(.5).opacity(.8)`
+- **visual**: Runs a visual plugin on the stage: particles, ribbon, bars, pulse, rings. – e.g. `$: visual("particles").hue(200).amount(.6)`
+- **voicing**: Turns chord symbols into voicings. – e.g. `n("0 1 2 3").chord("<C Am F G>").voicing()`
+- **voicings**: DEPRECATED: still works, but it is recommended you use .voicing instead (without s). – e.g. `stack("<C^7 A7 Dm7 G7>".voicings('lefthand'), "<C3 A2 D3 G2>").note()`
+- **vowel**: Formant filter to make things sound like vowels. – e.g. `note("[c2 <eb2 <g2 g1>>]*2").s('sawtooth') .vowel("<a e i <o u>>")`
+- **warp** (also wavetableWarp): Amount of warp (alteration of the waveform) to apply to the wavetable oscillator – e.g. `s("basique").bank("wt_digital").seg(8).note("F1").warp("0 0.25 0.5 0.75 1") .warpmode("spin")`
+- **warpattack** (also warpatt): Attack time of the wavetable oscillator's warp envelope
+- **warpdc**: DC offset of the LFO for the wavetable oscillator's warp
+- **warpdecay** (also warpdec): Decay time of the wavetable oscillator's warp envelope
+- **warpdepth**: Depth of the LFO for the wavetable oscillator's warp
+- **warpenv**: Amount of envelope applied wavetable oscillator's position envelope
+- **warpmode** (also wavetableWarpMode): Type of warp (alteration of the waveform) to apply to the wavetable oscillator. – e.g. `s("morgana").bank("wt_digital").seg(8).note("F1").warp("0 0.25 0.5 0.75 1") .warpmode("<asym bendp spin logist`
+- **warprate**: Rate of the LFO for the wavetable oscillator's warp
+- **warprelease** (also warprel): Release time of the wavetable oscillator's warp envelope
+- **warpshape**: Shape of the LFO for the wavetable oscillator's warp
+- **warpskew**: Skew of the LFO for the wavetable oscillator's warp
+- **warpsustain** (also warpsus): Sustain time of the wavetable oscillator's warp envelope
+- **warpsync**: cycle synced rate of the LFO for the wavetable warp position
+- **wchoose**: Chooses randomly from the given list of elements by giving a probability to each element – e.g. `note("c2 g2!2 d2 f1").s(wchoose(["sine",10], ["triangle",1], ["bd:6",1]))`
+- **wchooseCycles** (also wrandcat): Picks one of the elements at random each cycle by giving a probability to each element – e.g. `wchooseCycles(["bd",10], ["hh",1], ["sd",1]).s().fast(8)`
+- **when**: Applies the given function whenever the given pattern is in a true state. – e.g. `"c3 eb3 g3".when("<0 1>/2", x=>x.sub("5")).note()`
+- **whenKey**: Do something on a keypress, or array of keypresses Key name reference – e.g. `s("bd(5,8)").whenKey("Control:j", x => x.segment(16).color("red")).whenKey("Control:i", x => x.fast(2).color("`
+- **withContext**: Returns a new pattern with the given function applied to the context field of every hap.
+- **withHap**: As with withHaps, but applies the function to every hap, rather than every list of haps.
+- **withHaps**: Returns a new pattern with the given function applied to the list of haps returned by every query.
+- **withHapSpan**: Similar to withQuerySpan, but the function is applied to the timespans of all haps returned by pattern queries (both part timespans, and where present, whole ti
+- **withHapTime**: As with withHapSpan, but the function is applied to both the begin and end time of the hap timespans.
+- **within**: Use within to apply a function to only a part of a pattern.
+- **withLoc**: Returns a new pattern with the given location information added to the context of every hap.
+- **withQuerySpan**: Returns a new pattern, where the given function is applied to the query timespan before passing it to the original pattern.
+- **withQueryTime**: As with withQuerySpan, but the function is applied to both the begin and end time of the query timespan.
+- **withSeed**: Modify a pattern by applying a function to the randomSeed control if present
+- **withValue** (also fmap): Returns a new pattern, with the function applied to the value of each hap. – e.g. `"0 1 2".withValue(v => v + 10).log()`
+- **wordfall**: Displays a vertical pianoroll with event labels.
+- **worklet**: Creates a worklet effect.
+- **writeOutputs**: Write next web audio block from output buffers
+- **wt** (also wavetablePosition): Position in the wavetable of the wavetable oscillator – e.g. `s("squelch").bank("wt_digital").seg(8).note("F1").wt("0 0.25 0.5 0.75 1")`
+- **wtattack** (also wtatt): Attack time of the wavetable oscillator's position envelope
+- **wtdc**: DC offset of the LFO for the wavetable oscillator's position
+- **wtdecay** (also wtdec): Decay time of the wavetable oscillator's position envelope
+- **wtdepth**: Depth of the LFO for the wavetable oscillator's position
+- **wtenv**: Amount of envelope applied wavetable oscillator's position envelope
+- **wtphaserand** (also wavetablePhaseRand): Amount of randomness of the initial phase of the wavetable oscillator. – e.g. `s("basique").bank("wt_digital").seg(16).wtphaserand("<0 1>")`
+- **wtrate**: Rate of the LFO for the wavetable oscillator's position
+- **wtrelease** (also wtrel): Release time of the wavetable oscillator's position envelope
+- **wtshape**: Shape of the LFO for the wavetable oscillator's position
+- **wtskew**: Skew of the LFO for the wavetable oscillator's position
+- **wtsustain** (also wtsus): Sustain time of the wavetable oscillator's position envelope
+- **wtsync**: cycle synced rate of the LFO for the wavetable oscillator's position
+- **xfade**: Cross-fades between left and right from 0 to 1: 0 = (full left, no right) .5 = (both equal) 1 = (no left, full right) – e.g. `xfade(s("bd*2"), "<0 .25 .5 .75 1>", s("hh*8"))`
+- **zip**: Experimental 'zips' together the steps of the provided patterns. – e.g. `zip("e f", "e f g", "g [f e] a f4 c").note() .sound("folkharp") .pace(8)`
+- **zoom**: Plays a portion of a pattern, specified by the beginning and end of a time span. – e.g. `s("bd*2 hh*3 [sd bd]*2 perc").zoom(0.25, 0.75) // s("hh*3 [sd bd]*2") // equivalent`

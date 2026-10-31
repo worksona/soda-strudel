@@ -5,10 +5,14 @@
    "id": "soda:demo",
    "licence": "CC0-1.0",
    "items": {
+    "blocks": "image",
     "dusk": "image",
     "fog": "image",
     "neon": "image",
-    "rain": "image"
+    "night": "image",
+    "rain": "image",
+    "sea": "image",
+    "sun": "image"
    }
   }
  ]

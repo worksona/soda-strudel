@@ -1,4 +1,4 @@
-# soda-strudel architecture (0.0.1)
+# soda.strudel architecture
 
 ## Decisions
 
@@ -6,7 +6,7 @@
 |---|---|
 | Backend | **None.** Static site (Netlify). No accounts, no database, no functions. |
 | Strudel | Built on Strudel's published npm packages (`@strudel/*` 1.2.6 / 1.3.0), not a fork of the website. |
-| User data | The visitor's browser: IndexedDB for sounds, takes, media and renders; localStorage for the autosaved sketch. |
+| User data | The visitor's browser: IndexedDB for sounds, takes, media, saved sketches and exports; localStorage for the autosaved sketch and settings. |
 | Sharing | `#z=` links (deflate-raw + base64url JSON in the URL fragment), `.soda` zip files for pieces using personal sounds/media, exported video. |
 | Packs | Owner-managed static folders under `public/samples` and `public/media`. |
 | Rendering / export | On the user's machine: live capture (MediaRecorder) and offline WAV (Strudel's `renderPatternAudio`). |
@@ -37,9 +37,17 @@ src/share/
   sketch.js           #z= link codec (shared with the skill)
   sodafile.js         .soda zip build / import
 src/export/           record.js (video), audio.js (WAV), wav.js (encoder)
-src/storage/db.js     IndexedDB stores: sounds, media, renders
-src/ui/               library drawer, share sheet, Claude copy, DOM helpers
-scripts/              pack manifests, demo assets, default-bank snapshot, skill bundler
+src/storage/db.js     IndexedDB stores: sounds, media, sketches, renders
+src/settings.js       per-browser preferences (name, export size)
+src/editor/assist.js  autocomplete + hover docs (Strudel + soda functions, live sound/bank/media names)
+src/examples.js       built-in examples (Sketches › Examples)
+src/media/github.js   GitHub sample libraries: curated list, load/remember/forget
+src/ui/learn.js       page views: About (with the log), Examples, Reference, Editor settings
+src/theme.js          light / dark / system appearance; editor theme follows unless pinned
+src/ui/               pages (sketches, library = sounds + media, settings, learn.js), export + share dialogs,
+                      Claude copy, Lucide outline icons, DOM helpers
+scripts/              pack manifests, demo assets, default-bank snapshot, skill bundler,
+                      extract-strudel-docs (Strudel's jsdoc → public/strudel-docs.json + skill index)
 claude/               Claude Code plugin + strudel-vibe skill
 ```
 
@@ -76,7 +84,8 @@ the same picture. A frame-stepped render mode (WebCodecs) can build on this late
 |---|---|---|
 | `sounds` | name | Blob, source (`upload`/`take`/`import`), type, bytes |
 | `media` | name | Blob, `image`/`video`, mime, bytes |
-| `renders` | auto | exported video blobs + meta |
+| `sketches` | id | title, code, shape, media, thumbnail, created/updated |
+| `renders` | auto | exported video and WAV blobs + meta (listed in Settings › Exports) |
 
 The app calls `navigator.storage.persist()` after the first save. Browser data
 can still be evicted (Safari deletes site data after 7 days without a visit

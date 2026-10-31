@@ -57,6 +57,18 @@ $: visual("particles").hue(210)`);
     expect(res.errors.join()).toMatch(/single quotes/);
   });
 
+  it('resolves github: library URLs like Strudel', async () => {
+    const { libraryUrl } = await import('../src/soda/validate.js');
+    expect(libraryUrl('github:yaxu/clean-breaks')).toBe('https://raw.githubusercontent.com/yaxu/clean-breaks/main/strudel.json');
+    expect(libraryUrl('github:user/repo/dev/kits')).toBe('https://raw.githubusercontent.com/user/repo/dev/kits/strudel.json');
+    expect(libraryUrl('soda:soda')).toBeNull();
+  });
+
+  it('counts sounds from inline samples({...}) maps as known', async () => {
+    const res = await v(`samples({ zing: ['https://e.com/z.wav'] })\n$: s("zing*2")`);
+    expect(res.warnings.join()).not.toMatch(/unknown sounds/);
+  });
+
   it('accepts media declared in the sketch', async () => {
     const res = await v('img("cover")', { media: { cover: 'https://e.com/c.png' } });
     expect(res.warnings.join()).not.toMatch(/unknown media/);

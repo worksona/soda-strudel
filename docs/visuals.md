@@ -1,6 +1,6 @@
 # Writing a visual plugin
 
-Visuals are the easiest place to extend soda-strudel. A plugin is one file,
+Visuals are the easiest place to extend soda.strudel. A plugin is one file,
 one object, and it immediately works in code, in shared links, in video export
 and in the Claude skill.
 

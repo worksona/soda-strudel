@@ -11,6 +11,8 @@ import { sodaScope } from '../soda/patterns.js';
 import { loadMediaPack } from '../soda/mediaRegistry.js';
 import { cameraVideo } from '../media/camera.js';
 import { registerLibrary } from '../media/library.js';
+import { loadSavedLibraries } from '../media/github.js';
+import { loadDocs } from '../editor/assist.js';
 
 const DOUGH = 'https://raw.githubusercontent.com/felixroos/dough-samples/main';
 const DEFAULT_BANKS = [
@@ -66,10 +68,13 @@ export async function prebake() {
     registerSynthSounds(),
     registerZZFXSounds(),
     import('@strudel/soundfonts').then(({ registerSoundfonts }) => registerSoundfonts()).catch(warn('soundfonts')),
-    ...DEFAULT_BANKS.map((url) => samples(url).catch(warn(url))),
+    // tag drum kits like strudel.cc does, so the Sounds page can group them
+    ...DEFAULT_BANKS.map((url) => samples(url, undefined, /drum-machines|uzu-drumkit|mridangam/.test(url) ? { tag: 'drum-machines' } : {}).catch(warn(url))),
     ...catalogue.packs.map((p) => sodaSamples(p.id).catch(warn(p.id))),
     ...mediaCatalogue.packs.map((p) => loadMediaPack(p.id).catch(warn(p.id))),
     registerLibrary().catch(warn('your library')),
+    loadSavedLibraries().catch(warn('GitHub libraries')),
+    loadDocs().catch(warn('reference docs')),
   ]);
   aliasBank(ALIASES).catch(warn('bank aliases'));
 }

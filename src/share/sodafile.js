@@ -26,8 +26,8 @@ export async function buildSodaFile(sketch) {
   files['sketch.json'] = strToU8(JSON.stringify(sketch, null, 2));
   files['library.json'] = strToU8(JSON.stringify(manifest, null, 2));
   files['README.txt'] = strToU8(
-    'A soda-strudel piece. Open soda-strudel and drop this file on it.\n' +
-      'soda-strudel is free software (AGPL-3.0) built on Strudel (https://strudel.cc).\n',
+    'A soda.strudel piece. Open soda.strudel and drop this file on it.\n' +
+      'soda.strudel is free software (AGPL-3.0) built on Strudel (https://strudel.cc).\n',
   );
   return { blob: new Blob([zipSync(files, { level: 6 })], { type: 'application/zip' }), manifest };
 }

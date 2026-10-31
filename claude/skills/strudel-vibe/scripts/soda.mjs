@@ -25002,12 +25002,37 @@ var { repl, evalScope, silence } = dist_exports;
 var chain = () => new Proxy(function() {
 }, { get: () => chain(), apply: () => chain() });
 var hydraNames = ["osc", "noise", "voronoi", "gradient", "solid", "src", "render", "shape", "s0", "s1", "s2", "s3", "o0", "o1", "o2", "o3", "a"];
+var sampleCalls = [];
+function libraryUrl(arg) {
+  if (/^https?:\/\//.test(arg)) return arg.endsWith(".json") ? arg : `${arg.replace(/\/$/, "")}/strudel.json`;
+  if (!arg.startsWith("github:")) return null;
+  const [user, repo = "samples", branch = "main", ...rest2] = arg.slice(7).replace(/\/$/, "").split("/");
+  return `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${rest2.length ? `${rest2.join("/")}/` : ""}strudel.json`;
+}
+async function namesFromSampleCalls(calls) {
+  const names10 = /* @__PURE__ */ new Set();
+  const failed = [];
+  await Promise.all(
+    calls.map(async (arg) => {
+      if (arg && typeof arg === "object") return Object.keys(arg).forEach((k4) => !k4.startsWith("_") && names10.add(k4.toLowerCase()));
+      const url = typeof arg === "string" ? libraryUrl(arg) : null;
+      if (!url) return;
+      try {
+        const res = await fetch(url, { signal: AbortSignal.timeout(6e3) });
+        if (!res.ok) throw new Error(String(res.status));
+        Object.keys(await res.json()).forEach((k4) => !k4.startsWith("_") && names10.add(k4.toLowerCase()));
+      } catch (e) {
+        failed.push(`${arg} (${e.message})`);
+      }
+    })
+  );
+  return { names: names10, failed };
+}
 var scopeReady;
 async function ensureScope() {
   scopeReady ??= (async () => {
     await evalScope(dist_exports, dist_exports2, dist_exports6, sodaScope, {
-      samples: async () => {
-      },
+      samples: async (arg) => void sampleCalls.push(arg),
       aliasBank: async () => {
       },
       initHydra: async () => {
@@ -25054,9 +25079,11 @@ async function validateSketch(sketch, { sounds: sounds2, media: media3, cycles =
   const errors = [];
   const warnings = [];
   let evalError;
+  sampleCalls = [];
   const r = repl({ getTime: () => 0, defaultOutput: async () => {
   }, transpiler: F3, onEvalError: (e) => evalError = e });
   const pattern = await r.evaluate(sketch.code, false);
+  const libraries = await namesFromSampleCalls(sampleCalls);
   if (evalError || !pattern) {
     errors.push(`evaluation failed: ${evalError?.message ?? "no pattern returned"}`);
     return { ok: false, errors, warnings, stats: {} };
@@ -25081,7 +25108,7 @@ async function validateSketch(sketch, { sounds: sounds2, media: media3, cycles =
     else {
       audible++;
       const name3 = soundName(v2);
-      if (sIdx && name3 && !sIdx.has(name3)) unknown.sounds.add(name3);
+      if (sIdx && name3 && !sIdx.has(name3) && !libraries.names.has(name3.toLowerCase())) unknown.sounds.add(name3);
     }
     for (const k4 of ["img", "vid"]) if (v2[k4] !== void 0 && mIdx && !mIdx.has(String(v2[k4])) && !/^(https?:|local:)/.test(v2[k4])) unknown.media.add(String(v2[k4]));
     if (v2.visual !== void 0 && !VISUALS[v2.visual]) unknown.visuals.add(String(v2.visual));
@@ -25091,6 +25118,7 @@ async function validateSketch(sketch, { sounds: sounds2, media: media3, cycles =
   }
   if (badCaptions)
     errors.push(`captions must be plain strings: use single quotes, e.g. captions(['2:14 am', 'exit 9']) \u2013 double quotes are parsed as mini-notation`);
+  if (libraries.failed.length) warnings.push(`could not load sample libraries: ${libraries.failed.join(", ")}`);
   if (!audible) warnings.push("no audible events \u2013 the sketch is visuals only");
   if (unknown.sounds.size) warnings.push(`unknown sounds (will be silent unless loaded in the code or the user's library): ${[...unknown.sounds].join(", ")}`);
   if (unknown.media.size) warnings.push(`unknown media names: ${[...unknown.media].join(", ")}`);

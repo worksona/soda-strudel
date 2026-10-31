@@ -1,16 +1,28 @@
-export const DEFAULT_CODE = `// soda-strudel · ctrl+enter plays/updates · ctrl+. stops
-// music, media, captions and visuals are all patterns
-setcps(.5)
+export const DEFAULT_CODE = `// First light · ctrl+enter plays · ctrl+. stops · ctrl+s saves
+// music, pictures, words and visuals are all patterns – change a number and press ctrl+enter
+setcpm(92/4)
 
-$: s("kick*2 [~ snare] [~ kick] snare").bank("soda").gain(.9)
-$: s("hat*8").bank("soda").gain(perlin.range(.15, .45))
-$: note("<c2 c2 eb2 bb1>").s("sawtooth")
-  .lpf(sine.range(300, 1600).slow(8)).decay(.25).sustain(0).gain(.6)
-$: n("<0 2 4 [6 4]>*2").scale("C4:minor").s("triangle").delay(.4).room(.5).gain(.35)
-$: s("pad").bank("soda").slow(2).room(.6).gain(.4)
+// music box melody, drifting gently left and right in a big room
+$: n("<[0 4 7 9] [7 4 2 4] [0 2 4 7] [9 7 4 2]>").scale("D5:major pentatonic")
+  .s("gm_music_box").gain(.35).room(.7).roomsize(4)
+  .delay(.25).delayfeedback(.35).pan(sine.range(.3, .7).slow(8))
 
-$: img("<rain neon dusk fog>").slow(4).fade(.3)
-$: visual("particles").hue(200)
-$: visual("ribbon").opacity(.5)
-$: captions(['soda-strudel', '', 'sound · image · story', '']).slow(2)
+// a soft arpeggio, doubled left and right a moment apart for width
+$: n("0 1 2 3 2 1").chord("<D Bm G A>").voicing().s("pluck").bank("soda")
+  .gain(.28).room(.5).hpf(200).lpf(4000)
+  .layer(x => x.pan(.2), x => x.pan(.8).late(1/48))
+
+// strings far in the back
+$: chord("<D Bm G A>").voicing().s("gm_string_ensemble_1").gain(.12)
+  .room(1).roomsize(6).lpf(2500).layer(x => x.pan(0), x => x.pan(1).late(.1))
+
+// a light pulse underneath
+$: s("kick:1 ~ ~ ~").bank("soda").gain(.45).lpf(1500)
+$: s("~ shaker ~ shaker").bank("soda").gain(.2).pan(.65).room(.3)
+$: note("<d2 b1 g1 a1>").s("sub").bank("soda").gain(.4)
+
+// picture and words
+$: img("<sun sun dusk sun>").slow(4).fade(.4).pos(.6)
+$: visual("particles").hue(45).amount(.35)
+$: captions(['first light', '', 'the kettle, the window', '', 'and the day begins', '', '', '']).slow(2)
 `;

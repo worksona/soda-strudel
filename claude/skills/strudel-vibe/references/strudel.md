@@ -91,7 +91,11 @@ osc(H("<10 30 60>"), .1).out()
 
 ## Extra sounds
 
-`samples('github:user/repo')` loads any repo with a `strudel.json`.
+`samples('github:user/repo')` loads any repo with a `strudel.json` (branch
+`main` unless given: `github:user/repo/branch`). Verified libraries:
+`tidalcycles/dirt-samples`, `yaxu/clean-breaks`, `eddyflux/crate`,
+`mot4i/garden`, `bubobubobubobubo/dough-fox`, `yaxu/spicule`, `yaxu/mrid`,
+`tidalcycles/uzu-drumkit`, `tidalcycles/uzu-wavetables`, `switchangel/pad`.
 `samples('soda:<pack>')` loads a soda-hosted pack. Use only when needed; the
 default banks and soda packs load automatically.
 

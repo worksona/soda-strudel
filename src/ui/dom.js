@@ -26,7 +26,8 @@ export function toast(message, { error = false, ms = 3200 } = {}) {
   toastTimer = setTimeout(() => el.classList.remove('show'), ms);
 }
 
-export const formatBytes = (n) => (n < 1e6 ? `${Math.round(n / 1e3)} KB` : `${(n / 1e6).toFixed(1)} MB`);
+export const formatBytes = (n) =>
+  n < 1e6 ? `${Math.round(n / 1e3)} KB` : n < 1e9 ? `${(n / 1e6).toFixed(1)} MB` : `${(n / 1e9).toFixed(1)} GB`;
 
 export function lsGet(key, fallback) {
   try {
