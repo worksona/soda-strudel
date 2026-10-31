@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- **Welcome on first visit**: “Make music you can see.” – one tap plays
+  First light, then a tip shows how to live-code (change a number, tap
+  Update). Also Browse examples, Vibe with Claude, Just let me code. About ›
+  “Show the welcome again”.
+- **Light theme fixed**: the editor is a solid light page across the full
+  width (no grey veil fading to black), no text glow, the line-number gutter
+  follows the page.
+
 - **Vibe** page and toolbar button next to Claude: what the strudel-vibe skill
   does, download / install (claude.ai, Claude Code, by hand), prompts to copy,
   how it works, links.

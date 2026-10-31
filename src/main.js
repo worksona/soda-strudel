@@ -30,6 +30,7 @@ import { copyForClaude } from './ui/claude.js';
 import { hydrateIcons, icon, setIcon } from './ui/icons.js';
 import { $, h, lsGet, lsSet, toast } from './ui/dom.js';
 import { DEFAULT_CODE } from './default-code.js';
+import { EXAMPLES } from './examples.js';
 
 applyAppearance();
 hydrateIcons();
@@ -474,7 +475,7 @@ async function renderPage({ focus } = {}) {
     export: () => exportPage.render(),
     share: () => sharePage.render(),
     vibe: () => panelBody.replaceChildren(vibeView(app)),
-    about: () => panelBody.replaceChildren(aboutView(renderPage)),
+    about: () => panelBody.replaceChildren(aboutView(renderPage, app)),
     settings: () => settingsPage.render(),
     more: () => panelBody.replaceChildren(morePage()),
   };
@@ -565,6 +566,50 @@ window.addEventListener('drop', (e) => {
   document.body.classList.remove('dragging');
   openFiles([...(e.dataTransfer?.files ?? [])]);
 });
+
+// ---------- first visit: a welcome that gets you playing in one tap ----------
+function showWelcome() {
+  const el = $('#welcome');
+  const done = (then) => {
+    lsSet('soda.welcomed', true);
+    el.hidden = true;
+    then?.();
+  };
+  const playFirstLight = async () => {
+    done();
+    const first = EXAMPLES.find((ex) => ex.title === 'First light');
+    if (first && mirror.code !== first.code) loadSketch({ title: first.title, code: first.code, aspect: first.aspect });
+    setMode('code');
+    try {
+      await play();
+      setTimeout(() => toast('That’s live coding: change any number in the code, then tap Update.', { ms: 9000 }), 2500);
+    } catch (e) {
+      toast(e.message, { error: true });
+    }
+  };
+  el.replaceChildren(
+    h(
+      'div.welcome-card',
+      {},
+      h('p.welcome-brand', {}, 'soda.strudel'),
+      h('h1', { id: 'welcome-title' }, 'Make music you can see.'),
+      h('p.welcome-lead', {}, 'Write a few lines – get sound, pictures and words that move together. It all runs in your browser.'),
+      h('button.primary.huge', { onclick: playFirstLight }, icon('play', 22), ' Play “First light”'),
+      h(
+        'div.welcome-more',
+        {},
+        h('button', { onclick: () => done(() => openPage('examples', true)) }, icon('examples', 16), ' Browse examples'),
+        h('button', { onclick: () => done(() => openPage('vibe', true)) }, icon('vibe', 16), ' Vibe with Claude'),
+        h('button', { onclick: () => done(() => mirror.editor.focus()) }, icon('code', 16), ' Just let me code'),
+      ),
+      h('p.welcome-tip', {}, 'Built on Strudel · sound needs a tap to start · nothing leaves your device'),
+    ),
+  );
+  el.hidden = false;
+  el.querySelector('button.primary')?.focus();
+}
+app.showWelcome = showWelcome;
+if (!fromLink && !lsGet('soda.welcomed', false)) showWelcome();
 
 // ---------- viewer mode for shared links ----------
 if (fromLink) {

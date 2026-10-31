@@ -28,7 +28,7 @@ const table = (rows, code = false) =>
 // ---------- About ----------
 const VERSION = '0.0.1';
 let logOpen = false;
-export function aboutView(rerender) {
+export function aboutView(rerender, app) {
   return h(
     'div.about',
     {},
@@ -94,7 +94,7 @@ $: captions(['line one', '', 'line two'])`),
       h('summary', {}, `Log (${logs.length})`),
       consoleView(rerender),
     ),
-    h('p.muted.version', {}, `soda.strudel ${VERSION}`),
+    h('p.muted.version', {}, `soda.strudel ${VERSION} · `, h('button.link', { onclick: () => app?.showWelcome?.() }, 'Show the welcome again')),
   );
 }
 
