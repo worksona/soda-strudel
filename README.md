@@ -159,12 +159,17 @@ refreshes the offline name list the skill validates against.
 
 ## Deploy (Netlify)
 
-`netlify.toml` is ready. Build and deploy from your machine:
+Live at **https://soda-strudel.netlify.app** (Netlify project `soda-strudel`,
+team worksona). Build locally and deploy from your machine – Netlify does not
+build, so no build minutes:
 
 ```bash
 pnpm test && pnpm build
-netlify deploy --prod --dir dist
+netlify deploy --dir dist          # draft – check it
+netlify deploy --dir dist --prod   # production
 ```
+
+Each deploy is recorded in `deploy-log/`.
 
 No functions, no environment variables. Keep COOP/COEP headers off – they would
 block samples from GitHub, Freesound and Shabda.
