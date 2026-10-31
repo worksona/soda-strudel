@@ -2,6 +2,38 @@
 
 ## Unreleased
 
+- **The stage always fills the screen.** A sketch's shape (9:16 · 1:1 · 16:9)
+  is now the *export frame*, not a letterbox: on a phone the piece is portrait,
+  on a laptop wide, and video export cuts it to the frame. A sketch without a
+  shape follows the device (portrait → 9:16, else 16:9) – the Export page shows
+  that as “Auto”. **View › Show export frame** outlines the frame over the
+  stage and dims what the cut would lose (remembered). Example cards read
+  “made for 9:16”; Settings says “Export shape of this sketch”.
+
+- **The stage is the default view.** soda.strudel opens with the piece filling
+  the window; View › Code over the stage brings the editor back, and the view
+  you pick in that menu is remembered (`soda.view`). Insert, Remix, “Just let
+  me code” and “Play First light” show the code as before.
+
+- **Strudel's animations as visuals, full stage.** `visual("punchcard")`,
+  `pianoroll`, `wordfall`, `spiral`, `pitchwheel`, `scope` and `spectrum` show
+  every audible layer across the whole stage, with `hue`, `amount`, `opacity`,
+  `blend` and `fade` like the other visuals, layered with media and captions and
+  in exports. Strudel's chained `.punchcard()` / `.spiral()` still work for one
+  layer. The drawer's two-cycle window stays open while the code names a
+  timeline visual (src/visuals/strudel.js, `TIMELINE_VISUALS`).
+
+- **Audio effects on pictures.** Strudel's effect controls now mean something
+  on `img`, `vid` and `cam` layers: `.lpf()` blurs (low cutoff = soft),
+  `.hpf()` turns the picture into outlines, `.room()`/`.roomsize()` glow,
+  `.delay()`/`.delayfeedback()`/`.delaytime()` echo previous frames, `.crush()`
+  posterizes, `.coarse()` pixelates, `.distort()` adds contrast, `.pan()`
+  slides the crop, `.gain()` sets brightness. One chain can shape a sound and
+  its picture together (`const dub = x => x.lpf(…).room(.7)`). No new names:
+  autocomplete, the validator and the skill already know them; hover docs and
+  the Reference say what each does on a picture. New example “Dub picture”
+  (Studies). `src/stage/pictureFx.js` is pure, so the mapping is tested.
+
 - **Dark is the default theme.** Only a choice made in Settings › Appearance is
   saved (new key); the earlier automatically stored “system” is cleared, so
   existing visitors also get Dark unless they pick otherwise. The page starts

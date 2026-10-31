@@ -58,6 +58,10 @@ s("white").decay(.05).sustain(0)           // noise: white pink brown crackle
 - Envelope: `.attack(.01)` `.decay(.2)` `.sustain(0)` `.release(.3)` `.clip(.5)`
 - Dirt: `.distort(2)` `.shape(.4)` `.crush(6)` `.coarse(4)`
 - Samples: `.speed("<1 -1 2>")` `.begin(.25)` `.end(.5)` `.loopAt(2)` `.chop(8)`
+- On a picture (`img`/`vid`/`cam`) the same controls shape the image: `lpf`
+  blur, `hpf` outlines, `room` glow, `delay` echo, `crush` posterize, `coarse`
+  pixelate, `distort` contrast, `pan` crop position, `gain` brightness – so one
+  chain can be applied to a sound and its picture (multimedia.md).
   `.slice(8, "0 3 2 7")` `.splice(8, "<0 4>")` `.striate(16)` `.cut(1)`
 - Pitch: `.add(note(12))` `.transpose(7)` `.arp("up")`
 
@@ -75,9 +79,12 @@ Random picks: `irand(8)`, `"<a b c>".pick(...)`, `choose("a","b")`.
 
 ## Strudel's own visuals
 
-`.pianoroll()` `.punchcard()` `.spiral()` `.pitchwheel()` `.scope()` draw on
-the soda stage (above media and visuals). Prefix `_` (`._pianoroll()`) to draw
-inline in the editor instead.
+Use them as soda visuals – full stage, every audible layer, with hue / amount /
+opacity: `visual("punchcard")`, `visual("pianoroll")`, `visual("wordfall")`,
+`visual("spiral")`, `visual("pitchwheel")`, `visual("scope")`,
+`visual("spectrum")` (multimedia.md). Chaining Strudel's own `.punchcard()`,
+`.spiral()`, `.pitchwheel()` on one pattern still paints that layer alone on the
+stage; prefix `_` (`._pianoroll()`) to draw inline in the editor instead.
 
 Hydra (video synth) runs under the stage:
 

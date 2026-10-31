@@ -24938,7 +24938,15 @@ var VISUALS = {
   ribbon: { description: "Flowing waveform ribbon from the master output.", params: ["hue", "amount", "opacity"] },
   bars: { description: "Spectrum bars from the master output.", params: ["hue", "amount", "opacity"] },
   pulse: { description: "Full-frame colour flash on onsets \u2013 a beat strobe that stays tasteful.", params: ["hue", "amount", "opacity"] },
-  rings: { description: "Concentric rings expanding from the centre on each onset, radius by pitch.", params: ["hue", "amount", "opacity"] }
+  rings: { description: "Concentric rings expanding from the centre on each onset, radius by pitch.", params: ["hue", "amount", "opacity"] },
+  // Strudel's own animations (src/visuals/strudel.js), showing every audible layer across the full stage
+  punchcard: { description: "Strudel's punchcard: every audible layer as scrolling blocks, one row per sound or note, playhead in the middle.", params: ["hue", "opacity"] },
+  pianoroll: { description: "Strudel's pianoroll: notes on a pitch axis scrolling past the playhead; amount below .5 turns it vertical (phones).", params: ["hue", "amount", "opacity"] },
+  wordfall: { description: "Strudel's wordfall: event names fall down the stage in time.", params: ["hue", "opacity"] },
+  spiral: { description: "Strudel's spiral: the cycle as a spiral, one turn per cycle, lit as it plays; amount sets the size.", params: ["hue", "amount", "opacity"] },
+  pitchwheel: { description: "Strudel's pitchwheel: sounding notes as points on a circle of pitch; amount sets line weight.", params: ["amount", "opacity"] },
+  scope: { description: "Oscilloscope of the master output across the full width; amount sets the height.", params: ["hue", "amount", "opacity"] },
+  spectrum: { description: "Scrolling spectrogram of the master output, pitch bottom to top; amount sets speed.", params: ["hue", "amount", "opacity"] }
 };
 var FX = ["none", "grayscale", "invert", "blur", "posterize", "pixelate", "edges", "sepia", "contrast", "hue"];
 var BLENDS = ["normal", "screen", "multiply", "overlay", "lighter", "difference", "soft-light"];

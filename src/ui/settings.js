@@ -50,7 +50,7 @@ export function createSettings({ root, app }) {
       ),
 
       h('h4', {}, 'Screen and export'),
-      h('div.field', {}, h('span', {}, 'Shape of this sketch'), shapePicker(app.getSketch().aspect, (a) => (app.setAspect(a), render()))),
+      h('div.field', {}, h('span', {}, 'Export shape of this sketch'), shapePicker(app.getSketch().aspect, (a) => (app.setAspect(a), render()), app.stage.frame)),
       h('div.field', {}, h('span', {}, 'Export size (short side)'), sizePicker(s.exportSize, (px) => (updateSettings({ exportSize: px }), render()))),
 
       h('h4', {}, 'Editor'),

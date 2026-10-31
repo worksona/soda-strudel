@@ -7,6 +7,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { SODA_DOCS } from '../src/soda/docs.js';
+import { PICTURE_FX } from '../src/stage/pictureFx.js';
 
 const require = createRequire(import.meta.url);
 const bundle = await readFile(join(dirname(require.resolve('@strudel/codemirror/package.json')), 'dist/index.mjs'), 'utf8');
@@ -40,6 +41,9 @@ const strudel = raw
     tags: doc.tags?.map((t) => t.originalTitle ?? t.title).filter(Boolean),
   }))
   .filter((doc) => !seen.has(doc.name) && seen.add(doc.name));
+
+// audio effects that also mean something on a picture (img / vid / cam)
+for (const doc of strudel) if (PICTURE_FX[doc.name]) doc.description += `<p>On a picture (img, vid, cam): ${PICTURE_FX[doc.name]}.</p>`;
 
 const docs = [...strudel, ...SODA_DOCS].sort((a, b) => a.name.localeCompare(b.name));
 await writeFile(new URL('../public/strudel-docs.json', import.meta.url), JSON.stringify(docs));

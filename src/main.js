@@ -4,7 +4,7 @@ import { transpiler } from '@strudel/transpiler';
 import { getAudioContext, initAudio, webaudioOutput } from '@strudel/webaudio';
 import { prebake } from './strudel/setup.js';
 import { Stage } from './stage/stage.js';
-import { isMediaOnly } from './soda/catalog.js';
+import { isMediaOnly, TIMELINE_VISUALS } from './soda/catalog.js';
 import { decodeSketch } from './share/sketch.js';
 import { readSodaFile } from './share/sodafile.js';
 import { importFiles, registerLibrary, libraryChanged, saveTake } from './media/library.js';
@@ -77,7 +77,10 @@ const mirror = new StrudelMirror({
   onToggle: (started) => setPlaying(started),
   onEvalError: (err) => showError(err),
   // Hydra keeps painting until cleared – drop it when the new code doesn't use it
-  beforeEval: () => dropHydraUnlessUsed(mirror.code),
+  beforeEval: () => {
+    keepDrawWindow = timelineVisual.test(mirror.code ?? '');
+    dropHydraUnlessUsed(mirror.code);
+  },
   afterEval: ({ code }) => {
     showError(null);
     evaluatedCode = code;
@@ -87,6 +90,14 @@ const mirror = new StrudelMirror({
   },
 });
 initEditorSettings(mirror);
+
+// Strudel narrows the drawer to the present moment unless a painter is chained
+// on the pattern. visual("punchcard") & co. are visuals, not chained painters,
+// so keep the window open whenever the code names one of them.
+const timelineVisual = new RegExp(`visual\\s*\\([^)]*\\b(${TIMELINE_VISUALS.join('|')})\\b`);
+let keepDrawWindow = false;
+const setDrawTime = mirror.drawer.setDrawTime.bind(mirror.drawer);
+mirror.drawer.setDrawTime = (drawTime) => setDrawTime(keepDrawWindow ? mirror.drawTime : drawTime);
 
 function dropHydraUnlessUsed(code) {
   if (!/\binitHydra\s*\(/.test(code ?? '')) clearHydra();
@@ -232,9 +243,13 @@ function insert(text) {
 const touchScreen = matchMedia('(hover: none) and (pointer: coarse)').matches;
 
 // ---------- View: Code · Stage · Full screen (a pulldown) ----------
-function setMode(mode) {
+// The stage is the default view – the piece fills the window and the code is
+// one tap away (View › Code over the stage, Insert, Remix). A view chosen in
+// the View menu is remembered; the switches that need the editor are not.
+function setMode(mode, { remember = false } = {}) {
   document.body.dataset.mode = mode;
   setIcon($('#view'), mode === 'stage' ? 'stage' : 'code'); // the View button shows the current view
+  if (remember) lsSet('soda.view', mode);
 }
 // iPhone Safari has no Fullscreen API for anything but video – fall back to an
 // in-page full screen (toolbar hidden, stage edge to edge, an exit button).
@@ -249,17 +264,25 @@ function pseudoFull(on) {
   stage.resize();
 }
 $('#exit-full').addEventListener('click', () => pseudoFull(false));
-setMode('code');
+setMode(lsGet('soda.view', 'stage') === 'code' ? 'code' : 'stage');
+// crop guide: the export frame outlined over the free stage, remembered
+function setGuide(on) {
+  stage.setGuide(on);
+  lsSet('soda.guide', !!on);
+}
+setGuide(lsGet('soda.guide', false));
 createDropdown({
   button: $('#view'),
   menu: $('#view-menu'),
   build: ({ close }) => {
     const mode = document.body.dataset.mode;
     return [
-      menuItem('code', 'Code over the stage', () => setMode('code'), { checked: mode === 'code', close }),
-      menuItem('stage', 'Stage only', () => setMode('stage'), { checked: mode === 'stage', close }),
+      menuItem('code', 'Code over the stage', () => setMode('code', { remember: true }), { checked: mode === 'code', close }),
+      menuItem('stage', 'Stage only', () => setMode('stage', { remember: true }), { checked: mode === 'stage', close }),
       menuSeparator(),
       menuItem('full', 'Full screen', () => (setMode('stage'), fullscreen()), { close }),
+      menuSeparator(),
+      menuItem('crop', `Show export frame (${stage.frame})`, () => setGuide(!stage.guide), { checked: stage.guide, close }),
     ];
   },
 });
@@ -607,7 +630,7 @@ function showWelcome() {
         {},
         h('button', { onclick: () => done(() => openPage('examples', true)) }, icon('examples', 16), ' Browse examples'),
         h('button', { onclick: () => done(() => openPage('vibe', true)) }, icon('vibe', 16), ' Vibe with Claude'),
-        h('button', { onclick: () => done(() => mirror.editor.focus()) }, icon('code', 16), ' Just let me code'),
+        h('button', { onclick: () => done(() => (setMode('code'), mirror.editor.focus())) }, icon('code', 16), ' Just let me code'),
       ),
       h('p.welcome-tip', {}, 'Built on Strudel · sound needs a tap to start · nothing leaves your device'),
     ),

@@ -103,7 +103,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **cosine2**: A cosine signal between -1 and 1 (like cosine, but bipolar).
 - **cpm**: Plays the pattern at the given cycles per minute. – e.g. `s("<bd sd>,hh*2").cpm(90) // = 90 bpm`
 - **crossfade**: Equal Power Crossfade function.
-- **crush**: Bit crusher effect. – e.g. `s("<bd sd>,hh*3").fast(2).crush("<16 8 7 6 5 4 3 2>")`
+- **crush**: Bit crusher effect.On a picture (img, vid, cam): posterize – bits per colour channel, 1..8. – e.g. `s("<bd sd>,hh*3").fast(2).crush("<16 8 7 6 5 4 3 2>")`
 - **csoundm**: Sends notes to Csound for rendering with MIDI semantics.
 - **cubic**: Cubic polynomial distortion
 - **cut**: In the style of classic drum-machines, cut will stop a playing sample as soon as another samples with in same cutgroup is to be played. – e.g. `s("[oh hh]*4").cut(1)`
@@ -182,7 +182,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **ftype**: Sets the filter type. – e.g. `note("{f g g c d a a#}%8").s("sawtooth").lpenv(4).lpf(500).ftype("<0 1 2>").lpq(1)`
 - **fx**: Image effect for media layers: none, grayscale, invert, blur, posterize, pixelate, edges, sepia, contrast, hue. – e.g. `$: img("neon").fx("<none edges posterize>")`
 - **FX**: Establishes an FX chain. – e.g. `$: s("[sbd <hh [bd | lt | oh]>]*4").dec(.4) .FX( phaser(0.5).gain(2), bpf(800), distort(1.3), room(0.2), delay`
-- **gain**: Controls the gain by an exponential amount. – e.g. `s("hh*8").gain(".4!2 1 .4!2 1 .4 1").fast(2)`
+- **gain**: Controls the gain by an exponential amount.On a picture (img, vid, cam): brightness, 1 = as is. – e.g. `s("hh*8").gain(".4!2 1 .4!2 1 .4 1").fast(2)`
 - **gap**: Does absolutely nothing, but with a given metrical 'steps' – e.g. `gap(3) // "~@3"`
 - **generateGraph**: Creates a canvas element showing a graph of the given data.
 - **generateReverb**: Generates a reverb impulse response.
@@ -302,7 +302,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **outside**: Carries out an operation 'outside' a cycle. – e.g. `"<[0 1] 2 [3 4] 5>".outside(4, rev).scale('C major').note() // "<[0 1] 2 [3 4] 5>".fast(4).rev().slow(4).scale`
 - **pace**: Experimental Speeds a pattern up or down, to fit to the given number of steps per cycle. – e.g. `sound("bd sd cp").pace(4) // The same as sound("{bd sd cp}%4") or sound("<bd sd cp>*4")`
 - **palindrome**: Applies rev to a pattern every other cycle, so that the pattern alternates between forwards and backwards. – e.g. `note("c d e g").palindrome()`
-- **pan**: Sets position in stereo. – e.g. `s("[bd hh]*2").pan("<.5 1 .5 0>")`
+- **pan**: Sets position in stereo.On a picture (img, vid, cam): horizontal position of the crop, 0 (left) .. – e.g. `s("[bd hh]*2").pan("<.5 1 .5 0>")`
 - **panchor**: Sets the range anchor of the envelope: anchor 0: range = [note, note + penv] anchor 1: range = [note - penv, note] If you don't set an anchor, the value will de – e.g. `note("c c4").penv(12).panchor("<0 .5 1 .5>")`
 - **parray**: Turns a list of patterns into a single pattern which outputs list-values
 - **partials**: Scale the magnitude of the harmonics of one of the core synths ('sine', 'tri', 'saw', ..) Can also be used to create a new synth via s('user').partials(...) – e.g. `s("user").seg(16).n(irand(8)).scale("A:major") .partials([1, 0, 1, 0, 0, 1])`
@@ -477,7 +477,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **vib** (also vibrato, v): Applies a vibrato to the frequency of the oscillator. – e.g. `note("a e") .vib("<.5 1 2 4 8 16>") ._scope()`
 - **vibmod** (also vmod): Sets the vibrato depth in semitones. – e.g. `note("a e").vib(4) .vibmod("<.25 .5 1 2 12>") ._scope()`
 - **vid**: Plays a looping video on the stage while the event is active. – e.g. `$: vid("clip").speed(.5).opacity(.8)`
-- **visual**: Runs a visual plugin on the stage: particles, ribbon, bars, pulse, rings. – e.g. `$: visual("particles").hue(200).amount(.6)`
+- **visual**: Runs a visual plugin on the stage: particles, ribbon, bars, pulse, rings, punchcard, pianoroll, wordfall, spiral, pitchwheel, scope, spectrum. – e.g. `$: visual("particles").hue(200).amount(.6)`
 - **voicing**: Turns chord symbols into voicings. – e.g. `n("0 1 2 3").chord("<C Am F G>").voicing()`
 - **voicings**: DEPRECATED: still works, but it is recommended you use .voicing instead (without s). – e.g. `stack("<C^7 A7 Dm7 G7>".voicings('lefthand'), "<C3 A2 D3 G2>").note()`
 - **vowel**: Formant filter to make things sound like vowels. – e.g. `note("[c2 <eb2 <g2 g1>>]*2").s('sawtooth') .vowel("<a e i <o u>>")`

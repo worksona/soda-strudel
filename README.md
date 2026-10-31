@@ -14,12 +14,16 @@ video, the camera, captions and visuals are patterns, sequenced like sounds:
 setcps(.5)
 $: s("kick*2 [~ snare]").bank("soda")
 $: note("<c2 eb2>").s("sawtooth").lpf(camMotion.range(300, 3000))
-$: img("<rain neon>").slow(4).fade(.3)
+$: img("<rain neon>").slow(4).fade(.3).lpf(sine.range(300, 8000).slow(8)).room(.5)
 $: cam().mirror(1).fx("posterize").opacity(.5)
 $: visual("particles").hue(210)
 $: captions(['2:14 am', '', 'exit 9', '']).slow(2)
 ```
 
+- **One language for sound and picture.** Strudel's audio effects mean the
+  same thing on a picture: `.lpf()` blurs, `.room()` glows, `.delay()` echoes,
+  `.crush()` posterizes, `.coarse()` pixelates, `.pan()` slides. One chain can
+  shape a bass line and the image behind it.
 - **No backend.** The site is static files. Your sounds, takes and media live in
   your browser (IndexedDB). Sketches share as links whose content sits in the
   `#fragment`, which never reaches a server.
@@ -43,7 +47,7 @@ One row of outlined icons, grouped:
 
 | Group | Buttons |
 |---|---|
-| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Code · Stage · Full screen) · **Input** ▾ (Record a take · Camera · Switch camera) · Play · **Update** |
+| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Stage, the default · Code over the stage · Full screen · Show export frame) · **Input** ▾ (Record a take · Camera · Switch camera) · Play · **Update** |
 | Pages | **Examples** · **Sounds** · **Media** · **Reference** |
 | Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) · **Vibe** (the strudel-vibe skill: install, prompts, links) |
 | Right | **About** · **Settings** |
@@ -65,7 +69,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 | Sounds | One browser for every sound: yours (uploads and mic takes), the soda pack, GitHub libraries (load, add to sketch, forget, suggestions), Strudel's drum machines (by kit), samples, synths, soundfonts. Click to hear, double-click or Enter to insert, outlined = pitched |
 | Media | Your images and videos, the soda media pack, camera snippets |
 | Reference | Every Strudel and soda function, searchable, examples with Listen / Insert |
-| Export | Shape, size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
+| Export | Shape (the export frame – the stage itself always fills the screen; Auto follows the device), size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
 | Share | Title, then Copy link (plays in any browser; nothing uploaded) |
 | About | What it is, how it works, keys, mini-notation, links, and the log |
 | Settings | Appearance (dark by default · light · system) · Profile · Screen and export · Editor · Exports · Storage |

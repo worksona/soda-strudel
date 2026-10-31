@@ -332,6 +332,27 @@ $: captions(['nothing here repeats', '', '', '', 'listen longer', '', '', '']).s
 `,
   },
   {
+    title: 'Dub picture',
+    category: 'Studies',
+    about: 'One effect chain for sound and picture: the filter that opens the bass also sharpens the image, the room that holds the chords makes it glow.',
+    aspect: '9:16',
+    code: `// Strudel's audio effects mean the same thing on a picture: lpf blurs,
+// room glows, delay echoes, crush posterizes, pan slides the crop.
+// dub() is applied to the bass AND to the image, so they move together.
+setcpm(70/4)
+
+const dub = x => x.lpf(sine.range(300, 6000).slow(8)).room(.7).roomsize(4).delay(.4).delayfeedback(.6)
+
+$: s("kick:1 ~ ~ kick:1, ~ ~ snare:1 ~, hat*4").bank("soda").gain(.5).lpf(4000).room(.2)
+$: dub(note("<c2 c2 eb2 g1>").s("bass").bank("soda").gain(.5))
+$: dub(chord("<Cm7 Cm7 Eb^7 Gm7>").voicing().s("gm_epiano1").gain(.28)).delaytime(.375)
+
+$: dub(img("<night neon rain dusk>").slow(4).fade(.2)).pan(sine.range(.3, .7).slow(16))
+$: visual("pulse").hue(200).amount(.3).opacity(.5)
+$: captions(['the same chain', '', 'shapes the sound', '', 'and the picture', '', '', '']).slow(2)
+`,
+  },
+  {
     title: 'Hydra dream',
     category: 'Studies',
     about: 'Hydra, a live video synth, painted under the stage and driven by the same patterns.',

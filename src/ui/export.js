@@ -1,4 +1,6 @@
 // Export page: Video · Audio · .soda file, with shape, size and length.
+// The stage always fills the screen; the shape here is the export frame (and
+// the crop guide in View). A sketch without one follows the device.
 // Everything renders on this device; results are kept under Settings › Exports.
 import { h, toast } from './dom.js';
 import { icon } from './icons.js';
@@ -10,16 +12,18 @@ import { EXPORT_SIZES, getSettings, updateSettings } from '../settings.js';
 
 export const slug = (s) => (s || 'soda-sketch').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'soda-sketch';
 
-export function shapePicker(current, onPick) {
+/** Export frame picker. `suggested` is the device's shape, shown as the choice when the sketch has none. */
+export function shapePicker(current, onPick, suggested) {
+  const value = current ?? 'free';
   return h(
     'div.segmented',
-    { role: 'radiogroup', 'aria-label': 'Shape' },
+    { role: 'radiogroup', 'aria-label': 'Export shape' },
     [
-      ['free', 'Free'],
+      ['free', suggested ? `Auto (${suggested})` : 'Free'],
       ['9:16', '9:16'],
       ['1:1', '1:1'],
       ['16:9', '16:9'],
-    ].map(([value, label]) => h('button', { type: 'button', role: 'radio', 'aria-checked': String((current ?? 'free') === value), onclick: () => onPick(value) }, label)),
+    ].map(([v, label]) => h('button', { type: 'button', role: 'radio', 'aria-checked': String(value === v), onclick: () => onPick(v) }, label)),
   );
 }
 
@@ -48,8 +52,9 @@ export function createExport({ root, app }) {
       if (!app.isPlaying()) await app.play();
       const sketch = app.getSketch();
       const blob = await recordStage(app.stage, { seconds: cycles / app.getCps(), size: getSettings().exportSize, onProgress: (p) => (progress.value = p) });
-      const filename = `${slug(sketch.title)}-${(sketch.aspect ?? 'free').replace(':', 'x')}.${extensionFor(blob.type)}`;
-      await addRender(blob, { kind: 'video', title: sketch.title, filename, aspect: sketch.aspect }).catch(() => {});
+      const frame = app.stage.frame;
+      const filename = `${slug(sketch.title)}-${frame.replace(':', 'x')}.${extensionFor(blob.type)}`;
+      await addRender(blob, { kind: 'video', title: sketch.title, filename, aspect: frame }).catch(() => {});
       const how = await shareOrDownload(blob, filename, sketch.title);
       status().textContent = how === 'shared' ? 'Shared. Also kept in Settings › Exports.' : `Saved ${filename}. Also kept in Settings › Exports.`;
     } catch (e) {
@@ -96,7 +101,8 @@ export function createExport({ root, app }) {
       [4, 8, 16, 32, 64].map((n) => h('option', { value: n, selected: n === cycles }, `${n} cycles · ${(n / app.getCps()).toFixed(1)} s`)),
     );
     root.replaceChildren(
-      h('div.field', {}, h('span', {}, 'Shape'), shapePicker(sketch.aspect, (a) => (app.setAspect(a), render()))),
+      h('div.field', {}, h('span', {}, 'Shape'), shapePicker(sketch.aspect, (a) => (app.setAspect(a), render()), app.stage.frame)),
+      h('p.muted', {}, 'The stage fills your screen; this is the frame the video is cut to. View › Show export frame previews the crop.'),
       h('div.field', {}, h('span', {}, 'Size (short side)'), sizePicker(getSettings().exportSize, (px) => (updateSettings({ exportSize: px }), render()))),
       h('label.field', {}, 'Length', length),
       h(

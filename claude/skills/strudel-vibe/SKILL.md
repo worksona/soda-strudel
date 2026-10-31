@@ -90,9 +90,21 @@ code without a link, saying it wasn't validated.
 - Make it move: `<…>` alternation, `.slow()`, signals (`sine.range(...)`,
   `perlin`), `.sometimesBy`, `.every`/`.firstOf`, filter sweeps. Static loops
   feel dead after two cycles.
+- **Audio effects work on pictures** (see references/multimedia.md › Audio
+  effects on pictures): on `img`/`vid`/`cam`, `.lpf()` blurs, `.hpf()` draws
+  outlines, `.room()` glows, `.delay()` echoes, `.crush()` posterizes,
+  `.coarse()` pixelates, `.pan()` slides the crop, `.gain()` brightens. The
+  strongest move is **one chain for a sound and its picture**:
+  `const dub = x => x.lpf(sine.range(300, 6000).slow(8)).room(.7)` then
+  `$: dub(note(...).s("bass"))` and `$: dub(img("<rain neon>").slow(4))` –
+  the filter that opens the bass sharpens the image. Prefer this over
+  `.fx("blur")` when the sound has the same effect; keep `.fx()` for looks
+  with no audio twin (grayscale, invert, sepia, hue).
 - Tie picture to sound: change images on the same cycle grid as chord changes
   (`img("<a b>").slow(4)` with `chord("<…>").slow(4)` or note changes), use
-  `visual("pulse")` or `rings` for drums, `ribbon`/`bars` for texture.
+  `visual("pulse")` or `rings` for drums, `ribbon`/`bars` for texture,
+  `punchcard`/`pianoroll`/`spiral` when the piece is about the pattern itself
+  (studies, tutorials, polyrhythms), `scope`/`spectrum` for sound-design pieces.
 - **Tell stories in chapters** with `arrange([cycles, stack(...)], …)`: each
   chapter stacks its music, picture, visual and captions, so they all turn the
   page together (see recipes › Postcard). A chapter of N cycles shows N captions.

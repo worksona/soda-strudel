@@ -62,8 +62,21 @@ $: visual("<pulse rings>").slow(4).hue(330)
 | `bars` | spectrum bars |
 | `pulse` | full-frame colour flash on onsets – beat strobe |
 | `rings` | rings expanding from the centre on onsets, speed by pitch |
+| `punchcard` | Strudel's punchcard: every layer as scrolling blocks, playhead in the middle |
+| `pianoroll` | Strudel's pianoroll: notes on a pitch axis; `.amount(.2)` turns it vertical for 9:16 |
+| `wordfall` | Strudel's wordfall: event names fall down the stage in time |
+| `spiral` | Strudel's spiral: one turn per cycle, lit as it plays; `.amount()` = size |
+| `pitchwheel` | Strudel's pitchwheel: sounding notes on a circle of pitch; `.amount()` = line weight |
+| `scope` | oscilloscope of the mix, full width; `.amount()` = height |
+| `spectrum` | scrolling spectrogram of the mix, pitch bottom to top; `.amount()` = speed |
 
-Plugins react to **all audible layers** (onsets, pitch, loudness).
+Plugins react to **all audible layers** (onsets, pitch, loudness) and fill the
+stage. The Strudel ones are the same animations Strudel chains onto a single
+pattern (`.punchcard()`, `.spiral()`…), here as full-screen visuals showing
+every layer, with `hue`, `amount`, `opacity`, `blend` and `fade` like the rest.
+Prefer `visual("punchcard")` over `.punchcard()` in sketches: it layers with
+media and captions and exports. Timeline visuals (punchcard, pianoroll,
+wordfall, spiral) look at two cycles ahead and behind.
 
 ## Parameters (media, visuals, captions)
 
@@ -83,6 +96,38 @@ Plugins react to **all audible layers** (onsets, pitch, loudness).
 
 All accept patterns: `.opacity(sine.range(.3, 1))`, `.fx("<none edges>")`.
 
+## Audio effects on pictures
+
+Strudel's effect controls mean the analogous thing on a media layer (`img`,
+`vid`, `cam`). A media layer makes no sound, so nothing is heard – the picture
+wears the effect instead. Use the same names you already use on sounds:
+
+| control | on a picture |
+|---|---|
+| `.lpf(hz)` | blur – low cutoff = soft, 8000 and up = sharp |
+| `.hpf(hz)` | outlines – 200 starts, 4000 is all edges |
+| `.room(x)` `.roomsize(n)` | glow (0..1) and how wide it spreads (default 2) |
+| `.delay(x)` `.delayfeedback(x)` `.delaytime(s)` | echo: previous frames linger (0..1), how slowly they fade, spacing in seconds |
+| `.crush(bits)` | posterize, 1..8 bits per channel |
+| `.coarse(n)` | pixelate, n pixels per block |
+| `.distort(x)` | contrast and saturation |
+| `.pan(x)` | horizontal position of the crop, 0 left .. 1 right |
+| `.gain(x)` | brightness, 1 = as is |
+
+The point is one chain for sound and picture – they then move together:
+
+```js
+const dub = x => x.lpf(sine.range(300, 6000).slow(8)).room(.7).delay(.4).delayfeedback(.6)
+$: dub(note("<c2 eb2>").s("bass").bank("soda").gain(.5))
+$: dub(img("<rain neon>").slow(4))
+$: cam().hpf("<0 800 3000>").coarse("<1 8 24>")      // camera: outlines and blocks per cycle
+$: img("fog").pan(camMotion.range(.2, .8)).crush(3)  // movement slides the crop
+```
+
+Echoes only show when the picture changes (a new image, camera motion, a
+moving `pan`); a still picture with `.delay()` looks the same. Glow and blur
+cost a little on phones – one or two effected layers is plenty.
+
 ## Sketch JSON
 
 ```json
@@ -95,5 +140,8 @@ All accept patterns: `.opacity(sine.range(.3, 1))`, `.fx("<none edges>")`.
 }
 ```
 
-`aspect`: `free` (fills the screen), `9:16` (Reels/TikTok/Shorts), `1:1`, `16:9`.
+`aspect` is the **export frame**: `9:16` (Reels/TikTok/Shorts), `1:1`, `16:9`, or
+`free` (follows the device: portrait → 9:16, else 16:9). On screen the stage always
+fills the window, so compose for any shape; keep captions and the subject near
+the centre when the piece is meant for 9:16.
 `camera` is detected automatically from `cam()` / `camMotion`.

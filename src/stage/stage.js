@@ -9,12 +9,13 @@
 //
 // Time comes from Strudel's scheduler via update(); the stage never reads
 // wall-clock time for musical decisions.
-import { ASPECTS, isMediaOnly } from '../soda/catalog.js';
+import { ASPECTS, frameFor, isMediaOnly } from '../soda/catalog.js';
 import { getMedia } from '../soda/mediaRegistry.js';
 import { plugins } from '../visuals/index.js';
 import { readMaster } from '../media/master.js';
 import { cameraVideo, cameraOn, tickCamera } from '../media/camera.js';
-import { cssFilter, drawCover, pixelFx } from './fx.js';
+import { cssFilter, drawCover, edgesOf, pixelFx } from './fx.js';
+import { pictureFilter, pictureFx } from './pictureFx.js';
 
 const BLEND = {
   normal: 'source-over',
@@ -42,7 +43,8 @@ export class Stage {
     this.lctx = this.layer.getContext('2d');
     this.paint = document.createElement('canvas');
     this.paintCtx = this.paint.getContext('2d', { willReadFrequently: true });
-    this.aspect = 'free';
+    this.aspect = 'free'; // the sketch's export frame – on screen the stage always fills its box
+    this.guide = false; // outline the export frame over the free stage
     this.exportShort = null;
     this.haps = [];
     this.time = 0;
@@ -54,6 +56,7 @@ export class Stage {
     this.images = new Map();
     this.videos = new Map();
     this.stills = new Map();
+    this.trails = new Map(); // echo buffers per media source (.delay() on pictures)
     this.last = performance.now();
     this.frameListeners = new Set();
     new ResizeObserver(() => this.resize()).observe(el);
@@ -66,10 +69,22 @@ export class Stage {
     return this.paintCtx;
   }
 
+  /** The sketch's export frame ('free' follows the device). Changes the canvas only while exporting. */
   setAspect(aspect) {
     this.aspect = ASPECTS[aspect] === undefined ? 'free' : aspect;
     this.el.dataset.aspect = this.aspect;
     this.resize();
+  }
+
+  /** The frame an export would use right now: the sketch's, or the device's shape for 'free'. */
+  get frame() {
+    // the device's orientation, not the stage box (a side panel narrows the box)
+    return frameFor(this.aspect, window.innerHeight > window.innerWidth);
+  }
+
+  /** Show / hide the crop guide: a thin outline of the export frame, dimming what it would cut. */
+  setGuide(on) {
+    this.guide = !!on;
   }
 
   /** Render at export resolution (`short` px on the short side) – call with false to restore. */
@@ -82,7 +97,8 @@ export class Stage {
     const box = this.el.getBoundingClientRect();
     if (!box.width || !box.height) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const preset = ASPECTS[this.aspect];
+    // on screen: fill the box; while exporting: the export frame at export resolution
+    const preset = this.exportShort ? ASPECTS[this.frame] : null;
     let w, h, cssW, cssH;
     if (!preset) {
       [cssW, cssH] = [box.width, box.height];
@@ -101,6 +117,7 @@ export class Stage {
       c.width = Math.round(w);
       c.height = Math.round(h);
     }
+    this.trails.clear();
     this.bg = getComputedStyle(this.el).getPropertyValue('--stage-bg').trim() || '#000';
     this.canvas.style.width = `${cssW}px`;
     this.canvas.style.height = `${cssH}px`;
@@ -118,6 +135,7 @@ export class Stage {
     this.playing = playing;
     if (!playing) {
       this.haps = [];
+      this.trails.clear();
       this.videos.forEach((v) => v.pause());
     }
   }
@@ -173,10 +191,14 @@ export class Stage {
     const onsets = audible.filter((hap) => !this.prevKeys.has(hapKey(hap)));
     this.prevKeys = keys;
 
-    for (const hap of media) this.drawMedia(hap, t, w, h);
+    const used = new Set();
+    for (const hap of media) this.drawMedia(hap, t, w, h, dt, used);
+    for (const key of this.trails.keys()) if (!used.has(key)) this.trails.delete(key);
 
     const { fft, wave, level } = readMaster();
     const seen = new Set();
+    // Strudel's painters want the drawer's whole window (before and after now), minus picture events
+    const window = visuals.length && this.playing ? this.haps.filter((hap) => hap.whole && !isMediaOnly(hap.value)) : [];
     for (const hap of visuals) {
       const name = String(hap.value.visual);
       const plugin = plugins[name];
@@ -187,7 +209,7 @@ export class Stage {
       ctx.save();
       ctx.globalAlpha = this.envelope(hap, t) * Number(hap.value.opacity ?? 1);
       ctx.globalCompositeOperation = BLEND[hap.value.blend] ?? 'source-over';
-      plugin.frame(inst.state, ctx, { w, h, dt, time: t, cycle: t, params: hap.value, active: audible, onsets, fft, wave, level });
+      plugin.frame(inst.state, ctx, { w, h, dt, time: t, cycle: t, params: hap.value, active: audible, onsets, haps: window, drawTime: this.drawTime, fft, wave, level });
       ctx.restore();
     }
     for (const name of this.instances.keys()) if (!seen.has(name)) this.instances.delete(name);
@@ -205,6 +227,43 @@ export class Stage {
     }
 
     captions.forEach((hap, i) => this.drawCaption(hap, t, w, h, captions.length - 1 - i));
+
+    if (this.guide && !this.exportShort) this.drawGuide(w, h);
+  }
+
+  /** Outline of the export frame, cover-fitted and centred; never drawn into an export. */
+  drawGuide(w, h) {
+    const preset = ASPECTS[this.frame];
+    if (!preset) return;
+    const [pw, ph] = preset;
+    const fit = Math.min(w / pw, h / ph);
+    const fw = Math.round(pw * fit);
+    const fh = Math.round(ph * fit);
+    if (Math.abs(fw - w) < 2 && Math.abs(fh - h) < 2) return; // the screen already has that shape
+    const x = Math.round((w - fw) / 2);
+    const y = Math.round((h - fh) / 2);
+    const { ctx } = this;
+    ctx.save();
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = 'rgba(0,0,0,.5)';
+    if (x > 0) {
+      ctx.fillRect(0, 0, x, h);
+      ctx.fillRect(x + fw, 0, w - x - fw, h);
+    }
+    if (y > 0) {
+      ctx.fillRect(0, 0, w, y);
+      ctx.fillRect(0, y + fh, w, h - y - fh);
+    }
+    ctx.strokeStyle = 'rgba(255,255,255,.6)';
+    ctx.lineWidth = Math.max(1, h / 600);
+    ctx.strokeRect(x + 0.5, y + 0.5, fw - 1, fh - 1);
+    const size = Math.round(h / 50);
+    ctx.font = `600 ${size}px ui-monospace, monospace`;
+    ctx.fillStyle = 'rgba(255,255,255,.6)';
+    ctx.textBaseline = 'top';
+    ctx.fillText(this.frame, x + size / 2, y + size / 2);
+    ctx.restore();
   }
 
   envelope(hap, t) {
@@ -244,12 +303,13 @@ export class Stage {
     return vid.readyState >= 2 ? { el: vid, key: url } : null;
   }
 
-  drawMedia(hap, t, w, h) {
+  drawMedia(hap, t, w, h, dt, used) {
     const v = hap.value;
     const src = this.source(v);
     if (!src) return;
     const { ctx, lctx, layer } = this;
     lctx.globalCompositeOperation = 'source-over';
+    lctx.globalAlpha = 1;
     lctx.filter = 'none';
     lctx.clearRect(0, 0, w, h);
     if (src.missing) {
@@ -259,6 +319,10 @@ export class Stage {
       lctx.font = `${Math.round(h / 40)}px ui-monospace, monospace`;
       lctx.fillText(`missing media: ${src.missing}`, h / 40, h - h / 40);
     } else {
+      // Strudel's audio effects read as picture effects (lpf → blur, room → glow, …)
+      const p = pictureFx(v, h);
+      const focus = Number(v.pos ?? 0.5);
+      const pan = p?.pan ?? 0.5;
       let el = src.el;
       if (v.still) {
         let snap = this.stills.get(src.key);
@@ -266,22 +330,43 @@ export class Stage {
           snap = document.createElement('canvas');
           snap.width = w;
           snap.height = h;
-          drawCover(snap.getContext('2d'), el, w, h, Number(v.pos ?? 0.5));
+          drawCover(snap.getContext('2d'), el, w, h, focus, false, pan);
           this.stills.set(src.key, snap);
         }
         el = snap;
       } else this.stills.delete(src.key);
       const mirror = !!v.mirror && el === src.el;
-      const pix = pixelFx(v.fx, el, w, h, Number(v.pos ?? 0.5), mirror);
+      const pix = pixelFx({ fx: v.fx, levels: p?.levels, pixel: p?.pixel, pan }, el, w, h, focus, mirror);
+      const filter = [cssFilter(v.fx, v, h), pictureFilter(p)].filter(Boolean).join(' ');
+      if (filter) lctx.filter = filter;
+      // with outlines (hpf) the picture itself gives way to its edges
+      if (p?.outlines) lctx.globalAlpha = 1 - p.outlines * 0.8;
       if (pix) {
-        lctx.imageSmoothingEnabled = v.fx !== 'pixelate';
+        lctx.imageSmoothingEnabled = !(v.fx === 'pixelate' || p?.pixel);
         lctx.drawImage(pix, 0, 0, w, h);
         lctx.imageSmoothingEnabled = true;
-      } else {
-        const filter = cssFilter(v.fx, v, h);
-        if (filter) lctx.filter = filter;
-        drawCover(lctx, el, w, h, Number(v.pos ?? 0.5), mirror);
+      } else drawCover(lctx, el, w, h, focus, mirror, pan);
+      lctx.filter = 'none';
+      lctx.globalAlpha = 1;
+      if (p?.outlines) {
+        const edges = edgesOf(el, w, h, focus, mirror, pan);
+        if (edges) {
+          lctx.globalCompositeOperation = 'screen';
+          lctx.globalAlpha = p.outlines;
+          lctx.drawImage(edges, 0, 0, w, h);
+          lctx.globalAlpha = 1;
+          lctx.globalCompositeOperation = 'source-over';
+        }
+      }
+      if (p?.glow) {
+        // a blurred copy of the layer added on top: the picture blooms
+        lctx.globalCompositeOperation = 'lighter';
+        lctx.globalAlpha = p.glow * 0.55;
+        lctx.filter = `blur(${p.glowPx.toFixed(1)}px)`;
+        lctx.drawImage(layer, 0, 0);
         lctx.filter = 'none';
+        lctx.globalAlpha = 1;
+        lctx.globalCompositeOperation = 'source-over';
       }
       if (v.tint) {
         lctx.globalCompositeOperation = 'source-atop';
@@ -289,6 +374,11 @@ export class Stage {
         lctx.fillStyle = String(v.tint);
         lctx.fillRect(0, 0, w, h);
         lctx.globalAlpha = 1;
+        lctx.globalCompositeOperation = 'source-over';
+      }
+      if (p?.echo) {
+        this.echo(src.key, p, dt, w, h);
+        used?.add(src.key);
       }
     }
     ctx.save();
@@ -296,6 +386,40 @@ export class Stage {
     ctx.globalCompositeOperation = BLEND[v.blend] ?? 'source-over';
     ctx.drawImage(layer, 0, 0);
     ctx.restore();
+  }
+
+  /**
+   * .delay() on a picture: previous frames linger and fade, like an echo.
+   * The buffer keeps the layer as drawn (echoes included, so it feeds back),
+   * fading by delayfeedback every delaytime seconds, and is blended over the
+   * fresh frame. A still picture looks the same; a changing one trails.
+   */
+  echo(key, p, dt, w, h) {
+    let trail = this.trails.get(key);
+    if (!trail) {
+      trail = document.createElement('canvas');
+      this.trails.set(key, trail);
+    }
+    const fresh = trail.width !== w || trail.height !== h;
+    if (fresh) {
+      trail.width = w;
+      trail.height = h;
+    }
+    const tctx = trail.getContext('2d');
+    const { lctx, layer } = this;
+    if (!fresh) {
+      tctx.globalCompositeOperation = 'destination-out';
+      tctx.globalAlpha = 1 - p.echoRetain(dt);
+      tctx.fillStyle = '#000';
+      tctx.fillRect(0, 0, w, h);
+      lctx.globalCompositeOperation = 'source-over';
+      lctx.globalAlpha = p.echo * 0.8;
+      lctx.drawImage(trail, 0, 0);
+      lctx.globalAlpha = 1;
+    }
+    tctx.globalCompositeOperation = 'source-over';
+    tctx.globalAlpha = 1;
+    tctx.drawImage(layer, 0, 0);
   }
 
   drawCaption(hap, t, w, h, row) {

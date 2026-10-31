@@ -19,6 +19,7 @@ import ribbon from './ribbon.js';
 import bars from './bars.js';
 import pulse from './pulse.js';
 import rings from './rings.js';
+import { strudelVisuals } from './strudel.js';
 
-export const plugins = Object.fromEntries([particles, ribbon, bars, pulse, rings].map((p) => [p.name, p]));
+export const plugins = Object.fromEntries([particles, ribbon, bars, pulse, rings, ...strudelVisuals].map((p) => [p.name, p]));
 

@@ -35,6 +35,21 @@ $: visual("ribbon").hue(210).opacity(.6)
 $: captions(['2:14 am', '', 'exit 9', '', 'still raining', '']).slow(2)
 ```
 
+## Dub picture (one effect chain for sound and image, 70 bpm, 9:16)
+
+```js
+setcpm(70/4)
+// dub() goes on the bass, the chords AND the image: the filter that opens the
+// bass sharpens the picture, the room that holds the chords makes it glow.
+const dub = x => x.lpf(sine.range(300, 6000).slow(8)).room(.7).roomsize(4).delay(.4).delayfeedback(.6)
+$: s("kick:1 ~ ~ kick:1, ~ ~ snare:1 ~, hat*4").bank("soda").gain(.5).lpf(4000).room(.2)
+$: dub(note("<c2 c2 eb2 g1>").s("bass").bank("soda").gain(.5))
+$: dub(chord("<Cm7 Cm7 Eb^7 Gm7>").voicing().s("gm_epiano1").gain(.28)).delaytime(.375)
+$: dub(img("<night neon rain dusk>").slow(4).fade(.2)).pan(sine.range(.3, .7).slow(16))
+$: visual("pulse").hue(200).amount(.3).opacity(.5)
+$: captions(['the same chain', '', 'shapes the sound', '', 'and the picture', '', '', '']).slow(2)
+```
+
 ## Neon club (house, 124 bpm, 9:16)
 
 ```js

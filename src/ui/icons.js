@@ -4,6 +4,7 @@
 import {
   createElement,
   AudioLines,
+  Crop,
   ExternalLink,
   WandSparkles,
   Minimize,
@@ -79,6 +80,7 @@ const ICONS = {
   copy: Copy,
   download: Download,
   film: Film,
+  crop: Crop,
   sketches: FolderOpen,
   library: Library,
   link: Link,

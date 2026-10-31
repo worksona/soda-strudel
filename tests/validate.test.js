@@ -23,6 +23,23 @@ $: visual("particles").hue(210)`);
     expect(res.stats.cps).toBeCloseTo(0.5);
   });
 
+  it('accepts audio effects on media layers and keeps them silent', async () => {
+    const res = await v(`const dub = x => x.lpf(sine.range(300, 6000)).room(.7).delay(.4)
+$: dub(note("c2").s("bass").bank("soda"))
+$: dub(img("rain")).pan(.3).crush(3).coarse(8)`);
+    expect(res.errors).toEqual([]);
+    expect(res.warnings).toEqual([]);
+    expect(res.stats.visual).toBeGreaterThan(0);
+    // only the bass makes sound: one audible event per cycle over the checked span
+    expect(res.stats.audible).toBeLessThanOrEqual(res.stats.visual);
+  });
+
+  it("accepts Strudel's animations as visuals", async () => {
+    const res = await v(`$: s("kick hat").bank("soda")\n$: visual("<punchcard pianoroll wordfall spiral pitchwheel scope spectrum>").hue(200).amount(.6)`);
+    expect(res.errors).toEqual([]);
+    expect(res.stats.visual).toBeGreaterThan(0);
+  });
+
   it('knows default banks, aliases and synths', async () => {
     const idx = soundIndex(sounds);
     expect(idx.has('RolandTR909_bd')).toBe(true);

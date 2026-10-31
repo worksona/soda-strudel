@@ -29,6 +29,7 @@ export default {
 | `params` | the visual event's value: `hue`, `amount`, `opacity`, … (strings/numbers) |
 | `active` | audible events sounding now (`hap.value` has `s`, `note`, `gain`, …) |
 | `onsets` | audible events that started this frame – trigger bursts here |
+| `haps`, `drawTime` | the drawer's whole window of audible events (two cycles behind and ahead) and `[lookbehind, lookahead]` – what Strudel's painters take; the window is only open while the code names a timeline visual (`TIMELINE_VISUALS` in catalog.js) |
 | `fft` | `Float32Array` of dB values from the master output |
 | `wave` | `Float32Array` time-domain samples (-1..1) |
 | `level` | 0..1 loudness |

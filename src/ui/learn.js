@@ -76,6 +76,7 @@ export function aboutView(rerender, app) {
     ),
     h('h4', {}, 'Picture'),
     h('pre', {}, `$: img("<night sea>").slow(4).fade(.3)
+$: img("neon").lpf(sine.range(300, 8000)).room(.6)   // audio effects shape pictures too
 $: cam().mirror(1).fx("posterize")
 $: visual("particles").hue(200)
 $: captions(['line one', '', 'line two'])`),
@@ -190,7 +191,7 @@ function ourExamples(app) {
           'ul.examples',
           {},
           list.map((ex) =>
-            h('li', {}, h('div.meta', {}, h('strong', {}, ex.title), h('small', {}, ex.about), h('small.shape', {}, ex.aspect === 'free' ? 'any shape' : ex.aspect)), exampleActions(app, ex.code, ex)),
+            h('li', {}, h('div.meta', {}, h('strong', {}, ex.title), h('small', {}, ex.about), h('small.shape', {}, ex.aspect === 'free' ? 'any shape' : `made for ${ex.aspect}`)), exampleActions(app, ex.code, ex)),
           ),
         ),
       );

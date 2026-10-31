@@ -9,7 +9,7 @@ it that way. Check new features against them.
 2. **UI only for what code can't do:** permissions (mic, camera), files (import,
    export), and sharing. A new top-level button needs one of those reasons.
 3. **One row of outlined icons, one level of pages.** Left: brand (About),
-   three pulldowns – File, View (code / stage / full screen), Input (mic,
+   three pulldowns – File, View (stage by default / code over the stage / full screen, the choice remembered), Input (mic,
    camera) – then Play and Update (lit when there are changes to apply). Pulldowns show state on their button: View's icon is
    the current view, Input glows while recording or the camera is on. Right: pages (Examples,
    Sounds, Media, Reference), actions (Export, Share, Claude), then About and
@@ -31,7 +31,8 @@ it that way. Check new features against them.
    user shares or exports.
 8. **Phone first.** Every action works by touch (no double-click-only or
    keyboard-only paths: the Update button replaces ctrl+enter, Insert replaces
-   double-click); 16px inputs; safe areas respected. **Phone first for output.** Test the 9:16 stage on a phone before shipping a
+   double-click); 16px inputs; safe areas respected. **Phone first for output.** The stage always fills the screen; a sketch's shape is only its export
+   frame. Test with View › Show export frame (9:16) and on a phone before shipping a
    visual or layout change. Keep captions clear of the bottom ~20%.
 9. **Say where things live.** "Stays in this browser", "nothing is uploaded",
    "others will hear gaps" – short, at the moment it matters.
