@@ -1,18 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-10-31T06:19:36Z
-
-| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-10-31T18:12:00Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae588699d46aea64ba60a3a--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae5884f0dc6ca3b4d4ea983--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae628efdf6a35e39f98b8b9--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae628cc3a6c38e67555346e--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae588699d46aea64ba60a3a |
+| Deploy ID | 6ae628efdf6a35e39f98b8b9 |
 | Team | worksona |
 | Project type | Static (Vite build) – no functions, no backend |
-| Source path | dist/ (built locally with `pnpm build`, commit e0dc427) |
+| Source path | dist/ (built locally with `pnpm build`, commit d8d8ade) |
 | Build | Local only – Netlify does not build (no build minutes) |
 | Custom domain | none |
 
@@ -24,6 +22,7 @@
 - A link made by the strudel-vibe skill opens on production in viewer mode
 - Opens dark on a light-mode device (dark default)
 - First-visit welcome renders; Play from it starts First light; Update is dim before Play and enabled while playing
+- Video effectors (`fx("vhs:kaleido")`) run on the draft deploy with no console errors; `/strudel-docs.json` lists them
 
 ## Configuration Used
 

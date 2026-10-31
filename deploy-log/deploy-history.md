@@ -8,3 +8,5 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | ebca341: first-visit welcome, readable light theme, Update button (deploy 6ae5870d4a521958f1b25410) |
 | 2026-10-31 | Netlify | https://6ae5884f0dc6ca3b4d4ea983--soda-strudel.netlify.app | Preview | Draft (e0dc427), verified dark on a light-mode device |
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | e0dc427: dark is the default theme (deploy 6ae588699d46aea64ba60a3a) |
+| 2026-10-31 | Netlify | https://6ae628cc3a6c38e67555346e--soda-strudel.netlify.app | Preview | Draft (d8d8ade), effectors verified, no console errors |
+| 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | d8d8ade: video effectors for cam/vid/img after Pixel Flow, Dancefloor examples (deploy 6ae628efdf6a35e39f98b8b9) |
