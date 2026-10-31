@@ -9,13 +9,14 @@
 //
 // Time comes from Strudel's scheduler via update(); the stage never reads
 // wall-clock time for musical decisions.
-import { ASPECTS, frameFor, isMediaOnly } from '../soda/catalog.js';
+import { ASPECTS, frameFor, fxChain, isMediaOnly } from '../soda/catalog.js';
 import { getMedia } from '../soda/mediaRegistry.js';
 import { plugins } from '../visuals/index.js';
 import { readMaster } from '../media/master.js';
 import { cameraVideo, cameraOn, tickCamera } from '../media/camera.js';
 import { cssFilter, drawCover, edgesOf, pixelFx } from './fx.js';
 import { pictureFilter, pictureFx } from './pictureFx.js';
+import { applyVideoFx, videoFx } from './videoFx.js';
 
 const BLEND = {
   normal: 'source-over',
@@ -57,6 +58,7 @@ export class Stage {
     this.videos = new Map();
     this.stills = new Map();
     this.trails = new Map(); // echo buffers per media source (.delay() on pictures)
+    this.fxStates = new Map(); // video effector state per media source and effect (ring buffers, feedback)
     this.last = performance.now();
     this.frameListeners = new Set();
     new ResizeObserver(() => this.resize()).observe(el);
@@ -118,6 +120,7 @@ export class Stage {
       c.height = Math.round(h);
     }
     this.trails.clear();
+    this.fxStates.clear();
     this.bg = getComputedStyle(this.el).getPropertyValue('--stage-bg').trim() || '#000';
     this.canvas.style.width = `${cssW}px`;
     this.canvas.style.height = `${cssH}px`;
@@ -136,6 +139,7 @@ export class Stage {
     if (!playing) {
       this.haps = [];
       this.trails.clear();
+      this.fxStates.clear();
       this.videos.forEach((v) => v.pause());
     }
   }
@@ -194,6 +198,7 @@ export class Stage {
     const used = new Set();
     for (const hap of media) this.drawMedia(hap, t, w, h, dt, used);
     for (const key of this.trails.keys()) if (!used.has(key)) this.trails.delete(key);
+    for (const key of this.fxStates.keys()) if (!used.has(key)) this.fxStates.delete(key);
 
     const { fft, wave, level } = readMaster();
     const seen = new Set();
@@ -336,18 +341,28 @@ export class Stage {
         el = snap;
       } else this.stills.delete(src.key);
       const mirror = !!v.mirror && el === src.el;
-      const pix = pixelFx({ fx: v.fx, levels: p?.levels, pixel: p?.pixel, pan }, el, w, h, focus, mirror);
-      const filter = [cssFilter(v.fx, v, h), pictureFilter(p)].filter(Boolean).join(' ');
+      // .fx(): the one-look effects (posterize, edges, …) are applied while drawing,
+      // the video effectors (kaleido, vhs, …) run afterwards, in chain order
+      const chain = fxChain(v.fx);
+      const look = chain.find((n) => !videoFx[n]);
+      const effectors = chain.filter((n) => videoFx[n]);
+      const pix = pixelFx({ fx: look, levels: p?.levels, pixel: p?.pixel, pan }, el, w, h, focus, mirror);
+      const filter = [cssFilter(look, v, h), pictureFilter(p)].filter(Boolean).join(' ');
       if (filter) lctx.filter = filter;
       // with outlines (hpf) the picture itself gives way to its edges
       if (p?.outlines) lctx.globalAlpha = 1 - p.outlines * 0.8;
       if (pix) {
-        lctx.imageSmoothingEnabled = !(v.fx === 'pixelate' || p?.pixel);
+        lctx.imageSmoothingEnabled = !(look === 'pixelate' || p?.pixel);
         lctx.drawImage(pix, 0, 0, w, h);
         lctx.imageSmoothingEnabled = true;
       } else drawCover(lctx, el, w, h, focus, mirror, pan);
       lctx.filter = 'none';
       lctx.globalAlpha = 1;
+      if (effectors.length) {
+        const amount = Math.max(0, Math.min(1, Number(v.amount ?? 0.5))) || 0;
+        const hue = v.hue === undefined ? undefined : Number(v.hue);
+        applyVideoFx(effectors, layer, lctx, w, h, { amount, hue, t, dt }, this.fxStates, src.key, used);
+      }
       if (p?.outlines) {
         const edges = edgesOf(el, w, h, focus, mirror, pan);
         if (edges) {

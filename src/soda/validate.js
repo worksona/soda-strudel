@@ -6,7 +6,7 @@ import * as mini from '@strudel/mini';
 import * as tonal from '@strudel/tonal';
 import { transpiler } from '@strudel/transpiler';
 import { sodaScope } from './patterns.js';
-import { VISUALS, FX, BLENDS, isMediaOnly } from './catalog.js';
+import { VISUALS, FX, BLENDS, fxChain, isMediaOnly } from './catalog.js';
 
 const { repl, evalScope, silence } = core;
 
@@ -140,7 +140,7 @@ export async function validateSketch(sketch, { sounds, media, cycles = 8 } = {})
     for (const k of ['img', 'vid']) if (v[k] !== undefined && mIdx && !mIdx.has(String(v[k])) && !/^(https?:|local:)/.test(v[k])) unknown.media.add(String(v[k]));
     if (v.visual !== undefined && !VISUALS[v.visual]) unknown.visuals.add(String(v.visual));
     if (v.caption !== undefined && typeof v.caption !== 'string') badCaptions++;
-    if (v.fx !== undefined && !FX.includes(v.fx)) unknown.fx.add(String(v.fx));
+    for (const name of fxChain(v.fx)) if (!FX.includes(name)) unknown.fx.add(name);
     if (v.blend !== undefined && !BLENDS.includes(v.blend)) unknown.blend.add(String(v.blend));
   }
   if (badCaptions)

@@ -19,7 +19,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **almostAlways**: Shorthand for .sometimesBy(0.9, fn) – e.g. `s("hh*8").almostAlways(x=>x.speed("0.5"))`
 - **almostNever**: Shorthand for .sometimesBy(0.1, fn) – e.g. `s("hh*8").almostNever(x=>x.speed("0.5"))`
 - **always**: Shorthand for .sometimesBy(1, fn) (always calls fn) – e.g. `s("hh*8").always(x=>x.speed("0.5"))`
-- **amount**: Intensity 0..1 for visual plugins. – e.g. `$: visual("particles").amount(.8)`
+- **amount**: Intensity 0..1 for visual plugins and for the fx effectors on media (default .5). – e.g. `$: visual("particles").amount(.8)`
 - **amp**: Like gain, but linear. – e.g. `s("bd*8").amp(".1*2 .5 .1*2 .5 .1 .5").osc()`
 - **anchor**: The top note to align the voicing to. – e.g. `anchor("<c4 g4 c5 g5>").chord("C").voicing()`
 - **appBoth**: When this method is called on a pattern of functions, it matches its haps with those in the given pattern of values.
@@ -180,7 +180,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **fromBipolar**: Assumes a numerical pattern, containing bipolar values in the range -1 ..
 - **fscope**: Renders an oscilloscope for the frequency domain of the audio signal. – e.g. `s("sawtooth").fscope()`
 - **ftype**: Sets the filter type. – e.g. `note("{f g g c d a a#}%8").s("sawtooth").lpenv(4).lpf(500).ftype("<0 1 2>").lpq(1)`
-- **fx**: Image effect for media layers: none, grayscale, invert, blur, posterize, pixelate, edges, sepia, contrast, hue. – e.g. `$: img("neon").fx("<none edges posterize>")`
+- **fx**: Picture effect for media layers (img, vid, cam). – e.g. `$: img("neon").fx("<none edges posterize>")`
 - **FX**: Establishes an FX chain. – e.g. `$: s("[sbd <hh [bd | lt | oh]>]*4").dec(.4) .FX( phaser(0.5).gain(2), bpf(800), distort(1.3), room(0.2), delay`
 - **gain**: Controls the gain by an exponential amount.On a picture (img, vid, cam): brightness, 1 = as is. – e.g. `s("hh*8").gain(".4!2 1 .4!2 1 .4 1").fast(2)`
 - **gap**: Does absolutely nothing, but with a given metrical 'steps' – e.g. `gap(3) // "~@3"`
@@ -206,7 +206,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **hpskew**: Skew of the LFO for the highpass filter
 - **hpsustain** (also hps): Sets the sustain amplitude for the highpass filter envelope. – e.g. `note("c2 e2 f2 g2") .sound('sawtooth') .hpf(500) .hpd(.5) .hps("<0 .25 .5 1>/4") .hpenv(4)`
 - **hpsync**: Cycle-synced rate of the LFO for the highpass filter
-- **hue**: Colour (degrees) for visuals; the rotation for fx("hue") on media. – e.g. `$: visual("rings").hue("<160 300>")`
+- **hue**: Colour (degrees) for visuals; on media the rotation for fx("hue") and the direction of fx("smear") / fx("rgbshift"). – e.g. `$: visual("rings").hue("<160 300>")`
 - **hurry**: Both speeds up the pattern (like 'fast') and the sample playback (like 'speed'). – e.g. `s("bd sd:2").hurry("<1 2 4 3>").slow(1.5)`
 - **hush**: Silences a pattern. – e.g. `stack( s("bd").hush(), s("hh*3") )`
 - **img**: Shows an image on the stage while the event is active. – e.g. `$: img("<rain neon dusk>").slow(4).fade(.3)`

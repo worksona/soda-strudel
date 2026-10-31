@@ -548,6 +548,27 @@ $: visual("rings").hue(160).amount(.6)
 $: captions(['move to open the filter']).slow(4)
 `,
   },
+  {
+    title: 'Video booth',
+    category: 'Live',
+    about: 'Camera through the video effectors: kaleidoscope, slit-scan, VHS, feedback – one look per bar, strength from your movement.',
+    aspect: 'free',
+    code: `// Turn the camera on (toolbar). .fx() chains effectors in order – "vhs:kaleido"
+// is VHS then kaleidoscope – and .amount() is their strength. Here the look
+// changes every bar and camMotion (how much you move) sets how strong it is.
+setcpm(110/4)
+$: s("kick*4, ~ clap, hat*8").bank("soda").gain(.55).room(.2)
+$: note("<c2 c2 eb2 g1>*8").s("sawtooth").lpf(camMotion.range(300, 3000)).lpq(8).decay(.15).sustain(0).gain(.45)
+$: chord("<Cm9 Abmaj7>").voicing().s("gm_epiano1").gain(.25).room(.5).delay(.3).delayfeedback(.4)
+
+$: cam().mirror(1)
+  .fx("<kaleido timeslice vhs:rgbshift feedback symmetry glitch:scanlines halftone sort>")
+  .amount(camMotion.range(.2, .9))
+  .hue(saw.range(0, 360).slow(8))
+$: visual("pulse").hue(200).amount(.25)
+$: captions(['', 'move', '', 'the picture follows']).slow(2)
+`,
+  },
 
   // ---------- From live-coding-music-mcp ----------
   {

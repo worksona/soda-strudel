@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- **Video effectors for the camera (and any picture).** `.fx()` on `cam`,
+  `vid` and `img` now takes twenty-one effectors after
+  [Pixel Flow](https://pixel-flow.atomic47.co/pixel-flow-nodes/): kaleido,
+  symmetry, mosaic, slice, wave, twist, ripple, melt, smear, rgbshift, glitch,
+  vhs, sort, dither, halftone, ascii, scanlines, solarize, threshold, timeslice
+  (slit-scan) and feedback. `.amount(0..1)` is their strength, `.hue()` a
+  direction for smear and rgbshift, and `:` chains them in order –
+  `cam().fx("vhs:kaleido").amount(camMotion)`. New Live example “Video booth”;
+  the Reference, the validator and the skill know every name.
 - **Dancefloor examples and Hydra patterns.** Five new examples in a
   *Dancefloor* category – Dub techno fog, Melodic techno, Trance lift (build →
   breakdown → drop with `arrange()`), Psy roll, Hard techno kaleid – written

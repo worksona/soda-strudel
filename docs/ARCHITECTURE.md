@@ -28,6 +28,7 @@ src/stage/
   stage.js            the compositor (see below)
   fx.js               cover-fit drawing, canvas filters, low-res pixel effects
   pictureFx.js        Strudel audio effects read as picture effects (lpf → blur, room → glow, delay → echo…) – pure
+  videoFx.js          video effectors after Pixel Flow (kaleido, vhs, timeslice, feedback…) – chained by .fx("a:b"), strength .amount()
 src/visuals/          visual plugins (particles ribbon bars pulse rings) – docs/visuals.md
 src/media/
   master.js           taps superdough's output: analyser (visuals) + MediaStream (export)

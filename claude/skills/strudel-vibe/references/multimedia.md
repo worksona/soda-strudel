@@ -30,6 +30,7 @@ validator knows about those names.
 ```js
 $: cam().mirror(1).opacity(.8)                     // live camera, selfie-mirrored
 $: cam().fx("<none posterize edges pixelate>")     // effect changes every cycle
+$: cam().fx("vhs:kaleido").amount(camMotion)       // video effectors chained, strength from movement
 $: cam().still("<0 1>")                            // freeze-frame every other cycle
 $: note("c2 eb2").s("sawtooth").lpf(camMotion.range(200, 4000))   // movement opens the filter
 ```
@@ -85,9 +86,9 @@ wordfall, spiral) look at two cycles ahead and behind.
 | `.opacity(x)` | 0..1 | all |
 | `.fade(x)` | 0..0.5 – fraction of the event spent fading in and out | all |
 | `.blend("screen")` | `normal screen multiply overlay lighter difference soft-light` | media, visuals |
-| `.fx("posterize")` | `none grayscale invert blur posterize pixelate edges sepia contrast hue` | media |
-| `.hue(210)` | degrees – visual colour, or the rotation for `fx("hue")` | visuals, media |
-| `.amount(.6)` | 0..1 intensity | visuals |
+| `.fx("posterize")` | a look: `none grayscale invert blur posterize pixelate edges sepia contrast hue` – or effectors, see below | media |
+| `.hue(210)` | degrees – visual colour; on media the rotation for `fx("hue")` and the direction of `smear` / `rgbshift` | visuals, media |
+| `.amount(.6)` | 0..1 intensity – of a visual, or of the fx effectors on media (default .5) | visuals, media |
 | `.mirror(1)` | flip horizontally | media |
 | `.tint("#ff3fd0")` | colour wash (also caption colour) | media, captions |
 | `.still(1)` | freeze the current frame | vid, cam |
@@ -95,6 +96,50 @@ wordfall, spiral) look at two cycles ahead and behind.
 | `.speed(x)` | video playback rate | vid |
 
 All accept patterns: `.opacity(sine.range(.3, 1))`, `.fx("<none edges>")`.
+
+## Video effectors (after Pixel Flow)
+
+Beyond the looks, `.fx()` takes **effectors**: picture processors with one knob,
+`.amount(0..1)`. Chain them in order with `:` – `fx("vhs:kaleido")` is VHS,
+then kaleidoscope – and sequence them like anything else:
+`fx("<kaleido timeslice vhs:rgbshift>")`. They are made for the camera (and
+work on `img` / `vid` too):
+
+| effector | what it does · what `amount` sets |
+|---|---|
+| `kaleido` | mirrored wedges around the centre, slowly spinning · how many (2..10) |
+| `symmetry` | one half mirrored onto the other, a face becomes two · where the seam is |
+| `mosaic` | tiles that drift and jitter · how many, how far |
+| `slice` | vertical strips sliding in a wave · how far |
+| `wave` | rows swaying like heat haze · how far |
+| `twist` | the centre twisted into a spiral · how much (.5 = straight) |
+| `ripple` | rings breathing out from the centre · depth |
+| `melt` | columns dripping by brightness · how far |
+| `smear` | motion smear · length; `hue` = angle |
+| `rgbshift` | red and blue pulled apart · distance; `hue` = angle |
+| `glitch` | torn rectangles, new every eighth · how far |
+| `vhs` | tracking noise, tearing, dropouts · how bad |
+| `sort` | pixel sort – bright runs become streaks · threshold |
+| `dither` | ordered dither like an old screen · levels (2..6) |
+| `halftone` | dots on black sized by brightness · dot size |
+| `ascii` | the picture as characters · character size |
+| `scanlines` | bright wobbling lines · wobble |
+| `solarize` | bright parts inverted · threshold |
+| `threshold` | pure black and white · the cut-off |
+| `timeslice` | slit-scan: each strip from a different moment · how far back |
+| `feedback` | the last frame zoomed and turned under the new one · zoom and spin |
+
+```js
+$: cam().mirror(1).fx("<kaleido timeslice vhs:rgbshift feedback>").amount(camMotion.range(.2, .9))
+$: vid("clip").fx("glitch:scanlines").amount("<.2 .8>")       // strength per cycle
+$: img("neon").fx("sort").amount(sine.slow(8)).hue(90)          // sweep the threshold
+```
+
+Tips: `timeslice` and `feedback` want a moving picture (camera, video, a
+panning `img`); on a still image they do nothing or just bloom. Keep chains to
+two or three links on phones – each link copies the frame. `hue` on `smear`
+and `rgbshift` is an angle in degrees, so `.hue(saw.range(0, 360).slow(8))`
+turns the smear.
 
 ## Audio effects on pictures
 

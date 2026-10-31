@@ -15,7 +15,7 @@ setcps(.5)
 $: s("kick*2 [~ snare]").bank("soda")
 $: note("<c2 eb2>").s("sawtooth").lpf(camMotion.range(300, 3000))
 $: img("<rain neon>").slow(4).fade(.3).lpf(sine.range(300, 8000).slow(8)).room(.5)
-$: cam().mirror(1).fx("posterize").opacity(.5)
+$: cam().mirror(1).fx("vhs:kaleido").amount(.6)   // video effectors, chained
 $: visual("particles").hue(210)
 $: captions(['2:14 am', '', 'exit 9', '']).slow(2)
 ```
@@ -67,7 +67,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 |---|---|
 | Examples | Two tabs: **Examples** (25 soda pieces by category, including a Dancefloor set) and **Workshop** (all 145 examples from the [Strudel workshop](https://strudel.cc/workshop/getting-started/), by chapter). Listen / Open on each |
 | Sounds | One browser for every sound: yours (uploads and mic takes), the soda pack, GitHub libraries (load, add to sketch, forget, suggestions), Strudel's drum machines (by kit), samples, synths, soundfonts. Click to hear, double-click or Enter to insert, outlined = pitched |
-| Media | Your images and videos, the soda media pack, camera snippets |
+| Media | Your images and videos, the soda media pack, camera snippets, the video effectors |
 | Reference | Every Strudel and soda function, searchable, examples with Listen / Insert |
 | Export | Shape (the export frame – the stage itself always fills the screen; Auto follows the device), size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
 | Share | Title, then Copy link (plays in any browser; nothing uploaded) |

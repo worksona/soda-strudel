@@ -117,7 +117,11 @@ code without a link, saying it wasn't validated.
   (one per cycle, `''` = no text). Double quotes would be parsed as mini-notation.
 - Keep gain sane (most layers `.gain(.3–.8)`), add `.room()` / `.delay()` for space.
 - Camera pieces (`cam()`, `camMotion`) ask the viewer for permission and fall
-  back gracefully; mention that in your reply.
+  back gracefully; mention that in your reply. Give the camera a **video
+  effector chain** (multimedia.md › Video effectors): `cam().mirror(1)
+  .fx("<kaleido timeslice vhs:rgbshift>").amount(camMotion.range(.2, .9))` –
+  one look per bar, strength from movement. `timeslice`, `feedback`, `kaleido`
+  and `symmetry` are the camera's best friends; `glitch`/`vhs` suit breaks.
 
 ## References
 

@@ -60,10 +60,10 @@ $: dub(img("rain")).pan(.3).crush(3).coarse(8)`);
   });
 
   it('errors on unknown visuals and fx, warns on unknown sounds and media', async () => {
-    const res = await v(`$: s("nonexistent_thing")\n$: visual("lasers")\n$: img("nope").fx("melt")`);
+    const res = await v(`$: s("nonexistent_thing")\n$: visual("lasers")\n$: img("nope").fx("liquify")`);
     expect(res.ok).toBe(false);
     expect(res.errors.join()).toMatch(/lasers/);
-    expect(res.errors.join()).toMatch(/melt/);
+    expect(res.errors.join()).toMatch(/liquify/);
     expect(res.warnings.join()).toMatch(/nonexistent_thing/);
     expect(res.warnings.join()).toMatch(/nope/);
   });
