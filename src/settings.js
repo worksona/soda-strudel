@@ -5,6 +5,7 @@ import { lsGet, lsSet } from './ui/dom.js';
 const DEFAULTS = {
   name: '', // shown as "by …" on shared links and exports
   exportSize: 1080, // short side of exported video, in pixels
+  navLabels: true, // tiny captions under toolbar icons
 };
 
 let current = { ...DEFAULTS, ...lsGet('soda.settings', {}) };

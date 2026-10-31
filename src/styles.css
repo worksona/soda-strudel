@@ -178,9 +178,7 @@ button.brand {
   gap: 6px;
   align-items: center;
 }
-#play {
-  min-width: 92px;
-}
+
 .segmented {
   display: inline-flex;
   border: 1px solid var(--line);
@@ -715,14 +713,8 @@ body.dragging #drop-hint {
 
 /* labels collapse to icons before the toolbar would wrap */
 @media (max-width: 960px) {
-  .brand,
-  #play .label {
+  .brand {
     display: none;
-  }
-  #play {
-    min-width: 34px;
-    width: 34px;
-    padding: 0;
   }
   #toolbar {
     gap: 6px;
@@ -1050,4 +1042,97 @@ ul.workshop {
   flex: 1;
   min-width: 0;
   margin: 0;
+}
+
+/* ---------- File menu ---------- */
+.menu-anchor {
+  position: relative;
+}
+.menu {
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 6px);
+  left: 0;
+  min-width: 260px;
+  max-width: calc(100vw - 24px);
+  padding: 4px;
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+.menu [role='menuitem'] {
+  width: 100%;
+  justify-content: flex-start;
+  gap: 10px;
+  border: none;
+  min-height: 34px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+.menu [role='menuitem']:focus-visible {
+  outline-offset: -2px;
+}
+.menu .mi-label {
+  flex: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu kbd {
+  font-size: 11px;
+  color: var(--muted);
+  border: none;
+  background: none;
+}
+.menu .sep {
+  border-top: 1px solid var(--line);
+  margin: 4px 0;
+}
+.menu-heading {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  padding: 6px 10px 2px;
+}
+.menu .recent img,
+.menu .recent .nothumb {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  background: var(--soft);
+  flex: none;
+}
+.menu .recent small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.menu .recent.current .mi-label {
+  color: var(--accent);
+}
+
+/* ---------- tiny captions under toolbar icons (Settings › Appearance) ---------- */
+#toolbar .cap {
+  display: none;
+}
+body.nav-labels #toolbar .cap {
+  display: block;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+body.nav-labels #toolbar [data-cap] {
+  flex-direction: column;
+  gap: 3px;
+  min-height: 44px;
+  width: auto;
+  min-width: 34px;
+  padding: 4px 4px 3px;
+}
+body.nav-labels #toolbar [aria-pressed='true'] .cap,
+body.nav-labels #toolbar [aria-expanded='true'] .cap,
+body.nav-labels #toolbar .primary .cap {
+  color: inherit;
 }

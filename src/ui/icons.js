@@ -109,6 +109,15 @@ export function hydrateIcons(root = document) {
     el.querySelector('svg.i')?.remove();
     el.prepend(icon(el.dataset.icon));
   });
+  // tiny captions under toolbar icons (shown when body.nav-labels is on)
+  root.querySelectorAll('[data-cap]').forEach((el) => {
+    if (el.querySelector('.cap')) return;
+    const cap = document.createElement('span');
+    cap.className = 'cap';
+    cap.setAttribute('aria-hidden', 'true');
+    cap.textContent = el.dataset.cap;
+    el.append(cap);
+  });
 }
 
 /** Swap the icon on a button that already has one. */

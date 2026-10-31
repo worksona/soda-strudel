@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- **File pulldown** left of Play (replaces the Sketches icon): New sketch,
+  Open…, Open .soda file…, Save, Save as new, Rename…, Download .soda file and
+  up to six recent sketches. Full keyboard support (↓ ↑ Home End Esc).
+- **Tiny captions** under every toolbar icon, on by default as a test –
+  Settings › Appearance › “Small labels under the toolbar icons”.
+
 - **Real drums**: every drum in the soda pack is now a recording – electronic
   hits from Strudel's uzu-drumkit (Unlicense) and an acoustic kit from VCSL
   (CC0): kick, snare, clap, rim, hat, open hat, ride, crash, toms, shaker,

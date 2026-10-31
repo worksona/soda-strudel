@@ -1,4 +1,4 @@
-// Sketches page: save, open and delete your sketches (kept in IndexedDB with a
+// Open sketch page (File › Open…): save, open and delete your sketches (kept in IndexedDB with a
 // stage thumbnail), or open a .soda file.
 import { h, toast } from './dom.js';
 import { icon } from './icons.js';

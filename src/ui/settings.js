@@ -35,6 +35,12 @@ export function createSettings({ root, app }) {
         ),
       ),
       h('p.muted', {}, 'System follows your device. The stage stays dark in every theme – it is the screen your piece plays on.'),
+      h(
+        'label.toggle',
+        {},
+        h('input', { type: 'checkbox', checked: s.navLabels !== false, onchange: (e) => updateSettings({ navLabels: e.target.checked }) }),
+        'Small labels under the toolbar icons',
+      ),
       h('h4', {}, 'Profile'),
       h(
         'label.field',

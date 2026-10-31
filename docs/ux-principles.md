@@ -9,8 +9,10 @@ it that way. Check new features against them.
 2. **UI only for what code can't do:** permissions (mic, camera), files (import,
    export), and sharing. A new top-level button needs one of those reasons.
 3. **One row of outlined icons, one level of pages.** Left: brand (About),
-   Play, views, inputs. Right: pages (Sketches, Examples, Sounds, Media,
-   Reference), actions (Export, Share, Claude), then About and Settings. Every
+   the File pulldown (the one menu – file operations belong in a menu
+   everyone already knows), Play, views, inputs. Right: pages (Examples,
+   Sounds, Media, Reference), actions (Export, Share, Claude), then About and
+   Settings. Tiny captions under the icons (can be turned off). Every
    page has its own button and opens on the right, under the buttons – no
    menus inside menus, no tabs inside pages, no modal dialogs (Export and
    Share are pages too). The open page's icon is lit and

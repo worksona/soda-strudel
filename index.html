@@ -11,35 +11,38 @@
   <body data-mode="code">
     <header id="toolbar" role="toolbar" aria-label="soda.strudel">
       <button id="brand" class="brand" data-page="about" title="About soda.strudel">soda.strudel</button>
-      <button id="play" class="primary" data-icon="play" aria-pressed="false" title="Play / update (ctrl+enter) · Stop (ctrl+.)"><span class="label">Play</span></button>
+      <div class="menu-anchor">
+        <button id="file" class="icon-btn" data-icon="sketches" data-cap="File" aria-haspopup="menu" aria-expanded="false" aria-controls="file-menu" title="File: new, open, save" aria-label="File"></button>
+        <div id="file-menu" class="menu" role="menu" aria-label="File" hidden></div>
+      </div>
+      <button id="play" class="icon-btn primary" data-icon="play" data-cap="Play" aria-pressed="false" title="Play / update (ctrl+enter) · Stop (ctrl+.)" aria-label="Play"></button>
       <div id="modes" class="segmented" role="group" aria-label="View">
-        <button data-mode="code" data-icon="code" aria-pressed="true" title="Code over the stage" aria-label="Code"></button>
-        <button data-mode="stage" data-icon="stage" aria-pressed="false" title="Stage only" aria-label="Stage"></button>
-        <button data-mode="full" data-icon="full" title="Full screen" aria-label="Full screen"></button>
+        <button data-mode="code" data-icon="code" data-cap="Code" aria-pressed="true" title="Code over the stage" aria-label="Code"></button>
+        <button data-mode="stage" data-icon="stage" data-cap="Stage" aria-pressed="false" title="Stage only" aria-label="Stage"></button>
+        <button data-mode="full" data-icon="full" data-cap="Full" title="Full screen" aria-label="Full screen"></button>
       </div>
       <div class="group" role="group" aria-label="Inputs">
-        <button id="mic" class="icon-btn" data-icon="mic" title="Record a take from the microphone" aria-label="Record a take"></button>
-        <button id="camera" class="icon-btn" data-icon="camera" title="Camera on / off (stays on this device)" aria-label="Camera" aria-pressed="false"></button>
-        <button id="flip" class="icon-btn" data-icon="flip" title="Switch camera" aria-label="Switch camera" hidden></button>
+        <button id="mic" class="icon-btn" data-icon="mic" data-cap="Mic" title="Record a take from the microphone" aria-label="Record a take"></button>
+        <button id="camera" class="icon-btn" data-icon="camera" data-cap="Camera" title="Camera on / off (stays on this device)" aria-label="Camera" aria-pressed="false"></button>
+        <button id="flip" class="icon-btn" data-icon="flip" data-cap="Flip" title="Switch camera" aria-label="Switch camera" hidden></button>
       </div>
       <span class="spacer"></span>
       <nav class="group pages" aria-label="Pages">
-        <button class="icon-btn" data-page="sketches" data-icon="sketches" title="Sketches" aria-label="Sketches"></button>
-        <button class="icon-btn" data-page="examples" data-icon="examples" title="Examples" aria-label="Examples"></button>
-        <button class="icon-btn" data-page="sounds" data-icon="sounds" title="Sounds" aria-label="Sounds"></button>
-        <button class="icon-btn" data-page="media" data-icon="media" title="Media" aria-label="Media"></button>
-        <button class="icon-btn" data-page="reference" data-icon="reference" title="Reference" aria-label="Reference"></button>
+        <button class="icon-btn" data-page="examples" data-icon="examples" data-cap="Examples" title="Examples" aria-label="Examples"></button>
+        <button class="icon-btn" data-page="sounds" data-icon="sounds" data-cap="Sounds" title="Sounds" aria-label="Sounds"></button>
+        <button class="icon-btn" data-page="media" data-icon="media" data-cap="Media" title="Media" aria-label="Media"></button>
+        <button class="icon-btn" data-page="reference" data-icon="reference" data-cap="Docs" title="Reference" aria-label="Reference"></button>
       </nav>
       <div class="group actions" role="group" aria-label="Share and export">
-        <button id="export" class="icon-btn" data-page="export" data-icon="download" title="Export video, audio or a .soda file" aria-label="Export"></button>
-        <button id="share" class="icon-btn" data-page="share" data-icon="share" title="Copy a link" aria-label="Share"></button>
-        <button id="claude" class="icon-btn" data-icon="claude" title="Copy this sketch for Claude" aria-label="Claude"></button>
+        <button id="export" class="icon-btn" data-page="export" data-icon="download" data-cap="Export" title="Export video, audio or a .soda file" aria-label="Export"></button>
+        <button id="share" class="icon-btn" data-page="share" data-icon="share" data-cap="Share" title="Copy a link" aria-label="Share"></button>
+        <button id="claude" class="icon-btn" data-icon="claude" data-cap="Claude" title="Copy this sketch for Claude" aria-label="Claude"></button>
       </div>
       <div class="group pages" role="group" aria-label="About and settings">
-        <button class="icon-btn" data-page="about" data-icon="about" title="About and help" aria-label="About"></button>
-        <button class="icon-btn" data-page="settings" data-icon="settings" title="Settings" aria-label="Settings"></button>
+        <button class="icon-btn" data-page="about" data-icon="about" data-cap="About" title="About and help" aria-label="About"></button>
+        <button class="icon-btn" data-page="settings" data-icon="settings" data-cap="Settings" title="Settings" aria-label="Settings"></button>
       </div>
-      <button id="more" class="icon-btn" data-page="more" data-icon="more" title="Pages" aria-label="Pages"></button>
+      <button id="more" class="icon-btn" data-page="more" data-icon="more" data-cap="More" title="Pages" aria-label="Pages"></button>
     </header>
 
     <main id="main">

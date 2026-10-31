@@ -11,7 +11,7 @@ import { importFiles, registerLibrary, libraryChanged, saveTake } from './media/
 import { cameraOn, disableCamera, enableCamera, flipCamera, onCameraChange } from './media/camera.js';
 import { isRecording, startTake, stopTake } from './media/mic.js';
 import { saveSketch as storeSketch } from './storage/db.js';
-import { getSettings } from './settings.js';
+import { getSettings, onSettings } from './settings.js';
 import { initEditorSettings } from './editor/assist.js';
 import { aboutView, editorThemeChoice, examplesView, onLog, referenceView } from './ui/learn.js';
 import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
@@ -22,7 +22,10 @@ import { createLibrary } from './ui/library.js';
 import { createSketches } from './ui/sketches.js';
 import { createSettings } from './ui/settings.js';
 import { createShare } from './ui/share.js';
-import { createExport } from './ui/export.js';
+import { createExport, slug } from './ui/export.js';
+import { createFileMenu } from './ui/fileMenu.js';
+import { buildSodaFile } from './share/sodafile.js';
+import { download } from './export/record.js';
 import { copyForClaude } from './ui/claude.js';
 import { hydrateIcons, icon, setIcon } from './ui/icons.js';
 import { $, h, lsGet, lsSet, toast } from './ui/dom.js';
@@ -123,7 +126,8 @@ function setPlaying(next) {
   document.body.classList.toggle('playing', next);
   const btn = $('#play');
   setIcon(btn, next ? 'stop' : 'play');
-  btn.querySelector('.label').textContent = next ? 'Stop' : 'Play';
+  btn.querySelector('.cap').textContent = next ? 'Stop' : 'Play';
+  btn.setAttribute('aria-label', next ? 'Stop' : 'Play');
   btn.setAttribute('aria-pressed', String(next));
 }
 
@@ -337,7 +341,7 @@ const app = {
 const panel = $('#panel');
 const panelBody = $('#panel .drawer-body');
 const PAGES = {
-  sketches: 'Sketches',
+  sketches: 'Open sketch',
   examples: 'Examples',
   sounds: 'Sounds',
   media: 'Media',
@@ -364,7 +368,7 @@ function morePage() {
     'div.page-grid',
     {},
     Object.entries(PAGES)
-      .filter(([k]) => k !== 'more')
+      .filter(([k]) => k !== 'more' && k !== 'sketches') // sketches live in the File menu
       .map(([k, title]) => h('button', { onclick: () => openPage(k, true) }, icon({ export: 'download' }[k] ?? k, 22), title)),
     action('claude', 'claude', 'Claude'),
   );
@@ -402,6 +406,18 @@ function openPage(next, force) {
   if (open) renderPage();
 }
 app.openPage = (p) => openPage(p, true);
+app.downloadSoda = async () => {
+  const sketch = app.getSketch();
+  const { blob, manifest } = await buildSodaFile(sketch);
+  download(blob, `${slug(sketch.title)}.soda`);
+  toast(`Downloaded .soda file with ${manifest.sounds.length} of your sounds and ${manifest.media.length} media file(s).`);
+};
+createFileMenu({ button: $('#file'), menu: $('#file-menu'), app });
+
+// tiny captions under the toolbar icons (a test – Settings › Appearance)
+const applyNavLabels = ({ navLabels }) => document.body.classList.toggle('nav-labels', navLabels !== false);
+applyNavLabels(getSettings());
+onSettings(applyNavLabels);
 
 document.querySelectorAll('#toolbar [data-page]').forEach((b) => b.addEventListener('click', () => openPage(b.dataset.page)));
 $('#panel-close').addEventListener('click', () => openPage(page, false));

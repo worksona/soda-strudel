@@ -41,10 +41,14 @@ One row of outlined icons, grouped:
 
 | Group | Buttons |
 |---|---|
-| Left | **soda.strudel** (opens About) · Play · Code / Stage / Full screen · Mic / Camera |
-| Pages | **Sketches** · **Examples** · **Sounds** · **Media** · **Reference** |
+| Left | **soda.strudel** (opens About) · **File** ▾ · Play · Code / Stage / Full screen · Mic / Camera |
+| Pages | **Examples** · **Sounds** · **Media** · **Reference** |
 | Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) |
 | Right | **About** · **Settings** |
+
+**File** is a pulldown: New sketch · Open… · Open .soda file… · Save (ctrl+s) ·
+Save as new · Rename… · Download .soda file · Recent sketches. Tiny captions
+sit under every toolbar icon (Settings › Appearance turns them off).
 
 Each page opens on the right, one level deep – no tabs inside pages and no pop-up dialogs. Click the
 lit icon again (or Esc) to close. On phones the pages and actions fold into one
@@ -52,7 +56,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 
 | Page | Contains |
 |---|---|
-| Sketches | Save, save as new, new, open, delete, open a .soda file |
+| Open sketch (File › Open…) | Every saved sketch with thumbnails: open, delete; save / save as new / new |
 | Examples | Two tabs: **Examples** (19 soda pieces by category) and **Workshop** (all 145 examples from the [Strudel workshop](https://strudel.cc/workshop/getting-started/), by chapter). Listen / Open on each |
 | Sounds | One browser for every sound: yours (uploads and mic takes), the soda pack, GitHub libraries (load, add to sketch, forget, suggestions), Strudel's drum machines (by kit), samples, synths, soundfonts. Click to hear, double-click or Enter to insert, outlined = pitched |
 | Media | Your images and videos, the soda media pack, camera snippets |
