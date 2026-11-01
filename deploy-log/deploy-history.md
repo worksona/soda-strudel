@@ -28,3 +28,5 @@
 | 2026-11-01 | Netlify | https://6ae79231394b2d2b381c6857--soda-strudel.netlify.app | Preview | Draft (e2299da), all 141 allowlisted songs fetched through /api/piece |
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | e2299da: 141 Repertoire songs open and play in soda (Listen, Open here, #song=), Watch here, community sounds (deploy 6ae792534d18e4b51c0bcd69) |
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | Service worker v2: data JSON network-first so a deploy's data arrives with its code (deploy 6ae7928e83214f6087fba768) |
+| 2026-11-01 | Netlify | https://6ae79f4f311752a90bf6bcb5--soda-strudel.netlify.app | Preview | Draft (b1054c1), Codeberg listings + song files for fcm, taconi, ed_crub through /api/piece |
+| 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | Song repositories: Repertoire › Repositories, #repo= links, Codeberg via /api/piece (deploy 6ae79f768f7c80cbdae7b1e7) |

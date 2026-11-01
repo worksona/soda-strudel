@@ -1,13 +1,13 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-01T20:15:00Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-01T21:10:00Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae7928e83214f6087fba768--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae79231394b2d2b381c6857--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae79f768f7c80cbdae7b1e7--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae79f4f311752a90bf6bcb5--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae7928e83214f6087fba768 |
+| Deploy ID | 6ae79f768f7c80cbdae7b1e7 |
 | Team | worksona |
 | Project type | Static (Vite build) plus two functions: `/api/shorten` (a47l.com short links) and `/api/piece` (opens allowlisted Repertoire songs whose code is public at its source) |
 | Source path | dist/ (built locally with `pnpm build`, commit of the service worker fix after e2299da) |
@@ -103,3 +103,4 @@ netlify deploy --dir dist --prod     # production
 - Repertoire collections: `/api/piece` returns all 18 allowlisted pieces (draft), refuses others (403) on production; `#collection=open-to-play` on production opens the collection and Open here loads a Codeberg piece with its credit header, no errors
 - Songs in soda: 141/141 allowlisted songs fetched through `/api/piece` on the draft; on production Collections (15) load, Listen plays Lavender Town without touching the editor and Stop resets it, Watch here docks a youtube-nocookie player, the 3 community banks load, `#song=` opens and plays Ossuary with its credit
 - Service worker v2 takes over on the first visit and drops the old cache (`soda-v1`), so data JSON is no longer stale after a deploy
+- Song repositories: draft lists the three Codeberg repos and fetches a song file from each; production `#song=RES-L-005` opens and plays eefano's "Up In Annie's Room" with credit, `#repo=codeberg:ed_crub/ed-patterns-strudel` lists 10 songs and Open here plays one with no errors, Repositories tab shows 13 repos; bogus Codeberg names refused (400)
