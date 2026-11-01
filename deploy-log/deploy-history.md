@@ -17,3 +17,5 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 851ef9b: hover hints, Record button, live mic input, tooltips switch, Sounds tabs, a47l.com short links via /api/shorten (deploy 6ae69a4b3dea838f53f5b96f) |
 | 2026-10-31 | Netlify | https://6ae6a5af5b25ad27db8793b6--soda-strudel.netlify.app | Preview | Draft (c060542), recorder checked |
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | c060542: Export becomes a quick recorder next to Record – video or WAV, start/stop, gear, player (deploy 6ae6a5d2a1d0df4fb6726d70) |
+| 2026-10-31 | Netlify | https://6ae6a7cd85ded0a7691f85b1--soda-strudel.netlify.app | Preview | Draft (430ac85), viewer button checked |
+| 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 430ac85: shared links play like a video – tap or space to play / stop, play button bottom right (deploy 6ae6a807f1f5057326b23266) |
