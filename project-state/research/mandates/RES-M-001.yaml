@@ -4,7 +4,7 @@
 id: RES-M-001
 kind: research-mandate
 slug: strudel-repertoire
-status: draft
+status: standing
 iteration: 1
 headline: "Which Strudel songs, patterns and learning resources, across genres, are worth learning from and showing in soda.strudel – and where are new ones appearing?"
 questions:
@@ -71,12 +71,16 @@ deepweb_depth_cap: 3
 source_relevance:
   - { ref: "documents/inbox/strudel-repertoire-sources.md", score: 3 }
 corpus_independent: false
-standing: { cadence: weekly, delta_audience: "soda.strudel maintainers" }
+standing:
+  cadence: weekly
+  delta_audience: soda.strudel maintainers
 null_result_statement: ~
-locked_at: ~
-locked_iteration: ~
+locked_at: "2026-11-01T15:55:00Z"
+locked_iteration: 1
 completed_at: ~
 killed_at: ~
 kill_reason: ~
 owner: "David Olsson <dolsson@aimqc.com>"
 created: 2026-11-01T15:45:00Z
+last_modified: "2026-11-01T15:55:36.364Z"
+last_modified_by: david@atomic47.co

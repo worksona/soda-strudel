@@ -3,7 +3,7 @@ kind: backlog
 title: '[research] Lock RES-M-001 so the weekly routine runs in full'
 produced_by: research-ingest
 produced_at: '2026-11-01T17:00:00Z'
-status: queued
+status: sent
 surface: none
 action_required: Approve to schedule, or dismiss with a reason.
 artifact: 2026-11-01-backlog-research-01.md
@@ -11,3 +11,4 @@ lane: research
 priority: P1
 owner: person
 mandate: RES-M-001
+dismiss_reason: RES-M-001 locked (iteration 1) and made standing, weekly, 2026-11-01

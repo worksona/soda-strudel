@@ -30,7 +30,7 @@ What is queued for the repertoire, by lane. Approve or dismiss on the Queue scre
 
 ## Research
 
-- P1 **[research] Lock RES-M-001 so the weekly routine runs in full** – `2026-11-01-backlog-research-01` – a person decides
+- ✓ **[research] Lock RES-M-001** – locked and standing (weekly) 2026-11-01
 - P1 **[research] Inspect the 11 Bakery-share tracks** – `2026-11-01-backlog-research-02`
 - P1 **[research] Fill genre gaps with original, licensed pieces** – `2026-11-01-backlog-research-03`
 - P2 **[research] Sound bank rights check (17 ask-owner, 6 do-not-ship)** – `2026-11-01-backlog-research-04`
