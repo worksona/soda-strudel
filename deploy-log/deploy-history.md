@@ -13,3 +13,5 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 844084f: Examples and Share stay on the phone toolbar (deploy 6ae64ed7673fbcfa8754fd3e) |
 | 2026-10-31 | Netlify | https://6ae68f0e41d26ea77df5bf09--soda-strudel.netlify.app | Preview | Draft (70cd93a), cmd+enter plays, focus starts in the code |
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 70cd93a: keyboard commands reach the code wherever focus is (deploy 6ae68ff10e9b97dd71b4f5e4) |
+| 2026-10-31 | Netlify | https://6ae699dee99155d3fa9bc5c7--soda-strudel.netlify.app | Preview | Draft (851ef9b), short link made and redirect checked |
+| 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 851ef9b: hover hints, Record button, live mic input, tooltips switch, Sounds tabs, a47l.com short links via /api/shorten (deploy 6ae69a4b3dea838f53f5b96f) |

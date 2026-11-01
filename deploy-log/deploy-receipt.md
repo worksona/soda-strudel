@@ -1,17 +1,17 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-01T01:03:55Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-01T01:48:33Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae68ff10e9b97dd71b4f5e4--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae68f0e41d26ea77df5bf09--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae69a4b3dea838f53f5b96f--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae699dee99155d3fa9bc5c7--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae68ff10e9b97dd71b4f5e4 |
+| Deploy ID | 6ae69a4b3dea838f53f5b96f |
 | Team | worksona |
-| Project type | Static (Vite build) – no functions, no backend |
-| Source path | dist/ (built locally with `pnpm build`, commit 70cd93a) |
-| Build | Local only – Netlify does not build (no build minutes) |
+| Project type | Static (Vite build) plus one function, `/api/shorten` (a47l.com short links) |
+| Source path | dist/ (built locally with `pnpm build`, commit 851ef9b) |
+| Build | Local only – Netlify does not build (no build minutes); the CLI bundles `netlify/functions` |
 | Custom domain | none |
 
 ## Verified
@@ -25,14 +25,22 @@
 - Video effectors (`fx("vhs:kaleido")`) run on the draft deploy with no console errors; `/strudel-docs.json` lists them
 - Phone toolbar (375px) is one row: File, View, Input, Play, Update, Examples, Share, More
 - Editor keys: cmd+enter plays, cmd+. stops, cmd+f finds, focus starts in the code; no console errors
+- `/api/shorten` reports enabled, refuses non-sketch links; Share › Short link made https://a47l.com/TCLsM, which 302s to the sketch
+- Record button and micLevel in the live bundle; toolbar one row; no console errors
 
 ## Configuration Used
 
 ```toml
-# Static site: everything runs in the browser. No functions, no backend.
+# Static site: everything runs in the browser. The one function,
+# /api/shorten, makes optional short links on a47l.com; its token is the
+# API_TOKEN (or SHORTLINK_TOKEN) secret in the Netlify environment.
 [build]
   command = "pnpm build"
   publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+
 
 [build.environment]
   NODE_VERSION = "22"
@@ -79,7 +87,7 @@
 
 ## Environment Variables Set
 
-None – the app is static and needs no secrets.
+- `SHORTLINK_TOKEN` (or `API_TOKEN`) – a47l.com bearer token for `/api/shorten`, set by the owner as a secret. Optional `SHORTLINK_API_URL` (default https://a47l.com).
 
 ## Redeploy
 
