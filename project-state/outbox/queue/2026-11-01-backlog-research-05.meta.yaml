@@ -1,0 +1,13 @@
+id: 2026-11-01-backlog-research-05
+kind: backlog
+title: '[research] Verify the five UNVERIFIED sources and the Mirakl article'
+produced_by: research-ingest
+produced_at: '2026-11-01T17:00:00Z'
+status: queued
+surface: none
+action_required: Approve to schedule, or dismiss with a reason.
+artifact: 2026-11-01-backlog-research-05.md
+lane: research
+priority: P2
+owner: person
+mandate: RES-M-001

@@ -1,0 +1,13 @@
+id: 2026-11-01-backlog-research-02
+kind: backlog
+title: '[research] Inspect the 11 Bakery-share tracks'
+produced_by: research-ingest
+produced_at: '2026-11-01T17:00:00Z'
+status: queued
+surface: none
+action_required: Approve to schedule, or dismiss with a reason.
+artifact: 2026-11-01-backlog-research-02.md
+lane: research
+priority: P1
+owner: claude
+mandate: RES-M-001

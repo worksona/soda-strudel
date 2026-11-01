@@ -1,0 +1,13 @@
+id: 2026-11-01-backlog-harvest-07
+kind: backlog
+title: '[harvest] Harvest eefano/strudel-songs-collection in full'
+produced_by: research-ingest
+produced_at: '2026-11-01T17:00:00Z'
+status: queued
+surface: none
+action_required: Approve to schedule, or dismiss with a reason.
+artifact: 2026-11-01-backlog-harvest-07.md
+lane: harvest
+priority: P1
+owner: claude
+mandate: RES-M-001

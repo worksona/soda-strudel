@@ -1,0 +1,364 @@
+{
+  "repertoire": [
+    {
+      "src": "repertoire-ambient",
+      "src_title": "Songs: Ambient, generative and experimental",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-ambient",
+      "src_title": "Songs: Ambient, generative and experimental",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-backlog",
+      "src_title": "Repertoire backlog",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-backlog",
+      "src_title": "Repertoire backlog",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-bass",
+      "src_title": "Songs: Bass, breaks and jungle",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-bass",
+      "src_title": "Songs: Bass, breaks and jungle",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-classical",
+      "src_title": "Songs: Classical, jazz and traditional",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-classical",
+      "src_title": "Songs: Classical, jazz and traditional",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-dance",
+      "src_title": "Songs: Dance and electronic",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-dance",
+      "src_title": "Songs: Dance and electronic",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-game",
+      "src_title": "Songs: Video game and chiptune",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-game",
+      "src_title": "Songs: Video game and chiptune",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-pop",
+      "src_title": "Songs: Pop, rock, metal and hip-hop",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-pop",
+      "src_title": "Songs: Pop, rock, metal and hip-hop",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-resources",
+      "src_title": "Learning resources and tools",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-resources",
+      "src_title": "Learning resources and tools",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-reuse-and-citation",
+      "src_title": "Reuse and citation rules",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-reuse-and-citation",
+      "src_title": "Reuse and citation rules",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-sound-banks",
+      "src_title": "Sound banks",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-sound-banks",
+      "src_title": "Sound banks",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-sources",
+      "src_title": "Sources and how we watch them",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-sources",
+      "src_title": "Sources and how we watch them",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-reuse-and-citation": [
+    {
+      "src": "repertoire-ambient",
+      "src_title": "Songs: Ambient, generative and experimental",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-bass",
+      "src_title": "Songs: Bass, breaks and jungle",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-classical",
+      "src_title": "Songs: Classical, jazz and traditional",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-dance",
+      "src_title": "Songs: Dance and electronic",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-game",
+      "src_title": "Songs: Video game and chiptune",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-pop",
+      "src_title": "Songs: Pop, rock, metal and hip-hop",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-resources",
+      "src_title": "Learning resources and tools",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-techniques": [
+    {
+      "src": "repertoire-ambient",
+      "src_title": "Songs: Ambient, generative and experimental",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-bass",
+      "src_title": "Songs: Bass, breaks and jungle",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-classical",
+      "src_title": "Songs: Classical, jazz and traditional",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-dance",
+      "src_title": "Songs: Dance and electronic",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-game",
+      "src_title": "Songs: Video game and chiptune",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-pop",
+      "src_title": "Songs: Pop, rock, metal and hip-hop",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-resources": [
+    {
+      "src": "repertoire-sound-banks",
+      "src_title": "Sound banks",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-dance": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-game": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-classical": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-pop": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-bass": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-ambient": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-sound-banks": [
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-sources": [
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-backlog": [
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ]
+}

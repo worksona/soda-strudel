@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-11-01T15:50:42.327Z",
+  "pages": 13,
+  "coverage": {
+    "documented": 0,
+    "total": 0,
+    "pct": 100,
+    "undocumented": []
+  },
+  "orphans": [],
+  "dead_ends": [],
+  "wanted": [],
+  "broken_refs": [],
+  "stale": []
+}

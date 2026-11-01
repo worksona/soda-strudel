@@ -18,3 +18,19 @@ documents:
   - weekly harvest search queries
   relevant_to:
   - {mandate: RES-M-001, score: 3}
+- id: doc-repertoire-catalogue
+  title: soda.strudel repertoire catalogue (songs, learning resources, sound banks)
+  path: repertoire/catalogue.yaml
+  type: reference
+  doc_kind: catalogue
+  date: '2026-11-01'
+  author: research-ingest for David Olsson (harvest of awesome-strudel + the sources document §2; audited 2026-11-01)
+  status: current
+  triage_state: processed
+  registered: '2026-11-01T17:40:00Z'
+  registered_by: dolsson@aimqc.com
+  extracted:
+  - 52 songs (6 genre families), 17 learning resources and tools, 30 sound banks
+  - per item citation, audit (link, license, date), description, techniques, reuse status
+  relevant_to:
+  - {mandate: RES-M-001, score: 3}
