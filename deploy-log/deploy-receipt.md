@@ -1,16 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-01T03:26:54Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-01T07:40:00Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae6b1561aaae9cd631c688f--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae6b06fa570e5e653752b09--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae757c9f244153c91ed1017--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae757ba6cce646fad7229d7--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae6b1561aaae9cd631c688f |
+| Deploy ID | 6ae757c9f244153c91ed1017 |
 | Team | worksona |
 | Project type | Static (Vite build) plus one function, `/api/shorten` (a47l.com short links) |
-| Source path | dist/ (built locally with `pnpm build`, commit 9012b39) |
+| Source path | dist/ (built locally with `pnpm build`, commit 1a70520) |
 | Build | Local only – Netlify does not build (no build minutes); the CLI bundles `netlify/functions` |
 | Custom domain | none |
 
@@ -99,3 +99,4 @@ pnpm test && pnpm build
 netlify deploy --dir dist            # draft – check it
 netlify deploy --dir dist --prod     # production
 ```
+- Video export with Code over the stage: a recorded MP4 shows the code, note outlines, slider and inline pianoroll (dev); the live bundle has the code layer, `/api/shorten` enabled

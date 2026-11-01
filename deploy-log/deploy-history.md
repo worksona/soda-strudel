@@ -21,3 +21,5 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 430ac85: shared links play like a video – tap or space to play / stop, play button bottom right (deploy 6ae6a807f1f5057326b23266) |
 | 2026-10-31 | Netlify | https://6ae6b06fa570e5e653752b09--soda-strudel.netlify.app | Preview | Draft (9012b39), Share views checked |
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 9012b39: new First light, Strudel visuals match strudel.cc, Share › Opens as (deploy 6ae6b1561aaae9cd631c688f) |
+| 2026-11-01 | Netlify | https://6ae757ba6cce646fad7229d7--soda-strudel.netlify.app | Preview | Draft (1a70520), bundle and /api/shorten checked |
+| 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | 1a70520: video exports include the code layer in Code over the stage (deploy 6ae757c9f244153c91ed1017) |
