@@ -4,6 +4,7 @@
 import {
   createElement,
   Radio,
+  CircleDot,
   AudioLines,
   Crop,
   ExternalLink,
@@ -88,6 +89,7 @@ const ICONS = {
   full: Maximize,
   mic: Mic,
   input: Radio,
+  rec: CircleDot,
   stage: Monitor,
   package: Package,
   rename: Pencil,

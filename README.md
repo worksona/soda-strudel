@@ -50,9 +50,9 @@ One row of outlined icons, grouped:
 
 | Group | Buttons |
 |---|---|
-| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Stage, the default · Code over the stage · Full screen · Show export frame) · **Input** ▾ (Microphone · Camera · Switch camera – live sources) · Play · **Update** · **Record** (a mic take that becomes a sound) |
+| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Stage, the default · Code over the stage · Full screen · Show export frame) · **Input** ▾ (Microphone · Camera · Switch camera – live sources) · Play · **Update** · **Record** (a mic take that becomes a sound) · **Export** (the recorder: video or WAV, start / stop, gear, player) |
 | Pages | **Examples** · **Sounds** · **Media** · **Reference** |
-| Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) · **Vibe** (the strudel-vibe skill: install, prompts, links) |
+| Out | **Share** (page) · **Claude** (copies the sketch for a chat) · **Vibe** (the strudel-vibe skill: install, prompts, links) |
 | Right | **About** · **Settings** |
 
 **File** is a pulldown: New sketch · Open .soda file… · Save (ctrl+s) ·
@@ -76,7 +76,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 | Sounds | Two tabs. **My sounds**: your uploads and mic takes. **soda sounds**: the soda pack, GitHub libraries (load, add to sketch, forget, suggestions), Strudel's drum machines (by kit), samples, synths, soundfonts. Click to hear, double-click or Enter to insert, outlined = pitched |
 | Media | Your images and videos, the soda media pack, camera snippets, the video effectors |
 | Reference | Every Strudel and soda function, searchable, examples with Listen / Insert |
-| Export | Shape (the export frame – the stage itself always fills the screen; Auto follows the device), size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
+| Export (page) | Opened from the recorder's gear, or More on phones. Shape (the export frame – the stage itself always fills the screen; Auto follows the device), size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
 | Share | Title, then Copy link (plays in any browser; the sketch is inside the link). Optional **Short link** checkbox (a47l.com, through the site's `/api/shorten` function; the token is the `API_TOKEN` (or `SHORTLINK_TOKEN`) Netlify secret) |
 | About | What it is, how it works, keys, mini-notation, links, and the log |
 | Settings | Appearance (dark by default · light · system) · Profile · Screen and export · Editor · Exports · Storage |

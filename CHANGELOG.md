@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+- **Export is a quick recorder.** Export sits next to Record in the top bar
+  and opens a recorder over the stage: Video + sound or Sound only (lossless
+  WAV), one big Start. While recording: a running timer (with progress when a
+  length is set), a level meter and the size so far, and the Export button
+  turns into the timer – one tap stops. Then a player shows the result with
+  Download, Share (phones), Record again and Discard; it is also kept in
+  Settings › Exports. The gear holds the frame, size, length (until you stop,
+  or 4–64 cycles, stopping on its own) and “start on the next cycle” so clips
+  loop cleanly. The live microphone is recorded when Input › Microphone is on.
+  The full Export page (WAV faster than real time, .soda file) is one link
+  away, and in More on phones. On narrow phones all ten buttons stay on one row.
 - **Short links with a47l.com.** Share has a “Short link” checkbox: Copy
   link stores the full sketch link on a47l.com and copies the short one,
   falling back to the full link if that fails. The token is a Netlify secret

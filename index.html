@@ -32,6 +32,7 @@
       <button id="play" class="icon-btn primary" data-icon="play" data-cap="Play" aria-pressed="false" title="Play (ctrl+enter) · Stop (ctrl+.)" aria-label="Play"></button>
       <button id="update" class="icon-btn" data-icon="update" data-cap="Update" title="Apply your changes while playing (ctrl+enter)" aria-label="Update" disabled></button>
       <button id="record" class="icon-btn" data-icon="mic" data-cap="Record" aria-pressed="false" title="Record a take with the microphone – it becomes a sound" aria-label="Record"></button>
+      <button id="export" class="icon-btn" data-icon="rec" data-cap="Export" aria-pressed="false" title="Record the stage as video, or the sound as WAV" aria-label="Export – record video or audio"></button>
       <span class="spacer"></span>
       <nav class="group pages" aria-label="Pages">
         <button class="icon-btn keep" data-page="examples" data-icon="examples" data-cap="Examples" title="Examples" aria-label="Examples"></button>
@@ -40,7 +41,6 @@
         <button class="icon-btn" data-page="reference" data-icon="reference" data-cap="Docs" title="Reference" aria-label="Reference"></button>
       </nav>
       <div class="group actions" role="group" aria-label="Share and export">
-        <button id="export" class="icon-btn" data-page="export" data-icon="download" data-cap="Export" title="Export video, audio or a .soda file" aria-label="Export"></button>
         <button id="share" class="icon-btn keep" data-page="share" data-icon="share" data-cap="Share" title="Copy a link" aria-label="Share"></button>
         <button id="claude" class="icon-btn" data-icon="claude" data-cap="Claude" title="Copy this sketch for Claude" aria-label="Claude"></button>
         <button id="vibe" class="icon-btn" data-page="vibe" data-icon="vibe" data-cap="Vibe" title="Vibe music with Claude – the strudel-vibe skill" aria-label="Vibe"></button>
@@ -56,6 +56,7 @@
       <div id="stage" aria-label="Stage"></div>
       <div id="editor"></div>
       <div id="error" role="status" hidden></div>
+      <div id="recorder" class="recorder" role="region" aria-label="Recorder" hidden></div>
     </main>
 
     <aside id="panel" hidden aria-labelledby="panel-title">

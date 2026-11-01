@@ -1391,10 +1391,10 @@ body.nav-labels #toolbar #update.pending .cap {
   }
 }
 
-/* narrow phones: nine buttons on one row – tighter gaps, edges and captions */
+/* narrow phones: ten buttons on one row – tighter gaps, edges and captions */
 @media (max-width: 440px) {
   #toolbar {
-    gap: 2px;
+    gap: 1px;
     padding-left: max(6px, env(safe-area-inset-left));
     padding-right: max(6px, env(safe-area-inset-right));
   }
@@ -1402,10 +1402,168 @@ body.nav-labels #toolbar #update.pending .cap {
     gap: 2px;
   }
   body.nav-labels #toolbar .cap {
-    font-size: 8px;
+    font-size: 7.5px;
     letter-spacing: 0;
   }
   body.nav-labels #toolbar [data-cap] {
-    padding-inline: 2px;
+    min-width: 30px;
+    padding-inline: 1px;
+  }
+  #toolbar .spacer {
+    flex: 1 1 0;
+  }
+}
+
+/* ---------- recorder dock (Export in the top bar) ---------- */
+.recorder {
+  position: fixed;
+  z-index: 36; /* over the stage and an open side panel, under menus */
+  right: max(16px, env(safe-area-inset-right));
+  top: calc(var(--bar) + 12px);
+  width: min(380px, calc(100vw - 32px));
+  max-height: calc(100vh - var(--bar) - 32px);
+  overflow: auto;
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px 14px;
+  background: var(--pop);
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+.recorder[hidden] {
+  display: none;
+}
+.rec-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.rec-head strong {
+  flex: 1;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.recorder .segmented {
+  width: 100%;
+}
+.recorder .segmented button {
+  flex: 1;
+}
+.rec-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  clip-path: circle(50%); /* round even under the square-corners rule */
+  background: var(--live);
+  vertical-align: -1px;
+}
+.rec-dot.on {
+  animation: rec-blink 1s steps(2, start) infinite;
+}
+@keyframes rec-blink {
+  to {
+    visibility: hidden;
+  }
+}
+.rec-start,
+.rec-stop {
+  min-height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+}
+.rec-start {
+  border-color: var(--live);
+}
+.rec-start:hover:not(:disabled) {
+  background: rgba(255, 59, 92, 0.12);
+}
+.rec-stop {
+  background: var(--live);
+  border-color: var(--live);
+  color: #fff;
+}
+.rec-summary {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.rec-live {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.rec-time {
+  font: 700 28px/1 ui-monospace, 'SF Mono', Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+/* level meter: the width follows --level (0..1) */
+.rec-level {
+  flex: 1;
+  height: 8px;
+  background: var(--line);
+  position: relative;
+  overflow: hidden;
+}
+.rec-level::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--level, 0) * 100%);
+  background: linear-gradient(90deg, var(--accent), #ffd23f 75%, var(--live));
+  transition: width 0.08s linear;
+}
+.recorder progress {
+  width: 100%;
+  height: 6px;
+}
+.rec-player {
+  width: 100%;
+  max-height: 46vh;
+  background: #000;
+}
+audio.rec-player {
+  background: none;
+}
+.rec-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.rec-actions button {
+  flex: 1 1 auto;
+  justify-content: center;
+}
+.rec-gear {
+  display: grid;
+  gap: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+.rec-gear .segmented {
+  width: auto;
+}
+/* phones: a sheet at the bottom, clear of the stage's middle */
+@media (max-width: 640px) {
+  .recorder {
+    top: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 70vh;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding-bottom: max(14px, env(safe-area-inset-bottom));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rec-dot.on {
+    animation: none;
   }
 }

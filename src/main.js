@@ -22,6 +22,7 @@ import { repl } from '@strudel/core';
 import { clearHydra } from '@strudel/hydra';
 import { getDefaultValue, getSuperdoughAudioController, multiChannelOrbits } from 'superdough';
 import { createLibrary } from './ui/library.js';
+import { createRecorder } from './ui/recorder.js';
 import { createSettings } from './ui/settings.js';
 import { createShare } from './ui/share.js';
 import { createExport, slug } from './ui/export.js';
@@ -498,6 +499,7 @@ const app = {
     return pattern;
   },
   getCps: () => mirror.repl.scheduler.cps,
+  getCycle: () => mirror.repl.scheduler.now(),
   isPlaying: () => playing,
   play,
   stop,
@@ -540,6 +542,8 @@ const pageOpen = (p) => !panel.hidden && (!p || page === p);
 const library = createLibrary({ root: panelBody, app, isVisible: () => (pageOpen('sounds') || pageOpen('media') ? page : null) });
 const settingsPage = createSettings({ root: panelBody, app });
 const exportPage = createExport({ root: panelBody, app });
+// Export in the top bar: the recorder dock (start / stop, gear, player)
+createRecorder({ dock: $('#recorder'), button: $('#export'), app, closePanel: () => openPage(page, false) });
 const sharePage = createShare({ root: panelBody, app });
 
 // phones: every page plus Export / Share / Claude as a grid of big icons

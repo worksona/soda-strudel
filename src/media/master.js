@@ -7,6 +7,7 @@ let tapped = null;
 let ctx = null;
 let analyser = null;
 let streamDest = null;
+let bus = null; // what recordings hear: the music, plus the live microphone when it is on
 let fft = new Float32Array(512);
 let wave = new Float32Array(1024);
 
@@ -21,11 +22,13 @@ function ensure() {
     fft = new Float32Array(analyser.frequencyBinCount);
     wave = new Float32Array(analyser.fftSize);
     streamDest = ac.createMediaStreamDestination ? ac.createMediaStreamDestination() : null;
+    bus = ac.createGain();
+    if (streamDest) bus.connect(streamDest);
   }
   const out = getSuperdoughAudioController()?.output?.destinationGain;
   if (out && out !== tapped) {
     out.connect(analyser);
-    streamDest && out.connect(streamDest);
+    out.connect(bus);
     tapped = out;
   }
 }
@@ -44,14 +47,14 @@ export function readMaster() {
   return { fft, wave, level: Math.min(1, Math.sqrt(sum / wave.length) * 3) };
 }
 
-/** A node that is recorded but not heard – the live microphone joins exports here. */
+/** The recording bus: recorded but not heard – the live microphone joins it, captures tap it. */
 export function recordingInput() {
   try {
     ensure();
   } catch {
     return null;
   }
-  return streamDest;
+  return bus;
 }
 
 /** MediaStream carrying exactly what the user hears, for MediaRecorder. */
