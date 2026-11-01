@@ -9,6 +9,7 @@ import { themes } from '@strudel/codemirror';
 import { EDITOR_THEME_FOR, resolvedTheme } from '../theme.js';
 import { lsGet, lsSet } from './dom.js';
 import { KNOWN_REPOS, listRepo, parseRepo, repoSongItem } from '../share/repos.js';
+import { loadRepertoire } from '../share/repertoire.js';
 import { loadLibrary, loadSampleFolder, loadedLibraries } from '../media/github.js';
 
 // ---------- console: collect Strudel's log from the start ----------
@@ -617,8 +618,7 @@ function collectionsView(app, rerender, data) {
 
 function repertoireView(app, rerender) {
   if (!repertoire) {
-    repertoire = fetch('/repertoire.json')
-      .then((r) => r.json())
+    repertoire = loadRepertoire()
       .then((data) => ((repertoire = data), rerender()))
       .catch(() => ((repertoire = { error: true }), rerender()));
   }

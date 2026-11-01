@@ -19,6 +19,7 @@ import { initEditorSettings } from './editor/assist.js';
 import { fromPointer, installPageKeys } from './editor/keys.js';
 import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, showCollection, showRepo, vibeView } from './ui/learn.js';
 import { listRepo, repoSongItem } from './share/repos.js';
+import { loadRepertoire } from './share/repertoire.js';
 import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
 import { applyEditorSettings } from './editor/assist.js';
 import { repl } from '@strudel/core';
@@ -865,7 +866,7 @@ async function openSongFromLink() {
   const ref = new URLSearchParams(location.hash.slice(1)).get('song');
   if (!ref) return false;
   history.replaceState(null, '', location.pathname + location.search);
-  const data = await fetch('/repertoire.json').then((r) => r.json()).catch(() => null);
+  const data = await loadRepertoire().catch(() => null);
   const items = data ? [...data.songs, ...data.learn, ...data.collections.flatMap((c) => c.items)] : [];
   const item = items.find((it) => (it.ref ?? it.id) === ref && it.load) ?? items.find((it) => (it.ref ?? it.id) === ref);
   if (!item) return toast('That song is not in the Repertoire any more.', { error: true }), true;
