@@ -26,7 +26,8 @@ $: captions(['2:14 am', '', 'exit 9', '']).slow(2)
   shape a bass line and the image behind it.
 - **No backend.** The site is static files. Your sounds, takes and media live in
   your browser (IndexedDB). Sketches share as links whose content sits in the
-  `#fragment`, which never reaches a server.
+  `#fragment`, which never reaches a server – unless you tick Share › Short
+  link, which stores that link on a47l.com through one small function.
 - **Export on your machine.** Social video (9:16 / 1:1 / 16:9 MP4 or WebM with
   sound) and WAV audio, rendered in the browser.
 - **Claude skill.** `strudel-vibe` turns a mood or story into a validated
@@ -76,7 +77,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 | Media | Your images and videos, the soda media pack, camera snippets, the video effectors |
 | Reference | Every Strudel and soda function, searchable, examples with Listen / Insert |
 | Export | Shape (the export frame – the stage itself always fills the screen; Auto follows the device), size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
-| Share | Title, then Copy link (plays in any browser; the sketch is inside the link). Optional **Short link** through a47l.com or your own shortlink-headless backend, set up in Settings › Short links |
+| Share | Title, then Copy link (plays in any browser; the sketch is inside the link). Optional **Short link** checkbox (a47l.com, through the site's `/api/shorten` function; the token is the `SHORTLINK_TOKEN` Netlify secret) |
 | About | What it is, how it works, keys, mini-notation, links, and the log |
 | Settings | Appearance (dark by default · light · system) · Profile · Screen and export · Editor · Exports · Storage |
 

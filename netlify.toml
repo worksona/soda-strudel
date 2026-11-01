@@ -1,7 +1,12 @@
-# Static site: everything runs in the browser. No functions, no backend.
+# Static site: everything runs in the browser. The one function,
+# /api/shorten, makes optional short links on a47l.com; its token is the
+# SHORTLINK_TOKEN secret (netlify env:set SHORTLINK_TOKEN … --secret).
 [build]
   command = "pnpm build"
   publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "22"

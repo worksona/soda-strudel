@@ -3,7 +3,7 @@ import { h, toast } from './dom.js';
 import { icon } from './icons.js';
 import { LONG_LINK_WARNING, sketchUrl } from '../share/sketch.js';
 import { listMediaItems, listSounds } from '../storage/db.js';
-import { getShortener, setShortener, shortenerReady, shortenUrl } from '../share/shorten.js';
+import { setShortLinksWanted, shortLinksAvailable, shortLinksWanted, shortenUrl } from '../share/shorten.js';
 
 export function createShare({ root, app }) {
   const statusEl = h('p.status', { 'aria-live': 'polite' });
@@ -17,11 +17,10 @@ export function createShare({ root, app }) {
     const long = await sketchUrl(sketch, location.origin);
     let url = long;
     let shortNote = '';
-    const shortener = getShortener();
-    if (shortener.enabled && shortenerReady(shortener)) {
+    if (shortLinksWanted() && (await shortLinksAvailable())) {
       statusEl.textContent = 'Making a short link…';
       try {
-        url = await shortenUrl(long, { notes: `soda.strudel: ${sketch.title || 'Untitled'}` });
+        url = await shortenUrl(long, { title: sketch.title || 'Untitled' });
         shortNote = ` Short link ${url}.`;
       } catch (err) {
         shortNote = ` Short link failed (${err.message}) – copied the full link instead.`;
@@ -38,29 +37,16 @@ export function createShare({ root, app }) {
     toast(url === long ? 'Link copied.' : 'Short link copied.');
   }
 
+  /** “Short link” checkbox – enabled once the site says short links are set up. */
   function shortOption() {
-    const s = getShortener();
-    const ready = shortenerReady(s);
-    const host = (() => {
-      try {
-        return new URL(s.url).host;
-      } catch {
-        return s.url;
-      }
-    })();
-    return h(
-      'div.field',
-      {},
-      h(
-        'label.toggle',
-        {},
-        h('input', { type: 'checkbox', checked: ready && s.enabled, disabled: !ready, onchange: (e) => setShortener({ enabled: e.target.checked }) }),
-        `Short link with ${host}`,
-      ),
-      ready
-        ? null
-        : h('p.muted', {}, 'Add the shortener’s token in ', h('a', { href: '#', onclick: (e) => (e.preventDefault(), app.openPage('settings', true)) }, 'Settings › Short links'), ' to turn this on.'),
-    );
+    const box = h('input', { type: 'checkbox', checked: shortLinksWanted(), disabled: true, onchange: (e) => setShortLinksWanted(e.target.checked) });
+    const note = h('small.muted', {}, ' checking…');
+    shortLinksAvailable().then((ok) => {
+      box.disabled = !ok;
+      note.textContent = ok ? ' a47l.com – short, easy to paste anywhere' : ' not set up on this site';
+      if (!ok) box.checked = false;
+    });
+    return h('label.toggle', {}, box, 'Short link', note);
   }
 
   function render() {
