@@ -1,0 +1,55 @@
+id: 2026-11-01-repertoire-reuse-policy
+kind: decision
+date: "2026-11-01"
+title: What soda.strudel may do with other people's Strudel pieces, sound banks and code
+status: decided
+question: >-
+  Reuse policy for the repertoire (RES-M-001): NC-licensed stock tunes, pieces with no license,
+  sound banks, and how our Claude-run research treats community code.
+owner: David Olsson
+options:
+  - "NC tunes: A adapt (soda.strudel is non-commercial) · B link only"
+  - "No license: A link, ask, adapt on a written yes · B link only, never ask"
+  - >-
+    Sound banks: A open licenses only, after a contents check · B any bank user-loaded, ship only
+    open ones
+  - "AI policy: A index and link only · B pause automated harvesting"
+decision: >-
+  1. Felix Roos's CC BY-NC-SA 4.0 stock tunes may be adapted as soda.strudel examples while
+  soda.strudel stays free and non-commercial; each adaptation carries @by Felix Roos, @license CC
+  BY-NC-SA 4.0, @source and a changes note, and the adaptation is CC BY-NC-SA 4.0 too. 2. Pieces
+  with no license (Bakery shares, YouTube, most song repos) are linked and credited by default; one
+  may be adapted only after its author agrees in writing, and that permission is recorded with the
+  citation. Covers of copyrighted songs stay link-only whatever the script license. 3. soda.strudel
+  loads or ships only sound banks under open licenses (MIT, CC0, CC-BY, GPL/AGPL), with credit,
+  after a contents check for samples of commercial recordings; all other banks stay links. 4. Our
+  Claude-run research indexes and links only: it reads public pages to cite and describe, and never
+  stores, copies or feeds other people's code into AI tooling; the strudel-vibe skill does not learn
+  from harvested pieces.
+rationale: >-
+  Chosen by David Olsson from the four recommended options. Follows the licenses found in the
+  2026-11-01 audit (Strudel software AGPL-3.0; stock tunes CC BY-NC-SA 4.0; most shares unlicensed;
+  covers carry composition copyright; banks licensed per bank) and respects the strudel.cc FAQ (no
+  AI training on contributed tracks without permission) and Strudel's POLICY.md of 2026-10-28.
+source_ref: >-
+  documents/repertoire/catalogue.yaml; documents/inbox/strudel-repertoire-sources.md §0;
+  wiki/repertoire-reuse-and-citation.md
+decided_on: "2026-11-01"
+decided_by: dolsson@aimqc.com
+consequences:
+  - >-
+    Unblocks backlog: adapt the 8 CC BY-NC-SA stock tunes as examples (build-19), example
+    attribution (build-21), credits page (document-17)
+  - >-
+    Unblocks backlog: draft permission requests to authors (work-15) – drafts only, a person sends
+    them
+  - "Sound banks: test the 6 open-licensed banks (build-20) after the rights check (research-04)"
+  - >-
+    If soda.strudel ever becomes commercial, the adapted NC tunes must be removed or relicensed –
+    revisit this decision first
+  - The weekly routine keeps its link-and-describe rule
+phase: 02-build-loops
+last_modified: "2026-11-01T15:52:12.268Z"
+last_modified_by: david@atomic47.co
+created: "2026-11-01T15:52:12.268Z"
+created_by: david@atomic47.co

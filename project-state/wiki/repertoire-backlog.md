@@ -49,7 +49,7 @@ What is queued for the repertoire, by lane. Approve or dismiss on the Queue scre
 
 ## Work
 
-- P1 **[work] Decide the reuse policy for soda.strudel** – `2026-11-01-backlog-work-14` – a person decides
+- ✓ **[work] Decide the reuse policy** – done 2026-11-01, see [[repertoire-reuse-and-citation]]
 - P2 **[work] Draft permission requests to authors** – `2026-11-01-backlog-work-15`
 
 ## Build

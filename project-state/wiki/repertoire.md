@@ -4,7 +4,7 @@ kind: wiki-page
 title: Repertoire
 created: '2026-11-01T15:50:42.323Z'
 created_by: david@atomic47.co
-last_modified: '2026-11-01T15:50:42.323Z'
+last_modified: '2026-11-01T15:52:41.487Z'
 last_modified_by: david@atomic47.co
 tags:
   - repertoire
@@ -18,6 +18,8 @@ review_status: n/a
 soda.strudel's growing catalogue of Strudel songs, patterns, learning resources and sound banks – each one cited, audited and described. Research mandate: RES-M-001 (standing, weekly). Records: `documents/repertoire/catalogue.yaml`.
 
 **52 songs · 17 learning resources and tools · 30 sound banks** (as of 2026-11-01)
+
+**Reuse policy decided 2026-11-01:** adapt Felix Roos's CC BY-NC-SA tunes while soda.strudel is non-commercial; unlicensed pieces are linked, and adapted only on the author's written yes; only open-licensed sound banks; our research indexes and links only. Details: [[repertoire-reuse-and-citation]].
 
 ## Songs by genre
 - [[repertoire-dance]] – Dance and electronic (16)

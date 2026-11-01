@@ -9,6 +9,7 @@
 {"target":"repertoire","state":"wiki","dst":"tag:repertoire","dst_kind":"tag","type":"tagged","origin":"structured","src":"repertoire-backlog","src_title":"Repertoire backlog"}
 {"target":"backlog","state":"wiki","dst":"tag:backlog","dst_kind":"tag","type":"tagged","origin":"structured","src":"repertoire-backlog","src_title":"Repertoire backlog"}
 {"target":"repertoire","state":"wiki","dst":"repertoire","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire","origin":"inline","src":"repertoire-backlog","src_title":"Repertoire backlog"}
+{"target":"repertoire-reuse-and-citation","state":"wiki","dst":"repertoire-reuse-and-citation","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-reuse-and-citation","origin":"inline","src":"repertoire-backlog","src_title":"Repertoire backlog"}
 {"target":"repertoire","state":"wiki","dst":"repertoire","dst_kind":"wiki-page","type":"child-of","href":"/wiki/repertoire","origin":"structured","src":"repertoire-bass","src_title":"Songs: Bass, breaks and jungle"}
 {"target":"repertoire","state":"wiki","dst":"tag:repertoire","dst_kind":"tag","type":"tagged","origin":"structured","src":"repertoire-bass","src_title":"Songs: Bass, breaks and jungle"}
 {"target":"songs","state":"wiki","dst":"tag:songs","dst_kind":"tag","type":"tagged","origin":"structured","src":"repertoire-bass","src_title":"Songs: Bass, breaks and jungle"}
@@ -78,6 +79,7 @@
 {"target":"repertoire-ambient","state":"wiki","dst":"repertoire-ambient","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-ambient","origin":"inline","src":"repertoire-techniques","src_title":"Techniques index"}
 {"target":"repertoire","state":"wiki","dst":"tag:repertoire","dst_kind":"tag","type":"tagged","origin":"structured","src":"repertoire","src_title":"Repertoire"}
 {"target":"hub","state":"wiki","dst":"tag:hub","dst_kind":"tag","type":"tagged","origin":"structured","src":"repertoire","src_title":"Repertoire"}
+{"target":"repertoire-reuse-and-citation","state":"wiki","dst":"repertoire-reuse-and-citation","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-reuse-and-citation","origin":"inline","src":"repertoire","src_title":"Repertoire"}
 {"target":"repertoire-dance","state":"wiki","dst":"repertoire-dance","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-dance","origin":"inline","src":"repertoire","src_title":"Repertoire"}
 {"target":"repertoire-bass","state":"wiki","dst":"repertoire-bass","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-bass","origin":"inline","src":"repertoire","src_title":"Repertoire"}
 {"target":"repertoire-game","state":"wiki","dst":"repertoire-game","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-game","origin":"inline","src":"repertoire","src_title":"Repertoire"}
@@ -87,6 +89,5 @@
 {"target":"repertoire-resources","state":"wiki","dst":"repertoire-resources","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-resources","origin":"inline","src":"repertoire","src_title":"Repertoire"}
 {"target":"repertoire-techniques","state":"wiki","dst":"repertoire-techniques","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-techniques","origin":"inline","src":"repertoire","src_title":"Repertoire"}
 {"target":"repertoire-sound-banks","state":"wiki","dst":"repertoire-sound-banks","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-sound-banks","origin":"inline","src":"repertoire","src_title":"Repertoire"}
-{"target":"repertoire-reuse-and-citation","state":"wiki","dst":"repertoire-reuse-and-citation","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-reuse-and-citation","origin":"inline","src":"repertoire","src_title":"Repertoire"}
 {"target":"repertoire-sources","state":"wiki","dst":"repertoire-sources","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-sources","origin":"inline","src":"repertoire","src_title":"Repertoire"}
 {"target":"repertoire-backlog","state":"wiki","dst":"repertoire-backlog","dst_kind":"wiki-page","type":"mentions","href":"/wiki/repertoire-backlog","origin":"inline","src":"repertoire","src_title":"Repertoire"}

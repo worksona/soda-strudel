@@ -153,6 +153,12 @@
       "inverse": "mentioned-by"
     },
     {
+      "src": "repertoire-backlog",
+      "src_title": "Repertoire backlog",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
       "src": "repertoire-bass",
       "src_title": "Songs: Bass, breaks and jungle",
       "type": "mentions",
