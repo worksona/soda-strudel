@@ -5,6 +5,8 @@
 // technique studies, a live camera piece, and three patterns adapted from
 // live-coding-music-mcp (AGPL-3.0).
 // Every example is checked by tests/examples.test.js with the headless validator.
+// An example made after someone else's work carries `credit` (by, title, url,
+// license, note) – shown on the Examples page, so credit travels with it.
 import { DEFAULT_CODE } from './default-code.js';
 
 export const CATEGORIES = ['Start here', 'Stories', 'Grooves', 'Dancefloor', 'Moods', 'Studies', 'Live', 'From live-coding-music-mcp'];
@@ -254,6 +256,7 @@ $: captions(['', 'dusk', '', 'the river keeps time']).slow(2)
   // Genre recipes after Breath of Strudel (CC BY 4.0) – each with a full-screen visual.
   {
     title: 'Dub techno fog',
+    credit: [{ by: 'vakofmaya', title: 'Breath of Strudel', url: 'https://github.com/vakofmaya/BreathOfStrudle', license: 'CC BY 4.0' }],
     category: 'Dancefloor',
     about: 'Dub techno at 118: chord stabs lost in reverb and delay, the picture sinking into the same fog.',
     aspect: 'free',
@@ -282,6 +285,7 @@ $: captions(['', '', 'arriving through fog', '']).slow(4)
   },
   {
     title: 'Melodic techno',
+    credit: [{ by: 'vakofmaya', title: 'Breath of Strudel', url: 'https://github.com/vakofmaya/BreathOfStrudle', license: 'CC BY 4.0' }],
     category: 'Dancefloor',
     about: 'Melodic techno at 124: a sidechained pad, a haunting delayed lead, notes drawn on a pianoroll.',
     aspect: 'free',
@@ -310,6 +314,7 @@ $: visual("pianoroll").hue(280).amount(.8).opacity(.9)
   },
   {
     title: 'Trance lift',
+    credit: [{ by: 'vakofmaya', title: 'Breath of Strudel', url: 'https://github.com/vakofmaya/BreathOfStrudle', license: 'CC BY 4.0' }, { by: 'honcoops', title: 'strudel_trance', url: 'https://github.com/honcoops/strudel_trance', license: 'README: free to use, modify and incorporate', note: 'the four-chapter arc' }],
     category: 'Dancefloor',
     about: 'Trance at 138 in four chapters: groove, build, breakdown, drop – hats double, claps roll, a riser climbs.',
     aspect: 'free',
@@ -353,6 +358,7 @@ $: visual("spiral").hue(40).amount(.9).opacity(.9)
   },
   {
     title: 'Psy roll',
+    credit: [{ by: 'vakofmaya', title: 'Breath of Strudel', url: 'https://github.com/vakofmaya/BreathOfStrudle', license: 'CC BY 4.0' }],
     category: 'Dancefloor',
     about: 'Psytrance at 142: an offbeat rolling bass, a phrygian lead through a phaser, the pattern on a punchcard.',
     aspect: 'free',
@@ -379,6 +385,7 @@ $: visual("punchcard").hue(120).opacity(.9)
   },
   {
     title: 'Hard techno kaleid',
+    credit: [{ by: 'vakofmaya', title: 'Breath of Strudel', url: 'https://github.com/vakofmaya/BreathOfStrudle', license: 'CC BY 4.0' }, { by: 'micuat', title: 'Hydra Book', url: 'https://github.com/micuat/hydra-book', license: 'Unlicense (public domain)', note: 'the Hydra pattern' }],
     category: 'Dancefloor',
     about: 'Industrial techno at 145 under a Hydra kaleidoscope with feedback, the bar count driving the symmetry.',
     aspect: 'free',
@@ -573,6 +580,7 @@ $: captions(['', 'move', '', 'the picture follows']).slow(2)
   // ---------- From live-coding-music-mcp ----------
   {
     title: 'Ambient drone',
+    credit: [{ by: 'williamzujkowski', title: 'live-coding-music-mcp', url: 'https://github.com/williamzujkowski/live-coding-music-mcp', license: 'AGPL-3.0', note: 'examples/patterns/ambient-drone.tidal' }],
     category: 'From live-coding-music-mcp',
     about: 'Slow sawtooth drone with a filter sweeping over 16 cycles.',
     aspect: 'free',
@@ -614,6 +622,7 @@ stack(
   },
   {
     title: 'Drum & bass 174',
+    credit: [{ by: 'williamzujkowski', title: 'live-coding-music-mcp', url: 'https://github.com/williamzujkowski/live-coding-music-mcp', license: 'AGPL-3.0', note: 'examples/patterns/dnb-174bpm.tidal' }],
     category: 'From live-coding-music-mcp',
     about: 'Breakbeat, sub and reese bass at 174 bpm.',
     aspect: 'free',
@@ -651,6 +660,7 @@ stack(
   },
   {
     title: 'Minimal techno 130',
+    credit: [{ by: 'williamzujkowski', title: 'live-coding-music-mcp', url: 'https://github.com/williamzujkowski/live-coding-music-mcp', license: 'AGPL-3.0', note: 'examples/patterns/techno-130bpm.tidal' }],
     category: 'From live-coding-music-mcp',
     about: 'Four on the floor, a minimal bassline and a swung hat.',
     aspect: 'free',

@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+- **Examples › Repertoire.** A third tab next to Examples and Workshop: Strudel
+  songs (by genre), lessons (by level) and sound banks (with their licences)
+  made by other people, found and checked by our research (project-state
+  RES-M-001). Search, genre and level filters; each card credits its author and
+  opens the piece where it was shared – the app never carries their code
+  (decision 2026-11-01-repertoire-reuse-policy). `pnpm repertoire` rebuilds
+  `public/repertoire.json` from the research catalogue; `pnpm build` runs it.
+- **Examples show their credits.** The eight examples made after someone else's
+  work (Breath of Strudel, strudel_trance, Hydra Book, live-coding-music-mcp)
+  now say so on the Examples page, with the licence and a link. A test makes
+  every borrowed example carry its credit.
 - **Video exports show the view you are in.** With View › Code over the stage,
   a recorded video includes the code layer as it is on screen: the veil, the
   syntax colours, the playing notes outlined, the sliders and inline visuals

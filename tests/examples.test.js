@@ -15,6 +15,20 @@ describe('built-in examples', () => {
     }
   });
 
+  it('credit the work they are made after', () => {
+    for (const ex of EXAMPLES) {
+      // a header that says "after …" or "adapted from …" needs a credit the page can show
+      const borrowed = /\b(after [A-Z][\w ]+,|adapted from)/.test(ex.code.split('\n').slice(0, 3).join(' '));
+      if (borrowed) expect(ex.credit?.length, ex.title).toBeGreaterThan(0);
+      for (const c of ex.credit ?? []) {
+        expect(c.by, ex.title).toBeTruthy();
+        expect(c.title, ex.title).toBeTruthy();
+        expect(c.url, ex.title).toMatch(/^https:\/\//);
+        expect(c.license, ex.title).toBeTruthy();
+      }
+    }
+  });
+
   for (const ex of EXAMPLES) {
     it(`validates: ${ex.title}`, async () => {
       const res = await validateSketch({ code: ex.code }, { sounds, media });

@@ -181,6 +181,17 @@ const exampleActions = (app, code, ex) =>
     h('button', { title: 'Replace the editor with this example', onclick: () => app.loadExample(ex) }, icon('code'), ' Open'),
   );
 
+/** "After Breath of Strudel by vakofmaya (CC BY 4.0)" – credit for examples made after someone else's work. */
+const exampleCredit = (ex) =>
+  ex.credit?.length
+    ? h(
+        'small.credit',
+        {},
+        'After ',
+        ...ex.credit.flatMap((c, i) => [i ? '; ' : '', link(c.url, c.title), ` by ${c.by} (${c.license})${c.note ? ` – ${c.note}` : ''}`]),
+      )
+    : null;
+
 function ourExamples(app) {
   return [
     h('p.muted', {}, 'Pieces that show what soda.strudel can do – music with pictures, words and story. Listen leaves your code alone; Open loads it.'),
@@ -195,7 +206,12 @@ function ourExamples(app) {
           'ul.examples',
           {},
           list.map((ex) =>
-            h('li', {}, h('div.meta', {}, h('strong', {}, ex.title), h('small', {}, ex.about), h('small.shape', {}, ex.aspect === 'free' ? 'any shape' : `made for ${ex.aspect}`)), exampleActions(app, ex.code, ex)),
+            h(
+              'li',
+              {},
+              h('div.meta', {}, h('strong', {}, ex.title), h('small', {}, ex.about), exampleCredit(ex), h('small.shape', {}, ex.aspect === 'free' ? 'any shape' : `made for ${ex.aspect}`)),
+              exampleActions(app, ex.code, ex),
+            ),
           ),
         ),
       );
@@ -235,6 +251,169 @@ function workshop(app) {
   ];
 }
 
+// ---------- Repertoire: Strudel pieces, lessons and sound banks by other people ----------
+// Researched and cited in project-state (RES-M-001); built by `pnpm repertoire`.
+// Policy (decision 2026-11-01-repertoire-reuse-policy): link and credit, never
+// carry anyone's code – every card opens the original where its author put it.
+let repertoire = null; // the loaded catalogue, or a promise while it loads
+const rep = { view: 'songs', family: 'all', level: 'all', query: '' };
+const SHORT = { dance: 'Dance', bass: 'Bass & breaks', game: 'Games', pop: 'Pop & rock', classical: 'Classical & jazz', ambient: 'Ambient' };
+const REUSE = {
+  adapt: ['Open licence (non-commercial)', 'CC BY-NC-SA – may be adapted with credit while soda.strudel is non-commercial'],
+  open: ['Open licence', 'May be used with credit'],
+  link: ['Listen at the source', "Someone else's song – listen and learn there"],
+  ask: ['Ask the author', 'No licence stated – listen and learn there; ask the author before reusing'],
+  check: ['Check first', 'Open licence, but check the contents before using'],
+  no: ['Rights unclear', 'Listed for reference only'],
+};
+const matches = (item) => {
+  const q = rep.query.trim().toLowerCase();
+  return !q || [item.title, item.by, item.original, item.genre, item.about, item.teaches, item.type, ...(item.banks ?? [])].some((v) => v && String(v).toLowerCase().includes(q));
+};
+const repBadge = (reuse) => {
+  const [label, title] = REUSE[reuse] ?? REUSE.ask;
+  return h(`span.rep-badge.rep-${reuse}`, { title }, label);
+};
+const repOpen = (url, label = 'Open') => (url ? h('a.rep-open', { href: url, target: '_blank', rel: 'noopener', title: url }, label, ' ', icon('external', 13)) : null);
+
+function repertoireView(rerender) {
+  if (!repertoire) {
+    repertoire = fetch('/repertoire.json')
+      .then((r) => r.json())
+      .then((data) => ((repertoire = data), rerender()))
+      .catch(() => ((repertoire = { error: true }), rerender()));
+  }
+  if (repertoire instanceof Promise) return [h('p.muted', {}, 'Loading the repertoire…')];
+  if (repertoire.error) return [h('p.muted', {}, 'The repertoire could not be loaded – check your connection.')];
+  const data = repertoire;
+  const search = h('input.rep-search', {
+    type: 'search',
+    placeholder: 'Search titles, artists, genres, techniques…',
+    value: rep.query,
+    'aria-label': 'Search the repertoire',
+    oninput: (e) => {
+      rep.query = e.target.value;
+      clearTimeout(search.timer);
+      search.timer = setTimeout(() => {
+        rerender();
+        const again = $('.rep-search');
+        again?.focus();
+        again?.setSelectionRange(rep.query.length, rep.query.length);
+      }, 200);
+    },
+  });
+  const chip = (key, label, current, onPick) => h('button.chip', { 'aria-pressed': String(key === current), onclick: () => (onPick(key), rerender()) }, label);
+  const head = [
+    h('p.muted', {}, 'Strudel songs, lessons and sound banks made by other people – found, checked and credited by our research. Each one opens where its author shared it.'),
+    tabs(rep.view, [
+      ['songs', `Songs (${data.songs.length})`],
+      ['learn', `Learn (${data.learn.length})`],
+      ['sounds', `Sounds (${data.sounds.length})`],
+    ], (t) => ((rep.view = t), rerender())),
+    search,
+  ];
+  let body;
+  if (rep.view === 'songs') {
+    const fams = Object.entries(data.families);
+    const list = data.songs.filter((s) => (rep.family === 'all' || s.family === rep.family) && matches(s));
+    body = [
+      h('div.chips', {}, chip('all', 'All', rep.family, (k) => (rep.family = k)), ...fams.map(([k, label]) => chip(k, SHORT[k] ?? label, rep.family, (f) => (rep.family = f)))),
+      ...fams
+        .filter(([k]) => rep.family === 'all' || rep.family === k)
+        .map(([k, label]) => {
+          const items = list.filter((s) => s.family === k).sort((a, b) => (b.key ? 1 : 0) - (a.key ? 1 : 0) || a.title.localeCompare(b.title));
+          if (!items.length) return null;
+          return h(
+            'section',
+            {},
+            h('h4', {}, label),
+            h(
+              'ul.rep-list',
+              {},
+              items.map((s) =>
+                h(
+                  'li',
+                  {},
+                  h(
+                    'div.meta',
+                    {},
+                    h('strong', {}, s.title, s.key ? h('span.rep-star', { title: 'A good place to start' }, ' ★') : null),
+                    h('small', {}, [`by ${s.by}`, s.original ? `original: ${s.original}` : null, s.genre, s.date].filter(Boolean).join(' · ')),
+                    h('small', {}, s.teaches ? `Teaches: ${s.teaches}` : s.about),
+                    h('div.rep-foot', {}, repBadge(s.reuse), repOpen(s.url), s.source && s.source !== s.url ? repOpen(s.source, 'Source') : null),
+                  ),
+                ),
+              ),
+            ),
+          );
+        }),
+    ];
+    if (!list.length) body.push(h('p.muted', {}, 'Nothing matches – try another word or genre.'));
+  } else if (rep.view === 'learn') {
+    const levels = [
+      ['first steps', 'First steps'],
+      ['intermediate', 'Intermediate'],
+      ['performer', 'Performer'],
+      ['all', 'For everyone'],
+    ];
+    const list = data.learn.filter((r) => (rep.level === 'all' || r.level === rep.level || r.level === 'all') && matches(r));
+    body = [
+      h('div.chips', {}, chip('all', 'All levels', rep.level, (k) => (rep.level = k)), ...levels.slice(0, 3).map(([k, label]) => chip(k, label, rep.level, (l) => (rep.level = l)))),
+      ...levels.map(([lv, label]) => {
+        const items = list.filter((r) => r.level === lv);
+        if (!items.length) return null;
+        return h(
+          'section',
+          {},
+          h('h4', {}, label),
+          h(
+            'ul.rep-list',
+            {},
+            items.map((r) =>
+              h(
+                'li',
+                {},
+                h(
+                  'div.meta',
+                  {},
+                  h('strong', {}, r.title),
+                  h('small', {}, [r.type, r.by, r.license && r.license !== 'not stated' ? r.license : null].filter(Boolean).join(' · ')),
+                  h('small', {}, r.about),
+                  h('div.rep-foot', {}, repOpen(r.url)),
+                ),
+              ),
+            ),
+          ),
+        );
+      }),
+    ];
+  } else {
+    const list = data.sounds.filter(matches);
+    body = [
+      h('p.muted', {}, 'Sample banks on GitHub. Banks marked Open licence can be loaded with credit: ', h('code', {}, "samples('github:owner/repo')"), '.'),
+      h(
+        'ul.rep-list',
+        {},
+        list.map((b) =>
+          h(
+            'li',
+            {},
+            h(
+              'div.meta',
+              {},
+              h('strong', {}, b.title),
+              h('small', {}, `${b.license} · ${b.count} sounds${b.banks.length ? `: ${b.banks.slice(0, 8).join(', ')}${b.count > 8 ? '…' : ''}` : ''}`),
+              b.note ? h('small', {}, b.note) : null,
+              h('div.rep-foot', {}, repBadge(b.reuse), repOpen(b.url)),
+            ),
+          ),
+        ),
+      ),
+    ];
+  }
+  return [...head, ...body, h('p.muted.rep-credit', {}, data.credit, ` Updated ${data.updated}.`)];
+}
+
 export function examplesView(app, rerender) {
   return h(
     'div.examples-wrap',
@@ -242,8 +421,9 @@ export function examplesView(app, rerender) {
     tabs(examplesTab, [
       ['examples', 'Examples'],
       ['workshop', 'Workshop'],
+      ['repertoire', 'Repertoire'],
     ], (t) => ((examplesTab = t), rerender())),
-    ...(examplesTab === 'workshop' ? workshop(app) : ourExamples(app)).filter(Boolean),
+    ...(examplesTab === 'workshop' ? workshop(app) : examplesTab === 'repertoire' ? repertoireView(rerender) : ourExamples(app)).filter(Boolean),
   );
 }
 

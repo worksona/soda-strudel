@@ -1,0 +1,3419 @@
+{
+ "title": "soda.strudel repertoire catalogue",
+ "updated": "2026-11-01",
+ "mandate": "RES-M-001",
+ "pipeline": "inventoried \u2192 audited \u2192 described \u2192 catalogued \u2192 approved (queue card) \u2192 in Learn / examples (separate build task)",
+ "reuse_rules": {
+  "link-only": "Link and credit; never copy the code (composition under copyright, or no license).",
+  "ask-author": "Link and credit; ask the author before showing or adapting the code.",
+  "adapt-with-credit (non-commercial, share-alike)": "CC BY-NC-SA 4.0: may adapt in soda.strudel while it stays non-commercial, with attribution and the same license on the adaptation.",
+  "usable with credit": "Open license (MIT, CC0, GPL/AGPL): may load with credit; GPL/AGPL terms apply to code."
+ },
+ "sources": [
+  {
+   "id": "awesome-strudel",
+   "url": "https://github.com/terryds/awesome-strudel",
+   "license": "none stated",
+   "pushed": "2026-10-26",
+   "stars": 1241,
+   "harvested": "2026-11-01"
+  },
+  {
+   "id": "strudel-repertoire-sources",
+   "ref": "documents/inbox/strudel-repertoire-sources.md",
+   "harvested": "2026-11-01"
+  }
+ ],
+ "counts": {
+  "songs": 52,
+  "resources": 17,
+  "sound_banks": 30
+ },
+ "songs": [
+  {
+   "id": "REP-S-001",
+   "type": "song",
+   "title": "2 Minute Deep Acid in Strudel (from scratch)",
+   "author": "Switch Angel",
+   "genre": "Acid",
+   "url": "https://www.youtube.com/watch?v=HkgV_-nJOuE",
+   "date": "2025-08-25",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by Switch Angel. Teaches a quick 303-style line: resonance and envelope.",
+   "learn": "a quick 303-style line: resonance and envelope",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #12"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-002",
+   "type": "song",
+   "title": "Flatrave",
+   "author": "Felix Roos",
+   "genre": "Acid / rave",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L711",
+   "date": "stock",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches filter envelope (lpenv) and cutoff sweeps.",
+   "learn": "filter envelope (lpenv) and cutoff sweeps",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #4"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-003",
+   "type": "song",
+   "title": "Gorillaz \u2013 Feel Good Inc (cover)",
+   "author": "MariaAreadne",
+   "original_artist": "Gorillaz",
+   "genre": "Alternative hip-hop",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 31)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.youtube.com/@MariaAreadne1",
+     "http": 200,
+     "license": null,
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Feel Good Inc at a slow cpm with vinyl crackle, DR-550 drums, jazz and overdriven guitars, scale and voicing, orbit separation.",
+   "techniques": [
+    "_pianoroll",
+    "color",
+    "delay",
+    "dict",
+    "gain",
+    "lpf",
+    "lpq",
+    "orbit",
+    "room",
+    "scale",
+    "voicing"
+   ],
+   "tempo": "setcpm(34.5)",
+   "length_lines": 58,
+   "header": {
+    "by": "MariaAreadne"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 31)"
+   ],
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-004",
+   "type": "song",
+   "title": "Coding AMBIENT Music in Strudel (from scratch)",
+   "author": "typedbeats",
+   "genre": "Ambient",
+   "url": "https://www.youtube.com/watch?v=vaO9SIi-TpQ",
+   "date": "2026-10-12",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by typedbeats. Teaches slow pads, reverb, sparse randomness.",
+   "learn": "slow pads, reverb, sparse randomness",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #17"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "ambient"
+  },
+  {
+   "id": "REP-S-005",
+   "type": "song",
+   "title": "Radiohead \u2013 Pyramid Song",
+   "author": "eefano",
+   "original_artist": "Radiohead",
+   "genre": "Art rock",
+   "url": "https://strudel.cc/?MeMCjUtlCAoK",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Pyramid Song's famously uneven, swung rhythm \u2013 a study in non-square timing.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 19)"
+   ],
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-006",
+   "type": "song",
+   "title": "Radiohead - Everything in its right place",
+   "author": "codester",
+   "original_artist": "Radiohead",
+   "genre": "Art rock / electronic",
+   "url": "https://strudel.cc/?yTnr825wyd9V#\u2026 (code in the link; open from awesome-strudel line 29)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.instagram.com/p/DRd44gNCCZB",
+     "http": 200,
+     "license": null,
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Everything In Its Right Place in 25 lines: an FM piano, a TR-909 kick and a punchcard visual \u2013 a compact example of FM synthesis.",
+   "techniques": [
+    "_punchcard",
+    "bank",
+    "fm",
+    "gain"
+   ],
+   "tempo": "setcpm(120)",
+   "length_lines": 25,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 29)"
+   ],
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-007",
+   "type": "song",
+   "title": "Amen break SPEEDRUN",
+   "author": "Switch Angel",
+   "genre": "Breakcore / jungle",
+   "url": "https://www.youtube.com/watch?v=EyoeaiNvX5g",
+   "date": "2025-06-20",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by Switch Angel. Teaches fast break slicing.",
+   "learn": "fast break slicing",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #14"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "bass"
+  },
+  {
+   "id": "REP-S-008",
+   "type": "song",
+   "title": "Dmitri Shostakovich \u2013 Waltz #2",
+   "author": "eefano",
+   "original_artist": "Dmitri Shostakovich",
+   "genre": "Classical",
+   "url": "https://strudel.cc/?o2VwC4Jq66XI",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    },
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/waltzno2.js",
+     "http": 200,
+     "note": "also starting piece #23"
+    }
+   ],
+   "date": "repo pushed 2026-10-03",
+   "script_license": "none stated",
+   "composition": "likely copyright in many countries (d. 1975)",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Waltz No. 2 from the Suite for Variety Orchestra; tempo shaped with cps functions (waltzno2.js).",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 23)",
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #23"
+   ],
+   "learn": "tempo changes with cps functions",
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "classical"
+  },
+  {
+   "id": "REP-S-009",
+   "type": "song",
+   "title": "Joseph Haydn - Keyboard sonata #49 (Eb Maj) (3rd movement) (cover)",
+   "author": "Bisc and tzwaan / Swan",
+   "original_artist": "Joseph Haydn",
+   "genre": "Classical",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 38)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "public domain composition",
+   "reuse": "ask-author (composition public domain; script has no license)",
+   "description": "Haydn's Sonata No. 49, 3rd movement, on piano \u2013 transcribed by Biscuit and tzwaan with scale degrees and add. The composition is public domain; the transcription script has no license.",
+   "techniques": [
+    "add",
+    "scale"
+   ],
+   "tempo": "setcpm(123/4)",
+   "length_lines": 54,
+   "header": {
+    "title": "Keyboard Sonata #49 (Eb Maj) (3rd movement)",
+    "by": "Joseph Haydn",
+    "details": "copied and transcribed by Biscuit :3"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 38)"
+   ],
+   "status": "catalogued",
+   "family": "classical"
+  },
+  {
+   "id": "REP-S-010",
+   "type": "song",
+   "title": "Bass fuge",
+   "author": "Felix Roos",
+   "genre": "Classical-inspired (fugue)",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L532",
+   "date": "stock",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches counterpoint by off/add transposition, sometimes.",
+   "learn": "counterpoint by off/add transposition, sometimes",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #5"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "classical"
+  },
+  {
+   "id": "REP-S-011",
+   "type": "song",
+   "title": "Coding DRUM and BASS",
+   "author": "Switch Angel",
+   "genre": "Drum & bass",
+   "url": "https://www.youtube.com/watch?v=AJ7atBkisOU",
+   "date": "2025-09-19",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by Switch Angel. Teaches building DnB drums and bass from scratch, narrated.",
+   "learn": "building DnB drums and bass from scratch, narrated",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #10"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "bass"
+  },
+  {
+   "id": "REP-S-012",
+   "type": "song",
+   "title": "Belldub",
+   "author": "Felix Roos",
+   "genre": "Dub",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L604",
+   "date": "stock",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches delay/room dub space, degradeBy, superimpose.",
+   "learn": "delay/room dub space, degradeBy, superimpose",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #3"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-013",
+   "type": "song",
+   "title": "Strudel Live Coding #39: Dark Dub Techno",
+   "author": "Wave Coder",
+   "genre": "Dub techno",
+   "url": "https://www.youtube.com/watch?v=75CIjnDfCHo",
+   "date": "2026-04-20",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by Wave Coder. Teaches chord stabs through delay feedback.",
+   "learn": "chord stabs through delay feedback",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #18"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-014",
+   "type": "song",
+   "title": "Vardis Quo",
+   "author": "MariaAreadne",
+   "original_artist": "MariaAreadne (no original named)",
+   "genre": "Electronic (appears original)",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 32)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.youtube.com/@MariaAreadne1",
+     "http": 200,
+     "license": null,
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "n/a \u2013 appears to be an original",
+   "reuse": "ask-author",
+   "description": "Appears to be an original piece: flute and jazz guitar over DR-550 drums and a supersaw, voicings and a pianoroll.",
+   "techniques": [
+    "_pianoroll",
+    "color",
+    "delay",
+    "dict",
+    "fast",
+    "gain",
+    "lpf",
+    "lpq",
+    "orbit",
+    "range",
+    "room",
+    "scale",
+    "slow",
+    "voicing"
+   ],
+   "tempo": "setcpm(29)",
+   "length_lines": 46,
+   "header": {
+    "by": "MariaAreadne"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 32)"
+   ],
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-015",
+   "type": "song",
+   "title": "Bug From Heaven (cover)",
+   "author": "eefano",
+   "original_artist": "not named in the list",
+   "genre": "Electronic cover",
+   "url": "https://strudel.cc/?I6tz-5JrPnC9",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/bugfromheaven.js",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "unknown",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Cover from eefano's songs collection (bugfromheaven.js); Bakery share.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 17)"
+   ],
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-016",
+   "type": "song",
+   "title": "Grimes \u2013 Music 4 Machines (cover)",
+   "author": "KAIXI",
+   "original_artist": "Grimes",
+   "genre": "Electropop",
+   "url": "https://strudel.cc/?sOc7cVTqJHUU",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://www.reddit.com/r/Grimes/comments/1cqhk68/i_made_a_cover_of_grimes_music_4_machines_with/",
+     "http": 200,
+     "license": null,
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Cover of the Grimes track, shared from the strudel.cc REPL and announced on r/Grimes; a pop song structure rebuilt as patterns.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 15)"
+   ],
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-017",
+   "type": "song",
+   "title": "Corona \u2013 The Rhythm of the Night",
+   "author": "eefano",
+   "original_artist": "Corona",
+   "genre": "Eurodance",
+   "url": "https://strudel.cc/?ReHB6EHNb81b",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Nineties eurodance: four-on-the-floor, piano stabs and a big hook.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 20)"
+   ],
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-018",
+   "type": "song",
+   "title": "dough dream #1 \u2013 strudel jam 12/03/23",
+   "author": "eddyflux",
+   "genre": "Experimental jam",
+   "url": "https://www.youtube.com/watch?v=p0J7XrT9JEs",
+   "date": "2023-12-03",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by eddyflux. Teaches improvised long-form development (on the Showcase).",
+   "learn": "improvised long-form development (on the Showcase)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #21"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "ambient"
+  },
+  {
+   "id": "REP-S-019",
+   "type": "song",
+   "title": "Dinofunk",
+   "author": "Felix Roos",
+   "genre": "Funk",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L644",
+   "date": "stock",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches clip, superimpose, groove with probability.",
+   "learn": "clip, superimpose, groove with probability",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #7"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-020",
+   "type": "song",
+   "title": "Random bells",
+   "author": "Felix Roos",
+   "genre": "Generative / ambient",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L387",
+   "date": "stock",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches randomness in scales, range, long slow layers.",
+   "learn": "randomness in scales, range, long slow layers",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #6"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "ambient"
+  },
+  {
+   "id": "REP-S-021",
+   "type": "song",
+   "title": "Technotronic \u2013 Pump Up The Jam (cover)",
+   "author": "eefano",
+   "original_artist": "Technotronic",
+   "genre": "Hip house",
+   "url": "https://strudel.cc/?UAVGnDf_1EV1",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Hip-house classic: drum machine groove and a sparse synth riff.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 21)"
+   ],
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-022",
+   "type": "song",
+   "title": "Coding a Lo-fi Hip Hop Beat in Strudel (from scratch)",
+   "author": "typedbeats",
+   "genre": "Hip-hop / lo-fi",
+   "url": "https://www.youtube.com/watch?v=zof_KwkpEgg",
+   "date": "2026-10-04",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by typedbeats. Teaches swing, laid-back drums, dusty keys.",
+   "learn": "swing, laid-back drums, dusty keys",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #16"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-023",
+   "type": "song",
+   "title": "Strudel coding house music",
+   "author": "dadadada",
+   "genre": "House",
+   "url": "https://www.youtube.com/watch?v=PZheVcQFT1c",
+   "date": "2025-07-12",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by dadadada. Teaches four-on-the-floor, off-beat hats and chords.",
+   "learn": "four-on-the-floor, off-beat hats and chords",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #19"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-024",
+   "type": "song",
+   "title": "Charli XCX \u2013 360 (cover / remix)",
+   "author": "KAIXI",
+   "original_artist": "Charli XCX",
+   "genre": "Hyperpop / pop",
+   "url": "https://strudel.cc/?2ErYTSUotoaQ",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://x.com/xxkaixi/status/1926482951174234429",
+     "http": 200,
+     "license": null,
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Cover/remix of \"360\" shared from the REPL and posted on X; a modern pop drum and synth arrangement.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 16)"
+   ],
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-025",
+   "type": "song",
+   "title": "Giant Steps",
+   "author": "John Coltrane (composition); in the stock file without @by",
+   "genre": "Jazz cover",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L70",
+   "date": "stock",
+   "script_license": "none stated",
+   "composition": "composition under copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches fast chord changes with voicing.",
+   "learn": "fast chord changes with voicing",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #9"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "classical"
+  },
+  {
+   "id": "REP-S-026",
+   "type": "song",
+   "title": "Chopping jungle breaks in #STRUDEL",
+   "author": "Iganu music",
+   "genre": "Jungle",
+   "url": "https://www.youtube.com/watch?v=r5Fwq_97omQ",
+   "date": "2026-03-20",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by Iganu music. Teaches chop/slice break edits.",
+   "learn": "chop/slice break edits",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #15"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "bass"
+  },
+  {
+   "id": "REP-S-027",
+   "type": "song",
+   "title": "Amensister",
+   "author": "Felix Roos",
+   "genre": "Jungle / breaks",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L739",
+   "date": "stock",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches Amen-style break handling, off layering, filter ranges.",
+   "learn": "Amen-style break handling, off layering, filter ranges",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #2"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "bass"
+  },
+  {
+   "id": "REP-S-028",
+   "type": "song",
+   "title": "Lounge sponge",
+   "author": "Felix Roos (with Steven Yi's livecode.orc)",
+   "genre": "Lounge / jazz",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L830",
+   "date": "stock",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches chord voicing, Csound instrument use.",
+   "learn": "chord voicing, Csound instrument use",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #8"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "classical"
+  },
+  {
+   "id": "REP-S-029",
+   "type": "song",
+   "title": "Only for the DMG 101 (\"Only for the Weak\" - In Flames) (cover)",
+   "author": "santi.codes",
+   "original_artist": "In Flames",
+   "genre": "Melodic death metal / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 42)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.youtube.com/watch?v=JjbiqECv000",
+     "http": 200,
+     "license": null,
+     "title": "Only for the DMG 101",
+     "channel": "santi dot codes"
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "In Flames' Only for the Weak played like a Game Boy (DMG): pulse waves, supersaw, a lowpass envelope (lpenv), sometimes, noise drums \u2013 a 490-line long-form piece with a prebake script.",
+   "techniques": [
+    "_scope",
+    "clip",
+    "gain",
+    "lpenv",
+    "lpf",
+    "lpq",
+    "orbit",
+    "range",
+    "scale",
+    "slow",
+    "sometimes",
+    "sub"
+   ],
+   "tempo": "setcpm(178/4)",
+   "length_lines": 494,
+   "header": {
+    "title": "Only for the DMG 101 (In Flames Cover)"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 42)"
+   ],
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-030",
+   "type": "song",
+   "title": "Slaughter of the Toad (\"Slaughter of the Soul\" - At The Gates) (cover)",
+   "author": "santi.codes",
+   "original_artist": "At the Gates",
+   "genre": "Melodic death metal / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 43)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.youtube.com/watch?v=s5GveUFN71M",
+     "http": 200,
+     "license": null,
+     "title": "Slaughter of the Toad",
+     "channel": "santi dot codes"
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "At the Gates' Slaughter of the Soul with a Battletoads soundfont \u2013 very long (1,180 lines), noise-drum patterns written out in mini-notation.",
+   "techniques": [
+    "_scope",
+    "attack",
+    "clip",
+    "gain",
+    "hpf",
+    "lpf",
+    "release"
+   ],
+   "tempo": "setcpm(157/4)",
+   "length_lines": 1180,
+   "header": {
+    "title": "Slaughter of the Toad (At the Gates - Slaughter of the Soul cover with the Battletoads soundfont)"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 43)"
+   ],
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-031",
+   "type": "song",
+   "title": "Livecoding melodic DNB music in Strudel",
+   "author": "Switch Angel",
+   "genre": "Melodic drum & bass",
+   "url": "https://www.youtube.com/watch?v=aPsq5nqvhxg",
+   "date": "2025-09-19",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by Switch Angel. Teaches harmony over breakbeats.",
+   "learn": "harmony over breakbeats",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #11"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "bass"
+  },
+  {
+   "id": "REP-S-032",
+   "type": "song",
+   "title": "you will not steve reich your way out of it",
+   "author": "scinziato",
+   "genre": "Minimal / phase music",
+   "url": "https://www.youtube.com/watch?v=xpILnXcWyuo",
+   "date": "2024-01-06",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by scinziato. Teaches phasing and process music in patterns (on the official Showcase).",
+   "learn": "phasing and process music in patterns (on the official Showcase)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #20"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "ambient"
+  },
+  {
+   "id": "REP-S-033",
+   "type": "song",
+   "title": "Birds of a Feather - Billie Eilish (Remake)",
+   "author": "saga_3k",
+   "original_artist": "Billie Eilish & Finneas",
+   "genre": "Pop",
+   "url": "https://strudel.cc/?yTnr825wyd9V",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://www.youtube.com/watch?v=_PjSOSoZeSA",
+     "http": 200,
+     "license": null,
+     "title": "BIRDS OF A FEATHER (Remake in Strudel)",
+     "channel": "SAGA3K Records"
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "A remake of Birds of a Feather; Bakery share with a YouTube walkthrough by saga_3k.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 26)"
+   ],
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-034",
+   "type": "song",
+   "title": "DJ_Dave \u2013 Array [Lil Data Edit] (Strudel Version)",
+   "author": "DJ_Dave / Lil Data (uploader)",
+   "genre": "Pop / hyperpop",
+   "url": "https://www.youtube.com/watch?v=KUujFuTcuKc",
+   "date": "2023-11-02",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by DJ_Dave / Lil Data (uploader). Teaches song-form pop arrangement in code (on the Showcase).",
+   "learn": "song-form pop arrangement in code (on the Showcase)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #22"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "pop"
+  },
+  {
+   "id": "REP-S-035",
+   "type": "song",
+   "title": "New Order - Blue Monday",
+   "author": "Lewis",
+   "original_artist": "New Order",
+   "genre": "Synth-pop",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 25)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.youtube.com/watch?v=ilF4t0jSBUo",
+     "http": 200,
+     "license": null,
+     "title": "New Order - Blue Monday (Strudel REPL)",
+     "channel": "Lewis"
+    },
+    {
+     "url": "https://www.youtube.com/watch?v=ilF4t0jSBUo",
+     "http": 200,
+     "note": "also starting piece #25"
+    }
+   ],
+   "date": "2025-06-21",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Blue Monday with its iconic kick-drum fill; drum layers on the 909/808 style banks, a sawtooth lead, a GM synth bass and a pianoroll. Uses arrange-like sections at 130 bpm (setcpm(130/4)), scale, hpf, room.",
+   "techniques": [
+    "_pianoroll",
+    "attack",
+    "bank",
+    "decay",
+    "gain",
+    "hpf",
+    "room",
+    "scale",
+    "slow",
+    "sustain"
+   ],
+   "tempo": "setcpm(130/4)",
+   "length_lines": 43,
+   "header": {
+    "title": "New Order - Blue Monday (cover / remix)",
+    "by": "Lewis"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 25)",
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #25"
+   ],
+   "learn": "arrange sections and an iconic drum fill",
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-036",
+   "type": "song",
+   "title": "Enjoy The Silence (coda)",
+   "author": "eefano (song by Depeche Mode)",
+   "genre": "Synth-pop cover",
+   "url": "https://github.com/eefano/strudel-songs-collection/blob/main/enjoythesilence.js",
+   "date": "repo pushed 2026-10-03",
+   "script_license": "none stated",
+   "composition": "composition under copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Script by eefano (song by Depeche Mode). Teaches transcribing a pop arrangement.",
+   "learn": "transcribing a pop arrangement",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #24"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-037",
+   "type": "song",
+   "title": "Stranger Things (Netflix Series)",
+   "author": "eefano",
+   "original_artist": "Kyle Dixon & Michael Stein",
+   "genre": "TV theme / synthwave",
+   "url": "https://strudel.cc/?jq8RmPcjADF9",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "The Stranger Things title theme: arpeggiated analogue-style synth line over a pad.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 18)"
+   ],
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-038",
+   "type": "song",
+   "title": "Caverave",
+   "author": "Felix Roos (froos)",
+   "genre": "Techno / rave",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs#L125",
+   "date": "stock (file last changed 2025-12-13)",
+   "script_license": "CC BY-NC-SA 4.0",
+   "composition": "original",
+   "reuse": "adapt-with-credit (non-commercial, share-alike)",
+   "description": "Stock tune by Felix Roos in the Strudel repo. Teaches struct + mask arrangement, scaleTranspose, pianoroll visual.",
+   "learn": "struct + mask arrangement, scaleTranspose, pianoroll visual",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #1"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-039",
+   "type": "song",
+   "title": "Happy Birthday",
+   "author": "eefano",
+   "original_artist": "Mildred & Patty Hill (melody)",
+   "genre": "Traditional",
+   "url": "https://strudel.cc/?DLqP6rcF6lZc",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "public domain (US, since 2016 ruling)",
+   "reuse": "ask-author (composition public domain; script has no license)",
+   "description": "The birthday song \u2013 a simple melody, good first transcription exercise.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 22)"
+   ],
+   "status": "catalogued",
+   "family": "classical"
+  },
+  {
+   "id": "REP-S-040",
+   "type": "song",
+   "title": "Old McDonalds",
+   "author": "eefano",
+   "original_artist": "traditional",
+   "genre": "Traditional / children",
+   "url": "https://strudel.cc/?rDUAQ7v1lODK",
+   "share": "Bakery share id",
+   "sources": [
+    {
+     "url": "https://github.com/eefano/strudel-songs-collection",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "public domain",
+   "reuse": "ask-author (composition public domain; script has no license)",
+   "description": "The children's song \u2013 simple melody and repetition.",
+   "techniques": [],
+   "tempo": null,
+   "length_lines": null,
+   "header": null,
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "strudel.cc page loads; Bakery code not inspected (the share is stored in strudel.cc's database)"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 24)"
+   ],
+   "status": "catalogued",
+   "family": "classical"
+  },
+  {
+   "id": "REP-S-041",
+   "type": "song",
+   "title": "Coding Trance Music: in the beginning",
+   "author": "Switch Angel",
+   "genre": "Trance",
+   "url": "https://www.youtube.com/watch?v=YFQm8Hk73ug",
+   "date": "2025-11-10",
+   "script_license": "unknown \u2013 video; code license not stated",
+   "composition": "original",
+   "reuse": "link-only until the author agrees (ask-author)",
+   "description": "Video by Switch Angel. Teaches supersaw and build-up structure.",
+   "learn": "supersaw and build-up structure",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "URL opened by the research agent on 2026-11-01 (sources document)"
+   },
+   "cited_in": [
+    "documents/inbox/strudel-repertoire-sources.md \u00a72 #13"
+   ],
+   "key_starting": true,
+   "status": "catalogued",
+   "family": "dance"
+  },
+  {
+   "id": "REP-S-042",
+   "type": "song",
+   "title": "Boulders - Crash Bandicoot (cover)",
+   "author": "tzwaan / Swan",
+   "original_artist": "Josh Mancell (Mutato Muzika)",
+   "genre": "Video game",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 39)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Boulders from Crash Bandicoot: didgeridoo, kalimba and melodic toms, FM, vowel filter, rib and filterWhen \u2013 unusual instrument choices.",
+   "techniques": [
+    "add",
+    "attack",
+    "clip",
+    "decay",
+    "filterWhen",
+    "fm",
+    "gain",
+    "lpf",
+    "lpq",
+    "release",
+    "rib",
+    "room",
+    "struct",
+    "vowel"
+   ],
+   "tempo": "setCpm(148/4)",
+   "length_lines": 93,
+   "header": {
+    "title": "boulders compact",
+    "by": "tzwaan"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 39)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-043",
+   "type": "song",
+   "title": "Toby Fox - Home (cover)",
+   "author": "tzwaan / Swan",
+   "original_artist": "Toby Fox (Undertale)",
+   "genre": "Video game",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 34)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Undertale's Home: nylon guitar arpeggios (arp, seg) and a tempo pattern that changes over the piece.",
+   "techniques": [
+    "add",
+    "arp",
+    "clip",
+    "fast",
+    "gain",
+    "pick",
+    "range",
+    "room",
+    "seg"
+   ],
+   "tempo": "setCpm(110/4)",
+   "length_lines": 32,
+   "header": {
+    "title": "Home",
+    "by": "Toby Fox"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 34)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-044",
+   "type": "song",
+   "title": "Toby Fox - Megalovania (cover)",
+   "author": "tzwaan / Swan",
+   "original_artist": "Toby Fox (Undertale)",
+   "genre": "Video game",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 33)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Megalovania transcribed by tzwaan with the MT-32 sound set, FM, pick and multi-parameter mini-notation (s:n:gain). Shows packing many controls into one pattern.",
+   "techniques": [
+    "add",
+    "bank",
+    "clip",
+    "delay",
+    "fm",
+    "lpf",
+    "lpq",
+    "pick",
+    "postgain",
+    "room",
+    "roomsize",
+    "scale"
+   ],
+   "tempo": "setCpm(120/4)",
+   "length_lines": 61,
+   "header": {
+    "title": "Megalovania",
+    "by": "Toby Fox"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 33)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-045",
+   "type": "song",
+   "title": "Toby Fox \u2013 Megalovania (cover)",
+   "author": "MariaAreadne",
+   "original_artist": "Toby Fox (Undertale)",
+   "genre": "Video game",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 30)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.youtube.com/@MariaAreadne1",
+     "http": 200,
+     "license": null,
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Megalovania with voicings, dict, pick, struct, AkaiLinn drums, a clean electric guitar and a GM bass, with a pianoroll. Shows chord voicing and switching parts with pick.",
+   "techniques": [
+    "_pianoroll",
+    "add",
+    "attack",
+    "bank",
+    "clip",
+    "color",
+    "delay",
+    "dict",
+    "fast",
+    "gain",
+    "lpf",
+    "lpq",
+    "orbit",
+    "pan",
+    "pick",
+    "range",
+    "room",
+    "shape",
+    "slow",
+    "struct",
+    "voicing"
+   ],
+   "tempo": "setcpm(60)",
+   "length_lines": 42,
+   "header": {
+    "by": "MariaAreadne"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 30)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-046",
+   "type": "song",
+   "title": "Determination - Toby Fox (cover)",
+   "author": "Claffystic",
+   "original_artist": "Toby Fox (Undertale)",
+   "genre": "Video game / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 27)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/Claffystic/StudelProjects",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Undertale's Determination with square and triangle waves only \u2013 chiptune voices, shape distortion, room. 115 bpm. The author says it was made to learn Strudel.",
+   "techniques": [
+    "gain",
+    "room",
+    "roomsize",
+    "shape"
+   ],
+   "tempo": "setcpm(115 / 4)",
+   "length_lines": 112,
+   "header": {
+    "by": "Claffystic",
+    "details": "This is an unofficial fanmade content. I made this to learn about Strudel and that's it."
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 27)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-047",
+   "type": "song",
+   "title": "Goldenrod City - Pokemon (cover)",
+   "author": "tzwaan / Swan",
+   "original_artist": "Junichi Masuda (Pok\u00e9mon)",
+   "genre": "Video game / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 37)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Goldenrod City minified to 11 lines: saw/square/noise voices, arp, seg, struct \u2013 a lesson in compact pattern writing.",
+   "techniques": [
+    "add",
+    "adsr",
+    "arp",
+    "gain",
+    "pan",
+    "pick",
+    "seg",
+    "struct"
+   ],
+   "tempo": "setCpm(54.5)",
+   "length_lines": 11,
+   "header": {
+    "title": "Goldenrod City",
+    "by": "Junichi Masuda"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 37)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-048",
+   "type": "song",
+   "title": "Kraid's Lair - Metroid (cover)",
+   "author": "tzwaan / Swan",
+   "original_artist": "Hirokazu Tanaka (Metroid)",
+   "genre": "Video game / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 35)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Kraid's Lair in 22 lines: square and triangle waves in 3/4-based cpm (224/3), jux stereo, crush and a scope.",
+   "techniques": [
+    "_scope",
+    "crush",
+    "gain",
+    "jux",
+    "postgain",
+    "scale"
+   ],
+   "tempo": "setCpm(224/3)",
+   "length_lines": 22,
+   "header": {
+    "title": "Kraid's Lair",
+    "by": "Hirokazu Tanaka"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 35)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-049",
+   "type": "song",
+   "title": "Lavender Town - Pokemon (cover)",
+   "author": "tzwaan / Swan",
+   "original_artist": "Junichi Masuda (Pok\u00e9mon)",
+   "genre": "Video game / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 40)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Lavender Town in 18 lines: pulse waves, white-noise percussion through a bandpass, FM and conditional filters.",
+   "techniques": [
+    "add",
+    "adsr",
+    "bpf",
+    "clip",
+    "delay",
+    "filterWhen",
+    "fm",
+    "gain",
+    "range",
+    "slow",
+    "when"
+   ],
+   "tempo": "setCpm(125/4)",
+   "length_lines": 18,
+   "header": {
+    "title": "Lavender Town",
+    "by": "Junichi Masuda"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 40)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-050",
+   "type": "song",
+   "title": "Mt. Moon - Pokemon (cover)",
+   "author": "tzwaan / Swan",
+   "original_artist": "Junichi Masuda (Pok\u00e9mon)",
+   "genre": "Video game / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 36)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Mt. Moon with pulse waves and per-section tempo via setCps; adsr envelopes and conditional transforms (when).",
+   "techniques": [
+    "add",
+    "adsr",
+    "clip",
+    "note",
+    "pan",
+    "sub",
+    "when"
+   ],
+   "tempo": "setCps(236/60)",
+   "length_lines": 41,
+   "header": {
+    "title": "Mt Moon",
+    "by": "Junichi Masuda"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 36)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-051",
+   "type": "song",
+   "title": "Super mario bros. main theme (cover)",
+   "author": "Flowhacker",
+   "original_artist": "Koji Kondo",
+   "genre": "Video game / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 28)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://www.instagram.com/flowhacker_livecoding/reel/DXXSj6Qs_K2/",
+     "http": 200,
+     "license": null,
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "The Super Mario Bros. theme at 200 bpm: pulse/triangle voices, noise drums (pink/white), crush, struct and a scope visual. A long (350-line) transcription \u2013 good for reading how a full song is laid out.",
+   "techniques": [
+    "_scope",
+    "add",
+    "clip",
+    "crush",
+    "decay",
+    "fast",
+    "gain",
+    "hpf",
+    "lpf",
+    "postgain",
+    "release",
+    "struct",
+    "velocity"
+   ],
+   "tempo": "setcpm(200/4)",
+   "length_lines": 351,
+   "header": {
+    "title": "Mario theme",
+    "by": "Flowhacker"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 28)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  },
+  {
+   "id": "REP-S-052",
+   "type": "song",
+   "title": "Vegetable Valley - Kirby's Adventure",
+   "author": "tzwaan / Swan",
+   "original_artist": "Hirokazu Ando (Kirby's Adventure)",
+   "genre": "Video game / chiptune",
+   "url": "https://strudel.cc/#\u2026 (code in the link; open from awesome-strudel line 41)",
+   "share": "code embedded in the link",
+   "sources": [
+    {
+     "url": "https://github.com/tzwaan/strudel-scripts",
+     "http": 200,
+     "license": "none stated",
+     "title": null,
+     "channel": null
+    }
+   ],
+   "date": "undated",
+   "script_license": "none stated",
+   "composition": "copyright",
+   "reuse": "link-only (composition under copyright)",
+   "description": "Vegetable Valley with saw/square/triangle/noise voices and multi-control mini-notation (dec:lp:hp:gain), rib and filterWhen.",
+   "techniques": [
+    "clip",
+    "filterWhen",
+    "rib",
+    "scale"
+   ],
+   "tempo": "setCpm(180/4)",
+   "length_lines": 51,
+   "header": {
+    "title": "Vegetable Valley - Kirby's Adventure",
+    "by": "Hirokazu Ando"
+   },
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "note": "header and techniques read from the link; code not copied"
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 41)"
+   ],
+   "status": "catalogued",
+   "family": "game"
+  }
+ ],
+ "resources": [
+  {
+   "id": "REP-R-001",
+   "type": "repository",
+   "subtype": "songs",
+   "level": "all",
+   "title": "Strudel Songs Collection",
+   "author": "eefano",
+   "url": "https://github.com/eefano/strudel-songs-collection",
+   "date": "repo last pushed 2026-10-03",
+   "license": "none stated",
+   "description": "A large collection of Strudel songs and covers by eefano (the source for 9 tracks above). Script license: none stated \u2013 link and ask before adapting.",
+   "listed_note": "A comprehensive collection of Strudel songs and covers",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Songs created with Strudel, the live coding music tool",
+    "stars": 488,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 51)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-002",
+   "type": "tool",
+   "subtype": "editor integration",
+   "level": "performer",
+   "title": "Strudel Neovim Controller",
+   "author": "gruvw",
+   "url": "https://github.com/gruvw/strudel.nvim",
+   "date": "repo last pushed 2026-04-10",
+   "license": "AGPL-3.0",
+   "description": "strudel.nvim \u2013 drive strudel.cc from Neovim: write patterns in your editor, play them in the browser. AGPL-3.0.",
+   "listed_note": "A Neovim based strudel.cc controller, live coding using Strudel from Neovim",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "A Neovim based strudel.cc controller, live coding using Strudel from Neovim.",
+    "stars": 493,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 52)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-003",
+   "type": "tool",
+   "subtype": "converter",
+   "level": "intermediate",
+   "title": "MIDI to Strudel",
+   "author": "Emanuel",
+   "url": "https://github.com/Emanuel-de-Jong/MIDI-To-Strudel",
+   "date": "repo last pushed 2026-05-07",
+   "license": "GPL-3.0",
+   "description": "Converts MIDI files into Strudel note notation (Python script or an HTML page). GPL-3.0.",
+   "listed_note": "de-Jong \u2013 Convert MIDI files to Strudel note notations with Python or HTML",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Convert Midi files to Strudel code.",
+    "stars": 81,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 53)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-004",
+   "type": "tool",
+   "subtype": "converter",
+   "level": "intermediate",
+   "title": "midi-strudel",
+   "author": "beejsbj",
+   "url": "https://github.com/beejsbj/midi-strudel",
+   "date": "repo last pushed 2026-10-26",
+   "license": "none stated",
+   "description": "Browser MIDI-to-Strudel converter: finds key, tempo, time signature and drum tracks, writes each track as absolute notes or scale degrees. No license stated.",
+   "listed_note": "Detects key, drum tracks, tempo, and time signature; converts each track to absolute-note or relative-scale-degree Strudel code; provides adjustable quantization and instrument mappings; and lets you audition the result in an embedded player before opening it in Strudel. [Demo](https://midi-strudel.vercel.app/)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Browser-based MIDI-to-Strudel converter with readable notation, key detection, quantization, track splitting, and playback.",
+    "stars": 5,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 54)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-005",
+   "type": "tool",
+   "subtype": "converter",
+   "level": "first steps",
+   "title": "Melograph",
+   "author": "beejsbj",
+   "url": "https://github.com/beejsbj/melograph",
+   "date": "repo last pushed 2026-10-26",
+   "license": "GPL-3.0",
+   "description": "Hum or upload a melody, inspect its pitch contour and notes, edit, then open the generated Strudel code. GPL-3.0.",
+   "listed_note": "Record or upload a hummed melody, inspect its pitch contour and note events, then edit, audition, and open the generated Strudel code. [Demo](https://melograph-swart.vercel.app/)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Turn a hummed melody into an inspectable pitch contour, editable notes, and Strudel code.",
+    "stars": 0,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 55)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-006",
+   "type": "tool",
+   "subtype": "song builder",
+   "level": "intermediate",
+   "title": "PLAYER",
+   "author": "",
+   "url": "https://github.com/abrambailey/player",
+   "date": "repo last pushed 2026-06-12",
+   "license": "AGPL-3.0",
+   "description": "A local-first Strudel song builder: live code editor, step sequencer, piano roll, sound browser, timeline/arrangement, effect knobs, .strudel import/export. AGPL-3.0.",
+   "listed_note": "A local-first Strudel song builder with a live code editor, step sequencer, piano roll, sound browser, timeline/arrangement view, effect knobs, `.strudel` import/export, and shareable song links. [Demo](https://player-eight-teal.vercel.app/)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": null,
+    "stars": 15,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 56)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-007",
+   "type": "repository",
+   "subtype": "songs",
+   "level": "all",
+   "title": "maria-live-codes",
+   "author": "MariaAreadne",
+   "url": "https://github.com/Mariaareadne1/maria-live-codes",
+   "date": "repo last pushed 2026-07-30",
+   "license": "none stated",
+   "description": "MariaAreadne's cover songs for Strudel (Megalovania, Feel Good Inc, Vardis Quo and more) \u2013 copy into strudel.cc and play. No license stated.",
+   "listed_note": "A collection of live-coded cover songs for Strudel (Megalovania, Feel Good Inc, Vardis Quo, and more)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "My Strudel covers \u2014 copy, paste into strudel.cc, and play. Live-coded cover songs by Maria.",
+    "stars": 5,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 57)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-008",
+   "type": "tool",
+   "subtype": "transcription",
+   "level": "intermediate",
+   "title": "Toaster",
+   "author": "StopBanning",
+   "url": "https://github.com/StopBanning/toaster",
+   "date": "repo last pushed 2026-11-01",
+   "license": "MIT",
+   "description": "Listens to a song and writes it out as Strudel code as it plays \u2013 kick, hats, bass line, chords \u2013 then opens it in strudel.cc. MIT.",
+   "listed_note": "Play a song and it writes it out as Strudel code while it listens: the kick, the hats, the bass line, the chords. One key opens the code in strudel.cc so you can pick it up from there. Runs in the browser, or as a Windows/Mac app. [Demo](https://toaster.locust.lol)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Hears whatever's playing and writes it out as live Strudel code, with visuals that move to it. Free in your browser, or as a Windows and Mac app.",
+    "stars": 101,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 58)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-009",
+   "type": "course",
+   "subtype": "course",
+   "level": "first steps",
+   "title": "Learning Music Production with Strudel: Free Course for Total Beginners",
+   "author": "",
+   "url": "https://github.com/terryds/learning-music-production-with-strudel",
+   "date": "repo last pushed 2025-11-15",
+   "license": "none stated",
+   "description": "A free, chaptered course on music production in the browser with Strudel, by terryds (who also keeps awesome-strudel). No license stated.",
+   "listed_note": "Free course on learning music production right in the browser (Chapter 1 \"Making Beats\" completed)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Learning how to make music (music production) in the browser (with Strudel) for total beginners",
+    "stars": 370,
+    "archived": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 64)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-010",
+   "type": "video",
+   "subtype": "tutorial",
+   "level": "first steps",
+   "title": "Live Coding For Music With Strudel.cc (Beginners)",
+   "author": "Groovin in G",
+   "url": "https://www.youtube.com/watch?v=tKeJhjvTabc",
+   "date": "undated",
+   "license": "YouTube standard license",
+   "description": "YouTube beginner tutorial by Groovin in G: first patterns, drums and melody in strudel.cc.",
+   "listed_note": "Youtube video tutorial on Live Coding For Music With Strudel.cc by Groovin in G",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Live Coding For Music With Strudel.cc (Beginners)",
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 65)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-011",
+   "type": "docs",
+   "subtype": "workshop",
+   "level": "first steps",
+   "title": "Official Strudel Guide",
+   "author": "",
+   "url": "https://strudel.cc/workshop/getting-started/",
+   "date": "undated",
+   "license": "not stated",
+   "description": "The official getting-started workshop on strudel.cc \u2013 the canonical first lesson. Strudel docs: AGPL-3.0 project; check the site for content terms.",
+   "listed_note": "The official getting started workshop and documentation",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Getting Started \ud83c\udf00 Strudel",
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 66)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-012",
+   "type": "video",
+   "subtype": "workshop",
+   "level": "first steps",
+   "title": "Creative Code Art - WORKSHOP // Coding Music With Strudel // Dan Gorelick and Viola He",
+   "author": "Creative Code Art",
+   "url": "https://www.youtube.com/watch?v=oqyAJ4WeKoU&ab_channel=CreativeCodeArt",
+   "date": "undated",
+   "license": "YouTube standard license",
+   "description": "Recorded workshop by Dan Gorelick and Viola He (Creative Code Art) \u2013 coding music with Strudel from the ground up.",
+   "listed_note": "Comprehensive video workshop on coding music with Strudel",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "WORKSHOP // Coding Music With Strudel // Dan Gorelick and Viola He",
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 67)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-013",
+   "type": "talk",
+   "subtype": "workshop slides",
+   "level": "first steps",
+   "title": "Intro To Algorave (Strudel Workshop)",
+   "author": "",
+   "url": "https://glfmn.io/presentations/algorave/",
+   "date": "undated",
+   "license": "not stated",
+   "description": "glfmn's \"Intro to Algorave\" Strudel workshop \u2013 slides/notes introducing algorave culture and live coding.",
+   "listed_note": "Introduction to algorave and live coding with Strudel",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "intro-to-algorave.txt ~ glfmn.io",
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 68)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-014",
+   "type": "video",
+   "subtype": "talk / workshop",
+   "level": "first steps",
+   "title": "Learn how to make music through live coding // Lucy Cheesman",
+   "author": "Site Gallery",
+   "url": "https://www.youtube.com/watch?v=QRJ0xrjLj6A",
+   "date": "undated",
+   "license": "YouTube standard license",
+   "description": "Lucy Cheesman (Heavy Lifting) on making music by live coding, recorded by Site Gallery.",
+   "listed_note": "Learn live coding techniques to make your own music on Strudel.",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "Lucy Cheesman \u2013 Learn how to make music through live coding",
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 69)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-015",
+   "type": "article",
+   "subtype": "article",
+   "level": "first steps",
+   "title": "Beats, Bytes, and Basslines: An Introduction to Live Coding Music with Strudel CC",
+   "author": "",
+   "url": "https://mirakl.tech/beats-bytes-and-basslines-an-introduction-to-live-coding-with-strudel-cc-4d378e86d5b7",
+   "date": "undated",
+   "license": "not stated",
+   "description": "Mirakl Tech blog article introducing live-coding music with strudel.cc. The site refuses automated requests (403) \u2013 open it by hand to confirm.",
+   "listed_note": "",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 403,
+    "title_seen": null,
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 70)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-016",
+   "type": "video",
+   "subtype": "channel",
+   "level": "intermediate",
+   "title": "MariaAreadne \u2013 Strudel Covers & Tutorials",
+   "author": "",
+   "url": "https://www.youtube.com/@MariaAreadne1",
+   "date": "undated",
+   "license": "YouTube standard license",
+   "description": "YouTube channel of MariaAreadne: live-coded covers and walkthroughs.",
+   "listed_note": "Live-coded song covers and walkthroughs on YouTube",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": null,
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 71)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-R-017",
+   "type": "tool",
+   "subtype": "sample browser",
+   "level": "all",
+   "title": "strudel samples",
+   "author": "",
+   "url": "https://strudel-samples.alternet.site",
+   "date": "undated",
+   "license": "not stated",
+   "description": "strudel-samples.alternet.site \u2013 search and preview samples from known Strudel sample packs and add your own.",
+   "listed_note": "find and preview samples from known sample packs (and add your own!)",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "title_seen": "strudel samples",
+    "stars": null,
+    "archived": null
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 75)"
+   ],
+   "status": "catalogued"
+  }
+ ],
+ "sound_banks": [
+  {
+   "id": "REP-B-001",
+   "type": "sound-bank",
+   "title": "algorave-dave/samples",
+   "author": "algorave-dave",
+   "url": "https://github.com/algorave-dave/samples",
+   "shortcut": "github:algorave-dave/samples",
+   "license": "none stated",
+   "date": "repo last pushed 2026-06-08",
+   "banks": 7,
+   "bank_names": [
+    "cocaina",
+    "overgame",
+    "ecotone",
+    "technologic",
+    "forget",
+    "whatuneed",
+    "failsafe"
+   ],
+   "description": "No description in the repo. 7 sample names in strudel.json.",
+   "rights_note": "Bank names (cocaina, technologic, \u2026) suggest samples from commercial records \u2013 check before use.",
+   "reuse": "do not ship \u2013 rights unclear",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 79)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-002",
+   "type": "sound-bank",
+   "title": "AuditeMarlow/samples",
+   "author": "AuditeMarlow",
+   "url": "https://github.com/AuditeMarlow/samples",
+   "shortcut": "github:AuditeMarlow/samples",
+   "license": "MIT",
+   "date": "repo last pushed 2025-09-28",
+   "banks": 3,
+   "bank_names": [
+    "hihat",
+    "kick",
+    "snare"
+   ],
+   "description": "Free and open source samples I made. 3 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "usable with credit",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 80)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-003",
+   "type": "sound-bank",
+   "title": "AustinOliverHaskell/ms-teams-sounds-strudel",
+   "author": "AustinOliverHaskell",
+   "url": "https://github.com/AustinOliverHaskell/ms-teams-sounds-strudel",
+   "shortcut": "github:AustinOliverHaskell/ms-teams-sounds-strudel",
+   "license": "MIT",
+   "date": "repo last pushed 2025-06-18",
+   "banks": 31,
+   "bank_names": [
+    "Alarm",
+    "Default",
+    "Escalate",
+    "Flick",
+    "Nudge",
+    "Ping",
+    "Pluck",
+    "Prioritize",
+    "Summon",
+    "Tap",
+    "Vibe",
+    "bounce",
+    "bubbles",
+    "bubblesloud",
+    "dripdrop",
+    "eureka",
+    "flutter",
+    "highscore",
+    "meetup_ring",
+    "nextlevel",
+    "plink",
+    "remix",
+    "ring",
+    "ringring",
+    "ripple",
+    "screenshare_ring",
+    "spacetime",
+    "teams_meet_up_reminder",
+    "teams_notification",
+    "wishgranted"
+   ],
+   "description": "\ud83c\udfb6\ud83d\udd14 Microsoft Teams original soundpack. Personal use only. \u00a9\ufe0f Microsoft. No infringement intended. 31 sample names in strudel.json.",
+   "rights_note": "Microsoft Teams sounds \u2013 the repo says \"Personal use only\" with a \u00a9 notice: do not use in soda.strudel.",
+   "reuse": "do not ship \u2013 rights unclear",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 81)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-004",
+   "type": "sound-bank",
+   "title": "bruveping/RepositorioDesonidosParaExperimentar02",
+   "author": "bruveping",
+   "url": "https://github.com/bruveping/RepositorioDesonidosParaExperimentar02",
+   "shortcut": "github:bruveping/RepositorioDesonidosParaExperimentar02",
+   "license": "none stated",
+   "date": "repo last pushed 2024-04-26",
+   "banks": 1,
+   "bank_names": [
+    "todo"
+   ],
+   "description": "No description in the repo. 1 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 82)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-005",
+   "type": "sound-bank",
+   "title": "Bubobubobubobubo/Dough-Amen",
+   "author": "Bubobubobubobubo",
+   "url": "https://github.com/Bubobubobubobubo/Dough-Amen",
+   "shortcut": "github:Bubobubobubobubo/Dough-Amen",
+   "license": "none stated",
+   "date": "repo last pushed 2023-09-25",
+   "banks": 3,
+   "bank_names": [
+    "amen1",
+    "amen3",
+    "amen2"
+   ],
+   "description": "Amen breaks for Superdough 3 sample names in strudel.json.",
+   "rights_note": "Amen break recordings \u2013 the Winstons' recording is under copyright.",
+   "reuse": "do not ship \u2013 rights unclear",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 83)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-006",
+   "type": "sound-bank",
+   "title": "Bubobubobubobubo/Dough-Juj",
+   "author": "Bubobubobubobubo",
+   "url": "https://github.com/Bubobubobubobubo/Dough-Juj",
+   "shortcut": "github:Bubobubobubobubo/Dough-Juj",
+   "license": "none stated",
+   "date": "repo last pushed 2023-11-26",
+   "banks": 1,
+   "bank_names": [
+    "juj"
+   ],
+   "description": "Vocal samples 1 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 84)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-007",
+   "type": "sound-bank",
+   "title": "eddyflux/crate",
+   "author": "eddyflux",
+   "url": "https://github.com/eddyflux/crate",
+   "shortcut": "github:eddyflux/crate",
+   "license": "none stated",
+   "date": "repo last pushed 2024-01-05",
+   "banks": 18,
+   "bank_names": [
+    "crate_sd",
+    "crate_block",
+    "crate_bd",
+    "crate_bell",
+    "crate_djembe",
+    "crate_cr",
+    "crate_clave",
+    "crate_tb",
+    "crate_sh",
+    "crate_stick",
+    "crate_hh",
+    "crate_rim",
+    "crate_conga",
+    "crate_bongo",
+    "crate_cp",
+    "crate_perc",
+    "crate_oh",
+    "crate_rd"
+   ],
+   "description": "No description in the repo. 18 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 85)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-008",
+   "type": "sound-bank",
+   "title": "EloMorelo/samples",
+   "author": "EloMorelo",
+   "url": "https://github.com/EloMorelo/samples",
+   "shortcut": "github:EloMorelo/samples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-08-27",
+   "banks": 1,
+   "bank_names": [
+    "vocals"
+   ],
+   "description": "No description in the repo. 1 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 86)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-009",
+   "type": "sound-bank",
+   "title": "emrexdeger/strudelSamples",
+   "author": "emrexdeger",
+   "url": "https://github.com/emrexdeger/strudelSamples",
+   "shortcut": "github:emrexdeger/strudelSamples",
+   "license": "CC0-1.0",
+   "date": "repo last pushed 2025-10-23",
+   "banks": 15,
+   "bank_names": [
+    "k",
+    "s",
+    "ch",
+    "opal",
+    "b",
+    "clap",
+    "north",
+    "oh",
+    "pad",
+    "perc",
+    "ride",
+    "scape",
+    "syn",
+    "tom",
+    "wt_my"
+   ],
+   "description": "samples for using in strudel REPL 15 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "usable with credit",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 87)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-010",
+   "type": "sound-bank",
+   "title": "fjpolo/fjpolo-Strudel",
+   "author": "fjpolo",
+   "url": "https://github.com/fjpolo/fjpolo-Strudel",
+   "shortcut": "github:fjpolo/fjpolo-Strudel",
+   "license": "MIT",
+   "date": "repo last pushed 2025-12-21",
+   "banks": 3,
+   "bank_names": [
+    "anvil",
+    "chains",
+    "metalgrinder"
+   ],
+   "description": "Strudel music 3 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "usable with credit",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 88)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-011",
+   "type": "sound-bank",
+   "title": "fstiffo/polifonia-samples",
+   "author": "fstiffo",
+   "url": "https://github.com/fstiffo/polifonia-samples",
+   "shortcut": "github:fstiffo/polifonia-samples",
+   "license": "CC0-1.0",
+   "date": "repo last pushed 2024-05-01",
+   "banks": 1,
+   "bank_names": [
+    "italy"
+   ],
+   "description": "Samples from Polifonia Song Contest 2024 1 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "usable with credit",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 89)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-012",
+   "type": "sound-bank",
+   "title": "hvillase/cavlp-25p",
+   "author": "hvillase",
+   "url": "https://github.com/hvillase/cavlp-25p",
+   "shortcut": "github:hvillase/cavlp-25p",
+   "license": "GPL-3.0",
+   "date": "repo last pushed 2025-09-26",
+   "banks": 3,
+   "bank_names": [
+    "botella",
+    "pelota",
+    "spray"
+   ],
+   "description": "Creaci\u00f3n Audiovisual con Lenguajes de Programaci\u00f3n 3 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "usable with credit",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 90)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-013",
+   "type": "sound-bank",
+   "title": "k09/samples",
+   "author": "k09",
+   "url": "https://github.com/k09/samples",
+   "shortcut": "github:k09/samples",
+   "license": "none stated",
+   "date": "repo last pushed 2024-10-12",
+   "banks": 27,
+   "bank_names": [
+    "k09_007",
+    "k09_008",
+    "k09_001",
+    "k09_019",
+    "k09_020",
+    "k09_013",
+    "k09_005",
+    "k09_000",
+    "k09_002",
+    "k09_012",
+    "k09_011",
+    "k09_009",
+    "k09_025",
+    "k09_016",
+    "k09_021",
+    "k09_015",
+    "k09_023",
+    "k09_018",
+    "k09_014",
+    "k09_024",
+    "k09_006",
+    "k09_004",
+    "k09_022",
+    "k09_003",
+    "k09_010",
+    "k09_017",
+    "k09_026"
+   ],
+   "description": "No description in the repo. 27 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 91)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-014",
+   "type": "sound-bank",
+   "title": "kaiye10/strudelSamples",
+   "author": "kaiye10",
+   "url": "https://github.com/kaiye10/strudelSamples",
+   "shortcut": "github:kaiye10/strudelSamples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-06-04",
+   "banks": 4,
+   "bank_names": [
+    "finger",
+    "apache",
+    "idm",
+    "jungle"
+   ],
+   "description": "No description in the repo. 4 sample names in strudel.json.",
+   "rights_note": "Bank names (apache, jungle) suggest classic breaks from commercial records.",
+   "reuse": "do not ship \u2013 rights unclear",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 92)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-015",
+   "type": "sound-bank",
+   "title": "mot4i/garden",
+   "author": "mot4i",
+   "url": "https://github.com/mot4i/garden",
+   "shortcut": "github:mot4i/garden",
+   "license": "none stated",
+   "date": "repo last pushed 2025-08-11",
+   "banks": 13,
+   "bank_names": [
+    "garden_cp",
+    "garden_bd",
+    "garden_oh",
+    "garden_cr",
+    "garden_sn",
+    "garden_hh",
+    "garden_rim",
+    "garden_sd",
+    "garden_lt",
+    "fx",
+    "strings",
+    "loop",
+    "metal"
+   ],
+   "description": "Tweaked DIY Sample Pack  13 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 93)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-016",
+   "type": "sound-bank",
+   "title": "mysinglelise/msl-strudel-samples",
+   "author": "mysinglelise",
+   "url": "https://github.com/mysinglelise/msl-strudel-samples",
+   "shortcut": "github:mysinglelise/msl-strudel-samples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-07-28",
+   "banks": 4,
+   "bank_names": [
+    "magicfriend",
+    "themoonvocoder",
+    "silverfever",
+    "glass"
+   ],
+   "description": "samples for Strudel 4 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 94)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-017",
+   "type": "sound-bank",
+   "title": "Nikeryms/Samples",
+   "author": "Nikeryms",
+   "url": "https://github.com/Nikeryms/Samples",
+   "shortcut": "github:Nikeryms/Samples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-06-19",
+   "banks": 1,
+   "bank_names": [
+    "vocals"
+   ],
+   "description": "No description in the repo. 1 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 95)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-018",
+   "type": "sound-bank",
+   "title": "prismograph/departure",
+   "author": "prismograph",
+   "url": "https://github.com/prismograph/departure",
+   "shortcut": "github:prismograph/departure",
+   "license": "none stated",
+   "date": "repo last pushed 2024-09-26",
+   "banks": 4,
+   "bank_names": [
+    "short",
+    "breaks",
+    "bass",
+    "pad"
+   ],
+   "description": "Samples and configurations for strudel.cc song 4 sample names in strudel.json.",
+   "rights_note": "Includes a \"breaks\" bank \u2013 check origin.",
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 96)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-019",
+   "type": "sound-bank",
+   "title": "QuantumVillage/quantum-music",
+   "author": "QuantumVillage",
+   "url": "https://github.com/QuantumVillage/quantum-music",
+   "shortcut": "github:QuantumVillage/quantum-music",
+   "license": "AGPL-3.0",
+   "date": "repo last pushed 2025-06-03",
+   "banks": 1,
+   "bank_names": [
+    "lucy"
+   ],
+   "description": "A public repository for all of our quantum music activities 1 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "usable with credit",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 97)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-020",
+   "type": "sound-bank",
+   "title": "RikyBac15/samples",
+   "author": "RikyBac15",
+   "url": "https://github.com/RikyBac15/samples",
+   "shortcut": "github:RikyBac15/samples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-09-14",
+   "banks": 31,
+   "bank_names": [
+    "space-kick",
+    "super-bass",
+    "super-bass-short",
+    "space-fx",
+    "brass",
+    "sn-bass",
+    "303-bass",
+    "303-bass2",
+    "303-bass3",
+    "303-bass4",
+    "303-bass5",
+    "303-bass6",
+    "303-bass7",
+    "303-lead",
+    "303-lead2",
+    "303-brass",
+    "303-brass2",
+    "303-brass3",
+    "303-brass4",
+    "303-sq2",
+    "303-sqd",
+    "303-sqd2",
+    "dkick",
+    "kick1",
+    "kick2",
+    "rw-bass",
+    "rw-kick",
+    "rw_synth",
+    "rw-snare",
+    "rw-hh"
+   ],
+   "description": "No description in the repo. 31 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 98)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-021",
+   "type": "sound-bank",
+   "title": "salsicha/capoeira_strudel",
+   "author": "salsicha",
+   "url": "https://github.com/salsicha/capoeira_strudel",
+   "shortcut": "github:salsicha/capoeira_strudel",
+   "license": "none stated",
+   "date": "repo last pushed 2025-09-02",
+   "banks": 2,
+   "bank_names": [
+    "hits",
+    "loops"
+   ],
+   "description": "Strudel repo for capoeira music 2 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 99)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-022",
+   "type": "sound-bank",
+   "title": "sonidosingapura/rochormatic",
+   "author": "sonidosingapura",
+   "url": "https://github.com/sonidosingapura/rochormatic",
+   "shortcut": "github:sonidosingapura/rochormatic",
+   "license": "none stated",
+   "date": "repo last pushed 2025-07-09",
+   "banks": 18,
+   "bank_names": [
+    "roni",
+    "gndym",
+    "yosui",
+    "aonetwo",
+    "golden",
+    "heather",
+    "breaks",
+    "oliver",
+    "surfin",
+    "army",
+    "pete",
+    "karmacoma",
+    "kompira",
+    "minami",
+    "portis",
+    "voodoo",
+    "ritachao",
+    "const"
+   ],
+   "description": "No description in the repo. 18 sample names in strudel.json.",
+   "rights_note": "Bank names (karmacoma, \u2026) suggest samples from commercial records \u2013 check before use.",
+   "reuse": "do not ship \u2013 rights unclear",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 100)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-023",
+   "type": "sound-bank",
+   "title": "terrorhank/samples",
+   "author": "terrorhank",
+   "url": "https://github.com/terrorhank/samples",
+   "shortcut": "github:terrorhank/samples",
+   "license": "none stated",
+   "date": "repo last pushed 2024-06-26",
+   "banks": 28,
+   "bank_names": [
+    "ping",
+    "cole_zero",
+    "mim_one",
+    "mim_two",
+    "goji_one",
+    "waves_zero",
+    "waves_one",
+    "waves_two",
+    "waves_four",
+    "wavekick_zero",
+    "wobble_bmax",
+    "flo_floaty",
+    "turbo_atombomb",
+    "fatstacks_chill",
+    "fatstacks_man",
+    "basterdstrudel",
+    "gothenburg03_bll",
+    "gothenburg03_cp",
+    "gothenburg03_cym",
+    "gothenburg03_hhcl",
+    "gothenburg03_hhop",
+    "gothenburg03_bd",
+    "gothenburg03_bdlo",
+    "gothenburg03_prc",
+    "gothenburg03_rm",
+    "gothenburg03_sd",
+    "gothenburg03_tmhi",
+    "gothenburg03_tmlo"
+   ],
+   "description": "No description in the repo. 28 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 101)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-024",
+   "type": "sound-bank",
+   "title": "tesspilot/samples",
+   "author": "tesspilot",
+   "url": "https://github.com/tesspilot/samples",
+   "shortcut": "github:tesspilot/samples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-09-06",
+   "banks": 9,
+   "bank_names": [
+    "life",
+    "life1",
+    "life2",
+    "life3",
+    "life4",
+    "life5",
+    "life6",
+    "life7",
+    "life8"
+   ],
+   "description": "No description in the repo. 9 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 102)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-025",
+   "type": "sound-bank",
+   "title": "tidalcycles/Dirt-Samples",
+   "author": "tidalcycles",
+   "url": "https://github.com/tidalcycles/Dirt-Samples",
+   "shortcut": "github:tidalcycles/Dirt-Samples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-03-18",
+   "banks": 218,
+   "bank_names": [
+    "808",
+    "909",
+    "808bd",
+    "808cy",
+    "808hc",
+    "808ht",
+    "808lc",
+    "808lt",
+    "808mc",
+    "808mt",
+    "808oh",
+    "808sd",
+    "ab",
+    "ade",
+    "ades2",
+    "ades3",
+    "ades4",
+    "alex",
+    "alphabet",
+    "amencutup",
+    "armora",
+    "arp",
+    "arpy",
+    "auto",
+    "baa",
+    "baa2",
+    "bass",
+    "bass0",
+    "bass1",
+    "bass2"
+   ],
+   "description": "Set of samples used in Dirt  218 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 103)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-026",
+   "type": "sound-bank",
+   "title": "TodePond/samples",
+   "author": "TodePond",
+   "url": "https://github.com/TodePond/samples",
+   "shortcut": "github:TodePond/samples",
+   "license": "none stated",
+   "date": "repo last pushed 2026-08-15",
+   "banks": 0,
+   "bank_names": [],
+   "description": "for backwards compatibility with old strudel clients",
+   "rights_note": "No strudel.json \u2013 kept for backwards compatibility with old Strudel clients.",
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": false
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 104)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-027",
+   "type": "sound-bank",
+   "title": "TristanCacqueray/mirus",
+   "author": "TristanCacqueray",
+   "url": "https://github.com/TristanCacqueray/mirus",
+   "shortcut": "github:TristanCacqueray/mirus",
+   "license": "none stated",
+   "date": "repo last pushed 2024-12-22",
+   "banks": 4,
+   "bank_names": [
+    "small-plate",
+    "get-it-wet",
+    "sillica-beads",
+    "haunted"
+   ],
+   "description": "No description in the repo. 4 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 105)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-028",
+   "type": "sound-bank",
+   "title": "Veikkosuhonen/graffathon25-demo",
+   "author": "Veikkosuhonen",
+   "url": "https://github.com/Veikkosuhonen/graffathon25-demo",
+   "shortcut": "github:Veikkosuhonen/graffathon25-demo",
+   "license": "MIT",
+   "date": "repo last pushed 2025-06-07",
+   "banks": 5,
+   "bank_names": [
+    "amen",
+    "bd",
+    "hh",
+    "sd",
+    "rd"
+   ],
+   "description": "No description in the repo. 5 sample names in strudel.json.",
+   "rights_note": "Includes an amen sample \u2013 the recording is under copyright.",
+   "reuse": "check contents \u2013 usable with credit",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 106)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-029",
+   "type": "sound-bank",
+   "title": "wyan/livecoding-samples",
+   "author": "wyan",
+   "url": "https://github.com/wyan/livecoding-samples",
+   "shortcut": "github:wyan/livecoding-samples",
+   "license": "none stated",
+   "date": "repo last pushed 2025-06-11",
+   "banks": 1,
+   "bank_names": [
+    "(unparsed)"
+   ],
+   "description": "Samples for livecoding projects in strudel and others 1 sample names in strudel.json.",
+   "rights_note": null,
+   "reuse": "ask the owner before shipping",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 107)"
+   ],
+   "status": "catalogued"
+  },
+  {
+   "id": "REP-B-030",
+   "type": "sound-bank",
+   "title": "yaxu/clean-breaks",
+   "author": "yaxu",
+   "url": "https://github.com/yaxu/clean-breaks",
+   "shortcut": "github:yaxu/clean-breaks",
+   "license": "none stated",
+   "date": "repo last pushed 2023-01-31",
+   "banks": 32,
+   "bank_names": [
+    "useme",
+    "sesame",
+    "do",
+    "funkydrummer",
+    "mechanicalman",
+    "kool",
+    "sport",
+    "rill",
+    "think",
+    "king",
+    "around",
+    "riffin",
+    "apache",
+    "neworleans",
+    "hitormiss",
+    "action",
+    "hotline",
+    "swat",
+    "ripple",
+    "fireeater",
+    "hungup",
+    "newday",
+    "movement",
+    "boogiewoogie",
+    "delight",
+    "eeloil",
+    "impeach",
+    "marymary",
+    "amen",
+    "sneakin"
+   ],
+   "description": "No description in the repo. 32 sample names in strudel.json.",
+   "rights_note": "Classic breakbeats (Funky Drummer, Apache, Amen family) \u2013 the recordings are under copyright even though they are widely sampled.",
+   "reuse": "do not ship \u2013 rights unclear",
+   "audit": {
+    "checked": "2026-11-01",
+    "link_http": 200,
+    "strudel_json": true
+   },
+   "cited_in": [
+    "https://github.com/terryds/awesome-strudel (README line 108)"
+   ],
+   "status": "catalogued"
+  }
+ ]
+}

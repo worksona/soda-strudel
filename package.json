@@ -6,13 +6,14 @@
   "license": "AGPL-3.0-or-later",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/build-manifests.mjs && node scripts/extract-strudel-docs.mjs && node scripts/build-skill.mjs && vite build",
+    "build": "node scripts/build-manifests.mjs && node scripts/extract-strudel-docs.mjs && node scripts/build-repertoire.mjs && node scripts/build-skill.mjs && vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "manifests": "node scripts/build-manifests.mjs",
     "docs": "node scripts/extract-strudel-docs.mjs",
     "workshop": "node scripts/extract-workshop.mjs",
     "drums": "node scripts/import-drum-samples.mjs",
+    "repertoire": "node scripts/build-repertoire.mjs",
     "skill": "node scripts/build-skill.mjs",
     "skill:publish": "node scripts/publish-skill.mjs"
   },

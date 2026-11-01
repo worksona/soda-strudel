@@ -1610,3 +1610,73 @@ audio.rec-player {
     animation: none;
   }
 }
+
+/* ---------- Examples › Repertoire: other people's pieces, linked and credited ---------- */
+.rep-search {
+  width: 100%;
+  margin: 4px 0 2px;
+}
+.rep-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.rep-list li {
+  border: 1px solid var(--line);
+  padding: 8px;
+}
+.rep-list .meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.rep-list small {
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.rep-star {
+  color: var(--warn);
+}
+.rep-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+.rep-open {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 13px;
+}
+.rep-badge {
+  font-size: 11px;
+  padding: 1px 6px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted);
+}
+.rep-badge.rep-adapt,
+.rep-badge.rep-open {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.rep-badge.rep-no {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.rep-badge.rep-check {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+.rep-credit {
+  margin-top: 12px;
+  font-size: 12px;
+}
+.examples small.credit {
+  font-size: 11px;
+}
