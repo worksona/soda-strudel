@@ -127,7 +127,7 @@ code without a link, saying it wasn't validated.
 
 - `references/strudel.md` – Strudel essentials: mini-notation, sounds, effects, tonal, time, gotchas
 - `references/functions.md` – every Strudel + soda function, one line each (generated from Strudel's own docs) – grep it when unsure a function exists or what it's called
-- `references/multimedia.md` – soda's media, camera, caption and visual functions
+- `references/multimedia.md` – soda's media, camera, caption and visual functions, and how video exports work (the code layer is in the video when the code is showing)
 - `references/recipes.md` – complete example sketches by mood
 - `sounds.json`, `media.json` – the catalogues the validator uses
 - `config.json` – `siteUrl` the links point at (override with `--site` or `SODA_SITE_URL`)

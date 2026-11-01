@@ -198,3 +198,20 @@ tap to play / stop), `code` (the code playing over the stage, like strudel.cc �
 good for teaching or showing off a pattern) or `full` (Play goes straight to
 full screen). `guide: true` outlines the export frame.
 `camera` is detected automatically from `cam()` / `camMotion`.
+
+## Exporting video
+
+Export (next to Record in the top bar) opens a quick recorder over the stage:
+**Video + sound** or **Sound only** (lossless WAV). The gear sets the frame
+(the sketch's `aspect`), size, length (until you stop, or 4–64 cycles) and
+"start on the next cycle" so clips loop cleanly. The live microphone is
+recorded when Input › Microphone is on. Finished clips are kept in
+Settings › Exports.
+
+The video records **the view you are in**: with View › Code over the stage
+(or a link opened with `view: "code"`) the code layer is in the video as it is
+on screen – syntax colours, playing notes outlined, sliders and inline visuals
+like `._pianoroll()` – top left, sized to the frame. Stage only records the
+stage alone. So for a teaching or show-off clip, suggest `view: "code"`; for a
+clean music video, the default stage. Keep big visuals clear of the top left
+when the code will be over them.
