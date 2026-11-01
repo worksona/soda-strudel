@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+- **Song repositories.** Examples › Repertoire › Repositories reads any GitHub
+  or Codeberg repository where people keep Strudel songs as files – 13 found by
+  our research (eefano, MariaAreadne, dotcomdudee, ipkstef, smaudd, kahlys,
+  doctor-g, Starnet, semism, ikesau, fcm, taconi, ed_crub), or any you add by
+  `owner/repo` or link. Everything in it opens in soda, credited to its owner:
+  songs (Listen, Open here), sample banks (`strudel.json` → Load sounds, Add to
+  sketch), folders of audio (Load sounds as one sound with :0…:n) and pictures
+  and videos (Use adds `media()` and `img()`/`vid()`). `#repo=<id>` opens a
+  repository, `#repo=<id>&file=<path>` one song. GitHub is read directly;
+  Codeberg listings and song files come through `/api/piece` (codeberg.org,
+  text only, size-capped) – Codeberg audio and pictures stay on Codeberg.
+  Repertoire › Sounds has Browse on each bank.
 - **Songs open in soda, not on other sites.** Any Repertoire song whose code
   is public at its source – a GitHub or Codeberg file, or a strudel.cc link –
   opens in the editor unchanged, with the author (and the original composer,

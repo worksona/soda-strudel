@@ -73,6 +73,11 @@ const looksLikeCode = (res) => res?.ok && !/text\/html/.test(res.headers.get('co
 
 /** The piece's code, fetched from its source. Throws with a readable message. */
 export async function fetchPiece(load, { dev = false } = {}) {
+  // GitHub raw files answer the browser directly (CORS) – no hop needed
+  if (!load.export && !load.track && load.url.startsWith('https://raw.githubusercontent.com/')) {
+    const direct = await fetch(load.url).catch(() => null);
+    if (direct?.ok) return direct.text();
+  }
   const q = new URLSearchParams({ url: load.url, ...(load.export ? { export: load.export } : {}), ...(load.track ? { track: load.track } : {}) });
   const res = await fetch(`/api/piece?${q}`).catch(() => null);
   if (looksLikeCode(res)) return res.text();

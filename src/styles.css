@@ -1805,3 +1805,37 @@ body.viewer #watch {
 .community small {
   font-size: 12px;
 }
+.rep-media {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 8px;
+}
+.rep-media li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.rep-media img,
+.rep-media .rep-video {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--soft);
+  display: grid;
+  place-items: center;
+}
+.rep-media small {
+  font-size: 11px;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.rep-media button {
+  min-height: 26px;
+  font-size: 12px;
+}

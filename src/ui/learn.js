@@ -8,6 +8,8 @@ import { docText, findDoc, getDocs, loadDocs, renderDoc, applyEditorSettings, ge
 import { themes } from '@strudel/codemirror';
 import { EDITOR_THEME_FOR, resolvedTheme } from '../theme.js';
 import { lsGet, lsSet } from './dom.js';
+import { KNOWN_REPOS, listRepo, parseRepo, repoSongItem } from '../share/repos.js';
+import { loadLibrary, loadSampleFolder, loadedLibraries } from '../media/github.js';
 
 // ---------- console: collect Strudel's log from the start ----------
 const logs = [];
@@ -285,7 +287,8 @@ function workshop(app) {
 // Policy (decision 2026-11-01-repertoire-reuse-policy): link and credit, never
 // carry anyone's code – every card opens the original where its author put it.
 let repertoire = null; // the loaded catalogue, or a promise while it loads
-const rep = { view: 'collections', family: 'all', level: 'all', query: '', collection: null, shared: null };
+const rep = { view: 'collections', family: 'all', level: 'all', query: '', collection: null, shared: null, repo: null };
+const repoCache = new Map(); // id -> listing | Promise | { error }
 const SHORT = { dance: 'Dance', bass: 'Bass & breaks', game: 'Games', pop: 'Pop & rock', classical: 'Classical & jazz', ambient: 'Ambient' };
 const REUSE = {
   adapt: ['Open licence (non-commercial)', 'CC BY-NC-SA – may be adapted with credit while soda.strudel is non-commercial'],
@@ -314,6 +317,217 @@ const watchButton = (app, it) => h('button', { title: 'Play the video beside the
 const repOpen = (url, label = 'Open') => (url ? h('a.rep-open', { href: url, target: '_blank', rel: 'noopener', title: url }, label, ' ', icon('external', 13)) : null);
 
 const KIND = { song: 'Song', video: 'Video', lesson: 'Lesson', tool: 'Tool', bank: 'Sounds', example: 'soda example', event: 'Event' };
+
+/** Opens Examples › Repertoire › Repositories › a repository (GitHub or Codeberg). */
+export function showRepo(id) {
+  examplesTab = 'repertoire';
+  rep.view = 'repos';
+  rep.query = '';
+  rep.repo = id;
+}
+
+const userRepos = () => lsGet('soda.repos', []);
+
+function reposView(app, rerender, data) {
+  if (!rep.repo) {
+    const input = h('input', { placeholder: 'owner/repo or a GitHub / Codeberg link', 'aria-label': 'Song repository', name: 'repo' });
+    const add = (e) => {
+      e.preventDefault();
+      try {
+        const r = parseRepo(input.value);
+        lsSet('soda.repos', [...new Set([r.id, ...userRepos()])].slice(0, 30));
+        rep.repo = r.id;
+        rerender();
+      } catch (err) {
+        app.toast(err.message, { error: true });
+      }
+    };
+    const card = (r, removable) =>
+      h(
+        'li',
+        {},
+        h(
+          'button.rep-collection',
+          { onclick: () => ((rep.repo = r.id), rerender()) },
+          h('strong', {}, r.title ?? r.id.replace(/^\w+:/, '')),
+          r.note ? h('small', {}, r.note) : null,
+          h('small.rep-count', {}, r.id),
+        ),
+        removable ? h('button.icon', { title: 'Forget', 'aria-label': `Forget ${r.id}`, onclick: () => (lsSet('soda.repos', userRepos().filter((x) => x !== r.id)), rerender()) }, icon('trash', 14)) : null,
+      );
+    const mine = userRepos().filter((id) => !KNOWN_REPOS.some((k) => k.id === id));
+    return [
+      h('p.muted', {}, 'Many people keep their Strudel songs as files in a GitHub or Codeberg repository. Pick one – or add any repository – and every song in it opens here, credited to its owner.'),
+      h('form.addlib', { onsubmit: add }, input, h('button', { type: 'submit' }, icon('github'), ' Open')),
+      mine.length ? h('h4', {}, 'Added by you') : null,
+      mine.length ? h('ul.rep-collections', {}, mine.map((id) => card({ id }, true))) : null,
+      h('h4', {}, 'Found by our research'),
+      h('ul.rep-collections', {}, KNOWN_REPOS.map((r) => card(r, false))),
+    ];
+  }
+  const known = KNOWN_REPOS.find((k) => k.id === rep.repo);
+  let entry = repoCache.get(rep.repo);
+  if (!entry) {
+    entry = listRepo(rep.repo).then(
+      (listing) => (repoCache.set(rep.repo, listing), rerender()),
+      (err) => (repoCache.set(rep.repo, { error: err.message }), rerender()),
+    );
+    repoCache.set(rep.repo, entry);
+  }
+  const back = h('button.icon', { title: 'All repositories', 'aria-label': 'All repositories', onclick: () => ((rep.repo = null), rerender()) }, icon('back', 16));
+  const share = async () => {
+    const url = `${location.origin}/#repo=${encodeURIComponent(rep.repo)}`;
+    await navigator.clipboard?.writeText(url).then(() => app.toast('Repository link copied.'), () => prompt('Copy this link:', url));
+  };
+  const head = (title) => h('div.rep-coll-head', {}, back, h('h4', {}, title), h('button', { title: 'Copy a link that opens this repository in soda', onclick: share }, icon('share', 14), ' Share'));
+  if (entry instanceof Promise) return [head(known?.title ?? rep.repo), h('p.muted', {}, 'Reading the repository…')];
+  if (entry.error) return [head(known?.title ?? rep.repo), h('p.muted', {}, `Could not read it: ${entry.error}.`), h('button', { onclick: () => (repoCache.delete(rep.repo), rerender()) }, 'Try again')];
+  const listing = entry;
+  const q = rep.query.trim().toLowerCase();
+  const songs = listing.songs.filter((s) => !q || s.title.toLowerCase().includes(q) || s.folder.toLowerCase().includes(q));
+  const folders = [...new Set(songs.map((s) => s.folder))];
+  return [
+    head(known?.title ?? listing.info.title),
+    h(
+      'p.muted',
+      {},
+      listing.info.description ? `${listing.info.description} · ` : '',
+      `${listing.songs.length} song files by ${listing.info.owner} · licence: ${listing.info.license} · `,
+      h('a', { href: listing.info.url, target: '_blank', rel: 'noopener' }, 'on ', rep.repo.startsWith('codeberg') ? 'Codeberg' : 'GitHub'),
+    ),
+    listing.info.license === 'none stated' ? h('p.muted', {}, 'No licence stated: songs open here unchanged with the owner credited – ask them before reusing one.') : null,
+    ...folders.map((folder) =>
+      h(
+        'section',
+        {},
+        folder ? h('h4', {}, folder) : null,
+        h(
+          'ul.rep-list',
+          {},
+          songs
+            .filter((s) => s.folder === folder)
+            .map((s) => {
+              const item = repoSongItem(listing, s);
+              return h('li', {}, h('div.meta', {}, h('strong', {}, s.title), h('small', {}, s.path), h('div.rep-foot', {}, listenPieceButton(app, item), openButton(app, item), repOpen(s.url, 'Source'))));
+            }),
+        ),
+      ),
+    ),
+    songs.length ? null : h('p.muted', {}, q ? 'No song matches.' : listing.banks.length || listing.audio.length || listing.media.length ? 'No song files here – see the sounds and pictures below.' : 'No song files found here.'),
+    ...repoResources(app, rerender, listing),
+  ];
+}
+
+// sounds and pictures in a repository: strudel.json banks, loose audio folders, images and videos
+function repoResources(app, rerender, listing) {
+  const github = listing.repo.host === 'github';
+  const isLoaded = (id) => loadedLibraries().some((l) => l.id === id);
+  const busy = (b, fn) => async () => {
+    b.disabled = true;
+    try {
+      await fn();
+    } catch (e) {
+      app.toast(e.message, { error: true });
+    }
+    rerender();
+  };
+  const out = [];
+  if (listing.banks.length || listing.audio.length) {
+    out.push(h('h4', {}, 'Sounds in this repository'));
+    if (!github) out.push(h('p.muted', {}, 'Codeberg does not let browsers load its audio, so these sounds only open on Codeberg.'));
+    const list = h('ul.rep-list', {});
+    for (const bank of listing.banks) {
+      const lib = loadedLibraries().find((l) => l.id === bank.id || l.id === bank.id.replace(/\/main$/, ''));
+      const load = h('button', { type: 'button' }, icon('sounds', 14), ' Load sounds');
+      load.onclick = busy(load, async () => {
+        const l = await loadLibrary(bank.id);
+        app.toast(`Loaded ${l.names.length} sounds from ${bank.folder || listing.info.title}.`);
+      });
+      list.append(
+        h(
+          'li',
+          {},
+          h(
+            'div.meta',
+            {},
+            h('strong', {}, bank.folder || 'Sample bank (strudel.json)'),
+            h('small', {}, lib ? `${lib.names.length} sounds: ${lib.names.slice(0, 12).join(', ')}${lib.names.length > 12 ? '…' : ''}` : bank.path),
+            h(
+              'div.rep-foot',
+              {},
+              github && !lib ? load : null,
+              lib ? listenButton(app, () => app.previewCode(`$: s("<${lib.names.slice(0, 8).join(' ')}>").fast(2)`), 14) : null,
+              lib ? h('button', { type: 'button', title: `Adds ${lib.code} to the top of your sketch`, onclick: () => app.prepend(lib.code) }, icon('plus', 14), ' Add to sketch') : null,
+            ),
+          ),
+        ),
+      );
+    }
+    for (const folder of listing.audio) {
+      const id = `${listing.repo.id}#${folder.folder}`;
+      const done = isLoaded(id);
+      const load = h('button', { type: 'button' }, icon('sounds', 14), ' Load sounds');
+      load.onclick = busy(load, async () => {
+        await loadSampleFolder(id, folder.name, folder.files);
+        app.toast(`Loaded ${folder.files.length} samples as "${folder.name}" – try s("${folder.name}:0").`);
+      });
+      list.append(
+        h(
+          'li',
+          {},
+          h(
+            'div.meta',
+            {},
+            h('strong', {}, folder.folder === '.' ? 'Audio files' : folder.folder),
+            h('small', {}, `${folder.files.length} audio files → s("${folder.name}") with :0…:${folder.files.length - 1}`),
+            h(
+              'div.rep-foot',
+              {},
+              github && !done ? load : null,
+              done ? listenButton(app, () => app.previewCode(`$: s("${folder.name}").n("<${[...Array(Math.min(8, folder.files.length)).keys()].join(' ')}>").fast(2)`), 14) : null,
+              done ? h('button', { type: 'button', onclick: () => app.insert(`$: s("${folder.name}").n("<${[...Array(Math.min(4, folder.files.length)).keys()].join(' ')}>")\n`) }, icon('plus', 14), ' Try it') : null,
+            ),
+          ),
+        ),
+      );
+    }
+    out.push(list);
+  }
+  if (listing.media.length) {
+    out.push(h('h4', {}, `Pictures and videos (${listing.media.length})`));
+    if (!github) out.push(h('p.muted', {}, 'Codeberg does not let the stage draw its pictures – open them on Codeberg.'));
+    out.push(
+      h(
+        'ul.rep-media',
+        {},
+        listing.media.slice(0, 60).map((m) =>
+          h(
+            'li',
+            {},
+            m.type === 'image' ? h('img', { src: m.raw, alt: m.name, loading: 'lazy' }) : h('div.rep-video', {}, icon('film', 22)),
+            h('small', {}, m.name),
+            github
+              ? h(
+                  'button',
+                  {
+                    type: 'button',
+                    title: `Adds media({ ${m.name}: … }) and ${m.type === 'video' ? 'vid' : 'img'}("${m.name}") to your sketch`,
+                    onclick: () => {
+                      app.prepend(`media({ ${m.name}: '${m.raw}' })`);
+                      app.append(`$: ${m.type === 'video' ? 'vid' : 'img'}("${m.name}")\n`);
+                    },
+                  },
+                  icon('plus', 14),
+                  ' Use',
+                )
+              : null,
+          ),
+        ),
+      ),
+    );
+  }
+  return out;
+}
 
 /** Opens Examples › Repertoire › a collection: a built-in one by id, or a shared one. */
 export function showCollection(c) {
@@ -432,15 +646,18 @@ function repertoireView(app, rerender) {
     h('p.muted', {}, 'Strudel songs, lessons and sound banks made by other people – found, checked and credited by our research. Each one opens where its author shared it.'),
     tabs(rep.view, [
       ['collections', `Collections (${data.collections?.length ?? 0})`],
+      ['repos', 'Repositories'],
       ['songs', `Songs (${data.songs.length})`],
       ['learn', `Learn (${data.learn.length})`],
       ['sounds', `Sounds (${data.sounds.length})`],
     ], (t) => ((rep.view = t), rerender())),
-    rep.view === 'collections' ? null : search,
+    rep.view === 'collections' || (rep.view === 'repos' && !rep.repo) ? null : search,
   ];
   let body;
   if (rep.view === 'collections') {
     body = collectionsView(app, rerender, data);
+  } else if (rep.view === 'repos') {
+    body = reposView(app, rerender, data);
   } else if (rep.view === 'songs') {
     const fams = Object.entries(data.families);
     const list = data.songs.filter((s) => (rep.family === 'all' || s.family === rep.family) && matches(s));
@@ -542,7 +759,7 @@ function repertoireView(app, rerender) {
               h('small', {}, `${b.license} · ${b.count} sounds${b.banks.length ? `: ${b.banks.slice(0, 8).join(', ')}${b.count > 8 ? '…' : ''}` : ''}`),
               b.note ? h('small', {}, b.note) : null,
               b.load ? h('code.rep-load', {}, b.load) : null,
-              h('div.rep-foot', {}, repBadge(b.reuse), repOpen(b.url)),
+              h('div.rep-foot', {}, repBadge(b.reuse), h('button', { type: 'button', title: 'See what is in this repository, and load its sounds', onclick: () => (showRepo(`github:${b.title}`), rerender()) }, icon('library', 14), ' Browse'), repOpen(b.url)),
             ),
           ),
         ),

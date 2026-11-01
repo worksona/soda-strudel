@@ -17,7 +17,8 @@ import { saveSketch as storeSketch } from './storage/db.js';
 import { getSettings, onSettings } from './settings.js';
 import { initEditorSettings } from './editor/assist.js';
 import { fromPointer, installPageKeys } from './editor/keys.js';
-import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, showCollection, vibeView } from './ui/learn.js';
+import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, showCollection, showRepo, vibeView } from './ui/learn.js';
+import { listRepo, repoSongItem } from './share/repos.js';
 import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
 import { applyEditorSettings } from './editor/assist.js';
 import { repl } from '@strudel/core';
@@ -257,6 +258,14 @@ function prepend(line) {
   toast('Added to the top of the sketch.');
 }
 
+/** Adds a block at the end of the code. */
+function append(text) {
+  const doc = mirror.editor.state.doc;
+  const sep = doc.length && !doc.toString().endsWith('\n') ? '\n' : '';
+  mirror.editor.dispatch({ changes: { from: doc.length, insert: sep + text } });
+  persist();
+}
+
 function insert(text) {
   const view = mirror.editor;
   const { from, to } = view.state.selection.main;
@@ -489,6 +498,7 @@ const app = {
   mirror,
   ensureAudio,
   insert,
+  append,
   prepend,
   previewCode,
   /** Hears a Repertoire song without touching the editor (like Listen on an example). */
@@ -867,8 +877,31 @@ async function openSongFromLink() {
 }
 
 // #collection=<id> or #col=<shared collection>: open it in Examples › Repertoire
+// #repo=<github:owner/repo[/path]>[&file=<path>]: a song repository, or one song in it
+async function openRepoFromLink() {
+  const params = new URLSearchParams(location.hash.slice(1));
+  const id = params.get('repo');
+  if (!id) return false;
+  history.replaceState(null, '', location.pathname + location.search);
+  const file = params.get('file');
+  if (file) {
+    try {
+      const listing = await listRepo(id);
+      const song = listing.songs.find((s) => s.path === file);
+      if (!song) throw new Error(`no song ${file} in ${id}`);
+      app.openPiece(repoSongItem(listing, song));
+    } catch (e) {
+      toast(e.message, { error: true });
+    }
+    return true;
+  }
+  showRepo(id);
+  openPage('examples', true);
+  return true;
+}
+
 async function openCollectionFromLink() {
-  if (await openSongFromLink()) return;
+  if ((await openSongFromLink()) || (await openRepoFromLink())) return;
   const c = await decodeCollection(location.hash).catch(() => (toast('That collection link could not be read.', { error: true }), null));
   if (!c) return;
   showCollection(c);

@@ -72,6 +72,15 @@ export function forgetLibrary(id) {
   changed();
 }
 
+/** Registers a folder of audio files from a repository as one sound (name:0, name:1, …). */
+export async function loadSampleFolder(id, name, urls) {
+  await samples({ [name]: urls });
+  owner.set(name.toLowerCase(), id);
+  loaded.set(id, { id, url: urls[0], names: [name], code: `samples({ ${name}: ${JSON.stringify(urls)} })` });
+  changed();
+  return loaded.get(id);
+}
+
 /** Loads the cleared community banks; their sounds then work like soda's own. */
 export async function loadClearedLibraries() {
   await Promise.all(CLEARED.map((c) => loadLibrary(c.id, { remember: false, prefix: c.prefix }).catch((e) => console.warn('[soda] cleared library', c.id, e.message))));
