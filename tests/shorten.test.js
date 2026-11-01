@@ -47,6 +47,14 @@ describe('short link function', () => {
     expect(await refused.text()).not.toContain('secret');
   });
 
+  it('also takes the token from API_TOKEN', async () => {
+    vi.stubEnv('API_TOKEN', 'from-api-token');
+    const fetch = reply(201, { slug: 'k2', domain: 'a47l.com' });
+    vi.stubGlobal('fetch', fetch);
+    await shorten(post({ url: `${SITE}/#z=abc` }));
+    expect(fetch.mock.calls[0][1].headers.authorization).toBe('Bearer from-api-token');
+  });
+
   it('says so when no token is set', async () => {
     const res = await shorten(post({ url: `${SITE}/#z=abc` }));
     expect(res.status).toBe(503);

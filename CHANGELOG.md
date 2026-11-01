@@ -5,7 +5,7 @@
 - **Short links with a47l.com.** Share has a “Short link” checkbox: Copy
   link stores the full sketch link on a47l.com and copies the short one,
   falling back to the full link if that fails. The token is a Netlify secret
-  (`SHORTLINK_TOKEN`) used by the site's one function, `/api/shorten`, which
+  (`SHORTLINK_TOKEN` or `API_TOKEN`) used by the site's one function, `/api/shorten`, which
   only shortens links to this site's own sketches; the checkbox stays off
   until the secret is set.
 - **Sounds has tabs.** My sounds (your uploads and takes) and soda sounds (the

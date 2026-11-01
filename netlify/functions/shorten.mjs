@@ -3,7 +3,7 @@
 // The one server-side piece of soda.strudel: makes a short link on the
 // a47l.com shortener (shortlink-headless) without the browser ever seeing the
 // token. The token is a Netlify secret:
-//   netlify env:set SHORTLINK_TOKEN <peer token> --secret
+//   netlify env:set SHORTLINK_TOKEN <peer token> --secret   (API_TOKEN works too)
 //   netlify env:set SHORTLINK_API_URL https://a47l.com     (optional, the default)
 // Only links to this site's own sketches (https://<this host>/#z=…) are
 // accepted, so it can't be used as an open shortener for anything else.
@@ -26,7 +26,7 @@ export function isSketchLink(longUrl, siteHost) {
 }
 
 export default async (req) => {
-  const token = env('SHORTLINK_TOKEN');
+  const token = env('SHORTLINK_TOKEN') || env('API_TOKEN');
   const api = (env('SHORTLINK_API_URL') || 'https://a47l.com').replace(/\/+$/, '');
   if (req.method === 'GET') return json({ enabled: !!token });
   if (req.method !== 'POST') return json({ error: 'method not allowed' }, 405);
