@@ -13,7 +13,7 @@ export const EXAMPLES = [
   {
     title: 'First light',
     category: 'Start here',
-    about: 'A gentle morning: music box, soft arpeggio, sunrise and a few words.',
+    about: 'A sunrise in two and a half minutes: arrange() builds bass, chords, melody, drums and bells from the dark to daylight – night, fog, dusk and sun follow the same plan. Drag the sliders to mix.',
     aspect: 'free',
     code: DEFAULT_CODE,
   },

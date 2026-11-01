@@ -680,7 +680,7 @@ function showWelcome() {
     setMode('code');
     try {
       await play();
-      setTimeout(() => toast('That’s live coding: change any number in the code, then tap Update (next to Play).', { ms: 9000 }), 2500);
+      setTimeout(() => toast('That’s live coding: drag a slider in the code to mix it, or change any number and tap Update (next to Play).', { ms: 9000 }), 2500);
     } catch (e) {
       toast(e.message, { error: true });
     }

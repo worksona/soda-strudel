@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- **A new First light.** The first piece new visitors hear is now a full
+  arrangement: a breathing synth bass, wide chords, a slow supersaw melody,
+  chopped power chords, scripted drums with fills every eighth bar, celesta
+  “birds” and a noise-and-crackle bed, built up by arrange() over two and a
+  half minutes and faded out. A second arrange() runs the pictures, visuals
+  and words on the same plan – night, fog clearing, dusk with a punchcard of
+  every layer, sun with rings and particles – and sliders in the code mix it
+  live. Mixed to peak around 0.75 at its fullest.
 - **Shared links play like a video.** In the viewer, tap the stage (or press
   space) to stop and play again, with a play / stop icon flashing in the
   middle. A small play / stop button joins Full screen and Remix bottom right.

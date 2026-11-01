@@ -55,6 +55,9 @@ async function ensureScope() {
       // Strudel's – `shape` is also a Strudel control – so the stub does the same.
       initHydra: async () => { for (const n of hydraNames) globalThis[n] = chain(); },
       H: () => () => 0,
+      // slider(…) from the editor (the transpiler turns it into sliderWithID): its value
+      slider: (v) => v,
+      sliderWithID: (_id, v) => v,
       // painters from @strudel/draw / webaudio: accept and ignore in Node
     });
     for (const n of hydraNames) if (!(n in globalThis)) globalThis[n] = chain();

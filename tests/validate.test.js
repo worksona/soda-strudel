@@ -34,6 +34,12 @@ $: dub(img("rain")).pan(.3).crush(3).coarse(8)`);
     expect(res.stats.audible).toBeLessThanOrEqual(res.stats.visual);
   });
 
+  it('accepts slider() from the editor', async () => {
+    const res = await v(`$: note("c3 e3").s("sawtooth").gain(slider(.4, 0, 1)).lpf(slider(2000, 200, 8000))`);
+    expect(res.errors).toEqual([]);
+    expect(res.stats.audible).toBeGreaterThan(0);
+  });
+
   it('knows micLevel, the live microphone signal', async () => {
     const res = await v(`$: s("kick*4").bank("soda").gain(micLevel.range(.4, 1))\n$: visual("rings").amount(micLevel)`);
     expect(res.errors).toEqual([]);
