@@ -61,7 +61,7 @@ export function aboutView(rerender, app) {
       ['ctrl / cmd + /', 'comment a line'],
       ['ctrl+space', 'show completions'],
       ['alt+w · alt+q', 'jump to the next / previous $: block'],
-      ['hold ctrl / cmd + point', 'docs for a function'],
+      ['point at a name', 'a hint: docs for a function, what a sound, effector, note or mini-notation symbol is'],
     ]),
     h('h4', {}, 'Mini-notation (inside double quotes)'),
     table(
@@ -376,7 +376,7 @@ export function editorView(app, rerender) {
       ),
     ),
     toggle('isAutoCompletionEnabled', 'Autocomplete functions, sounds and media'),
-    toggle('isTooltipEnabled', 'Docs on hover (hold ctrl / cmd)'),
+    toggle('isTooltipEnabled', 'Hints on hover (functions, names, mini-notation)'),
     toggle('isBracketClosingEnabled', 'Close brackets'),
     toggle('isBracketMatchingEnabled', 'Match brackets'),
     toggle('isLineNumbersDisplayed', 'Line numbers'),

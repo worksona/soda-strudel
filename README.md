@@ -42,7 +42,8 @@ pnpm dev            # http://localhost:5173
 ```
 
 ctrl+enter (cmd+enter on a Mac) plays / updates, ctrl+. stops, ctrl+s saves,
-ctrl+f finds; undo, copy and paste work as usual. The toolbar:
+ctrl+f finds; undo, copy and paste work as usual. Point at a name or a
+mini-notation symbol for a hint. The toolbar:
 
 One row of outlined icons, grouped:
 

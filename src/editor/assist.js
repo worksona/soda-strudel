@@ -2,16 +2,17 @@
 //   – autocomplete for every Strudel + soda function, with docs and an example
 //   – inside strings: sound names in s("…"), banks in .bank("…"), media in img/vid,
 //     visual plugins, fx and blend modes – all from what is actually loaded
-//   – hover docs (hold Ctrl / Cmd and point at a function name)
+//   – hints on hover: function docs, names in strings, mini-notation (hints.js)
 // It replaces Strudel's own autocomplete/tooltip extensions in the same editor
 // compartments, so the Settings › Editor toggles keep working.
 import { autocompletion } from '@codemirror/autocomplete';
-import { hoverTooltip } from '@codemirror/view';
+import { hoverTooltip, tooltips } from '@codemirror/view';
 import { codemirrorSettings, compartments, extensions } from '@strudel/codemirror';
 import { sodaEditorKeys } from './keys.js';
 import { soundMap } from '@strudel/webaudio';
 import { listMedia } from '../soda/mediaRegistry.js';
 import { BLENDS, FX, VISUALS } from '../soda/catalog.js';
+import { hintAt } from './hints.js';
 
 let docs = [];
 const byName = new Map();
@@ -108,22 +109,50 @@ function completions(context) {
 
 export const assistCompletion = autocompletion({ override: [completions], closeOnBlur: true, activateOnTyping: true, maxRenderedOptions: 80 });
 
-let modifierDown = false;
-addEventListener('keydown', (e) => (modifierDown = e.ctrlKey || e.metaKey), true);
-addEventListener('keyup', (e) => (modifierDown = e.ctrlKey || e.metaKey), true);
+// Point at anything in the code for a hint: a function's doc, what a name in a
+// string is (an effector, a visual, a sound, a note…), or what a mini-notation
+// symbol does. No modifier key needed – see hints.js.
+function hintContext() {
+  const sounds = soundMap.get();
+  return {
+    findDoc: (name) => byName.get(name),
+    sounds,
+    banks: new Set(bankNames()),
+    media: new Map(listMedia().map((m) => [m.name, m.local ? `your ${m.type === 'video' ? 'video' : 'image'}` : m.type === 'video' ? 'a video in the media pack' : 'an image in the media pack'])),
+  };
+}
 
-export const assistHover = hoverTooltip((view, pos, side) => {
-  if (!modifierDown) return null;
-  const { from, text } = view.state.doc.lineAt(pos);
-  let start = pos;
-  let end = pos;
-  while (start > from && /\w/.test(text[start - from - 1])) start--;
-  while (end < from + text.length && /\w/.test(text[end - from])) end++;
-  if ((start === pos && side < 0) || (end === pos && side > 0)) return null;
-  const doc = byName.get(text.slice(start - from, end - from));
-  if (!doc) return null;
-  return { pos: start, end, above: true, create: () => ({ dom: renderDoc(doc) }) };
+function renderHint({ title, body }) {
+  const el = document.createElement('div');
+  el.className = 'doc hint';
+  const t = document.createElement('strong');
+  t.textContent = title;
+  const p = document.createElement('p');
+  p.textContent = body;
+  el.append(t, p);
+  return el;
+}
+
+const hintHover = hoverTooltip(
+  (view, pos, side) => {
+    const line = view.state.doc.lineAt(pos);
+    const hint = hintAt(line.text, pos - line.from, side, hintContext());
+    if (!hint) return null;
+    return {
+      pos: line.from + hint.from,
+      end: line.from + hint.to,
+      create: () => ({ dom: hint.doc ? renderDoc(hint.doc, { compact: true }) : renderHint(hint) }),
+    };
+  },
+  { hoverTime: 350 },
+);
+
+// hints sit below the word, and flip above only if there's room under the
+// toolbar – the toolbar covers the top of the editor
+const belowToolbar = tooltips({
+  tooltipSpace: () => ({ top: document.getElementById('toolbar')?.getBoundingClientRect().bottom ?? 0, left: 0, bottom: innerHeight, right: innerWidth }),
 });
+export const assistHover = [hintHover, belowToolbar];
 
 // ---------- editor settings (Strudel's own persisted atom) ----------
 export const EDITOR_DEFAULTS = {

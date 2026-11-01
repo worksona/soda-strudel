@@ -56,7 +56,19 @@ export const VIDEO_FX = {
   timeslice: 'slit-scan: each strip from a different moment, movement smears in time; amount = how far back',
   feedback: 'video feedback – the last frame zoomed and turned under the new one; amount = zoom and spin',
 };
-export const FX = ['none', 'grayscale', 'invert', 'blur', 'posterize', 'pixelate', 'edges', 'sepia', 'contrast', 'hue', ...Object.keys(VIDEO_FX)];
+export const FX_LOOKS = {
+  none: 'no effect',
+  grayscale: 'black and white',
+  invert: 'colours inverted, a negative',
+  blur: 'soft focus',
+  posterize: 'a few flat colours, like a screen print',
+  pixelate: 'big blocky pixels',
+  edges: 'outlines only',
+  sepia: 'old-photo brown',
+  contrast: 'punchier lights and darks',
+  hue: 'colours rotated by .hue() degrees',
+};
+export const FX = [...Object.keys(FX_LOOKS), ...Object.keys(VIDEO_FX)];
 /** The effect names of an fx value: a name, or a chain ("vhs:kaleido" – mini-notation hands it over as an array). */
 export const fxChain = (fx) => (fx === undefined || fx === null ? [] : [fx].flat().map(String).filter((n) => n && n !== 'none'));
 export const BLENDS = ['normal', 'screen', 'multiply', 'overlay', 'lighter', 'difference', 'soft-light'];

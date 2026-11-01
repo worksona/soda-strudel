@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- **Hints on hover.** Point at anything in the code – no key to hold – and a
+  hint shows: a function's doc; what a name in a string is (an effector or
+  look in `fx`, a visual, a blend, a sound and how many variations it has, a
+  bank, a picture, a note and its MIDI number); what a mini-notation symbol
+  does (`* / < > [ ] ~ , : ! @ ? |` …); and what `$:` means. Hints sit below
+  the word, clear of the toolbar. Icon-only buttons show their name on hover.
 - **Keyboard commands work wherever focus is.** On a Mac, cmd+enter plays and
   cmd+. stops (cmd+enter used to add a blank line); ctrl and alt still work.
   The cursor starts in the code and comes back after a click on Play or

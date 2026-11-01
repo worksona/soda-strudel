@@ -731,6 +731,14 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
+// every icon-only control shows its name on hover: an aria-label without a
+// title becomes the title the first time the pointer reaches it
+document.addEventListener('pointerover', (e) => {
+  const el = e.target.closest?.('button[aria-label], a[aria-label], [role="button"][aria-label]');
+  if (!el || el.title || el.textContent.trim()) return;
+  el.title = el.getAttribute('aria-label');
+});
+
 // installable app + quick reopen (production builds only – it would fight the dev server)
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch((e) => console.warn('[soda] service worker', e)));
