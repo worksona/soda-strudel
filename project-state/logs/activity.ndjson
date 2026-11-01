@@ -39,3 +39,5 @@
 {"ts":"2026-11-01T18:31:25.791Z","actor":"david@atomic47.co","event":"outbox.transition","id":"2026-11-01-backlog-research-06","detail":"queued → sent (RES-S-004: 24 people (maintainers, performers, teachers, sample makers) with links and credit notes)","via":"project-kanban"}
 {"ts":"2026-11-01T18:31:36.396Z","actor":"david@atomic47.co","event":"wiki.page.updated","detail":"repertoire"}
 {"ts":"2026-11-01T18:31:36.398Z","actor":"david@atomic47.co","event":"wiki.graph.rebuilt","detail":"22 pages, 180 edges","via":"project-kanban"}
+{"ts":"2026-11-01T19:04:28.481Z","actor":"david@atomic47.co","event":"wiki.page.updated","detail":"repertoire"}
+{"ts":"2026-11-01T19:04:28.483Z","actor":"david@atomic47.co","event":"wiki.graph.rebuilt","detail":"23 pages, 186 edges","via":"project-kanban"}

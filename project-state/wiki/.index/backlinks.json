@@ -49,6 +49,18 @@
       "inverse": "mentioned-by"
     },
     {
+      "src": "repertoire-collections",
+      "src_title": "Collections",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-collections",
+      "src_title": "Collections",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
       "src": "repertoire-credits",
       "src_title": "Credits",
       "type": "child-of",
@@ -233,6 +245,12 @@
     {
       "src": "repertoire-classical",
       "src_title": "Songs: Classical, jazz and traditional",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-collections",
+      "src_title": "Collections",
       "type": "mentions",
       "inverse": "mentioned-by"
     },
@@ -720,6 +738,14 @@
     }
   ],
   "repertoire-harvest-2026-11-01": [
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-collections": [
     {
       "src": "repertoire",
       "src_title": "Repertoire",
