@@ -1,6 +1,6 @@
 # Permission request – Switch Angel (DRAFT, not sent)
 
-**To:** Switch Angel · **Where to send:** the contact listed on the YouTube channel @switchangel
+**To:** Switch Angel · **Where to send:** the contact listed on the Switch Angel YouTube channel (https://www.youtube.com/channel/UCmHz7DQbbkcY_UoWY8bBJLw – note @switchangel is a different, unrelated channel)
 **Why:** our reuse policy adapts a piece with no licence only after the author agrees in writing (decision 2026-11-01-repertoire-reuse-policy). Until then we only link and credit.
 **Before sending:** decide whether to mention that soda.strudel is built with AI assistance – Strudel's POLICY.md (2026-10-28) is wary of AI, and some authors will want to know.
 

@@ -1,6 +1,6 @@
 # Permission request – Wave Coder (DRAFT, not sent)
 
-**To:** Wave Coder · **Where to send:** the contact listed on the Wave Coder YouTube channel
+**To:** Wave Coder · **Where to send:** the contact listed on the Wave Coder YouTube channel (@WaveCodr)
 **Why:** our reuse policy adapts a piece with no licence only after the author agrees in writing (decision 2026-11-01-repertoire-reuse-policy). Until then we only link and credit.
 **Before sending:** decide whether to mention that soda.strudel is built with AI assistance – Strudel's POLICY.md (2026-10-28) is wary of AI, and some authors will want to know.
 
