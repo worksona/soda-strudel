@@ -9,6 +9,38 @@ import { getSettings, updateSettings } from '../settings.js';
 import { clearStore, countAll, deleteRender, listRenders, requestPersist, resetEverything, storageStatus } from '../storage/db.js';
 import { download } from '../export/record.js';
 import { libraryChanged } from '../media/library.js';
+import { DEFAULT_SHORTENER, checkShortener, getShortener, setShortener } from '../share/shorten.js';
+
+/** Settings › Short links: the a47l.com shortener's address and bearer token. */
+function shortLinks() {
+  const s = getShortener();
+  const result = h('p.muted', { 'aria-live': 'polite' }, s.token ? 'Token saved in this browser.' : 'Share › Copy link can make a short link once a token is set.');
+  const urlInput = h('input', { value: s.url, placeholder: DEFAULT_SHORTENER, onchange: (e) => setShortener({ url: e.target.value.trim() || DEFAULT_SHORTENER }) });
+  const tokenInput = h('input', { type: 'password', value: s.token, autocomplete: 'off', placeholder: 'Bearer token from the shortener admin', onchange: (e) => setShortener({ token: e.target.value.trim() }) });
+  const test = async () => {
+    setShortener({ url: urlInput.value.trim() || DEFAULT_SHORTENER, token: tokenInput.value.trim() });
+    result.textContent = 'Checking…';
+    try {
+      result.textContent = `Connected as ${await checkShortener()}. Turn on “Short link” on the Share page.`;
+    } catch (err) {
+      result.textContent = `Not connected: ${err.message}.`;
+    }
+  };
+  return h(
+    'div.stack',
+    {},
+    h('label.field', {}, 'Shortener address', urlInput),
+    h('label.field', {}, 'Token', tokenInput),
+    h(
+      'div.row',
+      {},
+      h('button', { type: 'button', onclick: test }, icon('check'), ' Test'),
+      h('button', { type: 'button', onclick: () => (setShortener({ token: '', enabled: false }), (tokenInput.value = ''), (result.textContent = 'Token removed.')) }, icon('trash'), ' Forget token'),
+    ),
+    result,
+    h('p.muted', {}, 'Works with a47l.com or your own shortlink-headless backend. A peer token is enough; the token never leaves this browser except to call the shortener.'),
+  );
+}
 
 
 export function createSettings({ root, app }) {
@@ -66,6 +98,9 @@ export function createSettings({ root, app }) {
       h('h4', {}, 'Screen and export'),
       h('div.field', {}, h('span', {}, 'Export shape of this sketch'), shapePicker(app.getSketch().aspect, (a) => (app.setAspect(a), render()), app.stage.frame)),
       h('div.field', {}, h('span', {}, 'Export size (short side)'), sizePicker(s.exportSize, (px) => (updateSettings({ exportSize: px }), render()))),
+
+      h('h4', {}, 'Short links'),
+      shortLinks(),
 
       h('h4', {}, 'Editor'),
       editorView(app, render),

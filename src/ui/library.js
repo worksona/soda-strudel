@@ -2,7 +2,7 @@
 // Sounds is the one place for every sound – yours (uploads and mic takes), the
 // soda pack, GitHub libraries and Strudel's own banks, synths and soundfonts –
 // with one rule: click to hear, double-click (or Enter) to insert into the code.
-import { h, toast, formatBytes } from './dom.js';
+import { h, toast, formatBytes, lsGet, lsSet } from './dom.js';
 import { icon } from './icons.js';
 import { listSounds, listMediaItems, storageStatus } from '../storage/db.js';
 import { listMedia } from '../soda/mediaRegistry.js';
@@ -12,6 +12,13 @@ import { getAudioContext, soundMap, superdough } from '@strudel/webaudio';
 
 export function createLibrary({ root, app, isVisible = () => null }) {
   let query = '';
+  // Sounds has two tabs: what you added (uploads, takes) and what comes with
+  // soda (its pack, GitHub libraries, Strudel's sounds). Remembered.
+  let soundsTab = lsGet('soda.soundsTab', 'soda') === 'mine' ? 'mine' : 'soda';
+  const setSoundsTab = (tab) => {
+    soundsTab = tab;
+    lsSet('soda.soundsTab', tab);
+  };
   let pitchedSoda = new Set();
   fetch('/sounds.json')
     .then((r) => r.json())
@@ -149,30 +156,40 @@ export function createLibrary({ root, app, isVisible = () => null }) {
       else if (data.type === 'synth') groups.synths.push(name);
       else groups.samples.push(name);
     }
+    const soda = groups.soda.filter(matches);
+    const drumBanks = [...groups.drums].map(([bank, list]) => [bank, list.filter(matches)]).filter(([, list]) => list.length);
+    const drumCount = drumBanks.reduce((n, [, l]) => n + l.length, 0);
+    const pitchedSet = (list) => list.filter(matches);
+    const mineShown = mine.filter((s) => matches(s.name));
+    const onMine = soundsTab === 'mine';
     const search = h('input', {
       type: 'search',
       value: query,
-      placeholder: `Search ${all.length} sounds`,
+      placeholder: onMine ? `Search your ${mine.length} sounds` : `Search ${all.length - mine.length} sounds`,
       'aria-label': 'Search sounds',
       oninput: (e) => {
         query = e.target.value;
         render('sounds', { focus: 'input[type=search]' });
       },
     });
-    const soda = groups.soda.filter(matches);
-    const drumBanks = [...groups.drums].map(([bank, list]) => [bank, list.filter(matches)]).filter(([, list]) => list.length);
-    const drumCount = drumBanks.reduce((n, [, l]) => n + l.length, 0);
-    const pitchedSet = (list) => list.filter(matches);
-    return [
-      h('label.search', {}, icon('search'), search),
-      h('p.muted', {}, 'Tap a sound to hear it, then Insert · double-click or Enter inserts straight away · outlined = pitched (use note()).'),
-      drop('audio files – or record a take with the mic'),
-      h('h4', {}, `Your sounds (${mine.filter((s) => matches(s.name)).length})`),
-      mine.length
+    const tabs = h(
+      'div.subtabs.segmented',
+      { role: 'tablist', 'aria-label': 'Sounds' },
+      [
+        ['mine', `My sounds (${mine.length})`],
+        ['soda', 'soda sounds'],
+      ].map(([key, label]) =>
+        h('button', { role: 'tab', 'aria-selected': String(key === soundsTab), onclick: () => (setSoundsTab(key), render('sounds')) }, label),
+      ),
+    );
+
+    const mineTab = () => [
+      drop('audio files'),
+      mineShown.length
         ? h(
             'ul.list',
             {},
-            mine.filter((s) => matches(s.name)).map((rec) =>
+            mineShown.map((rec) =>
               h(
                 'li.item',
                 {},
@@ -183,8 +200,11 @@ export function createLibrary({ root, app, isVisible = () => null }) {
               ),
             ),
           )
-        : h('p.muted', {}, 'None yet.'),
+        : h('p.muted', {}, mine.length ? `Nothing called “${query}”.` : 'None yet. Drop audio files here, or tap Record in the top bar to sample your voice.'),
       mine.some((r) => r.source === 'take') ? h('p.muted', {}, 'Takes chop well: .slice(8, "0 3 2 7"), .chop(16), .loopAt(2), .speed("<1 -1>")') : null,
+    ];
+
+    const sodaTab = () => [
       section(
         'soda pack',
         soda.length,
@@ -230,6 +250,13 @@ export function createLibrary({ root, app, isVisible = () => null }) {
             h('div.chips', {}, pitchedSet(groups.wavetables).map((name) => chip({ label: name, sound: name, pitched: true, code: `$: note("c3 e3 g3").s("${name}")\n` }))),
           )
         : null,
+    ];
+
+    return [
+      h('label.search', {}, icon('search'), search),
+      tabs,
+      h('p.muted', {}, 'Tap a sound to hear it, then Insert · double-click or Enter inserts straight away · outlined = pitched (use note()).'),
+      ...(onMine ? mineTab() : sodaTab()),
     ];
   }
 
@@ -288,5 +315,5 @@ export function createLibrary({ root, app, isVisible = () => null }) {
   // only redraw while one of our pages is showing; isVisible() returns its name
   onLibraryChange(() => isVisible() && render(isVisible()));
   onGithubChange(() => isVisible() === 'sounds' && render('sounds'));
-  return { render };
+  return { render, showMySounds: () => setSoundsTab('mine') };
 }

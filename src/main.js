@@ -334,6 +334,7 @@ async function toggleTake() {
       if (!wav) return toast('Nothing recorded.');
       const name = await saveTake(wav);
       toast(`Saved take "${name}" – use s("${name}")`);
+      library.showMySounds();
       openPage('sounds', true);
     } else {
       await ensureAudio();
@@ -639,6 +640,7 @@ async function openFiles(files) {
     const added = await importFiles(rest);
     if (added.length) {
       toast(`Added ${added.map((a) => `${a.kind} "${a.name}"`).join(', ')}`);
+      if (added.some((a) => a.kind !== 'media')) library.showMySounds();
       openPage(added[0].kind === 'media' ? 'media' : 'sounds', true);
     }
   }

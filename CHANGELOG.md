@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+- **Short links with a47l.com.** Settings › Short links takes the shortener's
+  address (a47l.com by default, or any shortlink-headless backend) and a
+  bearer token, with a Test button. Share then has a “Short link” checkbox:
+  Copy link stores the full sketch link on the shortener and copies the short
+  one, falling back to the full link if the shortener can't be reached. The
+  token stays in this browser.
+- **Sounds has tabs.** My sounds (your uploads and takes) and soda sounds (the
+  soda pack, GitHub libraries, Strudel's sounds); search works within the tab.
+  A new take or dropped audio opens My sounds.
 - **Record is its own button.** A mic button in the top bar records a take
   that becomes a sound; it glows and turns into Stop while recording.
 - **Input is for live sources.** Input › Microphone turns the mic on as a
