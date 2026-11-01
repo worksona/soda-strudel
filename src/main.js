@@ -183,6 +183,10 @@ function setPlaying(next) {
   stage.setPlaying(next);
   document.body.classList.toggle('playing', next);
   $('#play').setAttribute('aria-pressed', String(next));
+  // the viewer's own play / stop button (shared links)
+  const vp = $('#viewer-play');
+  setIcon(vp, next ? 'stop' : 'play');
+  vp.setAttribute('aria-label', next ? 'Stop' : 'Play');
   syncPlayButton();
 }
 
@@ -743,6 +747,32 @@ if (fromLink) {
   );
   card.hidden = false;
   $('#viewer-full').addEventListener('click', fullscreen);
+
+  // like a video player: tap the stage, the small button or space to play / stop,
+  // with a brief icon in the middle so the tap is acknowledged
+  const flash = $('#viewer-flash');
+  const toggle = async () => {
+    if (!document.body.classList.contains('viewer') || !card.hidden) return;
+    const next = !playing;
+    flash.replaceChildren(icon(next ? 'play' : 'stop', 44));
+    flash.classList.remove('show');
+    void flash.offsetWidth; // restart the animation
+    flash.classList.add('show');
+    try {
+      next ? await play() : await stop();
+    } catch (e) {
+      toast(e.message, { error: true });
+    }
+  };
+  $('#viewer-play').addEventListener('click', toggle);
+  $('#stage').addEventListener('click', toggle);
+  window.addEventListener('keydown', (e) => {
+    if (e.code !== 'Space' || e.repeat || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.target.closest?.('input, textarea, select, button, [contenteditable="true"]')) return;
+    if (!document.body.classList.contains('viewer') || !card.hidden) return;
+    e.preventDefault();
+    toggle();
+  });
   $('#remix').addEventListener('click', () => {
     viewing = false;
     persist();

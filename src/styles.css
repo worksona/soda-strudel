@@ -604,6 +604,44 @@ body.viewer #viewer-controls {
 body.viewer #viewer-controls button {
   background: var(--overlay);
 }
+body.viewer #stage {
+  cursor: pointer;
+}
+/* the play / stop icon that flashes in the middle after a tap */
+#viewer-flash {
+  position: fixed;
+  z-index: 26;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  margin: -44px 0 0 -44px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  clip-path: circle(50%);
+  opacity: 0;
+  pointer-events: none;
+}
+#viewer-flash.show {
+  animation: viewer-flash 0.6s ease-out;
+}
+@keyframes viewer-flash {
+  0% {
+    opacity: 0.95;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.25);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #viewer-flash.show {
+    animation-duration: 0.01s;
+  }
+}
 #title-card {
   position: fixed;
   inset: 0;

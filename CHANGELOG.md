@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- **Shared links play like a video.** In the viewer, tap the stage (or press
+  space) to stop and play again, with a play / stop icon flashing in the
+  middle. A small play / stop button joins Full screen and Remix bottom right.
 - **Export is a quick recorder.** Export sits next to Record in the top bar
   and opens a recorder over the stage: Video + sound or Sound only (lossless
   WAV), one big Start. While recording: a running timer (with progress when a

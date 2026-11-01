@@ -94,8 +94,10 @@ a `strudel.json` (`user/repo` or a URL), with ten verified suggestions
 return on your next visit; "Add to sketch" writes `samples('github:…')` into the
 code so shared links load them too.
 
-People opening a shared link get a title card → tap → full-screen playback,
-with **Remix** to open the code.
+People opening a shared link get a title card → tap → full-screen playback.
+Like a video player, a tap on the stage (or space) plays and stops, and a
+small cluster bottom right holds play / stop, full screen and **Remix** (open
+the code).
 
 ## On a phone
 
