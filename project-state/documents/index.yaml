@@ -1,0 +1,20 @@
+documents:
+- id: doc-strudel-repertoire-sources
+  title: 'Strudel repertoire sources: where to find, monitor and cite Strudel pieces'
+  path: inbox/strudel-repertoire-sources.md
+  type: reference
+  doc_kind: source map and starting repertoire
+  date: '2026-11-01'
+  author: research agent for David Olsson (web research, every URL opened 2026-11-01 unless marked UNVERIFIED)
+  status: current
+  triage_state: processed
+  registered: '2026-11-01T16:05:00Z'
+  registered_by: dolsson@aimqc.com
+  extracted:
+  - licensing facts (AGPL software, CC BY-NC-SA 4.0 stock tunes, no-license shares, AI policy)
+  - 40 sources with monitoring methods
+  - 25 starting pieces by genre
+  - citation format and reuse rule
+  - weekly harvest search queries
+  relevant_to:
+  - {mandate: RES-M-001, score: 3}

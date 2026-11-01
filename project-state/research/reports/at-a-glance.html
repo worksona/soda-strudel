@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>soda-strudel — research at a glance</title><style>
+:root{--ground:#F5F7F4;--paper:#FFFFFF;--ink:#1B2230;--muted:#6B7480;--faint:#A9B1B8;--line:#DDE3DE;--rule:#B9C2BC;
+--accent:#1F5F6B;--accent-soft:#E3EEF0;--crit:#C23A3A;--crit-soft:#F6E0E0;--warn:#B07600;--warn-soft:#F7ECD6;--ok:#2E7D4F;--ok-soft:#E1F0E6;
+--t-primary:#1F5F6B;--t-secondary:#5C93A0;--t-tertiary:#B5C9CD;--t-spec:#E3D6C2;
+--f-step:#5C93A0;--f-finding:#2E7D4F;--f-barren:#B07600;--f-red:#C23A3A;--f-change:#6B4FA0;--f-ship:#1F5F6B;--f-gate:#1B2230;--f-mandate:#A9B1B8;
+--mono:ui-monospace,Menlo,monospace;--sans:system-ui,-apple-system,"Segoe UI",sans-serif;--serif:Georgia,"Times New Roman",serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--ground:#12181E;--paper:#1A222A;--ink:#E7EBEE;--muted:#A3ACB4;--faint:#5B6670;--line:#2C3640;--rule:#465262;
+--accent:#6FBFC9;--accent-soft:#1E3238;--crit:#E66767;--crit-soft:#3E2222;--warn:#E0B463;--warn-soft:#3A2F17;--ok:#6CC58F;--ok-soft:#1D3327;
+--t-primary:#6FBFC9;--t-secondary:#3F7F8C;--t-tertiary:#2E4A50;--t-spec:#4A3F30;
+--f-step:#3F7F8C;--f-finding:#6CC58F;--f-barren:#E0B463;--f-red:#E66767;--f-change:#A58BDB;--f-ship:#6FBFC9;--f-gate:#E7EBEE;--f-mandate:#5B6670}}
+:root[data-theme="dark"]{color-scheme:dark;--ground:#12181E;--paper:#1A222A;--ink:#E7EBEE;--muted:#A3ACB4;--faint:#5B6670;--line:#2C3640;--rule:#465262;
+--accent:#6FBFC9;--accent-soft:#1E3238;--crit:#E66767;--crit-soft:#3E2222;--warn:#E0B463;--warn-soft:#3A2F17;--ok:#6CC58F;--ok-soft:#1D3327;
+--t-primary:#6FBFC9;--t-secondary:#3F7F8C;--t-tertiary:#2E4A50;--t-spec:#4A3F30;
+--f-step:#3F7F8C;--f-finding:#6CC58F;--f-barren:#E0B463;--f-red:#E66767;--f-change:#A58BDB;--f-ship:#6FBFC9;--f-gate:#E7EBEE;--f-mandate:#5B6670}
+
+*{box-sizing:border-box}body{background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 64px}h1{font-family:var(--serif);font-weight:600;font-size:2rem;line-height:1.1;margin:0;text-wrap:balance}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.lede{color:var(--muted);max-width:68ch;margin:8px 0 22px}
+.scope{border-left:3px solid var(--accent);background:var(--accent-soft);padding:10px 14px;border-radius:0 6px 6px 0;margin:0 0 22px;font-size:.93rem}
+section{margin-bottom:48px}section>header .q{font-family:var(--serif);font-size:1.45rem;font-weight:600;text-wrap:balance}section>header .w{color:var(--muted);font-size:.9rem;margin-top:2px;max-width:78ch}
+.fig{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:16px 18px 14px;margin-top:14px}
+svg{width:100%;height:auto;display:block;font-family:var(--sans)}svg text{fill:var(--ink);font-size:12px}svg .mut{fill:var(--muted);font-size:11px}svg .mono{font-family:var(--mono);font-size:10px;fill:var(--muted)}svg .grid{stroke:var(--line);stroke-width:1}
+.counts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px}.counts .c{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:10px 14px;min-width:104px}
+.counts .c b{display:block;font-family:var(--serif);font-size:1.6rem;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}.counts .c span{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.counts .c.alert{border-color:var(--crit);background:var(--crit-soft)}.counts .c.alert b{color:var(--crit)}
+.tbl{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.88rem}th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:500}tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}.id{font-family:var(--mono);font-size:.78rem;color:var(--muted);white-space:nowrap}.mut{color:var(--muted)}.small{font-size:.82rem}
+.chip{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;padding:1px 7px;border-radius:999px;border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.chip.ok{border-color:var(--ok);color:var(--ok);background:var(--ok-soft)}.chip.warn{border-color:var(--warn);color:var(--warn);background:var(--warn-soft)}
+.chip.crit{border-color:var(--crit);color:var(--crit);background:var(--crit-soft)}.chip.acc{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}.chip.solid{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.78rem;color:var(--muted);margin-top:10px}.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.cites{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin:10px 0 0;line-height:1.7}.cites b{color:var(--accent);font-weight:500}
+.fixture{font-family:var(--mono);font-size:.7rem;color:var(--warn);border:1px dashed var(--warn);border-radius:4px;padding:2px 8px;display:inline-block;margin-left:8px;vertical-align:4px}
+
+.mand{padding:12px 0;border-top:1px solid var(--line)}.mand:first-child{border-top:0;padding-top:2px}
+.mh{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px}.mh b{font-weight:600;font-size:.98rem}
+.qs{margin:8px 0 0 0;display:grid;gap:5px}
+.qq{display:grid;grid-template-columns:30px 1fr auto 74px;gap:10px;align-items:center;font-size:.88rem;padding:4px 8px;border-radius:5px}
+.qq:hover{background:var(--ground)}.qq .qid{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.qq.st-dropped .qt{text-decoration:line-through;color:var(--muted)}
+.tb{display:flex;height:8px;border-radius:2px;overflow:hidden;background:var(--line);width:74px}.tb i{display:block;height:100%}
+.moved{font-family:var(--mono);font-size:.64rem;color:var(--f-change);margin-left:6px}
+.neg{margin:8px 0 0;padding:8px 10px;border-radius:5px;background:var(--ground);font-size:.86rem}.neg b{font-weight:600}
+@media (max-width:620px){.qq{grid-template-columns:26px 1fr;}.qq .chip,.qq .tb{grid-column:2}}
+.need td:first-child{width:26%}.sev{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.moveblock{padding:10px 0;border-top:1px solid var(--line)}.moveblock:first-child{border-top:0;padding-top:2px}
+.mv{display:grid;grid-template-columns:96px 1fr;gap:4px 12px;font-size:.88rem;margin-top:6px}.mv .d{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+.quiet{font-family:var(--serif);font-size:1.05rem;color:var(--ok);margin-top:6px}
+</style></head><body><div class="wrap">
+  <div class="eyebrow">research capability · generated by build-research-glance · 2026-11-01 15:37</div>
+  <h1>soda-strudel — research at a glance</h1>
+  <p class="lede">Drawn from research/mandates, findings (append-only), challenges, change records, the last walk and the research slice of the activity log. Only established findings count toward a gate; a search that found nothing is shown as nothing.</p>
+  
+  <div class="counts"><div class="c"><b>1</b><span>active mandates</span></div><div class="c"><b>0/0</b><span>questions answered</span></div><div class="c"><b>0</b><span>established findings</span></div><div class="c"><b>0</b><span>provisional</span></div><div class="c"><b>0</b><span>open challenges</span></div><div class="c"><b>0</b><span>waiting on you</span></div></div>
+
+  <section><header><div class="q">What are we asking, and how far along is each question?</div>
+  <div class="w">Every mandate's questions as written. Answered means an established finding answers it; aging and stale follow the half-life of that evidence; on a standing mandate stale evidence reopens the question. The bar is the tier mix of what answers it.</div></header>
+  <div class="fig"><div class="mand"><div class="mh"><span class="chip warn">draft</span><span class="id">RES-M-001</span><b>Which Strudel songs and patterns, across genres, are worth learning from and showing in soda.strudel – and where are new ones appearing?</b><span class="chip">longlist</span><span class="chip warn">iteration 1</span></div><div class="qs"><div class="qq st-open"><span class="qid">Q1</span><span class="qt">Where are Strudel songs, patterns and shares published, and how can each source be monitored weekly (feed, API, search query)?</span><span class="chip ">open</span><span class="tb" title="no established finding answers it yet"></span></div><div class="qq st-open"><span class="qid">Q2</span><span class="qt">For each genre we cover (techno, house, ambient, drum &amp; bass, breaks/jungle, acid, dub, hip-hop, pop/covers, generative, minimal/classical), which pieces best teach a technique a learner can reuse?</span><span class="chip ">open</span><span class="tb" title="no established finding answers it yet"></span></div><div class="qq st-open"><span class="qid">Q3</span><span class="qt">For each candidate piece: who made it, where and when was it published, and under what license – may we link it, show it, or adapt it in the app?</span><span class="chip ">open</span><span class="tb" title="no established finding answers it yet"></span></div><div class="qq st-open"><span class="qid">Q4</span><span class="qt">Which techniques and genres are missing from soda.strudel&#x27;s current examples (src/examples.js), and which candidates fill those gaps?</span><span class="chip ">open</span><span class="tb" title="no established finding answers it yet"></span></div></div></div></div></section>
+
+  <section><header><div class="q">What is waiting on a person?</div>
+  <div class="w">Decisions the last walk parked rather than guessed, blocking challenges, drafts that are drifting, findings that need corroboration, and questions reopened by stale evidence — each with the skill that clears it.</div></header>
+  <div class="fig"><p class="quiet">Nothing is waiting on a person.</p></div></section>
+
+  <section><header><div class="q">Would this survive a reviewer?</div>
+  <div class="w">Per mandate: the source-tier mix of established findings against its own primary-source gate, how much is still provisional, and how much claims corroboration it does not have.</div></header>
+  <div class="fig"><svg viewBox="0 0 960 74" role="img" aria-label="Evidence health per mandate"><text x="280" y="14" class="mono">PRIMARY SHARE OF ESTABLISHED FINDINGS · ▏= GATE</text><text x="704" y="14" class="mono">ESTABLISHED · PROVISIONAL · NOT TRI.</text></svg><div class="legend"><span><i style="background:var(--t-primary)"></i>primary</span><span><i style="background:var(--t-secondary)"></i>secondary</span><span><i style="background:var(--t-tertiary)"></i>tertiary</span><span><i style="background:var(--t-spec)"></i>speculative</span><span><i style="background:var(--ink);width:3px"></i>the mandate's gate</span><span>provisional and superseded findings are excluded from the bar</span></div></div></section>
+
+  <section><header><div class="q">What has the research actually been doing?</div>
+  <div class="w">The last 30 days, one mark per event, stacked by kind. Barren steps are shown because a step that found nothing is data; hollow squares are decisions the walk parked for a person.</div></header>
+  <div class="fig"><svg viewBox="0 0 940 196" role="img" aria-label="Research activity over the last 30 days"><line class="grid" x1="40" y1="8" x2="40" y2="152"/><text x="42" y="184" class="mono">Oct 03</text><line class="grid" x1="100" y1="8" x2="100" y2="152"/><text x="102" y="184" class="mono">Oct 05</text><line class="grid" x1="310" y1="8" x2="310" y2="152"/><text x="312" y="184" class="mono">Oct 12</text><line class="grid" x1="520" y1="8" x2="520" y2="152"/><text x="522" y="184" class="mono">Oct 19</text><line class="grid" x1="730" y1="8" x2="730" y2="152"/><text x="732" y="184" class="mono">Oct 26</text><rect x="921" y="142" width="8" height="8" rx="1" fill="var(--f-mandate)"/><line x1="40" y1="152" x2="940" y2="152" stroke="var(--rule)"/><text x="925" y="184" class="mono" text-anchor="end">today</text></svg><div class="legend"><span><i style="background:var(--f-mandate)"></i>mandate moves</span><span><i style="background:var(--f-step)"></i>steps that found something</span><span><i style="background:var(--f-barren)"></i>barren steps</span><span><i style="background:var(--f-finding)"></i>findings</span><span><i style="background:var(--f-red)"></i>red team</span><span><i style="background:var(--f-change)"></i>changes</span><span><i style="background:var(--f-ship)"></i>shipped, briefed, retro</span><span><i style="border:1.6px solid var(--f-gate);background:none"></i>parked for a person</span><span><i style="background:var(--accent);border-radius:50%"></i>a night walk ran</span></div></div></section>
+
+  <section><header><div class="q">What moved since the last delta?</div>
+  <div class="w">Change records since the last brief (none yet). Material and notable changes are listed with the findings they replaced; noise is counted and never shown.</div></header>
+  <div class="fig"><p class="mut">No change records in the last 30 days.</p>
+  <p class="cites">Findings are never edited: a correction is a new finding that <b>supersedes</b> the old, and the delta is a change record. No walk has run yet. Freshness from the manifest's half-lives: statistic 365 d · pricing 90 d · programme 180 d · event 60 d · offering 270 d · literature 730 d.</p></div></section>
+</div></body></html>

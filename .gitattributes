@@ -1,0 +1,3 @@
+# project-state git merge configuration
+# Append-only logs: keep all lines from both sides (never a real conflict)
+project-state/logs/*.ndjson merge=union

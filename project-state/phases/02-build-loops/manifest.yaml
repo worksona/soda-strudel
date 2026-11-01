@@ -1,0 +1,10 @@
+# Phase 02-build-loops — Build (recurring sprint loops) (preset agile-default)
+id: 02-build-loops
+label: Build (recurring sprint loops)
+status: current
+started: '2026-10-30'
+ended: null
+gate_in: Discovery complete
+gate_out:
+  description: Release candidate ready
+  checklist: []

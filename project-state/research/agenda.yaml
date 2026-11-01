@@ -1,0 +1,10 @@
+# research/agenda.yaml — standing questions by priority. A standing mandate's walk reads this
+# alongside stale evidence to decide what the night works on. Spec §4.1.
+tiers:
+  p0: []      # - {q: "…", mandate: RES-M-NNN}
+  p1:
+    - {q: "What new Strudel songs and patterns were shared this week, and under what license?", mandate: RES-M-001}
+    - {q: "Do the listed pieces' links and licenses still hold?", mandate: RES-M-001}
+  p2:
+    - {q: "Which genres and techniques are thin in soda.strudel's examples?", mandate: RES-M-001}
+  p3: []

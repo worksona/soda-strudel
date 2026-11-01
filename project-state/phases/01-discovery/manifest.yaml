@@ -1,0 +1,10 @@
+# Phase 01-discovery — Discovery (preset agile-default)
+id: 01-discovery
+label: Discovery
+status: complete
+started: '2026-10-30'
+ended: '2026-10-30'
+gate_in: null
+gate_out:
+  description: Initial scope agreed; first sprint queue defined
+  checklist: []

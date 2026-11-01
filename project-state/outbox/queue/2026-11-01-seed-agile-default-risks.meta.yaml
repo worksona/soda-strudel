@@ -1,0 +1,15 @@
+id: 2026-11-01-seed-agile-default-risks
+kind: seed
+title: Starting risks for Software product — review (3)
+produced_by: project-scaffolder
+produced_at: '2026-11-01T15:24:57Z'
+status: queued
+surface: none
+action_required: Review the 3 proposed risks. Edit or delete rows in the YAML block, then approve. On
+  approval run `project-scaffolder adopt-seeds 2026-11-01-seed-agile-default-risks` to write them.
+artifact: 2026-11-01-seed-agile-default-risks.md
+seed:
+  pack: agile-default
+  kind: risks
+  count: 3
+  undated: 0

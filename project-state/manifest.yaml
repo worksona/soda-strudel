@@ -1,0 +1,104 @@
+# soda-strudel — project-state manifest (v2)
+# Scaffolded 2026-11-01 by project-scaffolder from the session's request: a local facility for the
+# soda-strudel app with the research capability, focused on a cited repertoire of Strudel songs and
+# patterns by genre. Choices made without the wizard (change any of them here):
+#   work type agile-default (software product, shipping now) · accountability: just me ·
+#   phase 02-build-loops (the app is live) · timezone America/Vancouver (this machine's zone – confirm) ·
+#   sharing git (the soda-strudel repo) · no surfaces · caches: [] (no heavy downloads in package.json).
+
+schema_version: 2
+manifest_kind: project
+project:
+  name: soda-strudel
+  long_name: 'soda.strudel: a Strudel live-coding studio with pictures, video and sharing'
+  one_liner: 'A browser studio for Strudel live coding – music, visuals and video in one sketch, shared by link –
+    with a growing, fully cited repertoire of Strudel songs and patterns by genre for learners and examples.'
+  kind: agile-default
+  start_date: '2026-10-30'
+  end_date: null
+  packs_loaded:
+  - agile-default
+  reporting_matrix_path: reporting-matrix.yaml
+  owner_org: Atomic 47 Labs / worksona
+  program: null
+  funder: null
+  repository: https://github.com/worksona/soda-strudel
+  site: https://soda-strudel.netlify.app
+stakeholders:
+- id: team
+  organization: Atomic 47 Labs / worksona
+  role: Builds and curates soda.strudel
+  contacts:
+    project_lead: David Olsson <dolsson@aimqc.com>
+- id: engineering-leadership
+  organization: Atomic 47 Labs / worksona
+  role: Engineering leadership (agile pack sprint summaries) – same person for now
+  contacts: {}
+phases:
+  preset: agile-default
+  custom_path: null
+  current_phase: 02-build-loops
+  anchor_date: null
+surfaces:
+  slack:
+    enabled: false
+  gmail:
+    enabled: false
+    always_draft: true
+  google_calendar:
+    enabled: false
+  blog:
+    enabled: false
+    publication_review_required: true
+  website:
+    enabled: false
+automation:
+  enabled: true
+  window:
+    start: '23:00'
+    end: '05:00'
+  timezone: America/Vancouver
+caches: []
+# research capability – enabled 2026-11-01 (enable research, template defaults; no overrides).
+# Spec §5. There is no REQUIRED field: research's lens is the mandate, and an unlocked mandate
+# cannot run — the lock checklist does the work intel's REQUIRED `focus` does.
+capabilities:
+  research:
+    enabled: true
+    version: "0.1.0"               # plugin version at enable time; validator checks drift
+    pack: research-default         # bundled default; swappable
+    defaults:
+      primary_source_min_ratio: 0.5
+      deliverable_format: html
+      citation_style: inline
+    half_lives_days:               # freshness is DERIVED from these, never authored; the table must be documented
+      statistic: 365
+      market: 365
+      organisation: 365
+      offering: 270
+      pricing: 90
+      programme: 180
+      regulation: 180
+      technology: 270
+      event: 60
+      literature: 730
+      method: 1095
+    walk:
+      budget_seconds: 14400
+      max_actions: 40
+      barren_run: 3                # consecutive barren steps before reopen-or-close is parked for a person
+    learning:
+      path: research/learned       # point at a shared path to carry lessons across projects
+      share_calibration: true
+    crossings:
+      intel: auto                  # auto = promotion to intel allowed when intel is enabled on this Project
+concurrency:
+  model: git
+  write_rules: file-per-entity, frontmatter timestamps, advisory lockfiles, append-only logs
+  lock_ttl_seconds: 300
+meta:
+  schema_version: 2
+  created: '2026-11-01T15:24:36Z'
+  created_by: dolsson@aimqc.com
+  last_modified: '2026-11-01T15:24:36Z'
+  last_modified_by: dolsson@aimqc.com

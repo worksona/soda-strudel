@@ -1,0 +1,10 @@
+# Phase 04-release — Release (preset agile-default)
+id: 04-release
+label: Release
+status: pending
+started: null
+ended: null
+gate_in: RC stabilized
+gate_out:
+  description: Released to production
+  checklist: []

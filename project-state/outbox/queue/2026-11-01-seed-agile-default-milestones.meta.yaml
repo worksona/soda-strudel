@@ -1,0 +1,15 @@
+id: 2026-11-01-seed-agile-default-milestones
+kind: seed
+title: Starting milestones for Software product — review (5)
+produced_by: project-scaffolder
+produced_at: '2026-11-01T15:24:57Z'
+status: queued
+surface: none
+action_required: Review the 5 proposed milestones. Edit or delete rows in the YAML block, then approve.
+  On approval run `project-scaffolder adopt-seeds 2026-11-01-seed-agile-default-milestones` to write them.
+artifact: 2026-11-01-seed-agile-default-milestones.md
+seed:
+  pack: agile-default
+  kind: milestones
+  count: 5
+  undated: 3

@@ -1,0 +1,70 @@
+# Drafted 2026-11-01 by research-onboarding from the operator's request. DRAFT – argue with it, then lock
+# with `research-mandate lock RES-M-001` (a person's decision). Once locked it becomes standing (weekly).
+id: RES-M-001
+kind: research-mandate
+slug: strudel-repertoire
+status: draft
+iteration: 1
+headline: "Which Strudel songs and patterns, across genres, are worth learning from and showing in soda.strudel – and where are new ones appearing?"
+questions:
+  - id: Q1
+    text: "Where are Strudel songs, patterns and shares published, and how can each source be monitored weekly (feed, API, search query)?"
+    state: open
+    answered_by: []
+  - id: Q2
+    text: "For each genre we cover (techno, house, ambient, drum & bass, breaks/jungle, acid, dub, hip-hop, pop/covers, generative, minimal/classical), which pieces best teach a technique a learner can reuse?"
+    state: open
+    answered_by: []
+  - id: Q3
+    text: "For each candidate piece: who made it, where and when was it published, and under what license – may we link it, show it, or adapt it in the app?"
+    state: open
+    answered_by: []
+  - id: Q4
+    text: "Which techniques and genres are missing from soda.strudel's current examples (src/examples.js), and which candidates fill those gaps?"
+    state: open
+    answered_by: []
+methodology_type: longlist
+also_types: [deep-web-investigation]
+methodology:
+  - { step: 1, description: "Map and verify the sources (strudel.cc and its tunes, the uzu/strudel repo, Tidal Club forum, Mastodon/Bluesky tags, YouTube performers, flok.cc, GitHub/Codeberg song repos, awesome-lists); record how each is monitored – documents/inbox/strudel-repertoire-sources.md." }
+  - { step: 2, description: "Weekly harvest: run the saved queries per source since the last run; every new piece becomes a longlist candidate (RES-L) with title, author, handle, URL, date, genre, license as found." }
+  - { step: 3, description: "Verify each candidate at its primary source (the author's own post, repo or strudel.cc link) – open the link, confirm author and date, read the license; findings record each fact with its tier." }
+  - { step: 4, description: "Score candidates against the longlist criteria; shortlist the top pieces per genre; note the technique each teaches." }
+  - { step: 5, description: "Weekly delta: new candidates, changed licenses, dead links, and gaps against src/examples.js; ask authors before adapting anything without an explicit license." }
+deliverable:
+  format: html
+  also: [md]
+  structure:
+    - "Repertoire by genre – title, author, link, date, license, technique, reuse status"
+    - "Sources and how each is watched"
+    - "Gaps in soda.strudel's examples and the candidates that fill them"
+    - "This week's new pieces (the delta)"
+  audience: "soda.strudel maintainers choosing examples and learning material; learners via a future in-app Learn › Repertoire page"
+  citation_style: inline
+success_criteria:
+  - "Every listed piece has title, author or handle, source URL opened and working, date (or 'undated'), genre and license status."
+  - "At least 3 shortlisted pieces per covered genre, each naming the technique it teaches."
+  - "Every source in the landscape has a working monitoring method, and the weekly delta reports new pieces or says 'nothing material changed'."
+  - "Nothing is adapted into the app without an explicit permissive/compatible license or the author's written permission, recorded with the citation."
+primary_source_min_ratio: 0.5
+longlist_criteria:
+  - { id: learn, label: "Teaches a reusable technique", weight: 0.3, rubric: "0 none · 1 incidental · 2 clear · 3 a model example of it" }
+  - { id: music, label: "Musical quality and character", weight: 0.25, rubric: "0 sketch · 1 fine · 2 strong · 3 standout" }
+  - { id: reuse, label: "License allows showing or adapting", weight: 0.2, rubric: "0 unknown/none · 1 link only · 2 attribution license · 3 compatible open license (e.g. AGPL/CC-BY/CC0)" }
+  - { id: gap, label: "Fills a genre or technique gap in soda.strudel", weight: 0.15, rubric: "0 covered · 1 partly · 2 gap · 3 nothing like it yet" }
+  - { id: fit, label: "Runs in soda.strudel as published", weight: 0.1, rubric: "0 breaks · 1 needs changes · 2 minor tweaks · 3 runs as is" }
+comparison_subjects: []
+comparative_dimensions: []
+deepweb_depth_cap: 3
+source_relevance:
+  - { ref: "documents/inbox/strudel-repertoire-sources.md", score: 3 }
+corpus_independent: false
+standing: { cadence: weekly, delta_audience: "soda.strudel maintainers" }
+null_result_statement: ~
+locked_at: ~
+locked_iteration: ~
+completed_at: ~
+killed_at: ~
+kill_reason: ~
+owner: "David Olsson <dolsson@aimqc.com>"
+created: 2026-11-01T15:45:00Z

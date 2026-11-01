@@ -1,0 +1,111 @@
+# Stakeholder reporting matrix. Seeded from loaded packs by project-scaffolder seed-pack (agile-default)
+# and by enable research (research-default); customise freely - a re-seed never overwrites an entry whose
+# id already exists. 2026-11-01: research-nightly-walk off, repertoire-weekly-harvest added (weekly cadence).
+schema_version: 2
+manifest_kind: reporting_matrix
+entries:
+- id: sprint-retrospective
+  stakeholder_group: team
+  report: sprint-retrospective
+  cadence:
+    kind: sprint-aligned
+    timing: last-day-of-sprint
+  format: md
+  surface: gmail.draft + slack
+  generator: project-review-meeting
+  profile: agile-default.review-meeting
+  enabled: true
+  seeded_from: agile-default
+- id: bi-weekly-sprint-summary
+  stakeholder_group: engineering-leadership
+  report: bi-weekly-sprint-summary
+  cadence:
+    kind: bi-weekly
+    day: monday-after-sprint
+  format: md
+  surface: gmail.draft
+  generator: project-status-reporter
+  enabled: true
+  seeded_from: agile-default
+- id: daily-standup-digest
+  stakeholder_group: team
+  report: daily-standup-digest
+  cadence:
+    kind: daily
+    day: weekday
+  format: slack
+  surface: slack
+  generator: project-status-reporter
+  enabled: false
+  seeded_from: agile-default
+- id: research-nightly-walk
+  stakeholder: internal
+  report: 'Nightly research walk — one run inside a budget: auto actions done, decisions parked for a person'
+  cadence: daily
+  at: 02:00
+  format: json
+  surface: research/runs/RUN-{date}-N.json
+  producer: research-walk
+  unattended: true
+  review: none
+  enabled: false
+  seeded_from: research-default
+  disabled_reason: 'Operator choice 2026-11-01: the repertoire is harvested weekly – see repertoire-weekly-harvest'
+- id: research-weekly-sweep
+  stakeholder: internal
+  report: Weekly red-team sweep over every live finding of every standing mandate
+  cadence:
+    kind: weekly
+    day: sunday
+  at: 03:00
+  format: yaml
+  surface: research/challenges/
+  producer: research-redteam
+  producer_args: sweep
+  unattended: true
+  review: none
+  enabled: true
+  seeded_from: research-default
+- id: research-weekly-delta
+  stakeholder: internal
+  report: Weekly delta for each standing mandate — what changed, or 'nothing material changed'
+  cadence:
+    kind: weekly
+    day: monday
+  at: 06:30
+  format: markdown
+  surface: research/reports/{mandate}-delta-{date}.md
+  producer: research-brief
+  producer_args: delta
+  review: PL
+  enabled: true
+  seeded_from: research-default
+- id: research-glance
+  stakeholder: internal
+  report: Research at a glance, re-rendered after each walk
+  cadence:
+    kind: ad-hoc
+    on_event: research.walk.closed
+  format: html
+  surface: research/reports/at-a-glance.html
+  producer: research-walk
+  producer_args: render
+  unattended: true
+  review: none
+  enabled: true
+  seeded_from: research-default
+- id: repertoire-weekly-harvest
+  stakeholder: internal
+  report: 'Weekly repertoire harvest – the research walk over RES-M-001: new Strudel songs and patterns, by genre,
+    each with a full citation'
+  cadence:
+    kind: weekly
+    day: saturday
+  at: 09:00
+  format: json
+  surface: research/runs/RUN-{date}-N.json
+  producer: research-walk
+  producer_args: RES-M-001
+  unattended: true
+  review: none
+  enabled: true

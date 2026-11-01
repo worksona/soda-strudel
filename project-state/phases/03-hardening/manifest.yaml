@@ -1,0 +1,10 @@
+# Phase 03-hardening — Hardening (preset agile-default)
+id: 03-hardening
+label: Hardening
+status: pending
+started: null
+ended: null
+gate_in: Release candidate ready
+gate_out:
+  description: RC stabilized; release notes prepared
+  checklist: []
