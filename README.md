@@ -41,7 +41,8 @@ pnpm install
 pnpm dev            # http://localhost:5173
 ```
 
-ctrl+enter plays / updates, ctrl+. stops, ctrl+s saves. The toolbar:
+ctrl+enter (cmd+enter on a Mac) plays / updates, ctrl+. stops, ctrl+s saves,
+ctrl+f finds; undo, copy and paste work as usual. The toolbar:
 
 One row of outlined icons, grouped:
 

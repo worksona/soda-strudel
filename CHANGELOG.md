@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- **Keyboard commands work wherever focus is.** On a Mac, cmd+enter plays and
+  cmd+. stops (cmd+enter used to add a blank line); ctrl and alt still work.
+  The cursor starts in the code and comes back after a click on Play or
+  Update, and with focus on the page, play, stop, undo, redo, copy and paste
+  still reach the code. cmd/ctrl+f opens find and replace. These keys work in
+  every Settings › Editor › Keys mode (Standard, VS Code, Vim, Emacs); About
+  lists them all.
 - **Examples and Share stay on the phone toolbar.** There was room beside
   More; the two buttons reached for most no longer need a second tap.
 - **Video effectors for the camera (and any picture).** `.fx()` on `cam`,

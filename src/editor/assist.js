@@ -7,7 +7,8 @@
 // compartments, so the Settings › Editor toggles keep working.
 import { autocompletion } from '@codemirror/autocomplete';
 import { hoverTooltip } from '@codemirror/view';
-import { codemirrorSettings, compartments } from '@strudel/codemirror';
+import { codemirrorSettings, compartments, extensions } from '@strudel/codemirror';
+import { sodaEditorKeys } from './keys.js';
 import { soundMap } from '@strudel/webaudio';
 import { listMedia } from '../soda/mediaRegistry.js';
 import { BLENDS, FX, VISUALS } from '../soda/catalog.js';
@@ -137,7 +138,7 @@ export const EDITOR_DEFAULTS = {
 
 export const getEditorSettings = () => codemirrorSettings.get();
 
-/** Applies Strudel's editor settings, then swaps in our completion + hover. */
+/** Applies Strudel's editor settings, then swaps in our completion, hover and keys. */
 // Phones always wrap code to the screen and use at least 16px text (iOS zooms
 // into anything smaller). Applied on top of the saved settings, never saved, so
 // a desktop preference for long lines is kept.
@@ -155,6 +156,8 @@ export function applyEditorSettings(mirror, patch = {}) {
     effects: [
       compartments.isAutoCompletionEnabled.reconfigure(settings.isAutoCompletionEnabled ? assistCompletion : []),
       compartments.isTooltipEnabled.reconfigure(settings.isTooltipEnabled ? assistHover : []),
+      // our play / stop / find keys first, then the chosen Keys mode
+      compartments.keybindings.reconfigure([sodaEditorKeys, extensions.keybindings(settings.keybindings)]),
     ],
   });
   return settings;

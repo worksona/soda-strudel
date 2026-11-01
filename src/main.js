@@ -13,6 +13,7 @@ import { isRecording, startTake, stopTake } from './media/mic.js';
 import { saveSketch as storeSketch } from './storage/db.js';
 import { getSettings, onSettings } from './settings.js';
 import { initEditorSettings } from './editor/assist.js';
+import { fromPointer, installPageKeys } from './editor/keys.js';
 import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, vibeView } from './ui/learn.js';
 import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
 import { applyEditorSettings } from './editor/assist.js';
@@ -259,6 +260,12 @@ function insert(text) {
   syncPlayButton();
 }
 const touchScreen = matchMedia('(hover: none) and (pointer: coarse)').matches;
+const editorUsable = () => !viewing && document.body.dataset.mode === 'code' && !document.body.classList.contains('pseudo-full');
+/** Puts the cursor back in the code – not on touch screens, where it pops the keyboard. */
+function focusCode() {
+  if (!touchScreen && editorUsable()) requestAnimationFrame(() => mirror.editor.focus());
+}
+installPageKeys({ mirror, play, stop, editorUsable });
 
 // ---------- View: Code · Stage · Full screen (a pulldown) ----------
 // The stage is the default view – the piece fills the window and the code is
@@ -295,7 +302,7 @@ createDropdown({
   build: ({ close }) => {
     const mode = document.body.dataset.mode;
     return [
-      menuItem('code', 'Code over the stage', () => setMode('code', { remember: true }), { checked: mode === 'code', close }),
+      menuItem('code', 'Code over the stage', () => (setMode('code', { remember: true }), focusCode()), { checked: mode === 'code', close }),
       menuItem('stage', 'Stage only', () => setMode('stage', { remember: true }), { checked: mode === 'stage', close }),
       menuSeparator(),
       menuItem('full', 'Full screen', () => (setMode('stage'), fullscreen()), { close }),
@@ -306,8 +313,16 @@ createDropdown({
 });
 
 // ---------- toolbar: play + inputs ----------
-$('#play').addEventListener('click', () => (playing || previewing ? stop() : play()).catch((e) => toast(e.message, { error: true })));
-$('#update').addEventListener('click', () => play().catch((e) => toast(e.message, { error: true })));
+// a click on Play / Update hands the keys back to the code, so ctrl+. stops
+// and cmd+z undoes right after (a keyboard press keeps focus on the button)
+$('#play').addEventListener('click', (e) => {
+  (playing || previewing ? stop() : play()).catch((err) => toast(err.message, { error: true }));
+  if (fromPointer(e)) focusCode();
+});
+$('#update').addEventListener('click', (e) => {
+  play().catch((err) => toast(err.message, { error: true }));
+  if (fromPointer(e)) focusCode();
+});
 
 // ---------- Input: microphone takes and the camera (a pulldown) ----------
 async function toggleTake() {
@@ -658,6 +673,7 @@ function showWelcome() {
 }
 app.showWelcome = showWelcome;
 if (!fromLink && !lsGet('soda.welcomed', false)) showWelcome();
+else focusCode();
 
 // ---------- viewer mode for shared links ----------
 if (fromLink) {
