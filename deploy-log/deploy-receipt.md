@@ -1,16 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-01T07:40:00Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-01T19:20:00Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae757c9f244153c91ed1017--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae757ba6cce646fad7229d7--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae78e37f71de2f88d3fcd8c--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae78df811375e8a21878fd2--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae757c9f244153c91ed1017 |
+| Deploy ID | 6ae78e37f71de2f88d3fcd8c |
 | Team | worksona |
-| Project type | Static (Vite build) plus one function, `/api/shorten` (a47l.com short links) |
-| Source path | dist/ (built locally with `pnpm build`, commit 1a70520) |
+| Project type | Static (Vite build) plus two functions: `/api/shorten` (a47l.com short links) and `/api/piece` (opens allowlisted open-licence Repertoire pieces) |
+| Source path | dist/ (built locally with `pnpm build`, commit ad3eefb) |
 | Build | Local only – Netlify does not build (no build minutes); the CLI bundles `netlify/functions` |
 | Custom domain | none |
 
@@ -100,3 +100,4 @@ netlify deploy --dir dist            # draft – check it
 netlify deploy --dir dist --prod     # production
 ```
 - Video export with Code over the stage: a recorded MP4 shows the code, note outlines, slider and inline pianoroll (dev); the live bundle has the code layer, `/api/shorten` enabled
+- Repertoire collections: `/api/piece` returns all 18 allowlisted pieces (draft), refuses others (403) on production; `#collection=open-to-play` on production opens the collection and Open here loads a Codeberg piece with its credit header, no errors

@@ -23,3 +23,5 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 9012b39: new First light, Strudel visuals match strudel.cc, Share › Opens as (deploy 6ae6b1561aaae9cd631c688f) |
 | 2026-11-01 | Netlify | https://6ae757ba6cce646fad7229d7--soda-strudel.netlify.app | Preview | Draft (1a70520), bundle and /api/shorten checked |
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | 1a70520: video exports include the code layer in Code over the stage (deploy 6ae757c9f244153c91ed1017) |
+| 2026-11-01 | Netlify | https://6ae78df811375e8a21878fd2--soda-strudel.netlify.app | Preview | Draft (ad3eefb), all 18 open-licence pieces fetched through /api/piece, refusals checked |
+| 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | ad3eefb: Examples › Repertoire with 13 collections, Open here for 18 open-licence pieces via /api/piece, collection links, example credits (deploy 6ae78e37f71de2f88d3fcd8c) |
