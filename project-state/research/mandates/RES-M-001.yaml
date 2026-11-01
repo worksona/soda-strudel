@@ -1,11 +1,12 @@
-# Drafted 2026-11-01 by research-onboarding from the operator's request. DRAFT – argue with it, then lock
+# Drafted 2026-11-01 by research-onboarding from the operator's request; widened the same day to learning
+# resources and new-source discovery (Q5, Q6, step 5) at the operator's request. DRAFT – argue with it, then lock
 # with `research-mandate lock RES-M-001` (a person's decision). Once locked it becomes standing (weekly).
 id: RES-M-001
 kind: research-mandate
 slug: strudel-repertoire
 status: draft
 iteration: 1
-headline: "Which Strudel songs and patterns, across genres, are worth learning from and showing in soda.strudel – and where are new ones appearing?"
+headline: "Which Strudel songs, patterns and learning resources, across genres, are worth learning from and showing in soda.strudel – and where are new ones appearing?"
 questions:
   - id: Q1
     text: "Where are Strudel songs, patterns and shares published, and how can each source be monitored weekly (feed, API, search query)?"
@@ -23,6 +24,14 @@ questions:
     text: "Which techniques and genres are missing from soda.strudel's current examples (src/examples.js), and which candidates fill those gaps?"
     state: open
     answered_by: []
+  - id: Q5
+    text: "Which learning resources best teach Strudel – tutorials, workshops, courses, video series, talks, articles, books, cheat sheets, reference docs, sample and sound libraries, tools and editors – for which level (first steps, intermediate, performer), and under what license?"
+    state: open
+    answered_by: []
+  - id: Q6
+    text: "Which new sources of Strudel songs and resources have appeared since the last run (people, channels, sites, repos, events, forums, newsletters), and how should each be monitored?"
+    state: open
+    answered_by: []
 methodology_type: longlist
 also_types: [deep-web-investigation]
 methodology:
@@ -30,12 +39,14 @@ methodology:
   - { step: 2, description: "Weekly harvest: run the saved queries per source since the last run; every new piece becomes a longlist candidate (RES-L) with title, author, handle, URL, date, genre, license as found." }
   - { step: 3, description: "Verify each candidate at its primary source (the author's own post, repo or strudel.cc link) – open the link, confirm author and date, read the license; findings record each fact with its tier." }
   - { step: 4, description: "Score candidates against the longlist criteria; shortlist the top pieces per genre; note the technique each teaches." }
-  - { step: 5, description: "Weekly delta: new candidates, changed licenses, dead links, and gaps against src/examples.js; ask authors before adapting anything without an explicit license." }
+  - { step: 5, description: "Resource search: each run, search for learning resources (tutorials, workshops, courses, videos, talks, articles, cheat sheets, docs, sample libraries, tools) and new sources (performers, channels, repos, sites, events); verify each, cite it, tag its level and type, and add new sources with a monitoring method to the source map." }
+  - { step: 6, description: "Weekly delta: new candidates, changed licenses, dead links, and gaps against src/examples.js; ask authors before adapting anything without an explicit license." }
 deliverable:
   format: html
   also: [md]
   structure:
     - "Repertoire by genre – title, author, link, date, license, technique, reuse status"
+    - "Learning resources by type and level – title, author, link, date, license, what it teaches"
     - "Sources and how each is watched"
     - "Gaps in soda.strudel's examples and the candidates that fill them"
     - "This week's new pieces (the delta)"
@@ -45,14 +56,15 @@ success_criteria:
   - "Every listed piece has title, author or handle, source URL opened and working, date (or 'undated'), genre and license status."
   - "At least 3 shortlisted pieces per covered genre, each naming the technique it teaches."
   - "Every source in the landscape has a working monitoring method, and the weekly delta reports new pieces or says 'nothing material changed'."
+  - "Learning resources cover first steps, intermediate and performer levels, each cited and tagged by type and level; new sources found each run are added to the source map with a working monitoring method."
   - "Nothing is adapted into the app without an explicit permissive/compatible license or the author's written permission, recorded with the citation."
 primary_source_min_ratio: 0.5
 longlist_criteria:
-  - { id: learn, label: "Teaches a reusable technique", weight: 0.3, rubric: "0 none · 1 incidental · 2 clear · 3 a model example of it" }
+  - { id: learn, label: "Teaches a reusable technique (or, for a resource, teaches well at its level)", weight: 0.3, rubric: "0 none · 1 incidental · 2 clear · 3 a model example of it" }
   - { id: music, label: "Musical quality and character", weight: 0.25, rubric: "0 sketch · 1 fine · 2 strong · 3 standout" }
   - { id: reuse, label: "License allows showing or adapting", weight: 0.2, rubric: "0 unknown/none · 1 link only · 2 attribution license · 3 compatible open license (e.g. AGPL/CC-BY/CC0)" }
   - { id: gap, label: "Fills a genre or technique gap in soda.strudel", weight: 0.15, rubric: "0 covered · 1 partly · 2 gap · 3 nothing like it yet" }
-  - { id: fit, label: "Runs in soda.strudel as published", weight: 0.1, rubric: "0 breaks · 1 needs changes · 2 minor tweaks · 3 runs as is" }
+  - { id: fit, label: "Runs in soda.strudel as published (resources: applies to soda.strudel's Strudel version)", weight: 0.1, rubric: "0 breaks · 1 needs changes · 2 minor tweaks · 3 runs as is" }
 comparison_subjects: []
 comparative_dimensions: []
 deepweb_depth_cap: 3

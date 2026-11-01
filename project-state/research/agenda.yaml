@@ -5,6 +5,8 @@ tiers:
   p1:
     - {q: "What new Strudel songs and patterns were shared this week, and under what license?", mandate: RES-M-001}
     - {q: "Do the listed pieces' links and licenses still hold?", mandate: RES-M-001}
+    - {q: "What new Strudel learning resources (tutorials, workshops, courses, videos, talks, articles, cheat sheets, sample libraries, tools) appeared this week?", mandate: RES-M-001}
   p2:
+    - {q: "Which new sources (performers, channels, repos, sites, events, forums) should join the source map, and how do we monitor each?", mandate: RES-M-001}
     - {q: "Which genres and techniques are thin in soda.strudel's examples?", mandate: RES-M-001}
   p3: []
