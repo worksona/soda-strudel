@@ -1,16 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-01T02:47:00Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-01T03:26:54Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae6a807f1f5057326b23266--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae6a7cd85ded0a7691f85b1--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae6b1561aaae9cd631c688f--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae6b06fa570e5e653752b09--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae6a807f1f5057326b23266 |
+| Deploy ID | 6ae6b1561aaae9cd631c688f |
 | Team | worksona |
 | Project type | Static (Vite build) plus one function, `/api/shorten` (a47l.com short links) |
-| Source path | dist/ (built locally with `pnpm build`, commit 430ac85) |
+| Source path | dist/ (built locally with `pnpm build`, commit 9012b39) |
 | Build | Local only – Netlify does not build (no build minutes); the CLI bundles `netlify/functions` |
 | Custom domain | none |
 
@@ -29,6 +29,7 @@
 - Record button and micLevel in the live bundle; toolbar one row; no console errors
 - Recorder: video (1080×1920 MP4) and WAV captures checked on the draft, 4-cycle take starts on the beat and stops itself; opens on production with no console errors
 - Viewer: a shared link on production plays from the title card and a tap on the stage stops it; no console errors
+- New First light in the live bundle; three inline widgets each get their own canvas on production; Share › Opens as shows Stage only / Code over the stage / Full screen
 
 ## Configuration Used
 

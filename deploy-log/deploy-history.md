@@ -19,3 +19,5 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | c060542: Export becomes a quick recorder next to Record – video or WAV, start/stop, gear, player (deploy 6ae6a5d2a1d0df4fb6726d70) |
 | 2026-10-31 | Netlify | https://6ae6a7cd85ded0a7691f85b1--soda-strudel.netlify.app | Preview | Draft (430ac85), viewer button checked |
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 430ac85: shared links play like a video – tap or space to play / stop, play button bottom right (deploy 6ae6a807f1f5057326b23266) |
+| 2026-10-31 | Netlify | https://6ae6b06fa570e5e653752b09--soda-strudel.netlify.app | Preview | Draft (9012b39), Share views checked |
+| 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 9012b39: new First light, Strudel visuals match strudel.cc, Share › Opens as (deploy 6ae6b1561aaae9cd631c688f) |
