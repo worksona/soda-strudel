@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { creditHeader, extractExport, pieceKey } from '../src/share/pieces.js';
 import { decodeCollection, encodeCollection } from '../src/share/sketch.js';
-import ALLOW from '../netlify/functions/piece-allow.mjs';
+import ALLOW from '../netlify/lib/piece-allow.mjs';
 import piece from '../netlify/functions/piece.mjs';
 
 const rep = JSON.parse(readFileSync(new URL('../public/repertoire.json', import.meta.url)));

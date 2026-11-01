@@ -4,7 +4,7 @@
 // curated, with an open licence chosen by their authors – are fetched, so this
 // is no open proxy. Codeberg sends no CORS headers, hence the hop through here.
 // Nothing is stored: the code comes from where the author published it.
-import ALLOW from './piece-allow.mjs';
+import ALLOW from '../lib/piece-allow.mjs';
 import { extractExport, pieceKey } from '../../src/share/pieces.js';
 
 const MAX = 400_000;
