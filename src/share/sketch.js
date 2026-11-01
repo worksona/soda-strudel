@@ -5,6 +5,8 @@
 // The fragment never reaches the server, so links need no backend.
 
 export const SKETCH_VERSION = 1;
+/** How a shared link opens – the View menu's choices. */
+export const SHARE_VIEWS = ['stage', 'code', 'full'];
 
 /**
  * @typedef {object} Sketch
@@ -16,6 +18,8 @@ export const SKETCH_VERSION = 1;
  * @property {Record<string,string>} [media]   extra media names -> public URLs
  * @property {boolean} [camera]     piece uses the camera (viewer gets an Allow / Play without choice)
  * @property {boolean} [mic]        piece uses micLevel (the viewer is offered the microphone too)
+ * @property {'stage'|'code'|'full'} [view]  how the link opens (View menu): stage only (default), code over the stage, full screen
+ * @property {boolean} [guide]      show the export frame outline over the stage
  */
 
 export function normalizeSketch(input) {
@@ -24,6 +28,8 @@ export function normalizeSketch(input) {
   s.v = SKETCH_VERSION;
   if (s.camera === undefined) s.camera = /\bcam\s*\(|camMotion/.test(s.code);
   if (s.mic === undefined) s.mic = /\bmicLevel\b/.test(s.code);
+  if (!SHARE_VIEWS.includes(s.view) || s.view === 'stage') delete s.view; // stage is the default
+  if (s.guide !== true) delete s.guide;
   for (const k of Object.keys(s)) if (s[k] === undefined || s[k] === '') delete s[k];
   return s;
 }

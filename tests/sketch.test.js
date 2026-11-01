@@ -31,4 +31,14 @@ describe('sketch codec', () => {
     const frag = await encodeSketch(code);
     expect(frag.length).toBeLessThan(code.length / 2);
   });
+
+  it('carries how the link opens: code, full screen, export frame', async () => {
+    const code = '$: s("kick*4")';
+    expect(await decodeSketch(await sketchUrl({ code, view: 'code', guide: true }, 'https://x.app'))).toMatchObject({ view: 'code', guide: true });
+    expect((await decodeSketch(await sketchUrl({ code, view: 'full' }, 'https://x.app'))).view).toBe('full');
+    // stage only is the default and adds nothing to the link; nonsense is dropped
+    expect(normalizeSketch({ code, view: 'stage' })).not.toHaveProperty('view');
+    expect(normalizeSketch({ code, view: 'sideways', guide: 'yes' })).not.toHaveProperty('view');
+    expect(normalizeSketch({ code, guide: 'yes' })).not.toHaveProperty('guide');
+  });
 });

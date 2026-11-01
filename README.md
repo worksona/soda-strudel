@@ -77,7 +77,7 @@ lit icon again (or Esc) to close. On phones the pages and actions fold into one
 | Media | Your images and videos, the soda media pack, camera snippets, the video effectors |
 | Reference | Every Strudel and soda function, searchable, examples with Listen / Insert |
 | Export (page) | Opened from the recorder's gear, or More on phones. Shape (the export frame – the stage itself always fills the screen; Auto follows the device), size, length → Video (stage + sound), Audio (WAV, faster than real time), .soda file |
-| Share | Title, then Copy link (plays in any browser; the sketch is inside the link). Optional **Short link** checkbox (a47l.com, through the site's `/api/shorten` function; the token is the `API_TOKEN` (or `SHORTLINK_TOKEN`) Netlify secret) |
+| Share | Title, then Copy link (plays in any browser; the sketch is inside the link). **Opens as** Stage only, Code over the stage or Full screen, optionally with the export frame. Optional **Short link** checkbox (a47l.com, through the site's `/api/shorten` function; the token is the `API_TOKEN` (or `SHORTLINK_TOKEN`) Netlify secret) |
 | About | What it is, how it works, keys, mini-notation, links, and the log |
 | Settings | Appearance (dark by default · light · system) · Profile · Screen and export · Editor · Exports · Storage |
 

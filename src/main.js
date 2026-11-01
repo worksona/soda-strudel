@@ -286,10 +286,16 @@ function setMode(mode, { remember = false } = {}) {
 }
 // iPhone Safari has no Fullscreen API for anything but video – fall back to an
 // in-page full screen (toolbar hidden, stage edge to edge, an exit button).
+// Some in-app browsers (inside social apps, embedded views) neither grant nor
+// refuse – the request just hangs – so fall back after a moment there too.
 function fullscreen() {
   const stageEl = $('#stage');
-  if (document.fullscreenEnabled && stageEl.requestFullscreen) return stageEl.requestFullscreen().catch(() => pseudoFull(true));
-  return pseudoFull(true);
+  if (!document.fullscreenEnabled || !stageEl.requestFullscreen) return pseudoFull(true);
+  const fallback = setTimeout(() => !document.fullscreenElement && pseudoFull(true), 900);
+  return stageEl
+    .requestFullscreen()
+    .then(() => clearTimeout(fallback))
+    .catch(() => (clearTimeout(fallback), pseudoFull(true)));
 }
 function pseudoFull(on) {
   document.body.classList.toggle('pseudo-full', on);
@@ -716,11 +722,17 @@ else focusCode();
 if (fromLink) {
   if (fromLink.media) import('./soda/patterns.js').then(({ media }) => media(fromLink.media));
   document.body.classList.add('viewer');
-  setMode('stage');
+  // the sender chose how it opens (Share › Opens as): stage only, code over the stage, full screen
+  const linkView = fromLink.view ?? 'stage';
+  setMode(linkView === 'code' ? 'code' : 'stage');
+  document.body.classList.toggle('viewer-code', linkView === 'code');
+  stage.setGuide(!!fromLink.guide); // as the sender chose – for this visit only, not saved
   const card = $('#title-card');
   const inputsWord = [fromLink.camera && 'camera', fromLink.mic && 'microphone'].filter(Boolean).join(' and ');
   const start = async (withInputs) => {
     card.hidden = true;
+    // must happen inside the tap, before anything is awaited
+    if (linkView === 'full') fullscreen();
     try {
       if (withInputs && fromLink.camera) await enableCamera().catch(() => toast('Camera unavailable – playing without it.'));
       if (withInputs && fromLink.mic) await enableMic().catch(() => toast('Microphone unavailable – playing without it.'));
@@ -778,7 +790,7 @@ if (fromLink) {
   $('#remix').addEventListener('click', () => {
     viewing = false;
     persist();
-    document.body.classList.remove('viewer');
+    document.body.classList.remove('viewer', 'viewer-code');
     setMode('code');
     history.replaceState(null, '', location.pathname);
   });

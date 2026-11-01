@@ -607,6 +607,11 @@ body.viewer #viewer-controls button {
 body.viewer #stage {
   cursor: pointer;
 }
+/* a link that opens as "Code over the stage": no toolbar, so give the code room */
+body.viewer-code #editor {
+  padding-top: max(12px, env(safe-area-inset-top));
+  padding-bottom: 64px; /* clear of the play / full screen / Remix cluster */
+}
 /* the play / stop icon that flashes in the middle after a tap */
 #viewer-flash {
   position: fixed;

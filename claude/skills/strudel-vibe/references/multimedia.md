@@ -182,6 +182,8 @@ cost a little on phones – one or two effected layers is plenty.
   "title": "Rain Drive",
   "by": "optional author",
   "aspect": "9:16",
+  "view": "code",
+  "guide": true,
   "media": { "cover": "https://…/cover.jpg" },
   "code": "…"
 }
@@ -191,4 +193,8 @@ cost a little on phones – one or two effected layers is plenty.
 `free` (follows the device: portrait → 9:16, else 16:9). On screen the stage always
 fills the window, so compose for any shape; keep captions and the subject near
 the centre when the piece is meant for 9:16.
+`view` is how the link opens: `stage` (default – the piece fills the screen,
+tap to play / stop), `code` (the code playing over the stage, like strudel.cc –
+good for teaching or showing off a pattern) or `full` (Play goes straight to
+full screen). `guide: true` outlines the export frame.
 `camera` is detected automatically from `cam()` / `camMotion`.

@@ -2,6 +2,13 @@
 
 ## Unreleased
 
+- **Share chooses how the link opens.** Share › Opens as offers the View
+  menu's views – Stage only (default), Code over the stage (the code plays
+  over the stage, like strudel.cc, and the viewer can edit it) and Full screen
+  (Play goes straight to full screen) – plus Show the export frame. The choice
+  travels inside the link (`view`, `guide`); stage-only links stay as short as
+  before. Full screen now falls back to the in-page full screen when a browser
+  neither grants nor refuses it, as some in-app browsers do.
 - **Strudel's visuals work like on strudel.cc.** Several inline widgets in one
   sketch (`._pianoroll()` on three lines, say) each get their own canvas under
   their own code – before, only one showed, in the wrong place, and lines of

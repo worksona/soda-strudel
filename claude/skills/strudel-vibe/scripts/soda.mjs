@@ -25189,12 +25189,15 @@ async function validateSketch(sketch, { sounds: sounds2, media: media3, cycles =
 
 // src/share/sketch.js
 var SKETCH_VERSION = 1;
+var SHARE_VIEWS = ["stage", "code", "full"];
 function normalizeSketch(input) {
   const s2 = typeof input === "string" ? { code: input } : { ...input };
   if (typeof s2.code !== "string" || !s2.code.trim()) throw new Error("sketch needs non-empty code");
   s2.v = SKETCH_VERSION;
   if (s2.camera === void 0) s2.camera = /\bcam\s*\(|camMotion/.test(s2.code);
   if (s2.mic === void 0) s2.mic = /\bmicLevel\b/.test(s2.code);
+  if (!SHARE_VIEWS.includes(s2.view) || s2.view === "stage") delete s2.view;
+  if (s2.guide !== true) delete s2.guide;
   for (const k4 of Object.keys(s2)) if (s2[k4] === void 0 || s2[k4] === "") delete s2[k4];
   return s2;
 }
