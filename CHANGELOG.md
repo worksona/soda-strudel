@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+- **Songs open in soda, not on other sites.** Any Repertoire song whose code
+  is public at its source – a GitHub or Codeberg file, or a strudel.cc link –
+  opens in the editor unchanged, with the author (and the original composer,
+  for covers) credited on top: 141 songs, including eefano's 93-song songbook
+  and 24 community originals (decision 2026-11-01-open-public-songs-in-soda).
+  **Listen** plays a song or sound without touching your code and turns into
+  Stop; **Open here** loads and plays it. `#song=<id>` links open one song.
+- **Open plays.** Open (Examples, Workshop, Repertoire) now starts the audio
+  inside the click, before loading – browsers like Safari refuse to start it
+  after a fetch – and says so if a piece did not start.
+- **Watch here.** YouTube tutorials and performances play in a small panel
+  docked over the stage (privacy-enhanced embed), so you can code along.
+- **Community sounds.** Three banks cleared by the rights check load with soda
+  and are credited in Sounds: AuditeMarlow drums (marlow_kick, marlow_snare,
+  marlow_hihat – prefixed so they never replace your kick/snare/hihat),
+  Polifonia church bells (italy) and household foley (botella, pelota, spray).
+  Suggested GitHub libraries are now open-licence only; any other library can
+  still be loaded by name.
 - **Repertoire collections.** Examples › Repertoire opens on 13 hand-picked
   collections from the research (Start here, Open licence: play them here,
   Strudel classics by Felix Roos, Techno and house, Drum & bass and breaks,

@@ -605,10 +605,14 @@
      "genre": "techno",
      "date": "2025-09-15",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/dotcomdudee/strudel-tracks/blob/main/germantechno3.js",
      "note": "Vanilla-Strudel German-techno track (no external samples); repo of mostly-techno originals plus a few covers.",
-     "ref": "RES-L-414"
+     "ref": "RES-L-414",
+     "load": {
+      "url": "https://raw.githubusercontent.com/dotcomdudee/strudel-tracks/main/germantechno3.js"
+     },
+     "source": "https://github.com/dotcomdudee/strudel-tracks/blob/main/germantechno3.js"
     },
     {
      "kind": "song",
@@ -794,10 +798,14 @@
      "genre": "UK bass: atmospheric drum & bass",
      "date": "2025-09-15",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/dotcomdudee/strudel-tracks/blob/main/deep_meditation-dnb.js",
      "note": "Ambient DnB; the companion file ambient_breaks-dnb.js is in the same repo.",
-     "ref": "RES-L-419"
+     "ref": "RES-L-419",
+     "load": {
+      "url": "https://raw.githubusercontent.com/dotcomdudee/strudel-tracks/main/deep_meditation-dnb.js"
+     },
+     "source": "https://github.com/dotcomdudee/strudel-tracks/blob/main/deep_meditation-dnb.js"
     },
     {
      "kind": "song",
@@ -806,10 +814,14 @@
      "genre": "jungle / breakbeat",
      "date": "2026-07-06",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/jungle-gym.js",
      "note": "Same gallery as the footwork sketch; shown with prose notes on ikesau.co/strudel.",
-     "ref": "RES-L-421"
+     "ref": "RES-L-421",
+     "load": {
+      "url": "https://raw.githubusercontent.com/ikesau/ikesau.github.io/master/assets/strudel/jungle-gym.js"
+     },
+     "source": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/jungle-gym.js"
     },
     {
      "kind": "song",
@@ -818,10 +830,14 @@
      "genre": "footwork / juke (160 BPM)",
      "date": "2026-07-06",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/footwork.js",
      "note": "Short 160 BPM footwork sketch from the gallery on ikesau.co/strudel, using Switch Angel's pad samples. The only human-made footwork piece found.",
-     "ref": "RES-L-420"
+     "ref": "RES-L-420",
+     "load": {
+      "url": "https://raw.githubusercontent.com/ikesau/ikesau.github.io/master/assets/strudel/footwork.js"
+     },
+     "source": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/footwork.js"
     },
     {
      "kind": "song",
@@ -936,10 +952,14 @@
      "genre": "ambient",
      "date": "2026-04-06",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/atmos.str",
      "note": "80 BPM atmospheric sketch built on Switch Angel's pad samples.",
-     "ref": "RES-L-424"
+     "ref": "RES-L-424",
+     "load": {
+      "url": "https://raw.githubusercontent.com/kahlys/livecodingmusic/main/ideas/atmos.str"
+     },
+     "source": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/atmos.str"
     },
     {
      "kind": "song",
@@ -948,10 +968,14 @@
      "genre": "ambient",
      "date": "2025-10-03",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/ambient%20251003.txt",
      "note": "One of four dated ambient pieces in the repo (250129, 250721, 250725, 251003).",
-     "ref": "RES-L-423"
+     "ref": "RES-L-423",
+     "load": {
+      "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/raw/branch/main/2024-2025/ambient%20251003.txt"
+     },
+     "source": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/ambient%20251003.txt"
     },
     {
      "kind": "video",
@@ -1062,10 +1086,15 @@
      "original": "Koji Kondo",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://www.instagram.com/flowhacker_livecoding/reel/DXXSj6Qs_K2/",
      "note": "The Super Mario Bros. theme at 200 bpm: pulse/triangle voices, noise drums (pink/white), crush, struct and a scope visual. A long (350-line) transcription – good for reading how a full song is laid out.",
-     "ref": "REP-S-051"
+     "ref": "REP-S-051",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Super mario bros. main theme (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1074,10 +1103,15 @@
      "original": "Hirokazu Tanaka (Metroid)",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://github.com/tzwaan/strudel-scripts",
      "note": "Kraid's Lair in 22 lines: square and triangle waves in 3/4-based cpm (224/3), jux stereo, crush and a scope.",
-     "ref": "REP-S-048"
+     "ref": "REP-S-048",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Kraid's Lair - Metroid (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1086,10 +1120,15 @@
      "original": "Junichi Masuda (Pokémon)",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://github.com/tzwaan/strudel-scripts",
      "note": "Lavender Town in 18 lines: pulse waves, white-noise percussion through a bandpass, FM and conditional filters.",
-     "ref": "REP-S-049"
+     "ref": "REP-S-049",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Lavender Town - Pokemon (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1098,10 +1137,15 @@
      "original": "Junichi Masuda (Pokémon)",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://github.com/tzwaan/strudel-scripts",
      "note": "Mt. Moon with pulse waves and per-section tempo via setCps; adsr envelopes and conditional transforms (when).",
-     "ref": "REP-S-050"
+     "ref": "REP-S-050",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Mt. Moon - Pokemon (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1110,10 +1154,15 @@
      "original": "Junichi Masuda (Pokémon)",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://github.com/tzwaan/strudel-scripts",
      "note": "Goldenrod City minified to 11 lines: saw/square/noise voices, arp, seg, struct – a lesson in compact pattern writing.",
-     "ref": "REP-S-047"
+     "ref": "REP-S-047",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Goldenrod City - Pokemon (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1122,10 +1171,15 @@
      "original": "Hirokazu Ando (Kirby's Adventure)",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://github.com/tzwaan/strudel-scripts",
      "note": "Vegetable Valley with saw/square/triangle/noise voices and multi-control mini-notation (dec:lp:hp:gain), rib and filterWhen.",
-     "ref": "REP-S-052"
+     "ref": "REP-S-052",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Vegetable Valley - Kirby's Adventure"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1134,10 +1188,15 @@
      "original": "Toby Fox (Undertale)",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://github.com/Claffystic/StudelProjects",
      "note": "Undertale's Determination with square and triangle waves only – chiptune voices, shape distortion, room. 115 bpm. The author says it was made to learn Strudel.",
-     "ref": "REP-S-046"
+     "ref": "REP-S-046",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Determination - Toby Fox (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1146,10 +1205,15 @@
      "original": "Toby Fox (Undertale)",
      "genre": "Video game",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://github.com/tzwaan/strudel-scripts",
      "note": "Megalovania transcribed by tzwaan with the MT-32 sound set, FM, pick and multi-parameter mini-notation (s:n:gain). Shows packing many controls into one pattern.",
-     "ref": "REP-S-044"
+     "ref": "REP-S-044",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Toby Fox - Megalovania (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     }
    ]
   },
@@ -1204,10 +1268,14 @@
      "genre": "hip-hop: lo-fi (break-based)",
      "date": "2025-08-23",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/smaudd/strudel-sessions/blob/master/lofi-1.js",
      "note": "80 BPM lo-fi beat on chopped breaks125; the repo is a library of REPL sketches by an author who also publishes a sample-pack template.",
-     "ref": "RES-L-434"
+     "ref": "RES-L-434",
+     "load": {
+      "url": "https://raw.githubusercontent.com/smaudd/strudel-sessions/master/lofi-1.js"
+     },
+     "source": "https://github.com/smaudd/strudel-sessions/blob/master/lofi-1.js"
     },
     {
      "kind": "song",
@@ -1216,10 +1284,14 @@
      "genre": "hip-hop / boom bap",
      "date": "2026-06-17",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/henkaku-center/jam/blob/main/public/elements/elem_hiphop_strudel_beat.js",
      "note": "Default beat built into a web jam app: a minimal kick/snare boom-bap groove. Thin; it is better treated as a reference than as a piece.",
-     "ref": "RES-L-435"
+     "ref": "RES-L-435",
+     "load": {
+      "url": "https://raw.githubusercontent.com/henkaku-center/jam/main/public/elements/elem_hiphop_strudel_beat.js"
+     },
+     "source": "https://github.com/henkaku-center/jam/blob/main/public/elements/elem_hiphop_strudel_beat.js"
     },
     {
      "kind": "video",
@@ -1228,10 +1300,15 @@
      "original": "Gorillaz",
      "genre": "Alternative hip-hop",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://www.youtube.com/@MariaAreadne1",
      "note": "Feel Good Inc at a slow cpm with vinyl crackle, DR-550 drums, jazz and overdriven guitars, scale and voicing, orbit separation.",
-     "ref": "REP-S-003"
+     "ref": "REP-S-003",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Gorillaz – Feel Good Inc (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     }
    ]
   },
@@ -1369,10 +1446,15 @@
      "genre": "Synth-pop",
      "date": "2025-06-21",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://www.youtube.com/watch?v=ilF4t0jSBUo",
      "note": "arrange sections and an iconic drum fill",
-     "ref": "REP-S-035"
+     "ref": "REP-S-035",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "New Order - Blue Monday"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1393,10 +1475,15 @@
      "original": "Radiohead",
      "genre": "Art rock / electronic",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://www.instagram.com/p/DRd44gNCCZB",
      "note": "Everything In Its Right Place in 25 lines: an FM piano, a TR-909 kick and a punchcard visual – a compact example of FM synthesis.",
-     "ref": "REP-S-006"
+     "ref": "REP-S-006",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Radiohead - Everything in its right place"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "video",
@@ -1405,10 +1492,15 @@
      "original": "Gorillaz",
      "genre": "Alternative hip-hop",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://www.youtube.com/@MariaAreadne1",
      "note": "Feel Good Inc at a slow cpm with vinyl crackle, DR-550 drums, jazz and overdriven guitars, scale and voicing, orbit separation.",
-     "ref": "REP-S-003"
+     "ref": "REP-S-003",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Gorillaz – Feel Good Inc (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1417,10 +1509,15 @@
      "original": "Joseph Haydn",
      "genre": "Classical",
      "license": "none stated",
-     "reuse": "ask",
+     "reuse": "public",
      "url": "https://github.com/tzwaan/strudel-scripts",
      "note": "Haydn's Sonata No. 49, 3rd movement, on piano – transcribed by Biscuit and tzwaan with scale degrees and add. The composition is public domain; the transcription script has no license.",
-     "ref": "REP-S-009"
+     "ref": "REP-S-009",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Joseph Haydn - Keyboard sonata #49 (Eb Maj) (3rd movement) (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1463,10 +1560,15 @@
      "original": "Koji Kondo",
      "genre": "Video game / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://www.instagram.com/flowhacker_livecoding/reel/DXXSj6Qs_K2/",
      "note": "The Super Mario Bros. theme at 200 bpm: pulse/triangle voices, noise drums (pink/white), crush, struct and a scope visual. A long (350-line) transcription – good for reading how a full song is laid out.",
-     "ref": "REP-S-051"
+     "ref": "REP-S-051",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Super mario bros. main theme (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "video",
@@ -1475,10 +1577,15 @@
      "original": "In Flames",
      "genre": "Melodic death metal / chiptune",
      "license": "none stated",
-     "reuse": "link",
+     "reuse": "public",
      "url": "https://www.youtube.com/watch?v=JjbiqECv000",
      "note": "In Flames' Only for the Weak played like a Game Boy (DMG): pulse waves, supersaw, a lowpass envelope (lpenv), sometimes, noise drums – a 490-line long-form piece with a prebake script.",
-     "ref": "REP-S-029"
+     "ref": "REP-S-029",
+     "load": {
+      "url": "https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md",
+      "track": "Only for the DMG 101 (\"Only for the Weak\" - In Flames) (cover)"
+     },
+     "source": "https://github.com/terryds/awesome-strudel#-featured-tracks"
     },
     {
      "kind": "song",
@@ -1491,6 +1598,71 @@
      "url": "https://strudel.cc/?yTnr825wyd9V",
      "note": "A remake of Birds of a Feather; Bakery share with a YouTube walkthrough by saga_3k.",
      "ref": "REP-S-033"
+    },
+    {
+     "kind": "song",
+     "title": "Feel Good Inc",
+     "by": "MariaAreadne",
+     "genre": "alternative hip-hop (inferred, Gorillaz song)",
+     "date": "2026-07-28",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/feel-good-inc.js",
+     "note": "Cover per README; header gives title and @by MariaAreadne",
+     "ref": "RES-L-091",
+     "load": {
+      "url": "https://raw.githubusercontent.com/Mariaareadne1/maria-live-codes/master/songs/feel-good-inc.js"
+     },
+     "source": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/feel-good-inc.js"
+    },
+    {
+     "kind": "song",
+     "title": "Intro by XX",
+     "by": "MariaAreadne",
+     "genre": "indie / dream pop instrumental",
+     "date": "2026-07-30",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/intro-by-xx.js",
+     "note": "Cover per README; header gives title and @by MariaAreadne",
+     "ref": "RES-L-092",
+     "load": {
+      "url": "https://raw.githubusercontent.com/Mariaareadne1/maria-live-codes/master/songs/intro-by-xx.js"
+     },
+     "source": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/intro-by-xx.js",
+     "original": "XX (The xx)"
+    },
+    {
+     "kind": "song",
+     "title": "Megalovania",
+     "by": "MariaAreadne",
+     "genre": "video game music (inferred, Undertale theme)",
+     "date": "2026-07-28",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/megalovania.js",
+     "note": "Cover per README; header gives title and @by MariaAreadne",
+     "ref": "RES-L-093",
+     "load": {
+      "url": "https://raw.githubusercontent.com/Mariaareadne1/maria-live-codes/master/songs/megalovania.js"
+     },
+     "source": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/megalovania.js"
+    },
+    {
+     "kind": "song",
+     "title": "Vardis Quo",
+     "by": "MariaAreadne",
+     "genre": "unknown",
+     "date": "2026-07-28",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/vardis-quo.js",
+     "note": "Cover per README; header gives title and @by MariaAreadne",
+     "ref": "RES-L-094",
+     "load": {
+      "url": "https://raw.githubusercontent.com/Mariaareadne1/maria-live-codes/master/songs/vardis-quo.js"
+     },
+     "source": "https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/vardis-quo.js"
     }
    ]
   },
@@ -1759,9 +1931,9 @@
      "license": "MIT",
      "reuse": "open",
      "url": "https://github.com/AuditeMarlow/samples",
-     "note": "Drum samples by Audite Marlow (Niek den Breeje) — https://github.com/AuditeMarlow/samples — MIT",
+     "note": "Drum samples by Audite Marlow (Niek den Breeje) — https://github.com/AuditeMarlow/samples — MIT – loads with soda: no samples() line needed.",
      "ref": "REP-B-002",
-     "samples": "samples('github:AuditeMarlow/samples')"
+     "try": "$: s(\"marlow_kick marlow_hihat marlow_snare marlow_hihat\")\n"
     },
     {
      "kind": "bank",
@@ -1770,9 +1942,9 @@
      "license": "CC0-1.0",
      "reuse": "open",
      "url": "https://github.com/fstiffo/polifonia-samples",
-     "note": "Bell samples (San Pietro, Avegno) by Francesco Stiffoni / Polifonia Song Contest 2024 — https://github.com/fstiffo/polifonia-samples — CC0 1.0",
+     "note": "Bell samples (San Pietro, Avegno) by Francesco Stiffoni / Polifonia Song Contest 2024 — https://github.com/fstiffo/polifonia-samples — CC0 1.0 – loads with soda: no samples() line needed.",
      "ref": "REP-B-011",
-     "samples": "samples('github:fstiffo/polifonia-samples/master')"
+     "try": "$: n(\"<0 2 4 7>\").s(\"italy\").room(.6).slow(2)\n"
     },
     {
      "kind": "bank",
@@ -1781,9 +1953,9 @@
      "license": "GPL-3.0",
      "reuse": "open",
      "url": "https://github.com/hvillase/cavlp-25p",
-     "note": "Object sounds by Hugo Villaseñor (hvillase), course cavlp-25p — https://github.com/hvillase/cavlp-25p — GPL-3.0",
+     "note": "Object sounds by Hugo Villaseñor (hvillase), course cavlp-25p — https://github.com/hvillase/cavlp-25p — GPL-3.0 – loads with soda: no samples() line needed.",
      "ref": "REP-B-012",
-     "samples": "samples('github:hvillase/cavlp-25p')"
+     "try": "$: s(\"botella pelota*2 spray pelota\").gain(.7)\n"
     },
     {
      "kind": "tool",
@@ -1859,6 +2031,1958 @@
      "url": "https://github.com/gruvw/strudel.nvim",
      "note": "strudel.nvim – drive strudel.cc from Neovim: write patterns in your editor, play them in the browser. AGPL-3.0.",
      "ref": "REP-R-002"
+    }
+   ]
+  },
+  {
+   "id": "eefano-songbook",
+   "title": "eefano's songbook",
+   "blurb": "93 songs by eefano – covers of Cardiacs, Tim Smith, The Sea Nymphs and more, plus originals and jam sessions. They open here unchanged, credited; the songs belong to their writers.",
+   "level": "intermediate",
+   "items": [
+    {
+     "kind": "song",
+     "title": "E-V-1",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/E-V-1.js",
+     "note": "tune @by eefano",
+     "ref": "RES-L-001",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/E-V-1.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/E-V-1.js"
+    },
+    {
+     "kind": "song",
+     "title": "U-D-1",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/U-D-1.js",
+     "note": "tune @by eefano",
+     "ref": "RES-L-002",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/U-D-1.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/U-D-1.js"
+    },
+    {
+     "kind": "song",
+     "title": "A Certain Buzz",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2025-11-17",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/acertainbuzz.js",
+     "note": "a silly song @by eefano",
+     "ref": "RES-L-003",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/acertainbuzz.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/acertainbuzz.js"
+    },
+    {
+     "kind": "song",
+     "title": "Amelie Waltz (derived from file name)",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/ameliewaltz.js",
+     "note": "No header comment; title derived from file name",
+     "ref": "RES-L-004",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/ameliewaltz.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/ameliewaltz.js"
+    },
+    {
+     "kind": "song",
+     "title": "Up In Annie's Room (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / chamber pop",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/anniesroom.js",
+     "note": "song @by The Sea Nymphs; marked work in progress/wip",
+     "ref": "RES-L-005",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/anniesroom.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/anniesroom.js",
+     "original": "The Sea Nymphs"
+    },
+    {
+     "kind": "song",
+     "title": "Another Satellite (work in progress)",
+     "by": "eefano",
+     "genre": "new wave / art pop",
+     "date": "2024-07-03",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/anothersatellite.js",
+     "note": "song @by XTC; marked work in progress/wip",
+     "ref": "RES-L-006",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/anothersatellite.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/anothersatellite.js",
+     "original": "XTC"
+    },
+    {
+     "kind": "song",
+     "title": "Appealing to Venus",
+     "by": "eefano",
+     "genre": "art rock / chamber pop",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/appealingtovenus.js",
+     "note": "song @by The Sea Nymphs",
+     "ref": "RES-L-007",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/appealingtovenus.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/appealingtovenus.js",
+     "original": "The Sea Nymphs"
+    },
+    {
+     "kind": "song",
+     "title": "Aztec Challenge",
+     "by": "eefano",
+     "genre": "chiptune / C64 game music",
+     "date": "2024-04-11",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/aztecchallenge.js",
+     "note": "song @by Paul Norman",
+     "ref": "RES-L-008",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/aztecchallenge.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/aztecchallenge.js",
+     "original": "Paul Norman"
+    },
+    {
+     "kind": "song",
+     "title": "A Balloon For Bertie's Party (coda)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-06-02",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/balloon4berties.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-009",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/balloon4berties.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/balloon4berties.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Bennington (work in progress)",
+     "by": "eefano",
+     "genre": "synth-pop",
+     "date": "2025-10-12",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/bennington.js",
+     "note": "composed @by John Maus; marked work in progress/wip",
+     "ref": "RES-L-010",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/bennington.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/bennington.js",
+     "original": "John Maus"
+    },
+    {
+     "kind": "song",
+     "title": "Big Ship (Coda)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/bigship.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-011",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/bigship.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/bigship.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Blackbird (work in progress)",
+     "by": "eefano",
+     "genre": "folk-pop",
+     "date": "2026-05-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/blackbird.js",
+     "note": "song @by Paul McCartney (Beatles); marked work in progress/wip",
+     "ref": "RES-L-012",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/blackbird.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/blackbird.js",
+     "original": "Paul McCartney (Beatles)"
+    },
+    {
+     "kind": "song",
+     "title": "Bonespurs (work in progress)",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2025-11-22",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/bonespurs.js",
+     "note": "@by eefano; marked work in progress/wip",
+     "ref": "RES-L-013",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/bonespurs.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/bonespurs.js"
+    },
+    {
+     "kind": "song",
+     "title": "Theme from The Breakfast Line",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-05",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/breakfastline.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-014",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/breakfastline.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/breakfastline.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Buds And Spawn (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-05",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/budsandspawn.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-015",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/budsandspawn.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/budsandspawn.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Bug From Heaven (wip)",
+     "by": "eefano",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/bugfromheaven.js",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/bugfromheaven.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/bugfromheaven.js",
+     "original": "Tim Smith",
+     "genre": "art rock / prog-punk",
+     "date": "2024-07-15",
+     "note": "song @by Tim Smith; marked work in progress/wip"
+    },
+    {
+     "kind": "song",
+     "title": "Busty Beez (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2025-09-25",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/bustybeez.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-016",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/bustybeez.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/bustybeez.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Bye Bye Spirit (Work In Progress)",
+     "by": "eefano",
+     "genre": "art rock / chamber pop",
+     "date": "2024-04-17",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/byebyespirit.js",
+     "note": "song @by The Sea Nymphs; marked work in progress/wip",
+     "ref": "RES-L-017",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/byebyespirit.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/byebyespirit.js",
+     "original": "The Sea Nymphs"
+    },
+    {
+     "kind": "song",
+     "title": "Cabinet (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/cabinet.js",
+     "note": "song @by Spratleys Japs; marked work in progress/wip",
+     "ref": "RES-L-018",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/cabinet.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/cabinet.js",
+     "original": "Spratleys Japs"
+    },
+    {
+     "kind": "song",
+     "title": "The Cardiacs Cadence",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/cadenza.js",
+     "note": "Script by eefano; title references Cardiacs, no song credit",
+     "ref": "RES-L-019",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/cadenza.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/cadenza.js"
+    },
+    {
+     "kind": "song",
+     "title": "L'Era Del Cinghiale Bianco",
+     "by": "eefano",
+     "genre": "Italian art pop",
+     "date": "2024-08-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/cinghiale.js",
+     "note": "song @by Franco Battiato",
+     "ref": "RES-L-020",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/cinghiale.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/cinghiale.js",
+     "original": "Franco Battiato"
+    },
+    {
+     "kind": "song",
+     "title": "The Sicilian Clan (work In Progress)",
+     "by": "eefano",
+     "genre": "film score",
+     "date": "2026-07-14",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/clandeisiciliani.js",
+     "note": "song @by Ennio Morricone; marked work in progress/wip",
+     "ref": "RES-L-021",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/clandeisiciliani.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/clandeisiciliani.js",
+     "original": "Ennio Morricone"
+    },
+    {
+     "kind": "song",
+     "title": "Clubbed",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2024-07-11",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/clubbed.js",
+     "note": "@by eefano",
+     "ref": "RES-L-022",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/clubbed.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/clubbed.js"
+    },
+    {
+     "kind": "song",
+     "title": "Don't you ail, flash the sea to steam (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/dontyouail.js",
+     "note": "song @by Spratleys Japs; marked work in progress/wip",
+     "ref": "RES-L-023",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/dontyouail.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/dontyouail.js",
+     "original": "Spratleys Japs"
+    },
+    {
+     "kind": "song",
+     "title": "Eden On The Air (derived from file name)",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/edenontheair.js",
+     "note": "No header comment; title derived from file name",
+     "ref": "RES-L-024",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/edenontheair.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/edenontheair.js"
+    },
+    {
+     "kind": "song",
+     "title": "Death By Elliptical Eye (work in progress)",
+     "by": "eefano",
+     "genre": "indie / lo-fi rock",
+     "date": "2026-04-23",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/ellipticaleye.js",
+     "note": "song @by pilotredsun; marked work in progress/wip",
+     "ref": "RES-L-025",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/ellipticaleye.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/ellipticaleye.js",
+     "original": "pilotredsun"
+    },
+    {
+     "kind": "song",
+     "title": "El Pueblo Unido Jamas Sera Vencido (work in progress)",
+     "by": "eefano",
+     "genre": "Andean folk / protest song",
+     "date": "2024-08-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/elpueblo.js",
+     "note": "song @by Inti-Illimani; marked work in progress/wip",
+     "ref": "RES-L-026",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/elpueblo.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/elpueblo.js",
+     "original": "Inti-Illimani"
+    },
+    {
+     "kind": "song",
+     "title": "Enjoy The Silence (coda)",
+     "by": "eefano",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/enjoythesilence.js",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/enjoythesilence.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/enjoythesilence.js",
+     "original": "Depeche Mode",
+     "genre": "synth-pop",
+     "date": "2024-08-07",
+     "note": "song @by Depeche Mode"
+    },
+    {
+     "kind": "song",
+     "title": "Epic Biopic version 1.0",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/epicbiopic.js",
+     "note": "song @by eefano",
+     "ref": "RES-L-027",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/epicbiopic.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/epicbiopic.js"
+    },
+    {
+     "kind": "song",
+     "title": "The Everso Closely Guarded Line (Coda) - Work In Progress",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2025-06-14",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/eversoclosely.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-028",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/eversoclosely.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/eversoclosely.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Fairy Mary Mag (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-05-31",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/fairymarymag.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-029",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/fairymarymag.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/fairymarymag.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "feeling #37",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-01-27",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/feeling37.js",
+     "note": "@by eefano",
+     "ref": "RES-L-030",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/feeling37.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/feeling37.js"
+    },
+    {
+     "kind": "song",
+     "title": "fra martino coldplayaro",
+     "by": "eefano",
+     "genre": "children's / folk tune",
+     "date": "2026-01-03",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/framartinocoldplayaro.js",
+     "note": "Title names Fra Martino (Frère Jacques); arranger script by eefano",
+     "ref": "RES-L-031",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/framartinocoldplayaro.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/framartinocoldplayaro.js",
+     "original": "traditional"
+    },
+    {
+     "kind": "song",
+     "title": "Ghosts'n'Goblins C64 (work in regress)",
+     "by": "eefano",
+     "genre": "chiptune / C64 game music",
+     "date": "2026-08-17",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/ghostsngoblinsc64.js",
+     "note": "song @by Mark Cooksey; marked work in progress/wip",
+     "ref": "RES-L-032",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/ghostsngoblinsc64.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/ghostsngoblinsc64.js",
+     "original": "Mark Cooksey"
+    },
+    {
+     "kind": "song",
+     "title": "Gipsy Woman (work in progress)",
+     "by": "eefano",
+     "genre": "house",
+     "date": "2026-07-05",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/gipsywoman.js",
+     "note": "song @by Crystal Waters; marked work in progress/wip",
+     "ref": "RES-L-033",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/gipsywoman.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/gipsywoman.js",
+     "original": "Crystal Waters"
+    },
+    {
+     "kind": "song",
+     "title": "Goodbye Grace Solo",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/goodbyegrace.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-034",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/goodbyegrace.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/goodbyegrace.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Goodbye Grace Solo (Hymn Version)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/goodbyegracehymn.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-035",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/goodbyegracehymn.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/goodbyegracehymn.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Goodbye Grace Reversed Solo",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/goodbyegracereverse.js",
+     "note": "Header credits 'scaidraC' (Cardiacs reversed); reversed solo",
+     "ref": "RES-L-036",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/goodbyegracereverse.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/goodbyegracereverse.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Happy Birthday",
+     "by": "eefano",
+     "genre": "children's / folk tune",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/happybirthday.js",
+     "note": "Header: HAPPY BIRTHDAY",
+     "ref": "RES-L-037",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/happybirthday.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/happybirthday.js",
+     "original": "traditional"
+    },
+    {
+     "kind": "song",
+     "title": "HAPPY BIRTHDAY BURNSIE",
+     "by": "eefano",
+     "genre": "punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/happybirthdayramones.js",
+     "note": "song @by Ramones",
+     "ref": "RES-L-038",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/happybirthdayramones.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/happybirthdayramones.js",
+     "original": "Ramones"
+    },
+    {
+     "kind": "song",
+     "title": "Hey Moon (work in progress)",
+     "by": "eefano",
+     "genre": "synth-pop",
+     "date": "2024-06-21",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/heymoon.js",
+     "note": "song @by John Maus; marked work in progress/wip",
+     "ref": "RES-L-039",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/heymoon.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/heymoon.js",
+     "original": "John Maus"
+    },
+    {
+     "kind": "song",
+     "title": "Human Performance (work in progress)",
+     "by": "eefano",
+     "genre": "indie / post-punk",
+     "date": "2026-06-03",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/humanperformance.js",
+     "note": "@song by Parquet Courts; marked work in progress/wip",
+     "ref": "RES-L-040",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/humanperformance.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/humanperformance.js",
+     "original": "Parquet Courts"
+    },
+    {
+     "kind": "song",
+     "title": "Ideal (middle bit)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-04-18",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/ideal.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-041",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/ideal.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/ideal.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Il Re Del Mondo (intro)",
+     "by": "eefano",
+     "genre": "Italian art pop",
+     "date": "2024-08-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/ilredelmondo.js",
+     "note": "song @by Franco Battiato",
+     "ref": "RES-L-042",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/ilredelmondo.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/ilredelmondo.js",
+     "original": "Franco Battiato"
+    },
+    {
+     "kind": "song",
+     "title": "Nudel Improv 1 (derived from file name)",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-05-31",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/jamsessions/nudelimprov1.js",
+     "note": "Jam session folder; no header comment; title derived from file name",
+     "ref": "RES-L-043",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/jamsessions/nudelimprov1.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/jamsessions/nudelimprov1.js"
+    },
+    {
+     "kind": "song",
+     "title": "Swampy Reggae",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2025-11-24",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/jamsessions/swampyreggae.js",
+     "note": "Jam session with ldlework",
+     "ref": "RES-L-044",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/jamsessions/swampyreggae.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/jamsessions/swampyreggae.js"
+    },
+    {
+     "kind": "song",
+     "title": "Xmas Steve Reich (derived from file name)",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2026-10-03",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/jamsessions/xmastevereich.js",
+     "note": "Jam session folder; first 15 lines blank; title derived from file name",
+     "ref": "RES-L-045",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/jamsessions/xmastevereich.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/jamsessions/xmastevereich.js"
+    },
+    {
+     "kind": "song",
+     "title": "Jitterbug (Coda)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/jitterbug.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-046",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/jitterbug.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/jitterbug.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Jitterbug (Coda) - In Reverse",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/jitterbugreverse.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-047",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/jitterbugreverse.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/jitterbugreverse.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Le Passanti / Les Passantes",
+     "by": "eefano",
+     "genre": "chanson / cantautore",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/lepassanti.js",
+     "note": "song @by Fabrizio De Andrè / Georges Brassens",
+     "ref": "RES-L-048",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/lepassanti.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/lepassanti.js",
+     "original": "Fabrizio De Andrè / Georges Brassens"
+    },
+    {
+     "kind": "song",
+     "title": "Love Goes On (work in progress)",
+     "by": "eefano",
+     "genre": "indie pop",
+     "date": "2024-05-31",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/lovegoeson.js",
+     "note": "song @by The Go-Betweens; marked work in progress/wip",
+     "ref": "RES-L-049",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/lovegoeson.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/lovegoeson.js",
+     "original": "The Go-Betweens"
+    },
+    {
+     "kind": "song",
+     "title": "Made All Up (wip)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/madeallup.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-050",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/madeallup.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/madeallup.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Magic And Ecstasy (Exorcist II OST) (wip)",
+     "by": "eefano",
+     "genre": "film score",
+     "date": "2025-10-11",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/magicandecstasy.js",
+     "note": "song @by Ennio Morricone; marked work in progress/wip",
+     "ref": "RES-L-051",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/magicandecstasy.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/magicandecstasy.js",
+     "original": "Ennio Morricone"
+    },
+    {
+     "kind": "song",
+     "title": "Mammals Chilling version 1.0",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-06-02",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/mammalschilling.js",
+     "note": "song @by eefano",
+     "ref": "RES-L-052",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/mammalschilling.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/mammalschilling.js"
+    },
+    {
+     "kind": "song",
+     "title": "Mouth Breather (work in progress)",
+     "by": "eefano",
+     "genre": "noise rock",
+     "date": "2025-06-14",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/mouthbreather.js",
+     "note": "composed @by The Jesus Lizard; marked work in progress/wip",
+     "ref": "RES-L-053",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/mouthbreather.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/mouthbreather.js",
+     "original": "The Jesus Lizard"
+    },
+    {
+     "kind": "song",
+     "title": "Mouth Breather (work in progress, complex variant)",
+     "by": "eefano",
+     "genre": "noise rock",
+     "date": "2025-06-14",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/mouthbreathercomplex.js",
+     "note": "composed @by The Jesus Lizard; marked work in progress/wip",
+     "ref": "RES-L-054",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/mouthbreathercomplex.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/mouthbreathercomplex.js",
+     "original": "The Jesus Lizard"
+    },
+    {
+     "kind": "song",
+     "title": "Odd Even (Work In Progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/oddeven.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-055",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/oddeven.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/oddeven.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Oh",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2025-06-14",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/oh.js",
+     "note": "song @by Tim Smith Spratleys Japs",
+     "ref": "RES-L-056",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/oh.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/oh.js",
+     "original": "Tim Smith Spratleys Japs"
+    },
+    {
+     "kind": "song",
+     "title": "Old MacDonald (derived from file name)",
+     "by": "eefano",
+     "genre": "children's / folk tune",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/oldmacdonald.js",
+     "note": "Header comment notes the samples are bad",
+     "ref": "RES-L-057",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/oldmacdonald.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/oldmacdonald.js",
+     "original": "traditional"
+    },
+    {
+     "kind": "song",
+     "title": "O'Malley, Former Underdog (work in progress)",
+     "by": "eefano",
+     "genre": "experimental indie rock",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/omalley.js",
+     "note": "song @by Deerhoof; marked work in progress/wip",
+     "ref": "RES-L-058",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/omalley.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/omalley.js",
+     "original": "Deerhoof"
+    },
+    {
+     "kind": "song",
+     "title": "Out of the equation (work in distress)",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-08-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/outoftheequation.js",
+     "note": "@by eefano; marked work in progress/wip",
+     "ref": "RES-L-059",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/outoftheequation.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/outoftheequation.js"
+    },
+    {
+     "kind": "song",
+     "title": "Pet Fezant (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-07-30",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/petfezant.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-060",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/petfezant.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/petfezant.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Piazza Degli Affari",
+     "by": "eefano",
+     "genre": "Italian prog / RIO",
+     "date": "2026-03-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/piazzadegliaffari.js",
+     "note": "song @by Stormy Six; total length: 26 + 231 x 3 + 88 = 807",
+     "ref": "RES-L-061",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/piazzadegliaffari.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/piazzadegliaffari.js",
+     "original": "Stormy Six"
+    },
+    {
+     "kind": "song",
+     "title": "Poverty (work in progress)",
+     "by": "eefano",
+     "genre": "film score",
+     "date": "2026-05-31",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/poverty.js",
+     "note": "composed @by Ennio Morricone; marked work in progress/wip",
+     "ref": "RES-L-062",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/poverty.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/poverty.js",
+     "original": "Ennio Morricone"
+    },
+    {
+     "kind": "song",
+     "title": "Pump Up The Jam - Work In Progress",
+     "by": "eefano",
+     "genre": "hip house",
+     "date": "2024-03-05",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/pumpupthejam.js",
+     "note": "song @by Technotronic; marked work in progress/wip",
+     "ref": "RES-L-063",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/pumpupthejam.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/pumpupthejam.js",
+     "original": "Technotronic"
+    },
+    {
+     "kind": "song",
+     "title": "Pyramid Song (wip)",
+     "by": "eefano",
+     "genre": "art rock",
+     "date": "2024-07-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/pyramidsong.js",
+     "note": "song @by Radiohead; marked work in progress/wip",
+     "ref": "RES-L-064",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/pyramidsong.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/pyramidsong.js",
+     "original": "Radiohead"
+    },
+    {
+     "kind": "song",
+     "title": "Reveileb",
+     "by": "eefano",
+     "genre": "unknown (electronic?)",
+     "date": "2026-04-18",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/reveileb.js",
+     "note": "song @by Realize Humans",
+     "ref": "RES-L-065",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/reveileb.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/reveileb.js",
+     "original": "Realize Humans"
+    },
+    {
+     "kind": "song",
+     "title": "The Rhythm Of The Night - Work In Progress",
+     "by": "eefano",
+     "genre": "eurodance",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/rhythmofthenight.js",
+     "note": "song @by Corona; marked work in progress/wip",
+     "ref": "RES-L-066",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/rhythmofthenight.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/rhythmofthenight.js",
+     "original": "Corona"
+    },
+    {
+     "kind": "song",
+     "title": "Sarah On A Worm",
+     "by": "eefano",
+     "genre": "art rock / chamber pop",
+     "date": "2026-08-09",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/sarahonaworm.js",
+     "note": "tune @by The Sea Nymphs",
+     "ref": "RES-L-067",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/sarahonaworm.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/sarahonaworm.js",
+     "original": "The Sea Nymphs"
+    },
+    {
+     "kind": "song",
+     "title": "low Effort, high Satie'sfaction",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2025-10-12",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/satiesfaction.js",
+     "note": "song @by eefano",
+     "ref": "RES-L-068",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/satiesfaction.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/satiesfaction.js"
+    },
+    {
+     "kind": "song",
+     "title": "Savour (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/savour.js",
+     "note": "song @by Tim Smith; marked work in progress/wip",
+     "ref": "RES-L-069",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/savour.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/savour.js",
+     "original": "Tim Smith"
+    },
+    {
+     "kind": "song",
+     "title": "Se penso a te",
+     "by": "eefano",
+     "genre": "Italian pop / ballad",
+     "date": "2026-05-31",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/sepensoate.js",
+     "note": "song @by Franco Bracardi",
+     "ref": "RES-L-070",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/sepensoate.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/sepensoate.js",
+     "original": "Franco Bracardi"
+    },
+    {
+     "kind": "song",
+     "title": "Shanghai (work in progress)",
+     "by": "eefano",
+     "genre": "psychedelic rock",
+     "date": "2025-12-25",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/shanghai.js",
+     "note": "song @by King Gizzard; marked work in progress/wip",
+     "ref": "RES-L-071",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/shanghai.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/shanghai.js",
+     "original": "King Gizzard"
+    },
+    {
+     "kind": "song",
+     "title": "She don't use jelly (work in progress)",
+     "by": "eefano",
+     "genre": "psychedelic rock",
+     "date": "2025-07-17",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/shedontusejelly.js",
+     "note": "composed @by The Flaming Lips; marked work in progress/wip",
+     "ref": "RES-L-072",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/shedontusejelly.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/shedontusejelly.js",
+     "original": "The Flaming Lips"
+    },
+    {
+     "kind": "song",
+     "title": "Sparky (derived from file name)",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2024-03-05",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/sparky.js",
+     "note": "No header comment; title derived from file name",
+     "ref": "RES-L-073",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/sparky.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/sparky.js"
+    },
+    {
+     "kind": "song",
+     "title": "Stranger Things (derived from file name)",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2024-08-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/strangerthings.js",
+     "note": "No header comment; title derived from file name",
+     "ref": "RES-L-074",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/strangerthings.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/strangerthings.js"
+    },
+    {
+     "kind": "song",
+     "title": "Strudelman will eat you",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2026-05-26",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/strudelman.js",
+     "note": "@by eefano",
+     "ref": "RES-L-075",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/strudelman.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/strudelman.js"
+    },
+    {
+     "kind": "song",
+     "title": "Strudelwall",
+     "by": "eefano",
+     "genre": "electronic / experimental original",
+     "date": "2024-03-05",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/strudelwall.js",
+     "note": "guitar prototype @by eefano",
+     "ref": "RES-L-076",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/strudelwall.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/strudelwall.js"
+    },
+    {
+     "kind": "song",
+     "title": "Swim And Sleep Like A Shark (Work In Progress)",
+     "by": "eefano",
+     "genre": "psychedelic pop",
+     "date": "2024-08-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/swimandsleep.js",
+     "note": "song @by Unknown Mortal Orchestra; marked work in progress/wip",
+     "ref": "RES-L-077",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/swimandsleep.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/swimandsleep.js",
+     "original": "Unknown Mortal Orchestra"
+    },
+    {
+     "kind": "song",
+     "title": "Swimming With The Snake - Work In Progress",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-08-07",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/swimmingsnake.js",
+     "note": "song @by Tim Smith of Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-078",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/swimmingsnake.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/swimmingsnake.js",
+     "original": "Tim Smith of Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Endless Tarantella",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2024-05-02",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/tarantella.js",
+     "note": "Script by eefano; no song credit",
+     "ref": "RES-L-079",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/tarantella.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/tarantella.js"
+    },
+    {
+     "kind": "song",
+     "title": "Three Friends (work in progress)",
+     "by": "eefano",
+     "genre": "prog rock",
+     "date": "2026-02-12",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/threefriends.js",
+     "note": "song @by Gentle Giant; total length: 83; marked work in progress/wip",
+     "ref": "RES-L-080",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/threefriends.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/threefriends.js",
+     "original": "Gentle Giant"
+    },
+    {
+     "kind": "song",
+     "title": "To Go Off And Things",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2025-12-25",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/togooffandthings.js",
+     "note": "song @by Cardiacs",
+     "ref": "RES-L-081",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/togooffandthings.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/togooffandthings.js",
+     "original": "Cardiacs"
+    },
+    {
+     "kind": "song",
+     "title": "Tree Tops High",
+     "by": "eefano",
+     "genre": "art rock / chamber pop",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/treetopshigh.js",
+     "note": "song @by The Sea Nymphs",
+     "ref": "RES-L-082",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/treetopshigh.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/treetopshigh.js",
+     "original": "The Sea Nymphs"
+    },
+    {
+     "kind": "song",
+     "title": "Il Vento Caldo Dell'Estate (wip)",
+     "by": "eefano",
+     "genre": "Italian pop",
+     "date": "2026-06-03",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/ventocaldo.js",
+     "note": "song @by Alice; marked work in progress/wip",
+     "ref": "RES-L-083",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/ventocaldo.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/ventocaldo.js",
+     "original": "Alice"
+    },
+    {
+     "kind": "song",
+     "title": "Vermin Mangle (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2026-08-16",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/verminmangle.js",
+     "note": "song @by Tim Smith (Cardiacs); marked work in progress/wip",
+     "ref": "RES-L-084",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/verminmangle.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/verminmangle.js",
+     "original": "Tim Smith (Cardiacs)"
+    },
+    {
+     "kind": "song",
+     "title": "Veronica In Ecstasy (Chorus)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/veronicainecstasy.js",
+     "note": "song @by Tim Smith (of Cardiacs)",
+     "ref": "RES-L-085",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/veronicainecstasy.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/veronicainecstasy.js",
+     "original": "Tim Smith (of Cardiacs)"
+    },
+    {
+     "kind": "song",
+     "title": "Veronica Zigzag (derived from file name)",
+     "by": "eefano",
+     "genre": "unknown",
+     "date": "2024-03-19",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/veronicazigzag.js",
+     "note": "No header comment; title derived from file name",
+     "ref": "RES-L-086",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/veronicazigzag.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/veronicazigzag.js"
+    },
+    {
+     "kind": "song",
+     "title": "Vine (work in progress)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2025-07-06",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/vine.js",
+     "note": "composed @by Tim Smith of Spratleys Japs; marked work in progress/wip",
+     "ref": "RES-L-087",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/vine.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/vine.js",
+     "original": "Tim Smith of Spratleys Japs"
+    },
+    {
+     "kind": "song",
+     "title": "Waltz #2 (cps function demo)",
+     "by": "eefano",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/waltzno2.js",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/waltzno2.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/waltzno2.js",
+     "original": "Dmitri Shostakovich",
+     "genre": "classical / waltz",
+     "date": "2026-08-16",
+     "note": "composed @by Dmitri Shostakovich"
+    },
+    {
+     "kind": "song",
+     "title": "Warsaw (work in progress)",
+     "by": "eefano",
+     "genre": "indie / lo-fi rock",
+     "date": "2026-01-03",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/warsaw.js",
+     "note": "song @by pilotredsun; marked work in progress/wip",
+     "ref": "RES-L-088",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/warsaw.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/warsaw.js",
+     "original": "pilotredsun"
+    },
+    {
+     "kind": "song",
+     "title": "Why does my brain works so bad?",
+     "by": "eefano",
+     "genre": "electronic",
+     "date": "2025-12-26",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/whydoesmybrain.js",
+     "note": "Chords/arps modularization example based on a Moby song",
+     "ref": "RES-L-089",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/whydoesmybrain.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/whydoesmybrain.js",
+     "original": "Moby"
+    },
+    {
+     "kind": "song",
+     "title": "Woodeneye (wip)",
+     "by": "eefano",
+     "genre": "art rock / prog-punk",
+     "date": "2025-09-27",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/eefano/strudel-songs-collection/blob/main/woodeneye.js",
+     "note": "song @by Cardiacs; marked work in progress/wip",
+     "ref": "RES-L-090",
+     "load": {
+      "url": "https://raw.githubusercontent.com/eefano/strudel-songs-collection/main/woodeneye.js"
+     },
+     "source": "https://github.com/eefano/strudel-songs-collection/blob/main/woodeneye.js",
+     "original": "Cardiacs"
+    }
+   ]
+  },
+  {
+   "id": "community-originals",
+   "title": "Community originals",
+   "blurb": "Original Strudel pieces shared by their authors across techno, drum & bass, dub, ambient, glitch, world and game music. Licensed ones may be reused; the rest open here unchanged – ask the author before reusing.",
+   "level": "all",
+   "items": [
+    {
+     "kind": "song",
+     "title": "Fail-safe",
+     "by": "DJ_Dave",
+     "genre": "techno / electronic",
+     "date": "2026-06-12",
+     "license": "CC BY-NC-SA 4.0",
+     "reuse": "open",
+     "url": "https://github.com/algorave-dave/Fail-safe/blob/main/Fail-safe.js",
+     "note": "Original full set piece by DJ_Dave published as code; repo has no LICENSE file, the license is in the @license tag. NC: no commercial reuse.",
+     "ref": "RES-L-412",
+     "load": {
+      "url": "https://raw.githubusercontent.com/algorave-dave/Fail-safe/main/Fail-safe.js"
+     },
+     "source": "https://github.com/algorave-dave/Fail-safe/blob/main/Fail-safe.js"
+    },
+    {
+     "kind": "song",
+     "title": "from-scratch (session 2026-08-26)",
+     "by": "fcm",
+     "genre": "techno",
+     "date": "2026-08-26",
+     "license": "CC BY-SA 4.0",
+     "reuse": "open",
+     "url": "https://codeberg.org/fcm/my-strudel-repo/src/branch/main/sessions/2026-08-26_from-scratch.js",
+     "note": "132 BPM 909 from-scratch performance archive; repo is a personal pattern archive meant for copy-paste reuse.",
+     "ref": "RES-L-413",
+     "load": {
+      "url": "https://codeberg.org/fcm/my-strudel-repo/raw/branch/main/sessions/2026-08-26_from-scratch.js"
+     },
+     "source": "https://codeberg.org/fcm/my-strudel-repo/src/branch/main/sessions/2026-08-26_from-scratch.js"
+    },
+    {
+     "kind": "song",
+     "title": "MOVEMENT (germantechno3)",
+     "by": "dotcomdudee",
+     "genre": "techno",
+     "date": "2025-09-15",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/dotcomdudee/strudel-tracks/blob/main/germantechno3.js",
+     "note": "Vanilla-Strudel German-techno track (no external samples); repo of mostly-techno originals plus a few covers.",
+     "ref": "RES-L-414",
+     "load": {
+      "url": "https://raw.githubusercontent.com/dotcomdudee/strudel-tracks/main/germantechno3.js"
+     },
+     "source": "https://github.com/dotcomdudee/strudel-tracks/blob/main/germantechno3.js"
+    },
+    {
+     "kind": "song",
+     "title": "house",
+     "by": "kahlys (lou queer)",
+     "genre": "house",
+     "date": "2026-04-06",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/house.str",
+     "note": "Sketch in a folder of ~35 original ideas by a French live coder; uses Switch Angel's prebake and pad samples.",
+     "ref": "RES-L-415",
+     "load": {
+      "url": "https://raw.githubusercontent.com/kahlys/livecodingmusic/main/ideas/house.str"
+     },
+     "source": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/house.str"
+    },
+    {
+     "kind": "song",
+     "title": "Squeaky Tinkering",
+     "by": "Paul Gestwicki",
+     "genre": "house / 909 groove",
+     "date": "2025-11-18",
+     "license": "CC BY-NC-NA (as written; not a real CC licence, probably meant CC BY-NC-ND or BY-NC-SA)",
+     "reuse": "public",
+     "url": "https://github.com/doctor-g/strudel_songs/blob/master/squeaky_tinkering.js",
+     "note": "Short 909 groove from a university professor's song experiments. The licence tag is malformed, so ask the author before reusing it.",
+     "ref": "RES-L-416",
+     "load": {
+      "url": "https://raw.githubusercontent.com/doctor-g/strudel_songs/master/squeaky_tinkering.js"
+     },
+     "source": "https://github.com/doctor-g/strudel_songs/blob/master/squeaky_tinkering.js"
+    },
+    {
+     "kind": "song",
+     "title": "Ossuary",
+     "by": "Stefanos Amanuel (ipkstef)",
+     "genre": "UK bass: dark halftime drum & bass",
+     "date": "2026-09-10",
+     "license": "CC BY-NC-SA 4.0",
+     "reuse": "open",
+     "url": "https://github.com/ipkstef/strudel-sessions/blob/main/liquid/ossuary.txt",
+     "note": "172 BPM halftime piece with a 32-bar arrangement; one of eight tagged liquid-DnB originals in the repo. Its chant sample is CC0 from Freesound, credited in the file.",
+     "ref": "RES-L-417",
+     "load": {
+      "url": "https://raw.githubusercontent.com/ipkstef/strudel-sessions/main/liquid/ossuary.txt"
+     },
+     "source": "https://github.com/ipkstef/strudel-sessions/blob/main/liquid/ossuary.txt"
+    },
+    {
+     "kind": "song",
+     "title": "Low Tide Radio",
+     "by": "Stefanos Amanuel (ipkstef)",
+     "genre": "UK bass: liquid drum & bass (vocal)",
+     "date": "2026-09-11",
+     "license": "CC BY-NC-SA 4.0",
+     "reuse": "open",
+     "url": "https://github.com/ipkstef/strudel-sessions/blob/main/liquid/low-tide-radio.txt",
+     "note": "Liquid DnB original that loads Switch Angel's prebake script and pad samples.",
+     "ref": "RES-L-418",
+     "load": {
+      "url": "https://raw.githubusercontent.com/ipkstef/strudel-sessions/main/liquid/low-tide-radio.txt"
+     },
+     "source": "https://github.com/ipkstef/strudel-sessions/blob/main/liquid/low-tide-radio.txt"
+    },
+    {
+     "kind": "song",
+     "title": "Deep Meditation (DnB)",
+     "by": "dotcomdudee",
+     "genre": "UK bass: atmospheric drum & bass",
+     "date": "2025-09-15",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/dotcomdudee/strudel-tracks/blob/main/deep_meditation-dnb.js",
+     "note": "Ambient DnB; the companion file ambient_breaks-dnb.js is in the same repo.",
+     "ref": "RES-L-419",
+     "load": {
+      "url": "https://raw.githubusercontent.com/dotcomdudee/strudel-tracks/main/deep_meditation-dnb.js"
+     },
+     "source": "https://github.com/dotcomdudee/strudel-tracks/blob/main/deep_meditation-dnb.js"
+    },
+    {
+     "kind": "song",
+     "title": "footwork",
+     "by": "Ike Saunders (ikesau)",
+     "genre": "footwork / juke (160 BPM)",
+     "date": "2026-07-06",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/footwork.js",
+     "note": "Short 160 BPM footwork sketch from the gallery on ikesau.co/strudel, using Switch Angel's pad samples. The only human-made footwork piece found.",
+     "ref": "RES-L-420",
+     "load": {
+      "url": "https://raw.githubusercontent.com/ikesau/ikesau.github.io/master/assets/strudel/footwork.js"
+     },
+     "source": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/footwork.js"
+    },
+    {
+     "kind": "song",
+     "title": "jungle-gym",
+     "by": "Ike Saunders (ikesau)",
+     "genre": "jungle / breakbeat",
+     "date": "2026-07-06",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/jungle-gym.js",
+     "note": "Same gallery as the footwork sketch; shown with prose notes on ikesau.co/strudel.",
+     "ref": "RES-L-421",
+     "load": {
+      "url": "https://raw.githubusercontent.com/ikesau/ikesau.github.io/master/assets/strudel/jungle-gym.js"
+     },
+     "source": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/jungle-gym.js"
+    },
+    {
+     "kind": "song",
+     "title": "beatopia dub 250721",
+     "by": "ed_crub",
+     "genre": "dub",
+     "date": "2025-07-21",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/beatopia%20dub%20250721.txt",
+     "note": "80 BPM dub piece on the LinnDrum bank. The only human-made dub original found.",
+     "ref": "RES-L-422",
+     "load": {
+      "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/raw/branch/main/2024-2025/beatopia%20dub%20250721.txt"
+     },
+     "source": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/beatopia%20dub%20250721.txt"
+    },
+    {
+     "kind": "song",
+     "title": "ambient 251003",
+     "by": "ed_crub",
+     "genre": "ambient",
+     "date": "2025-10-03",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/ambient%20251003.txt",
+     "note": "One of four dated ambient pieces in the repo (250129, 250721, 250725, 251003).",
+     "ref": "RES-L-423",
+     "load": {
+      "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/raw/branch/main/2024-2025/ambient%20251003.txt"
+     },
+     "source": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/ambient%20251003.txt"
+    },
+    {
+     "kind": "song",
+     "title": "atmos",
+     "by": "kahlys",
+     "genre": "ambient",
+     "date": "2026-04-06",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/atmos.str",
+     "note": "80 BPM atmospheric sketch built on Switch Angel's pad samples.",
+     "ref": "RES-L-424",
+     "load": {
+      "url": "https://raw.githubusercontent.com/kahlys/livecodingmusic/main/ideas/atmos.str"
+     },
+     "source": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/atmos.str"
+    },
+    {
+     "kind": "song",
+     "title": "ambient-experiment",
+     "by": "leo (lmorv)",
+     "genre": "ambient",
+     "date": "2026-03-16",
+     "license": "MIT",
+     "reuse": "open",
+     "url": "https://github.com/lmorv/CART398-LiveCoding-/blob/main/Week09/05-ambient-experiment.strudel",
+     "note": "Student patch from Concordia's CART398 'one patch a day' course. The header says it is 'based on' a YouTube video, so it is derivative rather than fully original.",
+     "ref": "RES-L-425",
+     "load": {
+      "url": "https://raw.githubusercontent.com/lmorv/CART398-LiveCoding-/main/Week09/05-ambient-experiment.strudel"
+     },
+     "source": "https://github.com/lmorv/CART398-LiveCoding-/blob/main/Week09/05-ambient-experiment.strudel"
+    },
+    {
+     "kind": "song",
+     "title": "Song Sanctuary theme",
+     "by": "Will Thompson (The Threadbare Authors)",
+     "genre": "world / hand percussion (shaker, clave, bongo) game score",
+     "date": "2026-06-02",
+     "license": "CC BY-SA 4.0",
+     "reuse": "open",
+     "url": "https://github.com/endlessm/threadbare/blob/main/assets/first_party/music/SongSanctuary.strudel.js",
+     "note": "Game score for Endless Access's open-source game Threadbare, written in Strudel. Licensing is very clean: SPDX header plus a README licence section.",
+     "ref": "RES-L-426",
+     "load": {
+      "url": "https://raw.githubusercontent.com/endlessm/threadbare/main/assets/first_party/music/SongSanctuary.strudel.js"
+     },
+     "source": "https://github.com/endlessm/threadbare/blob/main/assets/first_party/music/SongSanctuary.strudel.js"
+    },
+    {
+     "kind": "song",
+     "title": "Guarded Stones",
+     "by": "Will Thompson (The Threadbare Authors)",
+     "genre": "world percussion / game score (70 BPM)",
+     "date": "2026-07-30",
+     "license": "CC BY-SA 4.0",
+     "reuse": "open",
+     "url": "https://github.com/endlessm/threadbare/blob/main/scenes/quests/lore_quests/song_sanctuary_2/1_stealth_sequence_combo/music/GuardedStones.strudel.js",
+     "note": "Stealth-level cue built from clave, bongo, finger cymbal and clap; the rendered OGG stems sit alongside the code.",
+     "ref": "RES-L-427",
+     "load": {
+      "url": "https://raw.githubusercontent.com/endlessm/threadbare/main/scenes/quests/lore_quests/song_sanctuary_2/1_stealth_sequence_combo/music/GuardedStones.strudel.js"
+     },
+     "source": "https://github.com/endlessm/threadbare/blob/main/scenes/quests/lore_quests/song_sanctuary_2/1_stealth_sequence_combo/music/GuardedStones.strudel.js"
+    },
+    {
+     "kind": "song",
+     "title": "Saudade Nº0",
+     "by": "taconi",
+     "genre": "Brazilian / experimental audiovisual (Strudel + Hydra)",
+     "date": "2024-11-20",
+     "license": "CC BY-NC-SA",
+     "reuse": "open",
+     "url": "https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/saudade_n0.js",
+     "note": "Brazilian Portuguese author. The repo holds ~20 dated Strudel sketches from 2024 to 2026. Some are covers (e.g. 25/05-22 is a Mãeana song), so check each file.",
+     "ref": "RES-L-428",
+     "load": {
+      "url": "https://codeberg.org/taconi/sketches/raw/branch/main/musics/24/strudel/saudade_n0.js"
+     },
+     "source": "https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/saudade_n0.js"
+    },
+    {
+     "kind": "song",
+     "title": "glith (glitch)",
+     "by": "lou queer (kahlys)",
+     "genre": "IDM / glitch",
+     "date": "2026-04-06",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/glitch.txt",
+     "note": "140 BPM supersaw/wavetable glitch sketch; glitch_with_friends.str is in the same folder.",
+     "ref": "RES-L-429",
+     "load": {
+      "url": "https://raw.githubusercontent.com/kahlys/livecodingmusic/main/ideas/glitch.txt"
+     },
+     "source": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/glitch.txt"
+    },
+    {
+     "kind": "song",
+     "title": "glitchwave_one",
+     "by": "semism",
+     "genre": "glitch / IDM",
+     "date": "2026-05-09",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/semism/sonicism/blob/main/strudel/unfinished/(served)glitchwave_one.js",
+     "note": "Unfinished 140 BPM piece by a self-described live-code artist; Albanian-named pattern labels.",
+     "ref": "RES-L-430",
+     "load": {
+      "url": "https://raw.githubusercontent.com/semism/sonicism/main/strudel/unfinished/(served)glitchwave_one.js"
+     },
+     "source": "https://github.com/semism/sonicism/blob/main/strudel/unfinished/(served)glitchwave_one.js"
+    },
+    {
+     "kind": "song",
+     "title": "Corporate — Glitch",
+     "by": "Les Orchard (lmorchard)",
+     "genre": "glitch / game score",
+     "date": "2026-07-01",
+     "license": "AGPL-3.0",
+     "reuse": "open",
+     "url": "https://github.com/lmorchard/starnet/blob/main/audio-content/songs/corporate-glitch.strudel",
+     "note": "Adaptive game cue for the browser game Starnet; its layers are gated by a gameProgress signal. Other cues are in audio-content/songs/.",
+     "ref": "RES-L-431",
+     "load": {
+      "url": "https://raw.githubusercontent.com/lmorchard/starnet/main/audio-content/songs/corporate-glitch.strudel"
+     },
+     "source": "https://github.com/lmorchard/starnet/blob/main/audio-content/songs/corporate-glitch.strudel"
+    },
+    {
+     "kind": "song",
+     "title": "let code die v1.1 (pastagang album corpus)",
+     "by": "pastagang (collective)",
+     "genre": "ambient-generative / collaborative jam",
+     "date": "2025-01-29",
+     "license": "informal: LICENSE.md reads only 'do it'",
+     "reuse": "link",
+     "url": "https://codeberg.org/pastagang/pastagang/src/branch/pages/album",
+     "note": "Index of 36 strudel.cc share links from pastagang's nudel jams, plus a CSV dump of the code. Collective authorship: credit 'pastagang'.",
+     "ref": "RES-L-432"
+    },
+    {
+     "kind": "song",
+     "title": "Fio",
+     "by": "taconi",
+     "genre": "ambient-generative / audiovisual (Hydra)",
+     "date": "2024-11-21",
+     "license": "CC BY-NC-SA",
+     "reuse": "open",
+     "url": "https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/fio.js",
+     "note": "Generative audiovisual sketch from the same series as Saudade Nº0.",
+     "ref": "RES-L-433",
+     "load": {
+      "url": "https://codeberg.org/taconi/sketches/raw/branch/main/musics/24/strudel/fio.js"
+     },
+     "source": "https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/fio.js"
+    },
+    {
+     "kind": "song",
+     "title": "lofi-1",
+     "by": "Santiago (smaudd)",
+     "genre": "hip-hop: lo-fi (break-based)",
+     "date": "2025-08-23",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/smaudd/strudel-sessions/blob/master/lofi-1.js",
+     "note": "80 BPM lo-fi beat on chopped breaks125; the repo is a library of REPL sketches by an author who also publishes a sample-pack template.",
+     "ref": "RES-L-434",
+     "load": {
+      "url": "https://raw.githubusercontent.com/smaudd/strudel-sessions/master/lofi-1.js"
+     },
+     "source": "https://github.com/smaudd/strudel-sessions/blob/master/lofi-1.js"
+    },
+    {
+     "kind": "song",
+     "title": "hiphop strudel beat (jam element)",
+     "by": "henkaku-center",
+     "genre": "hip-hop / boom bap",
+     "date": "2026-06-17",
+     "license": "none stated",
+     "reuse": "public",
+     "url": "https://github.com/henkaku-center/jam/blob/main/public/elements/elem_hiphop_strudel_beat.js",
+     "note": "Default beat built into a web jam app: a minimal kick/snare boom-bap groove. Thin; it is better treated as a reference than as a piece.",
+     "ref": "RES-L-435",
+     "load": {
+      "url": "https://raw.githubusercontent.com/henkaku-center/jam/main/public/elements/elem_hiphop_strudel_beat.js"
+     },
+     "source": "https://github.com/henkaku-center/jam/blob/main/public/elements/elem_hiphop_strudel_beat.js"
     }
    ]
   }

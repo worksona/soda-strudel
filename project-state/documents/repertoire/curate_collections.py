@@ -11,6 +11,7 @@ for f in glob.glob(f'{PS}/research/candidates/RES-L-*.yaml'):
 ex_titles=re.findall(r"title: '([^']+)'",open(f'{ROOT}/src/examples.js').read())
 TUNES='https://codeberg.org/uzu/strudel/src/branch/main/website/src/repl/tunes.mjs'
 TUNES_RAW='https://codeberg.org/uzu/strudel/raw/branch/main/website/src/repl/tunes.mjs'
+AWESOME_RAW='https://raw.githubusercontent.com/terryds/awesome-strudel/main/README.md'
 OPEN={'CC-BY-SA-4.0':'CC BY-SA 4.0','CC-BY-NC-SA-4.0':'CC BY-NC-SA 4.0','CC-BY-NC-SA':'CC BY-NC-SA','MIT':'MIT','AGPL-3.0':'AGPL-3.0','CC0':'CC0','Unlicense':'Unlicense'}
 def raw(u):
     m=re.match(r'https://github\.com/([^/]+/[^/]+)/blob/(.+)$',u)
@@ -24,6 +25,8 @@ def song(title_start, by=None):
     url=s['url'] if s['url'].startswith('http') and '…' not in s['url'] else next((x['url'] for x in s.get('sources',[]) if x.get('url')),None) or 'https://github.com/terryds/awesome-strudel#-featured-tracks'
     it=dict(kind='video' if 'youtu' in url else 'song',title=s['title'],by=s['author'],original=s.get('original_artist') if s.get('original_artist') and 'not named' not in s['original_artist'] and 'appears' not in s['original_artist'] else None,
             genre=s['genre'],date=s['date'] if re.match(r'\d{4}-',str(s.get('date',''))) else None,license=s['script_license'],reuse=reuse,url=url,note=s.get('learn') or s['description'],ref=s['id'])
+    if s.get('share')=='code embedded in the link':
+        it.update(reuse='public',load=dict(url=AWESOME_RAW,track=s['title']),source='https://github.com/terryds/awesome-strudel#-featured-tracks')
     m=re.search(r'tunes\.mjs#L(\d+)',s['url'])
     if m and s['script_license'].startswith('CC BY-NC-SA'):
         name={'Caverave':'caverave','Amensister':'amensister','Belldub':'belldub','Flatrave':'flatrave','Bass fuge':'bassFuge','Random bells':'randomBells','Dinofunk':'dinofunk','Lounge sponge':'loungeSponge'}[s['title']]
@@ -40,7 +43,10 @@ def cand(cid, note=None):
         if key and 'NC-NA' not in lic and 'informal' not in lic:
             r=raw(p['url'])
             if r: it.update(reuse='open',license=OPEN[key],load=dict(url=r),source=p['url'])
-        elif lic=='none stated' or lic.startswith('none'): it['reuse']='ask'
+        else:
+            r=raw(p['url'])
+            if r and 'pastagang' not in r: it.update(reuse='public',load=dict(url=r),source=p['url'])
+            elif lic=='none stated' or lic.startswith('none'): it['reuse']='ask'
     return it
 def find(sub, kind=None):
     for cid,c in sorted(cands.items()):
@@ -53,7 +59,8 @@ def res(title_start):
 def bank(title):
     b=next(b for b in cat['sound_banks'] if b['title']==title)
     it=dict(kind='bank',title=b['title'],by=b['author'],license=b['license'],reuse='open' if b['reuse'].startswith('usable') else 'link',url=b['url'],note=(b.get('credit_line') or b['description'])[:200],ref=b['id'])
-    if b.get('samples_line') and b['reuse'].startswith('usable'): it['samples']=b['samples_line']
+    TRY={'AuditeMarlow/samples':'$: s("marlow_kick marlow_hihat marlow_snare marlow_hihat")\n','fstiffo/polifonia-samples':'$: n("<0 2 4 7>").s("italy").room(.6).slow(2)\n','hvillase/cavlp-25p':'$: s("botella pelota*2 spray pelota").gain(.7)\n'}
+    if b['reuse'].startswith('usable') and b['title'] in TRY: it['try']=TRY[b['title']]; it['note']=(it.get('note') or '')+' – loads with soda: no samples() line needed.'
     return it
 def example(title, note):
     assert title in ex_titles, title
@@ -105,6 +112,27 @@ coll('performances','Performances','Strudel on stage and on stream – from the 
 coll('sounds-and-tools','Sounds and tools','Sample banks cleared for use, and tools that turn MIDI, humming or a song into Strudel code.','all',[
   bank('AuditeMarlow/samples'), bank('fstiffo/polifonia-samples'), bank('hvillase/cavlp-25p'), res('strudel samples'),
   res('Melograph'), res('MIDI to Strudel'), res('midi-strudel'), res('Toaster'), res('PLAYER'), res('Strudel Neovim Controller')])
+harv=json.load(open(f'{PS}/documents/inbox/harvest-2026-11-01-song-repos.json'))
+by_url={c['profile'].get('url'):cid for cid,c in cands.items()}
+def repo_items(repo_sub):
+    out=[]
+    for i in harv['items']:
+        if repo_sub not in i['repo']: continue
+        cid=by_url.get(i['url'])
+        if cid: it=cand(cid)
+        else:
+            it=dict(kind='song',title=i['title'],by=i.get('author'),license='none stated',reuse='public',url=i['url'],load=dict(url=raw(i['url'])),source=i['url'])
+        it['original']=i.get('original_artist'); it['genre']=(i.get('genre') or '').replace(' (inferred)','').replace('inferred: ','') or None
+        it['date']=i.get('date'); it['note']=i.get('note') or it.get('note')
+        it['kind']='song'
+        out.append(it)
+    return out
+coll('eefano-songbook','eefano\'s songbook','93 songs by eefano – covers of Cardiacs, Tim Smith, The Sea Nymphs and more, plus originals and jam sessions. They open here unchanged, credited; the songs belong to their writers.','intermediate',repo_items('eefano'))
+coll('community-originals','Community originals','Original Strudel pieces shared by their authors across techno, drum & bass, dub, ambient, glitch, world and game music. Licensed ones may be reused; the rest open here unchanged – ask the author before reusing.','all',
+     [cand(cid) for cid,c in sorted(cands.items()) if c['profile'].get('kind') in (None,'song') and c['profile'].get('platform') in (None,'') and c['profile'].get('url','').startswith('http')])
+for c in C:
+    if c['id']=='covers-and-transcriptions': c['items']+=repo_items('aria')
+
 # de-duplicate within a collection, count
 for c in C:
     seen=set(); items=[]

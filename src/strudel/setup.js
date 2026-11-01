@@ -11,7 +11,7 @@ import { sodaScope } from '../soda/patterns.js';
 import { loadMediaPack } from '../soda/mediaRegistry.js';
 import { cameraVideo } from '../media/camera.js';
 import { registerLibrary } from '../media/library.js';
-import { loadSavedLibraries } from '../media/github.js';
+import { loadClearedLibraries, loadSavedLibraries } from '../media/github.js';
 import { loadDocs } from '../editor/assist.js';
 
 const DOUGH = 'https://raw.githubusercontent.com/felixroos/dough-samples/main';
@@ -74,6 +74,7 @@ export async function prebake() {
     ...mediaCatalogue.packs.map((p) => loadMediaPack(p.id).catch(warn(p.id))),
     registerLibrary().catch(warn('your library')),
     loadSavedLibraries().catch(warn('GitHub libraries')),
+    loadClearedLibraries().catch(warn('community sounds')),
     loadDocs().catch(warn('reference docs')),
   ]);
   aliasBank(ALIASES).catch(warn('bank aliases'));

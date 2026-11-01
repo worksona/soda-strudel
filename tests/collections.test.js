@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { creditHeader, extractExport, pieceKey } from '../src/share/pieces.js';
+import { codeFromStrudelLink, creditHeader, extractExport, extractTrack, pieceKey } from '../src/share/pieces.js';
+import { youTubeId } from '../src/ui/watch.js';
 import { decodeCollection, encodeCollection } from '../src/share/sketch.js';
 import ALLOW from '../netlify/lib/piece-allow.mjs';
 import piece from '../netlify/functions/piece.mjs';
@@ -19,12 +20,13 @@ describe('Repertoire collections', () => {
     }
   });
 
-  it('open only pieces with an open licence, and credit them', () => {
+  it('open songs from GitHub or Codeberg files only, and credit them', () => {
     for (const c of rep.collections)
       for (const it of c.items.filter((i) => i.load)) {
-        expect(it.license, it.title).toMatch(OPEN);
-        expect(it.by, it.title).toBeTruthy();
+        expect(it.load.url, it.title).toMatch(/^https:\/\/(raw\.githubusercontent\.com|codeberg\.org\/[^/]+\/[^/]+\/raw)\//);
+        expect(it.by || it.title, it.title).toBeTruthy();
         expect(ALLOW).toContain(pieceKey(it.load));
+        if (it.reuse === 'open') expect(it.license, it.title).toMatch(OPEN);
       }
     expect(rep.allow).toEqual(ALLOW);
   });
@@ -46,12 +48,41 @@ describe('extractExport', () => {
   });
 });
 
+describe('strudel.cc links in a README', () => {
+  const code = '// @title Tiny\n$: s("bd")';
+  const b64 = encodeURIComponent(btoa(code));
+  const readme = `| Song | Artist | Link |\n|---|---|---|\n| Tiny | me | [View](https://strudel.cc/#${b64}) |\n| Other | x | [View](https://strudel.cc/?abc) |`;
+  it('decodes a strudel.cc link', () => expect(codeFromStrudelLink(`https://strudel.cc/#${b64}`)).toBe(code));
+  it('finds the row by its exact title', () => {
+    expect(extractTrack(readme, 'Tiny')).toBe(code);
+    expect(extractTrack(readme, 'Other')).toBeNull();
+    expect(extractTrack(readme, 'Tin')).toBeNull();
+  });
+  it('names a track in the allowlist key', () => expect(pieceKey({ url: 'u', track: 'T' })).toBe('u@T'));
+});
+
+describe('youTubeId', () => {
+  it('reads watch, youtu.be, shorts and live links with a start time', () => {
+    expect(youTubeId('https://www.youtube.com/watch?v=AJ7atBkisOU')).toEqual({ id: 'AJ7atBkisOU', start: 0 });
+    expect(youTubeId('https://youtu.be/AJ7atBkisOU?t=90')).toEqual({ id: 'AJ7atBkisOU', start: 90 });
+    expect(youTubeId('https://www.youtube.com/watch?v=AJ7atBkisOU&t=1m5s')).toEqual({ id: 'AJ7atBkisOU', start: 65 });
+    expect(youTubeId('https://www.youtube.com/shorts/abcdefghijk')?.id).toBe('abcdefghijk');
+    expect(youTubeId('https://www.youtube.com/@MariaAreadne1')).toBeNull();
+    expect(youTubeId('https://example.com/watch?v=AJ7atBkisOU')).toBeNull();
+  });
+});
+
 describe('creditHeader', () => {
   it('names the piece, the author, the licence and the source', () => {
     const h = creditHeader({ title: 'Caverave', by: 'Felix Roos', license: 'CC BY-NC-SA 4.0', source: 'https://codeberg.org/x' });
     expect(h).toMatch(/"Caverave" by Felix Roos/);
     expect(h).toMatch(/Licence: CC BY-NC-SA 4.0 · source: https:\/\/codeberg.org\/x/);
     expect(h.split('\n').every((l) => !l || l.startsWith('//'))).toBe(true);
+  });
+  it('asks before reuse when there is no open licence, and names the original song', () => {
+    const h = creditHeader({ title: 'Blue Monday', by: 'Lewis', original: 'New Order', license: 'none stated', reuse: 'public' });
+    expect(h).toMatch(/original song: New Order/);
+    expect(h).toMatch(/ask them before reusing/);
   });
 });
 

@@ -26,6 +26,7 @@ import { getDefaultValue, getSuperdoughAudioController, multiChannelOrbits } fro
 import { createLibrary } from './ui/library.js';
 import { codeVisible, createCodeLayer } from './export/codeLayer.js';
 import { createRecorder } from './ui/recorder.js';
+import { createWatch } from './ui/watch.js';
 import { createSettings } from './ui/settings.js';
 import { createShare } from './ui/share.js';
 import { createExport, slug } from './ui/export.js';
@@ -185,6 +186,7 @@ function unlockMobileAudio() {
 
 function setPlaying(next) {
   playing = next && !previewing;
+  dispatchEvent(new CustomEvent('soda:playing', { detail: { playing: next, previewing: next && previewing } }));
   stage.setPlaying(next);
   document.body.classList.toggle('playing', next);
   $('#play').setAttribute('aria-pressed', String(next));
@@ -489,10 +491,31 @@ const app = {
   insert,
   prepend,
   previewCode,
-  /** Opens a Repertoire piece with an open licence: fetched from its source, credit on top. */
+  /** Hears a Repertoire song without touching the editor (like Listen on an example). */
+  async listenPiece(item) {
+    const audio = ensureAudio().catch(() => {});
+    try {
+      const code = await fetchPiece(item.load, { dev: import.meta.env.DEV });
+      if (!code.trim()) throw new Error('the source returned no code');
+      await audio;
+      await previewCode(creditHeader(item) + code);
+    } catch (e) {
+      toast(`Could not play “${item.title}”: ${e.message}`, { error: true });
+      setPlaying(false);
+    }
+  },
+  /** Plays a YouTube tutorial or performance in the Watch panel beside the editor. */
+  watch(item) {
+    if (!watcher.watch(item)) return toast('That video can only be opened on its site.', { error: true });
+    if (innerWidth < 700) openPage(page, false); // phones: the panel would cover it
+  },
+  /** Opens a Repertoire song: fetched unchanged from its source, credit on top. */
   async openPiece(item) {
+    // start the audio while the click still counts – the fetch below takes a moment
+    const audio = ensureAudio().catch(() => {});
     toast(`Fetching “${item.title}” from its source…`);
     try {
+      await audio;
       const code = await fetchPiece(item.load, { dev: import.meta.env.DEV });
       if (!code.trim()) throw new Error('the source returned no code');
       app.loadExample({ title: item.title, code: creditHeader(item) + code.replace(/^\s+/, ''), aspect: 'free' });
@@ -500,11 +523,19 @@ const app = {
       toast(`Could not open “${item.title}”: ${e.message}`, { error: true });
     }
   },
+  /** Opens an example (or a fetched song) in the editor and plays it. */
   loadExample(ex) {
+    // start the audio first, inside the click – browsers only allow it there
+    const audio = ensureAudio().catch(() => {});
     stopPreview();
     replaceSketch({ title: ex.title, code: ex.code, aspect: ex.aspect ?? 'free' }, `Opened “${ex.title}”`);
     if (innerWidth < 700) openPage(page, false); // phones: get out of the way
-    play().catch((e) => toast(e.message, { error: true }));
+    audio
+      .then(() => play())
+      .then(() => {
+        if (!mirror.repl.scheduler.started) toast(lastError ? `“${ex.title}” did not start: ${lastError}` : `“${ex.title}” is ready – press Play to hear it.`, { error: !!lastError });
+      })
+      .catch((e) => toast(e.message, { error: true }));
   },
   getSketch: () => ({ ...sketch, code: mirror.code, by: getSettings().name || undefined }),
   setTitle: (t) => ((sketch.title = t), persist()),
@@ -572,6 +603,7 @@ const settingsPage = createSettings({ root: panelBody, app });
 const exportPage = createExport({ root: panelBody, app });
 // Export in the top bar: the recorder dock (start / stop, gear, player)
 createRecorder({ dock: $('#recorder'), button: $('#export'), app, closePanel: () => openPage(page, false) });
+const watcher = createWatch(document.body);
 const sharePage = createShare({ root: panelBody, app });
 
 // phones: every page plus Export / Share / Claude as a grid of big icons
@@ -818,8 +850,25 @@ window.addEventListener('hashchange', () => {
   openCollectionFromLink();
 });
 
+// #song=<id>: open one Repertoire song (or play its video) straight away
+async function openSongFromLink() {
+  const ref = new URLSearchParams(location.hash.slice(1)).get('song');
+  if (!ref) return false;
+  history.replaceState(null, '', location.pathname + location.search);
+  const data = await fetch('/repertoire.json').then((r) => r.json()).catch(() => null);
+  const items = data ? [...data.songs, ...data.learn, ...data.collections.flatMap((c) => c.items)] : [];
+  const item = items.find((it) => (it.ref ?? it.id) === ref && it.load) ?? items.find((it) => (it.ref ?? it.id) === ref);
+  if (!item) return toast('That song is not in the Repertoire any more.', { error: true }), true;
+  const key = (l) => (l.export ? `${l.url}#${l.export}` : l.track ? `${l.url}@${l.track}` : l.url);
+  if (item.load && data.allow.includes(key(item.load))) app.openPiece(item);
+  else if (/youtu/.test(item.url ?? '')) app.watch(item);
+  else toast(`“${item.title}” opens on its own site – find it in Examples › Repertoire.`);
+  return true;
+}
+
 // #collection=<id> or #col=<shared collection>: open it in Examples › Repertoire
 async function openCollectionFromLink() {
+  if (await openSongFromLink()) return;
   const c = await decodeCollection(location.hash).catch(() => (toast('That collection link could not be read.', { error: true }), null));
   if (!c) return;
   showCollection(c);

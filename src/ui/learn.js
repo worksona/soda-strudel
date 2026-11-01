@@ -173,11 +173,40 @@ const tabs = (current, items, onPick) =>
     items.map(([key, label]) => h('button', { role: 'tab', 'aria-selected': String(key === current), onclick: () => onPick(key) }, label)),
   );
 
+// Listen buttons: hear something without touching the editor; the button turns
+// into Stop while it plays, and back when anything else stops it.
+let listening = null; // the Listen button that is playing now
+let starting = false; // starting a Listen stops the editor first – ignore that stop
+addEventListener('soda:playing', (e) => {
+  if (!e.detail.previewing && listening && !starting) {
+    listening.replaceChildren(icon('listen', listening.dataset.size ? Number(listening.dataset.size) : undefined), ' Listen');
+    listening.setAttribute('aria-pressed', 'false');
+    listening = null;
+  }
+});
+function listenButton(app, start, size) {
+  const b = h('button', { type: 'button', title: 'Hear it without changing your code', 'aria-pressed': 'false', ...(size ? { dataset: { size } } : {}) }, icon('listen', size), ' Listen');
+  b.onclick = async () => {
+    if (listening === b) return app.stop();
+    if (listening) listening.replaceChildren(icon('listen', listening.dataset.size ? Number(listening.dataset.size) : undefined), ' Listen');
+    listening = b;
+    b.replaceChildren(icon('stop', size), ' Stop');
+    b.setAttribute('aria-pressed', 'true');
+    starting = true;
+    try {
+      await start();
+    } finally {
+      starting = false;
+    }
+  };
+  return b;
+}
+
 const exampleActions = (app, code, ex) =>
   h(
     'div.ex-actions',
     {},
-    h('button', { title: 'Hear it without changing your code', onclick: () => app.previewCode(code) }, icon('listen'), ' Listen'),
+    listenButton(app, () => app.previewCode(code)),
     h('button', { title: 'Replace the editor with this example', onclick: () => app.loadExample(ex) }, icon('code'), ' Open'),
   );
 
@@ -266,6 +295,7 @@ const REUSE = {
   check: ['Check first', 'Open licence, but check the contents before using'],
   no: ['Rights unclear', 'Listed for reference only'],
   ref: ['Link only', 'No open licence – listed for reference'],
+  public: ['Opens here', 'Shared publicly by its author – opens here unchanged, with credit; ask them before reusing it'],
 };
 const matches = (item) => {
   const q = rep.query.trim().toLowerCase();
@@ -275,6 +305,12 @@ const repBadge = (reuse) => {
   const [label, title] = REUSE[reuse] ?? REUSE.ask;
   return h(`span.rep-badge.rep-${reuse}`, { title }, label);
 };
+const isYouTube = (url) => /^https:\/\/(www\.)?(youtube\.com|youtu\.be)\//.test(url ?? '');
+const loadKey = (l) => (l.export ? `${l.url}#${l.export}` : l.track ? `${l.url}@${l.track}` : l.url);
+const canOpen = (data, it) => !!it.load && (data.allow ?? []).includes(loadKey(it.load));
+const listenPieceButton = (app, it) => listenButton(app, () => app.listenPiece(it), 14);
+const openButton = (app, it) => h('button', { title: 'Open the song here, unchanged, with the credit on top', onclick: () => app.openPiece(it) }, icon('code', 14), ' Open here');
+const watchButton = (app, it) => h('button', { title: 'Play the video beside the editor', onclick: () => app.watch(it) }, icon('play', 14), ' Watch here');
 const repOpen = (url, label = 'Open') => (url ? h('a.rep-open', { href: url, target: '_blank', rel: 'noopener', title: url }, label, ' ', icon('external', 13)) : null);
 
 const KIND = { song: 'Song', video: 'Video', lesson: 'Lesson', tool: 'Tool', bank: 'Sounds', example: 'soda example', event: 'Event' };
@@ -291,17 +327,18 @@ export function showCollection(c) {
 }
 
 function collectionItem(app, data, it) {
-  const allowed = new Set(data.allow ?? []);
-  const loadable = it.load && allowed.has(it.load.export ? `${it.load.url}#${it.load.export}` : it.load.url);
+  const loadable = canOpen(data, it);
   const actions = [];
-  if (loadable) actions.push(h('button', { title: 'Open the code here, with the credit on top', onclick: () => app.openPiece(it) }, icon('code', 14), ' Open here'));
+  if (loadable) actions.push(listenPieceButton(app, it), openButton(app, it));
+  if (isYouTube(it.url)) actions.push(watchButton(app, it));
   if (it.example) {
     const ex = EXAMPLES.find((e) => e.title === it.example);
-    if (ex) actions.push(h('button', { title: 'Hear it without changing your code', onclick: () => app.previewCode(ex.code) }, icon('listen', 14), ' Listen'), h('button', { onclick: () => app.loadExample(ex) }, icon('code', 14), ' Open'));
+    if (ex) actions.push(listenButton(app, () => app.previewCode(ex.code), 14), h('button', { onclick: () => app.loadExample(ex) }, icon('code', 14), ' Open'));
   }
-  if (it.samples) actions.push(h('button', { title: `Adds ${it.samples} to the top of your sketch`, onclick: () => app.prepend(it.samples) }, icon('sounds', 14), ' Use sounds'));
-  if (it.url) actions.push(repOpen(it.url, it.kind === 'video' || (it.kind === 'lesson' && /youtu/.test(it.url)) ? 'Watch' : 'Open'));
-  const badge = it.example ? null : repBadge(loadable ? (/NC/.test(it.license ?? '') ? 'adapt' : 'open') : it.reuse === 'open' ? 'open' : it.reuse ?? 'link');
+  if (it.try) actions.push(listenButton(app, () => app.previewCode(it.try), 14), h('button', { title: 'Adds a line that uses these sounds to your sketch', onclick: () => app.insert(it.try) }, icon('sounds', 14), ' Try it'));
+  else if (it.samples) actions.push(h('button', { title: `Adds ${it.samples} to the top of your sketch`, onclick: () => app.prepend(it.samples) }, icon('sounds', 14), ' Use sounds'));
+  if (it.url) actions.push(repOpen(it.url, isYouTube(it.url) ? 'YouTube' : 'Source'));
+  const badge = it.example ? null : repBadge(loadable ? (it.reuse === 'open' ? (/NC/.test(it.license ?? '') ? 'adapt' : 'open') : 'public') : it.reuse === 'open' ? 'open' : it.reuse ?? 'link');
   return h(
     'li',
     {},
@@ -326,7 +363,7 @@ function collectionsView(app, rerender, data) {
         'ul.rep-collections',
         {},
         list.map((c) => {
-          const open = c.items.filter((it) => it.load || it.example).length;
+          const open = c.items.filter((it) => it.load || it.example || it.try).length;
           return h(
             'li',
             {},
@@ -431,7 +468,16 @@ function repertoireView(app, rerender) {
                     h('strong', {}, s.title, s.key ? h('span.rep-star', { title: 'A good place to start' }, ' ★') : null),
                     h('small', {}, [`by ${s.by}`, s.original ? `original: ${s.original}` : null, s.genre, s.date].filter(Boolean).join(' · ')),
                     h('small', {}, s.teaches ? `Teaches: ${s.teaches}` : s.about),
-                    h('div.rep-foot', {}, repBadge(s.reuse), repOpen(s.url), s.source && s.source !== s.url ? repOpen(s.source, 'Source') : null),
+                    h(
+                      'div.rep-foot',
+                      {},
+                      repBadge(canOpen(data, s) && s.reuse !== 'adapt' && s.reuse !== 'open' ? 'public' : s.reuse),
+                      canOpen(data, s) ? listenPieceButton(app, s) : null,
+                      canOpen(data, s) ? openButton(app, s) : null,
+                      isYouTube(s.url) ? watchButton(app, s) : null,
+                      repOpen(s.url, isYouTube(s.url) ? 'YouTube' : 'Source'),
+                      s.source && s.source !== s.url ? repOpen(s.source, 'Source') : null,
+                    ),
                   ),
                 ),
               ),
@@ -470,7 +516,7 @@ function repertoireView(app, rerender) {
                   h('strong', {}, r.title),
                   h('small', {}, [r.type, r.by, r.license && r.license !== 'not stated' ? r.license : null].filter(Boolean).join(' · ')),
                   h('small', {}, r.about),
-                  h('div.rep-foot', {}, repOpen(r.url)),
+                  h('div.rep-foot', {}, isYouTube(r.url) ? watchButton(app, r) : null, repOpen(r.url, isYouTube(r.url) ? 'YouTube' : 'Open')),
                 ),
               ),
             ),

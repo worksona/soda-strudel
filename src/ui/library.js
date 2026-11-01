@@ -7,7 +7,7 @@ import { icon } from './icons.js';
 import { listSounds, listMediaItems, storageStatus } from '../storage/db.js';
 import { listMedia } from '../soda/mediaRegistry.js';
 import { importFiles, onLibraryChange, removeMedia, removeSound } from '../media/library.js';
-import { CURATED, forgetLibrary, githubLibraryOf, loadLibrary, loadedLibraries, onGithubChange } from '../media/github.js';
+import { CLEARED, CURATED, clearedLibrary, forgetLibrary, githubLibraryOf, loadLibrary, loadedLibraries, onGithubChange } from '../media/github.js';
 import { getAudioContext, soundMap, superdough } from '@strudel/webaudio';
 
 export function createLibrary({ root, app, isVisible = () => null }) {
@@ -82,6 +82,24 @@ export function createLibrary({ root, app, isVisible = () => null }) {
     return details;
   };
 
+  // ---------- community sounds: banks cleared by the rights check, loaded with soda ----------
+  function communitySection() {
+    const libs = CLEARED.map((c) => ({ ...c, lib: loadedLibraries().find((l) => l.id === c.id) }));
+    const count = libs.reduce((n, c) => n + (c.lib?.names.filter(matches).length ?? 0), 0);
+    return section('Community sounds', count, () =>
+      libs.map((c) =>
+        h(
+          'div.community',
+          {},
+          h('div.meta', {}, h('strong', {}, c.title), h('small', {}, c.note), h('small.muted', {}, 'by ', h('a', { href: c.url, target: '_blank', rel: 'noopener' }, c.by), ` · ${c.license}`)),
+          c.lib
+            ? h('div.chips', {}, c.lib.names.filter(matches).map((name) => chip({ label: name, sound: name, code: `$: s("${name}")\n` })))
+            : h('p.muted', {}, 'Loading…'),
+        ),
+      ),
+    );
+  }
+
   // ---------- GitHub libraries ----------
   function githubSection() {
     const input = h('input', { placeholder: 'user/repo or strudel.json URL', 'aria-label': 'GitHub library', name: 'lib' });
@@ -95,8 +113,8 @@ export function createLibrary({ root, app, isVisible = () => null }) {
         if (button) button.disabled = false;
       }
     };
-    const loaded = loadedLibraries();
-    const loadedIds = new Set(loaded.map((l) => l.id));
+    const loaded = loadedLibraries().filter((l) => !clearedLibrary(l.id));
+    const loadedIds = new Set(loadedLibraries().map((l) => l.id));
     return h(
       'section.github',
       {},
@@ -226,6 +244,7 @@ export function createLibrary({ root, app, isVisible = () => null }) {
           ),
         { open: true },
       ),
+      communitySection(),
       githubSection(),
       h('h4', {}, 'Strudel’s sounds'),
       section(`Drum machines · ${drumBanks.length} kits`, drumCount, () =>

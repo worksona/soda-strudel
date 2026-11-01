@@ -1,12 +1,14 @@
-// Pieces from the Repertoire's collections that soda.strudel may open: only
-// curated pieces whose authors chose an open licence (decision
-// 2026-11-01-repertoire-reuse-policy). Their code is never stored in the app –
-// it is fetched from where the author published it when someone clicks Open,
-// through /api/piece (a fixed allowlist, so it is no open proxy), and opens
-// with a credit header on top so the author's name travels with it.
+// Pieces from the Repertoire that soda.strudel opens: any song whose code is
+// public at its source, opened unchanged (decisions 2026-11-01-repertoire-reuse-policy
+// and 2026-11-01-open-public-songs-in-soda). Their code is never stored in the
+// app – it is fetched from where the author published it when someone clicks
+// Open, through /api/piece (a fixed allowlist, so it is no open proxy), and
+// opens with a credit header on top so the author's name travels with it.
+// A load is { url } (a file), { url, export } (one tune in a module like
+// Strudel's tunes.mjs) or { url, track } (a strudel.cc link in a README table row).
 
 /** "url" or "url#export" – how the allowlist names a piece. */
-export const pieceKey = (load) => (load?.export ? `${load.url}#${load.export}` : load?.url ?? '');
+export const pieceKey = (load) => (load?.export ? `${load.url}#${load.export}` : load?.track ? `${load.url}@${load.track}` : load?.url ?? '');
 
 /**
  * The template literal exported as `name` from a module like Strudel's tunes.mjs
@@ -30,12 +32,39 @@ export function extractExport(source, name) {
   return null;
 }
 
+/** The code inside a strudel.cc link (https://strudel.cc/#<base64>), or null. */
+export function codeFromStrudelLink(link) {
+  const hash = String(link).split('#')[1];
+  if (!hash) return null;
+  try {
+    const bin = atob(decodeURIComponent(hash));
+    return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
+  } catch {
+    return null;
+  }
+}
+
+/** The code of the README table row whose first cell is `title` – its strudel.cc link. */
+export function extractTrack(readme, title) {
+  for (const line of readme.split('\n')) {
+    if (!line.startsWith('|')) continue;
+    const cells = line.split('|').map((c) => c.trim());
+    if (cells[1] !== title) continue;
+    const link = line.match(/\((https:\/\/strudel\.cc\/[^)\s]*#[^)\s]+)\)/)?.[1];
+    return link ? codeFromStrudelLink(link) : null;
+  }
+  return null;
+}
+
 /** Lines that credit the author at the top of the opened code. */
 export function creditHeader(item) {
+  const open = item.reuse === 'open';
   const lines = [
-    `// "${item.title}"${item.by ? ` by ${item.by}` : ''}`,
-    `// Licence: ${item.license}${item.source || item.url ? ` · source: ${item.source || item.url}` : ''}`,
-    '// Opened unchanged from the soda.strudel Repertoire – the piece belongs to its author.',
+    `// "${item.title}"${item.by ? ` by ${item.by}` : ''}${item.original ? ` – original song: ${item.original}` : ''}`,
+    `// Licence: ${item.license || 'none stated'}${item.source || item.url ? ` · source: ${item.source || item.url}` : ''}`,
+    open
+      ? '// Opened unchanged from the soda.strudel Repertoire – the piece belongs to its author.'
+      : '// Opened unchanged from the soda.strudel Repertoire – it belongs to its author; ask them before reusing it.',
   ];
   return lines.join('\n') + '\n\n';
 }
@@ -44,7 +73,7 @@ const looksLikeCode = (res) => res?.ok && !/text\/html/.test(res.headers.get('co
 
 /** The piece's code, fetched from its source. Throws with a readable message. */
 export async function fetchPiece(load, { dev = false } = {}) {
-  const q = new URLSearchParams({ url: load.url, ...(load.export ? { export: load.export } : {}) });
+  const q = new URLSearchParams({ url: load.url, ...(load.export ? { export: load.export } : {}), ...(load.track ? { track: load.track } : {}) });
   const res = await fetch(`/api/piece?${q}`).catch(() => null);
   if (looksLikeCode(res)) return res.text();
   if (res && res.status !== 404 && !/text\/html/.test(res.headers.get('content-type') ?? '')) {
@@ -55,7 +84,7 @@ export async function fetchPiece(load, { dev = false } = {}) {
     const direct = await fetch(load.url);
     if (!direct.ok) throw new Error(`could not fetch the piece (${direct.status})`);
     const text = await direct.text();
-    return load.export ? extractExport(text, load.export) ?? '' : text;
+    return load.export ? extractExport(text, load.export) ?? '' : load.track ? extractTrack(text, load.track) ?? '' : text;
   }
   throw new Error('opening pieces needs the deployed site (or `netlify dev`)');
 }

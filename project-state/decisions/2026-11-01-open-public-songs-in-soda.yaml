@@ -1,0 +1,50 @@
+id: 2026-11-01-open-public-songs-in-soda
+kind: decision
+date: "2026-11-01"
+title: >-
+  soda.strudel opens any public Strudel song unchanged, plays videos in a panel, and adds the
+  cleared sound banks
+status: decided
+question: How should the Repertoire be used inside soda.strudel rather than on other sites?
+owner: David Olsson
+options:
+  - >-
+    Songs: A open any song whose code is public at its source, unchanged, credit on top · B only
+    open-licence pieces (as before)
+  - "Videos: A a Watch panel beside the editor (privacy-enhanced YouTube embed) · B links only"
+  - "Sounds: A add the three cleared banks now, with credit · B after a listening pass"
+decision: >-
+  1. soda.strudel may open any song whose code is public at its source (a GitHub or Codeberg file,
+  or a strudel.cc link), unchanged, with a credit header on top, fetched from the source when
+  someone clicks – nothing is stored or shipped in soda.strudel. Adapting a piece, or bundling it as
+  a soda example, still needs an open licence or the author's written yes. Covers open unchanged
+  with the original composer named; they are never adapted. 2. Tutorials and performances on YouTube
+  play in a Watch panel beside the editor (youtube-nocookie embed). 3. The three cleared sound banks
+  (AuditeMarlow/samples MIT, fstiffo/polifonia-samples CC0, hvillase/cavlp-25p GPL-3.0) join soda's
+  sounds with credit.
+rationale: >-
+  Chosen by David Olsson from the recommended options, so the Repertoire is usable inside
+  soda.strudel. Opening a publicly shared piece unchanged, from its source, at the listener's click
+  is how strudel.cc itself treats shared links; it neither copies nor redistributes the code from
+  soda.strudel's side.
+amends: >-
+  2026-11-01-repertoire-reuse-policy (rule 2: unlicensed pieces may now be opened unchanged in soda,
+  not only linked; rule 4 unchanged – our research still never copies code)
+decided_on: "2026-11-01"
+decided_by: dolsson@aimqc.com
+consequences:
+  - >-
+    /api/piece allowlist grows to every public song in the collections (still an allowlist, not an
+    open proxy)
+  - >-
+    strudel.cc links that carry code are read at click time from where they are published (the
+    awesome-strudel README), so soda's files never contain the code
+  - Bakery shares (strudel.cc/?id) still open on strudel.cc – their code is in strudel.cc's database
+  - >-
+    A sketch shared from soda after opening someone's song carries their code and the credit header
+    – the header must stay
+phase: 02-build-loops
+last_modified: "2026-11-01T19:13:34.055Z"
+last_modified_by: david@atomic47.co
+created: "2026-11-01T19:13:34.055Z"
+created_by: david@atomic47.co
