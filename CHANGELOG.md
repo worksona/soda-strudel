@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- **Video exports show the view you are in.** With View › Code over the stage,
+  a recorded video includes the code layer as it is on screen: the veil, the
+  syntax colours, the playing notes outlined, the sliders and inline visuals
+  like `._pianoroll()`. The code keeps its size relative to the frame and sits
+  top left, as it does over the stage. Stage only records the stage alone. The
+  recorder's summary says "with the code" when it will be included.
 - **Share chooses how the link opens.** Share › Opens as offers the View
   menu's views – Stage only (default), Code over the stage (the code plays
   over the stage, like strudel.cc, and the viewer can edit it) and Full screen

@@ -54,6 +54,7 @@ export class Stage {
     if (!this.drawCanvas.isConnected) el.append(this.drawCanvas);
     this.aspect = 'free'; // the sketch's export frame – on screen the stage always fills its box
     this.guide = false; // outline the export frame over the free stage
+    this.overlay = null; // (ctx, w, h) => … drawn over export frames only – the code layer
     this.exportShort = null;
     this.haps = [];
     this.time = 0;
@@ -258,6 +259,14 @@ export class Stage {
     captions.forEach((hap, i) => this.drawCaption(hap, t, w, h, captions.length - 1 - i));
 
     if (this.guide && !this.exportShort) this.drawGuide(w, h);
+    // exports show what the screen shows: the code too, when it is over the stage
+    if (this.exportShort && this.overlay) {
+      try {
+        this.overlay(ctx, w, h);
+      } catch (e) {
+        console.warn('[overlay]', e);
+      }
+    }
   }
 
   /** Outline of the export frame, cover-fitted and centred; never drawn into an export. */

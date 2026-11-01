@@ -53,7 +53,8 @@ export function createRecorder({ dock, button, app, closePanel }) {
   function summary() {
     const len = prefs.length ? `${prefs.length} cycles (${clock(lengthSeconds())})` : 'until you stop';
     const start = prefs.align && app.isPlaying() && state === 'idle' ? ' · starts on the next cycle' : '';
-    return prefs.mode === 'video' ? `${frame()} · ${getSettings().exportSize}p · ${len}${start}` : `WAV, lossless stereo · ${len}${start}`;
+    const code = app.codeShowing?.() ? ' · with the code' : '';
+    return prefs.mode === 'video' ? `${frame()} · ${getSettings().exportSize}p${code} · ${len}${start}` : `WAV, lossless stereo · ${len}${start}`;
   }
 
   // ---------- toolbar button ----------

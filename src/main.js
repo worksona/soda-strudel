@@ -23,6 +23,7 @@ import { repl } from '@strudel/core';
 import { clearHydra } from '@strudel/hydra';
 import { getDefaultValue, getSuperdoughAudioController, multiChannelOrbits } from 'superdough';
 import { createLibrary } from './ui/library.js';
+import { codeVisible, createCodeLayer } from './export/codeLayer.js';
 import { createRecorder } from './ui/recorder.js';
 import { createSettings } from './ui/settings.js';
 import { createShare } from './ui/share.js';
@@ -64,6 +65,7 @@ new ResizeObserver(([entry]) =>
 
 // ---------- stage + editor ----------
 const stage = new Stage($('#stage'));
+stage.overlay = createCodeLayer($('#editor')); // video exports include the code when it is showing
 stage.setAspect(sketch.aspect);
 
 const mirror = new StrudelMirror({
@@ -512,6 +514,8 @@ const app = {
   },
   getCps: () => mirror.repl.scheduler.cps,
   getCycle: () => mirror.repl.scheduler.now(),
+  /** True when the code is over the stage – a video export then includes it. */
+  codeShowing: () => codeVisible($('#editor')),
   isPlaying: () => playing,
   play,
   stop,
