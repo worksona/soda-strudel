@@ -263,6 +263,7 @@ export function createLibrary({ root, app, isVisible = () => null }) {
         {},
         h('button.chip', { onclick: () => app.insert('$: cam().mirror(1).opacity(.8)\n') }, 'cam()'),
         h('button.chip', { onclick: () => app.insert('.lpf(camMotion.range(200, 4000))') }, 'camMotion'),
+        h('button.chip', { onclick: () => app.insert('.gain(micLevel.range(.2, 1))') }, 'micLevel'),
       ),
     ];
   }

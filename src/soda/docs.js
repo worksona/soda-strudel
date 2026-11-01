@@ -14,6 +14,7 @@ const d = (name, description, examples = [], params = [], synonyms) => ({
 export const SODA_DOCS = [
   d('img', 'Shows an image on the stage while the event is active. Names come from media packs, your Library, the sketch\'s media, or a URL.', ['$: img("<rain neon dusk>").slow(4).fade(.3)'], [['name', 'string', 'media name or image URL']]),
   d('vid', 'Plays a looping video on the stage while the event is active. Chain .speed() for playback rate.', ['$: vid("clip").speed(.5).opacity(.8)'], [['name', 'string', 'media name or video URL']]),
+  d('micLevel', 'A continuous signal 0..1: how loud it is at the microphone (Input › Microphone). 0 when the microphone is off. While it is on, video exports record it too.', ['$: visual("rings").amount(micLevel)', '$: img("neon").fx("ripple").amount(micLevel.range(.1, .9))'], []),
   d('cam', 'The live camera as a media layer (the viewer must allow the camera).', ['$: cam().mirror(1).fx("<none posterize>")'], []),
   d('camMotion', 'A continuous signal 0..1: how much movement is in front of the camera. 0 when the camera is off.', ['$: note("c2 eb2").s("sawtooth").lpf(camMotion.range(200, 4000))'], []),
   d('captions', 'One caption per cycle from a list of plain strings (single quotes). Empty string = no caption that cycle.', ["$: captions(['2:14 am', '', 'exit 9', '']).slow(2)"], [['lines', 'string[]', 'caption text per cycle']]),

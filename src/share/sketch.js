@@ -15,6 +15,7 @@ export const SKETCH_VERSION = 1;
  * @property {'free'|'9:16'|'1:1'|'16:9'} [aspect]
  * @property {Record<string,string>} [media]   extra media names -> public URLs
  * @property {boolean} [camera]     piece uses the camera (viewer gets an Allow / Play without choice)
+ * @property {boolean} [mic]        piece uses micLevel (the viewer is offered the microphone too)
  */
 
 export function normalizeSketch(input) {
@@ -22,6 +23,7 @@ export function normalizeSketch(input) {
   if (typeof s.code !== 'string' || !s.code.trim()) throw new Error('sketch needs non-empty code');
   s.v = SKETCH_VERSION;
   if (s.camera === undefined) s.camera = /\bcam\s*\(|camMotion/.test(s.code);
+  if (s.mic === undefined) s.mic = /\bmicLevel\b/.test(s.code);
   for (const k of Object.keys(s)) if (s[k] === undefined || s[k] === '') delete s[k];
   return s;
 }

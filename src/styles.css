@@ -699,9 +699,10 @@ body.dragging #drop-hint {
     padding-left: 6px;
   }
 }
-/* phones: pages and actions fold into one "pages" button (a grid in the panel) –
-   except the two reached for most, Examples and Share, which stay on the bar */
-@media (max-width: 680px) {
+/* phones and narrow windows: pages and actions fold into one "pages" button
+   (a grid in the panel) – except the two reached for most, Examples and Share,
+   which stay on the bar. The full bar needs about 800px with its captions. */
+@media (max-width: 800px) {
   #toolbar .pages > :not(.keep),
   #toolbar .actions > :not(.keep) {
     display: none !important;
@@ -932,8 +933,10 @@ input[type='range'] {
   color: var(--text);
 }
 
-/* editor hint pop-ups (CodeMirror tooltips) */
+/* editor hint pop-ups (CodeMirror tooltips) – above the toolbar (20) and an
+   open side panel (30) so a hint is never cut off */
 .cm-tooltip {
+  z-index: 40 !important;
   border: 1px solid var(--line-strong) !important;
   background: var(--pop) !important;
   color: var(--text);
@@ -1385,5 +1388,24 @@ body.nav-labels #toolbar #update.pending .cap {
 @media (prefers-reduced-motion: reduce) {
   #update.pending {
     animation: none;
+  }
+}
+
+/* narrow phones: nine buttons on one row – tighter gaps, edges and captions */
+@media (max-width: 440px) {
+  #toolbar {
+    gap: 2px;
+    padding-left: max(6px, env(safe-area-inset-left));
+    padding-right: max(6px, env(safe-area-inset-right));
+  }
+  #toolbar .group {
+    gap: 2px;
+  }
+  body.nav-labels #toolbar .cap {
+    font-size: 8px;
+    letter-spacing: 0;
+  }
+  body.nav-labels #toolbar [data-cap] {
+    padding-inline: 2px;
   }
 }

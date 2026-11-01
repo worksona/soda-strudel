@@ -34,6 +34,12 @@ $: dub(img("rain")).pan(.3).crush(3).coarse(8)`);
     expect(res.stats.audible).toBeLessThanOrEqual(res.stats.visual);
   });
 
+  it('knows micLevel, the live microphone signal', async () => {
+    const res = await v(`$: s("kick*4").bank("soda").gain(micLevel.range(.4, 1))\n$: visual("rings").amount(micLevel)`);
+    expect(res.errors).toEqual([]);
+    expect(res.stats.visual).toBeGreaterThan(0);
+  });
+
   it("accepts Strudel's animations as visuals", async () => {
     const res = await v(`$: s("kick hat").bank("soda")\n$: visual("<punchcard pianoroll wordfall spiral pitchwheel scope spectrum>").hue(200).amount(.6)`);
     expect(res.errors).toEqual([]);

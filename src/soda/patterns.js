@@ -33,6 +33,13 @@ export const setCamMotionSource = (fn) => {
 /** 0..1 amount of movement in front of the camera. Continuous, like sine. */
 export const camMotion = signal(() => motionSource());
 
+let micSource = () => 0;
+export const setMicLevelSource = (fn) => {
+  micSource = fn;
+};
+/** 0..1 loudness at the microphone (Input › Microphone). Continuous, like sine. */
+export const micLevel = signal(() => micSource());
+
 /**
  * Register media names, like samples() does for sounds.
  *   media({ cover: 'https://example.com/cover.jpg', clip: 'https://example.com/loop.mp4' })
@@ -45,4 +52,4 @@ export function media(arg) {
   return Promise.resolve();
 }
 
-export const sodaScope = { ...controls, captions, cam, camMotion, media };
+export const sodaScope = { ...controls, captions, cam, camMotion, micLevel, media };

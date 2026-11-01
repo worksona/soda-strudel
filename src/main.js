@@ -10,6 +10,7 @@ import { readSodaFile } from './share/sodafile.js';
 import { importFiles, registerLibrary, libraryChanged, saveTake } from './media/library.js';
 import { cameraOn, disableCamera, enableCamera, flipCamera, onCameraChange } from './media/camera.js';
 import { isRecording, startTake, stopTake } from './media/mic.js';
+import { disableMic, enableMic, micOn, onMicChange } from './media/micInput.js';
 import { saveSketch as storeSketch } from './storage/db.js';
 import { getSettings, onSettings } from './settings.js';
 import { initEditorSettings } from './editor/assist.js';
@@ -324,12 +325,12 @@ $('#update').addEventListener('click', (e) => {
   if (fromPointer(e)) focusCode();
 });
 
-// ---------- Input: microphone takes and the camera (a pulldown) ----------
+// ---------- Record: a take from the microphone becomes a sound ----------
 async function toggleTake() {
   try {
     if (isRecording()) {
       const wav = await stopTake();
-      syncInput();
+      syncRecord();
       if (!wav) return toast('Nothing recorded.');
       const name = await saveTake(wav);
       toast(`Saved take "${name}" – use s("${name}")`);
@@ -337,11 +338,35 @@ async function toggleTake() {
     } else {
       await ensureAudio();
       await startTake();
-      syncInput();
-      toast('Recording a take – Input › Stop recording when you are done.');
+      syncRecord();
+      toast('Recording a take – tap Record again to stop.');
     }
   } catch (err) {
-    syncInput();
+    syncRecord();
+    toast(`Microphone: ${err.message}`, { error: true });
+  }
+}
+/** Record glows and turns into Stop while a take is recording. */
+function syncRecord() {
+  const btn = $('#record');
+  const rec = isRecording();
+  btn.classList.toggle('live', rec);
+  btn.setAttribute('aria-pressed', String(rec));
+  setIcon(btn, rec ? 'stop' : 'mic');
+  btn.querySelector('.cap').textContent = rec ? 'Stop' : 'Record';
+  btn.setAttribute('aria-label', rec ? 'Stop recording' : 'Record');
+  btn.title = rec ? 'Stop and keep the take as a sound' : 'Record a take with the microphone – it becomes a sound';
+}
+$('#record').addEventListener('click', toggleTake);
+
+// ---------- Input: the microphone and camera as live sources (a pulldown) ----------
+async function toggleMic() {
+  try {
+    if (micOn()) return disableMic();
+    await ensureAudio();
+    await enableMic();
+    toast('Microphone on – micLevel follows it, and video exports record it.');
+  } catch (err) {
     toast(`Microphone: ${err.message}`, { error: true });
   }
 }
@@ -352,26 +377,26 @@ async function toggleCamera() {
     toast(`Camera: ${err.message}`, { error: true });
   }
 }
-/** The Input button glows while the mic records or the camera is on. */
+/** The Input button glows while the microphone or the camera is on. */
 function syncInput() {
   const btn = $('#input');
-  const rec = isRecording();
-  btn.classList.toggle('live', rec || cameraOn());
-  setIcon(btn, rec || !cameraOn() ? 'mic' : 'camera');
-  btn.querySelector('.cap').textContent = rec ? 'Rec' : cameraOn() ? 'Cam on' : 'Input';
-  btn.setAttribute('aria-label', rec ? 'Input – recording' : cameraOn() ? 'Input – camera on' : 'Input');
+  const on = [micOn() && 'mic', cameraOn() && 'cam'].filter(Boolean);
+  btn.classList.toggle('live', on.length > 0);
+  btn.querySelector('.cap').textContent = on.length === 2 ? 'Mic+cam' : on[0] === 'mic' ? 'Mic on' : on[0] === 'cam' ? 'Cam on' : 'Input';
+  btn.setAttribute('aria-label', on.length ? `Input – ${on.join(' and ').replace('cam', 'camera').replace('mic', 'microphone')} on` : 'Input');
 }
 createDropdown({
   button: $('#input'),
   menu: $('#input-menu'),
   build: ({ close }) => [
-    menuItem('mic', isRecording() ? 'Stop recording' : 'Record a take', toggleTake, { close }),
+    menuItem('mic', 'Microphone', toggleMic, { checked: micOn(), close }),
     menuItem('camera', 'Camera', toggleCamera, { checked: cameraOn(), close }),
     menuItem('flip', 'Switch camera', () => flipCamera().catch((err) => toast(err.message, { error: true })), { disabled: !cameraOn(), close }),
-    h('p.menu-empty', {}, 'Takes become sounds in your library. The camera stays on this device.'),
+    h('p.menu-empty', {}, 'Live sources for your sketch: micLevel and camMotion follow them, cam() shows the camera, and video exports record the microphone. Nothing leaves this device. To sample your voice, use Record.'),
   ],
 });
 onCameraChange(syncInput);
+onMicChange(syncInput);
 
 // ---------- sketches: save / open / new ----------
 function thumbnail() {
@@ -681,10 +706,12 @@ if (fromLink) {
   document.body.classList.add('viewer');
   setMode('stage');
   const card = $('#title-card');
-  const start = async (withCamera) => {
+  const inputsWord = [fromLink.camera && 'camera', fromLink.mic && 'microphone'].filter(Boolean).join(' and ');
+  const start = async (withInputs) => {
     card.hidden = true;
     try {
-      if (withCamera) await enableCamera().catch(() => toast('Camera unavailable – playing without it.'));
+      if (withInputs && fromLink.camera) await enableCamera().catch(() => toast('Camera unavailable – playing without it.'));
+      if (withInputs && fromLink.mic) await enableMic().catch(() => toast('Microphone unavailable – playing without it.'));
       await play();
     } catch (e) {
       toast(e.message, { error: true });
@@ -696,12 +723,12 @@ if (fromLink) {
       {},
       h('h1', {}, fromLink.title || 'Untitled sketch'),
       fromLink.by ? h('p.by', {}, `by ${fromLink.by}`) : null,
-      fromLink.camera
+      fromLink.camera || fromLink.mic
         ? h(
             'div.choices',
             {},
-            h('p', {}, 'This piece uses your camera. Nothing leaves your device.'),
-            h('button.primary', { onclick: () => start(true) }, icon('camera'), ' Play with camera'),
+            h('p', {}, `This piece uses your ${inputsWord}. Nothing leaves your device.`),
+            h('button.primary', { onclick: () => start(true) }, icon(fromLink.camera ? 'camera' : 'mic'), ` Play with ${inputsWord}`),
             h('button', { onclick: () => start(false) }, icon('play'), ' Play without'),
           )
         : h('button.primary.huge', { onclick: () => start(false) }, icon('play', 22), ' Tap to play'),
@@ -731,12 +758,19 @@ window.addEventListener('keydown', (e) => {
   }
 });
 
-// every icon-only control shows its name on hover: an aria-label without a
-// title becomes the title the first time the pointer reaches it
+// Tooltips on buttons (Settings › Tooltips). Native titles can't be hidden
+// with CSS, so while they're off a title is parked in data-title the moment
+// the pointer arrives, and put back when they're on again. Icon-only controls
+// without a title show their aria-label.
 document.addEventListener('pointerover', (e) => {
-  const el = e.target.closest?.('button[aria-label], a[aria-label], [role="button"][aria-label]');
-  if (!el || el.title || el.textContent.trim()) return;
-  el.title = el.getAttribute('aria-label');
+  const el = e.target.closest?.('[title], [data-title], button[aria-label], a[aria-label], [role="button"][aria-label]');
+  if (!el || el.closest('.cm-editor')) return;
+  if (getSettings().tooltips === false) {
+    if (el.title) (el.dataset.title = el.title), el.removeAttribute('title');
+    return;
+  }
+  if (!el.title && el.dataset.title) el.title = el.dataset.title;
+  else if (!el.title && !el.textContent.trim() && el.getAttribute('aria-label')) el.title = el.getAttribute('aria-label');
 });
 
 // installable app + quick reopen (production builds only – it would fight the dev server)

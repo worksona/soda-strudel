@@ -376,7 +376,6 @@ export function editorView(app, rerender) {
       ),
     ),
     toggle('isAutoCompletionEnabled', 'Autocomplete functions, sounds and media'),
-    toggle('isTooltipEnabled', 'Hints on hover (functions, names, mini-notation)'),
     toggle('isBracketClosingEnabled', 'Close brackets'),
     toggle('isBracketMatchingEnabled', 'Match brackets'),
     toggle('isLineNumbersDisplayed', 'Line numbers'),

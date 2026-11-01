@@ -6,6 +6,7 @@ const DEFAULTS = {
   name: '', // shown as "by …" on shared links and exports
   exportSize: 1080, // short side of exported video, in pixels
   navLabels: true, // tiny captions under toolbar icons
+  tooltips: true, // hints on hover: in the code, and names on buttons
 };
 
 let current = { ...DEFAULTS, ...lsGet('soda.settings', {}) };

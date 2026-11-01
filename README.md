@@ -49,7 +49,7 @@ One row of outlined icons, grouped:
 
 | Group | Buttons |
 |---|---|
-| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Stage, the default · Code over the stage · Full screen · Show export frame) · **Input** ▾ (Record a take · Camera · Switch camera) · Play · **Update** |
+| Left | **soda.strudel** (opens About) · **File** ▾ · **View** ▾ (Stage, the default · Code over the stage · Full screen · Show export frame) · **Input** ▾ (Microphone · Camera · Switch camera – live sources) · Play · **Update** · **Record** (a mic take that becomes a sound) |
 | Pages | **Examples** · **Sounds** · **Media** · **Reference** |
 | Out | **Export** · **Share** (pages) · **Claude** (copies the sketch for a chat) · **Vibe** (the strudel-vibe skill: install, prompts, links) |
 | Right | **About** · **Settings** |
@@ -57,9 +57,13 @@ One row of outlined icons, grouped:
 **File** is a pulldown: New sketch · Open .soda file… · Save (ctrl+s) ·
 Save as new · Rename… · Download .soda file · **Your sketches** (every saved
 sketch – click to open, trash to delete, with Undo). **View** shows the current
-view in its icon; **Input** glows red while the mic records or the camera is on.
-Tiny captions
-sit under every toolbar icon (Settings › Appearance turns them off).
+view in its icon. **Input** turns the microphone and camera on as live
+sources: `micLevel` and `camMotion` follow them, `cam()` shows the camera, and
+video exports record the microphone; it glows red while either is on.
+**Record** samples your voice into a take; it glows and turns into Stop while
+recording. Tiny captions sit under every toolbar icon (Settings › Appearance
+turns them off), and Settings › Tooltips turns hover hints on or off. Below
+800px the pages fold into More, keeping Examples and Share.
 
 Each page opens on the right, one level deep – no tabs inside pages and no pop-up dialogs. Click the
 lit icon again (or Esc) to close. On phones the pages and actions fold into one

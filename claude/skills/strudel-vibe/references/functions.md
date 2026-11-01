@@ -1,6 +1,6 @@
 # Function index
 
-Generated from Strudel's own reference plus soda's functions (525 entries).
+Generated from Strudel's own reference plus soda's functions (526 entries).
 One line each: name, synonyms, first sentence, first example. Search this file for a name.
 
 - **_initialize**: Initialize a midi device
@@ -263,6 +263,7 @@ One line each: name, synonyms, first sentence, first example. Search this file f
 - **markcss**: Overrides the css of highlighted events. – e.g. `note("c a f e") .markcss('text-decoration:underline')`
 - **mask**: Returns silence when mask is 0 or "~" – e.g. `note("c [eb,g] d [eb,g]").mask("<1 [0 1]>")`
 - **media**: Registers media names, like samples() does for sounds. – e.g. `media({ cover: 'https://example.com/cover.jpg' })`
+- **micLevel**: A continuous signal 0..1: how loud it is at the microphone (Input › Microphone). – e.g. `$: visual("rings").amount(micLevel)`
 - **midi**: MIDI output: Opens a MIDI output port. – e.g. `note("c4").midichan(1).midi('IAC Driver Bus 1')`
 - **midibend**: MIDI pitch bend: Sends a MIDI pitch bend message. – e.g. `note("c4").midibend(sine.slow(4).range(-0.4,0.4)).midi()`
 - **midichan**: MIDI channel: Sets the MIDI channel for the event. – e.g. `note("c4").midichan(1).midi()`

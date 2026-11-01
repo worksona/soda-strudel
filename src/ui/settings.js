@@ -3,6 +3,7 @@ import { h, toast, formatBytes } from './dom.js';
 import { icon } from './icons.js';
 import { shapePicker, sizePicker } from './export.js';
 import { editorView } from './learn.js';
+import { applyEditorSettings } from '../editor/assist.js';
 import { APPEARANCES, applyAppearance, getAppearance } from '../theme.js';
 import { getSettings, updateSettings } from '../settings.js';
 import { clearStore, countAll, deleteRender, listRenders, requestPersist, resetEverything, storageStatus } from '../storage/db.js';
@@ -40,6 +41,19 @@ export function createSettings({ root, app }) {
         {},
         h('input', { type: 'checkbox', checked: s.navLabels !== false, onchange: (e) => updateSettings({ navLabels: e.target.checked }) }),
         'Small labels under the toolbar icons',
+      ),
+      h(
+        'label.toggle',
+        {},
+        h('input', {
+          type: 'checkbox',
+          checked: s.tooltips !== false,
+          onchange: (e) => {
+            updateSettings({ tooltips: e.target.checked });
+            applyEditorSettings(app.mirror, { isTooltipEnabled: e.target.checked });
+          },
+        }),
+        'Tooltips – hints when you point at code, names on buttons',
       ),
       h('h4', {}, 'Profile'),
       h(

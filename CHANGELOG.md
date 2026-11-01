@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+- **Record is its own button.** A mic button in the top bar records a take
+  that becomes a sound; it glows and turns into Stop while recording.
+- **Input is for live sources.** Input › Microphone turns the mic on as a
+  source: the new `micLevel` signal (0..1 loudness, like `camMotion`) drives
+  patterns and visuals, and video exports record the microphone. Shared links
+  that use `micLevel` offer the viewer the microphone.
+- **Tooltips switch.** Settings › Tooltips turns hover hints off and on, both
+  in the code and on buttons. Hints now show above an open side panel.
+- **Toolbar fits.** Below 800px the pages fold into More; on narrow phones the
+  bar tightens so all nine buttons stay on one row.
 - **Hints on hover.** Point at anything in the code – no key to hold – and a
   hint shows: a function's doc; what a name in a string is (an effector or
   look in `fx`, a visual, a blend, a sound and how many variations it has, a

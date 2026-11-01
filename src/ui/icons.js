@@ -3,6 +3,7 @@
 // index.html are filled in by hydrateIcons().
 import {
   createElement,
+  Radio,
   AudioLines,
   Crop,
   ExternalLink,
@@ -86,6 +87,7 @@ const ICONS = {
   link: Link,
   full: Maximize,
   mic: Mic,
+  input: Radio,
   stage: Monitor,
   package: Package,
   rename: Pencil,

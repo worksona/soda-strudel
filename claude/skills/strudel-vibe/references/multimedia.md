@@ -36,8 +36,10 @@ $: note("c2 eb2").s("sawtooth").lpf(camMotion.range(200, 4000))   // movement op
 ```
 
 `camMotion` is 0..1 movement in front of the camera (0 when the camera is off).
-Viewers choose "Play with camera" or "Play without"; pieces must still work
-without it.
+`micLevel` is 0..1 loudness at the microphone (Input › Microphone; 0 when it is
+off) – `visual("rings").amount(micLevel)`, `.gain(micLevel.range(.4, 1))`.
+Viewers choose "Play with camera / microphone" or "Play without"; pieces must
+still work without them.
 
 ## Captions
 

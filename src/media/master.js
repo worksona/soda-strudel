@@ -44,6 +44,16 @@ export function readMaster() {
   return { fft, wave, level: Math.min(1, Math.sqrt(sum / wave.length) * 3) };
 }
 
+/** A node that is recorded but not heard – the live microphone joins exports here. */
+export function recordingInput() {
+  try {
+    ensure();
+  } catch {
+    return null;
+  }
+  return streamDest;
+}
+
 /** MediaStream carrying exactly what the user hears, for MediaRecorder. */
 export function masterStream() {
   ensure();

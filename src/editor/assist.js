@@ -149,7 +149,10 @@ const hintHover = hoverTooltip(
 
 // hints sit below the word, and flip above only if there's room under the
 // toolbar – the toolbar covers the top of the editor
+// They live on <body>: the editor sits in a fixed layer that would trap them
+// under an open side panel.
 const belowToolbar = tooltips({
+  parent: document.body,
   tooltipSpace: () => ({ top: document.getElementById('toolbar')?.getBoundingClientRect().bottom ?? 0, left: 0, bottom: innerHeight, right: innerWidth }),
 });
 export const assistHover = [hintHover, belowToolbar];

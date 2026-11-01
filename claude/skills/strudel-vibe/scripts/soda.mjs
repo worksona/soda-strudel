@@ -24971,7 +24971,19 @@ var VIDEO_FX = {
   timeslice: "slit-scan: each strip from a different moment, movement smears in time; amount = how far back",
   feedback: "video feedback \u2013 the last frame zoomed and turned under the new one; amount = zoom and spin"
 };
-var FX = ["none", "grayscale", "invert", "blur", "posterize", "pixelate", "edges", "sepia", "contrast", "hue", ...Object.keys(VIDEO_FX)];
+var FX_LOOKS = {
+  none: "no effect",
+  grayscale: "black and white",
+  invert: "colours inverted, a negative",
+  blur: "soft focus",
+  posterize: "a few flat colours, like a screen print",
+  pixelate: "big blocky pixels",
+  edges: "outlines only",
+  sepia: "old-photo brown",
+  contrast: "punchier lights and darks",
+  hue: "colours rotated by .hue() degrees"
+};
+var FX = [...Object.keys(FX_LOOKS), ...Object.keys(VIDEO_FX)];
 var fxChain = (fx2) => fx2 === void 0 || fx2 === null ? [] : [fx2].flat().map(String).filter((n) => n && n !== "none");
 var BLENDS = ["normal", "screen", "multiply", "overlay", "lighter", "difference", "soft-light"];
 var MEDIA_KEYS = ["img", "vid", "cam", "caption", "visual"];
@@ -25022,12 +25034,14 @@ var captions = (lines) => Z2(...lines.map((l2) => l2 ? C2({ caption: l2 }) : q2)
 var cam = (id2 = "live") => C2({ cam: id2 });
 var motionSource = () => 0;
 var camMotion = j2(() => motionSource());
+var micSource = () => 0;
+var micLevel = j2(() => micSource());
 function media(arg) {
   if (typeof arg === "string") return loadMediaPack(arg);
   for (const [name3, url] of Object.entries(arg ?? {})) registerMedia(name3, url);
   return Promise.resolve();
 }
-var sodaScope = { ...controls, captions, cam, camMotion, media };
+var sodaScope = { ...controls, captions, cam, camMotion, micLevel, media };
 
 // src/soda/validate.js
 var { repl, evalScope, silence } = dist_exports;
@@ -25177,6 +25191,7 @@ function normalizeSketch(input) {
   if (typeof s2.code !== "string" || !s2.code.trim()) throw new Error("sketch needs non-empty code");
   s2.v = SKETCH_VERSION;
   if (s2.camera === void 0) s2.camera = /\bcam\s*\(|camMotion/.test(s2.code);
+  if (s2.mic === void 0) s2.mic = /\bmicLevel\b/.test(s2.code);
   for (const k4 of Object.keys(s2)) if (s2[k4] === void 0 || s2[k4] === "") delete s2[k4];
   return s2;
 }
