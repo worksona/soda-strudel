@@ -44,6 +44,14 @@ export class Stage {
     this.lctx = this.layer.getContext('2d');
     this.paint = document.createElement('canvas');
     this.paintCtx = this.paint.getContext('2d', { willReadFrequently: true });
+    // Strudel's .pianoroll(), .scope(), .fscope(), .spectrum() and .pitchwheel()
+    // paint into a global canvas, #test-canvas (getDrawContext()), with their own
+    // animation loops. Provide that canvas ourselves – hidden, the stage's size –
+    // and composite it like the other painters, so they show and are exported.
+    this.drawCanvas = document.getElementById('test-canvas') ?? document.createElement('canvas');
+    this.drawCanvas.id = 'test-canvas';
+    this.drawCanvas.style.display = 'none';
+    if (!this.drawCanvas.isConnected) el.append(this.drawCanvas);
     this.aspect = 'free'; // the sketch's export frame – on screen the stage always fills its box
     this.guide = false; // outline the export frame over the free stage
     this.exportShort = null;
@@ -64,6 +72,20 @@ export class Stage {
     new ResizeObserver(() => this.resize()).observe(el);
     this.resize();
     requestAnimationFrame(this.loop);
+  }
+
+  /**
+   * Strudel's draw loops share #test-canvas and some leave state behind (spectrum
+   * leaves globalAlpha at 0, so the next .fscope() draws invisibly). Called
+   * before every evaluation.
+   */
+  resetDrawState() {
+    const ctx = this.drawCanvas.getContext('2d', { willReadFrequently: true });
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.filter = 'none';
+    ctx.clearRect(0, 0, this.drawCanvas.width, this.drawCanvas.height);
   }
 
   /** The canvas Strudel painters draw into (passed to StrudelMirror as drawContext). */
@@ -115,7 +137,7 @@ export class Stage {
     }
     // encoders want even dimensions
     [w, h] = [Math.round(w / 2) * 2, Math.round(h / 2) * 2];
-    for (const c of [this.canvas, this.layer, this.paint]) {
+    for (const c of [this.canvas, this.layer, this.paint, this.drawCanvas]) {
       c.width = Math.round(w);
       c.height = Math.round(h);
     }
@@ -230,6 +252,8 @@ export class Stage {
       }
       ctx.drawImage(this.paint, 0, 0);
     }
+    // Strudel's own draw loops (pianoroll, scope, spectrum…) – see the constructor
+    if (this.playing) ctx.drawImage(this.drawCanvas, 0, 0);
 
     captions.forEach((hap, i) => this.drawCaption(hap, t, w, h, captions.length - 1 - i));
 

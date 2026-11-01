@@ -1,5 +1,6 @@
 import './styles.css';
 import { StrudelMirror } from '@strudel/codemirror';
+import './editor/widgets.js'; // one canvas per inline visual – before any widget is drawn
 import { transpiler } from '@strudel/transpiler';
 import { getAudioContext, initAudio, webaudioOutput } from '@strudel/webaudio';
 import { prebake } from './strudel/setup.js';
@@ -82,6 +83,7 @@ const mirror = new StrudelMirror({
   onEvalError: (err) => showError(err),
   // Hydra keeps painting until cleared – drop it when the new code doesn't use it
   beforeEval: () => {
+    stage.resetDrawState();
     keepDrawWindow = timelineVisual.test(mirror.code ?? '');
     dropHydraUnlessUsed(mirror.code);
   },

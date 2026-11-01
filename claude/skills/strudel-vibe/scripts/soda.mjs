@@ -25086,7 +25086,10 @@ async function ensureScope() {
       initHydra: async () => {
         for (const n of hydraNames) globalThis[n] = chain();
       },
-      H: () => () => 0
+      H: () => () => 0,
+      // slider(…) from the editor (the transpiler turns it into sliderWithID): its value
+      slider: (v2) => v2,
+      sliderWithID: (_id, v2) => v2
       // painters from @strudel/draw / webaudio: accept and ignore in Node
     });
     for (const n of hydraNames) if (!(n in globalThis)) globalThis[n] = chain();

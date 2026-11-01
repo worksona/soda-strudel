@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+- **Strudel's visuals work like on strudel.cc.** Several inline widgets in one
+  sketch (`._pianoroll()` on three lines, say) each get their own canvas under
+  their own code – before, only one showed, in the wrong place, and lines of
+  code vanished (Strudel's widgets all claim to be equal; with the CodeMirror
+  used here that let one canvas stand in for another). `.pianoroll()`,
+  `.scope()`, `.fscope()`, `.spectrum()` and `.pitchwheel()` now show on the
+  stage and in video exports (they paint into Strudel's global canvas, which
+  the stage now owns and composites), and the canvas's state is reset before
+  every evaluation so one visual can't leave the next invisible. All six
+  inline widgets and all eight stage painters checked; soda's own controls
+  don't collide with any Strudel name, and every Strudel package is the
+  latest published version.
 - **A new First light.** The first piece new visitors hear is now a full
   arrangement: a breathing synth bass, wide chords, a slow supersaw melody,
   chopped power chords, scripted drums with fills every eighth bar, celesta
