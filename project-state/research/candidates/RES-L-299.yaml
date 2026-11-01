@@ -1,0 +1,22 @@
+id: RES-L-299
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #34: basic house music'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'Strudel Live Coding #34: basic house music'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=IJnOn9E-U-c
+  date: '2026-02-17'
+  genre: house (inferred)
+  license: none stated
+  platform: channel-rss
+  note: Short performance in house — hear what a finished Strudel piece in this style sounds like and how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

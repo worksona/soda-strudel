@@ -1,0 +1,24 @@
+id: RES-L-031
+kind: research-candidate
+mandate_id: RES-M-001
+name: fra martino coldplayaro
+aliases: []
+type: other
+profile:
+  kind: song
+  title: fra martino coldplayaro
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/framartinocoldplayaro.js
+  date: '2026-01-03'
+  genre: children's / folk tune (inferred)
+  license: none stated
+  original_artist: traditional
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: Title names Fra Martino (Frère Jacques); arranger script by eefano
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

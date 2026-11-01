@@ -1,0 +1,22 @@
+id: RES-L-375
+kind: research-candidate
+mandate_id: RES-M-001
+name: Sequencing external music gear from the Strudel REPL (video)
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Sequencing external music gear from the Strudel REPL (video)
+  author: bornach@vis.social
+  url: https://vis.social/@bornach/117404958044065706
+  date: '2026-10-08'
+  level: intermediate
+  license: none stated
+  platform: mastodon
+  note: Video on using Strudel to drive hardware via MIDI.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

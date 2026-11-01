@@ -1,0 +1,22 @@
+id: RES-L-350
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudel, how to do a progressive fade out
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Strudel, how to do a progressive fade out
+  author: technoabu
+  url: https://uzu.lurk.org/t/strudel-how-to-do-a-progressive-fade-out/6215
+  date: '2026-09-04'
+  level: beginner
+  license: none stated
+  platform: forum
+  note: Beginner shares a technique for fading a track out over cycles, with a reply offering an alternative.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

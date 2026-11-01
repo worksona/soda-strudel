@@ -1,0 +1,29 @@
+id: RES-F-013
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-002
+answers:
+- Q2
+- Q5
+- Q6
+claim: Strudel was presented as a paper plus performance at Web Audio Conference 2022 by Felix Roos and Alex McLean.
+evidence:
+- excerpt: '"Strudel: Algorithmic Patterns for the Web (performance)"'
+  ref: https://www.youtube.com/watch?v=KWIotFWVOi4
+  retrieved_at: '2026-11-01'
+  source_date: '2022-09-04'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

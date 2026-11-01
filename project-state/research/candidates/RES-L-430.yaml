@@ -1,0 +1,21 @@
+id: RES-L-430
+kind: research-candidate
+mandate_id: RES-M-001
+name: glitchwave_one
+aliases: []
+type: other
+profile:
+  kind: song
+  title: glitchwave_one
+  author: semism
+  url: https://github.com/semism/sonicism/blob/main/strudel/unfinished/(served)glitchwave_one.js
+  date: '2026-05-09'
+  genre: glitch / IDM
+  license: none stated
+  note: Unfinished 140 BPM piece by a self-described live-code artist; Albanian-named pattern labels.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

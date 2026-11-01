@@ -1,0 +1,22 @@
+id: RES-L-428
+kind: research-candidate
+mandate_id: RES-M-001
+name: Saudade Nº0
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Saudade Nº0
+  author: taconi
+  url: https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/saudade_n0.js
+  date: '2024-11-20'
+  genre: Brazilian / experimental audiovisual (Strudel + Hydra)
+  license: CC-BY-NC-SA (file header; overrides the repo's MIT LICENSE)
+  note: Brazilian Portuguese author. The repo holds ~20 dated Strudel sketches from 2024 to 2026. Some are covers
+    (e.g. 25/05-22 is a Mãeana song), so check each file.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

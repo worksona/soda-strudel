@@ -1,0 +1,21 @@
+id: RES-L-366
+kind: research-candidate
+mandate_id: RES-M-001
+name: Switch Angel documentary
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Switch Angel documentary
+  author: phranck@oldbytes.space
+  url: https://oldbytes.space/@phranck/117441946805166445
+  date: '2026-10-14'
+  license: none stated
+  platform: mastodon
+  note: Shares a mini-documentary on Switch Angel; also recommended by another user on 2026-10-24.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

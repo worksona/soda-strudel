@@ -1,0 +1,21 @@
+id: RES-L-370
+kind: research-candidate
+mandate_id: RES-M-001
+name: Bonkwave samples as a Strudel sample map
+aliases: []
+type: other
+profile:
+  kind: samples
+  title: Bonkwave samples as a Strudel sample map
+  author: fleuron@mas.to
+  url: https://mas.to/@fleuron/117140446001019784
+  date: '2026-08-22'
+  license: none stated
+  platform: mastodon
+  note: Author uploaded a sample set with a strudel.json so it loads by name in the REPL.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

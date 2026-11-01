@@ -1,0 +1,22 @@
+id: RES-L-369
+kind: research-candidate
+mandate_id: RES-M-001
+name: MusicRadar rave sample pack loaded into Strudel
+aliases: []
+type: other
+profile:
+  kind: samples
+  title: MusicRadar rave sample pack loaded into Strudel
+  author: jtruk@mastodon.social
+  url: https://mastodon.social/@jtruk/117116856160390017
+  date: '2026-08-18'
+  genre: rave
+  license: none stated
+  platform: mastodon
+  note: Points to a free rave-synth sample pack and a share link using it.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,710 @@
+{
+  "source": "sound-banks",
+  "checked_at": "2026-11-01",
+  "banks": [
+    {
+      "repo": "AuditeMarlow/samples",
+      "url": "https://github.com/AuditeMarlow/samples",
+      "license": "MIT",
+      "license_note": "LICENSE: MIT, Copyright (c) 2025 Audite Marlow. README: 'Free and open source samples I made.'",
+      "contents": "3 banks, 4 one-shots: hihat (hihat_01), kick (kick_01), snare (snare_01, snare_02). Repo size ~287 KB.",
+      "origin": "Self-made by the author (README + repo description).",
+      "commercial_risk": "none",
+      "verdict": "ship-ok",
+      "reason": "MIT, author states they made the samples; generic drum one-shot names, nothing suggests sampled records.",
+      "credit_line": "Drum samples by Audite Marlow (Niek den Breeje) — https://github.com/AuditeMarlow/samples — MIT",
+      "samples_line": "samples('github:AuditeMarlow/samples')",
+      "bank_names": [
+        "hihat",
+        "kick",
+        "snare"
+      ],
+      "priority_open_license": true
+    },
+    {
+      "repo": "emrexdeger/strudelSamples",
+      "url": "https://github.com/emrexdeger/strudelSamples",
+      "license": "CC0-1.0",
+      "license_note": "LICENSE: full CC0 1.0 text. No README, no provenance statement. strudel.json _base points to /master/ but the only branch is main (raw URLs still answer 200 via redirect today).",
+      "contents": "15 banks, ~73 files: k (kicks), s (snares), ch, oh, clap, ride, tom, perc, b (bass), syn, pad, north, opal, scape, wt_my (wavetable?). Repo size ~~45 MB.",
+      "origin": "Not stated; uploaded via web 'Add files via upload' in Oct 2025.",
+      "commercial_risk": "low-unknown",
+      "verdict": "ship-after-owner-check",
+      "reason": "CC0 declared and names are generic, but no origin is stated — drum one-shots/pads may come from third-party sample packs whose licences forbid redistribution; owner should listen to north/opal/scape/wt_my and ideally ask the author.",
+      "credit_line": "Samples by emrexdeger — https://github.com/emrexdeger/strudelSamples — CC0 1.0",
+      "samples_line": "samples('github:emrexdeger/strudelSamples')",
+      "bank_names": [
+        "k",
+        "s",
+        "ch",
+        "oh",
+        "clap",
+        "ride",
+        "tom",
+        "perc",
+        "b",
+        "syn",
+        "pad",
+        "north",
+        "opal",
+        "scape",
+        "wt_my"
+      ],
+      "priority_open_license": true
+    },
+    {
+      "repo": "fjpolo/fjpolo-Strudel",
+      "url": "https://github.com/fjpolo/fjpolo-Strudel",
+      "license": "MIT (repo); samples are Freesound under their own licences",
+      "license_note": "Repo LICENSE MIT (c) 2025 Fran Co, but each sample folder has references.md pointing at Freesound — MIT cannot relicense them. anvil/01 is CC BY-NC 3.0, outside the policy.",
+      "contents": "3 banks in strudel.json: anvil (2), chains (1 file, ~51 MB!), metalgrinder (1); plus unlisted reversedclap. Also .std pattern files incl. a 'Super Mario Bros' industrial version (pattern, not a sample). Repo size ~~47 MB.",
+      "origin": "Freesound: anvil:0 Benboncan #103630 CC BY 4.0; anvil:1 arnaud coutancier #388059 CC BY-NC 3.0; chains YleArkisto #319483 CC BY 4.0; metalgrinder dkustic #76213 CC BY 3.0; reversedclap .Andre_Onate #163582 CC0.",
+      "commercial_risk": "low (no commercial records) but licence mismatch",
+      "verdict": "ship-after-owner-check",
+      "reason": "Loading the bank pulls in a CC BY-NC sound (anvil:1) and needs per-sound CC-BY credits, not just 'MIT'; chains is a 51 MB file. Could re-host the CC-BY/CC0 subset with per-sound credit instead.",
+      "credit_line": "Sounds via fjpolo — https://github.com/fjpolo/fjpolo-Strudel — Freesound: Benboncan (CC BY 4.0), arnaud coutancier (CC BY-NC 3.0), YleArkisto (CC BY 4.0), dkustic (CC BY 3.0)",
+      "samples_line": "samples('github:fjpolo/fjpolo-Strudel')",
+      "bank_names": [
+        "anvil",
+        "chains",
+        "metalgrinder"
+      ],
+      "priority_open_license": true
+    },
+    {
+      "repo": "fstiffo/polifonia-samples",
+      "url": "https://github.com/fstiffo/polifonia-samples",
+      "license": "CC0-1.0",
+      "license_note": "LICENSE: CC0 1.0. italy/documentation.txt cites the Italian heritage catalogue entry for the bells (Avegno, Enrico Picasso e Figli foundry).",
+      "contents": "1 bank 'italy': 14 single bell strikes Chiesa_di_San_Petro_<note> (Re3…La4), ~3.6 MB. Repo size ~3.6 MB.",
+      "origin": "Church bell recordings for the Polifonia Song Contest 2024 (EU Polifonia project); recordist not named.",
+      "commercial_risk": "none",
+      "verdict": "ship-ok",
+      "reason": "CC0, contents are individual church-bell notes with heritage documentation; no commercial recordings. Repo branch is master, so the github: shortcut needs the branch.",
+      "credit_line": "Bell samples (San Pietro, Avegno) by Francesco Stiffoni / Polifonia Song Contest 2024 — https://github.com/fstiffo/polifonia-samples — CC0 1.0",
+      "samples_line": "samples('github:fstiffo/polifonia-samples/master')",
+      "bank_names": [
+        "italy"
+      ],
+      "priority_open_license": true
+    },
+    {
+      "repo": "hvillase/cavlp-25p",
+      "url": "https://github.com/hvillase/cavlp-25p",
+      "license": "GPL-3.0",
+      "license_note": "LICENSE: GPL-3.0 (applies repo-wide incl. sounds). README only names the course 'Creación Audiovisual con Lenguajes de Programación'.",
+      "contents": "strudel.json banks: botella (tapa_botella_st), pelota (pelota1_st), spray (spray1_st). Repo also has sonidos/ with agua_agitada, arrastre, llaves, pastillas, silbato1-2, pelota1-3, spray1-5, git1-m (not in strudel.json). Repo size ~~100 MB repo (sounds themselves ~10 MB).",
+      "origin": "Everyday-object recordings for a university live-coding course (bottle cap, ball, spray, keys, pills, whistle) — self-recorded by context; not explicitly stated.",
+      "commercial_risk": "none",
+      "verdict": "ship-ok",
+      "reason": "GPL-3.0 and contents are clearly foley of household objects; nothing from records. Note GPL on audio requires keeping licence notice/credit.",
+      "credit_line": "Object sounds by Hugo Villaseñor (hvillase), course cavlp-25p — https://github.com/hvillase/cavlp-25p — GPL-3.0",
+      "samples_line": "samples('github:hvillase/cavlp-25p')",
+      "bank_names": [
+        "botella",
+        "pelota",
+        "spray"
+      ],
+      "priority_open_license": true
+    },
+    {
+      "repo": "Veikkosuhonen/graffathon25-demo",
+      "url": "https://github.com/Veikkosuhonen/graffathon25-demo",
+      "license": "MIT (code)",
+      "license_note": "LICENSE MIT (c) 2025 Felix Bade — a demo-party code repo (bauble player); README licence lines refer to the code and bauble, not the samples.",
+      "contents": "samples/: amen (amen2.WAV, 415 KB), bd, hh, sd, rd. strudel.json uses _base './'. Repo size ~733 KB.",
+      "origin": "Not stated. 'amen2' is the Amen break (The Winstons, 'Amen, Brother', 1969); bd/hh/sd/rd origin unknown (likely drum-machine samples).",
+      "commercial_risk": "high (amen)",
+      "verdict": "do-not-ship",
+      "reason": "Contains the Amen break, a commercial recording; MIT on demo code does not cover it. bd/hh/sd/rd unprovenanced. _base './' may not resolve via the github: shortcut anyway.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "amen",
+        "bd",
+        "hh",
+        "sd",
+        "rd"
+      ],
+      "priority_open_license": true
+    },
+    {
+      "repo": "algorave-dave/samples",
+      "url": "https://github.com/algorave-dave/samples",
+      "license": "none stated",
+      "license_note": "No LICENSE, README is ASCII art only.",
+      "contents": "Banks cocaina, overgame, ecotone, technologic (technologic_vox.wav), forget, whatuneed (beat/noise/vox), failsafe (BG_VOX, CHOPS, GANG_VOX, VERSE1, VERSE2). Repo size ~~80 MB.",
+      "origin": "Not stated; look like song stems/vocals.",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "No licence; 'technologic_vox' points at Daft Punk 'Technologic'; vocal stems of songs likely commercial.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "cocaina",
+        "overgame",
+        "ecotone",
+        "technologic",
+        "forget",
+        "whatuneed",
+        "failsafe"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "AustinOliverHaskell/ms-teams-sounds-strudel",
+      "url": "https://github.com/AustinOliverHaskell/ms-teams-sounds-strudel",
+      "license": "MIT (repo) — contradicted by README",
+      "license_note": "README: 'personal use only', 'Microsoft retains all copyrights to the original audio files'.",
+      "contents": "31 banks: Teams notifications (Alarm, Ping, Nudge…) and ringtones (bounce, bubbles, eureka…). Repo size ~2.2 MB.",
+      "origin": "Microsoft Teams original sound pack.",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "Microsoft-copyrighted audio; the MIT licence cannot cover it, README itself says personal use only.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "Alarm",
+        "Default",
+        "Escalate",
+        "Flick",
+        "Nudge",
+        "Ping",
+        "Pluck",
+        "Prioritize",
+        "Summon",
+        "Tap",
+        "Vibe",
+        "bounce",
+        "bubbles",
+        "…"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "bruveping/RepositorioDesonidosParaExperimentar02",
+      "url": "https://github.com/bruveping/RepositorioDesonidosParaExperimentar02",
+      "license": "none stated",
+      "license_note": "No LICENSE.",
+      "contents": "1 bank 'todo' (45 files: golpe01… etc.) in folder AudiosExtraidosDeBBCSounFX. Repo size ~5.6 MB.",
+      "origin": "BBC Sound Effects archive (folder name). BBC RemArc licence = personal/educational/research use only.",
+      "commercial_risk": "medium",
+      "verdict": "do-not-ship",
+      "reason": "BBC Sound Effects are not under an open licence; redistribution by a third party is not permitted.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "todo"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "Bubobubobubobubo/Dough-Amen",
+      "url": "https://github.com/Bubobubobubobubo/Dough-Amen",
+      "license": "none stated",
+      "license_note": "No LICENSE, README is a title only.",
+      "contents": "amen1 (20 cw_amen*), amen2 (40 cw_amen_* variations), amen3 (20 named breaks 'Creek Break 160', 'Hype Break 170'…). Repo size ~52 MB.",
+      "origin": "Amen break edits, apparently from third-party break packs ('cw_' prefix).",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "Amen break derivatives (commercial recording) from unattributed packs; no licence.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "amen1",
+        "amen2",
+        "amen3"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "Bubobubobubobubo/Dough-Juj",
+      "url": "https://github.com/Bubobubobubobubo/Dough-Juj",
+      "license": "none stated",
+      "license_note": "No LICENSE.",
+      "contents": "1 bank 'juj': 138 French phoneme fragments (PLE, EX, TAIT, IL…). Repo size ~5.6 MB.",
+      "origin": "README: recorded by Juliette Monzat for Topos — a woman's voice.",
+      "commercial_risk": "none",
+      "verdict": "link-only",
+      "reason": "Clean, self-recorded, but no licence; ask Bubobubobubobubo/Juliette Monzat to add CC0/CC-BY — strong candidate once licensed.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "juj"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "eddyflux/crate",
+      "url": "https://github.com/eddyflux/crate",
+      "license": "none stated",
+      "license_note": "No LICENSE, no README; single 'initial commit'.",
+      "contents": "18 banks crate_bd/sd/hh/oh/cp/rd/cr/rim/perc/sh/tb/conga/bongo/djembe/clave/block/stick/bell; file names carry kit names (kick-takecare, snare-aprilshowers, clap-nightslikethis…). Repo size ~135 MB.",
+      "origin": "Not stated; naming suggests one-shots harvested from named sample kits.",
+      "commercial_risk": "medium",
+      "verdict": "link-only",
+      "reason": "No licence and unknown origin; kit-style names hint at third-party sample packs.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "crate_bd",
+        "crate_sd",
+        "crate_hh",
+        "crate_oh",
+        "crate_cp",
+        "crate_rd",
+        "crate_cr",
+        "crate_rim",
+        "crate_perc",
+        "crate_sh",
+        "crate_tb",
+        "crate_conga",
+        "crate_bongo",
+        "crate_djembe",
+        "crate_clave",
+        "crate_block",
+        "crate_stick",
+        "crate_bell"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "EloMorelo/samples",
+      "url": "https://github.com/EloMorelo/samples",
+      "license": "none stated",
+      "license_note": "No LICENSE, no README.",
+      "contents": "1 bank 'vocals': bulgaria1–4. Repo size ~240 KB.",
+      "origin": "Not stated; Bulgarian vocal snippets, possibly from a choir record.",
+      "commercial_risk": "medium",
+      "verdict": "link-only",
+      "reason": "No licence, origin unknown; 'bulgaria' vocals may come from a commercial choir recording.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "vocals"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "k09/samples",
+      "url": "https://github.com/k09/samples",
+      "license": "none stated",
+      "license_note": "No LICENSE, no README.",
+      "contents": "27 banks k09_000…k09_026, one opaque wav each. Repo size ~89 MB.",
+      "origin": "Not stated.",
+      "commercial_risk": "unknown",
+      "verdict": "link-only",
+      "reason": "No licence and no description of contents.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "k09_000",
+        "…",
+        "k09_026"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "kaiye10/strudelSamples",
+      "url": "https://github.com/kaiye10/strudelSamples",
+      "license": "none stated",
+      "license_note": "No LICENSE; README deleted.",
+      "contents": "Banks finger, apache, idm, jungle — files cw_amen_finger/apache/idm/jungle. Repo size ~2.7 MB.",
+      "origin": "Amen break edits (same 'cw_amen' set as Dough-Amen); 'apache' references the Incredible Bongo Band break.",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "Amen/Apache break material, commercial recordings, no licence.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "finger",
+        "apache",
+        "idm",
+        "jungle"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "mot4i/garden",
+      "url": "https://github.com/mot4i/garden",
+      "license": "none stated (informal attribution grant in README)",
+      "license_note": "README: 'You are free to use, share, and adapt the samples, as long as you credit the source.' — CC-BY-like but not a named licence.",
+      "contents": "13 banks: garden_bd/sd/sn/cp/hh/oh/cr/rim/lt, fx (noise, sub, vinyl, sirene), strings (chord textures), loop (acidDrum1-4 from psr-gx76 folder), metal. Repo size ~142 MB.",
+      "origin": "README: 'Tweaked DIY Sample Pack', one-shots re-amped through analog gear; psr-gx76 = Yamaha PSR keyboard (loops possibly its built-in patterns).",
+      "commercial_risk": "low",
+      "verdict": "ship-after-owner-check",
+      "reason": "Author grants use/share/adapt with credit, but no formal licence; ask mot4i to confirm CC-BY 4.0 and the source of the PSR loops / re-amped one-shots.",
+      "credit_line": "Garden sample pack by mot4i — https://github.com/mot4i/garden — free to use with credit (per README)",
+      "samples_line": "samples('github:mot4i/garden')",
+      "bank_names": [
+        "garden_bd",
+        "garden_sd",
+        "garden_sn",
+        "garden_cp",
+        "garden_hh",
+        "garden_oh",
+        "garden_cr",
+        "garden_rim",
+        "garden_lt",
+        "fx",
+        "strings",
+        "loop",
+        "metal"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "mysinglelise/msl-strudel-samples",
+      "url": "https://github.com/mysinglelise/msl-strudel-samples",
+      "license": "none stated",
+      "license_note": "No LICENSE; README says samples are created by mysinglelise to share with the Strudel community.",
+      "contents": "4 banks: magicfriend, themoonvocoder, silverfever, glass (+ VOCAL TRACKS folder). Repo size ~11 MB.",
+      "origin": "Self-made from the author's own songs.",
+      "commercial_risk": "low",
+      "verdict": "link-only",
+      "reason": "Clean and self-made, but no licence — ask author to add one.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "magicfriend",
+        "themoonvocoder",
+        "silverfever",
+        "glass"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "Nikeryms/Samples",
+      "url": "https://github.com/Nikeryms/Samples",
+      "license": "none stated",
+      "license_note": "No LICENSE, no README.",
+      "contents": "1 bank 'vocals': djnike, djnike1–4 (DJ drops). Repo size ~323 KB.",
+      "origin": "Not stated; probably own DJ tags.",
+      "commercial_risk": "low",
+      "verdict": "link-only",
+      "reason": "No licence.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "vocals"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "prismograph/departure",
+      "url": "https://github.com/prismograph/departure",
+      "license": "none stated",
+      "license_note": "No LICENSE; departure.js says the track was played live on Elektron Octatrack + Digitone.",
+      "contents": "Banks short (8), breaks (8), bass (3), pad (yamaha_reface_dx_pad). Repo size ~40 MB.",
+      "origin": "Own performance/resampling; 'breaks' origin unknown (often sampled breakbeats).",
+      "commercial_risk": "medium",
+      "verdict": "link-only",
+      "reason": "No licence; 'breaks' may be sampled records.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "short",
+        "breaks",
+        "bass",
+        "pad"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "QuantumVillage/quantum-music",
+      "url": "https://github.com/QuantumVillage/quantum-music",
+      "license": "AGPL-3.0",
+      "license_note": "AGPL covers the software repo; samples/README.md: 'Lucy Samples from OQC', source a YouTube video (Oxford Quantum Circuits).",
+      "contents": "1 bank 'lucy': lucy-sound1–3. Repo size ~2.9 MB.",
+      "origin": "Third-party: audio from an OQC YouTube video of their 'Lucy' quantum computer.",
+      "commercial_risk": "medium",
+      "verdict": "ship-after-owner-check",
+      "reason": "AGPL is open, but the sounds are taken from a third party's YouTube video; AGPL doesn't clearly cover them — needs OQC/QuantumVillage confirmation.",
+      "credit_line": "Lucy samples (Oxford Quantum Circuits) via Quantum Village — https://github.com/QuantumVillage/quantum-music — AGPL-3.0",
+      "samples_line": "samples('github:QuantumVillage/quantum-music')",
+      "bank_names": [
+        "lucy"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "RikyBac15/samples",
+      "url": "https://github.com/RikyBac15/samples",
+      "license": "none stated",
+      "license_note": "No LICENSE.",
+      "contents": "31 banks: 303-bass1–7, 303-lead, 303-brass, 303-sqd, kicks, rw-* kit, space-kick, super-bass… Repo size ~11 MB.",
+      "origin": "Probably own TB-303-style synth renders; not stated.",
+      "commercial_risk": "low",
+      "verdict": "link-only",
+      "reason": "No licence.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "303-bass",
+        "space-kick",
+        "super-bass",
+        "rw-kick",
+        "…"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "salsicha/capoeira_strudel",
+      "url": "https://github.com/salsicha/capoeira_strudel",
+      "license": "none stated",
+      "license_note": "No LICENSE. README links a Splice pack ('percussiongodz vol 1') and a Freesound pack as sources.",
+      "contents": "Banks hits (50 Berimbau_Perc_*), loops (25 berimbau/caxixi loops). Repo size ~72 MB.",
+      "origin": "Splice (commercial pack, royalty-free for use in music but not for redistribution as samples) + Freesound.",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "Splice content cannot be redistributed as a sample library.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "hits",
+        "loops"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "sonidosingapura/rochormatic",
+      "url": "https://github.com/sonidosingapura/rochormatic",
+      "license": "none stated",
+      "license_note": "No LICENSE.",
+      "contents": "Banks roni (Reprazent), karmacoma, army (armyofme), voodoo (voodoopeople), portis (Portishead), pete, surfin, golden, heather, oliver, breaks (sayitloud, topic, zeus), ritachao, kompira, yosui, gndym, minami (spinningbirdkick), const. Repo size ~81 MB.",
+      "origin": "Clips of commercial records: Roni Size/Reprazent, Massive Attack 'Karmacoma', Björk 'Army of Me', The Prodigy 'Voodoo People', Portishead, Rita Chao, Inoue Yosui, etc.",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "Bank is built from commercial recordings.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "roni",
+        "karmacoma",
+        "army",
+        "voodoo",
+        "portis",
+        "…"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "terrorhank/samples",
+      "url": "https://github.com/terrorhank/samples",
+      "license": "none stated",
+      "license_note": "No LICENSE, no README.",
+      "contents": "28 banks: music_is_mine_01/02, gojira_01, cole_0, fatstacks*, atombomb, basterdstrudel, waves, ping, gothenburg03 kit (bd, sd, hh…). Repo size ~15 MB.",
+      "origin": "Not stated; names hint at songs/artists (Gojira, 'Music Is Mine', 'Atom Bomb').",
+      "commercial_risk": "medium-high",
+      "verdict": "do-not-ship",
+      "reason": "No licence and several names point at commercial tracks.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "mim_one",
+        "goji_one",
+        "cole_zero",
+        "gothenburg03_bd",
+        "…"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "tesspilot/samples",
+      "url": "https://github.com/tesspilot/samples",
+      "license": "none stated",
+      "license_note": "No LICENSE; README is a how-to template (YOURUSER/REPO).",
+      "contents": "Bank life (life1–8) + life1…life8: 'processed' slices of something called 'Life'. Repo size ~4.5 MB.",
+      "origin": "Not stated — slices of a track called 'Life'.",
+      "commercial_risk": "medium",
+      "verdict": "link-only",
+      "reason": "No licence; source of the 'Life' slices unknown.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "life",
+        "life1",
+        "…",
+        "life8"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "tidalcycles/Dirt-Samples",
+      "url": "https://github.com/tidalcycles/Dirt-Samples",
+      "license": "none stated",
+      "license_note": "No LICENSE. Issue #19 'Add a license' (open since 2020): maintainer yaxu says many samples have unknown provenance.",
+      "contents": "~200 folders: 808*, 909, bd, sn, hh, breaks125/152/157/165, amencutup, jungle, speakspell, sid, casio, invaders, etc. Repo size ~175 MB.",
+      "origin": "Mixed, largely unknown provenance; includes drum-machine samples and famous breaks (amencutup).",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "Maintainer confirms unknown provenance; contains Amen and other breaks. (strudel.cc loads it by default — soda.strudel's policy is stricter.)",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "bd",
+        "sn",
+        "hh",
+        "808",
+        "…"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "TodePond/samples",
+      "url": "https://github.com/TodePond/samples",
+      "license": "none stated",
+      "license_note": "No LICENSE.",
+      "contents": "No audio — a single tidal-drum-machines-alias.json mapping names (AkaiLinn→Linn, BossDR55→DR55…). Repo size ~1 KB.",
+      "origin": "Alias map 'for backwards compatibility with old strudel clients'.",
+      "commercial_risk": "n/a",
+      "verdict": "link-only",
+      "reason": "Not a sample bank; nothing to ship.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [],
+      "priority_open_license": false
+    },
+    {
+      "repo": "TristanCacqueray/mirus",
+      "url": "https://github.com/TristanCacqueray/mirus",
+      "license": "none stated",
+      "license_note": "No LICENSE, no README.",
+      "contents": "Banks small-plate, get-it-wet, sillica-beads (impulse responses in ir/), haunted (7 notes C2–G3). Repo size ~1.9 MB.",
+      "origin": "Not stated; probably own IR captures/instrument.",
+      "commercial_risk": "low",
+      "verdict": "link-only",
+      "reason": "No licence.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "small-plate",
+        "get-it-wet",
+        "sillica-beads",
+        "haunted"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "wyan/livecoding-samples",
+      "url": "https://github.com/wyan/livecoding-samples",
+      "license": "none stated",
+      "license_note": "No LICENSE. README table credits fr_ocean to Freesound #724582 (Sacha.Julien, CC0). strudel.json is invalid JSON (trailing comma) and the fr_ocean path lacks its folder.",
+      "contents": "Banks bass (distorted bass-guitar drone), fr_birds (4 bird field recordings), fr_ocean (Atlantic waves). Repo size ~34 MB.",
+      "origin": "Own recordings + one CC0 Freesound clip.",
+      "commercial_risk": "none",
+      "verdict": "link-only",
+      "reason": "Clean content but no licence for the author's own recordings, and the strudel.json is currently broken.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "bass",
+        "fr_birds",
+        "fr_ocean"
+      ],
+      "priority_open_license": false
+    },
+    {
+      "repo": "yaxu/clean-breaks",
+      "url": "https://github.com/yaxu/clean-breaks",
+      "license": "none stated",
+      "license_note": "No LICENSE, no README.",
+      "contents": "32 banks named after classic breaks: amen, apache, funkydrummer, think, impeach, delight, kool, newday, useme, … Repo size ~20 MB.",
+      "origin": "File names: The Winstons 'Amen Brother', James Brown 'Funky Drummer', Lyn Collins 'Think', Incredible Bongo Band 'Apache', Sugarhill Gang, Bill Withers, Skull Snaps, etc.",
+      "commercial_risk": "high",
+      "verdict": "do-not-ship",
+      "reason": "Entirely famous breaks from commercial records.",
+      "credit_line": null,
+      "samples_line": null,
+      "bank_names": [
+        "amen",
+        "apache",
+        "funkydrummer",
+        "think",
+        "…"
+      ],
+      "priority_open_license": false
+    }
+  ],
+  "findings": [
+    {
+      "claim": "Microsoft retains copyright of the Teams sounds; repo is personal-use only despite its MIT file",
+      "url": "https://github.com/AustinOliverHaskell/ms-teams-sounds-strudel",
+      "excerpt": "Microsoft retains all copyrights to the original audio files.",
+      "source_date": "2025-06-18"
+    },
+    {
+      "claim": "Dirt-Samples has no licence and much of it has unknown provenance",
+      "url": "https://github.com/tidalcycles/Dirt-Samples/issues/19",
+      "excerpt": "A lot of them have unknown provenance. Tidying them up would probably involve removing most of them.",
+      "source_date": "2020-04-30"
+    },
+    {
+      "claim": "fjpolo anvil/01.wav is CC BY-NC 3.0 on Freesound, despite repo MIT",
+      "url": "https://freesound.org/people/arnaud%20coutancier/sounds/388059/",
+      "excerpt": "Attribution NonCommercial 3.0",
+      "source_date": "2026-11-01"
+    },
+    {
+      "claim": "fjpolo chains/00.wav is CC BY 4.0 (YleArkisto)",
+      "url": "https://freesound.org/people/YleArkisto/sounds/319483/",
+      "excerpt": "Attribution 4.0",
+      "source_date": "2026-11-01"
+    },
+    {
+      "claim": "fjpolo anvil/00.wav is CC BY 4.0 (Benboncan)",
+      "url": "https://freesound.org/people/Benboncan/sounds/103630/",
+      "excerpt": "Attribution 4.0",
+      "source_date": "2026-11-01"
+    },
+    {
+      "claim": "fjpolo metalgrinder/00.wav is CC BY 3.0 (dkustic)",
+      "url": "https://freesound.org/people/dkustic/sounds/76213/",
+      "excerpt": "Attribution 3.0",
+      "source_date": "2026-11-01"
+    },
+    {
+      "claim": "AuditeMarlow samples are self-made",
+      "url": "https://github.com/AuditeMarlow/samples",
+      "excerpt": "Free and open source samples I made.",
+      "source_date": "2025-09-28"
+    },
+    {
+      "claim": "Polifonia bells documented against the Italian heritage catalogue",
+      "url": "https://github.com/fstiffo/polifonia-samples/blob/master/italy/documentation.txt",
+      "excerpt": "concerto di 12 campane in RE3 maggiore",
+      "source_date": "2024-05-01"
+    },
+    {
+      "claim": "QuantumVillage 'lucy' samples come from an OQC YouTube video",
+      "url": "https://github.com/QuantumVillage/quantum-music/blob/main/samples/README.md",
+      "excerpt": "Lucy Samples from OQC",
+      "source_date": "2025-06-03"
+    },
+    {
+      "claim": "mot4i/garden grants use/share/adapt with credit, no formal licence",
+      "url": "https://github.com/mot4i/garden",
+      "excerpt": "You are free to use, share, and adapt the samples, as long as you credit the source.",
+      "source_date": "2025-08-11"
+    },
+    {
+      "claim": "capoeira_strudel cites a Splice pack as a source",
+      "url": "https://github.com/salsicha/capoeira_strudel",
+      "excerpt": "splice.com/sounds/packs/rare-percussion/percussiongodz-vol-1",
+      "source_date": "2025-09-02"
+    },
+    {
+      "claim": "clean-breaks consists of famous commercial breaks",
+      "url": "https://github.com/yaxu/clean-breaks/blob/main/strudel.json",
+      "excerpt": "The_Winstons_-_Amen_Brother / James_Brown_-_Funky_Drummer",
+      "source_date": "2023-01-31"
+    },
+    {
+      "claim": "Dough-Juj recorded by Juliette Monzat for Topos",
+      "url": "https://github.com/Bubobubobubobubo/Dough-Juj",
+      "excerpt": "This sample pack has been recorded by Juliette Monzat",
+      "source_date": "2023-11-26"
+    }
+  ],
+  "notes": "Checked via gh api (repo, license, readme, strudel.json, folder listings, commits) plus Freesound licence pages for fjpolo's cited sounds; no audio downloaded, so 'contents' judgements rest on names and READMEs — a listening pass is still advisable. Verdict counts: {'ship-ok': 3, 'ship-after-owner-check': 4, 'do-not-ship': 11, 'link-only': 12}. Strudel's github: shortcut assumes branch 'main' — fstiffo/polifonia-samples needs '/master'. Of the 6 open-licence priority banks: 3 ship-ok (AuditeMarlow, fstiffo, hvillase), 2 ship-after-owner-check (emrexdeger: no provenance; fjpolo: MIT label over Freesound CC-BY + one CC BY-NC sound), 1 do-not-ship (Veikkosuhonen: Amen break, MIT covers code only). QuantumVillage/quantum-music is AGPL too (7th open-licence repo) but its sounds come from an OQC video. AustinOliverHaskell's MIT label is contradicted by its own README (Microsoft copyright). Dirt-Samples, which strudel.cc loads by default, fails this policy (no licence, unknown provenance, Amen). Good licence-request candidates: Dough-Juj, mysinglelise, wyan, mot4i (confirm CC-BY)."
+}

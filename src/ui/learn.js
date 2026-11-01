@@ -265,6 +265,7 @@ const REUSE = {
   ask: ['Ask the author', 'No licence stated – listen and learn there; ask the author before reusing'],
   check: ['Check first', 'Open licence, but check the contents before using'],
   no: ['Rights unclear', 'Listed for reference only'],
+  ref: ['Link only', 'No open licence – listed for reference'],
 };
 const matches = (item) => {
   const q = rep.query.trim().toLowerCase();
@@ -404,6 +405,7 @@ function repertoireView(rerender) {
               h('strong', {}, b.title),
               h('small', {}, `${b.license} · ${b.count} sounds${b.banks.length ? `: ${b.banks.slice(0, 8).join(', ')}${b.count > 8 ? '…' : ''}` : ''}`),
               b.note ? h('small', {}, b.note) : null,
+              b.load ? h('code.rep-load', {}, b.load) : null,
               h('div.rep-foot', {}, repBadge(b.reuse), repOpen(b.url)),
             ),
           ),

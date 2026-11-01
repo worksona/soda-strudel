@@ -1,0 +1,30 @@
+id: RES-F-010
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-002
+answers:
+- Q2
+- Q5
+- Q6
+claim: The Showcase list has 29 active entries over 23 distinct YouTube videos (7 entries are timestamps into one
+  (Algo|Afro) Futures stream); a Chalmers/SVT clip is commented out over copyright doubt.
+evidence:
+- excerpt: '"not sure if this is copyrighted"'
+  ref: https://codeberg.org/uzu/strudel/src/branch/main/website/src/components/Showcase.jsx
+  retrieved_at: '2026-11-01'
+  source_date: '2026-11-01'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

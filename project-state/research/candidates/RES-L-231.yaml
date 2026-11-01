@@ -1,0 +1,23 @@
+id: RES-L-231
+kind: research-candidate
+mandate_id: RES-M-001
+name: Coding synthwave and drum and bass from scratch
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Coding synthwave and drum and bass from scratch
+  author: Iganu music
+  url: https://www.youtube.com/watch?v=DN5iI4yxvtU
+  date: '2026-05-17'
+  genre: drum and bass; synthwave (inferred)
+  level: first steps
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: Coding synthwave and drum and bass from scratch — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

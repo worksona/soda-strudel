@@ -1,0 +1,22 @@
+id: RES-L-392
+kind: research-candidate
+mandate_id: RES-M-001
+name: Ambient drone noises
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Ambient drone noises
+  author: strdst@outerheaven.club
+  url: https://outerheaven.club/objects/dd75cf2e-fc18-4e0f-968a-20d955e55914
+  date: '2026-08-20'
+  genre: ambient drone
+  license: none stated
+  platform: mastodon
+  note: Drone sketch.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

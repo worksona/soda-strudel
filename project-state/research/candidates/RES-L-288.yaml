@@ -1,0 +1,22 @@
+id: RES-L-288
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #23 Basics of Pattern and Cycle Period Control'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #23 Basics of Pattern and Cycle Period Control'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=i3OwO54nSRU
+  date: '2025-11-18'
+  level: first steps
+  license: none stated
+  platform: search
+  note: How cycles and pattern periods relate — the core timing model of Strudel.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

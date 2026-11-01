@@ -1,0 +1,22 @@
+id: RES-L-434
+kind: research-candidate
+mandate_id: RES-M-001
+name: lofi-1
+aliases: []
+type: other
+profile:
+  kind: song
+  title: lofi-1
+  author: Santiago (smaudd)
+  url: https://github.com/smaudd/strudel-sessions/blob/master/lofi-1.js
+  date: '2025-08-23'
+  genre: 'hip-hop: lo-fi (break-based)'
+  license: none stated
+  note: 80 BPM lo-fi beat on chopped breaks125; the repo is a library of REPL sketches by an author who also publishes
+    a sample-pack template.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

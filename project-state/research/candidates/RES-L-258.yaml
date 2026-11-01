@@ -1,0 +1,23 @@
+id: RES-L-258
+kind: research-candidate
+mandate_id: RES-M-001
+name: Chopping Audio in Strudel Pt. 2! (DNB Edition)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Chopping Audio in Strudel Pt. 2! (DNB Edition)
+  author: Switch Angel
+  url: https://www.youtube.com/watch?v=3h1vM0lIrpM
+  date: '2025-08-12'
+  genre: drum and bass (inferred)
+  level: intermediate
+  license: none stated
+  platform: search
+  note: Part 2 of sample chopping, applied to drum and bass.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

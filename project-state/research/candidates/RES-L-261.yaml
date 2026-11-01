@@ -1,0 +1,23 @@
+id: RES-L-261
+kind: research-candidate
+mandate_id: RES-M-001
+name: Coding Music for Cold Machines (Narrated)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Coding Music for Cold Machines (Narrated)
+  author: Switch Angel
+  url: https://www.youtube.com/watch?v=AifAIqHezb8
+  date: '2025-12-23'
+  genre: ambient (inferred)
+  level: intermediate
+  license: none stated
+  platform: search
+  note: Narrated 10-minute ambient/melodic build.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

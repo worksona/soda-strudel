@@ -1,0 +1,13 @@
+id: 2026-11-01-backlog-work-23
+kind: backlog
+title: '[work] Decide: does soda.strudel keep loading Dirt-Samples by default?'
+produced_by: research-mandate
+produced_at: '2026-11-01T19:40:00Z'
+status: queued
+surface: none
+action_required: Choose keep, keep-and-flag or drop; Claude records the decision and makes the change.
+artifact: 2026-11-01-backlog-work-23.md
+lane: work
+priority: P1
+owner: person
+mandate: RES-M-001

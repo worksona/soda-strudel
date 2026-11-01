@@ -1,0 +1,24 @@
+id: RES-L-038
+kind: research-candidate
+mandate_id: RES-M-001
+name: HAPPY BIRTHDAY BURNSIE
+aliases: []
+type: other
+profile:
+  kind: song
+  title: HAPPY BIRTHDAY BURNSIE
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/happybirthdayramones.js
+  date: '2026-08-16'
+  genre: punk (inferred)
+  license: none stated
+  original_artist: Ramones
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Ramones
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

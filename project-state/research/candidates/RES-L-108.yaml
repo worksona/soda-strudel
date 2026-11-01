@@ -1,0 +1,22 @@
+id: RES-L-108
+kind: research-candidate
+mandate_id: RES-M-001
+name: Jade Rose @ solstice stream 2023
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Jade Rose @ solstice stream 2023
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=wg0vW5Ac7L0
+  date: '2023-12-25'
+  genre: electronic / breaks (inferred)
+  license: none stated
+  platform: showcase
+  note: 15-minute festival-stream set; a model of a short structured live-coding performance.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

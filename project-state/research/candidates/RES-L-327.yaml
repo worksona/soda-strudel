@@ -1,0 +1,23 @@
+id: RES-L-327
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Why does this chord progression feel SO right? The circle of fifths  #livecoding #strudel'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Why does this chord progression feel SO right? The circle of fifths  #livecoding #strudel'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=KmI2ZsLLJY4
+  date: '2026-10-14'
+  level: intermediate
+  license: none stated
+  platform: search
+  note: 'Guided build: Why does this chord progression feel SO right? The circle of fifths — explained step by step
+    in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

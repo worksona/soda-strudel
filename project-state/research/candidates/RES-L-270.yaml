@@ -1,0 +1,22 @@
+id: RES-L-270
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #5 sample manipulating(loop slice)'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #5 sample manipulating(loop slice)'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=AEZN8qlqPHA
+  date: '2025-07-28'
+  level: intermediate
+  license: none stated
+  platform: search
+  note: 'Guided build: Strudel Live Coding  sample manipulating(loop slice) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

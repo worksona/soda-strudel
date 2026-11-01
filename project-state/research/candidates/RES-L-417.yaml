@@ -1,0 +1,22 @@
+id: RES-L-417
+kind: research-candidate
+mandate_id: RES-M-001
+name: Ossuary
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Ossuary
+  author: Stefanos Amanuel (ipkstef)
+  url: https://github.com/ipkstef/strudel-sessions/blob/main/liquid/ossuary.txt
+  date: '2026-09-10'
+  genre: 'UK bass: dark halftime drum & bass'
+  license: CC-BY-NC-SA-4.0 (stated in file header)
+  note: 172 BPM halftime piece with a 32-bar arrangement; one of eight tagged liquid-DnB originals in the repo.
+    Its chant sample is CC0 from Freesound, credited in the file.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

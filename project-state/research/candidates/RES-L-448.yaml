@@ -1,0 +1,22 @@
+id: RES-L-448
+kind: research-candidate
+mandate_id: RES-M-001
+name: Lu Wilson
+aliases:
+- TodePond
+type: person
+profile:
+  kind: person
+  role: maintainer
+  links:
+  - https://www.todepond.com/
+  - https://codeberg.org/TodePond
+  - https://github.com/TodePond
+  license_stated: 'pastagang site LICENSE.md: ''do it'''
+  credit_note: Pastagang co-founder and Strudel/nudel contributor. Pastagang work is credited collectively as 'pastagang'.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

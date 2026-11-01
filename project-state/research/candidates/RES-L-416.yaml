@@ -1,0 +1,22 @@
+id: RES-L-416
+kind: research-candidate
+mandate_id: RES-M-001
+name: Squeaky Tinkering
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Squeaky Tinkering
+  author: Paul Gestwicki
+  url: https://github.com/doctor-g/strudel_songs/blob/master/squeaky_tinkering.js
+  date: '2025-11-18'
+  genre: house / 909 groove
+  license: CC BY-NC-NA (as written; not a real CC licence, probably meant CC BY-NC-ND or BY-NC-SA)
+  note: Short 909 groove from a university professor's song experiments. The licence tag is malformed, so ask the
+    author before reusing it.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

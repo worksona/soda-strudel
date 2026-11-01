@@ -1,0 +1,21 @@
+id: RES-L-349
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudel pattern thread (long-running)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Strudel pattern thread (long-running)
+  author: yaxu (thread); recent posts abalone1969, technoabu
+  url: https://uzu.lurk.org/t/strudel-pattern-thread/4044
+  date: '2026-10-28'
+  license: none stated
+  platform: forum
+  note: Long-running community thread where people post short patterns; two new posts in Oct 2026.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

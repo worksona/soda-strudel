@@ -1,0 +1,20 @@
+id: RES-L-455
+kind: research-candidate
+mandate_id: RES-M-001
+name: taconi
+aliases: []
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://codeberg.org/taconi/sketches
+  license_stated: CC BY-NC-SA in file headers (the repo LICENSE is MIT)
+  credit_note: Brazilian multi-language live coder (Strudel, Tidal, Sardine, FoxDot, Renardo). Per-file headers
+    override the repo licence.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

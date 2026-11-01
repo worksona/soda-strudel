@@ -1,0 +1,22 @@
+id: RES-L-257
+kind: research-candidate
+mandate_id: RES-M-001
+name: Live-Coding EDM in STRUDEL
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Live-Coding EDM in STRUDEL
+  author: Switch Angel
+  url: https://www.youtube.com/watch?v=5ScP_aPBEiQ
+  date: '2025-07-26'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: Short performance — hear what a finished Strudel piece in this style sounds like and how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

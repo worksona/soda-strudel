@@ -1,0 +1,21 @@
+id: RES-L-373
+kind: research-candidate
+mandate_id: RES-M-001
+name: From-scratch live coding screen recording
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: From-scratch live coding screen recording
+  author: bornach@vis.social
+  url: https://vis.social/@bornach/117120885512564044
+  date: '2026-08-19'
+  license: none stated
+  platform: mastodon
+  note: Session starting from an empty REPL; the author also posts a series on makertube.net.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,21 @@
+id: RES-L-414
+kind: research-candidate
+mandate_id: RES-M-001
+name: MOVEMENT (germantechno3)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: MOVEMENT (germantechno3)
+  author: dotcomdudee
+  url: https://github.com/dotcomdudee/strudel-tracks/blob/main/germantechno3.js
+  date: '2025-09-15'
+  genre: techno
+  license: none stated
+  note: Vanilla-Strudel German-techno track (no external samples); repo of mostly-techno originals plus a few covers.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

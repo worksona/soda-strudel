@@ -1,0 +1,13 @@
+id: 2026-11-01-backlog-build-22
+kind: backlog
+title: '[build] Listen to the 3 cleared sound banks, then add them to soda sounds'
+produced_by: research-mandate
+produced_at: '2026-11-01T19:40:00Z'
+status: queued
+surface: none
+action_required: Listen to the three banks, then approve (Claude wires them in) or dismiss with a reason.
+artifact: 2026-11-01-backlog-build-22.md
+lane: build
+priority: P2
+owner: person
+mandate: RES-M-001

@@ -1,0 +1,22 @@
+id: RES-L-407
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudel + Hydra livecoding jams
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Strudel + Hydra livecoding jams
+  author: joseprzmoreno.bsky.social
+  url: https://bsky.app/profile/joseprzmoreno.bsky.social/post/3mz2agt6w4c2z
+  date: '2026-10-29'
+  genre: algorave
+  license: none stated
+  platform: bluesky
+  note: Series of audio-visual jam videos; one became a SoundCloud track.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

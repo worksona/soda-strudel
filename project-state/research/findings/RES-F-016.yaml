@@ -1,0 +1,30 @@
+id: RES-F-016
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-003
+answers:
+- Q1
+- Q5
+- Q6
+claim: The policy also strongly discourages importing Strudel projects into corporate AI platforms, naming GitHub;
+  canonical repo is codeberg.org/uzu/strudel.
+evidence:
+- excerpt: announcement by yaxu linking POLICY.md on Codeberg
+  ref: https://uzu.lurk.org/t/strudels-post-ai-humane-policy-for-live-coding-development/6251
+  retrieved_at: '2026-11-01'
+  source_date: '2026-10-28'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

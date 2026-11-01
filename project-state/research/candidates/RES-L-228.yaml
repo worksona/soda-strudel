@@ -1,0 +1,23 @@
+id: RES-L-228
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'High Contrast REMIX in less than 40 lines of code #strudel  #livecoding'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'High Contrast REMIX in less than 40 lines of code #strudel  #livecoding'
+  author: Iganu music
+  url: https://www.youtube.com/watch?v=vORKX5kHk-0
+  date: '2026-03-21'
+  genre: drum and bass (inferred)
+  license: none stated
+  platform: search
+  note: Short performance in drum and bass — hear what a finished Strudel piece in this style sounds like and how
+    it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

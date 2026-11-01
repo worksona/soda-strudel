@@ -5,3 +5,5 @@
 Eleven catalogued songs are Bakery shares (strudel.cc/?id): their code lives in strudel.cc's database and was not inspected. Open each in a browser, record header (title, @by, @license), tempo and techniques in the catalogue – do not copy code.
 
 Approve to put it on the work list; dismiss with a reason to drop it.
+
+**Tried 2026-11-01:** strudel.cc could not load any share – its database returned HTTP 500 ("canceling statement due to statement timeout"). Retry later; read only the header lines (title, @by, @license), never the code body.

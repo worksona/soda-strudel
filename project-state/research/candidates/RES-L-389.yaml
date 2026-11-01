@@ -1,0 +1,21 @@
+id: RES-L-389
+kind: research-candidate
+mandate_id: RES-M-001
+name: AI-written Strudel attempt
+aliases: []
+type: other
+profile:
+  kind: song
+  title: AI-written Strudel attempt
+  author: eric@mastodon.eom.dev
+  url: https://mastodon.eom.dev/@eric/117532124123362577
+  date: '2026-10-30'
+  license: none stated
+  platform: mastodon
+  note: Someone shares an LLM-generated Strudel piece — relevant contrast to the project's no-LLM policy.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

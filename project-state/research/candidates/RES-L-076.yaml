@@ -1,0 +1,23 @@
+id: RES-L-076
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudelwall
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Strudelwall
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/strudelwall.js
+  date: '2024-03-05'
+  genre: electronic / experimental original (inferred)
+  license: none stated
+  is_cover: false
+  platform: eefano/strudel-songs-collection
+  note: guitar prototype @by eefano
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

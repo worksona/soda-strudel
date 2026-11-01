@@ -1,0 +1,23 @@
+id: RES-L-360
+kind: research-candidate
+mandate_id: RES-M-001
+name: Little Fluffy Clouds study
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Little Fluffy Clouds study
+  author: pikesley@mastodon.me.uk
+  url: https://mastodon.me.uk/@pikesley/117144987001695666
+  date: '2026-08-23'
+  genre: ambient house
+  license: none stated
+  platform: mastodon
+  note: Recreation/homage riffing on The Orb; part of a frequent series of shared sketches by this author (≈20 posts
+    Aug–Nov).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

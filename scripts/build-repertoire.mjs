@@ -25,7 +25,7 @@ const firstHttp = (...urls) => urls.find((u) => u && u.startsWith('http') && !ca
 const foundIn = (e) => (e.cited_in ?? []).map((c) => c.match(/https?:\/\/\S+/)?.[0]).find(Boolean) ?? null;
 
 const reuse = (r = '') =>
-  r.startsWith('adapt') ? 'adapt' : r.startsWith('link') ? 'link' : r.startsWith('ask') ? 'ask' : r.startsWith('usable') ? 'open' : r.startsWith('do not') ? 'no' : r.startsWith('check') ? 'check' : 'ask';
+  r.startsWith('adapt') ? 'adapt' : r.startsWith('link only') ? 'ref' : r.startsWith('link') ? 'link' : r.startsWith('ask') ? 'ask' : r.startsWith('usable') ? 'open' : r.startsWith('do not') ? 'no' : r.startsWith('check') ? 'check' : 'ask';
 
 const songs = cat.songs.map((s) => ({
   id: s.id,
@@ -64,6 +64,7 @@ const sounds = cat.sound_banks.map((b) => ({
   banks: b.bank_names?.slice(0, 12) ?? [],
   count: b.banks,
   note: b.rights_note ?? undefined,
+  load: b.reuse.startsWith('usable') ? b.samples_line : undefined,
   url: b.url,
 }));
 

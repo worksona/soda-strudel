@@ -1,0 +1,22 @@
+id: RES-L-368
+kind: research-candidate
+mandate_id: RES-M-001
+name: Teesside Synth Club – Strudel starter session
+aliases: []
+type: other
+profile:
+  kind: event
+  title: Teesside Synth Club – Strudel starter session
+  author: jtruk@mastodon.social
+  url: https://mastodon.social/@jtruk/117043397928870998
+  date: '2026-08-05'
+  level: beginner
+  license: none stated
+  platform: mastodon
+  note: New UK meetup whose first event is a Strudel 101 session.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

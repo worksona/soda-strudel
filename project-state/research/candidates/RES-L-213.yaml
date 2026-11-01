@@ -1,0 +1,22 @@
+id: RES-L-213
+kind: research-candidate
+mandate_id: RES-M-001
+name: Live coding Melodies with Absynth 6 & Strudel
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Live coding Melodies with Absynth 6 & Strudel
+  author: Groovin in G
+  url: https://www.youtube.com/watch?v=UuH4HS1f8hs
+  date: '2025-12-18'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: Driving an external soft-synth (Absynth 6) melodically from Strudel over MIDI.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

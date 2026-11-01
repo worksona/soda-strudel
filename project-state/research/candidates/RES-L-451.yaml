@@ -1,0 +1,21 @@
+id: RES-L-451
+kind: research-candidate
+mandate_id: RES-M-001
+name: Ike Saunders
+aliases:
+- ikesau
+type: person
+profile:
+  kind: person
+  role: teacher
+  links:
+  - https://ikesau.co/strudel/
+  - https://github.com/ikesau
+  license_stated: none stated
+  credit_note: Personal notes page with ~30 runnable snippets and sketches (footwork, jungle, ribbon tricks).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,23 @@
+id: RES-L-344
+kind: research-candidate
+mandate_id: RES-M-001
+name: Coding a HARDSTYLE kick in Strudel (from scratch)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Coding a HARDSTYLE kick in Strudel (from scratch)
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=0NakkXgHew4
+  date: '2026-10-28'
+  genre: hardstyle (inferred)
+  level: first steps
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: Coding a HARDSTYLE kick in Strudel (from scratch) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

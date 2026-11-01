@@ -1,0 +1,21 @@
+id: RES-L-453
+kind: research-candidate
+mandate_id: RES-M-001
+name: Will Thompson
+aliases:
+- (Threadbare / Endless Access)
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/endlessm/threadbare
+  - https://play.threadbare.game/
+  license_stated: CC-BY-SA-4.0 for first-party assets (REUSE/SPDX)
+  credit_note: 'Copyright line: ''The Threadbare Authors''; @by Will Thompson.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-120
+kind: research-candidate
+mandate_id: RES-M-001
+name: todepasta 1.5
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: todepasta 1.5
+  author: eddyflux
+  url: https://www.youtube.com/watch?v=gCwaVu1Mijg
+  date: '2025-01-21'
+  genre: unclassified
+  license: none stated
+  platform: showcase
+  note: Long eddyflux session; a further example from Strudel’s co-author.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

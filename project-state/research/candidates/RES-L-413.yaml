@@ -1,0 +1,21 @@
+id: RES-L-413
+kind: research-candidate
+mandate_id: RES-M-001
+name: from-scratch (session 2026-08-26)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: from-scratch (session 2026-08-26)
+  author: fcm
+  url: https://codeberg.org/fcm/my-strudel-repo/src/branch/main/sessions/2026-08-26_from-scratch.js
+  date: '2026-08-26'
+  genre: techno
+  license: CC-BY-SA-4.0 (repo LICENSE)
+  note: 132 BPM 909 from-scratch performance archive; repo is a personal pattern archive meant for copy-paste reuse.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

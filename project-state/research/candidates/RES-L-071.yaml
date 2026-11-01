@@ -1,0 +1,24 @@
+id: RES-L-071
+kind: research-candidate
+mandate_id: RES-M-001
+name: Shanghai (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Shanghai (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/shanghai.js
+  date: '2025-12-25'
+  genre: psychedelic rock (inferred)
+  license: none stated
+  original_artist: King Gizzard
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by King Gizzard; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

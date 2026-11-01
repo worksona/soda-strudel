@@ -1,0 +1,21 @@
+id: RES-L-405
+kind: research-candidate
+mandate_id: RES-M-001
+name: MAGWest – 'Let's code music with Strudel!' panel
+aliases: []
+type: other
+profile:
+  kind: event
+  title: MAGWest – 'Let's code music with Strudel!' panel
+  author: firahfabe.bsky.social
+  url: https://bsky.app/profile/firahfabe.bsky.social/post/3ms4heqrp7c22
+  date: '2026-08-02'
+  license: none stated
+  platform: bluesky
+  note: Convention panel + performance, Aug 14–16 2026.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

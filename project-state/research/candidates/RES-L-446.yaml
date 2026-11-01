@@ -1,0 +1,23 @@
+id: RES-L-446
+kind: research-candidate
+mandate_id: RES-M-001
+name: Viola He
+aliases:
+- sandpills / v10101a
+type: person
+profile:
+  kind: person
+  role: teacher
+  links:
+  - https://tidalcycles.org/blog/tidal_profile_violahe
+  - https://soundcloud.com/v10101a
+  - https://www.instagram.com/v10101a/
+  license_stated: none found
+  credit_note: Percussion-led algorithmic performer. Teaches Algorave++ at NYU Shanghai and co-taught Strudel at
+    ITP Camp 2025. The DJ_Dave 'Bitrot [v10101a Edit]' showcase video is hers.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

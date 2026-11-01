@@ -1,0 +1,22 @@
+id: RES-L-435
+kind: research-candidate
+mandate_id: RES-M-001
+name: hiphop strudel beat (jam element)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: hiphop strudel beat (jam element)
+  author: henkaku-center
+  url: https://github.com/henkaku-center/jam/blob/main/public/elements/elem_hiphop_strudel_beat.js
+  date: '2026-06-17'
+  genre: hip-hop / boom bap
+  license: none stated
+  note: 'Default beat built into a web jam app: a minimal kick/snare boom-bap groove. Thin; it is better treated
+    as a reference than as a piece.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

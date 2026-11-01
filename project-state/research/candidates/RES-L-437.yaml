@@ -1,0 +1,25 @@
+id: RES-L-437
+kind: research-candidate
+mandate_id: RES-M-001
+name: Alex McLean
+aliases:
+- yaxu
+type: person
+profile:
+  kind: person
+  role: maintainer
+  links:
+  - https://slab.org/
+  - https://codeberg.org/yaxu
+  - https://post.lurk.org/@yaxu
+  - https://www.youtube.com/@yaxu
+  - https://github.com/yaxu
+  license_stated: Workshop material in AGPL repos (patternclub/strudel, utcsheffield/makerclub-strudel)
+  credit_note: Creator of TidalCycles and co-creator of Strudel; runs Pattern Club and wrote the Carnatic-rhythms
+    and from-scratch workshops.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

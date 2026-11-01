@@ -1,0 +1,23 @@
+id: RES-L-355
+kind: research-candidate
+mandate_id: RES-M-001
+name: After a week of experimenting with strudel
+aliases: []
+type: other
+profile:
+  kind: song
+  title: After a week of experimenting with strudel
+  author: technoabu
+  url: https://uzu.lurk.org/t/after-a-week-of-experimenting-with-strudel/6194
+  date: '2026-08-16'
+  genre: techno
+  level: beginner
+  license: none stated
+  platform: forum
+  note: First piece in the author's learning diary; four-on-the-floor kit and constants-per-instrument layout.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

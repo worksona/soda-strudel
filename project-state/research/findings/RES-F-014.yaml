@@ -1,0 +1,30 @@
+id: RES-F-014
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-002
+answers:
+- Q2
+- Q5
+- Q6
+claim: The handle @switchangel belongs to an unrelated dormant 2010-11 channel; Switch Angel posts on “Switch Angel”
+  (UCmHz7DQbbkcY_UoWY8bBJLw) and earlier on AngelVision (@im_switch_angel).
+evidence:
+- excerpt: channel feed shows only 4 videos from 2010–2011
+  ref: https://www.youtube.com/@switchangel
+  retrieved_at: '2026-11-01'
+  source_date: '2026-11-01'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

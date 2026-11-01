@@ -1,0 +1,22 @@
+id: RES-L-079
+kind: research-candidate
+mandate_id: RES-M-001
+name: Endless Tarantella
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Endless Tarantella
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/tarantella.js
+  date: '2024-05-02'
+  genre: unknown
+  license: none stated
+  platform: eefano/strudel-songs-collection
+  note: Script by eefano; no song credit
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

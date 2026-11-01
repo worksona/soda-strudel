@@ -1,0 +1,21 @@
+id: RES-L-378
+kind: research-candidate
+mandate_id: RES-M-001
+name: Synth.is sounds + Strudel + Ableton Live
+aliases: []
+type: site
+profile:
+  kind: tool
+  title: Synth.is sounds + Strudel + Ableton Live
+  author: kromosynth@sigmoid.social
+  url: https://sigmoid.social/@kromosynth/117130601337375566
+  date: '2026-08-21'
+  license: none stated
+  platform: mastodon
+  note: Bridging a synth-sound live coding tool with Strudel into Ableton.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

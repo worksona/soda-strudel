@@ -1,0 +1,24 @@
+id: RES-L-017
+kind: research-candidate
+mandate_id: RES-M-001
+name: Bye Bye Spirit (Work In Progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Bye Bye Spirit (Work In Progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/byebyespirit.js
+  date: '2024-04-17'
+  genre: art rock / chamber pop (inferred)
+  license: none stated
+  original_artist: The Sea Nymphs
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by The Sea Nymphs; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

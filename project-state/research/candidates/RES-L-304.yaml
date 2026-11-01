@@ -1,0 +1,23 @@
+id: RES-L-304
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #40: How to Use Filters | lpf / hpf / bpf + Sine Modulation'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #40: How to Use Filters | lpf / hpf / bpf + Sine Modulation'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=c-g0dK_aLtk
+  date: '2026-04-25'
+  level: intermediate
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: Strudel Live Coding  How to Use Filters | lpf / hpf / bpf + Sine Modulation — explained step
+    by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

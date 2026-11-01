@@ -1,0 +1,22 @@
+id: RES-L-074
+kind: research-candidate
+mandate_id: RES-M-001
+name: Stranger Things (derived from file name)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Stranger Things (derived from file name)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/strangerthings.js
+  date: '2024-08-07'
+  genre: unknown
+  license: none stated
+  platform: eefano/strudel-songs-collection
+  note: No header comment; title derived from file name
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

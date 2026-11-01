@@ -1,0 +1,21 @@
+id: RES-L-359
+kind: research-candidate
+mandate_id: RES-M-001
+name: Infatuated with Strudel (video + piece)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Infatuated with Strudel (video + piece)
+  author: pikesley@mastodon.me.uk
+  url: https://mastodon.me.uk/@pikesley/117020776016854082
+  date: '2026-08-01'
+  license: none stated
+  platform: mastodon
+  note: Shares a YouTube video and a modal piece.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

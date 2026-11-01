@@ -1,0 +1,23 @@
+id: RES-L-314
+kind: research-candidate
+mandate_id: RES-M-001
+name: Coding a Dubstep WOBBLE in Strudel (from scratch)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Coding a Dubstep WOBBLE in Strudel (from scratch)
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=hBARLRv3UMk
+  date: '2026-10-08'
+  genre: dubstep (inferred)
+  level: first steps
+  license: none stated
+  platform: search
+  note: 'Guided build: Coding a Dubstep WOBBLE in Strudel (from scratch) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

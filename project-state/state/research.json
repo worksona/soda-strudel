@@ -1,1 +1,1 @@
-{"counters": {"mandate": 1, "step": 0, "finding": 0, "challenge": 0, "candidate": 0, "change": 0}, "walk": {"active": null, "last_run": null}, "last_brief": null, "last_sweep": null}
+{"counters": {"mandate": 1, "step": 5, "finding": 40, "challenge": 0, "candidate": 458, "change": 0}, "walk": {"active": null, "last_run": null}, "last_brief": null, "last_sweep": null, "last_modified": "2026-11-01T20:00:00Z"}

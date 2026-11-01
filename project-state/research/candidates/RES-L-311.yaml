@@ -1,0 +1,23 @@
+id: RES-L-311
+kind: research-candidate
+mandate_id: RES-M-001
+name: Coding Synthwave in Strudel (from scratch)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Coding Synthwave in Strudel (from scratch)
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=o1gpm6yD_WE
+  date: '2026-10-05'
+  genre: synthwave (inferred)
+  level: first steps
+  license: none stated
+  platform: search
+  note: 'Guided build: Coding Synthwave in Strudel (from scratch) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-110
+kind: research-candidate
+mandate_id: RES-M-001
+name: CCC @ solstice stream 2023
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: CCC @ solstice stream 2023
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=3uLTIDQa_Lc&t=24s
+  date: '2023-12-25'
+  genre: electronic (unclassified) (inferred)
+  license: none stated
+  platform: showcase
+  note: Short algorave-stream set; another example of a 15-minute live structure.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

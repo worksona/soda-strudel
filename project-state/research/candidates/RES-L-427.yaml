@@ -1,0 +1,22 @@
+id: RES-L-427
+kind: research-candidate
+mandate_id: RES-M-001
+name: Guarded Stones
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Guarded Stones
+  author: Will Thompson (The Threadbare Authors)
+  url: https://github.com/endlessm/threadbare/blob/main/scenes/quests/lore_quests/song_sanctuary_2/1_stealth_sequence_combo/music/GuardedStones.strudel.js
+  date: '2026-07-30'
+  genre: world percussion / game score (70 BPM)
+  license: CC-BY-SA-4.0 (SPDX header)
+  note: Stealth-level cue built from clave, bongo, finger cymbal and clap; the rendered OGG stems sit alongside
+    the code.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

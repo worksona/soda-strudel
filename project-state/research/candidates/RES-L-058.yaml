@@ -1,0 +1,24 @@
+id: RES-L-058
+kind: research-candidate
+mandate_id: RES-M-001
+name: O'Malley, Former Underdog (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: O'Malley, Former Underdog (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/omalley.js
+  date: '2024-03-19'
+  genre: experimental indie rock (inferred)
+  license: none stated
+  original_artist: Deerhoof
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Deerhoof; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

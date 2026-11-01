@@ -1,0 +1,45 @@
+id: RES-S-002
+kind: research-step
+mandate_id: RES-M-001
+methodology_step: 2
+mode: query
+description: Harvest the strudel.cc Showcase and the Strudel YouTube channels (Switch Angel, typedbeats, Wave Coder,
+  Iganu, MariaAreadne, Groovin in G, Eulerroom, Creative Code Art).
+status: complete
+started_at: '2026-11-01T20:00:00Z'
+completed_at: '2026-11-01T20:00:00Z'
+inputs:
+  refs:
+  - documents/inbox/harvest-2026-11-01-showcase-youtube.json
+  queries: []
+  urls: []
+findings_produced:
+- RES-F-009
+- RES-F-010
+- RES-F-011
+- RES-F-012
+- RES-F-013
+- RES-F-014
+summary: 332 items read, 253 new candidates, 6 findings, 11 new sources to watch.
+open_followups:
+- 'Index/link only — no pattern code copied or summarised. Dates are YouTube upload dates from each watch page (uploadDate/publishDate);
+  showcase titles/authors cross-checked with oEmbed. "from": showcase = listed in Showcase.jsx; channel-rss = present
+  in the channel RSS (latest 15); search = found via the channel’s /videos, /shorts, /streams listing pages or YouTube
+  search (the schema has no channel-page value). Every item''s watch page was fetched. Strudel filter: title/description/tags
+  mention Strudel; for Switch Angel/AngelVision/Maria Areadne, live-coding videos from mid-2023 that do not name
+  the tool are kept with strudel_evidence "inferred" (she performs in Strudel) — drop them if strictness matters.
+  Switch Angel music videos, album uploads and auto-generated "Switch Angel - Topic" audio were excluded. Genres
+  are inferred from titles/descriptions unless noted; kind/level are heuristic from titles. Extra fields: duration,
+  strudel_evidence, showcase_title_on_site/youtube_title. Channel resolution: typedbeats is @typedbeats-daily (@typedbeats
+  404s); Wave Coder is @WaveCodr (@WaveCoder/@wavecoder resolve to an empty "wavecode" channel); Iganu music is
+  UCY7tXqRgSZS0eemuhMUT6LA (@IganuMusic resolves to an empty different channel); Creative Code Art is @Creativecodeartcommunity
+  (@CreativeCodeArt resolves to "Algorist"). Eulerroom coverage is partial: the channel has thousands of uploads;
+  Strudel sets were found via channel search "strudel", RSS and YouTube search, so older solstice/TOPLAP sets that
+  only name Strudel deep in descriptions may be missing. Groovin in G: all ~240 listed uploads checked; only 4 mention
+  Strudel. Creative Code Art: ~55 uploads checked; 4 Strudel (2 are the same CNDSD set, full + short). eddyflux
+  channel was added as a source because 5 Showcase items live there (the Chalmers clip is included from the channel
+  though the Showcase comments it out). YouTube rate-limited (429) briefly mid-run; all items were re-fetched successfully.
+  Per-channel counts (excluding showcase rows): Eulerroom 81, Switch Angel 65, Wave Coder 45, typedbeats 41, Iganu
+  music 30, AngelVision 23, Maria Areadne 9, Creative Code Art 4, Groovin in G 4, eddyflux 1'
+run_id: null
+last_modified: '2026-11-01T20:00:00Z'

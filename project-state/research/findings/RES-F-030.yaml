@@ -1,0 +1,28 @@
+id: RES-F-030
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-005
+answers:
+- Q3
+- Q5
+claim: fjpolo anvil/01.wav is CC BY-NC 3.0 on Freesound, despite repo MIT
+evidence:
+- excerpt: Attribution NonCommercial 3.0
+  ref: https://freesound.org/people/arnaud%20coutancier/sounds/388059/
+  retrieved_at: '2026-11-01'
+  source_date: '2026-11-01'
+source_tier: secondary
+confidence: medium
+epistemic_status: reported
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

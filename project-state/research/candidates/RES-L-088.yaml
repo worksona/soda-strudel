@@ -1,0 +1,24 @@
+id: RES-L-088
+kind: research-candidate
+mandate_id: RES-M-001
+name: Warsaw (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Warsaw (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/warsaw.js
+  date: '2026-01-03'
+  genre: indie / lo-fi rock (inferred)
+  license: none stated
+  original_artist: pilotredsun
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by pilotredsun; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

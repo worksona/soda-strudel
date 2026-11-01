@@ -1,0 +1,21 @@
+id: RES-L-423
+kind: research-candidate
+mandate_id: RES-M-001
+name: ambient 251003
+aliases: []
+type: other
+profile:
+  kind: song
+  title: ambient 251003
+  author: ed_crub
+  url: https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/ambient%20251003.txt
+  date: '2025-10-03'
+  genre: ambient
+  license: none stated
+  note: One of four dated ambient pieces in the repo (250129, 250721, 250725, 251003).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

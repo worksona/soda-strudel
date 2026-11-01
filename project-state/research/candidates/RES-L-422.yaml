@@ -1,0 +1,21 @@
+id: RES-L-422
+kind: research-candidate
+mandate_id: RES-M-001
+name: beatopia dub 250721
+aliases: []
+type: other
+profile:
+  kind: song
+  title: beatopia dub 250721
+  author: ed_crub
+  url: https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/beatopia%20dub%20250721.txt
+  date: '2025-07-21'
+  genre: dub
+  license: none stated
+  note: 80 BPM dub piece on the LinnDrum bank. The only human-made dub original found.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

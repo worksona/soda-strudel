@@ -1,0 +1,24 @@
+id: RES-L-032
+kind: research-candidate
+mandate_id: RES-M-001
+name: Ghosts'n'Goblins C64 (work in regress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Ghosts'n'Goblins C64 (work in regress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/ghostsngoblinsc64.js
+  date: '2026-08-17'
+  genre: chiptune / C64 game music (inferred)
+  license: none stated
+  original_artist: Mark Cooksey
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Mark Cooksey; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

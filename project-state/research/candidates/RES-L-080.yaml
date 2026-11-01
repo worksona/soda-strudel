@@ -1,0 +1,24 @@
+id: RES-L-080
+kind: research-candidate
+mandate_id: RES-M-001
+name: Three Friends (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Three Friends (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/threefriends.js
+  date: '2026-02-12'
+  genre: prog rock (inferred)
+  license: none stated
+  original_artist: Gentle Giant
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: 'song @by Gentle Giant; total length: 83; marked work in progress/wip'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

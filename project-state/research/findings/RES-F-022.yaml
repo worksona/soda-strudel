@@ -1,0 +1,30 @@
+id: RES-F-022
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-004
+answers:
+- Q2
+- Q4
+- Q6
+claim: Threadbare's first-party assets, including its Strudel scores, are CC BY-SA 4.0 and labelled per file with
+  REUSE.
+evidence:
+- excerpt: Threadbare's original assets are covered by Creative Commons Attribution-ShareAlike 4.0
+  ref: https://github.com/endlessm/threadbare
+  retrieved_at: '2026-11-01'
+  source_date: '2026-07-30'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

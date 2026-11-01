@@ -1,0 +1,22 @@
+id: RES-L-374
+kind: research-candidate
+mandate_id: RES-M-001
+name: Creating AABA melody from Euclidean rhythms
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Creating AABA melody from Euclidean rhythms
+  author: bornach@makertube.net
+  url: https://makertube.net/w/kCQbLBwm7w7efY4jGE25iT
+  date: '2026-10-17'
+  level: intermediate
+  license: none stated
+  platform: mastodon
+  note: Tutorial-style video on building AABA leads from Euclidean rhythms.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

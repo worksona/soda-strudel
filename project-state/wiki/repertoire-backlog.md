@@ -17,8 +17,8 @@ What is queued for the repertoire, by lane. Approve or dismiss on the Queue scre
 
 ## Document
 
-- P1 **[document] Wiki: technique pages linked to songs** – `2026-11-01-backlog-document-16`
-- P2 **[document] Credits and attribution page** – `2026-11-01-backlog-document-17`
+- ✓ **[document] Wiki: technique pages linked to songs** – done 2026-11-01: 7 technique pages
+- ✓ **[document] Credits and attribution page** – done 2026-11-01: Credits page
 -  **Catalogue review – learning resources and tools (17)** – `2026-11-01-catalogue-resources`
 -  **Catalogue review – songs: Ambient, generative and experimental (4)** – `2026-11-01-catalogue-songs-ambient`
 -  **Catalogue review – songs: Bass, breaks and jungle (5)** – `2026-11-01-catalogue-songs-bass`
@@ -32,29 +32,34 @@ What is queued for the repertoire, by lane. Approve or dismiss on the Queue scre
 
 - ✓ **[research] Lock RES-M-001** – locked and standing (weekly) 2026-11-01
 - P1 **[research] Inspect the 11 Bakery-share tracks** – `2026-11-01-backlog-research-02`
-- P1 **[research] Fill genre gaps with original, licensed pieces** – `2026-11-01-backlog-research-03`
-- P2 **[research] Sound bank rights check (17 ask-owner, 6 do-not-ship)** – `2026-11-01-backlog-research-04`
+- ✓ **[research] Fill genre gaps with original, licensed pieces** – done 2026-11-01: 24 originals found
+- ✓ **[research] Sound bank rights check (17 ask-owner, 6 do-not-ship)** – done 2026-11-01: 30 banks checked
 - P2 **[research] Verify the five UNVERIFIED sources and the Mirakl article** – `2026-11-01-backlog-research-05` – a person decides
-- P3 **[research] Who are the Strudel performers and teachers to follow?** – `2026-11-01-backlog-research-06`
+- ✓ **[research] Who are the Strudel performers and teachers to follow?** – done 2026-11-01: 24 people listed
 
 ## Harvest
 
-- P1 **[harvest] Harvest eefano/strudel-songs-collection in full** – `2026-11-01-backlog-harvest-07`
-- P1 **[harvest] Harvest maria-live-codes/songs** – `2026-11-01-backlog-harvest-08`
-- P1 **[harvest] Harvest the strudel.cc Showcase** – `2026-11-01-backlog-harvest-09`
-- P2 **[harvest] Harvest the uzu.lurk.org Strudel category (last 6 months)** – `2026-11-01-backlog-harvest-10`
-- P2 **[harvest] Harvest full YouTube channels** – `2026-11-01-backlog-harvest-11`
-- P2 **[harvest] Harvest Mastodon and Bluesky #strudel (3 months)** – `2026-11-01-backlog-harvest-12`
-- P3 **[harvest] Watch awesome-strudel for new entries** – `2026-11-01-backlog-harvest-13`
+- ✓ **[harvest] Harvest eefano/strudel-songs-collection in full** – done 2026-11-01: eefano harvested
+- ✓ **[harvest] Harvest maria-live-codes/songs** – done 2026-11-01: maria harvested
+- ✓ **[harvest] Harvest the strudel.cc Showcase** – done 2026-11-01: Showcase harvested
+- ✓ **[harvest] Harvest the uzu.lurk.org Strudel category (last 6 months)** – done 2026-11-01: forum harvested
+- ✓ **[harvest] Harvest full YouTube channels** – done 2026-11-01: YouTube harvested
+- ✓ **[harvest] Harvest Mastodon and Bluesky #strudel (3 months)** – done 2026-11-01: Mastodon/Bluesky harvested
+- ✓ **[harvest] Watch awesome-strudel for new entries** – done 2026-11-01: commits feed in the source map
 
 ## Work
 
 - ✓ **[work] Decide the reuse policy** – done 2026-11-01, see [[repertoire-reuse-and-citation]]
-- P2 **[work] Draft permission requests to authors** – `2026-11-01-backlog-work-15`
+- ✓ **[work] Draft permission requests to authors** – done 2026-11-01: 6 drafts queued
 
 ## Build
 
-- P1 **[build] Learn › Repertoire in the app** – `2026-11-01-backlog-build-18`
+- ✓ **[build] Learn › Repertoire in the app** – done 2026-11-01: Repertoire tab built
 - P2 **[build] Adapt the 8 CC BY-NC-SA stock tunes as soda examples** – `2026-11-01-backlog-build-19`
-- P2 **[build] Test the open-licensed sound banks in soda.strudel** – `2026-11-01-backlog-build-20`
-- P3 **[build] Example attribution in the app** – `2026-11-01-backlog-build-21`
+- ✓ **[build] Test the open-licensed sound banks in soda.strudel** – done 2026-11-01: 3 banks load in soda
+- ✓ **[build] Example attribution in the app** – done 2026-11-01: credits on examples
+
+## Added 2026-11-01
+- P2 **[build] Listen to the 3 cleared sound banks, then add them to soda sounds** – `2026-11-01-backlog-build-22` – a person listens
+- P1 **[work] Decide: does soda.strudel keep loading Dirt-Samples by default?** – `2026-11-01-backlog-work-23` – a person decides
+- P2 **Permission requests (6 drafts)** – `2026-11-01-permission-*` – a person sends them

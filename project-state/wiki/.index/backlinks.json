@@ -49,6 +49,18 @@
       "inverse": "mentioned-by"
     },
     {
+      "src": "repertoire-credits",
+      "src_title": "Credits",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-credits",
+      "src_title": "Credits",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
       "src": "repertoire-dance",
       "src_title": "Songs: Dance and electronic",
       "type": "child-of",
@@ -69,6 +81,18 @@
     {
       "src": "repertoire-game",
       "src_title": "Songs: Video game and chiptune",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire-harvest-2026-11-01",
+      "src_title": "Harvest 2026-11-01",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "repertoire-harvest-2026-11-01",
+      "src_title": "Harvest 2026-11-01",
       "type": "mentions",
       "inverse": "mentioned-by"
     },
@@ -141,6 +165,48 @@
     {
       "src": "repertoire-techniques",
       "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-arrangement",
+      "src_title": "Arrangement: building a song from sections",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-breaks-and-chopping",
+      "src_title": "Breaks: chopping, slicing and re-sequencing",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chiptune-voices",
+      "src_title": "Chiptune voices: square, triangle, pulse and noise",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-fm-synthesis",
+      "src_title": "FM synthesis",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-multi-control-mini-notation",
+      "src_title": "Several controls in one pattern",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-tempo-changes",
+      "src_title": "Tempo changes and time feel",
       "type": "mentions",
       "inverse": "mentioned-by"
     }
@@ -171,6 +237,12 @@
       "inverse": "mentioned-by"
     },
     {
+      "src": "repertoire-credits",
+      "src_title": "Credits",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
       "src": "repertoire-dance",
       "src_title": "Songs: Dance and electronic",
       "type": "mentions",
@@ -195,8 +267,56 @@
       "inverse": "mentioned-by"
     },
     {
+      "src": "repertoire-sound-banks",
+      "src_title": "Sound banks",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
       "src": "repertoire",
       "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-arrangement",
+      "src_title": "Arrangement: building a song from sections",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-breaks-and-chopping",
+      "src_title": "Breaks: chopping, slicing and re-sequencing",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chiptune-voices",
+      "src_title": "Chiptune voices: square, triangle, pulse and noise",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-fm-synthesis",
+      "src_title": "FM synthesis",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-multi-control-mini-notation",
+      "src_title": "Several controls in one pattern",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-tempo-changes",
+      "src_title": "Tempo changes and time feel",
       "type": "mentions",
       "inverse": "mentioned-by"
     }
@@ -243,9 +363,107 @@
       "src_title": "Repertoire",
       "type": "mentions",
       "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-arrangement",
+      "src_title": "Arrangement: building a song from sections",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "technique-arrangement",
+      "src_title": "Arrangement: building a song from sections",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-breaks-and-chopping",
+      "src_title": "Breaks: chopping, slicing and re-sequencing",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "technique-breaks-and-chopping",
+      "src_title": "Breaks: chopping, slicing and re-sequencing",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chiptune-voices",
+      "src_title": "Chiptune voices: square, triangle, pulse and noise",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "technique-chiptune-voices",
+      "src_title": "Chiptune voices: square, triangle, pulse and noise",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-fm-synthesis",
+      "src_title": "FM synthesis",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "technique-fm-synthesis",
+      "src_title": "FM synthesis",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-multi-control-mini-notation",
+      "src_title": "Several controls in one pattern",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "technique-multi-control-mini-notation",
+      "src_title": "Several controls in one pattern",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-tempo-changes",
+      "src_title": "Tempo changes and time feel",
+      "type": "child-of",
+      "inverse": "parent-of"
+    },
+    {
+      "src": "technique-tempo-changes",
+      "src_title": "Tempo changes and time feel",
+      "type": "mentions",
+      "inverse": "mentioned-by"
     }
   ],
-  "repertoire-resources": [
+  "repertoire-sound-banks": [
+    {
+      "src": "repertoire-credits",
+      "src_title": "Credits",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-credits": [
     {
       "src": "repertoire-sound-banks",
       "src_title": "Sound banks",
@@ -255,6 +473,62 @@
     {
       "src": "repertoire",
       "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "technique-arrangement": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "technique-chiptune-voices": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "technique-fm-synthesis": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "technique-breaks-and-chopping": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "technique-chords-and-voicings": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "technique-multi-control-mini-notation": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "technique-tempo-changes": [
+    {
+      "src": "repertoire-techniques",
+      "src_title": "Techniques index",
       "type": "mentions",
       "inverse": "mentioned-by"
     }
@@ -271,6 +545,18 @@
       "src_title": "Repertoire",
       "type": "mentions",
       "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-arrangement",
+      "src_title": "Arrangement: building a song from sections",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "mentions",
+      "inverse": "mentioned-by"
     }
   ],
   "repertoire-game": [
@@ -283,6 +569,42 @@
     {
       "src": "repertoire",
       "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-arrangement",
+      "src_title": "Arrangement: building a song from sections",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chiptune-voices",
+      "src_title": "Chiptune voices: square, triangle, pulse and noise",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-fm-synthesis",
+      "src_title": "FM synthesis",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-multi-control-mini-notation",
+      "src_title": "Several controls in one pattern",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-tempo-changes",
+      "src_title": "Tempo changes and time feel",
       "type": "mentions",
       "inverse": "mentioned-by"
     }
@@ -299,6 +621,18 @@
       "src_title": "Repertoire",
       "type": "mentions",
       "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-tempo-changes",
+      "src_title": "Tempo changes and time feel",
+      "type": "mentions",
+      "inverse": "mentioned-by"
     }
   ],
   "repertoire-pop": [
@@ -313,6 +647,36 @@
       "src_title": "Repertoire",
       "type": "mentions",
       "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-arrangement",
+      "src_title": "Arrangement: building a song from sections",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chiptune-voices",
+      "src_title": "Chiptune voices: square, triangle, pulse and noise",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-fm-synthesis",
+      "src_title": "FM synthesis",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-tempo-changes",
+      "src_title": "Tempo changes and time feel",
+      "type": "mentions",
+      "inverse": "mentioned-by"
     }
   ],
   "repertoire-bass": [
@@ -325,6 +689,18 @@
     {
       "src": "repertoire",
       "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-breaks-and-chopping",
+      "src_title": "Breaks: chopping, slicing and re-sequencing",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    },
+    {
+      "src": "technique-chords-and-voicings",
+      "src_title": "Chords, scales and voicings",
       "type": "mentions",
       "inverse": "mentioned-by"
     }
@@ -343,7 +719,15 @@
       "inverse": "mentioned-by"
     }
   ],
-  "repertoire-sound-banks": [
+  "repertoire-harvest-2026-11-01": [
+    {
+      "src": "repertoire",
+      "src_title": "Repertoire",
+      "type": "mentions",
+      "inverse": "mentioned-by"
+    }
+  ],
+  "repertoire-resources": [
     {
       "src": "repertoire",
       "src_title": "Repertoire",

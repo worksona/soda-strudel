@@ -1,0 +1,24 @@
+id: RES-L-449
+kind: research-candidate
+mandate_id: RES-M-001
+name: pastagang (collective)
+aliases:
+- pastagang
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://pastagang.cc
+  - https://codeberg.org/pastagang
+  - https://www.youtube.com/@pastaganglive
+  - https://pastagang.bandcamp.com
+  license_stated: 'Code: informal ''do it''. Bandcamp: mixed (some albums All Rights Reserved, at least one track
+    CC BY-SA)'
+  credit_note: Open collective that anyone can join; patterns are tagged '@by pastagang'.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

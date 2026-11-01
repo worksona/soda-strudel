@@ -1,0 +1,22 @@
+id: RES-L-100
+kind: research-candidate
+mandate_id: RES-M-001
+name: froos @ Solstice Night Stream December 2022
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: froos @ Solstice Night Stream December 2022
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=P1DDsOvcyco&t=19s
+  date: '2022-12-22'
+  genre: electronic / beats (inferred)
+  license: none stated
+  platform: showcase
+  note: Early solstice-stream set by Strudel’s creator; a look at the tool’s own author performing.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

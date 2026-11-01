@@ -1,0 +1,23 @@
+id: RES-L-043
+kind: research-candidate
+mandate_id: RES-M-001
+name: Nudel Improv 1 (derived from file name)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Nudel Improv 1 (derived from file name)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/jamsessions/nudelimprov1.js
+  date: '2026-05-31'
+  genre: electronic / experimental original (inferred)
+  license: none stated
+  is_cover: false
+  platform: eefano/strudel-songs-collection
+  note: Jam session folder; no header comment; title derived from file name
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

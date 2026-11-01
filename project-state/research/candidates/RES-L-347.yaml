@@ -1,0 +1,23 @@
+id: RES-L-347
+kind: research-candidate
+mandate_id: RES-M-001
+name: A HALLOWEEN waltz in code — Danse Macabre vibes (Strudel)
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: A HALLOWEEN waltz in code — Danse Macabre vibes (Strudel)
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=PgDN7dQuZ4Q
+  date: '2026-10-31'
+  genre: classical rework (inferred)
+  license: none stated
+  platform: channel-rss
+  note: Short performance in classical rework — hear what a finished Strudel piece in this style sounds like and
+    how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

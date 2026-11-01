@@ -1,0 +1,28 @@
+id: RES-F-035
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-005
+answers:
+- Q3
+- Q5
+claim: Polifonia bells documented against the Italian heritage catalogue
+evidence:
+- excerpt: concerto di 12 campane in RE3 maggiore
+  ref: https://github.com/fstiffo/polifonia-samples/blob/master/italy/documentation.txt
+  retrieved_at: '2026-11-01'
+  source_date: '2024-05-01'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

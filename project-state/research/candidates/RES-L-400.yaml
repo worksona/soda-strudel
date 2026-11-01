@@ -1,0 +1,22 @@
+id: RES-L-400
+kind: research-candidate
+mandate_id: RES-M-001
+name: A day teaching myself Strudel (track)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: A day teaching myself Strudel (track)
+  author: santi.codes
+  url: https://bsky.app/profile/santi.codes/post/3mtdjgg4t522b
+  date: '2026-08-18'
+  level: beginner
+  license: none stated
+  platform: bluesky
+  note: Result of first day learning; hosted on plyr.fm.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

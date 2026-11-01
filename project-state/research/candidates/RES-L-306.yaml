@@ -1,0 +1,22 @@
+id: RES-L-306
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #42: Bring Patterns to Life with Probability | "?" / "|" / degradeBy / struct'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #42: Bring Patterns to Life with Probability | "?" / "|" / degradeBy / struct'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=EclM1SHxASQ
+  date: '2026-05-06'
+  level: performer
+  license: none stated
+  platform: channel-rss
+  note: Using randomness operators (degrade, "?", "|") to make patterns feel alive.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

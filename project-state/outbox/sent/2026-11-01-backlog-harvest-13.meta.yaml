@@ -1,0 +1,14 @@
+id: 2026-11-01-backlog-harvest-13
+kind: backlog
+title: '[harvest] Watch awesome-strudel for new entries'
+produced_by: research-ingest
+produced_at: '2026-11-01T17:00:00Z'
+status: sent
+surface: none
+action_required: Approve to schedule, or dismiss with a reason.
+artifact: 2026-11-01-backlog-harvest-13.md
+lane: harvest
+priority: P3
+owner: claude
+mandate: RES-M-001
+dismiss_reason: awesome-strudel commits feed added to the source map (§5); last 10 commits recorded in RES-S-003

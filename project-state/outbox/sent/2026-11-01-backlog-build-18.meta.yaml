@@ -1,0 +1,14 @@
+id: 2026-11-01-backlog-build-18
+kind: backlog
+title: '[build] Learn › Repertoire in the app'
+produced_by: research-ingest
+produced_at: '2026-11-01T17:00:00Z'
+status: sent
+surface: none
+action_required: Approve to schedule, or dismiss with a reason.
+artifact: 2026-11-01-backlog-build-18.md
+lane: build
+priority: P1
+owner: claude
+mandate: RES-M-001
+dismiss_reason: 'Built: Examples › Repertoire tab (commit 942538a), data from pnpm repertoire; not deployed yet'

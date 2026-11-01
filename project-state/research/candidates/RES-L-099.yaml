@@ -1,0 +1,22 @@
+id: RES-L-099
+kind: research-candidate
+mandate_id: RES-M-001
+name: froos @ Algorave 10th Birthday stream
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: froos @ Algorave 10th Birthday stream
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=IcMSocdKwvw
+  date: '2022-03-23'
+  genre: electronic (unclassified) (inferred)
+  license: none stated
+  platform: showcase
+  note: Creator’s first public Strudel performance (2022) — historical view of the early REPL.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

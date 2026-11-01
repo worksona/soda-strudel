@@ -1,0 +1,23 @@
+id: RES-L-259
+kind: research-candidate
+mandate_id: RES-M-001
+name: Controlling my SH101 with code  = pummeling acid CYBERFEM
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Controlling my SH101 with code  = pummeling acid CYBERFEM
+  author: Switch Angel
+  url: https://www.youtube.com/watch?v=qKZXQGCLRJY
+  date: '2025-09-11'
+  genre: acid techno (inferred)
+  level: performer
+  license: none stated
+  platform: search
+  note: Sequencing a hardware Roland SH-101 from code for acid sounds.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

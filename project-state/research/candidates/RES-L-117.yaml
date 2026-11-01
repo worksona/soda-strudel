@@ -1,0 +1,22 @@
+id: RES-L-117
+kind: research-candidate
+mandate_id: RES-M-001
+name: boggo - Live Coding Metal Djents
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: boggo - Live Coding Metal Djents
+  author: boggo
+  url: https://www.youtube.com/watch?v=n0rhn9-PRwE
+  date: '2023-04-30'
+  genre: metal / djent (inferred)
+  license: none stated
+  platform: showcase
+  note: Shows Strudel sequencing a guitar-like synth over MIDI to make djent — proof the tool reaches beyond EDM.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

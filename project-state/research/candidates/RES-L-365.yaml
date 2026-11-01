@@ -1,0 +1,22 @@
+id: RES-L-365
+kind: research-candidate
+mandate_id: RES-M-001
+name: Pointer to Switch Angel
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Pointer to Switch Angel
+  author: simonzerafa@infosec.exchange
+  url: https://infosec.exchange/@simonzerafa/117030611290390101
+  date: '2026-08-03'
+  genre: trance/electronic
+  license: none stated
+  platform: mastodon
+  note: Recommends Switch Angel's annotated live Strudel performances.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

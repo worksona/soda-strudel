@@ -1,0 +1,25 @@
+id: RES-L-438
+kind: research-candidate
+mandate_id: RES-M-001
+name: Switch Angel (Jade Rose)
+aliases:
+- switchangel / _switch_angel
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/switchangel
+  - https://www.youtube.com/@switchangel
+  - https://www.instagram.com/_switch_angel/
+  - https://webexpo.net/blog/from-luthier-to-live-coder-how-switch-angel-is-refactoring-music/
+  license_stated: Sample packs switchangel/pad and switchangel/breaks are Unlicense (public domain); strudel-scripts
+    has no licence
+  credit_note: WebExpo (Feb 2026) names her Jade Rose and calls her a Strudel maintainer. Her pads and prebake script
+    are widely reused (ikesau, kahlys, ipkstef).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-445
+kind: research-candidate
+mandate_id: RES-M-001
+name: Dan Gorelick
+aliases:
+- dan.dog
+type: person
+profile:
+  kind: person
+  role: teacher
+  links:
+  - https://www.dangorelick.com/
+  - https://iclc.toplap.org/2023/catalogue/person/gorelick-dan.html
+  license_stated: none found
+  credit_note: Co-wrote a Strudel workshop curriculum with Viola He (taught at NYC Resistor and ITP Camp); co-founded
+    Club Code; organizes LiveCode.NYC.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

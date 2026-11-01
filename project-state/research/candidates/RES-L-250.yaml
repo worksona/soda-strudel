@@ -1,0 +1,23 @@
+id: RES-L-250
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'live coding INTRO by The XX | Strudel Tut #algorave #livecoding #coding #strudel #electronicmusic'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'live coding INTRO by The XX | Strudel Tut #algorave #livecoding #coding #strudel #electronicmusic'
+  author: Maria Areadne
+  url: https://www.youtube.com/watch?v=GKuR39oSo3I
+  date: '2026-07-29'
+  genre: pop / cover (inferred)
+  level: intermediate
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: live coding INTRO by The XX | Strudel Tut — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

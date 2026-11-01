@@ -1,0 +1,22 @@
+id: RES-L-342
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'How I make a BORING melody sound good — 6 edits (Strudel) #livecoding #strudel'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'How I make a BORING melody sound good — 6 edits (Strudel) #livecoding #strudel'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=1phF0UGYaN0
+  date: '2026-10-26'
+  level: intermediate
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: How I make a BORING melody sound good — 6 edits (Strudel) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

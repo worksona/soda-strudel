@@ -1,0 +1,21 @@
+id: RES-L-386
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudel adopts no-LLM policy (boost)
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Strudel adopts no-LLM policy (boost)
+  author: mayor@banjo.town
+  url: https://banjo.town/@mayor/117504093380294665
+  date: '2026-10-25'
+  license: none stated
+  platform: mastodon
+  note: Fediverse reaction to the new POLICY.md.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

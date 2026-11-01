@@ -1,0 +1,29 @@
+id: RES-F-026
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-004
+answers:
+- Q2
+- Q4
+- Q6
+claim: fcm/my-strudel-repo licenses all patterns CC BY-SA 4.0 and says they are meant to be copied and played.
+evidence:
+- excerpt: Copy, paste, play.
+  ref: https://codeberg.org/fcm/my-strudel-repo
+  retrieved_at: '2026-11-01'
+  source_date: '2026-09-08'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

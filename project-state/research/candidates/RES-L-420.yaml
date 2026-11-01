@@ -1,0 +1,22 @@
+id: RES-L-420
+kind: research-candidate
+mandate_id: RES-M-001
+name: footwork
+aliases: []
+type: other
+profile:
+  kind: song
+  title: footwork
+  author: Ike Saunders (ikesau)
+  url: https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/footwork.js
+  date: '2026-07-06'
+  genre: footwork / juke (160 BPM)
+  license: none stated
+  note: Short 160 BPM footwork sketch from the gallery on ikesau.co/strudel, using Switch Angel's pad samples. The
+    only human-made footwork piece found.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

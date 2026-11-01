@@ -1,0 +1,24 @@
+id: RES-L-021
+kind: research-candidate
+mandate_id: RES-M-001
+name: The Sicilian Clan (work In Progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: The Sicilian Clan (work In Progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/clandeisiciliani.js
+  date: '2026-07-14'
+  genre: film score (inferred)
+  license: none stated
+  original_artist: Ennio Morricone
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Ennio Morricone; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

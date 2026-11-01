@@ -1,0 +1,24 @@
+id: RES-L-049
+kind: research-candidate
+mandate_id: RES-M-001
+name: Love Goes On (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Love Goes On (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/lovegoeson.js
+  date: '2024-05-31'
+  genre: indie pop (inferred)
+  license: none stated
+  original_artist: The Go-Betweens
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by The Go-Betweens; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-095
+kind: research-candidate
+mandate_id: RES-M-001
+name: yaxu & olivia - Algorithmic Pattern Live Stream
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: yaxu & olivia - Algorithmic Pattern Live Stream
+  author: Algorithmic Pattern
+  url: https://www.youtube.com/watch?v=Jvs7Q4cdLy4
+  date: '2022-07-07'
+  genre: experimental (inferred)
+  license: none stated
+  platform: showcase
+  note: Early Strudel + Hydra visuals pairing, coded collaboratively in Flok.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-391
+kind: research-candidate
+mandate_id: RES-M-001
+name: Elevator music for a game
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Elevator music for a game
+  author: wjt@mastodon.me.uk
+  url: https://mastodon.me.uk/@wjt/117128817738191223
+  date: '2026-08-20'
+  genre: lounge
+  license: none stated
+  platform: mastodon
+  note: Cheesy elevator tune written for a game scene.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,24 @@
+id: RES-L-007
+kind: research-candidate
+mandate_id: RES-M-001
+name: Appealing to Venus
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Appealing to Venus
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/appealingtovenus.js
+  date: '2024-03-19'
+  genre: art rock / chamber pop (inferred)
+  license: none stated
+  original_artist: The Sea Nymphs
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by The Sea Nymphs
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,24 @@
+id: RES-L-040
+kind: research-candidate
+mandate_id: RES-M-001
+name: Human Performance (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Human Performance (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/humanperformance.js
+  date: '2026-06-03'
+  genre: indie / post-punk (inferred)
+  license: none stated
+  original_artist: Parquet Courts
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: '@song by Parquet Courts; marked work in progress/wip'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

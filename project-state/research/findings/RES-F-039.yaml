@@ -1,0 +1,28 @@
+id: RES-F-039
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-005
+answers:
+- Q3
+- Q5
+claim: clean-breaks consists of famous commercial breaks
+evidence:
+- excerpt: The_Winstons_-_Amen_Brother / James_Brown_-_Funky_Drummer
+  ref: https://github.com/yaxu/clean-breaks/blob/main/strudel.json
+  retrieved_at: '2026-11-01'
+  source_date: '2023-01-31'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

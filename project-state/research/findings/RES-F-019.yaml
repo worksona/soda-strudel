@@ -1,0 +1,30 @@
+id: RES-F-019
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-003
+answers:
+- Q1
+- Q5
+- Q6
+claim: 'In-person Strudel teaching is spreading: beginner workshops in Teesside, Toronto, Bengaluru, Philadelphia,
+  Portland, Bologna/Italy and a university course.'
+evidence:
+- excerpt: We're teaching a strudel workshop next Saturday (Nov 7)
+  ref: https://social.toplap.org/@this_xor_that/117537578967124831
+  retrieved_at: '2026-11-01'
+  source_date: '2026-10-31'
+source_tier: secondary
+confidence: medium
+epistemic_status: reported
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

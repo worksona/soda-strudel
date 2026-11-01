@@ -1,0 +1,21 @@
+id: RES-L-454
+kind: research-candidate
+mandate_id: RES-M-001
+name: Paul Gestwicki
+aliases:
+- doctor-g
+type: person
+profile:
+  kind: person
+  role: teacher
+  links:
+  - https://github.com/doctor-g/strudel_songs
+  - http://cs.bsu.edu/~pvgestwicki
+  license_stated: '''CC BY-NC-NA'' (malformed tag)'
+  credit_note: Ball State University CS professor; his song experiments use @title/@by/@license tags.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

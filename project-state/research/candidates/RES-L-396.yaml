@@ -1,0 +1,21 @@
+id: RES-L-396
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Zalasur: Strudel live coding (PeerTube archive)'
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: 'Zalasur: Strudel live coding (PeerTube archive)'
+  author: zalasur@peertube.zalasur.media
+  url: https://peertube.zalasur.media/w/5TwPWJ76oKdctPPuXwgx6d
+  date: '2026-08-06'
+  license: none stated
+  platform: mastodon
+  note: Archived stream video.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

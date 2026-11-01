@@ -1,0 +1,23 @@
+id: RES-L-248
+kind: research-candidate
+mandate_id: RES-M-001
+name: Live coding Gorillaz - Feel Good Inc. | Strudel Tutorial
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Live coding Gorillaz - Feel Good Inc. | Strudel Tutorial
+  author: Maria Areadne
+  url: https://www.youtube.com/watch?v=h4ejQ27M5g8
+  date: '2026-06-06'
+  genre: pop / cover (inferred)
+  level: intermediate
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: Live coding Gorillaz - Feel Good Inc. | Strudel Tutorial — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,24 @@
+id: RES-L-067
+kind: research-candidate
+mandate_id: RES-M-001
+name: Sarah On A Worm
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Sarah On A Worm
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/sarahonaworm.js
+  date: '2026-08-09'
+  genre: art rock / chamber pop (inferred)
+  license: none stated
+  original_artist: The Sea Nymphs
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: tune @by The Sea Nymphs
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

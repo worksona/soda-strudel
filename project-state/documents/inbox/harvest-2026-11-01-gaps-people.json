@@ -1,0 +1,679 @@
+{
+ "source": "gaps-people",
+ "harvested_at": "2026-11-01",
+ "items": [
+  {
+   "title": "Fail-safe",
+   "author": "DJ_Dave",
+   "url": "https://github.com/algorave-dave/Fail-safe/blob/main/Fail-safe.js",
+   "date": "2026-06-12",
+   "genre": "techno / electronic",
+   "license": "CC-BY-NC-SA-4.0 (stated in file header)",
+   "is_original": true,
+   "note": "Original full set piece by DJ_Dave published as code; repo has no LICENSE file, the license is in the @license tag. NC: no commercial reuse.",
+   "verified": true
+  },
+  {
+   "title": "from-scratch (session 2026-08-26)",
+   "author": "fcm",
+   "url": "https://codeberg.org/fcm/my-strudel-repo/src/branch/main/sessions/2026-08-26_from-scratch.js",
+   "date": "2026-08-26",
+   "genre": "techno",
+   "license": "CC-BY-SA-4.0 (repo LICENSE)",
+   "is_original": true,
+   "note": "132 BPM 909 from-scratch performance archive; repo is a personal pattern archive meant for copy-paste reuse.",
+   "verified": true
+  },
+  {
+   "title": "MOVEMENT (germantechno3)",
+   "author": "dotcomdudee",
+   "url": "https://github.com/dotcomdudee/strudel-tracks/blob/main/germantechno3.js",
+   "date": "2025-09-15",
+   "genre": "techno",
+   "license": "none stated",
+   "is_original": true,
+   "note": "Vanilla-Strudel German-techno track (no external samples); repo of mostly-techno originals plus a few covers.",
+   "verified": true
+  },
+  {
+   "title": "house",
+   "author": "kahlys (lou queer)",
+   "url": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/house.str",
+   "date": "2026-04-06",
+   "genre": "house",
+   "license": "none stated",
+   "is_original": true,
+   "note": "Sketch in a folder of ~35 original ideas by a French live coder; uses Switch Angel's prebake and pad samples.",
+   "verified": true
+  },
+  {
+   "title": "Squeaky Tinkering",
+   "author": "Paul Gestwicki",
+   "url": "https://github.com/doctor-g/strudel_songs/blob/master/squeaky_tinkering.js",
+   "date": "2025-11-18",
+   "genre": "house / 909 groove",
+   "license": "CC BY-NC-NA (as written; not a real CC licence, probably meant CC BY-NC-ND or BY-NC-SA)",
+   "is_original": true,
+   "note": "Short 909 groove from a university professor's song experiments. The licence tag is malformed, so ask the author before reusing it.",
+   "verified": true
+  },
+  {
+   "title": "Ossuary",
+   "author": "Stefanos Amanuel (ipkstef)",
+   "url": "https://github.com/ipkstef/strudel-sessions/blob/main/liquid/ossuary.txt",
+   "date": "2026-09-10",
+   "genre": "UK bass: dark halftime drum & bass",
+   "license": "CC-BY-NC-SA-4.0 (stated in file header)",
+   "is_original": true,
+   "note": "172 BPM halftime piece with a 32-bar arrangement; one of eight tagged liquid-DnB originals in the repo. Its chant sample is CC0 from Freesound, credited in the file.",
+   "verified": true
+  },
+  {
+   "title": "Low Tide Radio",
+   "author": "Stefanos Amanuel (ipkstef)",
+   "url": "https://github.com/ipkstef/strudel-sessions/blob/main/liquid/low-tide-radio.txt",
+   "date": "2026-09-11",
+   "genre": "UK bass: liquid drum & bass (vocal)",
+   "license": "CC-BY-NC-SA-4.0 (stated in file header)",
+   "is_original": true,
+   "note": "Liquid DnB original that loads Switch Angel's prebake script and pad samples.",
+   "verified": true
+  },
+  {
+   "title": "Deep Meditation (DnB)",
+   "author": "dotcomdudee",
+   "url": "https://github.com/dotcomdudee/strudel-tracks/blob/main/deep_meditation-dnb.js",
+   "date": "2025-09-15",
+   "genre": "UK bass: atmospheric drum & bass",
+   "license": "none stated",
+   "is_original": true,
+   "note": "Ambient DnB; the companion file ambient_breaks-dnb.js is in the same repo.",
+   "verified": true
+  },
+  {
+   "title": "footwork",
+   "author": "Ike Saunders (ikesau)",
+   "url": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/footwork.js",
+   "date": "2026-07-06",
+   "genre": "footwork / juke (160 BPM)",
+   "license": "none stated",
+   "is_original": true,
+   "note": "Short 160 BPM footwork sketch from the gallery on ikesau.co/strudel, using Switch Angel's pad samples. The only human-made footwork piece found.",
+   "verified": true
+  },
+  {
+   "title": "jungle-gym",
+   "author": "Ike Saunders (ikesau)",
+   "url": "https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/jungle-gym.js",
+   "date": "2026-07-06",
+   "genre": "jungle / breakbeat",
+   "license": "none stated",
+   "is_original": true,
+   "note": "Same gallery as the footwork sketch; shown with prose notes on ikesau.co/strudel.",
+   "verified": true
+  },
+  {
+   "title": "beatopia dub 250721",
+   "author": "ed_crub",
+   "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/beatopia%20dub%20250721.txt",
+   "date": "2025-07-21",
+   "genre": "dub",
+   "license": "none stated",
+   "is_original": true,
+   "note": "80 BPM dub piece on the LinnDrum bank. The only human-made dub original found.",
+   "verified": true
+  },
+  {
+   "title": "ambient 251003",
+   "author": "ed_crub",
+   "url": "https://codeberg.org/ed_crub/ed-patterns-strudel/src/branch/main/2024-2025/ambient%20251003.txt",
+   "date": "2025-10-03",
+   "genre": "ambient",
+   "license": "none stated",
+   "is_original": true,
+   "note": "One of four dated ambient pieces in the repo (250129, 250721, 250725, 251003).",
+   "verified": true
+  },
+  {
+   "title": "atmos",
+   "author": "kahlys",
+   "url": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/atmos.str",
+   "date": "2026-04-06",
+   "genre": "ambient",
+   "license": "none stated",
+   "is_original": true,
+   "note": "80 BPM atmospheric sketch built on Switch Angel's pad samples.",
+   "verified": true
+  },
+  {
+   "title": "ambient-experiment",
+   "author": "leo (lmorv)",
+   "url": "https://github.com/lmorv/CART398-LiveCoding-/blob/main/Week09/05-ambient-experiment.strudel",
+   "date": "2026-03-16",
+   "genre": "ambient",
+   "license": "MIT (repo LICENSE)",
+   "is_original": false,
+   "note": "Student patch from Concordia's CART398 'one patch a day' course. The header says it is 'based on' a YouTube video, so it is derivative rather than fully original.",
+   "verified": true
+  },
+  {
+   "title": "Song Sanctuary theme",
+   "author": "Will Thompson (The Threadbare Authors)",
+   "url": "https://github.com/endlessm/threadbare/blob/main/assets/first_party/music/SongSanctuary.strudel.js",
+   "date": "2026-06-02",
+   "genre": "world / hand percussion (shaker, clave, bongo) game score",
+   "license": "CC-BY-SA-4.0 (SPDX header; REUSE-compliant repo)",
+   "is_original": true,
+   "note": "Game score for Endless Access's open-source game Threadbare, written in Strudel. Licensing is very clean: SPDX header plus a README licence section.",
+   "verified": true
+  },
+  {
+   "title": "Guarded Stones",
+   "author": "Will Thompson (The Threadbare Authors)",
+   "url": "https://github.com/endlessm/threadbare/blob/main/scenes/quests/lore_quests/song_sanctuary_2/1_stealth_sequence_combo/music/GuardedStones.strudel.js",
+   "date": "2026-07-30",
+   "genre": "world percussion / game score (70 BPM)",
+   "license": "CC-BY-SA-4.0 (SPDX header)",
+   "is_original": true,
+   "note": "Stealth-level cue built from clave, bongo, finger cymbal and clap; the rendered OGG stems sit alongside the code.",
+   "verified": true
+  },
+  {
+   "title": "Saudade Nº0",
+   "author": "taconi",
+   "url": "https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/saudade_n0.js",
+   "date": "2024-11-20",
+   "genre": "Brazilian / experimental audiovisual (Strudel + Hydra)",
+   "license": "CC-BY-NC-SA (file header; overrides the repo's MIT LICENSE)",
+   "is_original": true,
+   "note": "Brazilian Portuguese author. The repo holds ~20 dated Strudel sketches from 2024 to 2026. Some are covers (e.g. 25/05-22 is a Mãeana song), so check each file.",
+   "verified": true
+  },
+  {
+   "title": "glith (glitch)",
+   "author": "lou queer (kahlys)",
+   "url": "https://github.com/kahlys/livecodingmusic/blob/main/ideas/glitch.txt",
+   "date": "2026-04-06",
+   "genre": "IDM / glitch",
+   "license": "none stated",
+   "is_original": true,
+   "note": "140 BPM supersaw/wavetable glitch sketch; glitch_with_friends.str is in the same folder.",
+   "verified": true
+  },
+  {
+   "title": "glitchwave_one",
+   "author": "semism",
+   "url": "https://github.com/semism/sonicism/blob/main/strudel/unfinished/(served)glitchwave_one.js",
+   "date": "2026-05-09",
+   "genre": "glitch / IDM",
+   "license": "none stated",
+   "is_original": true,
+   "note": "Unfinished 140 BPM piece by a self-described live-code artist; Albanian-named pattern labels.",
+   "verified": true
+  },
+  {
+   "title": "Corporate — Glitch",
+   "author": "Les Orchard (lmorchard)",
+   "url": "https://github.com/lmorchard/starnet/blob/main/audio-content/songs/corporate-glitch.strudel",
+   "date": "2026-07-01",
+   "genre": "glitch / game score",
+   "license": "AGPL-3.0 (repo LICENSE)",
+   "is_original": true,
+   "note": "Adaptive game cue for the browser game Starnet; its layers are gated by a gameProgress signal. Other cues are in audio-content/songs/.",
+   "verified": true
+  },
+  {
+   "title": "let code die v1.1 (pastagang album corpus)",
+   "author": "pastagang (collective)",
+   "url": "https://codeberg.org/pastagang/pastagang/src/branch/pages/album",
+   "date": "2025-01-29",
+   "genre": "ambient-generative / collaborative jam",
+   "license": "informal: LICENSE.md reads only 'do it'",
+   "is_original": true,
+   "note": "Index of 36 strudel.cc share links from pastagang's nudel jams, plus a CSV dump of the code. Collective authorship: credit 'pastagang'.",
+   "verified": true
+  },
+  {
+   "title": "Fio",
+   "author": "taconi",
+   "url": "https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/fio.js",
+   "date": "2024-11-21",
+   "genre": "ambient-generative / audiovisual (Hydra)",
+   "license": "CC-BY-NC-SA (file header)",
+   "is_original": true,
+   "note": "Generative audiovisual sketch from the same series as Saudade Nº0.",
+   "verified": true
+  },
+  {
+   "title": "lofi-1",
+   "author": "Santiago (smaudd)",
+   "url": "https://github.com/smaudd/strudel-sessions/blob/master/lofi-1.js",
+   "date": "2025-08-23",
+   "genre": "hip-hop: lo-fi (break-based)",
+   "license": "none stated",
+   "is_original": true,
+   "note": "80 BPM lo-fi beat on chopped breaks125; the repo is a library of REPL sketches by an author who also publishes a sample-pack template.",
+   "verified": true
+  },
+  {
+   "title": "hiphop strudel beat (jam element)",
+   "author": "henkaku-center",
+   "url": "https://github.com/henkaku-center/jam/blob/main/public/elements/elem_hiphop_strudel_beat.js",
+   "date": "2026-06-17",
+   "genre": "hip-hop / boom bap",
+   "license": "none stated",
+   "is_original": true,
+   "note": "Default beat built into a web jam app: a minimal kick/snare boom-bap groove. Thin; it is better treated as a reference than as a piece.",
+   "verified": true
+  }
+ ],
+ "people": [
+  {
+   "name": "Felix Roos",
+   "handle": "froos / felixroos",
+   "role": "maintainer",
+   "links": [
+    "https://codeberg.org/froos",
+    "https://github.com/felixroos",
+    "https://strudel.cc"
+   ],
+   "license_stated": "Strudel engine AGPL-3.0; stock tunes live in the AGPL repo (no separate licence for them)",
+   "credit_note": "Co-creator of Strudel (ICLC 2023 paper with Alex McLean). No personal credit format stated."
+  },
+  {
+   "name": "Alex McLean",
+   "handle": "yaxu",
+   "role": "maintainer",
+   "links": [
+    "https://slab.org/",
+    "https://codeberg.org/yaxu",
+    "https://post.lurk.org/@yaxu",
+    "https://www.youtube.com/@yaxu",
+    "https://github.com/yaxu"
+   ],
+   "license_stated": "Workshop material in AGPL repos (patternclub/strudel, utcsheffield/makerclub-strudel)",
+   "credit_note": "Creator of TidalCycles and co-creator of Strudel; runs Pattern Club and wrote the Carnatic-rhythms and from-scratch workshops."
+  },
+  {
+   "name": "Switch Angel (Jade Rose)",
+   "handle": "switchangel / _switch_angel",
+   "role": "performer",
+   "links": [
+    "https://github.com/switchangel",
+    "https://www.youtube.com/@switchangel",
+    "https://www.instagram.com/_switch_angel/",
+    "https://webexpo.net/blog/from-luthier-to-live-coder-how-switch-angel-is-refactoring-music/"
+   ],
+   "license_stated": "Sample packs switchangel/pad and switchangel/breaks are Unlicense (public domain); strudel-scripts has no licence",
+   "credit_note": "WebExpo (Feb 2026) names her Jade Rose and calls her a Strudel maintainer. Her pads and prebake script are widely reused (ikesau, kahlys, ipkstef)."
+  },
+  {
+   "name": "Jade (Rose) Rowland",
+   "handle": "daslyfe",
+   "role": "maintainer",
+   "links": [
+    "https://github.com/daslyfe"
+   ],
+   "license_stated": "StrudelDirt GPL-2.0; Strudel fork AGPL-3.0",
+   "credit_note": "GitHub display name 'Jade (Rose) Rowland'; maintains StrudelDirt and Strudel engine work. Probably the same person as Switch Angel (inferred from the WebExpo article and the showcase 'Jade Rose' videos, not confirmed)."
+  },
+  {
+   "name": "DJ_Dave",
+   "handle": "algorave-dave",
+   "role": "performer",
+   "links": [
+    "https://github.com/algorave-dave",
+    "https://www.youtube.com/@DJ_Dave",
+    "https://linktr.ee/dj_dave"
+   ],
+   "license_stated": "CC BY-NC-SA 4.0 (in the Fail-safe header)",
+   "credit_note": "Credit as 'DJ_Dave' (the @by tag). NC: no commercial use."
+  },
+  {
+   "name": "eefano",
+   "handle": "eefano",
+   "role": "performer",
+   "links": [
+    "https://github.com/eefano",
+    "https://github.com/eefano/strudel-songs-collection"
+   ],
+   "license_stated": "none stated in strudel-songs-collection",
+   "credit_note": "Already catalogued. Pieces carry '@by eefano'; mostly covers, with a few originals in jamsessions/."
+  },
+  {
+   "name": "Tijmen Zwaan",
+   "handle": "tzwaan",
+   "role": "maintainer",
+   "links": [
+    "https://github.com/tzwaan",
+    "https://github.com/tzwaan/strudel-scripts"
+   ],
+   "license_stated": "none stated",
+   "credit_note": "Already catalogued. Maintains the awesome-strudel fork and prebake scripts/samples."
+  },
+  {
+   "name": "Raphaël Forment",
+   "handle": "Bubobubobubobubo / BuboBubo",
+   "role": "maintainer",
+   "links": [
+    "https://raphaelforment.fr",
+    "https://github.com/Bubobubobubobubo",
+    "https://sardine.raphaelforment.fr",
+    "https://codeberg.org/BuboBubo"
+   ],
+   "license_stated": "not stated for pieces",
+   "credit_note": "PhD live coder and tool author (Sardine, Topos); performed at the TOPLAP solstice stream in Dec 2024 (Strudel showcase); keeps a Strudel fork on Codeberg."
+  },
+  {
+   "name": "Glen Fraser",
+   "handle": "totalgee",
+   "role": "performer",
+   "links": [
+    "https://github.com/totalgee",
+    "https://glenfraser.com"
+   ],
+   "license_stated": "none stated",
+   "credit_note": "Solstice stream 2023 performer in the Strudel showcase; has a binaural-livecoding repo."
+  },
+  {
+   "name": "Dan Gorelick",
+   "handle": "dan.dog",
+   "role": "teacher",
+   "links": [
+    "https://www.dangorelick.com/",
+    "https://iclc.toplap.org/2023/catalogue/person/gorelick-dan.html"
+   ],
+   "license_stated": "none found",
+   "credit_note": "Co-wrote a Strudel workshop curriculum with Viola He (taught at NYC Resistor and ITP Camp); co-founded Club Code; organizes LiveCode.NYC."
+  },
+  {
+   "name": "Viola He",
+   "handle": "sandpills / v10101a",
+   "role": "teacher",
+   "links": [
+    "https://tidalcycles.org/blog/tidal_profile_violahe",
+    "https://soundcloud.com/v10101a",
+    "https://www.instagram.com/v10101a/"
+   ],
+   "license_stated": "none found",
+   "credit_note": "Percussion-led algorithmic performer. Teaches Algorave++ at NYU Shanghai and co-taught Strudel at ITP Camp 2025. The DJ_Dave 'Bitrot [v10101a Edit]' showcase video is hers."
+  },
+  {
+   "name": "Lucy Cheesman",
+   "handle": "",
+   "role": "teacher",
+   "links": [],
+   "license_stated": "none found",
+   "credit_note": "Sheffield live coder (TYPE, OFFAL) who ran a Strudel beginners' workshop at Site Gallery (Aug 2024). Search results only; the venue page now 404s and I verified no profile link."
+  },
+  {
+   "name": "Shelly Knotts",
+   "handle": "",
+   "role": "teacher",
+   "links": [
+    "https://shellyknotts.wordpress.com/",
+    "https://musichackspace.org/courses/live-coding-pushing-the-boundaries-of-dance-music-in-strudel"
+   ],
+   "license_stated": "none found",
+   "credit_note": "Teaches the paid Music Hackspace course 'Learn to Live Code in Strudel / The Boundaries Between Beats and Noise'."
+  },
+  {
+   "name": "Lu Wilson",
+   "handle": "TodePond",
+   "role": "maintainer",
+   "links": [
+    "https://www.todepond.com/",
+    "https://codeberg.org/TodePond",
+    "https://github.com/TodePond"
+   ],
+   "license_stated": "pastagang site LICENSE.md: 'do it'",
+   "credit_note": "Pastagang co-founder and Strudel/nudel contributor. Pastagang work is credited collectively as 'pastagang'."
+  },
+  {
+   "name": "pastagang (collective)",
+   "handle": "pastagang",
+   "role": "performer",
+   "links": [
+    "https://pastagang.cc",
+    "https://codeberg.org/pastagang",
+    "https://www.youtube.com/@pastaganglive",
+    "https://pastagang.bandcamp.com"
+   ],
+   "license_stated": "Code: informal 'do it'. Bandcamp: mixed (some albums All Rights Reserved, at least one track CC BY-SA)",
+   "credit_note": "Open collective that anyone can join; patterns are tagged '@by pastagang'."
+  },
+  {
+   "name": "Eddy Flux",
+   "handle": "eddyflux",
+   "role": "sample-maker",
+   "links": [
+    "https://github.com/eddyflux",
+    "https://codeberg.org/eddyflux",
+    "https://github.com/eddyflux/crate"
+   ],
+   "license_stated": "none stated on the crate/wax/omni sample repos",
+   "credit_note": "Already catalogued as a performer. Their 'crate' sample bank is used in pastagang jams; it has no licence, so clear it before bundling."
+  },
+  {
+   "name": "Ike Saunders",
+   "handle": "ikesau",
+   "role": "teacher",
+   "links": [
+    "https://ikesau.co/strudel/",
+    "https://github.com/ikesau"
+   ],
+   "license_stated": "none stated",
+   "credit_note": "Personal notes page with ~30 runnable snippets and sketches (footwork, jungle, ribbon tricks)."
+  },
+  {
+   "name": "Stefanos Amanuel",
+   "handle": "ipkstef",
+   "role": "performer",
+   "links": [
+    "https://github.com/ipkstef/strudel-sessions"
+   ],
+   "license_stated": "CC BY-NC-SA 4.0 (per-file headers)",
+   "credit_note": "Credit '@by Stefanos Amanuel'; files carry @genre and @version tags and credit their samples."
+  },
+  {
+   "name": "Will Thompson",
+   "handle": "(Threadbare / Endless Access)",
+   "role": "performer",
+   "links": [
+    "https://github.com/endlessm/threadbare",
+    "https://play.threadbare.game/"
+   ],
+   "license_stated": "CC-BY-SA-4.0 for first-party assets (REUSE/SPDX)",
+   "credit_note": "Copyright line: 'The Threadbare Authors'; @by Will Thompson."
+  },
+  {
+   "name": "Paul Gestwicki",
+   "handle": "doctor-g",
+   "role": "teacher",
+   "links": [
+    "https://github.com/doctor-g/strudel_songs",
+    "http://cs.bsu.edu/~pvgestwicki"
+   ],
+   "license_stated": "'CC BY-NC-NA' (malformed tag)",
+   "credit_note": "Ball State University CS professor; his song experiments use @title/@by/@license tags."
+  },
+  {
+   "name": "taconi",
+   "handle": "taconi",
+   "role": "performer",
+   "links": [
+    "https://codeberg.org/taconi/sketches"
+   ],
+   "license_stated": "CC BY-NC-SA in file headers (the repo LICENSE is MIT)",
+   "credit_note": "Brazilian multi-language live coder (Strudel, Tidal, Sardine, FoxDot, Renardo). Per-file headers override the repo licence."
+  },
+  {
+   "name": "Bogdan Vera",
+   "handle": "BogdanVera / boggo",
+   "role": "performer",
+   "links": [
+    "https://github.com/BogdanVera",
+    "https://strudel.cc/intro/showcase/"
+   ],
+   "license_stated": "none found",
+   "credit_note": "Djent/metal live coding with Strudel driving MIDI (Strudel showcase, TOPLAP solstice Dec 2024). The boggo/Bogdan link is inferred."
+  },
+  {
+   "name": "MariaAreadne",
+   "handle": "mariaareadne",
+   "role": "performer",
+   "links": [
+    "https://github.com/mariaareadne"
+   ],
+   "license_stated": "none found",
+   "credit_note": "Already catalogued (maria-live-codes); the GitHub profile has only a profile repo."
+  },
+  {
+   "name": "Lizzie Wilson",
+   "handle": "lwlsn",
+   "role": "performer",
+   "links": [
+    "https://lwlsn.github.io/"
+   ],
+   "license_stated": "none found",
+   "credit_note": "TidalCycles live coder and researcher; Strudel use not confirmed. Lower priority."
+  }
+ ],
+ "sources_new": [
+  {
+   "name": "Strudel showcase (video list source)",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/website/src/components/Showcase.jsx",
+   "holds": "~30 curated performance videos, including (Algo|Afro) Futures 2023 performers (Emma Osman, Zach B-B, Jamal Lloyd Davis, Jim Osman, φ, Tomilola Olumide, Tyga Blue), boggo, BuboBubo and Jade Rose",
+   "monitor": true
+  },
+  {
+   "name": "Strudel 'Music metadata' docs",
+   "url": "https://strudel.cc/learn/metadata/",
+   "holds": "The @title/@by/@license(SPDX)/@genre tag convention: the search handle for licensed originals",
+   "monitor": false
+  },
+  {
+   "name": "pastagang album corpus",
+   "url": "https://codeberg.org/pastagang/pastagang/src/branch/pages/album",
+   "holds": "36 strudel.cc share links and a CSV of code from pastagang jams (Jan 2025)",
+   "monitor": true
+  },
+  {
+   "name": "Codeberg repo search API",
+   "url": "https://codeberg.org/api/v1/repos/search?q=strudel",
+   "holds": "Codeberg-hosted pattern archives (fcm, ed_crub, taconi, frenata, jacksonchen666). The HTML explore page serves junk to scrapers; use the API.",
+   "monitor": true
+  },
+  {
+   "name": "Threadbare (Endless Access)",
+   "url": "https://github.com/endlessm/threadbare",
+   "holds": "CC-BY-SA-4.0 Strudel game scores with REUSE/SPDX headers",
+   "monitor": true
+  },
+  {
+   "name": "ipkstef/strudel-sessions",
+   "url": "https://github.com/ipkstef/strudel-sessions",
+   "holds": "8 liquid/dark DnB originals, CC BY-NC-SA 4.0, with metadata tags",
+   "monitor": true
+  },
+  {
+   "name": "kahlys/livecodingmusic",
+   "url": "https://github.com/kahlys/livecodingmusic",
+   "holds": "~35 original sketch ideas (glitch, house, ambient, trance) plus cheatsheets; no licence",
+   "monitor": false
+  },
+  {
+   "name": "ed_crub/ed-patterns-strudel",
+   "url": "https://codeberg.org/ed_crub/ed-patterns-strudel",
+   "holds": "Dated ambient, dub, 'beatopia' and Hydra-noise pieces; no licence",
+   "monitor": true
+  },
+  {
+   "name": "UTC Sheffield / Pattern Club workshops",
+   "url": "https://utcsheffield.github.io/makerclub-strudel/workshop/carnatic/",
+   "holds": "Workshops incl. Carnatic rhythms, from-scratch performance, Site Gallery beginner sheet (AGPL)",
+   "monitor": false
+  },
+  {
+   "name": "Switch Angel sample packs",
+   "url": "https://github.com/switchangel/pad",
+   "holds": "Unlicense pad samples (and switchangel/breaks): safe to load in our pieces",
+   "monitor": false
+  },
+  {
+   "name": "itsaandy/strudel-samples (UKG)",
+   "url": "https://github.com/itsaandy/strudel-samples",
+   "holds": "154 UK garage samples, described as 'unchanged' files from commercial packs. Do NOT bundle; it is only a lead for UKG pieces.",
+   "monitor": false
+  },
+  {
+   "name": "A5TA/strudel-agents",
+   "url": "https://github.com/A5TA/strudel-agents",
+   "holds": "MIT, @genre-tagged examples across 8 genres. These are agent-made (written by Claude Code subagents), not human originals.",
+   "monitor": false
+  }
+ ],
+ "findings": [
+  {
+   "claim": "Strudel defines comment tags for authorship and licence: @by and @license with SPDX ids (e.g. CC-BY-SA-4.0), plus @genre.",
+   "url": "https://strudel.cc/learn/metadata/",
+   "excerpt": "Each license should be specified by using the correct identifier in the SPDX License List",
+   "source_date": "2026-11-01"
+  },
+  {
+   "claim": "Switch Angel is Jade Rose; WebExpo describes her as a Strudel maintainer.",
+   "url": "https://webexpo.net/blog/from-luthier-to-live-coder-how-switch-angel-is-refactoring-music/",
+   "excerpt": "When Switch Angel (Jade Rose) steps onto the main stage",
+   "source_date": "2026-02-04"
+  },
+  {
+   "claim": "Threadbare's first-party assets, including its Strudel scores, are CC BY-SA 4.0 and labelled per file with REUSE.",
+   "url": "https://github.com/endlessm/threadbare",
+   "excerpt": "Threadbare's original assets are covered by Creative Commons Attribution-ShareAlike 4.0",
+   "source_date": "2026-07-30"
+  },
+  {
+   "claim": "taconi's per-file headers say CC BY-NC-SA even though the repo LICENSE is MIT, so file-level tags must be read, not just repo licences.",
+   "url": "https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/saudade_n0.js",
+   "excerpt": "@license CC BY-NC-SA",
+   "source_date": "2024-11-20"
+  },
+  {
+   "claim": "The pastagang site/code licence is an informal one-liner, not a recognised licence.",
+   "url": "https://codeberg.org/pastagang/pastagang/src/branch/pages/LICENSE.md",
+   "excerpt": "do it",
+   "source_date": "2026-02-18"
+  },
+  {
+   "claim": "Switch Angel's pad and breaks sample packs are released under the Unlicense.",
+   "url": "https://github.com/switchangel/pad",
+   "excerpt": "Some pad sounds I recorded (license: Unlicense)",
+   "source_date": "2026-11-01"
+  },
+  {
+   "claim": "fcm/my-strudel-repo licenses all patterns CC BY-SA 4.0 and says they are meant to be copied and played.",
+   "url": "https://codeberg.org/fcm/my-strudel-repo",
+   "excerpt": "Copy, paste, play.",
+   "source_date": "2026-09-08"
+  },
+  {
+   "claim": "fjpolo/fjpolo-Strudel (MIT) has house, dubstep, acid and industrial files, but their headers credit Switch Angel Instagram reels, so they are derivatives, not originals.",
+   "url": "https://github.com/fjpolo/fjpolo-Strudel",
+   "excerpt": "@_switch_angel @fjpolo",
+   "source_date": "2025-12-21"
+  }
+ ],
+ "gaps_remaining": [
+  "boom bap / hip-hop: no licensed human original found; only an app's default beat and an unlicensed lo-fi sketch",
+  "techno: covered (2 licensed: DJ_Dave CC BY-NC-SA, fcm CC BY-SA)",
+  "house: no cleanly licensed original (kahlys has none; Gestwicki's tag is malformed)",
+  "UK garage / bass: no actual UKG/2-step piece; only DnB (ipkstef, CC BY-NC-SA). A UKG sample lead exists but has rights problems",
+  "footwork / juke: only one unlicensed sketch (ikesau); nothing licensed",
+  "reggae / dub: only one unlicensed piece (ed_crub); eefano's swampyreggae is in the known collection",
+  "ambient / drone: three unlicensed pieces; the only licensed one (lmorv, MIT) is derivative",
+  "Afro / Latin / world: the two Threadbare CC BY-SA percussion scores are game music, not Afro/Latin dance forms. No Afrobeat, amapiano, cumbia or samba originals; the (Algo|Afro) Futures performances are video only",
+  "IDM / glitch: three found but only Starnet is licensed (AGPL-3.0, an awkward fit for music reuse)",
+  "ambient generative: the pastagang corpus and taconi Fio (NC) only; no CC0/CC BY generative piece"
+ ],
+ "notes": "Method: gh repo and code search (setcpm/@license/@by/@genre plus --filename genre terms), the Codeberg API (the HTML explore page serves junk to scrapers), the uzu.lurk.org forum search (little yield), and Strudel docs and showcase sources. WebFetch hit a session limit, so pages were read with curl and the gh API. Every item URL's file was opened through the API or raw endpoints. Only headers were read, to get title, author, licence and genre; no code is reproduced here. Excluded: AI-generated corpora (A5TA/strudel-agents, imMatheus/daij, LeoYeAI, nukleas/cycletron), stock-tune copies (Bulka, godot-strudel, vscode forks), covers (achmad-miftahurrojak REDRED_CORTIS = CORTIS cover; Bulka gallery covers), and Switch-Angel-derived files (fjpolo). Licence pattern: explicit licences are rare, and most are NC (BY-NC-SA). Only fcm (CC BY-SA 4.0) and Threadbare (CC BY-SA 4.0) allow commercial reuse. Leads not followed up: WilliamOpenshaw generative repo, frenata/music compositions, jacksonchen666/random-strudel-bits (AGPL, pastagang shortcuts), the Strudel Discord."
+}

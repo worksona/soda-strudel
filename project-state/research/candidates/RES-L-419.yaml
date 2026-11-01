@@ -1,0 +1,21 @@
+id: RES-L-419
+kind: research-candidate
+mandate_id: RES-M-001
+name: Deep Meditation (DnB)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Deep Meditation (DnB)
+  author: dotcomdudee
+  url: https://github.com/dotcomdudee/strudel-tracks/blob/main/deep_meditation-dnb.js
+  date: '2025-09-15'
+  genre: 'UK bass: atmospheric drum & bass'
+  license: none stated
+  note: Ambient DnB; the companion file ambient_breaks-dnb.js is in the same repo.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

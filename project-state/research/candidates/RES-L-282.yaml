@@ -1,0 +1,23 @@
+id: RES-L-282
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #17 I wanted to make some DnB, but...'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'Strudel Live Coding #17 I wanted to make some DnB, but...'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=ijHmmc8vrYg
+  date: '2025-10-14'
+  genre: drum and bass (inferred)
+  license: none stated
+  platform: search
+  note: Short performance in drum and bass — hear what a finished Strudel piece in this style sounds like and how
+    it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

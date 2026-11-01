@@ -1,0 +1,24 @@
+id: RES-L-065
+kind: research-candidate
+mandate_id: RES-M-001
+name: Reveileb
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Reveileb
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/reveileb.js
+  date: '2026-04-18'
+  genre: 'unknown (inferred: electronic?)'
+  license: none stated
+  original_artist: Realize Humans
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Realize Humans
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

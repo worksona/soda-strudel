@@ -1,0 +1,22 @@
+id: RES-L-130
+kind: research-candidate
+mandate_id: RES-M-001
+name: Solstice Night Stream December 2022 - froos - 2022-12-21 15:20
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Solstice Night Stream December 2022 - froos - 2022-12-21 15:20
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=P1DDsOvcyco
+  date: '2022-12-22'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: 15-minute festival-stream set (TOPLAP/Eulerroom); a model of a short structured live-coding performance.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,23 @@
+id: RES-L-450
+kind: research-candidate
+mandate_id: RES-M-001
+name: Eddy Flux
+aliases:
+- eddyflux
+type: person
+profile:
+  kind: person
+  role: sample-maker
+  links:
+  - https://github.com/eddyflux
+  - https://codeberg.org/eddyflux
+  - https://github.com/eddyflux/crate
+  license_stated: none stated on the crate/wax/omni sample repos
+  credit_note: Already catalogued as a performer. Their 'crate' sample bank is used in pastagang jams; it has no
+    licence, so clear it before bundling.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

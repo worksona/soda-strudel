@@ -1,0 +1,21 @@
+id: RES-L-372
+kind: research-candidate
+mandate_id: RES-M-001
+name: Zalasur live streams – Strudel live coding
+aliases: []
+type: other
+profile:
+  kind: event
+  title: Zalasur live streams – Strudel live coding
+  author: zalasur@owncast.zalasur.media
+  url: https://owncast.zalasur.media/federation/IWhsUcyDR
+  date: '2026-08-05'
+  license: none stated
+  platform: mastodon
+  note: Recurring Owncast streams with PeerTube archives (sample-free session, voice session, etc.).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

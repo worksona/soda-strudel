@@ -1,0 +1,23 @@
+id: RES-L-354
+kind: research-candidate
+mandate_id: RES-M-001
+name: I'm in my third week exploring strudel, and this is the result
+aliases: []
+type: other
+profile:
+  kind: song
+  title: I'm in my third week exploring strudel, and this is the result
+  author: technoabu
+  url: https://uzu.lurk.org/t/im-in-my-third-week-exploring-strudel-and-this-is-the-result/6205
+  date: '2026-08-24'
+  genre: techno
+  level: beginner
+  license: none stated
+  platform: forum
+  note: Week-3 piece; loads the author's own GitHub sample pack.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

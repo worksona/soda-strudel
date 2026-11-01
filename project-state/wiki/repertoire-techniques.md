@@ -16,6 +16,15 @@ last_modified_by: dolsson@aimqc.com
 
 Which catalogued pieces teach which Strudel technique. Built from each piece's header and function list (read from links, never copied) and from the research notes. Part of [[repertoire]].
 
+## Technique pages
+- [[technique-arrangement]] – Arrangement: building a song from sections (16 pieces, 6 soda examples)
+- [[technique-chiptune-voices]] – Chiptune voices: square, triangle, pulse and noise (14 pieces, 10 soda examples)
+- [[technique-fm-synthesis]] – FM synthesis (4 pieces, 1 soda examples)
+- [[technique-breaks-and-chopping]] – Breaks: chopping, slicing and re-sequencing (4 pieces, 2 soda examples)
+- [[technique-chords-and-voicings]] – Chords, scales and voicings (21 pieces, 17 soda examples)
+- [[technique-multi-control-mini-notation]] – Several controls in one pattern (2 pieces, 0 soda examples)
+- [[technique-tempo-changes]] – Tempo changes and time feel (5 pieces, 25 soda examples)
+
 ## Song structure and arrangement
 
 - **`arrange`** – New Order - Blue Monday (`REP-S-035`, [[repertoire-dance]])

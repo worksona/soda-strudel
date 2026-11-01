@@ -1,0 +1,22 @@
+id: RES-L-410
+kind: research-candidate
+mandate_id: RES-M-001
+name: Playing with random functions
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Playing with random functions
+  author: ravtecyber.fish
+  url: https://bsky.app/profile/ravtecyber.fish/post/3muztbchaic2c
+  date: '2026-09-08'
+  level: beginner
+  license: none stated
+  platform: bluesky
+  note: Beginner video sketches series (Sept 2026).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-123
+kind: research-candidate
+mandate_id: RES-M-001
+name: Switch Angel - Phr33k (Algorave)
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Switch Angel - Phr33k (Algorave)
+  author: AngelVision
+  url: https://www.youtube.com/watch?v=KXHijMWiN9o
+  date: '2024-07-12'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: Short performance — hear what a finished Strudel piece in this style sounds like and how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

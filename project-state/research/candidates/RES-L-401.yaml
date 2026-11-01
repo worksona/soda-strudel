@@ -1,0 +1,21 @@
+id: RES-L-401
+kind: research-candidate
+mandate_id: RES-M-001
+name: Spiral of Erebos in Strudel
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Spiral of Erebos in Strudel
+  author: ntyn.net
+  url: https://bsky.app/profile/ntyn.net/post/3mxtzkxtjyk2y
+  date: '2026-10-14'
+  license: none stated
+  platform: bluesky
+  note: Cover with a GitHub repo of the author's Strudel projects and a video.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

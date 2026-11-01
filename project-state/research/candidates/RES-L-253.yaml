@@ -1,0 +1,22 @@
+id: RES-L-253
+kind: research-candidate
+mandate_id: RES-M-001
+name: Switch Angel Livecoding Music In Strudel
+aliases: []
+type: other
+profile:
+  kind: stream
+  title: Switch Angel Livecoding Music In Strudel
+  author: Switch Angel
+  url: https://www.youtube.com/watch?v=UqbObh9oS4o
+  date: '2025-07-02'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: Long-form live session (2:13:50) — see how a performer grows and transitions patterns over time.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

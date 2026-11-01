@@ -1,0 +1,23 @@
+id: RES-L-096
+kind: research-candidate
+mandate_id: RES-M-001
+name: Jade Rose - Into your spell
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Jade Rose - Into your spell
+  author: AngelVision
+  url: https://www.youtube.com/watch?v=lxQgBeLQBgk
+  date: '2023-09-10'
+  genre: algorave / synth-pop (inferred)
+  license: none stated
+  platform: showcase
+  note: 'Hybrid rig: Strudel driving hardware synths over MIDI, SuperDirt via OSC, the built-in engine, plus live
+    vocals.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,23 @@
+id: RES-L-091
+kind: research-candidate
+mandate_id: RES-M-001
+name: Feel Good Inc
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Feel Good Inc
+  author: MariaAreadne
+  url: https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/feel-good-inc.js
+  date: '2026-07-28'
+  genre: alternative hip-hop (inferred, Gorillaz song)
+  license: none stated
+  is_cover: true
+  platform: Mariaareadne1/maria-live-codes
+  note: Cover per README; header gives title and @by MariaAreadne
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

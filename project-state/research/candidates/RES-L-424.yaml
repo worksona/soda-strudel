@@ -1,0 +1,21 @@
+id: RES-L-424
+kind: research-candidate
+mandate_id: RES-M-001
+name: atmos
+aliases: []
+type: other
+profile:
+  kind: song
+  title: atmos
+  author: kahlys
+  url: https://github.com/kahlys/livecodingmusic/blob/main/ideas/atmos.str
+  date: '2026-04-06'
+  genre: ambient
+  license: none stated
+  note: 80 BPM atmospheric sketch built on Switch Angel's pad samples.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

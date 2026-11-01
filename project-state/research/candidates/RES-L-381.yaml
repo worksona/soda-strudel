@@ -1,0 +1,22 @@
+id: RES-L-381
+kind: research-candidate
+mandate_id: RES-M-001
+name: TorontoJS talk on Strudel
+aliases: []
+type: other
+profile:
+  kind: event
+  title: TorontoJS talk on Strudel
+  author: fabio@cosocial.ca
+  url: https://cosocial.ca/@fabio/117349976860079351
+  date: '2026-09-28'
+  level: beginner
+  license: none stated
+  platform: mastodon
+  note: Meetup talk introducing live coding with Strudel (Sept 29 2026).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,28 @@
+id: RES-F-028
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-005
+answers:
+- Q3
+- Q5
+claim: Microsoft retains copyright of the Teams sounds; repo is personal-use only despite its MIT file
+evidence:
+- excerpt: Microsoft retains all copyrights to the original audio files.
+  ref: https://github.com/AustinOliverHaskell/ms-teams-sounds-strudel
+  retrieved_at: '2026-11-01'
+  source_date: '2025-06-18'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

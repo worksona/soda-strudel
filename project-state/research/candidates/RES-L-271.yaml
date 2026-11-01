@@ -1,0 +1,22 @@
+id: RES-L-271
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #6 sample manipulating:ambulance'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #6 sample manipulating:ambulance'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=Yys_Mvx5-M4
+  date: '2025-08-05'
+  level: intermediate
+  license: none stated
+  platform: search
+  note: 'Guided build: Strudel Live Coding  sample manipulating:ambulance — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

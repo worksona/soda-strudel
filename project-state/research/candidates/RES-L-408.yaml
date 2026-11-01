@@ -1,0 +1,21 @@
+id: RES-L-408
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudel soundtrack recorded via OBS + PowerShell
+aliases: []
+type: site
+profile:
+  kind: tool
+  title: Strudel soundtrack recorded via OBS + PowerShell
+  author: mrpowershell.com
+  url: https://bsky.app/profile/mrpowershell.com/post/3mu747tyyh227
+  date: '2026-08-29'
+  license: none stated
+  platform: bluesky
+  note: Automating OBS recording of a Strudel session with a PowerShell one-liner.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

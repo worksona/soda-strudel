@@ -1,0 +1,21 @@
+id: RES-L-385
+kind: research-candidate
+mandate_id: RES-M-001
+name: Live coding workshop @ CSB Cantiere Sanbernardo
+aliases: []
+type: other
+profile:
+  kind: event
+  title: Live coding workshop @ CSB Cantiere Sanbernardo
+  author: relay@chefa.re
+  url: https://chefa.re/event/live-coding-workshop-csb
+  date: '2026-10-22'
+  license: none stated
+  platform: mastodon
+  note: TOPLAP Italia season workshop (Oct 27 2026).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

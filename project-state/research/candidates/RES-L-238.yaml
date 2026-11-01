@@ -1,0 +1,23 @@
+id: RES-L-238
+kind: research-candidate
+mandate_id: RES-M-001
+name: I attempted an EPIC Hans Zimmer style score in Strudel
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: I attempted an EPIC Hans Zimmer style score in Strudel
+  author: Iganu music
+  url: https://www.youtube.com/watch?v=4mm1tPSxoUs
+  date: '2026-07-31'
+  genre: film score (inferred)
+  license: none stated
+  platform: channel-rss
+  note: Short performance in film score — hear what a finished Strudel piece in this style sounds like and how it's
+    arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-388
+kind: research-candidate
+mandate_id: RES-M-001
+name: Philly Electronic Music Club – Strudel 101 classes (Nov 5, Nov 24)
+aliases: []
+type: other
+profile:
+  kind: event
+  title: Philly Electronic Music Club – Strudel 101 classes (Nov 5, Nov 24)
+  author: pemc@jawns.club
+  url: https://jawns.club/@pemc/117537623064236548
+  date: '2026-10-31'
+  level: beginner
+  license: none stated
+  platform: mastodon
+  note: Pay-what-you-want beginner classes in Philadelphia.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

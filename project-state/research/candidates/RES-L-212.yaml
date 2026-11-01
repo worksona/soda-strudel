@@ -1,0 +1,23 @@
+id: RES-L-212
+kind: research-candidate
+mandate_id: RES-M-001
+name: Break Processing With Strudel.cc (Beginners)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Break Processing With Strudel.cc (Beginners)
+  author: Groovin in G
+  url: https://www.youtube.com/watch?v=JNP-1AN1xQM
+  date: '2025-11-30'
+  genre: breakbeat (inferred)
+  level: first steps
+  license: none stated
+  platform: search
+  note: Processing chopped breaks (effects, rearranging slices) — a short follow-on to the break-chopping lesson.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

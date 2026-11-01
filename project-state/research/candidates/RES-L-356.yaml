@@ -1,0 +1,22 @@
+id: RES-L-356
+kind: research-candidate
+mandate_id: RES-M-001
+name: Apfelstrudel (Strudel for CoreMIDI with accurate timing via a headless V8 in deno_core)
+aliases: []
+type: site
+profile:
+  kind: tool
+  title: Apfelstrudel (Strudel for CoreMIDI with accurate timing via a headless V8 in deno_core)
+  author: coignard
+  url: https://uzu.lurk.org/t/apfelstrudel-strudel-for-coremidi-with-accurate-timing-via-a-headless-v8-in-deno-core/6189
+  date: '2026-08-03'
+  license: none stated
+  platform: forum
+  note: macOS tool running Strudel headless for tightly-timed CoreMIDI output (built for MIDI pipe organs); demo
+    video.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,24 @@
+id: RES-L-012
+kind: research-candidate
+mandate_id: RES-M-001
+name: Blackbird (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Blackbird (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/blackbird.js
+  date: '2026-05-19'
+  genre: folk-pop (inferred)
+  license: none stated
+  original_artist: Paul McCartney (Beatles)
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Paul McCartney (Beatles); marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

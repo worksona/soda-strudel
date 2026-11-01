@@ -1,0 +1,28 @@
+id: RES-F-038
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-005
+answers:
+- Q3
+- Q5
+claim: capoeira_strudel cites a Splice pack as a source
+evidence:
+- excerpt: splice.com/sounds/packs/rare-percussion/percussiongodz-vol-1
+  ref: https://github.com/salsicha/capoeira_strudel
+  retrieved_at: '2026-11-01'
+  source_date: '2025-09-02'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,27 @@
+id: RES-F-004
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-001
+answers:
+- Q2
+- Q3
+claim: No eefano song header carries an @license tag, and the README gives no license or reuse terms.
+evidence:
+- ref: https://github.com/eefano/strudel-songs-collection/blob/main/README.md
+  retrieved_at: '2026-11-01'
+  source_date: '2026-10-03'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: false
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

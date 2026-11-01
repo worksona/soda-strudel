@@ -1,0 +1,23 @@
+id: RES-L-338
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Coding a DISCO groove in Strudel (from scratch)  #livecoding #coding #strudel'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Coding a DISCO groove in Strudel (from scratch)  #livecoding #coding #strudel'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=9SWe6mV0Xtw
+  date: '2026-10-22'
+  genre: disco (inferred)
+  level: first steps
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: Coding a DISCO groove in Strudel (from scratch) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

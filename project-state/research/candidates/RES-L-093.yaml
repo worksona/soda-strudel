@@ -1,0 +1,23 @@
+id: RES-L-093
+kind: research-candidate
+mandate_id: RES-M-001
+name: Megalovania
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Megalovania
+  author: MariaAreadne
+  url: https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/megalovania.js
+  date: '2026-07-28'
+  genre: video game music (inferred, Undertale theme)
+  license: none stated
+  is_cover: true
+  platform: Mariaareadne1/maria-live-codes
+  note: Cover per README; header gives title and @by MariaAreadne
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

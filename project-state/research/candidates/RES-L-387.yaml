@@ -1,0 +1,22 @@
+id: RES-L-387
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudel workshop at Portland Synth Library (Nov 7)
+aliases: []
+type: other
+profile:
+  kind: event
+  title: Strudel workshop at Portland Synth Library (Nov 7)
+  author: this_xor_that@toplap.org
+  url: https://social.toplap.org/@this_xor_that/117537578967124831
+  date: '2026-10-31'
+  level: beginner
+  license: none stated
+  platform: mastodon
+  note: Intro to livecoding workshop.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-333
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'How I make my Strudel visuals 🎨 (the whole trick in 40 s) #shorts  #livecoding #coding #strudel'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'How I make my Strudel visuals 🎨 (the whole trick in 40 s) #shorts  #livecoding #coding #strudel'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=RfO-3EnI8eQ
+  date: '2026-10-18'
+  level: performer
+  license: none stated
+  platform: channel-rss
+  note: 40-second version of the Strudel + p5.js visuals trick.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,24 @@
+id: RES-L-033
+kind: research-candidate
+mandate_id: RES-M-001
+name: Gipsy Woman (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Gipsy Woman (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/gipsywoman.js
+  date: '2026-07-05'
+  genre: house (inferred)
+  license: none stated
+  original_artist: Crystal Waters
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Crystal Waters; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

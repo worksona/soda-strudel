@@ -1,0 +1,23 @@
+id: RES-L-280
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #15 glitch effect'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'Strudel Live Coding #15 glitch effect'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=5ivEVNZLDQs
+  date: '2025-09-28'
+  genre: experimental (inferred)
+  license: none stated
+  platform: search
+  note: Short performance in experimental — hear what a finished Strudel piece in this style sounds like and how
+    it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

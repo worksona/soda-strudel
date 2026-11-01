@@ -1,0 +1,30 @@
+id: RES-F-015
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-003
+answers:
+- Q1
+- Q5
+- Q6
+claim: 'Strudel adopted a ''Post-AI humane policy'': contributions including LLM-generated content are declined
+  and LLM-generated forum posts/comments get flagged and deleted.'
+evidence:
+- excerpt: Contributions including LLM-generated content will be declined.
+  ref: https://codeberg.org/uzu/strudel/src/branch/main/POLICY.md
+  retrieved_at: '2026-11-01'
+  source_date: '2026-10-28'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

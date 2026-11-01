@@ -1,0 +1,21 @@
+id: RES-L-348
+kind: research-candidate
+mandate_id: RES-M-001
+name: Strudel's Post-AI humane policy for live coding development
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Strudel's Post-AI humane policy for live coding development
+  author: yaxu
+  url: https://uzu.lurk.org/t/strudels-post-ai-humane-policy-for-live-coding-development/6251
+  date: '2026-10-28'
+  license: none stated
+  platform: forum
+  note: Maintainer announces Strudel's new contribution policy declining LLM-generated code/text; repo now on Codeberg.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

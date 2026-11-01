@@ -1,0 +1,22 @@
+id: RES-L-436
+kind: research-candidate
+mandate_id: RES-M-001
+name: Felix Roos
+aliases:
+- froos / felixroos
+type: person
+profile:
+  kind: person
+  role: maintainer
+  links:
+  - https://codeberg.org/froos
+  - https://github.com/felixroos
+  - https://strudel.cc
+  license_stated: Strudel engine AGPL-3.0; stock tunes live in the AGPL repo (no separate licence for them)
+  credit_note: Co-creator of Strudel (ICLC 2023 paper with Alex McLean). No personal credit format stated.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

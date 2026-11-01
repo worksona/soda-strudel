@@ -1,0 +1,22 @@
+id: RES-L-320
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Music Made of Code: 10-Minute Strudel Session (Lo-fi, House, Synthwave, DnB, Ambient)'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'Music Made of Code: 10-Minute Strudel Session (Lo-fi, House, Synthwave, DnB, Ambient)'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=OqTb-PqAXWo
+  date: '2026-10-11'
+  genre: drum and bass; house; synthwave (inferred)
+  license: none stated
+  platform: search
+  note: A 10-minute tour across five genres in one session — handy for comparing genre idioms side by side.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

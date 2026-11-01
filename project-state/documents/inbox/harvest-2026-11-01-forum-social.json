@@ -1,0 +1,1030 @@
+{
+ "source": "forum-social",
+ "harvested_at": "2026-11-01",
+ "items": [
+  {
+   "title": "Strudel's Post-AI humane policy for live coding development",
+   "author": "yaxu",
+   "url": "https://uzu.lurk.org/t/strudels-post-ai-humane-policy-for-live-coding-development/6251",
+   "date": "2026-10-28",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://codeberg.org/uzu/strudel/src/branch/main/POLICY.md",
+   "platform": "forum",
+   "note": "Maintainer announces Strudel's new contribution policy declining LLM-generated code/text; repo now on Codeberg."
+  },
+  {
+   "title": "Help loading samples from github",
+   "author": "Upow",
+   "url": "https://uzu.lurk.org/t/help-loading-samples-from-github/6229",
+   "date": "2026-10-13",
+   "kind": "question",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "",
+   "platform": "forum",
+   "note": "Troubleshooting thread on loading a custom GitHub sample pack (strudel.json) into the REPL; useful for sample-loading gotchas."
+  },
+  {
+   "title": "Strudel pattern thread (long-running)",
+   "author": "yaxu (thread); recent posts abalone1969, technoabu",
+   "url": "https://uzu.lurk.org/t/strudel-pattern-thread/4044",
+   "date": "2026-10-28",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "",
+   "platform": "forum",
+   "note": "Long-running community thread where people post short patterns; two new posts in Oct 2026."
+  },
+  {
+   "title": "Strudel, how to do a progressive fade out",
+   "author": "technoabu",
+   "url": "https://uzu.lurk.org/t/strudel-how-to-do-a-progressive-fade-out/6215",
+   "date": "2026-09-04",
+   "kind": "resource",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "",
+   "platform": "forum",
+   "note": "Beginner shares a technique for fading a track out over cycles, with a reply offering an alternative."
+  },
+  {
+   "title": "I'm halfway through my fourth week of trying out Strudel recipes",
+   "author": "technoabu",
+   "url": "https://uzu.lurk.org/t/im-halfway-through-my-fourth-week-of-trying-out-strudel-recipes/6214",
+   "date": "2026-09-02",
+   "kind": "song",
+   "genre": "electronic/techno",
+   "level": "beginner",
+   "links_to": "https://technoabu.codeberg.page",
+   "platform": "forum",
+   "note": "Variation of the author's 'plum strudel' piece; part of a weekly learning-diary series."
+  },
+  {
+   "title": "I'm starting my fourth week of trying out strudel recipes, and I've made a plum strudel",
+   "author": "technoabu",
+   "url": "https://uzu.lurk.org/t/im-starting-my-fourth-week-of-trying-out-strudel-recipes-and-ive-made-a-plum-strudel/6212",
+   "date": "2026-09-01",
+   "kind": "song",
+   "genre": "electronic/techno",
+   "level": "beginner",
+   "links_to": "https://technoabu.codeberg.page",
+   "platform": "forum",
+   "note": "Full piece using randomised parameters at 128 BPM; author links their Codeberg page and YouTube."
+  },
+  {
+   "title": "Random rhythms with struct",
+   "author": "technoabu",
+   "url": "https://uzu.lurk.org/t/random-rhythms-with-struct/6209",
+   "date": "2026-08-31",
+   "kind": "resource",
+   "genre": "",
+   "level": "intermediate",
+   "links_to": "",
+   "platform": "forum",
+   "note": "Explainer on generating changing random step rhythms by mapping random integers to binary structure."
+  },
+  {
+   "title": "I'm in my third week exploring strudel, and this is the result",
+   "author": "technoabu",
+   "url": "https://uzu.lurk.org/t/im-in-my-third-week-exploring-strudel-and-this-is-the-result/6205",
+   "date": "2026-08-24",
+   "kind": "song",
+   "genre": "techno",
+   "level": "beginner",
+   "links_to": "https://technoabu.codeberg.page",
+   "platform": "forum",
+   "note": "Week-3 piece; loads the author's own GitHub sample pack."
+  },
+  {
+   "title": "After a week of experimenting with strudel",
+   "author": "technoabu",
+   "url": "https://uzu.lurk.org/t/after-a-week-of-experimenting-with-strudel/6194",
+   "date": "2026-08-16",
+   "kind": "song",
+   "genre": "techno",
+   "level": "beginner",
+   "links_to": "",
+   "platform": "forum",
+   "note": "First piece in the author's learning diary; four-on-the-floor kit and constants-per-instrument layout."
+  },
+  {
+   "title": "Apfelstrudel (Strudel for CoreMIDI with accurate timing via a headless V8 in deno_core)",
+   "author": "coignard",
+   "url": "https://uzu.lurk.org/t/apfelstrudel-strudel-for-coremidi-with-accurate-timing-via-a-headless-v8-in-deno-core/6189",
+   "date": "2026-08-03",
+   "kind": "tool",
+   "genre": "",
+   "level": "",
+   "links_to": "https://codeberg.org/coignard/apfelstrudel ; https://www.youtube.com/watch?v=wZiTkvaoZks",
+   "platform": "forum",
+   "note": "macOS tool running Strudel headless for tightly-timed CoreMIDI output (built for MIDI pipe organs); demo video."
+  },
+  {
+   "title": "Articulation - tenuto (2)",
+   "author": "Uzunew",
+   "url": "https://uzu.lurk.org/t/articulation-tenuto-2/6200",
+   "date": "2026-08-22",
+   "kind": "question",
+   "genre": "",
+   "level": "",
+   "links_to": "",
+   "platform": "forum",
+   "note": "Asks how to get a fixed pre-onset gap per note independent of note length (legato only scales)."
+  },
+  {
+   "title": "Pattern sequencing in Strudel - how to play full cycles sequentially?",
+   "author": "Kizayashu (thread revived by technoabu, Dus)",
+   "url": "https://uzu.lurk.org/t/pattern-sequencing-in-strudel-how-to-play-full-cycles-sequentially/5777",
+   "date": "2026-08-27",
+   "kind": "question",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "",
+   "platform": "forum",
+   "note": "Older thread with new 2026 answers on arranging sections so each plays fully before the next."
+  },
+  {
+   "title": "Gain() works, amp() doesn't?",
+   "author": "captainjacksnap",
+   "url": "https://uzu.lurk.org/t/gain-works-amp-doesnt/6007",
+   "date": "2026-08-18",
+   "kind": "question",
+   "genre": "",
+   "level": "",
+   "links_to": "",
+   "platform": "forum",
+   "note": "gain vs amp behaviour; reply added Aug 2026."
+  },
+  {
+   "title": "What is equivalent to Strudel's chord function in Tidal?",
+   "author": "cowgirl-coding",
+   "url": "https://uzu.lurk.org/t/what-is-equivalent-to-strudels-chord-function-in-tidal/6162",
+   "date": "2026-05-31",
+   "kind": "question",
+   "genre": "",
+   "level": "",
+   "links_to": "",
+   "platform": "forum",
+   "note": "Porting chord/voicing usage between Strudel and Tidal; two answers."
+  },
+  {
+   "title": "Contribution; error handling",
+   "author": "Maxkore",
+   "url": "https://uzu.lurk.org/t/contribution-error-handling/6135",
+   "date": "2026-05-06",
+   "kind": "question",
+   "genre": "",
+   "level": "",
+   "links_to": "",
+   "platform": "forum",
+   "note": "University student proposing friendlier REPL error messages; notes Strudel is used in a university class."
+  },
+  {
+   "title": "Travel piece made on a bus in Nova Scotia",
+   "author": "draco@sonomu.club",
+   "url": "https://sonomu.club/@draco/117017580688829885",
+   "date": "2026-08-01",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Shares a chord/arp piece as a strudel.cc share link."
+  },
+  {
+   "title": "Piece made at Halifax airport",
+   "author": "draco@sonomu.club",
+   "url": "https://sonomu.club/@draco/117113146024048382",
+   "date": "2026-08-17",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Second in the author's 'strudel while travelling' habit."
+  },
+  {
+   "title": "Infatuated with Strudel (video + piece)",
+   "author": "pikesley@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@pikesley/117020776016854082",
+   "date": "2026-08-01",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "https://www.youtube.com/watch?v=bewbHpkoN58 ; strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Shares a YouTube video and a modal piece."
+  },
+  {
+   "title": "Little Fluffy Clouds study",
+   "author": "pikesley@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@pikesley/117144987001695666",
+   "date": "2026-08-23",
+   "kind": "song",
+   "genre": "ambient house",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Recreation/homage riffing on The Orb; part of a frequent series of shared sketches by this author (≈20 posts Aug–Nov)."
+  },
+  {
+   "title": "Flora Purim / DJ Food / Bomb the Bass homage",
+   "author": "pikesley@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@pikesley/117118727953832700",
+   "date": "2026-08-18",
+   "kind": "song",
+   "genre": "breaks",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Breakbeat/sample-collage sketch."
+  },
+  {
+   "title": "Fila-Brazilia-esque grooves",
+   "author": "pikesley@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@pikesley/117254321115034424",
+   "date": "2026-09-11",
+   "kind": "song",
+   "genre": "downtempo",
+   "level": "",
+   "links_to": "tinyurl → strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Heavy downtempo groove sketch."
+  },
+  {
+   "title": "Nintendo-ish bleeps",
+   "author": "pikesley@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@pikesley/117263822314490180",
+   "date": "2026-09-13",
+   "kind": "song",
+   "genre": "chiptune",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Chiptune-flavoured sketch."
+  },
+  {
+   "title": "Sunday afternoon bleeps",
+   "author": "pikesley@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@pikesley/117541644299059584",
+   "date": "2026-11-01",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Latest in the author's series, framed as a pro-process statement."
+  },
+  {
+   "title": "Pointer to Switch Angel",
+   "author": "simonzerafa@infosec.exchange",
+   "url": "https://infosec.exchange/@simonzerafa/117030611290390101",
+   "date": "2026-08-03",
+   "kind": "resource",
+   "genre": "trance/electronic",
+   "level": "",
+   "links_to": "https://youtube.com/@switch-angel",
+   "platform": "mastodon",
+   "note": "Recommends Switch Angel's annotated live Strudel performances."
+  },
+  {
+   "title": "Switch Angel documentary",
+   "author": "phranck@oldbytes.space",
+   "url": "https://oldbytes.space/@phranck/117441946805166445",
+   "date": "2026-10-14",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://www.youtube.com/watch?v=HMUZ01p0akw",
+   "platform": "mastodon",
+   "note": "Shares a mini-documentary on Switch Angel; also recommended by another user on 2026-10-24."
+  },
+  {
+   "title": "Switch Angel – Coding Trance (album)",
+   "author": "janli_@mas.to",
+   "url": "https://mas.to/@janli_/117432608990866519",
+   "date": "2026-10-13",
+   "kind": "song",
+   "genre": "trance",
+   "level": "",
+   "links_to": "https://jaderose.bandcamp.com/album/coding-trance-album",
+   "platform": "mastodon",
+   "note": "Bandcamp album of trance coded in Strudel."
+  },
+  {
+   "title": "Teesside Synth Club – Strudel starter session",
+   "author": "jtruk@mastodon.social",
+   "url": "https://mastodon.social/@jtruk/117043397928870998",
+   "date": "2026-08-05",
+   "kind": "event",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "https://www.eventbrite.co.uk/e/teesside-synth-club-strudel-101-tickets-1996642424239",
+   "platform": "mastodon",
+   "note": "New UK meetup whose first event is a Strudel 101 session."
+  },
+  {
+   "title": "MusicRadar rave sample pack loaded into Strudel",
+   "author": "jtruk@mastodon.social",
+   "url": "https://mastodon.social/@jtruk/117116856160390017",
+   "date": "2026-08-18",
+   "kind": "samples",
+   "genre": "rave",
+   "level": "",
+   "links_to": "https://www.musicradar.com/music-tech/samples/sampleradar-505-free-rave-synths-samples",
+   "platform": "mastodon",
+   "note": "Points to a free rave-synth sample pack and a share link using it."
+  },
+  {
+   "title": "Bonkwave samples as a Strudel sample map",
+   "author": "fleuron@mas.to",
+   "url": "https://mas.to/@fleuron/117140446001019784",
+   "date": "2026-08-22",
+   "kind": "samples",
+   "genre": "",
+   "level": "",
+   "links_to": "strudel.cc share link (loads github sample map)",
+   "platform": "mastodon",
+   "note": "Author uploaded a sample set with a strudel.json so it loads by name in the REPL."
+  },
+  {
+   "title": "Akai APC Mini mk2 controller template",
+   "author": "jtruk@mastodon.social",
+   "url": "https://mastodon.social/@jtruk/117365418580135340",
+   "date": "2026-10-01",
+   "kind": "tool",
+   "genre": "",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Share link with a header explaining how to drive Strudel from an APC Mini mk2 (Chrome needed for MIDI)."
+  },
+  {
+   "title": "Zalasur live streams – Strudel live coding",
+   "author": "zalasur@owncast.zalasur.media",
+   "url": "https://owncast.zalasur.media/federation/IWhsUcyDR",
+   "date": "2026-08-05",
+   "kind": "event",
+   "genre": "",
+   "level": "",
+   "links_to": "https://owncast.zalasur.media/ ; https://peertube.zalasur.media/w/rCBR2tt1jVZbdAgzXiFWtf",
+   "platform": "mastodon",
+   "note": "Recurring Owncast streams with PeerTube archives (sample-free session, voice session, etc.)."
+  },
+  {
+   "title": "From-scratch live coding screen recording",
+   "author": "bornach@vis.social",
+   "url": "https://vis.social/@bornach/117120885512564044",
+   "date": "2026-08-19",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://youtu.be/rW4smgaeGvw",
+   "platform": "mastodon",
+   "note": "Session starting from an empty REPL; the author also posts a series on makertube.net."
+  },
+  {
+   "title": "Creating AABA melody from Euclidean rhythms",
+   "author": "bornach@makertube.net",
+   "url": "https://makertube.net/w/kCQbLBwm7w7efY4jGE25iT",
+   "date": "2026-10-17",
+   "kind": "resource",
+   "genre": "",
+   "level": "intermediate",
+   "links_to": "https://makertube.net/w/kCQbLBwm7w7efY4jGE25iT ; https://youtu.be/3WAXIb581sQ",
+   "platform": "mastodon",
+   "note": "Tutorial-style video on building AABA leads from Euclidean rhythms."
+  },
+  {
+   "title": "Sequencing external music gear from the Strudel REPL (video)",
+   "author": "bornach@vis.social",
+   "url": "https://vis.social/@bornach/117404958044065706",
+   "date": "2026-10-08",
+   "kind": "resource",
+   "genre": "",
+   "level": "intermediate",
+   "links_to": "https://youtu.be/yWaioRRIzmc",
+   "platform": "mastodon",
+   "note": "Video on using Strudel to drive hardware via MIDI."
+  },
+  {
+   "title": "7th/9th chord progression study (video)",
+   "author": "bornach@vis.social",
+   "url": "https://vis.social/@bornach/117251275510104666",
+   "date": "2026-09-11",
+   "kind": "resource",
+   "genre": "jazz-ish",
+   "level": "",
+   "links_to": "https://youtu.be/GQ2lJXye9Jg",
+   "platform": "mastodon",
+   "note": "Video on building a jazzy chord sequence in Strudel."
+  },
+  {
+   "title": "Glossing's Strudel videos",
+   "author": "pikesley@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@pikesley/117093324203611482",
+   "date": "2026-08-14",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://youtu.be/11frBA9L638",
+   "platform": "mastodon",
+   "note": "Recommends Glossing's YouTube tutorial series."
+  },
+  {
+   "title": "Synth.is sounds + Strudel + Ableton Live",
+   "author": "kromosynth@sigmoid.social",
+   "url": "https://sigmoid.social/@kromosynth/117130601337375566",
+   "date": "2026-08-21",
+   "kind": "tool",
+   "genre": "",
+   "level": "",
+   "links_to": "https://www.youtube.com/watch?v=AeDGnXAlqlQ",
+   "platform": "mastodon",
+   "note": "Bridging a synth-sound live coding tool with Strudel into Ableton."
+  },
+  {
+   "title": "SwiftMusic – declarative live-coding env inspired by Strudel",
+   "author": "acb@mastodon.social",
+   "url": "https://mastodon.social/@acb/117247935646867814",
+   "date": "2026-09-10",
+   "kind": "tool",
+   "genre": "",
+   "level": "",
+   "links_to": "https://github.com/1amageek/SwiftMusic",
+   "platform": "mastodon",
+   "note": "Swift DSL influenced by Tidal/Strudel."
+  },
+  {
+   "title": "Strudel live coding at Macherdaach, Landau",
+   "author": "superdirtspatz@mastodon.social",
+   "url": "https://mastodon.social/@superdirtspatz/117316938060766980",
+   "date": "2026-09-22",
+   "kind": "event",
+   "genre": "",
+   "level": "",
+   "links_to": "https://events.ztl.space/macher2026/",
+   "platform": "mastodon",
+   "note": "Demo by Strudel contributors at a maker fair (late Sept 2026)."
+  },
+  {
+   "title": "TorontoJS talk on Strudel",
+   "author": "fabio@cosocial.ca",
+   "url": "https://cosocial.ca/@fabio/117349976860079351",
+   "date": "2026-09-28",
+   "kind": "event",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "https://guild.host/events/techtalk-inperson-september-fmijup",
+   "platform": "mastodon",
+   "note": "Meetup talk introducing live coding with Strudel (Sept 29 2026)."
+  },
+  {
+   "title": "Looptober 2026 – daily Strudel loops",
+   "author": "bryce_avx@social.toplap.org",
+   "url": "https://social.toplap.org/@bryce_avx/117368944181011720",
+   "date": "2026-10-02",
+   "kind": "song",
+   "genre": "mixed",
+   "level": "",
+   "links_to": "",
+   "platform": "mastodon",
+   "note": "31-day Looptober series (jungle, techno, microtonal 18-EDO studies, sample chops); videos attached to each post."
+  },
+  {
+   "title": "'posting strudel from scratch until I don't' series",
+   "author": "unknown_deleter@troet.cafe",
+   "url": "https://troet.cafe/@unknown_deleter/117395482311344714",
+   "date": "2026-10-06",
+   "kind": "song",
+   "genre": "mixed",
+   "level": "",
+   "links_to": "",
+   "platform": "mastodon",
+   "note": "Daily from-scratch session videos through Oct 2026 (dub, doom, MC-303 explorations)."
+  },
+  {
+   "title": "FieldFX Monday Night Bytes – 1-hour livecoded Strudel mix (demoscene)",
+   "author": "jtruk@mastodon.social",
+   "url": "https://mastodon.social/@jtruk/117461583150893493",
+   "date": "2026-10-18",
+   "kind": "event",
+   "genre": "",
+   "level": "",
+   "links_to": "https://twitch.com/fieldfxdemo ; https://scenesat.com/video-recordings/r0VjqE",
+   "platform": "mastodon",
+   "note": "Twitch stream colliding demoscene and Strudel; recording on SceneSat."
+  },
+  {
+   "title": "Live coding workshop @ CSB Cantiere Sanbernardo",
+   "author": "relay@chefa.re",
+   "url": "https://chefa.re/event/live-coding-workshop-csb",
+   "date": "2026-10-22",
+   "kind": "event",
+   "genre": "",
+   "level": "",
+   "links_to": "https://chefa.re/event/live-coding-workshop-csb ; https://toplapitalia.gitlab.io/manifest/",
+   "platform": "mastodon",
+   "note": "TOPLAP Italia season workshop (Oct 27 2026)."
+  },
+  {
+   "title": "Strudel adopts no-LLM policy (boost)",
+   "author": "mayor@banjo.town",
+   "url": "https://banjo.town/@mayor/117504093380294665",
+   "date": "2026-10-25",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://codeberg.org/uzu/strudel/src/branch/main/POLICY.md",
+   "platform": "mastodon",
+   "note": "Fediverse reaction to the new POLICY.md."
+  },
+  {
+   "title": "Strudel workshop at Portland Synth Library (Nov 7)",
+   "author": "this_xor_that@toplap.org",
+   "url": "https://social.toplap.org/@this_xor_that/117537578967124831",
+   "date": "2026-10-31",
+   "kind": "event",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "https://pools.events/event/AR4DjNem/intro-to-livecoding-making-music-with-code/",
+   "platform": "mastodon",
+   "note": "Intro to livecoding workshop."
+  },
+  {
+   "title": "Philly Electronic Music Club – Strudel 101 classes (Nov 5, Nov 24)",
+   "author": "pemc@jawns.club",
+   "url": "https://jawns.club/@pemc/117537623064236548",
+   "date": "2026-10-31",
+   "kind": "event",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "",
+   "platform": "mastodon",
+   "note": "Pay-what-you-want beginner classes in Philadelphia."
+  },
+  {
+   "title": "AI-written Strudel attempt",
+   "author": "eric@mastodon.eom.dev",
+   "url": "https://mastodon.eom.dev/@eric/117532124123362577",
+   "date": "2026-10-30",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "tinyurl → strudel.cc",
+   "platform": "mastodon",
+   "note": "Someone shares an LLM-generated Strudel piece — relevant contrast to the project's no-LLM policy."
+  },
+  {
+   "title": "Twin Shop Keepers v2",
+   "author": "esk@hachyderm.io",
+   "url": "https://hachyderm.io/@esk/117497000676703542",
+   "date": "2026-10-24",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "https://esk.to/twin-shop-keepers-v2",
+   "platform": "mastodon",
+   "note": "Revived old pattern turned into a short jam."
+  },
+  {
+   "title": "Elevator music for a game",
+   "author": "wjt@mastodon.me.uk",
+   "url": "https://mastodon.me.uk/@wjt/117128817738191223",
+   "date": "2026-08-20",
+   "kind": "song",
+   "genre": "lounge",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Cheesy elevator tune written for a game scene."
+  },
+  {
+   "title": "Ambient drone noises",
+   "author": "strdst@outerheaven.club",
+   "url": "https://outerheaven.club/objects/dd75cf2e-fc18-4e0f-968a-20d955e55914",
+   "date": "2026-08-20",
+   "kind": "song",
+   "genre": "ambient drone",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Drone sketch."
+  },
+  {
+   "title": "hellocatfood sketch",
+   "author": "hellocatfood@post.lurk.org",
+   "url": "https://post.lurk.org/@hellocatfood/117469804214641951",
+   "date": "2026-10-19",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Sketch by a lurk.org artist (also posted 2026-09-04)."
+  },
+  {
+   "title": "Amen break compression tip",
+   "author": "joeldn@en.osm.town",
+   "url": "https://en.osm.town/@joeldn/117423339530371665",
+   "date": "2026-10-11",
+   "kind": "resource",
+   "genre": "jungle/dnb",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Tip on using compressor params to tighten an amen break, with link."
+  },
+  {
+   "title": "Chaotic Caw (chebyshev waveshaping)",
+   "author": "jtruk@mastodon.social",
+   "url": "https://mastodon.social/@jtruk/117201355505744865",
+   "date": "2026-09-02",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "strudel.cc share link",
+   "platform": "mastodon",
+   "note": "Sketch exploring chebyshev shaping."
+  },
+  {
+   "title": "Zalasur: Strudel live coding (PeerTube archive)",
+   "author": "zalasur@peertube.zalasur.media",
+   "url": "https://peertube.zalasur.media/w/5TwPWJ76oKdctPPuXwgx6d",
+   "date": "2026-08-06",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://peertube.zalasur.media/w/5TwPWJ76oKdctPPuXwgx6d",
+   "platform": "mastodon",
+   "note": "Archived stream video."
+  },
+  {
+   "title": "Boards of Canada 'Olsen' cover",
+   "author": "bromethazine.bsky.social",
+   "url": "https://bsky.app/profile/bromethazine.bsky.social/post/3mt2iwhjc7c27",
+   "date": "2026-08-14",
+   "kind": "song",
+   "genre": "downtempo/IDM",
+   "level": "",
+   "links_to": "strudel.cc share link (follow-up post)",
+   "platform": "bluesky",
+   "note": "Transcription/cover of BoC's Olsen with source link and sliders (16 likes, top Strudel post)."
+  },
+  {
+   "title": "Joker & Ginz – Purple City (Strudel cover)",
+   "author": "lildata.co.uk",
+   "url": "https://bsky.app/profile/lildata.co.uk/post/3mslvhvzxms2g",
+   "date": "2026-08-08",
+   "kind": "song",
+   "genre": "dubstep",
+   "level": "",
+   "links_to": "https://strudel.cc",
+   "platform": "bluesky",
+   "note": "UK dubstep cover with video."
+  },
+  {
+   "title": "santi.codes – 'Reincarnation of the True Goddess' chiptune album made in Strudel",
+   "author": "ianthe.online",
+   "url": "https://bsky.app/profile/ianthe.online/post/3mukrwmnhzs2e",
+   "date": "2026-09-02",
+   "kind": "song",
+   "genre": "chiptune",
+   "level": "",
+   "links_to": "https://Strudel.cc",
+   "platform": "bluesky",
+   "note": "A full album coded entirely in Strudel, on streaming services/Bandcamp."
+  },
+  {
+   "title": "A day teaching myself Strudel (track)",
+   "author": "santi.codes",
+   "url": "https://bsky.app/profile/santi.codes/post/3mtdjgg4t522b",
+   "date": "2026-08-18",
+   "kind": "song",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "https://plyr.fm/track/1232",
+   "platform": "bluesky",
+   "note": "Result of first day learning; hosted on plyr.fm."
+  },
+  {
+   "title": "Spiral of Erebos in Strudel",
+   "author": "ntyn.net",
+   "url": "https://bsky.app/profile/ntyn.net/post/3mxtzkxtjyk2y",
+   "date": "2026-10-14",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "https://github.com/ntyndotnet/strudel-projects ; https://www.youtube.com/watch?v=nrt5M6SgVl0",
+   "platform": "bluesky",
+   "note": "Cover with a GitHub repo of the author's Strudel projects and a video."
+  },
+  {
+   "title": "Lattice – a Strudel fork with webmcp exposure",
+   "author": "n.zip",
+   "url": "https://bsky.app/profile/n.zip/post/3mujajdoy2k24",
+   "date": "2026-09-02",
+   "kind": "tool",
+   "genre": "",
+   "level": "",
+   "links_to": "https://lattice.dev.site",
+   "platform": "bluesky",
+   "note": "Experimental fork with a node/cluster UI and MCP hooks."
+  },
+  {
+   "title": "Shaders in Strudel",
+   "author": "rangemarten.bsky.social",
+   "url": "https://bsky.app/profile/rangemarten.bsky.social/post/3mv6nnnzd6k2e",
+   "date": "2026-09-10",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://www.youtube.com/watch?v=OzlqdyCbPV8",
+   "platform": "bluesky",
+   "note": "Video experimenting with visuals/shaders."
+  },
+  {
+   "title": "IndiaFOSS 2026 – Making music with strudel.cc workshop",
+   "author": "fossunited.mas.to.ap.brid.gy",
+   "url": "https://bsky.app/profile/fossunited.mas.to.ap.brid.gy/post/3mw5zet3ogmg2",
+   "date": "2026-09-23",
+   "kind": "event",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "",
+   "platform": "bluesky",
+   "note": "60-min workshop, Bengaluru, Sept 26 2026."
+  },
+  {
+   "title": "MAGWest – 'Let's code music with Strudel!' panel",
+   "author": "firahfabe.bsky.social",
+   "url": "https://bsky.app/profile/firahfabe.bsky.social/post/3ms4heqrp7c22",
+   "date": "2026-08-02",
+   "kind": "event",
+   "genre": "",
+   "level": "",
+   "links_to": "",
+   "platform": "bluesky",
+   "note": "Convention panel + performance, Aug 14–16 2026."
+  },
+  {
+   "title": "composition.codes – free live-coding event, Brooklyn (Nov 8)",
+   "author": "astraldastard.bsky.social",
+   "url": "https://bsky.app/profile/astraldastard.bsky.social/post/3mxtrsydb2k2k",
+   "date": "2026-10-14",
+   "kind": "event",
+   "genre": "",
+   "level": "",
+   "links_to": "https://composition.codes ; https://pools.events/event/rNQWlwqW/composition",
+   "platform": "bluesky",
+   "note": "Event co-organised at Wonderville."
+  },
+  {
+   "title": "Strudel + Hydra livecoding jams",
+   "author": "joseprzmoreno.bsky.social",
+   "url": "https://bsky.app/profile/joseprzmoreno.bsky.social/post/3mz2agt6w4c2z",
+   "date": "2026-10-29",
+   "kind": "song",
+   "genre": "algorave",
+   "level": "",
+   "links_to": "https://hydra.ojack.xyz ; https://soundcloud.com/radiodulu/valuable ; https://soundcloud.com/radiodulu/algorave-horizons",
+   "platform": "bluesky",
+   "note": "Series of audio-visual jam videos; one became a SoundCloud track."
+  },
+  {
+   "title": "Strudel soundtrack recorded via OBS + PowerShell",
+   "author": "mrpowershell.com",
+   "url": "https://bsky.app/profile/mrpowershell.com/post/3mu747tyyh227",
+   "date": "2026-08-29",
+   "kind": "tool",
+   "genre": "",
+   "level": "",
+   "links_to": "https://github.com/StartAutomating/obs-powershell",
+   "platform": "bluesky",
+   "note": "Automating OBS recording of a Strudel session with a PowerShell one-liner."
+  },
+  {
+   "title": "Music for audio-drama series made in Strudel",
+   "author": "saturdayxiii.bsky.social",
+   "url": "https://bsky.app/profile/saturdayxiii.bsky.social/post/3muwrrtjpn22o",
+   "date": "2026-09-07",
+   "kind": "song",
+   "genre": "",
+   "level": "",
+   "links_to": "https://www.youtube.com/watch?v=voAC0R4ArtE",
+   "platform": "bluesky",
+   "note": "Strudel-made scores for a dark-fiction audio-drama YouTube series (several episodes Sept–Oct)."
+  },
+  {
+   "title": "Playing with random functions",
+   "author": "ravtecyber.fish",
+   "url": "https://bsky.app/profile/ravtecyber.fish/post/3muztbchaic2c",
+   "date": "2026-09-08",
+   "kind": "song",
+   "genre": "",
+   "level": "beginner",
+   "links_to": "",
+   "platform": "bluesky",
+   "note": "Beginner video sketches series (Sept 2026)."
+  },
+  {
+   "title": "Pointer to the strudel.cc showcase page",
+   "author": "toolz.eurosky.social",
+   "url": "https://bsky.app/profile/toolz.eurosky.social/post/3mz4srmnuds2y",
+   "date": "2026-10-30",
+   "kind": "resource",
+   "genre": "",
+   "level": "",
+   "links_to": "https://strudel.cc/intro/showcase/",
+   "platform": "bluesky",
+   "note": "Recommends the official showcase as example gallery."
+  }
+ ],
+ "sources_new": [
+  {
+   "name": "uzu.lurk.org Strudel category (RSS)",
+   "url": "https://uzu.lurk.org/c/strudel/26.rss",
+   "holds": "Forum topics: shared pieces (tag 'sharing'), questions, tools ('innards'), announcements",
+   "monitor": "weekly"
+  },
+  {
+   "name": "uzu.lurk.org Strudel category (JSON API)",
+   "url": "https://uzu.lurk.org/c/strudel/26.json",
+   "holds": "Same as RSS with reply counts/bump dates; paginate ?page=N (3 pages, 74 topics total)",
+   "monitor": "weekly"
+  },
+  {
+   "name": "Mastodon #strudel (mastodon.social)",
+   "url": "https://mastodon.social/api/v1/timelines/tag/strudel?limit=40",
+   "holds": "Federated #strudel posts: share links, videos, events (mixed with pastry posts)",
+   "monitor": "weekly"
+  },
+  {
+   "name": "Mastodon #livecoding (mastodon.social)",
+   "url": "https://mastodon.social/api/v1/timelines/tag/livecoding?limit=40",
+   "holds": "Broader live coding posts incl. Strudel events",
+   "monitor": "monthly"
+  },
+  {
+   "name": "Mastodon #algorave (mastodon.social)",
+   "url": "https://mastodon.social/api/v1/timelines/tag/algorave?limit=40",
+   "holds": "Algorave events/streams",
+   "monitor": "monthly"
+  },
+  {
+   "name": "post.lurk.org #strudel",
+   "url": "https://post.lurk.org/api/v1/timelines/tag/strudel",
+   "holds": "Live-coding-community instance's federated #strudel view",
+   "monitor": "weekly"
+  },
+  {
+   "name": "post.lurk.org #livecoding",
+   "url": "https://post.lurk.org/api/v1/timelines/tag/livecoding",
+   "holds": "Live coding community posts",
+   "monitor": "monthly"
+  },
+  {
+   "name": "post.lurk.org #algorave",
+   "url": "https://post.lurk.org/api/v1/timelines/tag/algorave",
+   "holds": "Algorave events",
+   "monitor": "monthly"
+  },
+  {
+   "name": "Bluesky search 'strudel.cc' (AppView)",
+   "url": "https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=strudel.cc&sort=latest&limit=100",
+   "holds": "Bluesky posts linking strudel.cc",
+   "monitor": "weekly"
+  },
+  {
+   "name": "Bluesky tag #strudel (AppView)",
+   "url": "https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=strudel&tag=strudel&sort=latest&limit=100",
+   "holds": "#strudel-tagged posts (needs filtering: pastry)",
+   "monitor": "weekly"
+  },
+  {
+   "name": "awesome-strudel commits feed",
+   "url": "https://github.com/terryds/awesome-strudel/commits/main.atom",
+   "holds": "New curated tools/tracks added to awesome-strudel",
+   "monitor": "weekly"
+  },
+  {
+   "name": "Strudel repository on Codeberg",
+   "url": "https://codeberg.org/uzu/strudel",
+   "holds": "Canonical Strudel source, POLICY.md; project now hosted on Codeberg",
+   "monitor": "monthly"
+  }
+ ],
+ "findings": [
+  {
+   "claim": "Strudel adopted a 'Post-AI humane policy': contributions including LLM-generated content are declined and LLM-generated forum posts/comments get flagged and deleted.",
+   "url": "https://codeberg.org/uzu/strudel/src/branch/main/POLICY.md",
+   "excerpt": "Contributions including LLM-generated content will be declined.",
+   "source_date": "2026-10-28"
+  },
+  {
+   "claim": "The policy also strongly discourages importing Strudel projects into corporate AI platforms, naming GitHub; canonical repo is codeberg.org/uzu/strudel.",
+   "url": "https://uzu.lurk.org/t/strudels-post-ai-humane-policy-for-live-coding-development/6251",
+   "excerpt": "announcement by yaxu linking POLICY.md on Codeberg",
+   "source_date": "2026-10-28"
+  },
+  {
+   "claim": "awesome-strudel added Toaster (audio→Strudel transcription tool) on 2026-10-26 and midi-strudel (MIDI→Strudel converter) on 2026-09-05.",
+   "url": "https://github.com/terryds/awesome-strudel/commit/06085773532f245a3ebf67c9311aecb3c4ef8b9d",
+   "excerpt": "Add Toaster",
+   "source_date": "2026-10-26"
+  },
+  {
+   "claim": "tzwaan added source links for featured covers in awesome-strudel (Toby Fox, Pokemon, Metroid, Haydn, Crash Bandicoot).",
+   "url": "https://github.com/terryds/awesome-strudel/commit/4c95ee2bbc3677f57ec23f9e4719d1a8845c2122",
+   "excerpt": "Add source links for my featured tracks",
+   "source_date": "2026-10-07"
+  },
+  {
+   "claim": "In-person Strudel teaching is spreading: beginner workshops in Teesside, Toronto, Bengaluru, Philadelphia, Portland, Bologna/Italy and a university course.",
+   "url": "https://social.toplap.org/@this_xor_that/117537578967124831",
+   "excerpt": "We're teaching a strudel workshop next Saturday (Nov 7)",
+   "source_date": "2026-10-31"
+  }
+ ],
+ "awesome_strudel_watch": {
+  "feed": "https://github.com/terryds/awesome-strudel/commits/main.atom",
+  "last_10_commits": [
+   {
+    "date": "2026-10-26",
+    "sha": "32ef6d7",
+    "author": "terryds",
+    "message": "Merge pull request #19 from StopBanning/add-toaster"
+   },
+   {
+    "date": "2026-10-26",
+    "sha": "0608577",
+    "author": "StopBanning",
+    "message": "Add Toaster"
+   },
+   {
+    "date": "2026-10-07",
+    "sha": "429f4e7",
+    "author": "terryds",
+    "message": "Merge pull request #18 from tzwaan/main"
+   },
+   {
+    "date": "2026-10-07",
+    "sha": "4c95ee2",
+    "author": "tzwaan",
+    "message": "Add source links for my featured tracks"
+   },
+   {
+    "date": "2026-09-07",
+    "sha": "62707ee",
+    "author": "terryds",
+    "message": "Merge pull request #17 from beejsbj/add-midi-strudel"
+   },
+   {
+    "date": "2026-09-05",
+    "sha": "ad0b3cf",
+    "author": "beejsbj",
+    "message": "Describe midi-strudel directly"
+   },
+   {
+    "date": "2026-09-05",
+    "sha": "1ec0b30",
+    "author": "beejsbj",
+    "message": "Focus entry on unique capabilities"
+   },
+   {
+    "date": "2026-09-05",
+    "sha": "eb93baf",
+    "author": "beejsbj",
+    "message": "State midi-strudel capabilities directly"
+   },
+   {
+    "date": "2026-09-05",
+    "sha": "e060a66",
+    "author": "beejsbj",
+    "message": "Clarify midi-strudel differentiators"
+   },
+   {
+    "date": "2026-09-05",
+    "sha": "17808ea",
+    "author": "beejsbj",
+    "message": "Add midi-strudel"
+   }
+  ],
+  "new_entries": [
+   {
+    "name": "Toaster",
+    "url": "https://github.com/StopBanning/toaster",
+    "kind": "tool"
+   },
+   {
+    "name": "midi-strudel",
+    "url": "https://github.com/beejsbj/midi-strudel",
+    "kind": "tool"
+   }
+  ]
+ },
+ "notes": "Forum: Strudel category has 74 topics total across 3 JSON pages; 15 active since 2026-05-01 (all listed; questions kept where they teach a technique). Pattern code was not copied; forum items are indexed by title/link only. Mastodon: 6 tag timelines (mastodon.social + post.lurk.org × strudel/livecoding/algorave) paginated back to ~June–July 2026; 413 unique posts since 2026-08-01, 153 mention Strudel after dropping pastry posts; 40 curated. Prolific series (pikesley ≈20 sketches, bryce_avx Looptober 31 videos, unknown_deleter ≈30 from-scratch videos) are each recorded as one or a few representative items. Window covered is Aug–Oct 2026 (3 months). strudel.cc share links embed the code in the URL fragment, so they are recorded as 'strudel.cc share link' and the post URL is used instead, to avoid copying code. Bluesky: public.api.bsky.app returned HTTP 403 (Cloudflare page) and q=%23strudel returned 400 InvalidRequest; api.bsky.app worked without auth using q=strudel.cc and q=strudel&tag=strudel (96 posts since Aug 1, many bridged Mastodon posts or pastry); 15 curated. bsky.app post URLs are built from the at:// URI handle + rkey returned by the API. awesome-strudel: gh api plus Atom feed (20 entries, HTTP 200). Policy flag: Strudel's new no-LLM POLICY.md (2026-10-28) is directly relevant to soda.strudel, an AI-assisted project; it covers contributions and forum posting, not personal use, so posting AI-assisted material to uzu.lurk.org or upstream would conflict with it. Working files: raw API dumps under scratchpad/harvest/raw/ plus masto.py and build.py helper scripts."
+}

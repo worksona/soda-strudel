@@ -1,0 +1,23 @@
+id: RES-L-305
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #41: Filter Envelope for Acid Techno | lpenv / lpa / lpd / lps / lpr'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #41: Filter Envelope for Acid Techno | lpenv / lpa / lpd / lps / lpr'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=8v4vWwC5XCo
+  date: '2026-04-29'
+  genre: acid techno; techno (inferred)
+  level: performer
+  license: none stated
+  platform: channel-rss
+  note: Filter envelopes on a bassline for acid-techno squelch.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

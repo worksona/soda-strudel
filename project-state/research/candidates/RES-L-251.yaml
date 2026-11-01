@@ -1,0 +1,22 @@
+id: RES-L-251
+kind: research-candidate
+mandate_id: RES-M-001
+name: Creating Beats & Rhythms in STRUDEL
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Creating Beats & Rhythms in STRUDEL
+  author: Switch Angel
+  url: https://www.youtube.com/watch?v=sefJz9biLCY
+  date: '2025-03-28'
+  level: first steps
+  license: none stated
+  platform: search
+  note: Switch Angel’s beginner walk-through of drum patterns and rhythm in Strudel.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

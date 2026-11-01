@@ -1,0 +1,24 @@
+id: RES-L-006
+kind: research-candidate
+mandate_id: RES-M-001
+name: Another Satellite (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Another Satellite (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/anothersatellite.js
+  date: '2024-07-03'
+  genre: new wave / art pop (inferred)
+  license: none stated
+  original_artist: XTC
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by XTC; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,21 @@
+id: RES-L-395
+kind: research-candidate
+mandate_id: RES-M-001
+name: Chaotic Caw (chebyshev waveshaping)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Chaotic Caw (chebyshev waveshaping)
+  author: jtruk@mastodon.social
+  url: https://mastodon.social/@jtruk/117201355505744865
+  date: '2026-09-02'
+  license: none stated
+  platform: mastodon
+  note: Sketch exploring chebyshev shaping.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

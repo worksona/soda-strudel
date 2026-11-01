@@ -1,0 +1,22 @@
+id: RES-L-367
+kind: research-candidate
+mandate_id: RES-M-001
+name: Switch Angel – Coding Trance (album)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Switch Angel – Coding Trance (album)
+  author: janli_@mas.to
+  url: https://mas.to/@janli_/117432608990866519
+  date: '2026-10-13'
+  genre: trance
+  license: none stated
+  platform: mastodon
+  note: Bandcamp album of trance coded in Strudel.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

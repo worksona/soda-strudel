@@ -1,0 +1,21 @@
+id: RES-L-418
+kind: research-candidate
+mandate_id: RES-M-001
+name: Low Tide Radio
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Low Tide Radio
+  author: Stefanos Amanuel (ipkstef)
+  url: https://github.com/ipkstef/strudel-sessions/blob/main/liquid/low-tide-radio.txt
+  date: '2026-09-11'
+  genre: 'UK bass: liquid drum & bass (vocal)'
+  license: CC-BY-NC-SA-4.0 (stated in file header)
+  note: Liquid DnB original that loads Switch Angel's prebake script and pad samples.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

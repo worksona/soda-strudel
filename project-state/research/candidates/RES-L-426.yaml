@@ -1,0 +1,22 @@
+id: RES-L-426
+kind: research-candidate
+mandate_id: RES-M-001
+name: Song Sanctuary theme
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Song Sanctuary theme
+  author: Will Thompson (The Threadbare Authors)
+  url: https://github.com/endlessm/threadbare/blob/main/assets/first_party/music/SongSanctuary.strudel.js
+  date: '2026-06-02'
+  genre: world / hand percussion (shaker, clave, bongo) game score
+  license: CC-BY-SA-4.0 (SPDX header; REUSE-compliant repo)
+  note: 'Game score for Endless Access''s open-source game Threadbare, written in Strudel. Licensing is very clean:
+    SPDX header plus a README licence section.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

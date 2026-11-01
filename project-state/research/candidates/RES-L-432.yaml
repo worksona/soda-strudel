@@ -1,0 +1,22 @@
+id: RES-L-432
+kind: research-candidate
+mandate_id: RES-M-001
+name: let code die v1.1 (pastagang album corpus)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: let code die v1.1 (pastagang album corpus)
+  author: pastagang (collective)
+  url: https://codeberg.org/pastagang/pastagang/src/branch/pages/album
+  date: '2025-01-29'
+  genre: ambient-generative / collaborative jam
+  license: 'informal: LICENSE.md reads only ''do it'''
+  note: 'Index of 36 strudel.cc share links from pastagang''s nudel jams, plus a CSV dump of the code. Collective
+    authorship: credit ''pastagang''.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

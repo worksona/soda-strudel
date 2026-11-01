@@ -1,0 +1,21 @@
+id: RES-L-384
+kind: research-candidate
+mandate_id: RES-M-001
+name: FieldFX Monday Night Bytes – 1-hour livecoded Strudel mix (demoscene)
+aliases: []
+type: other
+profile:
+  kind: event
+  title: FieldFX Monday Night Bytes – 1-hour livecoded Strudel mix (demoscene)
+  author: jtruk@mastodon.social
+  url: https://mastodon.social/@jtruk/117461583150893493
+  date: '2026-10-18'
+  license: none stated
+  platform: mastodon
+  note: Twitch stream colliding demoscene and Strudel; recording on SceneSat.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

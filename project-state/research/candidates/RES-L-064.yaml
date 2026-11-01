@@ -1,0 +1,24 @@
+id: RES-L-064
+kind: research-candidate
+mandate_id: RES-M-001
+name: Pyramid Song (wip)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Pyramid Song (wip)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/pyramidsong.js
+  date: '2024-07-07'
+  genre: art rock (inferred)
+  license: none stated
+  original_artist: Radiohead
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Radiohead; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-286
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #21 Strudel as midi controller'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #21 Strudel as midi controller'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=YYVSyQWKzM8
+  date: '2025-11-03'
+  level: performer
+  license: none stated
+  platform: search
+  note: Using Strudel as a MIDI controller for outboard gear.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-290
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #25 Strudel WaveTable Synthesis'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #25 Strudel WaveTable Synthesis'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=_2MHYkuhEx0
+  date: '2025-11-24'
+  level: performer
+  license: none stated
+  platform: search
+  note: 'Guided build: Strudel Live Coding  Strudel WaveTable Synthesis — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

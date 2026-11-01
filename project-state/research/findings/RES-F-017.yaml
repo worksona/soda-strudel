@@ -1,0 +1,30 @@
+id: RES-F-017
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-003
+answers:
+- Q1
+- Q5
+- Q6
+claim: awesome-strudel added Toaster (audio→Strudel transcription tool) on 2026-10-26 and midi-strudel (MIDI→Strudel
+  converter) on 2026-09-05.
+evidence:
+- excerpt: Add Toaster
+  ref: https://github.com/terryds/awesome-strudel/commit/06085773532f245a3ebf67c9311aecb3c4ef8b9d
+  retrieved_at: '2026-11-01'
+  source_date: '2026-10-26'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

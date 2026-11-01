@@ -1,5 +1,5 @@
 # soda.strudel repertoire catalogue – RES-M-001. Generated 2026-11-01 from awesome-strudel and the
-# sources document; audited (links, licenses, dates) the same day. Code is never copied here.
+# sources document; audited (links, licences, dates) the same day; sound banks rights-checked. Code is never copied here.
 title: soda.strudel repertoire catalogue
 updated: '2026-11-01'
 mandate: RES-M-001
@@ -45,6 +45,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #12'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-002
   type: song
   title: Flatrave
@@ -65,6 +66,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #4'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-003
   type: song
   title: Gorillaz – Feel Good Inc (cover)
@@ -108,6 +110,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 31)
   status: catalogued
+  family: pop
 - id: REP-S-004
   type: song
   title: Coding AMBIENT Music in Strudel (from scratch)
@@ -128,6 +131,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #17'
   key_starting: true
   status: catalogued
+  family: ambient
 - id: REP-S-005
   type: song
   title: Radiohead – Pyramid Song
@@ -158,6 +162,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 19)
   status: catalogued
+  family: pop
 - id: REP-S-006
   type: song
   title: Radiohead - Everything in its right place
@@ -193,6 +198,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 29)
   status: catalogued
+  family: pop
 - id: REP-S-007
   type: song
   title: Amen break SPEEDRUN
@@ -213,6 +219,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #14'
   key_starting: true
   status: catalogued
+  family: bass
 - id: REP-S-008
   type: song
   title: 'Dmitri Shostakovich – Waltz #2'
@@ -249,6 +256,7 @@ songs:
   learn: tempo changes with cps functions
   key_starting: true
   status: catalogued
+  family: classical
 - id: REP-S-009
   type: song
   title: 'Joseph Haydn - Keyboard sonata #49 (Eb Maj) (3rd movement) (cover)'
@@ -285,6 +293,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 38)
   status: catalogued
+  family: classical
 - id: REP-S-010
   type: song
   title: Bass fuge
@@ -305,6 +314,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #5'
   key_starting: true
   status: catalogued
+  family: classical
 - id: REP-S-011
   type: song
   title: Coding DRUM and BASS
@@ -325,6 +335,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #10'
   key_starting: true
   status: catalogued
+  family: bass
 - id: REP-S-012
   type: song
   title: Belldub
@@ -345,6 +356,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #3'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-013
   type: song
   title: 'Strudel Live Coding #39: Dark Dub Techno'
@@ -365,6 +377,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #18'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-014
   type: song
   title: Vardis Quo
@@ -410,6 +423,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 32)
   status: catalogued
+  family: dance
 - id: REP-S-015
   type: song
   title: Bug From Heaven (cover)
@@ -440,6 +454,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 17)
   status: catalogued
+  family: dance
 - id: REP-S-016
   type: song
   title: Grimes – Music 4 Machines (cover)
@@ -471,6 +486,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 15)
   status: catalogued
+  family: dance
 - id: REP-S-017
   type: song
   title: Corona – The Rhythm of the Night
@@ -501,6 +517,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 20)
   status: catalogued
+  family: dance
 - id: REP-S-018
   type: song
   title: 'dough dream #1 – strudel jam 12/03/23'
@@ -521,6 +538,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #21'
   key_starting: true
   status: catalogued
+  family: ambient
 - id: REP-S-019
   type: song
   title: Dinofunk
@@ -541,6 +559,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #7'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-020
   type: song
   title: Random bells
@@ -561,6 +580,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #6'
   key_starting: true
   status: catalogued
+  family: ambient
 - id: REP-S-021
   type: song
   title: Technotronic – Pump Up The Jam (cover)
@@ -591,6 +611,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 21)
   status: catalogued
+  family: dance
 - id: REP-S-022
   type: song
   title: Coding a Lo-fi Hip Hop Beat in Strudel (from scratch)
@@ -611,6 +632,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #16'
   key_starting: true
   status: catalogued
+  family: pop
 - id: REP-S-023
   type: song
   title: Strudel coding house music
@@ -631,6 +653,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #19'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-024
   type: song
   title: Charli XCX – 360 (cover / remix)
@@ -661,6 +684,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 16)
   status: catalogued
+  family: pop
 - id: REP-S-025
   type: song
   title: Giant Steps
@@ -681,6 +705,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #9'
   key_starting: true
   status: catalogued
+  family: classical
 - id: REP-S-026
   type: song
   title: 'Chopping jungle breaks in #STRUDEL'
@@ -701,6 +726,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #15'
   key_starting: true
   status: catalogued
+  family: bass
 - id: REP-S-027
   type: song
   title: Amensister
@@ -721,6 +747,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #2'
   key_starting: true
   status: catalogued
+  family: bass
 - id: REP-S-028
   type: song
   title: Lounge sponge
@@ -741,6 +768,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #8'
   key_starting: true
   status: catalogued
+  family: classical
 - id: REP-S-029
   type: song
   title: Only for the DMG 101 ("Only for the Weak" - In Flames) (cover)
@@ -785,6 +813,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 42)
   status: catalogued
+  family: pop
 - id: REP-S-030
   type: song
   title: Slaughter of the Toad ("Slaughter of the Soul" - At The Gates) (cover)
@@ -824,6 +853,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 43)
   status: catalogued
+  family: pop
 - id: REP-S-031
   type: song
   title: Livecoding melodic DNB music in Strudel
@@ -844,6 +874,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #11'
   key_starting: true
   status: catalogued
+  family: bass
 - id: REP-S-032
   type: song
   title: you will not steve reich your way out of it
@@ -864,6 +895,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #20'
   key_starting: true
   status: catalogued
+  family: ambient
 - id: REP-S-033
   type: song
   title: Birds of a Feather - Billie Eilish (Remake)
@@ -894,6 +926,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 26)
   status: catalogued
+  family: pop
 - id: REP-S-034
   type: song
   title: DJ_Dave – Array [Lil Data Edit] (Strudel Version)
@@ -914,6 +947,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #22'
   key_starting: true
   status: catalogued
+  family: pop
 - id: REP-S-035
   type: song
   title: New Order - Blue Monday
@@ -963,6 +997,7 @@ songs:
   learn: arrange sections and an iconic drum fill
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-036
   type: song
   title: Enjoy The Silence (coda)
@@ -983,6 +1018,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #24'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-037
   type: song
   title: Stranger Things (Netflix Series)
@@ -1013,6 +1049,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 18)
   status: catalogued
+  family: dance
 - id: REP-S-038
   type: song
   title: Caverave
@@ -1034,6 +1071,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #1'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-039
   type: song
   title: Happy Birthday
@@ -1064,6 +1102,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 22)
   status: catalogued
+  family: classical
 - id: REP-S-040
   type: song
   title: Old McDonalds
@@ -1094,6 +1133,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 24)
   status: catalogued
+  family: classical
 - id: REP-S-041
   type: song
   title: 'Coding Trance Music: in the beginning'
@@ -1114,6 +1154,7 @@ songs:
   - 'documents/inbox/strudel-repertoire-sources.md §2 #13'
   key_starting: true
   status: catalogued
+  family: dance
 - id: REP-S-042
   type: song
   title: Boulders - Crash Bandicoot (cover)
@@ -1161,6 +1202,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 39)
   status: catalogued
+  family: game
 - id: REP-S-043
   type: song
   title: Toby Fox - Home (cover)
@@ -1202,6 +1244,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 34)
   status: catalogued
+  family: game
 - id: REP-S-044
   type: song
   title: Toby Fox - Megalovania (cover)
@@ -1247,6 +1290,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 33)
   status: catalogued
+  family: game
 - id: REP-S-045
   type: song
   title: Toby Fox – Megalovania (cover)
@@ -1300,6 +1344,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 30)
   status: catalogued
+  family: game
 - id: REP-S-046
   type: song
   title: Determination - Toby Fox (cover)
@@ -1337,6 +1382,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 27)
   status: catalogued
+  family: game
 - id: REP-S-047
   type: song
   title: Goldenrod City - Pokemon (cover)
@@ -1378,6 +1424,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 37)
   status: catalogued
+  family: game
 - id: REP-S-048
   type: song
   title: Kraid's Lair - Metroid (cover)
@@ -1416,6 +1463,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 35)
   status: catalogued
+  family: game
 - id: REP-S-049
   type: song
   title: Lavender Town - Pokemon (cover)
@@ -1459,6 +1507,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 40)
   status: catalogued
+  family: game
 - id: REP-S-050
   type: song
   title: Mt. Moon - Pokemon (cover)
@@ -1498,6 +1547,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 36)
   status: catalogued
+  family: game
 - id: REP-S-051
   type: song
   title: Super mario bros. main theme (cover)
@@ -1544,6 +1594,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 28)
   status: catalogued
+  family: game
 - id: REP-S-052
   type: song
   title: Vegetable Valley - Kirby's Adventure
@@ -1581,6 +1632,7 @@ songs:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 41)
   status: catalogued
+  family: game
 resources:
 - id: REP-R-001
   type: repository
@@ -1958,7 +2010,7 @@ sound_banks:
   - whatuneed
   - failsafe
   description: No description in the repo. 7 sample names in strudel.json.
-  rights_note: Bank names (cocaina, technologic, …) suggest samples from commercial records – check before use.
+  rights_note: No licence; 'technologic_vox' points at Daft Punk 'Technologic'; vocal stems of songs likely commercial.
   reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
@@ -1967,6 +2019,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 79)
   status: catalogued
+  origin: Not stated; look like song stems/vocals.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-002
   type: sound-bank
   title: AuditeMarlow/samples
@@ -1981,7 +2038,7 @@ sound_banks:
   - kick
   - snare
   description: Free and open source samples I made. 3 sample names in strudel.json.
-  rights_note: null
+  rights_note: MIT, author states they made the samples; generic drum one-shot names, nothing suggests sampled records.
   reuse: usable with credit
   audit:
     checked: '2026-11-01'
@@ -1990,13 +2047,20 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 80)
   status: catalogued
+  origin: Self-made by the author (README + repo description).
+  rights_check:
+    checked: '2026-11-01'
+    verdict: ship-ok
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
+  samples_line: samples('github:AuditeMarlow/samples')
+  credit_line: Drum samples by Audite Marlow (Niek den Breeje) — https://github.com/AuditeMarlow/samples — MIT
 - id: REP-B-003
   type: sound-bank
   title: AustinOliverHaskell/ms-teams-sounds-strudel
   author: AustinOliverHaskell
   url: https://github.com/AustinOliverHaskell/ms-teams-sounds-strudel
   shortcut: github:AustinOliverHaskell/ms-teams-sounds-strudel
-  license: MIT
+  license: MIT (repo) — contradicted by README
   date: repo last pushed 2025-06-18
   banks: 31
   bank_names:
@@ -2032,7 +2096,7 @@ sound_banks:
   - wishgranted
   description: 🎶🔔 Microsoft Teams original soundpack. Personal use only. ©️ Microsoft. No infringement intended. 31 sample
     names in strudel.json.
-  rights_note: 'Microsoft Teams sounds – the repo says "Personal use only" with a © notice: do not use in soda.strudel.'
+  rights_note: Microsoft-copyrighted audio; the MIT licence cannot cover it, README itself says personal use only.
   reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
@@ -2041,6 +2105,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 81)
   status: catalogued
+  origin: Microsoft Teams original sound pack.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-004
   type: sound-bank
   title: bruveping/RepositorioDesonidosParaExperimentar02
@@ -2053,8 +2122,8 @@ sound_banks:
   bank_names:
   - todo
   description: No description in the repo. 1 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: BBC Sound Effects are not under an open licence; redistribution by a third party is not permitted.
+  reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2062,6 +2131,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 82)
   status: catalogued
+  origin: BBC Sound Effects archive (folder name). BBC RemArc licence = personal/educational/research use only.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-005
   type: sound-bank
   title: Bubobubobubobubo/Dough-Amen
@@ -2076,7 +2150,7 @@ sound_banks:
   - amen3
   - amen2
   description: Amen breaks for Superdough 3 sample names in strudel.json.
-  rights_note: Amen break recordings – the Winstons' recording is under copyright.
+  rights_note: Amen break derivatives (commercial recording) from unattributed packs; no licence.
   reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
@@ -2085,6 +2159,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 83)
   status: catalogued
+  origin: Amen break edits, apparently from third-party break packs ('cw_' prefix).
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-006
   type: sound-bank
   title: Bubobubobubobubo/Dough-Juj
@@ -2097,8 +2176,9 @@ sound_banks:
   bank_names:
   - juj
   description: Vocal samples 1 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: Clean, self-recorded, but no licence; ask Bubobubobubobubo/Juliette Monzat to add CC0/CC-BY — strong candidate
+    once licensed.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2106,6 +2186,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 84)
   status: catalogued
+  origin: 'README: recorded by Juliette Monzat for Topos — a woman''s voice.'
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-007
   type: sound-bank
   title: eddyflux/crate
@@ -2135,8 +2220,8 @@ sound_banks:
   - crate_oh
   - crate_rd
   description: No description in the repo. 18 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence and unknown origin; kit-style names hint at third-party sample packs.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2144,6 +2229,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 85)
   status: catalogued
+  origin: Not stated; naming suggests one-shots harvested from named sample kits.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-008
   type: sound-bank
   title: EloMorelo/samples
@@ -2156,8 +2246,8 @@ sound_banks:
   bank_names:
   - vocals
   description: No description in the repo. 1 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence, origin unknown; 'bulgaria' vocals may come from a commercial choir recording.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2165,6 +2255,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 86)
   status: catalogued
+  origin: Not stated; Bulgarian vocal snippets, possibly from a choir record.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-009
   type: sound-bank
   title: emrexdeger/strudelSamples
@@ -2191,8 +2286,9 @@ sound_banks:
   - tom
   - wt_my
   description: samples for using in strudel REPL 15 sample names in strudel.json.
-  rights_note: null
-  reuse: usable with credit
+  rights_note: CC0 declared and names are generic, but no origin is stated — drum one-shots/pads may come from third-party
+    sample packs whose licences forbid redistribution; owner should listen to north/opal/scape/wt_my and ideally ask the author.
+  reuse: ask the owner before shipping
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2200,13 +2296,20 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 87)
   status: catalogued
+  origin: Not stated; uploaded via web 'Add files via upload' in Oct 2025.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: ship-after-owner-check
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
+  samples_line: samples('github:emrexdeger/strudelSamples')
+  credit_line: Samples by emrexdeger — https://github.com/emrexdeger/strudelSamples — CC0 1.0
 - id: REP-B-010
   type: sound-bank
   title: fjpolo/fjpolo-Strudel
   author: fjpolo
   url: https://github.com/fjpolo/fjpolo-Strudel
   shortcut: github:fjpolo/fjpolo-Strudel
-  license: MIT
+  license: MIT (repo); samples are Freesound under their own licences
   date: repo last pushed 2025-12-21
   banks: 3
   bank_names:
@@ -2214,8 +2317,9 @@ sound_banks:
   - chains
   - metalgrinder
   description: Strudel music 3 sample names in strudel.json.
-  rights_note: null
-  reuse: usable with credit
+  rights_note: Loading the bank pulls in a CC BY-NC sound (anvil:1) and needs per-sound CC-BY credits, not just 'MIT'; chains
+    is a 51 MB file. Could re-host the CC-BY/CC0 subset with per-sound credit instead.
+  reuse: ask the owner before shipping
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2223,6 +2327,15 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 88)
   status: catalogued
+  origin: 'Freesound: anvil:0 Benboncan #103630 CC BY 4.0; anvil:1 arnaud coutancier #388059 CC BY-NC 3.0; chains YleArkisto
+    #319483 CC BY 4.0; metalgrinder dkustic #76213 CC BY 3.0; reversedclap .Andre_Onate #163582 CC0.'
+  rights_check:
+    checked: '2026-11-01'
+    verdict: ship-after-owner-check
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
+  samples_line: samples('github:fjpolo/fjpolo-Strudel')
+  credit_line: 'Sounds via fjpolo — https://github.com/fjpolo/fjpolo-Strudel — Freesound: Benboncan (CC BY 4.0), arnaud coutancier
+    (CC BY-NC 3.0), YleArkisto (CC BY 4.0), dkustic (CC BY 3.0)'
 - id: REP-B-011
   type: sound-bank
   title: fstiffo/polifonia-samples
@@ -2235,7 +2348,8 @@ sound_banks:
   bank_names:
   - italy
   description: Samples from Polifonia Song Contest 2024 1 sample names in strudel.json.
-  rights_note: null
+  rights_note: 'CC0, contents are individual church-bell notes with heritage documentation; no commercial recordings. Repo
+    branch is master, so the github: shortcut needs the branch.'
   reuse: usable with credit
   audit:
     checked: '2026-11-01'
@@ -2244,6 +2358,14 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 89)
   status: catalogued
+  origin: Church bell recordings for the Polifonia Song Contest 2024 (EU Polifonia project); recordist not named.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: ship-ok
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
+  samples_line: samples('github:fstiffo/polifonia-samples/master')
+  credit_line: Bell samples (San Pietro, Avegno) by Francesco Stiffoni / Polifonia Song Contest 2024 — https://github.com/fstiffo/polifonia-samples
+    — CC0 1.0
 - id: REP-B-012
   type: sound-bank
   title: hvillase/cavlp-25p
@@ -2258,7 +2380,8 @@ sound_banks:
   - pelota
   - spray
   description: Creación Audiovisual con Lenguajes de Programación 3 sample names in strudel.json.
-  rights_note: null
+  rights_note: GPL-3.0 and contents are clearly foley of household objects; nothing from records. Note GPL on audio requires
+    keeping licence notice/credit.
   reuse: usable with credit
   audit:
     checked: '2026-11-01'
@@ -2267,6 +2390,14 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 90)
   status: catalogued
+  origin: Everyday-object recordings for a university live-coding course (bottle cap, ball, spray, keys, pills, whistle) —
+    self-recorded by context; not explicitly stated.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: ship-ok
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
+  samples_line: samples('github:hvillase/cavlp-25p')
+  credit_line: Object sounds by Hugo Villaseñor (hvillase), course cavlp-25p — https://github.com/hvillase/cavlp-25p — GPL-3.0
 - id: REP-B-013
   type: sound-bank
   title: k09/samples
@@ -2305,8 +2436,8 @@ sound_banks:
   - k09_017
   - k09_026
   description: No description in the repo. 27 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence and no description of contents.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2314,6 +2445,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 91)
   status: catalogued
+  origin: Not stated.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-014
   type: sound-bank
   title: kaiye10/strudelSamples
@@ -2329,7 +2465,7 @@ sound_banks:
   - idm
   - jungle
   description: No description in the repo. 4 sample names in strudel.json.
-  rights_note: Bank names (apache, jungle) suggest classic breaks from commercial records.
+  rights_note: Amen/Apache break material, commercial recordings, no licence.
   reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
@@ -2338,13 +2474,18 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 92)
   status: catalogued
+  origin: Amen break edits (same 'cw_amen' set as Dough-Amen); 'apache' references the Incredible Bongo Band break.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-015
   type: sound-bank
   title: mot4i/garden
   author: mot4i
   url: https://github.com/mot4i/garden
   shortcut: github:mot4i/garden
-  license: none stated
+  license: none stated (informal attribution grant in README)
   date: repo last pushed 2025-08-11
   banks: 13
   bank_names:
@@ -2362,7 +2503,8 @@ sound_banks:
   - loop
   - metal
   description: Tweaked DIY Sample Pack  13 sample names in strudel.json.
-  rights_note: null
+  rights_note: Author grants use/share/adapt with credit, but no formal licence; ask mot4i to confirm CC-BY 4.0 and the source
+    of the PSR loops / re-amped one-shots.
   reuse: ask the owner before shipping
   audit:
     checked: '2026-11-01'
@@ -2371,6 +2513,14 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 93)
   status: catalogued
+  origin: 'README: ''Tweaked DIY Sample Pack'', one-shots re-amped through analog gear; psr-gx76 = Yamaha PSR keyboard (loops
+    possibly its built-in patterns).'
+  rights_check:
+    checked: '2026-11-01'
+    verdict: ship-after-owner-check
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
+  samples_line: samples('github:mot4i/garden')
+  credit_line: Garden sample pack by mot4i — https://github.com/mot4i/garden — free to use with credit (per README)
 - id: REP-B-016
   type: sound-bank
   title: mysinglelise/msl-strudel-samples
@@ -2386,8 +2536,8 @@ sound_banks:
   - silverfever
   - glass
   description: samples for Strudel 4 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: Clean and self-made, but no licence — ask author to add one.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2395,6 +2545,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 94)
   status: catalogued
+  origin: Self-made from the author's own songs.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-017
   type: sound-bank
   title: Nikeryms/Samples
@@ -2407,8 +2562,8 @@ sound_banks:
   bank_names:
   - vocals
   description: No description in the repo. 1 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2416,6 +2571,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 95)
   status: catalogued
+  origin: Not stated; probably own DJ tags.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-018
   type: sound-bank
   title: prismograph/departure
@@ -2431,8 +2591,8 @@ sound_banks:
   - bass
   - pad
   description: Samples and configurations for strudel.cc song 4 sample names in strudel.json.
-  rights_note: Includes a "breaks" bank – check origin.
-  reuse: ask the owner before shipping
+  rights_note: No licence; 'breaks' may be sampled records.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2440,6 +2600,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 96)
   status: catalogued
+  origin: Own performance/resampling; 'breaks' origin unknown (often sampled breakbeats).
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-019
   type: sound-bank
   title: QuantumVillage/quantum-music
@@ -2452,8 +2617,9 @@ sound_banks:
   bank_names:
   - lucy
   description: A public repository for all of our quantum music activities 1 sample names in strudel.json.
-  rights_note: null
-  reuse: usable with credit
+  rights_note: AGPL is open, but the sounds are taken from a third party's YouTube video; AGPL doesn't clearly cover them
+    — needs OQC/QuantumVillage confirmation.
+  reuse: ask the owner before shipping
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2461,6 +2627,14 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 97)
   status: catalogued
+  origin: 'Third-party: audio from an OQC YouTube video of their ''Lucy'' quantum computer.'
+  rights_check:
+    checked: '2026-11-01'
+    verdict: ship-after-owner-check
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
+  samples_line: samples('github:QuantumVillage/quantum-music')
+  credit_line: Lucy samples (Oxford Quantum Circuits) via Quantum Village — https://github.com/QuantumVillage/quantum-music
+    — AGPL-3.0
 - id: REP-B-020
   type: sound-bank
   title: RikyBac15/samples
@@ -2502,8 +2676,8 @@ sound_banks:
   - rw-snare
   - rw-hh
   description: No description in the repo. 31 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2511,6 +2685,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 98)
   status: catalogued
+  origin: Probably own TB-303-style synth renders; not stated.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-021
   type: sound-bank
   title: salsicha/capoeira_strudel
@@ -2524,8 +2703,8 @@ sound_banks:
   - hits
   - loops
   description: Strudel repo for capoeira music 2 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: Splice content cannot be redistributed as a sample library.
+  reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2533,6 +2712,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 99)
   status: catalogued
+  origin: Splice (commercial pack, royalty-free for use in music but not for redistribution as samples) + Freesound.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-022
   type: sound-bank
   title: sonidosingapura/rochormatic
@@ -2562,7 +2746,7 @@ sound_banks:
   - ritachao
   - const
   description: No description in the repo. 18 sample names in strudel.json.
-  rights_note: Bank names (karmacoma, …) suggest samples from commercial records – check before use.
+  rights_note: Bank is built from commercial recordings.
   reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
@@ -2571,6 +2755,12 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 100)
   status: catalogued
+  origin: 'Clips of commercial records: Roni Size/Reprazent, Massive Attack ''Karmacoma'', Björk ''Army of Me'', The Prodigy
+    ''Voodoo People'', Portishead, Rita Chao, Inoue Yosui, etc.'
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-023
   type: sound-bank
   title: terrorhank/samples
@@ -2610,8 +2800,8 @@ sound_banks:
   - gothenburg03_tmhi
   - gothenburg03_tmlo
   description: No description in the repo. 28 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence and several names point at commercial tracks.
+  reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2619,6 +2809,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 101)
   status: catalogued
+  origin: Not stated; names hint at songs/artists (Gojira, 'Music Is Mine', 'Atom Bomb').
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-024
   type: sound-bank
   title: tesspilot/samples
@@ -2639,8 +2834,8 @@ sound_banks:
   - life7
   - life8
   description: No description in the repo. 9 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence; source of the 'Life' slices unknown.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2648,6 +2843,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 102)
   status: catalogued
+  origin: Not stated — slices of a track called 'Life'.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-025
   type: sound-bank
   title: tidalcycles/Dirt-Samples
@@ -2689,8 +2889,9 @@ sound_banks:
   - bass1
   - bass2
   description: Set of samples used in Dirt  218 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: Maintainer confirms unknown provenance; contains Amen and other breaks. (strudel.cc loads it by default — soda.strudel's
+    policy is stricter.)
+  reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2698,6 +2899,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 103)
   status: catalogued
+  origin: Mixed, largely unknown provenance; includes drum-machine samples and famous breaks (amencutup).
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-026
   type: sound-bank
   title: TodePond/samples
@@ -2709,8 +2915,8 @@ sound_banks:
   banks: 0
   bank_names: []
   description: for backwards compatibility with old strudel clients
-  rights_note: No strudel.json – kept for backwards compatibility with old Strudel clients.
-  reuse: ask the owner before shipping
+  rights_note: Not a sample bank; nothing to ship.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2718,6 +2924,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 104)
   status: catalogued
+  origin: Alias map 'for backwards compatibility with old strudel clients'.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-027
   type: sound-bank
   title: TristanCacqueray/mirus
@@ -2733,8 +2944,8 @@ sound_banks:
   - sillica-beads
   - haunted
   description: No description in the repo. 4 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: No licence.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2742,13 +2953,18 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 105)
   status: catalogued
+  origin: Not stated; probably own IR captures/instrument.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-028
   type: sound-bank
   title: Veikkosuhonen/graffathon25-demo
   author: Veikkosuhonen
   url: https://github.com/Veikkosuhonen/graffathon25-demo
   shortcut: github:Veikkosuhonen/graffathon25-demo
-  license: MIT
+  license: MIT (code)
   date: repo last pushed 2025-06-07
   banks: 5
   bank_names:
@@ -2758,8 +2974,9 @@ sound_banks:
   - sd
   - rd
   description: No description in the repo. 5 sample names in strudel.json.
-  rights_note: Includes an amen sample – the recording is under copyright.
-  reuse: check contents – usable with credit
+  rights_note: 'Contains the Amen break, a commercial recording; MIT on demo code does not cover it. bd/hh/sd/rd unprovenanced.
+    _base ''./'' may not resolve via the github: shortcut anyway.'
+  reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2767,6 +2984,12 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 106)
   status: catalogued
+  origin: Not stated. 'amen2' is the Amen break (The Winstons, 'Amen, Brother', 1969); bd/hh/sd/rd origin unknown (likely
+    drum-machine samples).
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-029
   type: sound-bank
   title: wyan/livecoding-samples
@@ -2779,8 +3002,8 @@ sound_banks:
   bank_names:
   - (unparsed)
   description: Samples for livecoding projects in strudel and others 1 sample names in strudel.json.
-  rights_note: null
-  reuse: ask the owner before shipping
+  rights_note: Clean content but no licence for the author's own recordings, and the strudel.json is currently broken.
+  reuse: link only
   audit:
     checked: '2026-11-01'
     link_http: 200
@@ -2788,6 +3011,11 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 107)
   status: catalogued
+  origin: Own recordings + one CC0 Freesound clip.
+  rights_check:
+    checked: '2026-11-01'
+    verdict: link-only
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json
 - id: REP-B-030
   type: sound-bank
   title: yaxu/clean-breaks
@@ -2829,8 +3057,7 @@ sound_banks:
   - amen
   - sneakin
   description: No description in the repo. 32 sample names in strudel.json.
-  rights_note: Classic breakbeats (Funky Drummer, Apache, Amen family) – the recordings are under copyright even though they
-    are widely sampled.
+  rights_note: Entirely famous breaks from commercial records.
   reuse: do not ship – rights unclear
   audit:
     checked: '2026-11-01'
@@ -2839,3 +3066,9 @@ sound_banks:
   cited_in:
   - https://github.com/terryds/awesome-strudel (README line 108)
   status: catalogued
+  origin: 'File names: The Winstons ''Amen Brother'', James Brown ''Funky Drummer'', Lyn Collins ''Think'', Incredible Bongo
+    Band ''Apache'', Sugarhill Gang, Bill Withers, Skull Snaps, etc.'
+  rights_check:
+    checked: '2026-11-01'
+    verdict: do-not-ship
+    ref: documents/inbox/harvest-2026-11-01-sound-banks.json

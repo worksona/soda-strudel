@@ -1,0 +1,23 @@
+id: RES-L-325
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'What makes music sound LO-FI? 4 tricks in code (Strudel)  #livecoding #strudel'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'What makes music sound LO-FI? 4 tricks in code (Strudel)  #livecoding #strudel'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=t37XcPqeQhc
+  date: '2026-10-13'
+  genre: lo-fi hip hop (inferred)
+  level: intermediate
+  license: none stated
+  platform: search
+  note: 'Guided build: What makes music sound LO-FI? 4 tricks in code (Strudel) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-132
+kind: research-candidate
+mandate_id: RES-M-001
+name: Solstice Stream December 2023 - Bad Cabbage - 2023-12-22 00:00
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Solstice Stream December 2023 - Bad Cabbage - 2023-12-22 00:00
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=iSoAPQ2xy_g
+  date: '2023-12-25'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: 15-minute festival-stream set (TOPLAP/Eulerroom); a model of a short structured live-coding performance.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

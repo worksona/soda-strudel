@@ -1,0 +1,22 @@
+id: RES-L-394
+kind: research-candidate
+mandate_id: RES-M-001
+name: Amen break compression tip
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Amen break compression tip
+  author: joeldn@en.osm.town
+  url: https://en.osm.town/@joeldn/117423339530371665
+  date: '2026-10-11'
+  genre: jungle/dnb
+  license: none stated
+  platform: mastodon
+  note: Tip on using compressor params to tighten an amen break, with link.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

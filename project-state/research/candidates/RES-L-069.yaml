@@ -1,0 +1,24 @@
+id: RES-L-069
+kind: research-candidate
+mandate_id: RES-M-001
+name: Savour (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Savour (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/savour.js
+  date: '2026-08-16'
+  genre: art rock / prog-punk (inferred)
+  license: none stated
+  original_artist: Tim Smith
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Tim Smith; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

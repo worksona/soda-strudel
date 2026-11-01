@@ -1,0 +1,22 @@
+id: RES-L-256
+kind: research-candidate
+mandate_id: RES-M-001
+name: Switch Angel + LO.FI.SCI.FI Livecoding music in STRUDEL
+aliases: []
+type: other
+profile:
+  kind: stream
+  title: Switch Angel + LO.FI.SCI.FI Livecoding music in STRUDEL
+  author: Switch Angel
+  url: https://www.youtube.com/watch?v=t5CkW-CKTZs
+  date: '2025-07-26'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: Long-form live session (1:47:22) — see how a performer grows and transitions patterns over time.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

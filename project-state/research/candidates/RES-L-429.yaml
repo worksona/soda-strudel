@@ -1,0 +1,21 @@
+id: RES-L-429
+kind: research-candidate
+mandate_id: RES-M-001
+name: glith (glitch)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: glith (glitch)
+  author: lou queer (kahlys)
+  url: https://github.com/kahlys/livecodingmusic/blob/main/ideas/glitch.txt
+  date: '2026-04-06'
+  genre: IDM / glitch
+  license: none stated
+  note: 140 BPM supersaw/wavetable glitch sketch; glitch_with_friends.str is in the same folder.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

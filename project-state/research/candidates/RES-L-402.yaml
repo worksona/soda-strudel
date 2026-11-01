@@ -1,0 +1,21 @@
+id: RES-L-402
+kind: research-candidate
+mandate_id: RES-M-001
+name: Lattice – a Strudel fork with webmcp exposure
+aliases: []
+type: site
+profile:
+  kind: tool
+  title: Lattice – a Strudel fork with webmcp exposure
+  author: n.zip
+  url: https://bsky.app/profile/n.zip/post/3mujajdoy2k24
+  date: '2026-09-02'
+  license: none stated
+  platform: bluesky
+  note: Experimental fork with a node/cluster UI and MCP hooks.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

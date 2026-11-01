@@ -1,0 +1,22 @@
+id: RES-L-353
+kind: research-candidate
+mandate_id: RES-M-001
+name: Random rhythms with struct
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Random rhythms with struct
+  author: technoabu
+  url: https://uzu.lurk.org/t/random-rhythms-with-struct/6209
+  date: '2026-08-31'
+  level: intermediate
+  license: none stated
+  platform: forum
+  note: Explainer on generating changing random step rhythms by mapping random integers to binary structure.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

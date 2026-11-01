@@ -1,0 +1,23 @@
+id: RES-L-109
+kind: research-candidate
+mandate_id: RES-M-001
+name: eddyflux @ solstice stream 2023
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: eddyflux @ solstice stream 2023
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=DX8E99kC7q0
+  date: '2023-12-25'
+  genre: sample loops to electronic (per showcase note)
+  license: none stated
+  platform: showcase
+  note: From-scratch session that starts with sample loops and moves into synth territory; good for watching a set
+    grow from nothing.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

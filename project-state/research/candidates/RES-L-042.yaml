@@ -1,0 +1,24 @@
+id: RES-L-042
+kind: research-candidate
+mandate_id: RES-M-001
+name: Il Re Del Mondo (intro)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Il Re Del Mondo (intro)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/ilredelmondo.js
+  date: '2024-08-07'
+  genre: Italian art pop (inferred)
+  license: none stated
+  original_artist: Franco Battiato
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Franco Battiato
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

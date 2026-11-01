@@ -1,0 +1,23 @@
+id: RES-L-247
+kind: research-candidate
+mandate_id: RES-M-001
+name: LIVE CODING VERIDIS QUO by DAFT PUNK
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: LIVE CODING VERIDIS QUO by DAFT PUNK
+  author: Maria Areadne
+  url: https://www.youtube.com/watch?v=mXhhE_PfbrM
+  date: '2026-06-04'
+  genre: synthwave (inferred)
+  license: none stated
+  platform: channel-rss
+  note: Short performance in synthwave — hear what a finished Strudel piece in this style sounds like and how it's
+    arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

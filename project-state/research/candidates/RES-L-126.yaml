@@ -1,0 +1,22 @@
+id: RES-L-126
+kind: research-candidate
+mandate_id: RES-M-001
+name: WORKSHOP // Coding Music With Strudel // Dan Gorelick and Viola He
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: WORKSHOP // Coding Music With Strudel // Dan Gorelick and Viola He
+  author: Creative Code Art
+  url: https://www.youtube.com/watch?v=oqyAJ4WeKoU
+  date: '2023-12-18'
+  level: first steps
+  license: none stated
+  platform: search
+  note: 82-minute introductory workshop by two algorave performers — the most complete beginner course in this set.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

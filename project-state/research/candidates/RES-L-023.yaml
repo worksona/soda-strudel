@@ -1,0 +1,24 @@
+id: RES-L-023
+kind: research-candidate
+mandate_id: RES-M-001
+name: Don't you ail, flash the sea to steam (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Don't you ail, flash the sea to steam (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/dontyouail.js
+  date: '2026-08-16'
+  genre: art rock / prog-punk (inferred)
+  license: none stated
+  original_artist: Spratleys Japs
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Spratleys Japs; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,23 @@
+id: RES-L-118
+kind: research-candidate
+mandate_id: RES-M-001
+name: eddyflux & superdirtspatz at the dough cathedral
+aliases: []
+type: other
+profile:
+  kind: stream
+  title: eddyflux & superdirtspatz at the dough cathedral
+  author: eddyflux
+  url: https://www.youtube.com/watch?v=GrkwKMQ7_Ys
+  date: '2023-11-27'
+  genre: experimental / beats (inferred)
+  license: none stated
+  platform: showcase
+  note: Duo improvisation session by Strudel’s co-author; shows real-time collaboration and patience in building
+    a set.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

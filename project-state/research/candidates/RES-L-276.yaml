@@ -1,0 +1,22 @@
+id: RES-L-276
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #11 sample from Github'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #11 sample from Github'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=fSXFC7-NAgE
+  date: '2025-09-08'
+  level: intermediate
+  license: none stated
+  platform: search
+  note: 'Guided build: Strudel Live Coding  sample from Github — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

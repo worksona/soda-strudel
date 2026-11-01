@@ -1,0 +1,24 @@
+id: RES-L-085
+kind: research-candidate
+mandate_id: RES-M-001
+name: Veronica In Ecstasy (Chorus)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Veronica In Ecstasy (Chorus)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/veronicainecstasy.js
+  date: '2024-03-19'
+  genre: art rock / prog-punk (inferred)
+  license: none stated
+  original_artist: Tim Smith (of Cardiacs)
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Tim Smith (of Cardiacs)
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

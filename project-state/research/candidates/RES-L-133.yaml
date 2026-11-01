@@ -1,0 +1,22 @@
+id: RES-L-133
+kind: research-candidate
+mandate_id: RES-M-001
+name: TOPLAP 20 Stream February 2024 - emptyflash - 2024-02-24 02:15
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: TOPLAP 20 Stream February 2024 - emptyflash - 2024-02-24 02:15
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=U6ov8xRvk2M
+  date: '2024-02-29'
+  genre: bytebeat (inferred)
+  license: none stated
+  platform: search
+  note: 15-minute festival-stream set (TOPLAP/Eulerroom); a model of a short structured live-coding performance.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

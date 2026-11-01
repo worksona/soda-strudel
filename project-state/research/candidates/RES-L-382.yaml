@@ -1,0 +1,23 @@
+id: RES-L-382
+kind: research-candidate
+mandate_id: RES-M-001
+name: Looptober 2026 – daily Strudel loops
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Looptober 2026 – daily Strudel loops
+  author: bryce_avx@social.toplap.org
+  url: https://social.toplap.org/@bryce_avx/117368944181011720
+  date: '2026-10-02'
+  genre: mixed
+  license: none stated
+  platform: mastodon
+  note: 31-day Looptober series (jungle, techno, microtonal 18-EDO studies, sample chops); videos attached to each
+    post.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,20 @@
+id: RES-L-458
+kind: research-candidate
+mandate_id: RES-M-001
+name: Lizzie Wilson
+aliases:
+- lwlsn
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://lwlsn.github.io/
+  license_stated: none found
+  credit_note: TidalCycles live coder and researcher; Strudel use not confirmed. Lower priority.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

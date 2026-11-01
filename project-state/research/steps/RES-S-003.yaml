@@ -1,0 +1,39 @@
+id: RES-S-003
+kind: research-step
+mandate_id: RES-M-001
+methodology_step: 2
+mode: query
+description: Harvest the uzu.lurk.org Strudel category (since 2026-05-01), Mastodon and Bluesky tags, and the awesome-strudel
+  commit feed.
+status: complete
+started_at: '2026-11-01T20:00:00Z'
+completed_at: '2026-11-01T20:00:00Z'
+inputs:
+  refs:
+  - documents/inbox/harvest-2026-11-01-forum-social.json
+  queries: []
+  urls: []
+findings_produced:
+- RES-F-015
+- RES-F-016
+- RES-F-017
+- RES-F-018
+- RES-F-019
+summary: 70 items read, 64 new candidates, 5 findings, 12 new sources to watch.
+open_followups:
+- 'Forum: Strudel category has 74 topics total across 3 JSON pages; 15 active since 2026-05-01 (all listed; questions
+  kept where they teach a technique). Pattern code was not copied; forum items are indexed by title/link only. Mastodon:
+  6 tag timelines (mastodon.social + post.lurk.org × strudel/livecoding/algorave) paginated back to ~June–July 2026;
+  413 unique posts since 2026-08-01, 153 mention Strudel after dropping pastry posts; 40 curated. Prolific series
+  (pikesley ≈20 sketches, bryce_avx Looptober 31 videos, unknown_deleter ≈30 from-scratch videos) are each recorded
+  as one or a few representative items. Window covered is Aug–Oct 2026 (3 months). strudel.cc share links embed
+  the code in the URL fragment, so they are recorded as ''strudel.cc share link'' and the post URL is used instead,
+  to avoid copying code. Bluesky: public.api.bsky.app returned HTTP 403 (Cloudflare page) and q=%23strudel returned
+  400 InvalidRequest; api.bsky.app worked without auth using q=strudel.cc and q=strudel&tag=strudel (96 posts since
+  Aug 1, many bridged Mastodon posts or pastry); 15 curated. bsky.app post URLs are built from the at:// URI handle
+  + rkey returned by the API. awesome-strudel: gh api plus Atom feed (20 entries, HTTP 200). Policy flag: Strudel''s
+  new no-LLM POLICY.md (2026-10-28) is directly relevant to soda.strudel, an AI-assisted project; it covers contributions
+  and forum posting, not personal use, so posting AI-assisted material to uzu.lurk.org or upstream would conflict
+  with it. Working files: raw API dumps under scratchpad/harvest/raw/ plus masto.py and build.py helper scripts.'
+run_id: null
+last_modified: '2026-11-01T20:00:00Z'

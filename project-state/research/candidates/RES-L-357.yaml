@@ -1,0 +1,21 @@
+id: RES-L-357
+kind: research-candidate
+mandate_id: RES-M-001
+name: Travel piece made on a bus in Nova Scotia
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Travel piece made on a bus in Nova Scotia
+  author: draco@sonomu.club
+  url: https://sonomu.club/@draco/117017580688829885
+  date: '2026-08-01'
+  license: none stated
+  platform: mastodon
+  note: Shares a chord/arp piece as a strudel.cc share link.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

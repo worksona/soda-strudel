@@ -1,0 +1,24 @@
+id: RES-L-092
+kind: research-candidate
+mandate_id: RES-M-001
+name: Intro by XX
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Intro by XX
+  author: MariaAreadne
+  url: https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/intro-by-xx.js
+  date: '2026-07-30'
+  genre: indie / dream pop instrumental (inferred)
+  license: none stated
+  original_artist: XX (The xx)
+  is_cover: true
+  platform: Mariaareadne1/maria-live-codes
+  note: Cover per README; header gives title and @by MariaAreadne
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

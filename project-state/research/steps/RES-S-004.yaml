@@ -1,0 +1,38 @@
+id: RES-S-004
+kind: research-step
+mandate_id: RES-M-001
+methodology_step: 4
+mode: query
+description: Search for original, licensed Strudel pieces in the thin genres, and list the performers, teachers
+  and maintainers to follow.
+status: complete
+started_at: '2026-11-01T20:00:00Z'
+completed_at: '2026-11-01T20:00:00Z'
+inputs:
+  refs:
+  - documents/inbox/harvest-2026-11-01-gaps-people.json
+  queries: []
+  urls: []
+findings_produced:
+- RES-F-020
+- RES-F-021
+- RES-F-022
+- RES-F-023
+- RES-F-024
+- RES-F-025
+- RES-F-026
+- RES-F-027
+summary: 24 items read, 47 new candidates, 8 findings, 12 new sources to watch.
+open_followups:
+- 'Method: gh repo and code search (setcpm/@license/@by/@genre plus --filename genre terms), the Codeberg API (the
+  HTML explore page serves junk to scrapers), the uzu.lurk.org forum search (little yield), and Strudel docs and
+  showcase sources. WebFetch hit a session limit, so pages were read with curl and the gh API. Every item URL''s
+  file was opened through the API or raw endpoints. Only headers were read, to get title, author, licence and genre;
+  no code is reproduced here. Excluded: AI-generated corpora (A5TA/strudel-agents, imMatheus/daij, LeoYeAI, nukleas/cycletron),
+  stock-tune copies (Bulka, godot-strudel, vscode forks), covers (achmad-miftahurrojak REDRED_CORTIS = CORTIS cover;
+  Bulka gallery covers), and Switch-Angel-derived files (fjpolo). Licence pattern: explicit licences are rare, and
+  most are NC (BY-NC-SA). Only fcm (CC BY-SA 4.0) and Threadbare (CC BY-SA 4.0) allow commercial reuse. Leads not
+  followed up: WilliamOpenshaw generative repo, frenata/music compositions, jacksonchen666/random-strudel-bits (AGPL,
+  pastagang shortcuts), the Strudel Discord.'
+run_id: null
+last_modified: '2026-11-01T20:00:00Z'

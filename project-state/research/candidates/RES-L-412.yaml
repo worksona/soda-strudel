@@ -1,0 +1,22 @@
+id: RES-L-412
+kind: research-candidate
+mandate_id: RES-M-001
+name: Fail-safe
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Fail-safe
+  author: DJ_Dave
+  url: https://github.com/algorave-dave/Fail-safe/blob/main/Fail-safe.js
+  date: '2026-06-12'
+  genre: techno / electronic
+  license: CC-BY-NC-SA-4.0 (stated in file header)
+  note: 'Original full set piece by DJ_Dave published as code; repo has no LICENSE file, the license is in the @license
+    tag. NC: no commercial reuse.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

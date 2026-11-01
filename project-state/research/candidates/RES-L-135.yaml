@@ -1,0 +1,22 @@
+id: RES-L-135
+kind: research-candidate
+mandate_id: RES-M-001
+name: TOPLAP Asia Stream May 2024 - eddyflux - 2024-05-25 22:00
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: TOPLAP Asia Stream May 2024 - eddyflux - 2024-05-25 22:00
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=KesA0CLSoqU
+  date: '2024-05-27'
+  genre: unclassified
+  license: none stated
+  platform: search
+  note: 15-minute festival-stream set (TOPLAP/Eulerroom); a model of a short structured live-coding performance.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

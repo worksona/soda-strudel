@@ -1,0 +1,23 @@
+id: RES-L-336
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'The DEMBOW rhythm (reggaeton) in Strudel — from scratch #livecoding #strudel'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'The DEMBOW rhythm (reggaeton) in Strudel — from scratch #livecoding #strudel'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=-8-bK51-LBM
+  date: '2026-10-20'
+  genre: reggaeton / dembow (inferred)
+  license: none stated
+  platform: channel-rss
+  note: Short performance in reggaeton / dembow — hear what a finished Strudel piece in this style sounds like and
+    how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,20 @@
+id: RES-L-441
+kind: research-candidate
+mandate_id: RES-M-001
+name: eefano
+aliases: []
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/eefano
+  - https://github.com/eefano/strudel-songs-collection
+  license_stated: none stated in strudel-songs-collection
+  credit_note: Already catalogued. Pieces carry '@by eefano'; mostly covers, with a few originals in jamsessions/.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-331
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Why does this sound SPANISH? Two notes do it (Strudel)  #livecoding #strudel #coding'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Why does this sound SPANISH? Two notes do it (Strudel)  #livecoding #strudel #coding'
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=jUepnteUbas
+  date: '2026-10-16'
+  level: intermediate
+  license: none stated
+  platform: search
+  note: 'Guided build: Why does this sound SPANISH? Two notes do it (Strudel) — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

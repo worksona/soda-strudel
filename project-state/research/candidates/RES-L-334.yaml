@@ -1,0 +1,22 @@
+id: RES-L-334
+kind: research-candidate
+mandate_id: RES-M-001
+name: How I make my Strudel visuals 🎨 Strudel + p5.js in one HTML file
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: How I make my Strudel visuals 🎨 Strudel + p5.js in one HTML file
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=JhV_vt71W1I
+  date: '2026-10-18'
+  level: performer
+  license: none stated
+  platform: channel-rss
+  note: Pairing Strudel with p5.js visuals in a single HTML page.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

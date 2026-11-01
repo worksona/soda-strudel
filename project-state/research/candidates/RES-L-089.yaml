@@ -1,0 +1,24 @@
+id: RES-L-089
+kind: research-candidate
+mandate_id: RES-M-001
+name: Why does my brain works so bad?
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Why does my brain works so bad?
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/whydoesmybrain.js
+  date: '2025-12-26'
+  genre: electronic (inferred)
+  license: none stated
+  original_artist: Moby
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: Chords/arps modularization example based on a Moby song
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

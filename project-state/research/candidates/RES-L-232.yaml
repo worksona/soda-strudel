@@ -1,0 +1,22 @@
+id: RES-L-232
+kind: research-candidate
+mandate_id: RES-M-001
+name: Ignanu - The Basilisk [Livecoded]
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Ignanu - The Basilisk [Livecoded]
+  author: Iganu music
+  url: https://www.youtube.com/watch?v=g8dEehmDcgY
+  date: '2026-05-17'
+  genre: unclassified
+  license: none stated
+  platform: channel-rss
+  note: Short performance — hear what a finished Strudel piece in this style sounds like and how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

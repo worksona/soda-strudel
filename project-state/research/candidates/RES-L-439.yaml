@@ -1,0 +1,22 @@
+id: RES-L-439
+kind: research-candidate
+mandate_id: RES-M-001
+name: Jade (Rose) Rowland
+aliases:
+- daslyfe
+type: person
+profile:
+  kind: person
+  role: maintainer
+  links:
+  - https://github.com/daslyfe
+  license_stated: StrudelDirt GPL-2.0; Strudel fork AGPL-3.0
+  credit_note: GitHub display name 'Jade (Rose) Rowland'; maintains StrudelDirt and Strudel engine work. Probably
+    the same person as Switch Angel (inferred from the WebExpo article and the showcase 'Jade Rose' videos, not
+    confirmed).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

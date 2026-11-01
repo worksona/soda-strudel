@@ -1,0 +1,20 @@
+id: RES-L-452
+kind: research-candidate
+mandate_id: RES-M-001
+name: Stefanos Amanuel
+aliases:
+- ipkstef
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/ipkstef/strudel-sessions
+  license_stated: CC BY-NC-SA 4.0 (per-file headers)
+  credit_note: Credit '@by Stefanos Amanuel'; files carry @genre and @version tags and credit their samples.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

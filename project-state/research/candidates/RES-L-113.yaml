@@ -1,0 +1,22 @@
+id: RES-L-113
+kind: research-candidate
+mandate_id: RES-M-001
+name: Djenerative Music by Bogdan Vera @ TOPLAP solstice Dec 2024
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: Djenerative Music by Bogdan Vera @ TOPLAP solstice Dec 2024
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=LtMX4Lr1nzY
+  date: '2024-12-24'
+  genre: metal / djent (from description)
+  license: none stated
+  platform: showcase
+  note: Live-coded technical metal; another demonstration of non-dance genres in code.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

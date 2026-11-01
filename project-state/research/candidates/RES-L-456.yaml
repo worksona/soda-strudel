@@ -1,0 +1,22 @@
+id: RES-L-456
+kind: research-candidate
+mandate_id: RES-M-001
+name: Bogdan Vera
+aliases:
+- BogdanVera / boggo
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/BogdanVera
+  - https://strudel.cc/intro/showcase/
+  license_stated: none found
+  credit_note: Djent/metal live coding with Strudel driving MIDI (Strudel showcase, TOPLAP solstice Dec 2024). The
+    boggo/Bogdan link is inferred.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

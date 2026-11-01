@@ -1,0 +1,21 @@
+id: RES-L-393
+kind: research-candidate
+mandate_id: RES-M-001
+name: hellocatfood sketch
+aliases: []
+type: other
+profile:
+  kind: song
+  title: hellocatfood sketch
+  author: hellocatfood@post.lurk.org
+  url: https://post.lurk.org/@hellocatfood/117469804214641951
+  date: '2026-10-19'
+  license: none stated
+  platform: mastodon
+  note: Sketch by a lurk.org artist (also posted 2026-09-04).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

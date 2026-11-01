@@ -1680,3 +1680,8 @@ audio.rec-player {
 .examples small.credit {
   font-size: 11px;
 }
+.rep-list code.rep-load {
+  font-size: 12px;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}

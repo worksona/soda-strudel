@@ -1,0 +1,21 @@
+id: RES-L-433
+kind: research-candidate
+mandate_id: RES-M-001
+name: Fio
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Fio
+  author: taconi
+  url: https://codeberg.org/taconi/sketches/src/branch/main/musics/24/strudel/fio.js
+  date: '2024-11-21'
+  genre: ambient-generative / audiovisual (Hydra)
+  license: CC-BY-NC-SA (file header)
+  note: Generative audiovisual sketch from the same series as Saudade Nº0.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

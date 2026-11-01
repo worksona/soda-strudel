@@ -1,0 +1,22 @@
+id: RES-L-230
+kind: research-candidate
+mandate_id: RES-M-001
+name: '2 Funky 4 ya!  #strudel #livecoding #funk'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: '2 Funky 4 ya!  #strudel #livecoding #funk'
+  author: Iganu music
+  url: https://www.youtube.com/watch?v=Kwlcq2s82Uo
+  date: '2026-04-08'
+  genre: funk (inferred)
+  license: none stated
+  platform: channel-rss
+  note: Short performance in funk — hear what a finished Strudel piece in this style sounds like and how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

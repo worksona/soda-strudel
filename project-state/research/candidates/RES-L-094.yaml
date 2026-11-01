@@ -1,0 +1,23 @@
+id: RES-L-094
+kind: research-candidate
+mandate_id: RES-M-001
+name: Vardis Quo
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Vardis Quo
+  author: MariaAreadne
+  url: https://github.com/Mariaareadne1/maria-live-codes/blob/master/songs/vardis-quo.js
+  date: '2026-07-28'
+  genre: unknown (inferred)
+  license: none stated
+  is_cover: true
+  platform: Mariaareadne1/maria-live-codes
+  note: Cover per README; header gives title and @by MariaAreadne
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

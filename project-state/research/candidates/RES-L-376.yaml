@@ -1,0 +1,22 @@
+id: RES-L-376
+kind: research-candidate
+mandate_id: RES-M-001
+name: 7th/9th chord progression study (video)
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: 7th/9th chord progression study (video)
+  author: bornach@vis.social
+  url: https://vis.social/@bornach/117251275510104666
+  date: '2026-09-11'
+  genre: jazz-ish
+  license: none stated
+  platform: mastodon
+  note: Video on building a jazzy chord sequence in Strudel.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

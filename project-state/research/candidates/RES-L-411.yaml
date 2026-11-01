@@ -1,0 +1,21 @@
+id: RES-L-411
+kind: research-candidate
+mandate_id: RES-M-001
+name: Pointer to the strudel.cc showcase page
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Pointer to the strudel.cc showcase page
+  author: toolz.eurosky.social
+  url: https://bsky.app/profile/toolz.eurosky.social/post/3mz4srmnuds2y
+  date: '2026-10-30'
+  license: none stated
+  platform: bluesky
+  note: Recommends the official showcase as example gallery.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

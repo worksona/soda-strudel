@@ -1,0 +1,22 @@
+id: RES-L-264
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #1: Starting Out as a Beginner'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #1: Starting Out as a Beginner'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=5KotMHcTx1I
+  date: '2025-06-24'
+  level: first steps
+  license: none stated
+  platform: search
+  note: Episode 1 of a numbered beginner-to-advanced series; a learner documenting first steps.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

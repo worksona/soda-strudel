@@ -1,0 +1,22 @@
+id: RES-L-073
+kind: research-candidate
+mandate_id: RES-M-001
+name: Sparky (derived from file name)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Sparky (derived from file name)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/sparky.js
+  date: '2024-03-05'
+  genre: unknown
+  license: none stated
+  platform: eefano/strudel-songs-collection
+  note: No header comment; title derived from file name
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

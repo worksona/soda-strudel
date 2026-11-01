@@ -1,0 +1,22 @@
+id: RES-L-345
+kind: research-candidate
+mandate_id: RES-M-001
+name: POLYRHYTHM 3 against 4 — see it and hear it (Strudel)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: POLYRHYTHM 3 against 4 — see it and hear it (Strudel)
+  author: typedbeats
+  url: https://www.youtube.com/watch?v=PaJee-IWOqs
+  date: '2026-10-29'
+  level: intermediate
+  license: none stated
+  platform: channel-rss
+  note: Hearing and seeing a 3-against-4 polyrhythm.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

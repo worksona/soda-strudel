@@ -1,0 +1,21 @@
+id: RES-L-442
+kind: research-candidate
+mandate_id: RES-M-001
+name: Tijmen Zwaan
+aliases:
+- tzwaan
+type: person
+profile:
+  kind: person
+  role: maintainer
+  links:
+  - https://github.com/tzwaan
+  - https://github.com/tzwaan/strudel-scripts
+  license_stated: none stated
+  credit_note: Already catalogued. Maintains the awesome-strudel fork and prebake scripts/samples.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

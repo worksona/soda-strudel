@@ -1,0 +1,21 @@
+id: RES-L-371
+kind: research-candidate
+mandate_id: RES-M-001
+name: Akai APC Mini mk2 controller template
+aliases: []
+type: site
+profile:
+  kind: tool
+  title: Akai APC Mini mk2 controller template
+  author: jtruk@mastodon.social
+  url: https://mastodon.social/@jtruk/117365418580135340
+  date: '2026-10-01'
+  license: none stated
+  platform: mastodon
+  note: Share link with a header explaining how to drive Strudel from an APC Mini mk2 (Chrome needed for MIDI).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

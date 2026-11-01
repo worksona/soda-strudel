@@ -1,0 +1,20 @@
+id: RES-L-457
+kind: research-candidate
+mandate_id: RES-M-001
+name: MariaAreadne
+aliases:
+- mariaareadne
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/mariaareadne
+  license_stated: none found
+  credit_note: Already catalogued (maria-live-codes); the GitHub profile has only a profile repo.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

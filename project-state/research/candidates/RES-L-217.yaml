@@ -1,0 +1,23 @@
+id: RES-L-217
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Livecoded Synthwave jam in STRUDEL #livecoding #strudel #electronicmusic'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'Livecoded Synthwave jam in STRUDEL #livecoding #strudel #electronicmusic'
+  author: Iganu music
+  url: https://www.youtube.com/watch?v=9KR63qvc_yE
+  date: '2026-02-25'
+  genre: synthwave (inferred)
+  license: none stated
+  platform: search
+  note: Short performance in synthwave — hear what a finished Strudel piece in this style sounds like and how it's
+    arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

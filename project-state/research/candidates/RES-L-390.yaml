@@ -1,0 +1,21 @@
+id: RES-L-390
+kind: research-candidate
+mandate_id: RES-M-001
+name: Twin Shop Keepers v2
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Twin Shop Keepers v2
+  author: esk@hachyderm.io
+  url: https://hachyderm.io/@esk/117497000676703542
+  date: '2026-10-24'
+  license: none stated
+  platform: mastodon
+  note: Revived old pattern turned into a short jam.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

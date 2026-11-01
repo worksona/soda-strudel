@@ -1,0 +1,21 @@
+id: RES-L-403
+kind: research-candidate
+mandate_id: RES-M-001
+name: Shaders in Strudel
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Shaders in Strudel
+  author: rangemarten.bsky.social
+  url: https://bsky.app/profile/rangemarten.bsky.social/post/3mv6nnnzd6k2e
+  date: '2026-09-10'
+  license: none stated
+  platform: bluesky
+  note: Video experimenting with visuals/shaders.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

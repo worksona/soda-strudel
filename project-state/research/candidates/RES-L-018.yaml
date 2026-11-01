@@ -1,0 +1,24 @@
+id: RES-L-018
+kind: research-candidate
+mandate_id: RES-M-001
+name: Cabinet (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Cabinet (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/cabinet.js
+  date: '2024-03-19'
+  genre: art rock / prog-punk (inferred)
+  license: none stated
+  original_artist: Spratleys Japs
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Spratleys Japs; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

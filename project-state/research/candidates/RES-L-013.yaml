@@ -1,0 +1,23 @@
+id: RES-L-013
+kind: research-candidate
+mandate_id: RES-M-001
+name: Bonespurs (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Bonespurs (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/bonespurs.js
+  date: '2025-11-22'
+  genre: electronic / experimental original (inferred)
+  license: none stated
+  is_cover: false
+  platform: eefano/strudel-songs-collection
+  note: '@by eefano; marked work in progress/wip'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

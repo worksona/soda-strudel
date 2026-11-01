@@ -1,0 +1,21 @@
+id: RES-L-364
+kind: research-candidate
+mandate_id: RES-M-001
+name: Sunday afternoon bleeps
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Sunday afternoon bleeps
+  author: pikesley@mastodon.me.uk
+  url: https://mastodon.me.uk/@pikesley/117541644299059584
+  date: '2026-11-01'
+  license: none stated
+  platform: mastodon
+  note: Latest in the author's series, framed as a pro-process statement.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,24 @@
+id: RES-L-078
+kind: research-candidate
+mandate_id: RES-M-001
+name: Swimming With The Snake - Work In Progress
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Swimming With The Snake - Work In Progress
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/swimmingsnake.js
+  date: '2024-08-07'
+  genre: art rock / prog-punk (inferred)
+  license: none stated
+  original_artist: Tim Smith of Cardiacs
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Tim Smith of Cardiacs; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

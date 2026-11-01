@@ -1,0 +1,14 @@
+id: 2026-11-01-backlog-document-16
+kind: backlog
+title: '[document] Wiki: technique pages linked to songs'
+produced_by: research-ingest
+produced_at: '2026-11-01T17:00:00Z'
+status: sent
+surface: none
+action_required: Approve to schedule, or dismiss with a reason.
+artifact: 2026-11-01-backlog-document-16.md
+lane: document
+priority: P1
+owner: claude
+mandate: RES-M-001
+dismiss_reason: 7 technique wiki pages linked from repertoire-techniques

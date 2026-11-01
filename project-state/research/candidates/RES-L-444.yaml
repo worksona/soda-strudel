@@ -1,0 +1,21 @@
+id: RES-L-444
+kind: research-candidate
+mandate_id: RES-M-001
+name: Glen Fraser
+aliases:
+- totalgee
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/totalgee
+  - https://glenfraser.com
+  license_stated: none stated
+  credit_note: Solstice stream 2023 performer in the Strudel showcase; has a binaural-livecoding repo.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,21 @@
+id: RES-L-421
+kind: research-candidate
+mandate_id: RES-M-001
+name: jungle-gym
+aliases: []
+type: other
+profile:
+  kind: song
+  title: jungle-gym
+  author: Ike Saunders (ikesau)
+  url: https://github.com/ikesau/ikesau.github.io/blob/master/assets/strudel/jungle-gym.js
+  date: '2026-07-06'
+  genre: jungle / breakbeat
+  license: none stated
+  note: Same gallery as the footwork sketch; shown with prose notes on ikesau.co/strudel.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

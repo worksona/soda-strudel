@@ -1,0 +1,43 @@
+id: RES-S-005
+kind: research-step
+mandate_id: RES-M-001
+methodology_step: 3
+mode: validate
+description: 'Rights check of the 30 awesome-strudel sound banks against the reuse policy: licence, origin, commercial
+  risk, verdict.'
+status: complete
+started_at: '2026-11-01T20:00:00Z'
+completed_at: '2026-11-01T20:00:00Z'
+inputs:
+  refs:
+  - documents/inbox/harvest-2026-11-01-sound-banks.json
+  queries: []
+  urls: []
+findings_produced:
+- RES-F-028
+- RES-F-029
+- RES-F-030
+- RES-F-031
+- RES-F-032
+- RES-F-033
+- RES-F-034
+- RES-F-035
+- RES-F-036
+- RES-F-037
+- RES-F-038
+- RES-F-039
+- RES-F-040
+summary: 0 items read, 0 new candidates, 13 findings, 0 new sources to watch.
+open_followups:
+- 'Checked via gh api (repo, license, readme, strudel.json, folder listings, commits) plus Freesound licence pages
+  for fjpolo''s cited sounds; no audio downloaded, so ''contents'' judgements rest on names and READMEs — a listening
+  pass is still advisable. Verdict counts: {''ship-ok'': 3, ''ship-after-owner-check'': 4, ''do-not-ship'': 11,
+  ''link-only'': 12}. Strudel''s github: shortcut assumes branch ''main'' — fstiffo/polifonia-samples needs ''/master''.
+  Of the 6 open-licence priority banks: 3 ship-ok (AuditeMarlow, fstiffo, hvillase), 2 ship-after-owner-check (emrexdeger:
+  no provenance; fjpolo: MIT label over Freesound CC-BY + one CC BY-NC sound), 1 do-not-ship (Veikkosuhonen: Amen
+  break, MIT covers code only). QuantumVillage/quantum-music is AGPL too (7th open-licence repo) but its sounds
+  come from an OQC video. AustinOliverHaskell''s MIT label is contradicted by its own README (Microsoft copyright).
+  Dirt-Samples, which strudel.cc loads by default, fails this policy (no licence, unknown provenance, Amen). Good
+  licence-request candidates: Dough-Juj, mysinglelise, wyan, mot4i (confirm CC-BY).'
+run_id: null
+last_modified: '2026-11-01T20:00:00Z'

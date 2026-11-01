@@ -1,0 +1,14 @@
+id: 2026-11-01-backlog-harvest-12
+kind: backlog
+title: '[harvest] Harvest Mastodon and Bluesky #strudel (3 months)'
+produced_by: research-ingest
+produced_at: '2026-11-01T17:00:00Z'
+status: sent
+surface: none
+action_required: Approve to schedule, or dismiss with a reason.
+artifact: 2026-11-01-backlog-harvest-12.md
+lane: harvest
+priority: P2
+owner: claude
+mandate: RES-M-001
+dismiss_reason: 'RES-S-003: 40 Mastodon + 15 Bluesky posts curated (Aug–Oct 2026); working Bluesky endpoint recorded'

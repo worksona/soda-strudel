@@ -1,0 +1,24 @@
+id: RES-L-443
+kind: research-candidate
+mandate_id: RES-M-001
+name: Raphaël Forment
+aliases:
+- Bubobubobubobubo / BuboBubo
+type: person
+profile:
+  kind: person
+  role: maintainer
+  links:
+  - https://raphaelforment.fr
+  - https://github.com/Bubobubobubobubo
+  - https://sardine.raphaelforment.fr
+  - https://codeberg.org/BuboBubo
+  license_stated: not stated for pieces
+  credit_note: PhD live coder and tool author (Sardine, Topos); performed at the TOPLAP solstice stream in Dec 2024
+    (Strudel showcase); keeps a Strudel fork on Codeberg.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

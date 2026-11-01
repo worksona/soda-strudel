@@ -1,0 +1,21 @@
+id: RES-L-409
+kind: research-candidate
+mandate_id: RES-M-001
+name: Music for audio-drama series made in Strudel
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Music for audio-drama series made in Strudel
+  author: saturdayxiii.bsky.social
+  url: https://bsky.app/profile/saturdayxiii.bsky.social/post/3muwrrtjpn22o
+  date: '2026-09-07'
+  license: none stated
+  platform: bluesky
+  note: Strudel-made scores for a dark-fiction audio-drama YouTube series (several episodes Sept–Oct).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

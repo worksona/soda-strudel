@@ -1,0 +1,22 @@
+id: RES-L-425
+kind: research-candidate
+mandate_id: RES-M-001
+name: ambient-experiment
+aliases: []
+type: other
+profile:
+  kind: song
+  title: ambient-experiment
+  author: leo (lmorv)
+  url: https://github.com/lmorv/CART398-LiveCoding-/blob/main/Week09/05-ambient-experiment.strudel
+  date: '2026-03-16'
+  genre: ambient
+  license: MIT (repo LICENSE)
+  note: Student patch from Concordia's CART398 'one patch a day' course. The header says it is 'based on' a YouTube
+    video, so it is derivative rather than fully original.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

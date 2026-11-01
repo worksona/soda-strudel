@@ -1,0 +1,23 @@
+id: RES-L-068
+kind: research-candidate
+mandate_id: RES-M-001
+name: low Effort, high Satie'sfaction
+aliases: []
+type: other
+profile:
+  kind: song
+  title: low Effort, high Satie'sfaction
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/satiesfaction.js
+  date: '2025-10-12'
+  genre: electronic / experimental original (inferred)
+  license: none stated
+  is_cover: false
+  platform: eefano/strudel-songs-collection
+  note: song @by eefano
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

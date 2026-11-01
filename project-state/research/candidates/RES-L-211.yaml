@@ -1,0 +1,23 @@
+id: RES-L-211
+kind: research-candidate
+mandate_id: RES-M-001
+name: Break Chopping & Mini Notation With Strudel.cc (Beginners)
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: Break Chopping & Mini Notation With Strudel.cc (Beginners)
+  author: Groovin in G
+  url: https://www.youtube.com/watch?v=CNJKqWRCLM8
+  date: '2025-11-28'
+  genre: breakbeat (inferred)
+  level: first steps
+  license: none stated
+  platform: search
+  note: Chopping drum breaks and the mini-notation syntax, aimed at producers coming from samplers/trackers.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

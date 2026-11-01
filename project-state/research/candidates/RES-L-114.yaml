@@ -1,0 +1,22 @@
+id: RES-L-114
+kind: research-candidate
+mandate_id: RES-M-001
+name: La musique by BuboBubo @ TOPLAP solstice Dec 2024
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: La musique by BuboBubo @ TOPLAP solstice Dec 2024
+  author: Eulerroom
+  url: https://www.youtube.com/watch?v=Oz00Y_f80wU
+  date: '2024-12-24'
+  genre: unclassified
+  license: none stated
+  platform: showcase
+  note: Festival-stream set by the Sardine/Topos author; compare live-coding styles across tools.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

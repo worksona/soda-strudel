@@ -173,3 +173,48 @@ retrieved:    <YYYY-MM-DD>
 - No personal **Felix Roos YouTube** channel confirmed (§1 #27).
 - Bakery **Featured/Latest contents** were not enumerated. The page renders client-side, and automated reads of its backing database were not attempted.
 - Bluesky search API endpoint not tested.
+
+
+---
+
+## 5. Sources added by the 2026-11-01 harvest (35)
+
+Added after RES-M-001 was locked; each was opened by the harvest that found it. Channel handles corrected by the YouTube harvest: Switch Angel is channel UCmHz7DQbbkcY_UoWY8bBJLw (older uploads on AngelVision, @im_switch_angel), typedbeats is @typedbeats-daily, Wave Coder is @WaveCodr, Creative Code Art is @Creativecodeartcommunity; Bluesky search works on api.bsky.app (public.api.bsky.app returns 403).
+
+| Source | URL | Holds | Monitor | Found by |
+|---|---|---|---|---|
+| strudel.cc Showcase (source list) | https://codeberg.org/uzu/strudel/src/branch/main/website/src/components/Showcase.jsx | The hard-coded video list rendered at https://strudel.cc/intro/showcase/ (29 active entries, 1 commented out) | https://codeberg.org/uzu/strudel/rss/branch/main/website/src/components/Showcase.jsx | showcase-youtube |
+| Switch Angel | https://www.youtube.com/@switch_angel | Switch Angel’s current channel: Strudel tutorials, narrated builds, trance/DnB performances, multi-hour coding streams | https://www.youtube.com/feeds/videos.xml?channel_id=UCmHz7DQbbkcY_UoWY8bBJLw | showcase-youtube |
+| AngelVision (Switch Angel / Jade Rose, older channel) | https://www.youtube.com/@im_switch_angel | Earlier Switch Angel/Jade Rose uploads incl. two Showcase pieces (Morrow, Into your spell) and 2024-25 code shorts; pre-2023 modular-synth videos are not Strudel | https://www.youtube.com/feeds/videos.xml?channel_id=UC-LsL7haDdBQ9zvH_3LHIrw | showcase-youtube |
+| typedbeats | https://www.youtube.com/@typedbeats-daily | Daily Strudel shorts: genre-from-scratch builds (house, DnB, trap, techno…), music-theory explainers, classical reworks | https://www.youtube.com/feeds/videos.xml?channel_id=UCQ31GKL7Tx6bga6TB2ZyVMw | showcase-youtube |
+| Wave Coder | https://www.youtube.com/@WaveCodr | Numbered “Strudel Live Coding #N” series (#1–#43) from beginner to wavetable/filter-envelope technique | https://www.youtube.com/feeds/videos.xml?channel_id=UCJZVvVFeTvgTWP6BPYYibJA | showcase-youtube |
+| Iganu music | https://www.youtube.com/channel/UCY7tXqRgSZS0eemuhMUT6LA | Strudel jams: jungle/DnB, synthwave, house, film-score attempts, remakes of known tracks | https://www.youtube.com/feeds/videos.xml?channel_id=UCY7tXqRgSZS0eemuhMUT6LA | showcase-youtube |
+| Maria Areadne | https://www.youtube.com/@MariaAreadne1 | Short Strudel covers/tutorials of known tunes (Daft Punk, Gorillaz, The xx, Undertale) | https://www.youtube.com/feeds/videos.xml?channel_id=UCtz0emRfXZJza2p4SXxeLsQ | showcase-youtube |
+| Groovin in G | https://www.youtube.com/@groovining | Producer channel (jungle/DnB, samplers); 4 Strudel beginner lessons on breaks and mini-notation, late 2025 | https://www.youtube.com/feeds/videos.xml?channel_id=UCgzR0pxv2iz8y-qkUY76EYg | showcase-youtube |
+| Eulerroom | https://www.youtube.com/@Eulerroom | TOPLAP/algorave stream archive: solstice/festival sets and the weekly Flok WeekEndJam (Strudel-heavy); mostly non-Strudel otherwise | https://www.youtube.com/feeds/videos.xml?channel_id=UC_N48pxd05dX53_8vov8zqA | showcase-youtube |
+| Creative Code Art | https://www.youtube.com/@Creativecodeartcommunity | Creative-coding community: one Strudel workshop and a few Strudel live performances among visuals/TouchDesigner content | https://www.youtube.com/feeds/videos.xml?channel_id=UCVWW3CvU95_1o0Em5H0qZWw | showcase-youtube |
+| eddyflux (Felix Roos, Strudel co-author) | https://www.youtube.com/@eddyflux | Strudel author’s own jams and algorave sets (several on the Showcase) | https://www.youtube.com/feeds/videos.xml?channel_id=UCCzL14wczvJyJaVYjh4nfJQ | showcase-youtube |
+| uzu.lurk.org Strudel category (RSS) | https://uzu.lurk.org/c/strudel/26.rss | Forum topics: shared pieces (tag 'sharing'), questions, tools ('innards'), announcements | weekly | forum-social |
+| uzu.lurk.org Strudel category (JSON API) | https://uzu.lurk.org/c/strudel/26.json | Same as RSS with reply counts/bump dates; paginate ?page=N (3 pages, 74 topics total) | weekly | forum-social |
+| Mastodon #strudel (mastodon.social) | https://mastodon.social/api/v1/timelines/tag/strudel?limit=40 | Federated #strudel posts: share links, videos, events (mixed with pastry posts) | weekly | forum-social |
+| Mastodon #livecoding (mastodon.social) | https://mastodon.social/api/v1/timelines/tag/livecoding?limit=40 | Broader live coding posts incl. Strudel events | monthly | forum-social |
+| Mastodon #algorave (mastodon.social) | https://mastodon.social/api/v1/timelines/tag/algorave?limit=40 | Algorave events/streams | monthly | forum-social |
+| post.lurk.org #strudel | https://post.lurk.org/api/v1/timelines/tag/strudel | Live-coding-community instance's federated #strudel view | weekly | forum-social |
+| post.lurk.org #livecoding | https://post.lurk.org/api/v1/timelines/tag/livecoding | Live coding community posts | monthly | forum-social |
+| post.lurk.org #algorave | https://post.lurk.org/api/v1/timelines/tag/algorave | Algorave events | monthly | forum-social |
+| Bluesky search 'strudel.cc' (AppView) | https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=strudel.cc&sort=latest&limit=100 | Bluesky posts linking strudel.cc | weekly | forum-social |
+| Bluesky tag #strudel (AppView) | https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=strudel&tag=strudel&sort=latest&limit=100 | #strudel-tagged posts (needs filtering: pastry) | weekly | forum-social |
+| awesome-strudel commits feed | https://github.com/terryds/awesome-strudel/commits/main.atom | New curated tools/tracks added to awesome-strudel | weekly | forum-social |
+| Strudel repository on Codeberg | https://codeberg.org/uzu/strudel | Canonical Strudel source, POLICY.md; project now hosted on Codeberg | monthly | forum-social |
+| Strudel showcase (video list source) | https://codeberg.org/uzu/strudel/src/branch/main/website/src/components/Showcase.jsx | ~30 curated performance videos, including (Algo|Afro) Futures 2023 performers (Emma Osman, Zach B-B, Jamal Lloyd Davis, Jim Osman, φ, Tomilola Olumide, Tyga Blue), boggo, BuboBubo and Jade Rose | True | gaps-people |
+| Strudel 'Music metadata' docs | https://strudel.cc/learn/metadata/ | The @title/@by/@license(SPDX)/@genre tag convention: the search handle for licensed originals | False | gaps-people |
+| pastagang album corpus | https://codeberg.org/pastagang/pastagang/src/branch/pages/album | 36 strudel.cc share links and a CSV of code from pastagang jams (Jan 2025) | True | gaps-people |
+| Codeberg repo search API | https://codeberg.org/api/v1/repos/search?q=strudel | Codeberg-hosted pattern archives (fcm, ed_crub, taconi, frenata, jacksonchen666). The HTML explore page serves junk to scrapers; use the API. | True | gaps-people |
+| Threadbare (Endless Access) | https://github.com/endlessm/threadbare | CC-BY-SA-4.0 Strudel game scores with REUSE/SPDX headers | True | gaps-people |
+| ipkstef/strudel-sessions | https://github.com/ipkstef/strudel-sessions | 8 liquid/dark DnB originals, CC BY-NC-SA 4.0, with metadata tags | True | gaps-people |
+| kahlys/livecodingmusic | https://github.com/kahlys/livecodingmusic | ~35 original sketch ideas (glitch, house, ambient, trance) plus cheatsheets; no licence | False | gaps-people |
+| ed_crub/ed-patterns-strudel | https://codeberg.org/ed_crub/ed-patterns-strudel | Dated ambient, dub, 'beatopia' and Hydra-noise pieces; no licence | True | gaps-people |
+| UTC Sheffield / Pattern Club workshops | https://utcsheffield.github.io/makerclub-strudel/workshop/carnatic/ | Workshops incl. Carnatic rhythms, from-scratch performance, Site Gallery beginner sheet (AGPL) | False | gaps-people |
+| Switch Angel sample packs | https://github.com/switchangel/pad | Unlicense pad samples (and switchangel/breaks): safe to load in our pieces | False | gaps-people |
+| itsaandy/strudel-samples (UKG) | https://github.com/itsaandy/strudel-samples | 154 UK garage samples, described as 'unchanged' files from commercial packs. Do NOT bundle; it is only a lead for UKG pieces. | False | gaps-people |
+| A5TA/strudel-agents | https://github.com/A5TA/strudel-agents | MIT, @genre-tagged examples across 8 genres. These are agent-made (written by Claude Code subagents), not human originals. | False | gaps-people |

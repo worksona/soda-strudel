@@ -1,0 +1,24 @@
+id: RES-L-010
+kind: research-candidate
+mandate_id: RES-M-001
+name: Bennington (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Bennington (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/bennington.js
+  date: '2025-10-12'
+  genre: synth-pop (inferred)
+  license: none stated
+  original_artist: John Maus
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: composed @by John Maus; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-307
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #43 — WaveTable Synthesis vol.2'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #43 — WaveTable Synthesis vol.2'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=kNFNtDfZWEg
+  date: '2026-05-14'
+  level: performer
+  license: none stated
+  platform: channel-rss
+  note: 'Guided build: Strudel Live Coding  — WaveTable Synthesis vol.2 — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

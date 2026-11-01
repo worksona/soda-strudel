@@ -1,0 +1,22 @@
+id: RES-L-278
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #13 like jazz'
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: 'Strudel Live Coding #13 like jazz'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=4D1sAD4Rerk
+  date: '2025-09-16'
+  genre: jazz (inferred)
+  license: none stated
+  platform: search
+  note: Short performance in jazz — hear what a finished Strudel piece in this style sounds like and how it's arranged.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

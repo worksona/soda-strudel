@@ -1,0 +1,22 @@
+id: RES-L-440
+kind: research-candidate
+mandate_id: RES-M-001
+name: DJ_Dave
+aliases:
+- algorave-dave
+type: person
+profile:
+  kind: person
+  role: performer
+  links:
+  - https://github.com/algorave-dave
+  - https://www.youtube.com/@DJ_Dave
+  - https://linktr.ee/dj_dave
+  license_stated: CC BY-NC-SA 4.0 (in the Fail-safe header)
+  credit_note: 'Credit as ''DJ_Dave'' (the @by tag). NC: no commercial use.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

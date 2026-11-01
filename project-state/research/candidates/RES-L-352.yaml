@@ -1,0 +1,23 @@
+id: RES-L-352
+kind: research-candidate
+mandate_id: RES-M-001
+name: I'm starting my fourth week of trying out strudel recipes, and I've made a plum strudel
+aliases: []
+type: other
+profile:
+  kind: song
+  title: I'm starting my fourth week of trying out strudel recipes, and I've made a plum strudel
+  author: technoabu
+  url: https://uzu.lurk.org/t/im-starting-my-fourth-week-of-trying-out-strudel-recipes-and-ive-made-a-plum-strudel/6212
+  date: '2026-09-01'
+  genre: electronic/techno
+  level: beginner
+  license: none stated
+  platform: forum
+  note: Full piece using randomised parameters at 128 BPM; author links their Codeberg page and YouTube.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

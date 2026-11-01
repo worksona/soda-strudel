@@ -1,0 +1,22 @@
+id: RES-L-116
+kind: research-candidate
+mandate_id: RES-M-001
+name: froos @ WAC 2022 Day
+aliases: []
+type: other
+profile:
+  kind: talk
+  title: froos @ WAC 2022 Day
+  author: Web Audio Conf
+  url: https://www.youtube.com/watch?v=KWIotFWVOi4
+  date: '2022-09-04'
+  license: none stated
+  platform: showcase
+  note: Conference performance accompanying the Strudel paper at Web Audio Conference 2022; context on what Strudel
+    is for.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

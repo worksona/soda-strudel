@@ -1,0 +1,22 @@
+id: RES-L-383
+kind: research-candidate
+mandate_id: RES-M-001
+name: '''posting strudel from scratch until I don''t'' series'
+aliases: []
+type: other
+profile:
+  kind: song
+  title: '''posting strudel from scratch until I don''t'' series'
+  author: unknown_deleter@troet.cafe
+  url: https://troet.cafe/@unknown_deleter/117395482311344714
+  date: '2026-10-06'
+  genre: mixed
+  license: none stated
+  platform: mastodon
+  note: Daily from-scratch session videos through Oct 2026 (dub, doom, MC-303 explorations).
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,24 @@
+id: RES-L-051
+kind: research-candidate
+mandate_id: RES-M-001
+name: Magic And Ecstasy (Exorcist II OST) (wip)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Magic And Ecstasy (Exorcist II OST) (wip)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/magicandecstasy.js
+  date: '2025-10-11'
+  genre: film score (inferred)
+  license: none stated
+  original_artist: Ennio Morricone
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Ennio Morricone; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

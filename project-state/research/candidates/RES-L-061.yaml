@@ -1,0 +1,24 @@
+id: RES-L-061
+kind: research-candidate
+mandate_id: RES-M-001
+name: Piazza Degli Affari
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Piazza Degli Affari
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/piazzadegliaffari.js
+  date: '2026-03-07'
+  genre: Italian prog / RIO (inferred)
+  license: none stated
+  original_artist: Stormy Six
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: 'song @by Stormy Six; total length: 26 + 231 x 3 + 88 = 807'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

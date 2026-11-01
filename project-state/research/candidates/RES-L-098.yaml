@@ -1,0 +1,22 @@
+id: RES-L-098
+kind: research-candidate
+mandate_id: RES-M-001
+name: DJ_Dave - Bitrot [v10101a Edit]
+aliases: []
+type: other
+profile:
+  kind: performance
+  title: DJ_Dave - Bitrot [v10101a Edit]
+  author: DJ_Dave
+  url: https://www.youtube.com/watch?v=z_cJMdBp67Q
+  date: '2023-11-01'
+  genre: electronic dance / pop (inferred)
+  license: none stated
+  platform: showcase
+  note: Track-length edit made in Strudel; shows a finished, structured song rather than an improvisation.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

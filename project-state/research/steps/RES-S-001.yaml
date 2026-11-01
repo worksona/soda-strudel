@@ -1,0 +1,38 @@
+id: RES-S-001
+kind: research-step
+mandate_id: RES-M-001
+methodology_step: 2
+mode: extract
+description: 'Index every song file in eefano/strudel-songs-collection and Mariaareadne1/maria-live-codes: titles,
+  originals, dates and licences from listings, READMEs and header comments only.'
+status: complete
+started_at: '2026-11-01T20:00:00Z'
+completed_at: '2026-11-01T20:00:00Z'
+inputs:
+  refs:
+  - documents/inbox/harvest-2026-11-01-song-repos.json
+  queries: []
+  urls: []
+findings_produced:
+- RES-F-001
+- RES-F-002
+- RES-F-003
+- RES-F-004
+- RES-F-005
+- RES-F-006
+- RES-F-007
+- RES-F-008
+summary: 97 items read, 94 new candidates, 8 findings, 0 new sources to watch.
+open_followups:
+- 'eefano: functions/ (12 files) and tinkering/ (10 files) are helper/experiment scripts, excluded from items; .vscode/settings.json
+  and README excluded. jamsessions/ (3) included as items. 7 eefano files have no leading comment header (ameliewaltz,
+  edenontheair, sparky, strangerthings, veronicazigzag, jamsessions/nudelimprov1, jamsessions/xmastevereich) - titles
+  derived from file names, is_cover left null though several names suggest covers (e.g. Amelie waltz, Stranger Things
+  theme). Header quirks: humanperformance.js uses ''@song by''/''@script by''; rhythmofthenight.js credits ''eeefano''
+  (typo); goodbyegracereverse credits ''scaidraC'' (Cardiacs reversed); many titles carry ''work in progress''/''wip''.
+  Maria: README names no original artists; only ''Intro by XX'' names one in the title. Feel Good Inc (Gorillaz)
+  and Megalovania (Toby Fox) are recognisable but original_artist left null per the rule; ''Vardis Quo'' is unidentified.
+  Maria repo default branch is master. No @license tags anywhere; no strudel.cc share links. Dates are the last
+  commit date touching each file. Many eefano files share the bulk commit date 2024-03-19 or 2026-08-16.'
+run_id: null
+last_modified: '2026-11-01T20:00:00Z'

@@ -1,0 +1,22 @@
+id: RES-L-363
+kind: research-candidate
+mandate_id: RES-M-001
+name: Nintendo-ish bleeps
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Nintendo-ish bleeps
+  author: pikesley@mastodon.me.uk
+  url: https://mastodon.me.uk/@pikesley/117263822314490180
+  date: '2026-09-13'
+  genre: chiptune
+  license: none stated
+  platform: mastodon
+  note: Chiptune-flavoured sketch.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,28 @@
+id: RES-F-037
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-005
+answers:
+- Q3
+- Q5
+claim: mot4i/garden grants use/share/adapt with credit, no formal licence
+evidence:
+- excerpt: You are free to use, share, and adapt the samples, as long as you credit the source.
+  ref: https://github.com/mot4i/garden
+  retrieved_at: '2026-11-01'
+  source_date: '2025-08-11'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

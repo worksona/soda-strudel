@@ -1,0 +1,24 @@
+id: RES-L-087
+kind: research-candidate
+mandate_id: RES-M-001
+name: Vine (work in progress)
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Vine (work in progress)
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/vine.js
+  date: '2025-07-06'
+  genre: art rock / prog-punk (inferred)
+  license: none stated
+  original_artist: Tim Smith of Spratleys Japs
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: composed @by Tim Smith of Spratleys Japs; marked work in progress/wip
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

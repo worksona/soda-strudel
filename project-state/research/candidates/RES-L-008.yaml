@@ -1,0 +1,24 @@
+id: RES-L-008
+kind: research-candidate
+mandate_id: RES-M-001
+name: Aztec Challenge
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Aztec Challenge
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/aztecchallenge.js
+  date: '2024-04-11'
+  genre: chiptune / C64 game music (inferred)
+  license: none stated
+  original_artist: Paul Norman
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: song @by Paul Norman
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

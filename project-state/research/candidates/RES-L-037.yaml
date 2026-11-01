@@ -1,0 +1,24 @@
+id: RES-L-037
+kind: research-candidate
+mandate_id: RES-M-001
+name: Happy Birthday
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Happy Birthday
+  author: eefano
+  url: https://github.com/eefano/strudel-songs-collection/blob/main/happybirthday.js
+  date: '2024-03-19'
+  genre: children's / folk tune (inferred)
+  license: none stated
+  original_artist: traditional
+  is_cover: true
+  platform: eefano/strudel-songs-collection
+  note: 'Header: HAPPY BIRTHDAY'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

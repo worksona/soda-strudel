@@ -1,0 +1,22 @@
+id: RES-L-431
+kind: research-candidate
+mandate_id: RES-M-001
+name: Corporate — Glitch
+aliases: []
+type: other
+profile:
+  kind: song
+  title: Corporate — Glitch
+  author: Les Orchard (lmorchard)
+  url: https://github.com/lmorchard/starnet/blob/main/audio-content/songs/corporate-glitch.strudel
+  date: '2026-07-01'
+  genre: glitch / game score
+  license: AGPL-3.0 (repo LICENSE)
+  note: Adaptive game cue for the browser game Starnet; its layers are gated by a gameProgress signal. Other cues
+    are in audio-content/songs/.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

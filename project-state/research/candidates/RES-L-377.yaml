@@ -1,0 +1,21 @@
+id: RES-L-377
+kind: research-candidate
+mandate_id: RES-M-001
+name: Glossing's Strudel videos
+aliases: []
+type: other
+profile:
+  kind: resource
+  title: Glossing's Strudel videos
+  author: pikesley@mastodon.me.uk
+  url: https://mastodon.me.uk/@pikesley/117093324203611482
+  date: '2026-08-14'
+  license: none stated
+  platform: mastodon
+  note: Recommends Glossing's YouTube tutorial series.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

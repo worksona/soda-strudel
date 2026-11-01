@@ -1,0 +1,30 @@
+id: RES-F-020
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-004
+answers:
+- Q2
+- Q4
+- Q6
+claim: 'Strudel defines comment tags for authorship and licence: @by and @license with SPDX ids (e.g. CC-BY-SA-4.0),
+  plus @genre.'
+evidence:
+- excerpt: Each license should be specified by using the correct identifier in the SPDX License List
+  ref: https://strudel.cc/learn/metadata/
+  retrieved_at: '2026-11-01'
+  source_date: '2026-11-01'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'

@@ -1,0 +1,21 @@
+id: RES-L-447
+kind: research-candidate
+mandate_id: RES-M-001
+name: Shelly Knotts
+aliases: []
+type: person
+profile:
+  kind: person
+  role: teacher
+  links:
+  - https://shellyknotts.wordpress.com/
+  - https://musichackspace.org/courses/live-coding-pushing-the-boundaries-of-dance-music-in-strudel
+  license_stated: none found
+  credit_note: Teaches the paid Music Hackspace course 'Learn to Live Code in Strudel / The Boundaries Between Beats
+    and Noise'.
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

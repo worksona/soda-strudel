@@ -1,0 +1,22 @@
+id: RES-L-273
+kind: research-candidate
+mandate_id: RES-M-001
+name: 'Strudel Live Coding #8 sample scrub'
+aliases: []
+type: other
+profile:
+  kind: tutorial
+  title: 'Strudel Live Coding #8 sample scrub'
+  author: Wave Coder
+  url: https://www.youtube.com/watch?v=7A-X1yWMXRk
+  date: '2025-08-19'
+  level: intermediate
+  license: none stated
+  platform: search
+  note: 'Guided build: Strudel Live Coding  sample scrub — explained step by step in Strudel.'
+scores: []
+total: null
+rank: null
+status: discovered
+discovered_via: deepweb
+created: '2026-11-01T20:00:00Z'

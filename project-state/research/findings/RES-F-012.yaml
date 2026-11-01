@@ -1,0 +1,30 @@
+id: RES-F-012
+kind: research-finding
+mandate_id: RES-M-001
+step_id: RES-S-002
+answers:
+- Q2
+- Q5
+- Q6
+claim: The (Algo|Afro) Futures showcase in the Strudel Showcase comes from a mentoring programme for early-career
+  Black artists.
+evidence:
+- excerpt: '"a mentoring programme for early career Black artists"'
+  ref: https://www.youtube.com/watch?v=zUoZvkZ3J7Q
+  retrieved_at: '2026-11-01'
+  source_date: '2023-08-05'
+source_tier: primary
+confidence: high
+epistemic_status: verified
+independent_sources: 1
+derives_from: []
+category: literature
+material: true
+status: provisional
+supersedes: null
+contradicts: []
+supports: []
+became: []
+logged_by: research-step
+run_id: null
+created: '2026-11-01T20:00:00Z'
