@@ -15,7 +15,7 @@ const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'access-control-allow-origin': '*', 'cache-control': 'public, max-age=300' } });
 
 async function listCodeberg(spec, branch) {
-  const m = spec.match(/^codeberg:([\w.-]+)\/([\w.-]+)$/);
+  const m = spec.match(/^codeberg:(\w[\w.-]*)\/(\w[\w.-]*)$/);
   if (!m) return json({ error: 'expected codeberg:owner/repo' }, 400);
   const [, owner, repo] = m;
   const api = `https://codeberg.org/api/v1/repos/${owner}/${repo}`;
