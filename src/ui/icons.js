@@ -3,6 +3,7 @@
 // index.html are filled in by hydrateIcons().
 import {
   createElement,
+  ArrowLeft,
   Radio,
   CircleDot,
   AudioLines,
@@ -104,6 +105,7 @@ const ICONS = {
   trash: Trash2,
   upload: Upload,
   close: X,
+  back: ArrowLeft,
 };
 
 export function icon(name, size = 18) {

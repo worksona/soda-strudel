@@ -75,3 +75,30 @@ export async function sketchUrl(sketch, origin) {
 
 // Chat apps and social posts start truncating somewhere around here.
 export const LONG_LINK_WARNING = 2000;
+
+// ---------- collections: a shared list of Repertoire pieces ----------
+// https://<site>/#col=<base64url(deflate-raw(JSON))> carries a whole collection
+// (title, blurb, items with their links and credits – never anyone's code);
+// https://<site>/#collection=<id> opens one of the built-in collections.
+
+/** @returns {Promise<string>} fragment without '#', e.g. "col=eJx…" */
+export async function encodeCollection(collection) {
+  const json = JSON.stringify({ v: 1, ...collection });
+  const packed = await pipe(new TextEncoder().encode(json), new CompressionStream('deflate-raw'));
+  return `col=${toBase64Url(packed)}`;
+}
+
+/** { id } for #collection=<id>, the collection for #col=…, or null. */
+export async function decodeCollection(input) {
+  if (!input) return null;
+  const hashAt = input.indexOf('#');
+  const params = new URLSearchParams(hashAt >= 0 ? input.slice(hashAt + 1) : input);
+  const id = params.get('collection');
+  if (id) return { id };
+  const col = params.get('col');
+  if (!col) return null;
+  const bytes = await pipe(fromBase64Url(col), new DecompressionStream('deflate-raw'));
+  const data = JSON.parse(new TextDecoder().decode(bytes));
+  if (!data || typeof data.title !== 'string' || !Array.isArray(data.items)) throw new Error('not a collection');
+  return data;
+}

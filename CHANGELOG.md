@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+- **Repertoire collections.** Examples › Repertoire opens on 13 hand-picked
+  collections from the research (Start here, Open licence: play them here,
+  Strudel classics by Felix Roos, Techno and house, Drum & bass and breaks,
+  Ambient and generative, Game music, Hip-hop and lo-fi, more styles, Covers,
+  Music theory, Performances, Sounds and tools). Pieces whose authors chose an
+  open licence (18 so far) have **Open here**: the code is fetched from where
+  the author published it – through `/api/piece`, a fixed allowlist – and opens
+  with a credit header on top. soda examples open as usual; cleared sound banks
+  have **Use sounds**. Everything else opens at its source.
+- **Collection links.** `#collection=<id>` opens a built-in collection;
+  `#col=…` carries a whole shared collection (titles, credits and links – never
+  code). Share in a collection copies its link. Pieces in a shared collection
+  only open here if they are on the allowlist.
 - **Examples › Repertoire.** A third tab next to Examples and Workshop: Strudel
   songs (by genre), lessons (by level) and sound banks (with their licences)
   made by other people, found and checked by our research (project-state

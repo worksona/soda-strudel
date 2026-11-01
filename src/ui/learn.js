@@ -256,7 +256,7 @@ function workshop(app) {
 // Policy (decision 2026-11-01-repertoire-reuse-policy): link and credit, never
 // carry anyone's code – every card opens the original where its author put it.
 let repertoire = null; // the loaded catalogue, or a promise while it loads
-const rep = { view: 'songs', family: 'all', level: 'all', query: '' };
+const rep = { view: 'collections', family: 'all', level: 'all', query: '', collection: null, shared: null };
 const SHORT = { dance: 'Dance', bass: 'Bass & breaks', game: 'Games', pop: 'Pop & rock', classical: 'Classical & jazz', ambient: 'Ambient' };
 const REUSE = {
   adapt: ['Open licence (non-commercial)', 'CC BY-NC-SA – may be adapted with credit while soda.strudel is non-commercial'],
@@ -277,7 +277,94 @@ const repBadge = (reuse) => {
 };
 const repOpen = (url, label = 'Open') => (url ? h('a.rep-open', { href: url, target: '_blank', rel: 'noopener', title: url }, label, ' ', icon('external', 13)) : null);
 
-function repertoireView(rerender) {
+const KIND = { song: 'Song', video: 'Video', lesson: 'Lesson', tool: 'Tool', bank: 'Sounds', example: 'soda example', event: 'Event' };
+
+/** Opens Examples › Repertoire › a collection: a built-in one by id, or a shared one. */
+export function showCollection(c) {
+  examplesTab = 'repertoire';
+  rep.view = 'collections';
+  rep.query = '';
+  if (c?.items) {
+    rep.shared = c;
+    rep.collection = 'shared';
+  } else rep.collection = c?.id ?? null;
+}
+
+function collectionItem(app, data, it) {
+  const allowed = new Set(data.allow ?? []);
+  const loadable = it.load && allowed.has(it.load.export ? `${it.load.url}#${it.load.export}` : it.load.url);
+  const actions = [];
+  if (loadable) actions.push(h('button', { title: 'Open the code here, with the credit on top', onclick: () => app.openPiece(it) }, icon('code', 14), ' Open here'));
+  if (it.example) {
+    const ex = EXAMPLES.find((e) => e.title === it.example);
+    if (ex) actions.push(h('button', { title: 'Hear it without changing your code', onclick: () => app.previewCode(ex.code) }, icon('listen', 14), ' Listen'), h('button', { onclick: () => app.loadExample(ex) }, icon('code', 14), ' Open'));
+  }
+  if (it.samples) actions.push(h('button', { title: `Adds ${it.samples} to the top of your sketch`, onclick: () => app.prepend(it.samples) }, icon('sounds', 14), ' Use sounds'));
+  if (it.url) actions.push(repOpen(it.url, it.kind === 'video' || (it.kind === 'lesson' && /youtu/.test(it.url)) ? 'Watch' : 'Open'));
+  const badge = it.example ? null : repBadge(loadable ? (/NC/.test(it.license ?? '') ? 'adapt' : 'open') : it.reuse === 'open' ? 'open' : it.reuse ?? 'link');
+  return h(
+    'li',
+    {},
+    h(
+      'div.meta',
+      {},
+      h('strong', {}, it.title),
+      h('small', {}, [KIND[it.kind] ?? it.kind, it.by && `by ${it.by}`, it.original && `original: ${it.original}`, it.genre, it.level, it.date].filter(Boolean).join(' · ')),
+      it.note ? h('small', {}, it.note) : null,
+      h('div.rep-foot', {}, badge, ...actions),
+    ),
+  );
+}
+
+function collectionsView(app, rerender, data) {
+  const list = data.collections ?? [];
+  const current = rep.collection === 'shared' ? rep.shared : list.find((c) => c.id === rep.collection);
+  if (!current) {
+    return [
+      h('p.muted', {}, 'Hand-picked sets from our research. Pieces with an open licence open right here, with the credit on top; the rest open where their authors shared them.'),
+      h(
+        'ul.rep-collections',
+        {},
+        list.map((c) => {
+          const open = c.items.filter((it) => it.load || it.example).length;
+          return h(
+            'li',
+            {},
+            h(
+              'button.rep-collection',
+              { onclick: () => ((rep.collection = c.id), rerender()) },
+              h('strong', {}, c.title),
+              h('small', {}, c.blurb),
+              h('small.rep-count', {}, `${c.items.length} items${open ? ` · ${open} open here` : ''}${c.level && c.level !== 'all' ? ` · ${c.level}` : ''}`),
+            ),
+          );
+        }),
+      ),
+    ];
+  }
+  const share = async () => {
+    const { encodeCollection } = await import('../share/sketch.js');
+    const frag = rep.collection === 'shared' ? await encodeCollection(current) : `collection=${current.id}`;
+    const url = `${location.origin}/#${frag}`;
+    await navigator.clipboard?.writeText(url).then(
+      () => app.toast('Collection link copied.'),
+      () => prompt('Copy this link:', url),
+    );
+  };
+  return [
+    h(
+      'div.rep-coll-head',
+      {},
+      h('button.icon', { title: 'All collections', 'aria-label': 'All collections', onclick: () => ((rep.collection = null), (rep.shared = null), rerender()) }, icon('back', 16)),
+      h('h4', {}, current.title, rep.collection === 'shared' ? h('small.rep-shared', {}, ' shared with you') : null),
+      h('button', { title: 'Copy a link that opens this collection', onclick: share }, icon('share', 14), ' Share'),
+    ),
+    current.blurb ? h('p.muted', {}, current.blurb) : null,
+    h('ul.rep-list', {}, current.items.map((it) => collectionItem(app, data, it))),
+  ];
+}
+
+function repertoireView(app, rerender) {
   if (!repertoire) {
     repertoire = fetch('/repertoire.json')
       .then((r) => r.json())
@@ -307,14 +394,17 @@ function repertoireView(rerender) {
   const head = [
     h('p.muted', {}, 'Strudel songs, lessons and sound banks made by other people – found, checked and credited by our research. Each one opens where its author shared it.'),
     tabs(rep.view, [
+      ['collections', `Collections (${data.collections?.length ?? 0})`],
       ['songs', `Songs (${data.songs.length})`],
       ['learn', `Learn (${data.learn.length})`],
       ['sounds', `Sounds (${data.sounds.length})`],
     ], (t) => ((rep.view = t), rerender())),
-    search,
+    rep.view === 'collections' ? null : search,
   ];
   let body;
-  if (rep.view === 'songs') {
+  if (rep.view === 'collections') {
+    body = collectionsView(app, rerender, data);
+  } else if (rep.view === 'songs') {
     const fams = Object.entries(data.families);
     const list = data.songs.filter((s) => (rep.family === 'all' || s.family === rep.family) && matches(s));
     body = [
@@ -413,7 +503,7 @@ function repertoireView(rerender) {
       ),
     ];
   }
-  return [...head, ...body, h('p.muted.rep-credit', {}, data.credit, ` Updated ${data.updated}.`)];
+  return [...head, ...body, h('p.muted.rep-credit', {}, data.credit, ` Updated ${data.updated}.`)].filter(Boolean);
 }
 
 export function examplesView(app, rerender) {
@@ -425,7 +515,7 @@ export function examplesView(app, rerender) {
       ['workshop', 'Workshop'],
       ['repertoire', 'Repertoire'],
     ], (t) => ((examplesTab = t), rerender())),
-    ...(examplesTab === 'workshop' ? workshop(app) : examplesTab === 'repertoire' ? repertoireView(rerender) : ourExamples(app)).filter(Boolean),
+    ...(examplesTab === 'workshop' ? workshop(app) : examplesTab === 'repertoire' ? repertoireView(app, rerender) : ourExamples(app)).filter(Boolean),
   );
 }
 

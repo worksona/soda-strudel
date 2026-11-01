@@ -1685,3 +1685,48 @@ audio.rec-player {
   color: var(--accent);
   overflow-wrap: anywhere;
 }
+.rep-collections {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: grid;
+  gap: 6px;
+}
+.rep-collection {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 10px;
+  min-height: 0;
+  white-space: normal;
+}
+.rep-collection small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: normal;
+}
+.rep-collection .rep-count {
+  color: var(--accent);
+}
+.rep-coll-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 4px;
+}
+.rep-coll-head h4 {
+  flex: 1;
+  margin: 0;
+}
+.rep-shared {
+  color: var(--accent);
+  font-weight: normal;
+}
+.rep-foot button {
+  min-height: 26px;
+  font-size: 12px;
+  padding: 0 8px;
+}

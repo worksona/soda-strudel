@@ -6,7 +6,8 @@ import { getAudioContext, initAudio, webaudioOutput } from '@strudel/webaudio';
 import { prebake } from './strudel/setup.js';
 import { Stage } from './stage/stage.js';
 import { isMediaOnly, TIMELINE_VISUALS } from './soda/catalog.js';
-import { decodeSketch } from './share/sketch.js';
+import { decodeCollection, decodeSketch } from './share/sketch.js';
+import { creditHeader, fetchPiece } from './share/pieces.js';
 import { readSodaFile } from './share/sodafile.js';
 import { importFiles, registerLibrary, libraryChanged, saveTake } from './media/library.js';
 import { cameraOn, disableCamera, enableCamera, flipCamera, onCameraChange } from './media/camera.js';
@@ -16,7 +17,7 @@ import { saveSketch as storeSketch } from './storage/db.js';
 import { getSettings, onSettings } from './settings.js';
 import { initEditorSettings } from './editor/assist.js';
 import { fromPointer, installPageKeys } from './editor/keys.js';
-import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, vibeView } from './ui/learn.js';
+import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, showCollection, vibeView } from './ui/learn.js';
 import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
 import { applyEditorSettings } from './editor/assist.js';
 import { repl } from '@strudel/core';
@@ -488,6 +489,17 @@ const app = {
   insert,
   prepend,
   previewCode,
+  /** Opens a Repertoire piece with an open licence: fetched from its source, credit on top. */
+  async openPiece(item) {
+    toast(`Fetching “${item.title}” from its source…`);
+    try {
+      const code = await fetchPiece(item.load, { dev: import.meta.env.DEV });
+      if (!code.trim()) throw new Error('the source returned no code');
+      app.loadExample({ title: item.title, code: creditHeader(item) + code.replace(/^\s+/, ''), aspect: 'free' });
+    } catch (e) {
+      toast(`Could not open “${item.title}”: ${e.message}`, { error: true });
+    }
+  },
   loadExample(ex) {
     stopPreview();
     replaceSketch({ title: ex.title, code: ex.code, aspect: ex.aspect ?? 'free' }, `Opened “${ex.title}”`);
@@ -801,7 +813,20 @@ if (fromLink) {
 }
 
 // a sketch link opened in an already-open tab only changes the hash – start fresh
-window.addEventListener('hashchange', () => location.hash.includes('z=') && location.reload());
+window.addEventListener('hashchange', () => {
+  if (/[#&]z=/.test(location.hash)) return location.reload();
+  openCollectionFromLink();
+});
+
+// #collection=<id> or #col=<shared collection>: open it in Examples › Repertoire
+async function openCollectionFromLink() {
+  const c = await decodeCollection(location.hash).catch(() => (toast('That collection link could not be read.', { error: true }), null));
+  if (!c) return;
+  showCollection(c);
+  openPage('examples', true);
+  history.replaceState(null, '', location.pathname + location.search);
+}
+if (!fromLink) openCollectionFromLink();
 
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && document.body.classList.contains('pseudo-full')) pseudoFull(false);
