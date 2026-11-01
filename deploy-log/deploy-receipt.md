@@ -1,16 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-01T01:48:33Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-01T02:37:32Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae69a4b3dea838f53f5b96f--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae699dee99155d3fa9bc5c7--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae6a5d2a1d0df4fb6726d70--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae6a5af5b25ad27db8793b6--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae69a4b3dea838f53f5b96f |
+| Deploy ID | 6ae6a5d2a1d0df4fb6726d70 |
 | Team | worksona |
 | Project type | Static (Vite build) plus one function, `/api/shorten` (a47l.com short links) |
-| Source path | dist/ (built locally with `pnpm build`, commit 851ef9b) |
+| Source path | dist/ (built locally with `pnpm build`, commit c060542) |
 | Build | Local only – Netlify does not build (no build minutes); the CLI bundles `netlify/functions` |
 | Custom domain | none |
 
@@ -27,6 +27,7 @@
 - Editor keys: cmd+enter plays, cmd+. stops, cmd+f finds, focus starts in the code; no console errors
 - `/api/shorten` reports enabled, refuses non-sketch links; Share › Short link made https://a47l.com/TCLsM, which 302s to the sketch
 - Record button and micLevel in the live bundle; toolbar one row; no console errors
+- Recorder: video (1080×1920 MP4) and WAV captures checked on the draft, 4-cycle take starts on the beat and stops itself; opens on production with no console errors
 
 ## Configuration Used
 

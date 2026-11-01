@@ -15,3 +15,5 @@
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 70cd93a: keyboard commands reach the code wherever focus is (deploy 6ae68ff10e9b97dd71b4f5e4) |
 | 2026-10-31 | Netlify | https://6ae699dee99155d3fa9bc5c7--soda-strudel.netlify.app | Preview | Draft (851ef9b), short link made and redirect checked |
 | 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | 851ef9b: hover hints, Record button, live mic input, tooltips switch, Sounds tabs, a47l.com short links via /api/shorten (deploy 6ae69a4b3dea838f53f5b96f) |
+| 2026-10-31 | Netlify | https://6ae6a5af5b25ad27db8793b6--soda-strudel.netlify.app | Preview | Draft (c060542), recorder checked |
+| 2026-10-31 | Netlify | https://soda-strudel.netlify.app | Production | c060542: Export becomes a quick recorder next to Record – video or WAV, start/stop, gear, player (deploy 6ae6a5d2a1d0df4fb6726d70) |
