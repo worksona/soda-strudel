@@ -25,3 +25,6 @@
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | 1a70520: video exports include the code layer in Code over the stage (deploy 6ae757c9f244153c91ed1017) |
 | 2026-11-01 | Netlify | https://6ae78df811375e8a21878fd2--soda-strudel.netlify.app | Preview | Draft (ad3eefb), all 18 open-licence pieces fetched through /api/piece, refusals checked |
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | ad3eefb: Examples › Repertoire with 13 collections, Open here for 18 open-licence pieces via /api/piece, collection links, example credits (deploy 6ae78e37f71de2f88d3fcd8c) |
+| 2026-11-01 | Netlify | https://6ae79231394b2d2b381c6857--soda-strudel.netlify.app | Preview | Draft (e2299da), all 141 allowlisted songs fetched through /api/piece |
+| 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | e2299da: 141 Repertoire songs open and play in soda (Listen, Open here, #song=), Watch here, community sounds (deploy 6ae792534d18e4b51c0bcd69) |
+| 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | Service worker v2: data JSON network-first so a deploy's data arrives with its code (deploy 6ae7928e83214f6087fba768) |

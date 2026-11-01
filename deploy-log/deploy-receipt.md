@@ -1,16 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-01T19:20:00Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-01T20:15:00Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae78e37f71de2f88d3fcd8c--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae78df811375e8a21878fd2--soda-strudel.netlify.app |
+| URL (this deploy) | https://6ae7928e83214f6087fba768--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6ae79231394b2d2b381c6857--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae78e37f71de2f88d3fcd8c |
+| Deploy ID | 6ae7928e83214f6087fba768 |
 | Team | worksona |
-| Project type | Static (Vite build) plus two functions: `/api/shorten` (a47l.com short links) and `/api/piece` (opens allowlisted open-licence Repertoire pieces) |
-| Source path | dist/ (built locally with `pnpm build`, commit ad3eefb) |
+| Project type | Static (Vite build) plus two functions: `/api/shorten` (a47l.com short links) and `/api/piece` (opens allowlisted Repertoire songs whose code is public at its source) |
+| Source path | dist/ (built locally with `pnpm build`, commit of the service worker fix after e2299da) |
 | Build | Local only – Netlify does not build (no build minutes); the CLI bundles `netlify/functions` |
 | Custom domain | none |
 
@@ -101,3 +101,5 @@ netlify deploy --dir dist --prod     # production
 ```
 - Video export with Code over the stage: a recorded MP4 shows the code, note outlines, slider and inline pianoroll (dev); the live bundle has the code layer, `/api/shorten` enabled
 - Repertoire collections: `/api/piece` returns all 18 allowlisted pieces (draft), refuses others (403) on production; `#collection=open-to-play` on production opens the collection and Open here loads a Codeberg piece with its credit header, no errors
+- Songs in soda: 141/141 allowlisted songs fetched through `/api/piece` on the draft; on production Collections (15) load, Listen plays Lavender Town without touching the editor and Stop resets it, Watch here docks a youtube-nocookie player, the 3 community banks load, `#song=` opens and plays Ossuary with its credit
+- Service worker v2 takes over on the first visit and drops the old cache (`soda-v1`), so data JSON is no longer stale after a deploy
