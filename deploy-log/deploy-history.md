@@ -31,3 +31,5 @@
 | 2026-11-01 | Netlify | https://6ae79f4f311752a90bf6bcb5--soda-strudel.netlify.app | Preview | Draft (b1054c1), Codeberg listings + song files for fcm, taconi, ed_crub through /api/piece |
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | Song repositories: Repertoire › Repositories, #repo= links, Codeberg via /api/piece (deploy 6ae79f768f7c80cbdae7b1e7) |
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | f5bf28a: Repertoire data fetched under a per-build URL, so no stale cache answers #song= links (deploy 6ae7a1244323ba6ff384e62e) |
+| 2026-11-02 | Netlify | https://6ae8db84205a2f97eb846960--soda-strudel.netlify.app | Preview | Draft (92654f7), Keys page, panel grip and soda filter checked |
+| 2026-11-02 | Netlify | https://soda-strudel.netlify.app | Production | 92654f7: resizable panel, Keyboard shortcuts page, soda filter on Docs (deploy 6ae8db991b2f2e64eeadf737) |
