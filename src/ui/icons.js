@@ -4,6 +4,7 @@
 import {
   createElement,
   ArrowLeft,
+  Keyboard,
   Radio,
   CircleDot,
   AudioLines,
@@ -106,6 +107,7 @@ const ICONS = {
   upload: Upload,
   close: X,
   back: ArrowLeft,
+  keys: Keyboard,
 };
 
 export function icon(name, size = 18) {

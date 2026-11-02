@@ -54,18 +54,7 @@ export function aboutView(rerender, app) {
       h('li', {}, h('strong', {}, 'Save, share, export. '), 'File › Save keeps your work in this browser (your sketches are listed in the File menu), Share copies a link, Export makes a video, a WAV or a .soda file.'),
     ),
     h('h4', {}, 'Keys'),
-    table([
-      ['ctrl / cmd + enter', 'play / update (alt+enter too)'],
-      ['ctrl / cmd + .', 'stop (alt+. too)'],
-      ['ctrl / cmd + s', 'save the sketch'],
-      ['ctrl / cmd + z', 'undo · add shift to redo'],
-      ['ctrl / cmd + c · x · v', 'copy · cut · paste'],
-      ['ctrl / cmd + f', 'find and replace'],
-      ['ctrl / cmd + /', 'comment a line'],
-      ['ctrl+space', 'show completions'],
-      ['alt+w · alt+q', 'jump to the next / previous $: block'],
-      ['point at a name', 'a hint: docs for a function, what a sound, effector, note or mini-notation symbol is'],
-    ]),
+    h('p', {}, h('button', { type: 'button', onclick: () => app.openPage('keys') }, icon('keys'), ' Keyboard shortcuts'), h('span.muted', {}, ' – or press ', kbd('?'), ' anywhere outside the code.')),
     h('h4', {}, 'Mini-notation (inside double quotes)'),
     table(
       [
@@ -782,8 +771,64 @@ export function examplesView(app, rerender) {
   );
 }
 
+// ---------- Keyboard shortcuts ----------
+const MAC = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent);
+const MOD = MAC ? 'cmd' : 'ctrl';
+export const KEY_GROUPS = [
+  [
+    'Play',
+    [
+      [`${MOD}+enter`, 'play, or update while playing (alt+enter too)'],
+      [`${MOD}+.`, 'stop (alt+. too)'],
+      ['space', 'play / stop a shared link you are viewing'],
+    ],
+  ],
+  [
+    'Sketch',
+    [
+      [`${MOD}+s`, 'save the sketch in this browser'],
+      [`${MOD}+c · x · v`, 'copy · cut · paste – reaches the code even when it is not focused'],
+    ],
+  ],
+  [
+    'Editing the code',
+    [
+      [`${MOD}+z`, 'undo'],
+      [MAC ? 'cmd+shift+z' : 'ctrl+shift+z · ctrl+y', 'redo'],
+      ['ctrl+space', 'show completions – functions, sounds, media, visuals, fx'],
+      [`${MOD}+f`, 'find and replace'],
+      [`${MOD}+g`, 'next match (add shift for previous)'],
+      [`${MOD}+d`, 'select the next occurrence of the selection'],
+      [`${MOD}+/`, 'comment / uncomment the line'],
+      [`${MOD}+] · [`, 'indent · outdent'],
+      ['alt+↑ · ↓', 'move the line up / down (add shift to copy it)'],
+      [`${MOD}+shift+k`, 'delete the line'],
+      ['alt+w · alt+q', 'jump to the next / previous $: layer'],
+      ['point at a name', 'a hint card: what a function, sound, image, visual, fx, note or mini-notation symbol is'],
+    ],
+  ],
+  [
+    'Pages and menus',
+    [
+      ['?', 'this page (with focus outside the code)'],
+      ['esc', 'close the panel · leave full screen · close a menu'],
+      ['↑ ↓ · home · end', 'move through an open menu'],
+      ['← →', 'resize the panel, with its left edge focused (shift = bigger steps)'],
+    ],
+  ],
+];
+
+export function keysView() {
+  return h(
+    'div.about',
+    {},
+    ...KEY_GROUPS.flatMap(([title, rows]) => [h('h4', {}, title), table(rows)]),
+    h('p.muted', {}, 'Settings › Editor › Keys switches the editor to VS Code, Vim or Emacs keys; play and stop work in every mode.'),
+  );
+}
+
 // ---------- Reference ----------
-const ref = { query: '', selected: 'note' };
+const ref = { query: '', selected: 'note', scope: 'all' };
 export function referenceView(app, rerender) {
   const all = getDocs();
   if (!all.length) {
@@ -791,15 +836,16 @@ export function referenceView(app, rerender) {
     return h('p.muted', {}, 'Loading reference…');
   }
   const q = ref.query.toLowerCase();
+  const inScope = (d) => ref.scope === 'all' || (ref.scope === 'soda') === !!d.tags?.includes('soda');
   const matches = all.filter(
-    (d) => !q || d.name.toLowerCase().includes(q) || d.synonyms?.some((s) => s.toLowerCase().includes(q)) || (q.length > 3 && docText(d.description).toLowerCase().includes(q)),
+    (d) => inScope(d) && (!q || d.name.toLowerCase().includes(q) || d.synonyms?.some((s) => s.toLowerCase().includes(q)) || (q.length > 3 && docText(d.description).toLowerCase().includes(q))),
   );
   // keep the selection while it still matches the search, otherwise show the first match
   const selected = matches.some((d) => d.name === ref.selected) ? findDoc(ref.selected) : matches[0];
   const search = h('input', {
     type: 'search',
     value: ref.query,
-    placeholder: `Search ${all.length} functions`,
+    placeholder: `Search ${all.filter(inScope).length} functions`,
     'aria-label': 'Search functions',
     oninput: (e) => {
       ref.query = e.target.value;
@@ -810,6 +856,15 @@ export function referenceView(app, rerender) {
     'div.reference',
     {},
     h('label.search', {}, icon('search'), search),
+    h(
+      'div.segmented.ref-scope',
+      { role: 'radiogroup', 'aria-label': 'Which functions' },
+      [
+        ['all', 'All'],
+        ['strudel', 'Strudel'],
+        ['soda', 'soda multimedia'],
+      ].map(([v, label]) => h('button', { type: 'button', role: 'radio', 'aria-checked': String(ref.scope === v), onclick: () => ((ref.scope = v), rerender()) }, label)),
+    ),
     h(
       'div.ref-split',
       {},

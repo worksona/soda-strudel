@@ -344,11 +344,51 @@ body[data-mode='stage'] #editor {
   top: var(--bar);
   right: 0;
   bottom: 0;
-  width: min(440px, 100%);
+  width: min(var(--panel-w, 440px), 100%);
   background: var(--panel);
   border-left: 1px solid var(--line);
   display: flex;
   flex-direction: column;
+}
+/* the left edge: drag to resize */
+#panel-grip {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: -4px;
+  width: 8px;
+  cursor: ew-resize;
+  touch-action: none;
+}
+#panel-grip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+  width: 2px;
+  background: transparent;
+  transition: background 0.15s;
+}
+#panel-grip:hover::after,
+#panel-grip:focus-visible::after,
+body.resizing #panel-grip::after {
+  background: var(--accent);
+}
+#panel-grip:focus-visible {
+  outline: none;
+}
+body.resizing {
+  cursor: ew-resize;
+  user-select: none;
+}
+body.resizing iframe,
+body.resizing #stage {
+  pointer-events: none;
+}
+.ref-scope {
+  margin: 8px 0 10px;
 }
 .drawer-head {
   display: flex;
@@ -776,6 +816,9 @@ body.dragging #drop-hint {
     border-left: none;
     border-top: 1px solid var(--line-strong);
   }
+  #panel-grip {
+    display: none;
+  }
   #editor {
     background: var(--editor-veil);
   }
@@ -794,17 +837,19 @@ body.dragging #drop-hint {
   padding: 0 6px;
   font-size: 13px;
 }
-.help table.keys {
+table.keys {
   border-collapse: collapse;
   width: 100%;
   font-size: 13px;
 }
-.help td {
+.help td,
+table.keys td {
   border-bottom: 1px solid var(--line);
   padding: 5px 4px;
   vertical-align: top;
 }
-.help td:first-child {
+.help td:first-child,
+table.keys td:first-child {
   white-space: nowrap;
   width: 1%;
   padding-right: 12px;
@@ -873,7 +918,7 @@ label.search input {
 }
 .ref-split {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: minmax(150px, 30%) 1fr;
   gap: 10px;
   min-height: 0;
 }

@@ -17,7 +17,7 @@ import { saveSketch as storeSketch } from './storage/db.js';
 import { getSettings, onSettings } from './settings.js';
 import { initEditorSettings } from './editor/assist.js';
 import { fromPointer, installPageKeys } from './editor/keys.js';
-import { aboutView, editorThemeChoice, examplesView, onLog, referenceView, showCollection, showRepo, vibeView } from './ui/learn.js';
+import { aboutView, editorThemeChoice, examplesView, keysView, onLog, referenceView, showCollection, showRepo, vibeView } from './ui/learn.js';
 import { listRepo, repoSongItem } from './share/repos.js';
 import { loadRepertoire } from './share/repertoire.js';
 import { applyAppearance, EDITOR_THEME_FOR, onThemeChange } from './theme.js';
@@ -599,6 +599,7 @@ const PAGES = {
   sounds: 'Sounds',
   media: 'Media',
   reference: 'Reference',
+  keys: 'Keyboard shortcuts',
   export: 'Export',
   share: 'Share',
   vibe: 'Vibe with Claude',
@@ -636,6 +637,7 @@ async function renderPage({ focus } = {}) {
     sounds: () => library.render('sounds', { focus }),
     media: () => library.render('media'),
     reference: () => panelBody.replaceChildren(referenceView(app, renderPage)),
+    keys: () => panelBody.replaceChildren(keysView()),
     export: () => exportPage.render(),
     share: () => sharePage.render(),
     vibe: () => panelBody.replaceChildren(vibeView(app)),
@@ -677,6 +679,48 @@ onSettings(applyNavLabels);
 
 document.querySelectorAll('#toolbar [data-page]').forEach((b) => b.addEventListener('click', () => openPage(b.dataset.page)));
 $('#panel-close').addEventListener('click', () => openPage(page, false));
+
+// ---------- panel width: drag its left edge (desktop) ----------
+const PANEL_W = { min: 320, base: 440 };
+const panelMax = () => Math.max(PANEL_W.min, innerWidth - 240);
+function setPanelWidth(w, save = true) {
+  const width = Math.round(Math.min(panelMax(), Math.max(PANEL_W.min, w)));
+  panel.style.setProperty('--panel-w', `${width}px`);
+  const grip = $('#panel-grip');
+  grip.setAttribute('aria-valuenow', width);
+  grip.setAttribute('aria-valuemin', PANEL_W.min);
+  grip.setAttribute('aria-valuemax', panelMax());
+  if (save) lsSet('soda.panelWidth', width);
+}
+setPanelWidth(lsGet('soda.panelWidth', PANEL_W.base), false);
+{
+  const grip = $('#panel-grip');
+  grip.addEventListener('pointerdown', (e) => {
+    e.preventDefault();
+    grip.setPointerCapture(e.pointerId);
+    document.body.classList.add('resizing');
+    const move = (ev) => setPanelWidth(innerWidth - ev.clientX);
+    const up = () => {
+      grip.removeEventListener('pointermove', move);
+      document.body.classList.remove('resizing');
+    };
+    grip.addEventListener('pointermove', move);
+    grip.addEventListener('pointerup', up, { once: true });
+    grip.addEventListener('pointercancel', up, { once: true });
+  });
+  grip.addEventListener('dblclick', () => setPanelWidth(PANEL_W.base));
+  grip.addEventListener('keydown', (e) => {
+    const step = e.shiftKey ? 80 : 20;
+    const now = panel.getBoundingClientRect().width;
+    if (e.key === 'ArrowLeft') setPanelWidth(now + step);
+    else if (e.key === 'ArrowRight') setPanelWidth(now - step);
+    else if (e.key === 'Home') setPanelWidth(panelMax());
+    else if (e.key === 'End') setPanelWidth(PANEL_W.min);
+    else return;
+    e.preventDefault();
+  });
+  addEventListener('resize', () => setPanelWidth(panel.getBoundingClientRect().width || lsGet('soda.panelWidth', PANEL_W.base), false));
+}
 onLog(() => pageOpen('about') && renderPage());
 
 // ---------- appearance: light / dark / system ----------
@@ -914,6 +958,11 @@ if (!fromLink) openCollectionFromLink();
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && document.body.classList.contains('pseudo-full')) pseudoFull(false);
   else if (e.key === 'Escape' && !panel.hidden) openPage(page, false);
+  // ? opens the shortcuts – not while typing in the code or a field
+  if (e.key === '?' && !e.metaKey && !e.ctrlKey && !e.altKey && !e.target.closest?.('input, textarea, select, [contenteditable="true"], .cm-editor')) {
+    e.preventDefault();
+    openPage('keys', !pageOpen('keys'));
+  }
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's' && !viewing) {
     e.preventDefault();
     saveCurrent().catch((err) => toast(err.message, { error: true }));
