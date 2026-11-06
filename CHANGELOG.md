@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- **Sketches play inside sandboxed embeds.** `/assets/*` and the app's JSON (`sounds`, `media`,
+  `repertoire`, `strudel-docs`) now send `Access-Control-Allow-Origin: *`, so a soda link framed
+  with `sandbox="allow-scripts"` (a Story Flow `ui-embed`, an opaque origin) can load its own code.
+  `tests/headers.test.js` pins it.
 - **Song repositories.** Examples › Repertoire › Repositories reads any GitHub
   or Codeberg repository where people keep Strudel songs as files – 13 found by
   our research (eefano, MariaAreadne, dotcomdudee, ipkstef, smaudd, kahlys,

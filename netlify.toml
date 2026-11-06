@@ -26,10 +26,35 @@
     Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=604800"
 
+# The app's own code and data, readable from any origin, so a sketch plays inside a
+# sandboxed embed (sandbox="allow-scripts", an opaque "null" origin, e.g. a Story Flow
+# ui-embed): there every module script and fetch back to this site is cross-origin.
+# Public, static, no cookies, so "*" is safe.
 [[headers]]
   for = "/assets/*"
   [headers.values]
+    Access-Control-Allow-Origin = "*"
     Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/sounds.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/media.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/repertoire.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/strudel-docs.json"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/*"
