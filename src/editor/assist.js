@@ -3,16 +3,20 @@
 //   – inside strings: sound names in s("…"), banks in .bank("…"), media in img/vid,
 //     visual plugins, fx and blend modes – all from what is actually loaded
 //   – hints on hover: function docs, names in strings, mini-notation (hints.js)
+//   – examples on the cards are live: Add as a layer, Replace the line, Copy.
+//     The hover card stays up while the pointer travels to it.
 // It replaces Strudel's own autocomplete/tooltip extensions in the same editor
 // compartments, so the Settings › Editor toggles keep working.
-import { autocompletion } from '@codemirror/autocomplete';
-import { hoverTooltip, tooltips } from '@codemirror/view';
+import { autocompletion, closeCompletion } from '@codemirror/autocomplete';
+import { closeHoverTooltips, hoverTooltip, tooltips, ViewPlugin } from '@codemirror/view';
 import { codemirrorSettings, compartments, extensions } from '@strudel/codemirror';
 import { sodaEditorKeys } from './keys.js';
 import { soundMap } from '@strudel/webaudio';
 import { listMedia } from '../soda/mediaRegistry.js';
 import { BLENDS, FX, VISUALS } from '../soda/catalog.js';
 import { hintAt } from './hints.js';
+import { icon } from '../ui/icons.js';
+import { toast } from '../ui/dom.js';
 
 let docs = [];
 const byName = new Map();
@@ -34,7 +38,11 @@ export function docText(html = '') {
   return new DOMParser().parseFromString(html, 'text/html').body.textContent.replace(/\s+/g, ' ').trim();
 }
 
-export function renderDoc(doc, { compact = false, examples = true } = {}) {
+/**
+ * A function's card. With `view`, its examples get Add / Replace line / Copy
+ * buttons; `line()` says which line of the code they act on.
+ */
+export function renderDoc(doc, { compact = false, examples = true, view = null, line = () => view?.state.selection.main.head ?? 0 } = {}) {
   const el = document.createElement('div');
   el.className = 'doc';
   const title = document.createElement('strong');
@@ -52,11 +60,89 @@ export function renderDoc(doc, { compact = false, examples = true } = {}) {
     el.append(ul);
   }
   if (examples && doc.examples?.[0]) {
-    const pre = document.createElement('pre');
-    pre.textContent = doc.examples[0];
-    el.append(pre);
+    if (view) for (const ex of doc.examples.slice(0, 3)) el.append(exampleBlock(ex, view, line));
+    else {
+      const pre = document.createElement('pre');
+      pre.textContent = doc.examples[0];
+      el.append(pre);
+    }
   }
   return el;
+}
+
+// ---------- examples you can use from a card ----------
+let hovered = null; // { from, to } of the word the hover card is for
+/** As a layer of its own: a single expression gets `$: `; whole programs go in as they are. */
+export function asLayer(example) {
+  const code = example.trim();
+  if (/^\s*\$:/m.test(code)) return code;
+  // another top-level line (not a chained .method or an indented argument) = a program
+  const topLevel = code.split('\n').slice(1).filter((l) => l.trim() && !/^\s/.test(l) && !/^[.)\]}]/.test(l));
+  return topLevel.length ? code : `$: ${code.replace(/\n/g, '\n  ')}`;
+}
+
+/** The last line of the block the line at `pos` belongs to (its chained / indented lines). */
+function blockEnd(doc, pos) {
+  let line = doc.lineAt(pos);
+  while (line.number < doc.lines) {
+    const next = doc.line(line.number + 1);
+    if (!/^\s+\S|^\s*\./.test(next.text)) break;
+    line = next;
+  }
+  return line;
+}
+
+function useExample(view, line, how, example) {
+  const { state } = view;
+  const at = state.doc.lineAt(Math.min(line(), state.doc.length));
+  if (how === 'replace') {
+    const end = blockEnd(state.doc, at.from);
+    const insert = asLayer(example);
+    view.dispatch({ changes: { from: at.from, to: end.to, insert }, selection: { anchor: at.from + insert.length }, userEvent: 'input.example', scrollIntoView: true });
+  } else {
+    const end = blockEnd(state.doc, at.from);
+    const insert = `\n${asLayer(example)}`;
+    view.dispatch({ changes: { from: end.to, insert }, selection: { anchor: end.to + insert.length }, userEvent: 'input.example', scrollIntoView: true });
+  }
+  closeCompletion(view);
+  view.dispatch({ effects: closeHoverTooltips });
+  hovered = null;
+  view.focus();
+  toast(how === 'replace' ? 'Line replaced – ctrl+enter to hear it.' : 'Added as a layer – ctrl+enter to hear it.');
+}
+
+function exampleBlock(example, view, line) {
+  const box = document.createElement('div');
+  box.className = 'doc-example';
+  const pre = document.createElement('pre');
+  pre.textContent = example;
+  const row = document.createElement('div');
+  row.className = 'doc-actions';
+  const button = (name, label, title, run) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.title = title;
+    b.append(icon(name, 14), ` ${label}`);
+    // keep the editor focused, so the suggestion card isn't closed by the click
+    b.addEventListener('mousedown', (e) => e.preventDefault());
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      run();
+    });
+    return b;
+  };
+  row.append(
+    button('plus', 'Add', 'Add this example as a new layer below', () => useExample(view, line, 'add', example)),
+    button('rename', 'Replace line', 'Replace this line with the example', () => useExample(view, line, 'replace', example)),
+    button('copy', 'Copy', 'Copy the example', () =>
+      navigator.clipboard.writeText(example).then(
+        () => toast('Example copied.'),
+        () => toast('Could not copy.', { error: true }),
+      ),
+    ),
+  );
+  box.append(pre, row);
+  return box;
 }
 
 // ---------- what's loaded ----------
@@ -102,7 +188,7 @@ function completions(context) {
       label: doc.name,
       type: doc.tags?.includes('soda') ? 'class' : 'function',
       detail: doc.synonymOf ? `→ ${doc.synonymOf}` : doc.tags?.includes('soda') ? 'soda' : '',
-      info: () => renderDoc(doc),
+      info: () => renderDoc(doc, { view: context.view }),
     })),
   };
 }
@@ -138,13 +224,46 @@ const hintHover = hoverTooltip(
     const line = view.state.doc.lineAt(pos);
     const hint = hintAt(line.text, pos - line.from, side, hintContext());
     if (!hint) return null;
+    const range = { from: line.from + hint.from, to: line.from + hint.to };
     return {
-      pos: line.from + hint.from,
-      end: line.from + hint.to,
-      create: () => ({ dom: hint.doc ? renderDoc(hint.doc, { compact: true }) : renderHint(hint) }),
+      pos: range.from,
+      end: range.to,
+      create: () => {
+        hovered = range;
+        return { dom: hint.doc ? renderDoc(hint.doc, { view, line: () => range.from }) : renderHint(hint) };
+      },
     };
   },
   { hoverTime: 350 },
+);
+
+// CodeMirror closes a hover card as soon as the pointer leaves the word. Going
+// from the word to its card, the pointer crosses other code – so while it is in
+// the corridor between the two, that mousemove never reaches CodeMirror.
+const stickyHover = ViewPlugin.fromClass(
+  class {
+    constructor(view) {
+      this.view = view;
+      this.onMove = (e) => {
+        const card = document.querySelector('.cm-tooltip-hover');
+        if (!card || !hovered || e.buttons) return;
+        const a = view.coordsAtPos(hovered.from);
+        const b = view.coordsAtPos(hovered.to);
+        if (!a || !b) return;
+        const box = card.getBoundingClientRect();
+        const above = box.top < a.top;
+        const left = Math.min(a.left, box.left) - 8;
+        const right = Math.max(b.right, box.right) + 8;
+        const top = above ? box.bottom - 4 : Math.min(a.top, b.top);
+        const bottom = above ? Math.max(a.bottom, b.bottom) : box.top + 4;
+        if (e.clientX >= left && e.clientX <= right && e.clientY >= top && e.clientY <= bottom) e.stopPropagation();
+      };
+      view.dom.addEventListener('mousemove', this.onMove, true);
+    }
+    destroy() {
+      this.view.dom.removeEventListener('mousemove', this.onMove, true);
+    }
+  },
 );
 
 // hints sit below the word, and flip above only if there's room under the
@@ -155,7 +274,7 @@ const belowToolbar = tooltips({
   parent: document.body,
   tooltipSpace: () => ({ top: document.getElementById('toolbar')?.getBoundingClientRect().bottom ?? 0, left: 0, bottom: innerHeight, right: innerWidth }),
 });
-export const assistHover = [hintHover, belowToolbar];
+export const assistHover = [hintHover, stickyHover, belowToolbar];
 
 // ---------- editor settings (Strudel's own persisted atom) ----------
 export const EDITOR_DEFAULTS = {

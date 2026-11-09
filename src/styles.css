@@ -1031,9 +1031,46 @@ input[type='range'] {
 }
 .cm-tooltip .doc,
 .cm-completionInfo .doc {
-  max-width: 300px;
+  max-width: 360px;
+  max-height: min(60vh, 520px);
+  overflow: auto;
   padding: 8px 10px;
   font-size: 13px;
+}
+/* examples on a card: the code, then Add / Replace line / Copy */
+.doc-example {
+  margin-top: 8px;
+  border: 1px solid var(--line);
+}
+.doc-example pre {
+  margin: 0;
+  padding: 6px 8px;
+  border: none;
+  white-space: pre-wrap;
+  user-select: text;
+}
+.doc-actions {
+  display: flex;
+  border-top: 1px solid var(--line);
+}
+.doc-actions button {
+  flex: 1;
+  min-height: 28px;
+  padding: 0 6px;
+  border: none;
+  border-right: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  gap: 4px;
+}
+.doc-actions button:last-child {
+  border-right: none;
+}
+.doc-actions button:hover {
+  background: var(--accent-soft);
+  color: var(--accent);
 }
 .cm-tooltip-autocomplete ul li[aria-selected] {
   background: var(--accent-soft) !important;
