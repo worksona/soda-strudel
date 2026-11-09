@@ -33,3 +33,5 @@
 | 2026-11-01 | Netlify | https://soda-strudel.netlify.app | Production | f5bf28a: Repertoire data fetched under a per-build URL, so no stale cache answers #song= links (deploy 6ae7a1244323ba6ff384e62e) |
 | 2026-11-02 | Netlify | https://6ae8db84205a2f97eb846960--soda-strudel.netlify.app | Preview | Draft (92654f7), Keys page, panel grip and soda filter checked |
 | 2026-11-02 | Netlify | https://soda-strudel.netlify.app | Production | 92654f7: resizable panel, Keyboard shortcuts page, soda filter on Docs (deploy 6ae8db991b2f2e64eeadf737) |
+| 2026-11-09 | Netlify | https://6af23b2cced712f7695ace5b--soda-strudel.netlify.app | Preview | Draft (ec8d011), hover card examples checked |
+| 2026-11-09 | Netlify | https://soda-strudel.netlify.app | Production | ec8d011: editor cards – examples with Add / Replace line / Copy, hover card stays up (deploy 6af23b4fd0b5c9803bf713a2) |

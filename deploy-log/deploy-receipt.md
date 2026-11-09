@@ -1,16 +1,16 @@
 # Deployment Receipt
 
-> **Project:** soda.strudel | **Deployed:** 2026-11-02T12:00:00Z| Field | Value |
+> **Project:** soda.strudel | **Deployed:** 2026-11-09T12:00:00Z| Field | Value |
 |-------|-------|
 | Platform | Netlify |
 | URL (production) | https://soda-strudel.netlify.app |
-| URL (this deploy) | https://6ae8db991b2f2e64eeadf737--soda-strudel.netlify.app |
-| URL (preview, verified first) | https://6ae8db84205a2f97eb846960--soda-strudel.netlify.app |
+| URL (this deploy) | https://6af23b4fd0b5c9803bf713a2--soda-strudel.netlify.app |
+| URL (preview, verified first) | https://6af23b2cced712f7695ace5b--soda-strudel.netlify.app |
 | Project ID | a0fecd9f-e8fe-4d36-897e-12d539ed0188 |
-| Deploy ID | 6ae8db991b2f2e64eeadf737 |
+| Deploy ID | 6af23b4fd0b5c9803bf713a2 |
 | Team | worksona |
 | Project type | Static (Vite build) plus two functions: `/api/shorten` (a47l.com short links) and `/api/piece` (opens allowlisted Repertoire songs whose code is public at its source) |
-| Source path | dist/ (built locally with `pnpm build`, commit 92654f7) |
+| Source path | dist/ (built locally with `pnpm build`, commit ec8d011) |
 | Build | Local only – Netlify does not build (no build minutes); the CLI bundles `netlify/functions` |
 | Custom domain | none |
 
@@ -29,6 +29,7 @@
 - Record button and micLevel in the live bundle; toolbar one row; no console errors
 - Recorder: video (1080×1920 MP4) and WAV captures checked on the draft, 4-cycle take starts on the beat and stops itself; opens on production with no console errors
 - Viewer: a shared link on production plays from the title card and a tap on the stage stops it; no console errors
+- Editor hover card stays up and shows Add / Replace line / Copy on its examples; no console errors on the draft
 - Panel resizes by its left edge; ? opens Keyboard shortcuts; Docs › soda multimedia lists 19 functions; no console errors on the draft
 - New First light in the live bundle; three inline widgets each get their own canvas on production; Share › Opens as shows Stage only / Code over the stage / Full screen
 
